@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+<title>2noshop</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Slide Camera-->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				loader: 'none',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '../Images/',						
+            	height: '400px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	playPause: false,
+			});
+
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Stick Menu-->
+<script src="Scripts/jquery.sticky.js"></script>
+<script>
+$(document).ready( function(){  
+$(".sticky").sticky({topSpacing:5});
+});
+</script>
+<link href="Styles/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+<link href="Styles/jquery.fancybox.css" rel="stylesheet" />
+<script src="Scripts/jquery.fancybox.pack.js"></script>
+<script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: 'fade',
+                closeEffect: 'none'
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header">
+    <h1 id="logo"><a href="index.html" id="logo"><img src="Images/logo.png" alt="2noshop" /> </a></h1>
+    <p id="slogan"><a href=""><img src="Images/noimage.jpg" alt="2noshop" style="max-height: 70px" /></a></p>
+    <div id="header_right">
+      <div class="row_header cf" id="top_link"><a class="active" href="">Hướng dẫn thanh toán</a> <a href="">Giới thiệu về chúng tôi</a></div>
+      <div class="row_header cf" id="search_form">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+      </div>
+      <!--end: #search-form-->
+    </div>
+    <div class="cf"></div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active home_icon"><a href="index.html"></a></li>
+      <li><a href="introduction.html" class="parent">CÔNG TY</a> </li>
+      <li><a href="list_products.html">LĨNH VỰC HOẠT ĐỘNG</a>
+        <ul>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Trang điểm</a></li>
+          <li><a href="#">Nước hoa</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="projects.html">DỰ ÁN</a></li>
+      <li><a href="#">SẢN PHẨM</a></li>
+      <li><a href="list_news.html">TIN TỨC & SỰ KIỆN</a></li>
+      <li><a href="list_news.html">TUYỂN DỤNG</a></li>
+      <li><a href="list_gallery.html">THƯ VIỆN ẢNH</a></li>
+      <li><a href="list_news.html">LIÊN HỆ</a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Menu-->
+    <div id="lef_col">
+      <div class="sticky" id="ver_menu">
+        <h3 class="title_box_gr">Danh mục tin tức</h3>
+        <ul id="topnav">
+          <li class="active"> <a href="http://2noshop.com/danhmuc/13/Pants">Giới thiệu</a> </li>
+          <li> <a href="http://2noshop.com/danhmuc/14/LOOKBOOK">Hướng dẫn mua hàng</a> </li>
+          <li> <a href="http://2noshop.com/danhmuc/13/Pants">Tin khuyến mãi</a> </li>
+          <li> <a href="http://2noshop.com/danhmuc/14/LOOKBOOK">Hướng dẫn mua hàng</a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Left Menu-->
+    <!--Main Column-->
+    <div id="main_col" class="detail_page">
+      <div class="breadcrumb"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tin tức</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div class="box_ct" id="detail_news">
+          <div id="info_g">
+            <h1 class="h1Title">Những thực phẩm nên tránh khi đang uống kháng sinh</span></h1>
+            <p class="date">06/05/2013</p>
+            <p>Khi đang uống kháng sinh điều trị một chứng bệnh nào đó, bạn nên tránh ăn những thực phẩm dưới đây:</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa có thể làm nặng nề thêm cho đường ruột của bạn trong khi bạn đang dùng thuốc kháng sinh. Hầu hết các dược sĩ đều đặc biệt khuyến cáo không uống sữa khi đang uống thuốc kháng sinh ciprofloxacin.</p>
+            <p>Ngoài ra, các sản phẩm chứa nhiều chất béo khác cũng có thể làm trầm trọng thêm các triệu chứng của bệnh tiêu chảy - một tác dụng phụ khi uống thuốc kháng sinh.</p>
+            <p>Thực phẩm chứa nhiều chất xơ</p>
+            <p>Một số loại rau quả có chứa nhiều chất xơ  hoặc các loại đậu cũng có thể gây tiêu chảy nặng thêm khi bạn đang dùng thuốc kháng sinh.</p>
+            <p>Bên cạnh đó, các thực phẩm như ngũ cốc, lúa mì tuy có thể tăng cường chất sắt và calci cho cơ thể nhưng lại cản trở khả năng hấp thụ một số thuốc kháng sinh khi vào cơ thể, đặc biệt là khi bạn đang uống thuốc kháng sinh quinolone, trong đó bao gồm các loại thuốc như ciprofloxacin, acid nalidixic và cinoxacin, sparfloxacin và trovafloxacin.</p>
+            <p>Thực phẩm có tính acid</p>
+            <p>Hàm lượng acid trong một số thực phẩm nhất định có thể làm gián đoạn khả năng hấp thụ thuốc của cơ thể.</p>
+            <p>Nói chung, khi uống thuốc kháng sinh, tuy bạn không luôn luôn phải tránh xa chúng hoàn toàn, nhưng đôi khi việc tiêu thụ thực phẩm chua hoặc đồ uống có chứa nhiều acid như cà chua, nước trái cây, đồ uống có ga cũng có thể hạn chế sự hấp thu của thuốc khi vào cơ thể.</p>
+            <p>Rượu</p>
+            <p>Nhiều dược sĩ đều chỉ ra rằng rượu không can thiệp bất lợi trực tiếp vào việc uống thuốc kháng sinh. Tuy nhiên, thuốc kháng sinh và rượu có thể có tác dụng phụ tương tự nhau. Vì thế, nếu bạn uống cả hai cùng một lúc, chúng có thể gia tăng cơ hội bạn phải chịu trận với những nguy cơ buồn nôn, chóng mặt hoặc buồn ngủ...</p>
+            <p>Những loại thuốc này có thể điểm mặt bao gồm: penicillin G, ampicillin, floxin, oxacillin, gentamycin và ciprofloxacin. Khi uống những loại thuốc này, bạn có thể phải ăn/uống các thực phẩm 3 giờ trước/sau 
+              
+              khi uống thuốc.</p>
+            <p>Lưu ý: Tránh dùng các loại sữa, các sản phẩm chế biến từ sữa, trừ sữa chua, khi bạn đang uống thuốc kháng sinh. Nguyên nhân là do lượng calci có nhiều trong sữa và các sản phẩm từ sữa có thể cản trở sự hấp thu của thuốc kháng sinh. Tuy nhiên, sữa chua thì bạn vẫn có thể ăn bình thường vì nó có chứa nhiều men vi sinh giúp khôi phục lại sự cân bằng cho đường ruột, tránh tiêu chảy khi sử dụng thuốc kháng sinh.</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--End Main Column-->
+  </div>
+  <!--End Main-->
+  <div class="cf"></div>
+</div>
+<!-- end Wrap -->
+<div id="social_network">
+  <div class="wrap"><b>Kết nối với chúng tôi:</b> <a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a><a href=""> <span class="icon_youtube"></span></a>
+    <div class="cf"></div>
+  </div>
+</div>
+<!-- Footer -->
+<div id="footer">
+  <div  class="wrap" id="topmenu_footer">
+    <div class="col_menuFooter">
+      <h2 class="title_ft">
+      Hỗ trợ khách hàng
+      </h3>
+      <div class="ctentColuMenuFooter" id="time">
+        <p> <span class="phone_alt"></span>097 567 7777<br>
+          <span class="spec">097 567 7777</span><br>
+          <span class="spec">0944 80 00 80</span></p>
+        <p> <img src="Images/open_icon.png" alt="" width="24" height="20" class="img_general" />Giờ mở cửa: <br>
+          <span class="spec">9h sáng - 22h tối (Thứ 2 - Chủ Nhật)</span><br>
+        </p>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <h2 class="title_ft">
+      Thông tin liên hệ
+      </h3>
+      <div class="ctentColuMenuFooter">
+        <p> 153 Nguyễn Phúc Nguyên Q3, Tp. HCM<br>
+          124 Nguyễn Trãi Q5, Tp. HCM</p>
+        <p> <img src="Images/mail_icon.png" alt="" width="21" height="15" style="margin-right: 5px;" /></span>twonoshop@yahoo.com</p>
+        <p> <span class="name-acc">Trần Ngọc Lãm</span><br>
+          Sacombank: 062566668888</p>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <h2 class="title_ft">
+      Danh mục sản phẩm
+      </h3>
+      <div class="ctentColuMenuFooter">
+        <ul class="listing_ft">
+          <li><a href="http://2noshop.com/danhmuc/10/T-shirts"> T-shirts</a></li>
+          <li><a href="http://2noshop.com/danhmuc/18/Ao-thun-3-lo"> Áo thun 3 lỗ</a></li>
+          <li><a href="http://2noshop.com/danhmuc/19/Ao-thun-tay-dai"> Áo thun tay dài</a></li>
+          <li><a href="http://2noshop.com/danhmuc/11/Shirts"> Shirts</a></li>
+          <li><a href="http://2noshop.com/danhmuc/12/Outer"> Outer</a></li>
+          <li><a href="http://2noshop.com/danhmuc/13/Pants"> Pants</a></li>
+          <li><a href="http://2noshop.com/danhmuc/14/LOOKBOOK"> LOOKBOOK</a></li>
+          <li><a href="http://2noshop.com/danhmuc/15/Shose"> Shose</a></li>
+          <li><a href="http://2noshop.com/danhmuc/16/Phu-kien"> Phụ kiện</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!--End Footer-->
+<script type="text/javascript">
+function hide_float_left() {
+    var content = document.getElementById('float_content_left');
+    var hide = document.getElementById('hide_float_left');
+    if (content.style.display == "block")
+    {content.style.display = "none"; hide.innerHTML = '<a href="javascript:hide_float_left()" title="Click vào đây để chat online với chúng tôi">Hỗ trợ mua hàng</a>'; }
+        else { content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Đóng lại [X]</a>';
+    }
+    }
+</script>
+<div class="float-ck">
+  <div id="hide_float_left"><a href="javascript:hide_float_left()" title="Click vào đây để chat online với chúng tôi">Hỗ trợ mua hàng</a></div>
+  <div id="float_content_left">
+    <!-- Start chat online-->
+    <p class="title_sp"> Tư vấn mua hàng</p>
+    <p class="line_row"> Mr. No<span class="number_phone">097 567 7777</span></p>
+    <p class="line_row"> Mr. Two<span class="number_phone">094 480 0080</span></p>
+    <div class="yahoo"> <a href="ymsgr:sendim?hotro_nhommuahcm"><img width="12" alt="" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=5">Tư vấn Thiết bị Nhà bếp</a> <a href="ymsgr:sendim?hotro_nhommuahcm2"><img width="12" alt="" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=5">Tư vấn Thiết bị Vệ sinh</a><a href="ymsgr:sendim?hotro_nhommuahcm2"><img width="12" alt="" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=5">Tư vấn Thiết bị Vệ sinh</a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- End chat online -->
+</div>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

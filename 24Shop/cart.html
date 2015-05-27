@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>24h Shop</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script src="Scripts/jquery-1.8.3.min.js"></script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slider banner-->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<!-- Start Slider Scripts -->
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!--Clound Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--#begin Top page-->
+  <div class="top_page">
+    <div class="page">
+      <p class="hotline">Hotline: <b>0915 492 552</b></p>
+      <div class="account">
+        <div class="input_form">
+          <input type="text" onblur="FormatValidateCharBlur('txtusername')" maxlength="50" name="txtusername" id="txtusername" placeholder="Tên đăng nhập" class="inputform identity">
+        </div>
+        <div class="input_form">
+          <input type="password" onblur="ValidatePassword()" placeholder="************" name="txtpassword" id="txtpassword" class="inputform password">
+        </div>
+        <div class="input_form">
+          <input type="submit" value="" onclick="ValidateBeforeSubmit(); return false;" name="submit" id="submit" class="button_acc">
+        </div>
+        <div class="input_form">
+          <div class="lost_password"><a href="">Đăng ký</a> | <a href="">Quên mật khẩu</a></div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--#end Top Page-->
+  <div class="page_inner">
+    <!--#begin Header-->
+    <div class="header"> <a class="logo" href="index.html"><img src="Images/logo.png" alt="" /></a>
+      <!--Search Tool-->
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword">
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+      <p class="cart"><a href=""><span class="icon_cart"></span>Có [ <b>0</b> ] sản phẩm</a></p>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="active"><a href="index.html">Trang chủ</a>
+        <li><a href="gallery.html">Giới thiệu</a> </li>
+        <li><a href="list_products.html">Ngành hàng</a>
+          <ul class="children">
+            <li><a href="#">THÔNG BÁO</a></li>
+            <li><a href="#">BLOG 360 YAHOO</a> </li>
+            <li><a href="#">STUDIO</a></li>
+            <li><a href="#">GÓC BÁO CHÍ</a></li>
+            <li><a href="#">TUYỂN DỤNG</a></li>
+            <li><a href="#">VIDEO</a></li>
+            <li><a href="#">ẢNH CƯỚI</a></li>
+          </ul>
+        </li>
+        <li><a href="">Khuyến mãi</a></li>
+        <li><a href="">Hàng thiết kế</a></li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <div id="vertical_menu">
+          <ul class="topnav">
+            <li class="active"><a href="#">Quần nữ</a></li>
+            <li><a href="#">Áo nữ</a> </li>
+            <li><a href="#">Phụ kiện nữ</a></li>
+            <li><a href="#">Đầm, váy</a></li>
+            <li><a href="#">Kem dưỡng da</a></li>
+            <li><a href="#">Son môi</a></li>
+            <li><a href="#">Nước hoa</a> </li>
+            <li><a href="#">Trang điểm</a></li>
+            <li><a href="#">Vòng tay - Vòng cổ</a></li>
+            <li><a href="#">Thắt lưng</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Vertical Menu-->
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <div class="path"><a href="index.html">Trang chủ</a> » <a href="cart.html">Giỏ hàng của bạn</a></div>
+        <!--Cart-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Giỏ hàng của bạn</div>
+            <table width="100%" class="page_cart">
+              <tbody>
+                <tr>
+                  <th style="background-color: #ab6e22; width: 50px">Xóa</th>
+                  <th style="background-color: #ab6e22">Hình ảnh</th>
+                  <th style="background-color: #ab6e22; width: 150px">Tên sản phẩm</th>
+                  <th style="background-color: #ab6e22; width: 100px">Đơn giá (VNĐ)</th>
+                  <th style="background-color: #ab6e22; width: 100px">Số lượng</th>
+                  <th style="background-color: #ab6e22; width: 120px">Thành tiền (VNĐ)</th>
+                </tr>
+                <tr>
+                  <td align="center"><a href="/cart/delete.html?id=26571"><img src="Images/remove.png"></a></td>
+                  <td align="center"><img style="max-width: 100px" src="Images/product_02.jpg"></td>
+                  <td align="center">Ghế Hớt Tóc Nam VN-HN04B</td>
+                  <td align="right">1.495.000</td>
+                  <td align="center"><input type="text" name="Quantity[26571]" value="1" id="26571" class="quantity inputbox" style="text-align:center" size="3"></td>
+                  <td align="right">1.495.000</td>
+                </tr>
+                <tr>
+                  <td colspan="5" align="right"><strong>Tiền hàng</strong></td>
+                  <td align="right" style="font-weight: bold">1.495.000</td>
+                </tr>
+                <tr>
+                  <td colspan="5" align="right">Phí vận chuyển</td>
+                  <td align="right">Miễn phí</td>
+                </tr>
+                <tr>
+                  <td colspan="5" align="right"><strong>Tổng đơn hàng</strong></td>
+                  <td align="right" style="font-weight: bold; color: #ff0000; font-size: 16px">1.495.000</td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="padding: 10px 5px;">
+                        <a style="width: 110px; float: right;" href="/thanh-toan.aspx" class="button_payment">Thanh toán</a>
+                        <a style="width: 140px; float: right;" href="/trang-chu.aspx" class="button_payment">Tiếp tục mua hàng</a>
+                    </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Cart-->
+      </div>
+      <!--End Main Column-->
+    </div>
+    <!--End Main-->
+    <!--Other Infomation-->
+    <div id="connect">
+      <div class="get_email">
+        <label>Đăng ký nhận Email</label>
+        <input class="txf tip" value="Nhập địa chỉ email..." name="email">
+        <input type="submit" value="" class="btn" />
+      </div>
+      <div class="nick_chat"><a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a><a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a><a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a></div>
+      <div class="visitors"> Lượt truy cập: <b>40 000</b> -   Đang truy cập: <b>50 </b> </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--End Other Infomation-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!-- Footer -->
+  <div class="footer">
+    <div class="page">
+      <div class="footer_l">
+        <p class="menu_footer"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Ngành hàng</a><a href="">Khuyến mãi</a><a href="">Hàng thiết kế</a><a href="">Tin tức</a><a href="">Liên hệ</a></p>
+        <p class="copyright"> Copyright © 2013 <strong>Phuongnam</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </p>
+        <div class="facebook"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a> <a href=""><span class="icon_gplus"></span></a><a href=""><span class="icon_p"></span></a><a href=""> <span class="icon_linkedin"></span></a><a href=""> <span class="icon_youtube"></span></a></div>
+      </div>
+      <div class="info_company">
+        <p><strong>24Shop.vn</strong></p>
+        <p>Địa chỉ: 370/22 Phạm Văn Bạch, P.15, Q.Tân Bình, TPHCM</p>
+        <p>Điện thoại: 0915492552</p>
+        <p> Email: <a href="mailto:hoangyenduong90@gmail.com">hoangyenduong90@gmail.com</a></p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

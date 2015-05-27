@@ -1,0 +1,1623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>VIETBAS.COM</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Styles/detail_product.css" media="all" />
+<!--Menu-->
+<link rel="stylesheet" href="Styles/layout.css" />
+<link rel="stylesheet" href="Styles/newheadfooter.css" type="text/css">
+<script type="text/javascript" src="Scripts/jquery.hoverIntent.minified.js" ></script>
+<!--Scripts click Toggle-->
+<script type="text/javascript">
+$(document).ready(function() {         
+var notH = 1,
+    $pop = $('.search_filter').hover(function(){notH^=1;});
+
+$(document).on('mouseup keyup', function( e ){
+  if(notH||e.which==27) $pop.stop().hide();
+});
+/////// CALL POPUP 
+$('#search_advanced').click(function(){
+	jQuery(this).find('.search_filter').slideDown("fast").end().siblings().find('.search_filter').hide('fast');							 
+	event.stopPropagation();  
+});
+			$(".dropdown .cate_selected").click(function() {
+				$(".dropdown ul.menu_hover").toggle();
+            });
+			$(".dropdown ul.menu_hover li").click(function() {
+                var text = $(this).html();
+                $(".dropdown .cate_selected .title_select").html(text);
+                $(".dropdown ul.menu_hover").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });						               	
+});
+</script>
+<!--Slide Products-->
+<link rel="stylesheet" href="Styles/skin_jcarousel.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+ var totalslides = 1;
+ 
+ function mycarousel_initCallback(carousel) {
+ jQuery('#viewvid').bind('click', function() {
+ carousel.scroll(jQuery.jcarousel.intval(1));
+ pageslide('about');
+ return false;
+ });
+ 
+ jQuery('.jcarousel-navigation li a').click(function(e){
+ panel = $(this).parent('li').attr('id');
+ carousel.scroll(jQuery.jcarousel.intval(panel));
+ return false;
+ });
+ };
+ 
+ function mycarousel_itemFirstInCallback(carousel, item, idx, state) {
+ bubble = calcSlide(idx);
+ $('.jcarousel-navigation li').each(function(){
+ if($(this).attr('id') == bubble)
+ $(this).addClass('active');
+ else
+ $(this).removeClass('active');
+ });
+ };
+ 
+function calcSlide(value){
+ current = value;
+ if(value > totalslides){
+ current = value - totalslides;
+ calcSlide(current);
+ }
+ 
+ return current;
+ }
+ 
+ jQuery(document).ready(function() {
+ 
+ $('#sl_banner_ads li').each(function(){
+ $('.jcarousel-navigation').append('<li id="' + totalslides + '"><a href="#"></a></li>');
+ totalslides++;
+ });
+ totalslides = totalslides - 1; $('#sl_banner_ads').jcarousel({
+ auto: 2,
+ wrap: 'circular',
+ animation: 500,
+ scroll: 1,
+ itemFirstInCallback: mycarousel_itemFirstInCallback,
+ initCallback: mycarousel_initCallback
+ });
+});
+ 
+</script>
+<script type="text/javascript" src="Scripts/jquery.carousel.js"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$('body').removeClass('no-js');
+		   
+		    $('#fashion, #comestic, #digital').carousel({
+				itemsPerPage: 5,
+				itemsPerTransition: 5,
+				easing: 'linear',
+				noOfRows: 1
+			});			 
+		});
+	</script>
+<!--Script Updown-->
+<script type="text/javascript">    
+    $(function () {
+        $('#support_order').each(function () {
+            var distance = 10;
+            var time = 100;
+            var hideDelay = 100;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.sp_content', this).css('opacity', 0);
+				
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 50,
+                        right: -40,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate( time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });		
+    });    
+</script>
+<!--Scroll-->
+<link type="text/css" href="Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<!-- the mousewheel plugin -->
+<script type="text/javascript" src="Scripts/jquery.mousewheel.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="Scripts/jquery.jscrollpane.min.js"></script>
+<!-- scripts specific to this demo site -->
+<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').show().jScrollPane();
+			});
+		</script>
+<!--Menu-->
+<script src="Scripts/masonry.js"></script>
+<script type="text/javascript">	
+	$(function () {
+	var columns    = 4,
+	setColumns = function() { columns = $( window ).width() > 750 ? 4 : $( window ).width() > 500 ? 3 : $( window ).width() > 250 ? 2 : 1; };
+	setColumns();
+	    $( window ).resize( setColumns );	
+		$('.sitenav .cataloglist .maincat').bind('mouseenter', function () {
+
+            $(this).find('.cataloglistexpand').stop(true, true).fadeIn(200);
+				var columns    = 4,
+				setColumns = function() { columns = $( window ).width() > 750 ? 4 : $( window ).width() > 500 ? 3 : $( window ).width() > 250 ? 2 : 1; };
+				setColumns();
+	   				$( window ).resize( setColumns );	
+        		$( '.subcatwrapper' ).masonry(
+	    		{
+	        	itemSelector: '.col',
+	        	columnWidth:  function( containerWidth ) { return containerWidth / columns; }
+	    	});
+        }).bind('mouseleave', function () {
+
+            $(this).find('.cataloglistexpand').stop(true, true).fadeOut(200, function () {
+
+            });
+        });		        
+    })	
+</script>
+</head>
+<body>
+<div id="social_network"> <a id="1" class="social_icon icon_facebook" href="#" title="Facebook"></a> <a id="2" class="social_icon icon_twitter" href="#" title="Twitter"></a> <a id="3" class="social_icon icon_glus" href="#" title="Google+"></a> <a id="4" class="social_icon icon_youtube" href="#" title="Youtube"></a>
+  </ul>
+</div>
+<!--Top Page-->
+<div class="top_page">
+  <div class="top_link">
+    <div class="page">
+      <div class="hline">Hotline: <span>0909 336 818</span></div>
+      <ul>
+        <li class="home active"><a href="">Trang chủ</a></li>
+        <li><a href="">Giới thiệu</a></li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="">Hỏi đáp</a></li>
+        <li><a href="">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="page">
+    <!--#begin Header-->
+    <div id="header"> <a class="logo" href="index.html"><img src="Images/logo.png" alt="" /></a>
+      <div class="info_header">
+        <div class="function_web"><a href=""><span class="delivery"></span><b>Miễn phí giao hàng</b><br />
+          Nhanh chóng - Đúng hẹn</a></div>
+        <div class="function_web"><a href=""><span class="return"></span><strong>Thanh toán thuận tiện</strong><br />
+          An toàn - Bảo mật</a></div>
+        <div class="function_web"><a href=""><span class="payment"></span><strong>07 ngày đổi hàng</strong><br />
+          Miễn phí đổi hàng</a></div>
+      </div>
+      <div class="cart"><a href="cart.html" class="icon_cart"><span>0</span> sản phẩm</a></div>
+      <!--Support Special Order-->
+      <div id="support_order"><a class="trigger"><span class="support_order_button"></span></a>
+        <div id="dpop_sp_order" class="sp_content"><span class="icon_point"></span>
+          <p class="optionSupport">HỖ TRỢ ĐƠN HÀNG ĐẶC BIỆT </p>
+          <p>Đối với những đơn hàng lớn từ 30 triệu đồng. Để được báo giá đặc biệt. Hãy gửi cho chúng tôi tại đây</p>
+          <table width="100%" border="0" style="color: #ff8919; margin: 15px 0">
+            <tbody>
+              <tr>
+                <td align="left"><textarea style="height:70px;" placeholder="Nhập nội dung đơn hàng hoặc đính kèm file" class="input-txt textarea-txt" id="popup2_txtDesc" cols="20" rows="2" name="ctl00$popup2$txtDesc"></textarea></td>
+              </tr>
+              <tr>
+                <td align="left"><input type="file" id="popup2_FileUpload1" name="ctl00$popup2$FileUpload1"></td>
+              </tr>
+              <tr>
+                <td align="left"><input type="text" placeholder="Tên bạn" class="input-txt" id="popup2_txtName" name="ctl00$popup2$txtName">
+                  <span style="color:Red;display:none;" id="popup2_rfvHoVaTen">*</span></td>
+              </tr>
+              <tr>
+                <td align="left"><input type="text" placeholder="Email" class="input-txt" id="popup2_txtEmail" name="ctl00$popup2$txtEmail">
+                  <span style="color:Red;display:none;" id="popup2_RequiredFieldValidator4">*</span></td>
+              </tr>
+              <tr>
+                <td align="left"><input type="text" placeholder="Số điện thoại" class="input-txt" id="popup2_Txtphone" name="ctl00$popup2$Txtphone">
+                  <span style="color:Red;display:none;" id="popup2_RequiredFieldValidator3">*</span></td>
+              </tr>
+              <tr>
+                <td align="left"><div style="color:Red;display:none;" id="popup2_ValidationSummary1"> </div>
+                  <span style="color:Red;" id="popup2_lblresult"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="sm_button">
+            <input type="submit" name="ctl00$left1$Btsearch" value="Gửi" id="left1_Btsearch" class="sub_Search" />
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Support Special Order-->
+    </div>
+    <!--#end Header-->
+  </div>
+</div>
+<!--End Top Page-->
+<!--Top Main-->
+<div class="top_main">
+  <div class="page">
+    <div class="sitenav">
+      <ul>
+        <li class="homecatalog"> <span class="homecataloglabel">Danh mục sản phẩm</span>
+          <ul class="cataloglist  cataloglistdisplay">
+            <li><a href="">Sản phẩm</a>
+              <ul class="submenu">
+                <li class="maincat"><a href="http://shopping.indiatimes.com/clothes-shoes-jewellery/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/clothes-shoes-jewellery/',0,true]);">Thời trang - phụ kiện</a>
+                  <div class="cataloglistexpand">
+                    <div class="flt subcatwrapper">
+                      <div class="col">
+                        <h4><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Bàn Cầu / Bệt Toilet</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/ban-cau-mot-khoi.aspx">Bàn Cầu Một Khối</a></li>
+                          <li><a href="/danh-muc/ban-cau-dien-tu.aspx">Bàn Cầu Điện Tử</a></li>
+                          <li><a href="/danh-muc/ban-cau-hai-khoi.aspx">Bàn Cầu Hai Khối</a></li>
+                          <li><a href="/danh-muc/ban-cau-treo-tuong.aspx">Bàn Cầu Treo Tường</a></li>
+                          <li><a href="/danh-muc/ket-nuoc-am-tuong.aspx">Két Nước Ấm Tường</a></li>
+                          <li><a href="/danh-muc/nap-day-nut-nhan-xa.aspx">Nắp Đậy Nút Nhấn Xả</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Chậu Lavabo</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/chau-dat-ban.aspx">Chậu Đặt Bàn</a></li>
+                          <li><a href="/danh-muc/chau-dat-am-ban.aspx">Chậu Đặt Âm Bàn</a></li>
+                          <li><a href="/danh-muc/chau-duong-vanh.aspx">Chậu Dương Vành</a></li>
+                          <li><a href="/danh-muc/chau-chan-dai.aspx">Chậu Chân Dài</a></li>
+                          <li><a href="/danh-muc/chau-chan-lung.aspx">Chậu Chân Lửng</a></li>
+                          <li><a href="/danh-muc/chau-treo-tuong.aspx">Chậu Treo Tường</a></li>
+                          <li><a href="/danh-muc/chau-lavabo-kieng.aspx">Chậu Lavabo Kiếng</a></li>
+                          <li><a href="/danh-muc/bo-gia-do-lavabo.aspx">Bộ Giá Đở Lavabo</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Vòi Chậu - Vòi Bồn</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/voi-chau-nong-lanh.aspx">Vòi Chậu Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-chau-nuoc-lanh.aspx">Vòi Chậu Nước Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-chau-cam-ung.aspx">Vòi Chậu Cảm Ứng</a></li>
+                          <li><a href="/danh-muc/voi-xa-bon-tam.aspx">Vòi Xả Bồn Tắm</a></li>
+                          <li><a href="/danh-muc/voi-xa-nuoc-lanh.aspx">Vòi Xả Nước Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-ban-tu-dong.aspx">Vòi Bán Tự Động</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Sen Tắm</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/sen-cay-nong-lanh.aspx">Sen Cây Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/sen-day-nong-lanh.aspx">Sen Dây Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/sen-tam-am-tuong.aspx">Sen Tắm Âm Tường</a></li>
+                          <li><a href="/danh-muc/sen-tam-nhiet-do.aspx">Sen Tắm Nhiệt Độ</a></li>
+                          <li><a href="/danh-muc/bang-sen-sen-thuyen.aspx">Bảng Sen - Sen Thuyền</a></li>
+                          <li><a href="/danh-muc/tay-sen-cu-sen-voi-xa-bon.aspx">Tay Sen - Củ Sen - Vòi Xả Bồn</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tắm</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bon-tam-dat-san.aspx">Bồn Tắm Đặt Sàn</a></li>
+                          <li><a href="/danh-muc/bon-tam-xay-am.aspx">Bồn Tắm Xây Âm</a></li>
+                          <li><a href="/danh-muc/bon-tam-massage.aspx">Bồn Tắm Massage</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tiểu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bon-tieu-nam.aspx">Bồn Tiểu Nam</a></li>
+                          <li><a href="/danh-muc/bon-tieu-nu.aspx">Bồn Tiểu Nữ</a></li>
+                          <li><a href="/danh-muc/vach-ngan-tieu.aspx">Vách Ngăn Tiểu</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Van Xả Tiểu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/van-xa-tieu-nhan-gat.aspx">Van Xả Tiểu Nhấn - Gạt</a></li>
+                          <li><a href="/danh-muc/van-xa-tieu-cam-ung.aspx">Van Xả Tiểu Cảm Ứng</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Phòng Tắm Đứng</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/khung-tam-dung.aspx">Khung Tắm Đứng</a></li>
+                          <li><a href="/danh-muc/phong-dung-massage.aspx">Phòng Đứng Massage</a></li>
+                          <li><a href="/danh-muc/khay-phong-tam.aspx">Khay Phòng Tắm</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Nắp Bàn Cầu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/nap-rua-co.aspx">Nắp Rửa Cơ</a></li>
+                          <li><a href="/danh-muc/nap-rua-dien-tu.aspx">Nắp Rửa Điện Tử</a></li>
+                          <li><a href="/danh-muc/nap-dong-em.aspx">Nắp Đóng Êm</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Sấy Tay</a></h4>
+                      </div>
+                    </div>
+                    <span class="submenubg"><img src="Images/cate_boncau.jpg" alt="" /></span> </div>
+                </li>
+                <li class="maincat"><a href="http://shopping.indiatimes.com/clothes-shoes-jewellery/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/clothes-shoes-jewellery/',0,true]);">Mỹ phẩm - Làm đẹp</a>
+                  <div class="cataloglistexpand"> <span class="backgroundMenu"> <img src="/data/categories/286/phukienphongtam.jpg" alt="" width="100%"> </span>
+                    <div class="flt subcatwrapper">
+                      <div class="col">
+                        <h4> <a href="/danh-muc/phu-kien-6-mon.html" title='Phụ Kiện 6 Món'> Phụ Kiện 6 Món</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/lo-dung-xa-phong.html"> Lô Đựng Xà Phòng</a></li>
+                          <li><a href="/danh-muc/lo-dung-giay-ve-sinh.html"> Lô Đựng Giấy Vệ Sinh</a></li>
+                          <li><a href="/danh-muc/lo-dung-ban-chai.html"> Lô Đựng Bàn Chải</a></li>
+                          <li><a href="/danh-muc/ke-kinh-ke-su.html"> Kệ Kính - Kệ Sứ</a></li>
+                          <li><a href="/danh-muc/thanh-vat-khan.html"> Thanh Vắt Khăn</a></li>
+                          <li><a href="/danh-muc/vong-treo-khan.html"> Vòng Treo Khăn</a></li>
+                          <li><a href="/danh-muc/moc-ao.html"> Móc Áo</a></li>
+                          <li><a href="/danh-muc/bo-san-pham-4-mon.html"> Bộ Sản Phẩm 4 Món</a></li>
+                          <li><a href="/danh-muc/ke-da-nang.html"> Kệ Đa Năng</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/tu-hop-dung-giay.html" title='Tủ & Hộp Đựng Giấy'> Tủ & Hộp Đựng Giấy</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/tu-dung-giay.html"> Tủ Đựng Giấy</a></li>
+                          <li><a href="/danh-muc/hop-giay-cam-úng.html"> Hộp Giấy Cảm Ứng</a></li>
+                          <li><a href="/danh-muc/hop-dung-giay-inox.html"> Hộp Đựng Giấy Inox</a></li>
+                          <li><a href="/danh-muc/hop-dung-giay-nhua.html"> Hộp Đựng Giấy Nhựa</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/hop-xit-xa-phong.html" title='Hộp Xịt Xà Phòng'> Hộp Xịt Xà Phòng</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/hop-xit-xa-phong-nhan.html"> Hộp Xịt Xà Phòng Nhấn</a></li>
+                          <li><a href="/danh-muc/hop-xit-xa-phong-cam-ung.html"> Hộp Xịt Xà Phòng Cảm Ứng</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/nguoi-gia-khuyet-tat.html" title='Người Già & Khuyết Tật'> Người Già & Khuyết Tật</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/thanh-tay-vin.html"> Thanh Tay Vịn</a></li>
+                          <li><a href="/danh-muc/ghe-chuyen-biet.html"> Ghế Chuyên Biệt</a></li>
+                          <li><a href="/danh-muc/phu-kien-chuyen-biet-khac.html"> Phụ Kiện Chuyên Biệt Khác</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/gac-sen.html" title='Gác Sen'> Gác Sen</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/gio-may.html" title='Giỏ Mây'> Giỏ Mây</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/co-cau.html" title='Cọ Cầu'> Cọ Cầu</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/van-khoa-xa.html" title='Van Khóa & Xả'> Van Khóa & Xả</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/bo-tu-go-lavabo.html" title='Bộ Tủ Gỗ Lavabo'> Bộ Tủ Gỗ Lavabo</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/thung-rac-toilet.html" title='Thùng Rác Toilet'> Thùng Rác Toilet</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/day-xit-nuoc.html" title='Dây Xịt Nước'> Dây Xịt Nước</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/ong-thai-chu-p.html" title='Ống Thải Chữ P'> Ống Thải Chữ P</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/ga-thoat-nuoc-san.html" title='Ga Thoát Nước Sàn'> Ga Thoát Nước Sàn</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/guong-phong-tam.html" title='Gương Phòng Tắm'> Gương Phòng Tắm</a></h4>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="maincat"><a href="http://shopping.indiatimes.com/clothes-shoes-jewellery/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/clothes-shoes-jewellery/',0,true]);">Phụ kiện - Thiết bị số</a>
+                  <div class="cataloglistexpand">
+                    <div class="flt subcatwrapper">
+                      <div class="col">
+                        <h4><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Bàn Cầu / Bệt Toilet</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/ban-cau-mot-khoi.aspx">Bàn Cầu Một Khối</a></li>
+                          <li><a href="/danh-muc/ban-cau-dien-tu.aspx">Bàn Cầu Điện Tử</a></li>
+                          <li><a href="/danh-muc/ban-cau-hai-khoi.aspx">Bàn Cầu Hai Khối</a></li>
+                          <li><a href="/danh-muc/ban-cau-treo-tuong.aspx">Bàn Cầu Treo Tường</a></li>
+                          <li><a href="/danh-muc/ket-nuoc-am-tuong.aspx">Két Nước Ấm Tường</a></li>
+                          <li><a href="/danh-muc/nap-day-nut-nhan-xa.aspx">Nắp Đậy Nút Nhấn Xả</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Chậu Lavabo</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/chau-dat-ban.aspx">Chậu Đặt Bàn</a></li>
+                          <li><a href="/danh-muc/chau-dat-am-ban.aspx">Chậu Đặt Âm Bàn</a></li>
+                          <li><a href="/danh-muc/chau-duong-vanh.aspx">Chậu Dương Vành</a></li>
+                          <li><a href="/danh-muc/chau-chan-dai.aspx">Chậu Chân Dài</a></li>
+                          <li><a href="/danh-muc/chau-chan-lung.aspx">Chậu Chân Lửng</a></li>
+                          <li><a href="/danh-muc/chau-treo-tuong.aspx">Chậu Treo Tường</a></li>
+                          <li><a href="/danh-muc/chau-lavabo-kieng.aspx">Chậu Lavabo Kiếng</a></li>
+                          <li><a href="/danh-muc/bo-gia-do-lavabo.aspx">Bộ Giá Đở Lavabo</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Vòi Chậu - Vòi Bồn</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/voi-chau-nong-lanh.aspx">Vòi Chậu Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-chau-nuoc-lanh.aspx">Vòi Chậu Nước Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-chau-cam-ung.aspx">Vòi Chậu Cảm Ứng</a></li>
+                          <li><a href="/danh-muc/voi-xa-bon-tam.aspx">Vòi Xả Bồn Tắm</a></li>
+                          <li><a href="/danh-muc/voi-xa-nuoc-lanh.aspx">Vòi Xả Nước Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-ban-tu-dong.aspx">Vòi Bán Tự Động</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Sen Tắm</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/sen-cay-nong-lanh.aspx">Sen Cây Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/sen-day-nong-lanh.aspx">Sen Dây Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/sen-tam-am-tuong.aspx">Sen Tắm Âm Tường</a></li>
+                          <li><a href="/danh-muc/sen-tam-nhiet-do.aspx">Sen Tắm Nhiệt Độ</a></li>
+                          <li><a href="/danh-muc/bang-sen-sen-thuyen.aspx">Bảng Sen - Sen Thuyền</a></li>
+                          <li><a href="/danh-muc/tay-sen-cu-sen-voi-xa-bon.aspx">Tay Sen - Củ Sen - Vòi Xả Bồn</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tắm</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bon-tam-dat-san.aspx">Bồn Tắm Đặt Sàn</a></li>
+                          <li><a href="/danh-muc/bon-tam-xay-am.aspx">Bồn Tắm Xây Âm</a></li>
+                          <li><a href="/danh-muc/bon-tam-massage.aspx">Bồn Tắm Massage</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tiểu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bon-tieu-nam.aspx">Bồn Tiểu Nam</a></li>
+                          <li><a href="/danh-muc/bon-tieu-nu.aspx">Bồn Tiểu Nữ</a></li>
+                          <li><a href="/danh-muc/vach-ngan-tieu.aspx">Vách Ngăn Tiểu</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Van Xả Tiểu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/van-xa-tieu-nhan-gat.aspx">Van Xả Tiểu Nhấn - Gạt</a></li>
+                          <li><a href="/danh-muc/van-xa-tieu-cam-ung.aspx">Van Xả Tiểu Cảm Ứng</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Phòng Tắm Đứng</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/khung-tam-dung.aspx">Khung Tắm Đứng</a></li>
+                          <li><a href="/danh-muc/phong-dung-massage.aspx">Phòng Đứng Massage</a></li>
+                          <li><a href="/danh-muc/khay-phong-tam.aspx">Khay Phòng Tắm</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Nắp Bàn Cầu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/nap-rua-co.aspx">Nắp Rửa Cơ</a></li>
+                          <li><a href="/danh-muc/nap-rua-dien-tu.aspx">Nắp Rửa Điện Tử</a></li>
+                          <li><a href="/danh-muc/nap-dong-em.aspx">Nắp Đóng Êm</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Sấy Tay</a></h4>
+                      </div>
+                    </div>
+                    <span class="submenubg"><img src="Images/cate_boncau.jpg" alt="" /></span> </div>
+                </li>
+              </ul>
+            </li>
+            <li><a href="">Dịch vụ</a>
+              <ul class="submenu">
+                <li class="maincat"><a href="http://shopping.indiatimes.com/clothes-shoes-jewellery/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/clothes-shoes-jewellery/',0,true]);">Ăn - Uống</a>
+                  <div class="cataloglistexpand"> <span class="backgroundMenu"> <img src="/data/categories/274/thietbinhabep.jpg" alt="" width="100%"> </span>
+                    <div class="flt subcatwrapper">
+                      <div class="col">
+                        <h4> <a href="/danh-muc/may-hut-khoi.html" title='Máy Hút Khói'> Máy Hút Khói</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/may-hut-dang-truyen-thong.html"> Máy Hút Dạng Truyền Thống</a></li>
+                          <li><a href="/danh-muc/may-hut-dang-treo-doc-lap.html"> Máy Hút Dạng Treo Độc Lập</a></li>
+                          <li><a href="/danh-muc/may-hut-dieu-khien-cam-ung.html"> Máy Hút Điều Khiển Cảm Ứng</a></li>
+                          <li><a href="/danh-muc/may-hut-cam-bien-nhiet.html"> Máy Hút Cảm Biến Nhiệt</a></li>
+                          <li><a href="/danh-muc/may-hut-dang-pull-out.html"> Máy Hút Dạng Pull-out</a></li>
+                          <li><a href="/danh-muc/may-hut-dang-gan-ap-tuong.html"> Máy Hút Dạng Gắn Áp Tường</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/bep-gas-bep-dien-bep-tu.html" title='Bếp Gas - Bếp Điện - Bếp Từ'> Bếp Gas - Bếp Điện - Bếp Từ</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bep-am-ket-hop.html"> Bếp Âm Kết Hợp</a></li>
+                          <li><a href="/danh-muc/bep-dien-am.html"> Bếp Điện Âm</a></li>
+                          <li><a href="/danh-muc/bep-tu-am.html"> Bếp Từ Âm</a></li>
+                          <li><a href="/danh-muc/bep-gas-am.html"> Bếp Gas Âm</a></li>
+                          <li><a href="/danh-muc/bep-dien-dat-ban.html"> Bếp Điện Đặt Bàn</a></li>
+                          <li><a href="/danh-muc/bep-gas-dat-ban.html"> Bếp Gas Đặt Bàn</a></li>
+                          <li><a href="/danh-muc/bep-dung-ket-hop.html"> Bếp Đứng Kết Hợp</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/lo-nuong-hap-vi-song.html" title='Lò Nướng - Hấp - Vi Sóng'> Lò Nướng - Hấp - Vi Sóng</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/lo-nuong-dien-am.html"> Lò Nướng Điện Âm</a></li>
+                          <li><a href="/danh-muc/lo-hap-lap-am.html"> Lò Hấp Lấp Âm</a></li>
+                          <li><a href="/danh-muc/lo-vi-song-lap-am.html"> Lò Vi Sóng Lấp Âm</a></li>
+                          <li><a href="/danh-muc/vi-nuong-dat-ban.html"> Vĩ Nướng Đặt Bàn</a></li>
+                          <li><a href="/danh-muc/lo-nuong-dat-ban.html"> Lò Nướng Đặt Bàn</a></li>
+                          <li><a href="/danh-muc/lo-vi-song-dat-ban.html"> Lò Vi Sóng Đặt Bàn</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/may-rua-chen-say-chen.html" title='Máy Rửa Chén / Sấy Chén'> Máy Rửa Chén / Sấy Chén</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/may-rua-chen.html"> Máy Rửa Chén</a></li>
+                          <li><a href="/danh-muc/may-say-chen.html"> Máy Sấy Chén</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/chau-bep-chau-rua-chen.html" title='Chậu Bếp / Chậu Rửa Chén'> Chậu Bếp / Chậu Rửa Chén</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/chau-bep-mat-da-cao-cap.html"> Chậu Bếp Mặt Đá Cao Cấp</a></li>
+                          <li><a href="/danh-muc/chau-bep-kim-loai.html"> Chậu Bếp Kim Loại</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/voi-bep-voi-rua-chen.html" title='Vòi Bếp / Vòi Rửa Chén'> Vòi Bếp / Vòi Rửa Chén</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/voi-bep-nong-lanh.html"> Vòi Bếp Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-bep-nuoc-lanh.html"> Vòi Bếp Nước Lạnh</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/may-huy-thuc-pham-thua.html" title='Máy Hủy Thực Phẩm Thừa'> Máy Hủy Thực Phẩm Thừa</a></h4>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/noi-nieu-xoong-chao.html" title='Nồi - Niêu - Xoong - Chảo'> Nồi - Niêu - Xoong - Chảo</a></h4>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="maincat"><a href="http://shopping.indiatimes.com/clothes-shoes-jewellery/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/clothes-shoes-jewellery/',0,true]);">Spa - Làm đẹp</a>
+                  <div class="cataloglistexpand">
+                    <div class="flt subcatwrapper">
+                      <div class="col">
+                        <h4><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Bàn Cầu / Bệt Toilet</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/ban-cau-mot-khoi.aspx">Bàn Cầu Một Khối</a></li>
+                          <li><a href="/danh-muc/ban-cau-dien-tu.aspx">Bàn Cầu Điện Tử</a></li>
+                          <li><a href="/danh-muc/ban-cau-hai-khoi.aspx">Bàn Cầu Hai Khối</a></li>
+                          <li><a href="/danh-muc/ban-cau-treo-tuong.aspx">Bàn Cầu Treo Tường</a></li>
+                          <li><a href="/danh-muc/ket-nuoc-am-tuong.aspx">Két Nước Ấm Tường</a></li>
+                          <li><a href="/danh-muc/nap-day-nut-nhan-xa.aspx">Nắp Đậy Nút Nhấn Xả</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Chậu Lavabo</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/chau-dat-ban.aspx">Chậu Đặt Bàn</a></li>
+                          <li><a href="/danh-muc/chau-dat-am-ban.aspx">Chậu Đặt Âm Bàn</a></li>
+                          <li><a href="/danh-muc/chau-duong-vanh.aspx">Chậu Dương Vành</a></li>
+                          <li><a href="/danh-muc/chau-chan-dai.aspx">Chậu Chân Dài</a></li>
+                          <li><a href="/danh-muc/chau-chan-lung.aspx">Chậu Chân Lửng</a></li>
+                          <li><a href="/danh-muc/chau-treo-tuong.aspx">Chậu Treo Tường</a></li>
+                          <li><a href="/danh-muc/chau-lavabo-kieng.aspx">Chậu Lavabo Kiếng</a></li>
+                          <li><a href="/danh-muc/bo-gia-do-lavabo.aspx">Bộ Giá Đở Lavabo</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Vòi Chậu - Vòi Bồn</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/voi-chau-nong-lanh.aspx">Vòi Chậu Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-chau-nuoc-lanh.aspx">Vòi Chậu Nước Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-chau-cam-ung.aspx">Vòi Chậu Cảm Ứng</a></li>
+                          <li><a href="/danh-muc/voi-xa-bon-tam.aspx">Vòi Xả Bồn Tắm</a></li>
+                          <li><a href="/danh-muc/voi-xa-nuoc-lanh.aspx">Vòi Xả Nước Lạnh</a></li>
+                          <li><a href="/danh-muc/voi-ban-tu-dong.aspx">Vòi Bán Tự Động</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Sen Tắm</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/sen-cay-nong-lanh.aspx">Sen Cây Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/sen-day-nong-lanh.aspx">Sen Dây Nóng Lạnh</a></li>
+                          <li><a href="/danh-muc/sen-tam-am-tuong.aspx">Sen Tắm Âm Tường</a></li>
+                          <li><a href="/danh-muc/sen-tam-nhiet-do.aspx">Sen Tắm Nhiệt Độ</a></li>
+                          <li><a href="/danh-muc/bang-sen-sen-thuyen.aspx">Bảng Sen - Sen Thuyền</a></li>
+                          <li><a href="/danh-muc/tay-sen-cu-sen-voi-xa-bon.aspx">Tay Sen - Củ Sen - Vòi Xả Bồn</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tắm</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bon-tam-dat-san.aspx">Bồn Tắm Đặt Sàn</a></li>
+                          <li><a href="/danh-muc/bon-tam-xay-am.aspx">Bồn Tắm Xây Âm</a></li>
+                          <li><a href="/danh-muc/bon-tam-massage.aspx">Bồn Tắm Massage</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tiểu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bon-tieu-nam.aspx">Bồn Tiểu Nam</a></li>
+                          <li><a href="/danh-muc/bon-tieu-nu.aspx">Bồn Tiểu Nữ</a></li>
+                          <li><a href="/danh-muc/vach-ngan-tieu.aspx">Vách Ngăn Tiểu</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Van Xả Tiểu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/van-xa-tieu-nhan-gat.aspx">Van Xả Tiểu Nhấn - Gạt</a></li>
+                          <li><a href="/danh-muc/van-xa-tieu-cam-ung.aspx">Van Xả Tiểu Cảm Ứng</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Phòng Tắm Đứng</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/khung-tam-dung.aspx">Khung Tắm Đứng</a></li>
+                          <li><a href="/danh-muc/phong-dung-massage.aspx">Phòng Đứng Massage</a></li>
+                          <li><a href="/danh-muc/khay-phong-tam.aspx">Khay Phòng Tắm</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Nắp Bàn Cầu</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/nap-rua-co.aspx">Nắp Rửa Cơ</a></li>
+                          <li><a href="/danh-muc/nap-rua-dien-tu.aspx">Nắp Rửa Điện Tử</a></li>
+                          <li><a href="/danh-muc/nap-dong-em.aspx">Nắp Đóng Êm</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Sấy Tay</a></h4>
+                      </div>
+                    </div>
+                    <span class="submenubg"><img src="Images/cate_boncau.jpg" alt="" /></span> </div>
+                </li>
+                <li class="maincat"><a href="http://shopping.indiatimes.com/clothes-shoes-jewellery/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/clothes-shoes-jewellery/',0,true]);">Giải trí - Đào tạo</a>
+                  <div class="cataloglistexpand"> <span class="backgroundMenu"> <img src="/data/categories/304/CCTV-banner (1).jpg" alt="" width="100%"> </span>
+                    <div class="flt subcatwrapper">
+                      <div class="col">
+                        <h4> <a href="/danh-muc/camera-an-ninh-analog.html" title='Camera An Ninh (ANALOG)'> Camera An Ninh (ANALOG)</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/camera-avtech.html"> Camera Avtech</a></li>
+                          <li><a href="/danh-muc/camera-questek.html"> Camera Questek</a></li>
+                          <li><a href="/danh-muc/camera-panasonic.html"> Camera Panasonic</a></li>
+                          <li><a href="/danh-muc/camera-sony.html"> Camera Sony</a></li>
+                          <li><a href="/danh-muc/camera-samsung.html"> Camera Samsung</a></li>
+                          <li><a href="/danh-muc/camera-vantech.html"> Camera Vantech</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/camera-an-ninh-ip.html" title='Camera An Ninh (IP)'> Camera An Ninh (IP)</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/camera-ip-avtech.html"> Camera IP Avtech</a></li>
+                          <li><a href="/danh-muc/camera-ip-questek.html"> Camera IP Questek</a></li>
+                          <li><a href="/danh-muc/camera-ip-panasonic.html"> Camera IP Panasonic</a></li>
+                          <li><a href="/danh-muc/camera-ip-sony.html"> Camera IP Sony</a></li>
+                          <li><a href="/danh-muc/camera-ip-samsung.html"> Camera IP Samsung</a></li>
+                          <li><a href="/danh-muc/camera-ip-vantech.html"> Camera IP Vantech</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/dau-ghi-ky-thuat-so.html" title='Đầu Ghi Kỹ Thuật Số'> Đầu Ghi Kỹ Thuật Số</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/dau-ghi-hinh-avtech.html"> Đầu Ghi Hình Avtech</a></li>
+                          <li><a href="/danh-muc/dau-ghi-hinh-questek.html"> Đầu Ghi Hình Questek</a></li>
+                          <li><a href="/danh-muc/dau-ghi-hinh-panasonic.html"> Đầu Ghi Hình Panasonic</a></li>
+                          <li><a href="/danh-muc/dau-ghi-hinh-vantech.html"> Đầu Ghi Hình Vantech</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/he-thong-bao-chay.html" title='Hệ Thống Báo Cháy'> Hệ Thống Báo Cháy</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bao-chay-networx.html"> Báo Cháy Networx</a></li>
+                          <li><a href="/danh-muc/bao-chay-hochiky.html"> Báo Cháy Hochiky</a></li>
+                          <li><a href="/danh-muc/bao-chay-horing.html"> Báo Cháy Horing </a></li>
+                          <li><a href="/danh-muc/bao-chay-gst.html"> Báo Cháy GST</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/he-thong-tong-dai-dien-thoai.html" title='Hệ Thống Tổng Đài Điện Thoại'> Hệ Thống Tổng Đài Điện Thoại</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/tong-dai-panasonic.html"> Tổng Đài Panasonic</a></li>
+                          <li><a href="/danh-muc/tong-dai-adsun.html"> Tổng Đài ADSUN</a></li>
+                          <li><a href="/danh-muc/tong-dai-ike.html"> Tổng Đài IKE</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/chuong-cua-man-hinh.html" title='Chuông Cửa Màn Hình'> Chuông Cửa Màn Hình</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/commax.html"> COMMAX</a></li>
+                          <li><a href="/danh-muc/samsung.html"> SAMSUNG</a></li>
+                          <li><a href="/danh-muc/panasonic.html"> PANASONIC</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/he-thong-may-cham-cong.html" title='Hệ Thống Máy Chấm Công'> Hệ Thống Máy Chấm Công</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/may-cham-cong-bang-tay.html"> Máy Chấm Công Bằng Tay</a></li>
+                          <li><a href="/danh-muc/may-cham-cong-bang-the.html"> Máy Chấm Công Bằng Thẻ</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/he-thong-bao-trom.html" title='Hệ Thống Báo Trộm'> Hệ Thống Báo Trộm</a></h4>
+                        <ul>
+                          <li><a href="/danh-muc/bao-khong-day-co-day.html"> Báo Không Dây & Có Dây</a></li>
+                          <li><a href="/danh-muc/phu-kien-bao-trom.html"> Phụ Kiện Báo Trộm</a></li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <h4> <a href="/danh-muc/phu-kien-camera.html" title='Phụ Kiện Camera'> Phụ Kiện Camera</a></h4>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--Search Tool-->
+    <div class="search_tool">
+      <div class="allcate_seach">
+        <div class="dropdown">
+          <div class="cate_selected"><span class="title_select">Tất cả danh mục</span><span class="arrow_down"></span></div>
+          <ul class="menu_hover">
+            <li class=""><a href="/thoi-trang-quan-ao-gia-re_c56.html">Tất cả danh mục</a></li>
+            <li class=""><a href="/thoi-trang-quan-ao-gia-re_c56.html">VIETBAS.COM</a></li>
+            <li class=""><a href="/phu-kien-thoi-trang_c69.html">PHỤ KIỆN PHÒNG TẮM</a></li>
+            <li class=""><a href="/nha-hang-quan-an-gia-re_c53.html">THIẾT BỊ NHÀ BẾP</a></li>
+            <li class=""><a href="/lam-dep-da_c54.html">THIẾT BỊ CHIẾU SÁNG GIA ĐÌNH</a></li>
+            <li class=""><a href="/du-lich-khach-san-resort-gia-re_c52.html">HỆ THỐNG KHOÁ CĂN HỘ</a></li>
+            <li class=""><a href="/giai-tri-dao-tao_c55.html">HỆ THỐNG AN NINH CĂN HỘ</a></li>
+            <li class=""><a href="/gia-dung-noi-that_c57.html">SƠN NỘI & NGOẠI THẤT</a></li>
+            <li class=""><a href="/dien-tu-cong-nghe_c59.html">CÁC GÓI KHUYẾN MÃI</a></li>
+          </ul>
+        </div>
+      </div>
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+      <a href="" class="submitSearch"><span class="icon_search"></span></a> </div>
+    <!--End Search Tool-->
+    <!--Account-->
+    <div id="account_section"><a href="login.html" class="link_acc" id="login">Đăng Nhập</a> | <a class="link_acc" id="register" href="login.html">Đăng Ký</a><span class="arrow_down"></span></div>
+    <!--End Account-->
+    <!--Search Advanced-->
+    <div id="search_advanced"><a class="trigger"><span class="s_advanced_button"></span></a>
+      <div id="dpop" class="search_filter"><span class="icon_point"></span>
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <div class="dropdown_adv">
+          <select id="categories" name="categories" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+            <option value="">Danh mục</option>
+            <option value="thiet-bi-ve-sinh">VIETBAS.COM</option>
+            <option value="phu-kien-phong-tam">PHỤ KIỆN PHÒNG TẮM</option>
+            <option value="thiet-bi-nha-bep">THIẾT BỊ NHÀ BẾP</option>
+            <option value="thiet-bi-chieu-sang-gia-dinh">THIẾT BỊ CHIẾU SÁNG GIA ĐÌNH</option>
+            <option value="he-thong-khoa-can-ho">HỆ THỐNG KHOÁ CĂN HỘ</option>
+            <option value="he-thong-an-ninh-can-ho">HỆ THỐNG AN NINH CĂN HỘ</option>
+            <option value="son-noi-ngoai-that">SƠN NỘI & NGOẠI THẤT</option>
+            <option value="cac-goi-khuyen-mai">CÁC GÓI KHUYẾN MÃI</option>
+          </select>
+        </div>
+        <div class="dropdown_adv">
+          <select id="type_P" name="type_P" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+            <option selected="selected" value="0">Loại sản phẩm</option>
+            <option value="270">B&#192;N CẦU / BỆT TOILET</option>
+            <option value="358">B&#192;N L&#192;M VIỆC</option>
+            <option value="430">B&#192;N M&#193;Y VI T&#205;NH</option>
+            <option value="349">B&#192;N SOFA</option>
+            <option value="363">B&#192;N TR&#192;</option>
+            <option value="395">B&#192;N TRANG ĐIỂM</option>
+            <option value="501">B&#192;N ỦI</option>
+            <option value="291">BẾP GAS - ĐIỆN - TỪ</option>
+            <option value="396">BỒN NƯỚC SINH HOẠT</option>
+            <option value="282">BỒN TẮM</option>
+            <option value="283">BỒN TIỂU</option>
+            <option value="564">B&#211;NG CHIẾU S&#193;NG TIẾT KIỆM</option>
+            <option value="353">BỘT TR&#201;T TƯỜNG &amp; CHỐNG THẤM</option>
+            <option value="364">CAMERA AN NINH (ANALOG)</option>
+            <option value="365">CAMERA AN NINH (IP)</option>
+            <option value="571">CHẬU BẾP / CHẬU RỬA CH&#201;N</option>
+            <option value="277">CHẬU LAVABO</option>
+            <option value="570">CHO&#193; Đ&#200;N</option>
+            <option value="451">CHU&#212;NG CỬA M&#192;N H&#204;NH</option>
+            <option value="433">ĐẦU GHI H&#204;NH KỸ THUẬT SỐ</option>
+            <option value="344">D&#194;Y XỊT NƯỚC</option>
+            <option value="489">ĐÈN BÀN</option>
+            <option value="493">ĐÈN NGO&#192;I S&#194;N VƯỜN</option>
+            <option value="488">ĐÈN PH&#210;NG TẮM</option>
+            <option value="490">ĐÈN TRẦN CHI&#202;́U ĐI&#202;̉M</option>
+            <option value="486">ĐÈN TRANG TR&#205;</option>
+            <option value="341">GA THO&#193;T NƯỚC S&#192;N</option>
+            <option value="356">GẠCH MEN</option>
+            <option value="359">GHẾ L&#192;M VIỆC</option>
+            <option value="350">GHẾ THƯ GIẢN</option>
+            <option value="372">GIƯỜNG</option>
+            <option value="373">GIƯỜNG TRẺ EM</option>
+            <option value="330">GƯƠNG PH&#210;NG TẮM</option>
+            <option value="377">GƯƠNG TRANG ĐIỂM</option>
+            <option value="436">HỆ THỐNG B&#193;O CH&#193;Y</option>
+            <option value="435">HỆ THỐNG B&#193;O TRỘM</option>
+            <option value="466">HỆ THỐNG M&#193;Y CHẤM C&#212;NG</option>
+            <option value="465">HỆ THỐNG TỔNG Đ&#192;I ĐIỆN THOẠI</option>
+            <option value="525">HỘP XỊT X&#192; PH&#210;NG</option>
+            <option value="362">KỆ S&#193;CH - HỒ SƠ</option>
+            <option value="351">KỆ TIVI</option>
+            <option value="556">K&#201;T SẮT</option>
+            <option value="549">KHO&#193; &amp; TAY NẮM</option>
+            <option value="292">L&#210; NƯỚNG - HẤP - VI S&#211;NG</option>
+            <option value="499">M&#193;Y ĐIỀU H&#210;A</option>
+            <option value="497">M&#193;Y GIẶT</option>
+            <option value="498">M&#193;Y H&#218;T BỤI</option>
+            <option value="289">M&#193;Y H&#218;T KH&#211;I</option>
+            <option value="538">M&#193;Y HỦY THỰC PHẨM THỪA</option>
+            <option value="299">M&#193;Y NĂNG LƯỢNG MẶT TRỜI</option>
+            <option value="298">M&#193;Y NƯỚC N&#211;NG GI&#193;N TIẾP</option>
+            <option value="297">M&#193;Y NƯỚC N&#211;NG TRỰC TIẾP</option>
+            <option value="502">M&#193;Y NƯỚC UỐNG N&#211;NG LẠNH</option>
+            <option value="500">M&#193;Y PHA C&#192; PH&#202;</option>
+            <option value="572">M&#193;Y RỬA CH&#201;N / SẤY CH&#201;N</option>
+            <option value="331">M&#193;Y SẤY TAY</option>
+            <option value="296">M&#193;Y TẮM NƯỚC N&#211;NG</option>
+            <option value="287">NẮP B&#192;N CẦU</option>
+            <option value="357">NG&#211;I</option>
+            <option value="528">NGƯỜI GI&#192; &amp; KHUYẾT TẬT</option>
+            <option value="429">NỒI - NI&#202;U - XOONG - CHẢO</option>
+            <option value="505">NỒI CƠM ĐIỆN</option>
+            <option value="343">ỐNG THẢI CHỮ P</option>
+            <option value="285">PH&#210;NG TẮM ĐỨNG</option>
+            <option value="573">PHỤ KIỆN 6 M&#211;N</option>
+            <option value="434">PHỤ KIỆN CAMERA</option>
+            <option value="550">PHỤ KIỆN CỬA</option>
+            <option value="281">SEN TẮM</option>
+            <option value="348">SOFA</option>
+            <option value="534">TH&#217;NG R&#193;C TOILET</option>
+            <option value="438">TR&#201;T TƯỜNG &amp; CHỐNG THẤM</option>
+            <option value="522">TỦ &amp; H&#212;̣P ĐỰNG GI&#194;́Y</option>
+            <option value="376">TỦ ĐẦU GIƯỜNG</option>
+            <option value="431">TỦ GIẦY</option>
+            <option value="360">TỦ HỒ SƠ</option>
+            <option value="496">TỦ LẠNH</option>
+            <option value="503">TỦ M&#193;T - TỦ Đ&#212;NG</option>
+            <option value="394">TỦ QUẦN &#193;O</option>
+            <option value="504">TỦ RƯỢU VANG</option>
+            <option value="432">TỦ TRANG TR&#205;</option>
+            <option value="284">VAN XẢ TIỂU</option>
+            <option value="288">V&#210;I BẾP / V&#210;I RỬA CH&#201;N</option>
+            <option value="280">V&#210;I CHẬU - V&#210;I BỒN</option>
+            <option value="354">XI MĂNG</option>
+            <option value="355">XI MĂNG TRẮNG</option>
+          </select>
+        </div>
+        <div class="dropdown_adv">
+          <select id="function" name="function" onchange="document.location.href= baseUrl + '/search/'+this.value">
+            <option value="">Tính năng sản phẩm</option>
+            <option value="1">Dưới 300.000</option>
+            <option value="300000">300.000 - 600.000</option>
+            <option value="600000">600.000 - 900.000</option>
+            <option value="900000">Trên 900.000</option>
+          </select>
+        </div>
+        <div class="dropdown_adv">
+          <select name="ctl00$left1$Drhangsx" id="left1_Drhangsx">
+            <option selected="selected" value="0">H&#227;ng sản xuất</option>
+            <option value="56">ADSUN</option>
+            <option value="6">AMERICAN STANDARD</option>
+            <option value="9">ARISTON</option>
+            <option value="62">ATMOR</option>
+            <option value="39">AVTECH</option>
+            <option value="67">BLANCO</option>
+            <option value="70">BOSCH</option>
+            <option value="8">CAESAR</option>
+            <option value="25">CARANO</option>
+            <option value="45">CATA</option>
+            <option value="22">CAVALLO</option>
+            <option value="24">COLDWELL</option>
+            <option value="52">COMMAX</option>
+            <option value="11">COTTO</option>
+            <option value="31">COZY</option>
+            <option value="44">ELECTROLUX</option>
+            <option value="71">ELLECI</option>
+            <option value="74">FAGOR</option>
+            <option value="35">FASTER</option>
+            <option value="10">FERROLI</option>
+            <option value="28">GIOVANI</option>
+            <option value="59">GST</option>
+            <option value="66">HAFELE</option>
+            <option value="51">HOCHIKI</option>
+            <option value="50">HORING</option>
+            <option value="57">IKE</option>
+            <option value="5">INAX</option>
+            <option value="15">JOTUN</option>
+            <option value="12">JOVEN</option>
+            <option value="43">KARASSN</option>
+            <option value="63">KARAT</option>
+            <option value="23">LUXTA</option>
+            <option value="17">MALLOCA</option>
+            <option value="64">MANHATTAN</option>
+            <option value="13">MOEN</option>
+            <option value="60">MORRIS</option>
+            <option value="49">NETWORX</option>
+            <option value="34">O&#39;FURNI</option>
+            <option value="38">PANASONIC</option>
+            <option value="42">PHILIPS</option>
+            <option value="40">QUESTEK</option>
+            <option value="20">RINNAI</option>
+            <option value="58">RONALD JACK </option>
+            <option value="53">SAMSUNG</option>
+            <option value="69">SEAGATE</option>
+            <option value="65">SMARTHOME</option>
+            <option value="36">SONY</option>
+            <option value="19">TEKA</option>
+            <option value="4">TOTO</option>
+            <option value="41">VANTECH</option>
+            <option value="26">VIGLACERA</option>
+            <option value="61">VORTICE</option>
+            <option value="68">WESTERN</option>
+            <option value="73">YALE</option>
+          </select>
+        </div>
+        <div class="dropdown_adv">
+          <select name="ctl00$left1$Drgia" id="left1_Drgia" >
+            <option selected="selected" value="0">Chọn gi&#225;</option>
+            <option value="33">1triệu - 3triệu</option>
+            <option value="34">3triệu - 5triệu</option>
+            <option value="35">5triệu - 10triệu</option>
+            <option value="36">10triệu - 20triệu</option>
+            <option value="37">20triệu - 30triệu</option>
+            <option value="38">30triệu - 100triệu</option>
+          </select>
+        </div>
+        <div class="sm_button">
+          <input type="submit" name="ctl00$left1$Btsearch" value="Tìm kiếm" id="left1_Btsearch" class="sub_Search" />
+        </div>
+        <div class="cf"></div>
+      </div>
+    </div>
+    <!--End Search Advanced-->
+  </div>
+</div>
+<!--End Top Main-->
+<div class="cf"></div>
+<div class="page">
+  <!-- #Main -->
+  <div class="main cf">
+    <div id="pagenav">
+      <div class="path flt"> <a href="index.html" class="linktext">Trang chủ</a> » <span>Thiết Bị Vệ Sinh</span> </div>
+    </div>
+    <div class="detail_general">
+      <div id="dtp_slider" class="fl">
+        <div class="product-box">
+          <div class="item-info-box row">
+            <div class="item-image col-md-5 cleafix ">
+              <!-- Begin magiczoomplus -->
+              <div class="MagicToolboxContainer selectorsLeft clearfix">
+                <div id="MagicToolboxSelectors107454" class="item-thumbnail MagicToolboxSelectorsContainer">
+                  <!--<div class="thumb-up"></div>-->
+                  <ul class="jcarousel jcarousel-vertical jcarousel-skin-tango">
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1041-87425-2-zoom.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1041-87425-2-zoom.jpg"><img id="imageMain107454" src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1041-87425-2-zoom.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1040-87425-1-zoom.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1040-87425-1-zoom.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1040-87425-1-zoom.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1042-87425-3-zoom.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1042-87425-3-zoom.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1042-87425-3-zoom.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1043-87425-4-zoom.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1043-87425-4-zoom.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1043-87425-4-zoom.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1044-87425-5-zoom.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1044-87425-5-zoom.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1044-87425-5-zoom.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-9.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-9.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-9.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-5.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-5.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-5.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-7.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-7.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts931-7.jpg" alt="" /></a></li>
+                    <li><a onmouseover="MagicToolboxChangeSelector(this);" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts933-6.jpg" rel="zoom-id: MagicZoomPlusImage107454;caption-source: a:title;" rev="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts933-6.jpg"><img src="http://tikicdn.com/media/catalog/product/cache/1/thumbnail/42x42/9df78eab33525d08d6e5fb8d27136e95/m/a/may-hut-bui-tiross-ts933-6.jpg" alt="" /></a></li>
+                  </ul>
+                  <!--<div class="thumb-down active"></div>-->
+                </div>
+                <div class="item-main-image MagicToolboxMainContainer clearfix  " > <a class="MagicZoomPlus nobook" id="MagicZoomPlusImage107454" href="http://tikicdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1041-87425-2-zoom.jpg" ><img itemprop="image" src="http://tikicdn.com/media/catalog/product/cache/1/small_image/300x300/9df78eab33525d08d6e5fb8d27136e95/t/i/tiross-1041-87425-2-zoom.jpg" alt="Máy Hút Bụi Cyclone TIROSS TS931" /></a>
+                  <div class="MagicToolboxMessage"> Click vào ảnh để phóng to</div>
+                </div>
+              </div>
+              <!-- End magiczoomplus -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end: #dp-thumb-->
+      <div id="dtp_info" class="fl">
+        <div class="dtp_status dtp_brand">NIKE</div>
+        <h1 class="product_title">Áo thể thao AS Manu Squad SF1 Rain Jkt</h1>
+        <div class="dtp_status dtp_price">250.000 VNĐ</div>
+        <script language="javascript">
+    function TogglePayment() {
+        document.getElementById('dtp_short_des').style.height = "auto";
+        document.getElementById('hplPaymentMore').innerHTML = "Thu gọn";
+    }
+    function CollapsePayment() {
+        document.getElementById('dtp_short_des').style.height = "105px";
+        document.getElementById('hplPaymentMore').innerHTML = "Xem thêm";
+    }
+    function SetPayment() {
+        if (document.getElementById('dtp_short_des').style.height == "105px")
+            TogglePayment();
+        else
+            CollapsePayment();
+    }
+</script>
+        <div class="dtp_status" id="dtp_short_des" style="height: 105px; overflow: hidden">Áo khoác Manchester United squad RAIN màu đen phối đỏ của thương hiệu   Nike với thiết kế độc đáo mang đến cho bạn vẻ ngoài phá cách và không   kém phần mạnh mẽ<br id="mf467" />
+          <br id="mf468" />
+          - Chất liệu polyester<br id="mf469" />
+          - Cổ tròn<br id="mf470" />
+          - Tay dài, gấu tay bo, có khóa dán<br id="mf471" />
+          - In logo thương hiệu và Manchester United ở ngực áo<br id="mf472" />
+          - Khóa kéo may dọc thân trước<br id="mf473" />
+          - 2 túi bên hông với khóa kéo<br id="mf474" />
+          - Gấu áo có dây rút<br id="mf475" />
+          - Áo may 2 lớp<br id="mf476" />
+          - Áo không co giãn</div>
+        <div class="moreBg"> <a onclick="javascript:SetPayment();" class="view_more_btn" id="hplPaymentMore">Xem thêm</a> </div>
+        <div class="dtp_status dtp_policy">
+          <p><a id="freeshipping" href="#deliveryInfo"><span class="tt_policy">Giao hàng trên 390.000VNĐ</span><span class="free_icon fr">Miễn phí</span></a></p>
+          <p><a id="return_product" href="#returnPolicy"><span class="tt_policy">7 ngày đổi trả hàng</span><span class="free_icon fr">Miễn phí</span></a></p>
+          <p><a id="method_payment" href="#deliveryInfo"><span class="tt_policy">Thanh toán khi nhận hàng</span><span class="free_icon fr">Miễn phí</span></a></p>
+        </div>
+        <div class="dtp_status edBox">SẼ CÓ TẠI NHÀ BẠN<br />
+          <i>trong 1-3 ngày làm việc</i></div>
+      </div>
+      <div id="function_cart" class="fl">
+        <div id="box_cart_dtp" class="cf"> <b class="lbl_size">Chọn Kích cỡ</b>
+          <div class="SizeInfo">Không rõ?
+            <!--Lightbox-->
+            <a class="sizeDetail" href="#" data-featherlight="#fl1"><u>Xem chi tiết kích cỡ</u></a>
+            <div class="lightbox" id="fl1"> <img src="http://static01-vn.zalora.com/cms/images/130731-men-clothing.jpg" alt="" /><img src="http://static01-vn.zalora.com/cms/images/130731-men-clothing.jpg" alt="" /> </div>
+          </div>
+          <div class="option_size_collection">
+            <select class="js-subSelect prdSizeOption__sizeDetail ">
+              <option>size</option>
+              <option value="opt-Sitem-0" data-value-size="S" data-value-class="opt-Sitem-0" data-attribute="size" class="prd-option-item opt-Sitem-0"> S </option>
+              <option value="opt-Mitem-1" data-value-size="M" data-value-class="opt-Mitem-1" data-attribute="size" class="prd-option-item opt-Mitem-1"> M </option>
+              <option value="opt-Litem-2" data-value-size="L" data-value-class="opt-Litem-2" data-attribute="size" class="prd-option-item opt-Litem-2"> L </option>
+              <option value="opt-XLitem-3" data-value-size="XL" data-value-class="opt-XLitem-3" data-attribute="size" class="prd-option-item opt-XLitem-3 inactive" disabled="disabled" style="border-bottom: 1px solid rgb(0, 0, 0);"> XL </option>
+            </select>
+          </div>
+          <span class="statusP_dtp fr">Hiện có 5 kích cỡ. Sắp hết hàng</span> <a href="" title="Cho vào giỏ hàng" class="btn_addtocart_detail fl" id="AddToCart">Cho vào giỏ hàng</a>
+          <div class="dtp_status wishlist_link"><a href="/customer/wishlist/add/p/NI126SE72JHRVN" class="wishlistBtn"> <span class="i-heart"></span>Thêm vào mục yêu thích</a></div>
+          <div class="cf"></div>
+          <h4 class="txtBlack">Chia sẻ</h4>
+          <div class="product_share"> <a href="http://www.facebook.com/share.php?u=http://www.zalora.vn/Giay-Tennis-Nike-Air-Cage-Advantage-340227.html" target="_blank" class="i_facebook" id="mfa164"></a> <a href="https://twitter.com/home?status=http://www.zalora.vn/Giay-Tennis-Nike-Air-Cage-Advantage-340227.html" target="_blank" class="i_twitter" id="mfa165"></a> <a href="https://plus.google.com/share?url=http://www.zalora.vn/Giay-Tennis-Nike-Air-Cage-Advantage-340227.html" target="_blank" class="i_googleplus" id="mfa166"></a> <a href="/sendfriend/index/sku/NI126SE72JHRVN" title="Gửi cho bạn" class="i_email" id="send-to-a-friend-link"> </a> </div>
+        </div>
+        <!--Info Support Detail-->
+        <div id="call_support">
+          <p><strong>BẠN CẦN TRỢ GIÚP?</strong></p>
+          <p>HÃY LIÊN HỆ: (08) 6 288 5678</p>
+          <p style="font-size:11px;color:#929292" id="mf592">Thời gian làm việc:<br />
+            Thứ 2-CN: 8 giờ sáng đến 6 giờ tối<br />
+            Ngày lễ: 9 giờ sáng đến 6 giờ tối</p>
+        </div>
+        <span class="i_quote"></span>
+        <!--end Info Support Detail-->
+      </div>
+      <div class="ads_dt fr"><a href=""><img src="http://static02-vn.zalora.com/p/suvanna-6267-562653-1.jpg" alt="" width="100%" /></a> <a href=""><img src="http://static03-vn.zalora.com/p/suvanna-0618-956753-1.jpg" alt="" width="100%" /></a></div>
+      <div class="cf"></div>
+    </div>
+    <div class="box">
+      <!--Tab-->
+      <!--SimpleTabs-->
+      <script type="text/javascript" src="Scripts/simpletabs_1.3.js"></script>
+      <link rel="stylesheet" href="Styles/simpletabs.css" type="text/css" />
+      <div class="tab_home">
+        <div class="simpleTabs">
+          <ul class="simpleTabsNavigation">
+            <li><a href="#productDetails" class="active">Chi tiết</a></li>
+            <li><a href="#brandInformation">Thương hiệu</a></li>
+            <li><a href="#sizeDetails">Chi tiết kích cỡ</a></li>
+            <li><a href="#productReviews">Nhận xét</a></li>
+            <li><a href="#returnPolicy">Chính sách đổi hàng</a></li>
+            <li><a href="#deliveryInfo">Thông tin vận chuyển</a></li>
+          </ul>
+          <div class="simpleTabsContent">
+            <!--Detail Text-->
+            <table id="mf605">
+              <tbody>
+                <tr id="mf606">
+                  <td id="mf607">SKU (simple)</td>
+                  <td id="mf608" itemprop="sku">NI126SE13TPIVN </td>
+                </tr>
+                <tr id="mf609">
+                  <td id="mf610">Màu sắc</td>
+                  <td id="mf611" itemprop="color">Black/ (Ltcrms) </td>
+                </tr>
+                <tr id="mf612">
+                  <td id="mf613">Hướng dẫn sử dụng</td>
+                  <td id="mf614">Giặt máy với nhiệt độ thường với sản phẩm cùng màu<br id="mf615" />
+                    Giặt mặt trái sản phẩm<br id="mf616" />
+                    Không được tẩy<br id="mf617" />
+                    Sấy khô với nhiệt độ ấm<br id="mf618" />
+                    Ủi với nhiệt độ nóng vừa<br id="mf619" />
+                    Không ủi lên hình in<br id="mf620" />
+                    Không được giặt khô </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <!--Detail Text-->
+          </div>
+          <div class="simpleTabsContent">
+            <!--Info Brand-->
+            <div id="mf623">
+              <h2 id="mf624">Nike</h2>
+              <p id="mf625">Nike, theo nghĩa Hi Lạp, là tượng trưng của nữ thần chiến   thắng. Được thành lập năm 1978 dưới bàn tay tài hoa của hai nhà thiết kế   Bill Bowerman and Philip Knight, Nike được biết đến là nhà cung cấp   quần áo, giày dép và dụng cụ thể thao hàng đầu trên thế giới. Nét đặc   sắc của thương hiệu được thể hiện qua slogan “Just do it” với các thiết   kế mang tính đầu tư nghiên cứu cao, phù hợp với nhu cầu của người tiêu   dùng về chất lượng mẫu mã và mục đích sử dụng. Với tiêu chí tất cả vì   sức khỏe và lợi ích của khách hàng, Nike không ngừng phấn đấu trong quá   trình học hỏi và cải tiến sản phẩm, đưa vào thị trường những mặt hàng   tối u, đem tới cho khách hàng sự năng động, thoải mái và tự tin trong   các hoạt động thể thao cũng như trong những chuyến đi dã ngoại  tràn đầy   năng lượng. Là thương hiệu dẫn đầu, tất cả các thiết kế của Nike đều   cập nhật những màu sắc và xu hướng mới nhất. Không những thế, Nike khẳng   định thương hiệu của mình qua việc sử dụng các chất liệu cao cấp, được   thông qua các quy trình sản xuất và kiểm định nghiêm ngặt. Hãy thể hiện   đẳng cấp của mình với Nike. Các sản phẩm hàng đầu của Nike nay đã có mặt   tại ZALORA – trang mua sắm trực tuyến hàng đầu Việt Nam.</p>
+            </div>
+            <p>&nbsp;</p>
+            <!--End Info Brand-->
+          </div>
+          <div class="simpleTabsContent">
+            <!--Size-->
+            <div id="tab_size"> <span id="mf627"><strong id="mf628">Vòng ngực x Chiều dài</strong><br id="mf629" />
+              - M (114cmx 67cm)</span></div>
+            <div id="mf630"> <span id="mf631">Số đo người mẫu</span>
+              <p id="mf632">Chiều cao: 179cm, Cân nặng: 68kg, Vòng Ngực: 95cm Eo: 78cm Mông: 92cm</p>
+              <span id="mf633">Kích cỡ người mẫu đang mặc</span> <span id="mf634">M</span></div>
+            <div id="mf635">
+              <div id="mf636">
+                <div id="mf637">
+                  <div id="mf638"></div>
+                  <div id="mf639"> </div>
+                  <div id="mf640"> Bảng quy đổi kích cỡ </div>
+                </div>
+                <p id="mf641">Bảng quy đổi kích cỡ</p>
+              </div>
+            </div>
+            <p>
+              <!--End Size-->
+            </p>
+          </div>
+          <div class="simpleTabsContent">
+            <!--Comment-->
+            <div class="comment_part">
+              <h4> Nhận xét về sản phẩm</h4>
+              <div class="basic" data-average="12" data-id="1"> </div>
+              <div class="datasSent">
+                <p> </p>
+              </div>
+              <div id="ContentPlaceHolder1_ctl00_UpdatePanel1">
+                <div class="postcomment">
+                  <div class="pcm">
+                    <div class="image-user"> <img src="images/noavatar.png"> </div>
+                    <div class="inputcomment">
+                      <input type="hidden" value="184" name="productId" id="productId" data-val-required="The productId field is required."
+                                        data-val-number="The field productId must be a number." data-val="true">
+                      <input type="hidden" value="0" name="VoteCount" id="VoteCount" data-val-required="The VoteCount field is required."
+                                        data-val-number="The field VoteCount must be a number." data-val="true">
+                      <input name="ctl00$ContentPlaceHolder1$ctl00$FullName" type="text" id="ContentPlaceHolder1_ctl00_FullName" value="Nhập tên của bạn" onfocus="if ( this.value == this.defaultValue ) this.value = &#39;&#39;" onblur="if ( this.value == &#39;&#39; ) this.value = this.defaultValue" data-val-required="Vui l&amp;#242;ng nhập họ t&amp;#234;n !" data-val="true" class="nhapten" />
+                      <span data-valmsg-replace="true" data-valmsg-for="FullName" class="field-validation-valid"> </span>
+                      <input name="ctl00$ContentPlaceHolder1$ctl00$address" type="text" id="ContentPlaceHolder1_ctl00_address" value="Địa chỉ của bạn" onfocus="if ( this.value == this.defaultValue ) this.value = &#39;&#39;" onblur="if ( this.value == &#39;&#39; ) this.value = this.defaultValue" data-val-required="Nhập email của bạn !" data-val="true" class="diachi" />
+                    </div>
+                    <div class="clear"> </div>
+                  </div>
+                  <div class="pcmnd">
+                    <textarea name="ctl00$ContentPlaceHolder1$ctl00$txtcomment" id="ContentPlaceHolder1_ctl00_txtcomment" rows="2" onfocus="if ( this.value == this.defaultValue ) this.value = &#39;&#39;" onblur="if ( this.value == &#39;&#39; ) this.value = this.defaultValue" data-val-required="Nhập nhận x&amp;#233;t của bạn." data-val="true" cols="20">Nhận xét về sản phẩm</textarea>
+                  </div>
+                  <div class="send_comment">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$Btcomment" value="Gửi nhận xét" id="ContentPlaceHolder1_ctl00_Btcomment" class="buttoncm" />
+                  </div>
+                  <div style="width: auto; margin-top: 20px"> </div>
+                </div>
+              </div>
+            </div>
+            <!--End Comment-->
+          </div>
+          <div class="simpleTabsContent">
+            <!--Policy-->
+            <div id="returnPolicy">
+              <p id="mf689">Tận hưởng 30 ngày miễn phí đổi trả cho sản phẩm này. Để biết thêm chi tiết về cách đổi trả hàng, vui lòng xem mục Hỏi Đáp <a id="mfa180" href="http://www.zalora.vn/cac-cau-hoi-thuong-gap/">tại đây</a>.</p>
+              <br id="mf690" />
+              <p id="mf691">Nếu bạn có thắc mắc về sản phẩm, vui lòng liên hệ với bộ   phận Chăm Sóc Khách Hàng tại customer@zalora.vn, hoặc số Hotline (08)   6288 5678 từ 8:00 - 18:00 mỗi ngày.</p>
+            </div>
+            <p>&nbsp;</p>
+            <!--End Policy-->
+          </div>
+          <div class="simpleTabsContent">
+            <!--Info Transport-->            
+            <table border="1" width="100%" cellpadding="8" cellspacing="0">
+              <tbody>
+                <tr id="mf695">
+                  <th id="mf696" width="250"><h3 id="mf697">KHU VỰC</h3></th>
+                  <th id="mf698" width="250"><h3 id="mf699">VẬN CHUYỂN</h3></th>
+                  <th id="mf700" width="250"><h3 id="mf701">THỜI GIAN</h3></th>
+                  <th id="mf702" width="250"><h3 id="mf703">PHÍ VẬN CHUYỂN</h3></th>
+                </tr>
+                <tr id="mf704">
+                  <td id="mf705" width="250">TP. Hồ Chí Minh, Hà Nội</td>
+                  <td id="mf706" width="250">Vận chuyển trong khoảng 1 - 3 ngày làm việc</td>
+                  <td id="mf707" rowspan="3">Đơn hàng của bạn sẽ được giao trong khoảng thời gian từ thứ 2 đến sáng thứ 7</td>
+                  <td id="mf708" rowspan="3">- MIỄN PHÍ vận chuyển cho đơn hàng từ 390,000VND<br id="mf709" />
+                    - Chi tiết phí vận chuyển vui lòng xem <a id="mfa181" href="http://www.zalora.vn/giao-hang/#phanvunggiaohang" target="_blank">tại đây</a></td>
+                </tr>
+                <tr id="mf710">
+                  <td id="mf711" width="250">Các thành phố lớn và lân cận</td>
+                  <td id="mf712" width="250">Vận chuyển trong khoảng 3 - 5 ngày làm việc</td>
+                </tr>
+                <tr id="mf713">
+                  <td id="mf714" width="250">Khu vực khác</td>
+                  <td id="mf715" width="250">Vận chuyển trong khoảng 5 - 10 ngày làm việc </td>
+                </tr>
+              </tbody>
+            </table>            
+            <!--End Transport-->
+          </div>
+        </div>
+      </div>
+      <!---End Tab-->
+    </div>
+    <!--Box Category-->
+    <div class="box box_category">
+      <div class="box_Tab">Có thể bạn sẽ thích</div>
+      <div id="thesame_P">
+        <link rel="stylesheet" href="Styles/idangerous.swiper.css">
+        <script src="Scripts/idangerous.swiper.min.js"></script>
+        <a class="arrow-left" href="#"></a> <a class="arrow-right" href="#"></a>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/non-bao-hiem-co-kinh-chan-gio-mau-moi-supor.aspx"><img alt="Nón Bảo Hiểm Có Kính Chắn Gió Mẫu Mới (SUPOR)" src="http://sieumuanhanh.com/data/news/1616/non-bao-hiem-co-kinh-chan-gio-mau-moi-supor.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/non-bao-hiem-co-kinh-chan-gio-mau-moi-supor.aspx"> Nón Bảo Hiểm Có Kính Chắn Gió Mẫu Mới (S..</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">180.000 đ</span> <span class="price">95.000 VNĐ</span> </div>
+                  <!--<div class="view_more">
+                                    <a style="color: white;" href='/san-pham/non-bao-hiem-co-kinh-chan-gio-mau-moi-supor.aspx'>
+                                        Xem</a></div>-->
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-47%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1616">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/bang-dien-tu-thong-minh-6-trong-1.aspx"><img alt="Bảng điện tử thông minh 6 trong 1" src="http://sieumuanhanh.com/data/news/1486/bang-dien-tu-thong-minh-6-trong-1.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/bang-dien-tu-thong-minh-6-trong-1.aspx"> Bảng điện tử thông minh 6 trong 1</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">250.000 đ</span> <span class="price">135.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-46%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1486">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/o-du-trong-suot.aspx"><img alt="Ô Dù Trong Suốt" src="http://sieumuanhanh.com/data/news/1485/o-du-trong-suot.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/o-du-trong-suot.aspx"> Ô Dù Trong Suốt</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">145.000 đ</span> <span class="price">75.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-48%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1485">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/bang-dien-tu-thong-minh-6-trong-1.aspx"><img alt="Bảng điện tử thông minh 6 trong 1" src="http://sieumuanhanh.com/data/news/1486/bang-dien-tu-thong-minh-6-trong-1.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/bang-dien-tu-thong-minh-6-trong-1.aspx"> Bảng điện tử thông minh 6 trong 1</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">250.000 đ</span> <span class="price">135.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-46%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1486">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/o-du-trong-suot.aspx"><img alt="Ô Dù Trong Suốt" src="http://sieumuanhanh.com/data/news/1485/o-du-trong-suot.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/o-du-trong-suot.aspx"> Ô Dù Trong Suốt</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">145.000 đ</span> <span class="price">75.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-48%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1485">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/bang-phong-phi-tieu-loai-lon-6-mui-ten.aspx"><img alt="Bảng Phóng Phi Tiêu Loại Lớn 6 Mũi Tên" src="http://sieumuanhanh.com/data/news/1391/bo-phong-phi-tieu.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/bang-phong-phi-tieu-loai-lon-6-mui-ten.aspx"> Bảng Phóng Phi Tiêu Loại Lớn 6 Mũi Tên</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">175.000 đ</span> <span class="price">125.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-29%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1391">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/non-bao-hiem-the-thao-kieu-thai-2014.aspx"><img alt="Nón bảo hiểm thể thao kiểu Thái 2014" src="http://sieumuanhanh.com/data/news/1319/Non-Bao-Hiem-The-Thao-1.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/non-bao-hiem-the-thao-kieu-thai-2014.aspx"> Nón bảo hiểm thể thao kiểu Thái 2014</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">190.000 đ</span> <span class="price">99.000 VNĐ</span> </div>
+                  <!--<div class="view_more">
+                                    <a style="color: white;" href='/san-pham/non-bao-hiem-the-thao-kieu-thai-2014.aspx'>
+                                        Xem</a></div>-->
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-48%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1319">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/gay-chup-anh-tu-suong-kem-remote-bluetooth.aspx"><img alt="Gậy Chụp Ảnh Tự Sướng Kèm Remote Bluetooth" src="http://sieumuanhanh.com/data/news/1757/gay-chup-hinh-tu-suong-gia-re-hcm.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/gay-chup-anh-tu-suong-kem-remote-bluetooth.aspx"> Gậy Chụp Ảnh Tự Sướng Kèm Remote Bluetoo..</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">250.000 đ</span> <span class="price">145.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-42%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1757">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/non-bao-hiem-co-kinh-chan-gio-mau-moi-supor.aspx"><img alt="Nón Bảo Hiểm Có Kính Chắn Gió Mẫu Mới (SUPOR)" src="http://sieumuanhanh.com/data/news/1616/non-bao-hiem-co-kinh-chan-gio-mau-moi-supor.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/non-bao-hiem-co-kinh-chan-gio-mau-moi-supor.aspx"> Nón Bảo Hiểm Có Kính Chắn Gió Mẫu Mới (S..</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">180.000 đ</span> <span class="price">95.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-47%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1616">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/bang-dien-tu-thong-minh-6-trong-1.aspx"><img alt="Bảng điện tử thông minh 6 trong 1" src="http://sieumuanhanh.com/data/news/1486/bang-dien-tu-thong-minh-6-trong-1.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/bang-dien-tu-thong-minh-6-trong-1.aspx"> Bảng điện tử thông minh 6 trong 1</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">250.000 đ</span> <span class="price">135.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-46%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1486">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/o-du-trong-suot.aspx"><img alt="Ô Dù Trong Suốt" src="http://sieumuanhanh.com/data/news/1485/o-du-trong-suot.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/o-du-trong-suot.aspx"> Ô Dù Trong Suốt</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">145.000 đ</span> <span class="price">75.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-48%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1485">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="swiper-slide">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner"> <a class="img_product" href="/san-pham/bang-phong-phi-tieu-loai-lon-6-mui-ten.aspx"><img alt="Bảng Phóng Phi Tiêu Loại Lớn 6 Mũi Tên" src="http://sieumuanhanh.com/data/news/1391/bo-phong-phi-tieu.jpg"></a>
+                  <div class="product_name">
+                    <h2> <a href="/san-pham/bang-phong-phi-tieu-loai-lon-6-mui-ten.aspx"> Bảng Phóng Phi Tiêu Loại Lớn 6 Mũi Tên</a></h2>
+                  </div>
+                </div>
+                <div class="detail_product">
+                  <div class="info_price"> <span class="first_price">175.000 đ</span> <span class="price">125.000 VNĐ</span> </div>
+                  <div class="cf"> </div>
+                </div>
+                <div class="reduce">-29%</div>
+                <div class="addtocart"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1391">Mua ngay</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+          </div>
+        </div>
+        <script>
+  var mySwiper = new Swiper('.swiper-container',{
+    //pagination: '.pagination',
+    loop:true,
+    paginationClickable: true,
+	slidesPerView: 5
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+  </script>
+      </div>
+    </div>
+    <!--End Box Category-->
+  </div>
+  <!--End Main-->
+  <!--Footer-->
+  <div id="footer">
+    <div id="topmenu_footer">
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h3>Thông tin</h3>
+          <div class="listMenuFooter"><a href="">Điều khoản sử dụng</a><a href="">Hướng dẫn mua hàng</a><a href="">Phương thức thanh toán</a><a href="">Phương thức vận chuyển</a><a href="">Chính sách bảo mật</a><a href="">Chính sách đổi trả hàng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h3>Hỗ trợ khách hàng</h3>
+          <div class="listMenuFooter"><a href="">Điều khoản sử dụng</a><a href="">Hướng dẫn mua hàng</a><a href="">Phương thức thanh toán</a><a href="">Phương thức vận chuyển</a><a href="">Chính sách bảo mật</a><a href="">Chính sách đổi trả hàng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h3>Danh mục sản phẩm</h3>
+          <div class="listMenuFooter" id="footer_cate">
+            <ul>
+              <li><a href="">Thời trang - Phụ kiện nam nữ</a> </li>
+              <li><a href="">Phụ kiện - Thiết bị công nghệ</a> </li>
+              <li><a href="">Mỹ phẩm - Làm đẹp</a> </li>
+              <li><a href="">Ăn uống - du lịch</a> </li>
+              <li><a href="">Giải trí - đào tạo</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h3>Liên hệ với chúng tôi</h3>
+          <div id="foo_contact">
+            <p><span class="add"></span>Chung Cư Thới An, Phường Thới An Quận 12, Hồ Chí Minh </p>
+            <p><span class="email"></span><a href="mailto:info@vietbas.com">info@vietbas.com</a> </p>
+            <p><span class="phone"></span>Phone 1: 0934 017 071<br />
+              Phone 2: 0918 308 832 </p>
+          </div>
+        </div>
+      </div>
+      <div class="cf"></div>
+    </div>
+    <div id="tag"><b><u>Tag Keywords:</u></b>
+      <div class="tag_item"> <span class="tag_item_text">Điện thoại và Máy tính bảng:</span> <a href="http://www.lazada.vn/apple/" class="brand__link">Apple</a>, <a href="http://www.lazada.vn/nokia/" class="brand__link">Nokia</a>, <a href="http://www.lazada.vn/samsung/" class="brand__link">Samsung</a>, <a href="http://www.lazada.vn/htc/" class="brand__link">HTC</a>, <a href="http://www.lazada.vn/sony/" class="brand__link">Sony</a>, <a href="http://www.lazada.vn/dien-thoai-may-tinh-bang-moi/" class="brand__link readmore">Xem thêm »</a> </div>
+      <div class="tag_item"> <span class="tag_item_text">Máy vi tính và Laptop:</span> <a href="http://www.lazada.vn/acer/" class="brand__link">Acer</a>, <a href="http://www.lazada.vn/sony/" class="brand__link">Sony</a>, <a href="http://www.lazada.vn/logitech/" class="brand__link">Logitech</a>, <a href="http://www.lazada.vn/hp/" class="brand__link">HP</a>, <a href="http://www.lazada.vn/may-vi-tinh-laptop-moi/" class="brand__link readmore">Xem thêm »</a> </div>
+      <div class="tag_item"> <span class="tag_item_text">Tv, Video &amp; Âm thanh:</span> <a href="http://www.lazada.vn/panasonic/" class="brand__link">Panasonic</a>, <a href="http://www.lazada.vn/lg/" class="brand__link">LG</a>, <a href="http://www.lazada.vn/sony/" class="brand__link">Sony</a>, <a href="http://www.lazada.vn/tv-video-am-thanh-moi/" class="brand__link readmore">Xem thêm »</a> </div>
+      <div class="tag_item"> <span class="tag_item_text">Máy ảnh và Máy quay phim:</span> <a href="http://www.lazada.vn/canon/" class="brand__link">Canon</a>, <a href="http://www.lazada.vn/fujifilm/" class="brand__link">Fujifilm</a>, <a href="http://www.lazada.vn/nikon/" class="brand__link">Nikon</a>, <a href="http://www.lazada.vn/may-anh-may-quay-phim-moi/" class="brand__link readmore">Xem thêm »</a> </div>
+      <div class="tag_item"> <span class="tag_item_text">Đồ gia dụng: </span> <a href="http://www.lazada.vn/sanaky/" class="brand__link">Sanaky</a>, <a href="http://www.lazada.vn/fujicook/" class="brand__link">Fujicook</a>, <a href="http://www.lazada.vn/toshiba/" class="brand__link">Toshiba</a>, <a href="http://www.lazada.vn/do-gia-dung-moi/" class="brand__link readmore">Xem thêm »</a> </div>
+      <div class="tag_item"> <span class="tag_item_text">Chăm sóc sắc đẹp và sức khoẻ: </span> <a href="http://www.lazada.vn/playboy/" class="brand__link">Playboy</a>, <a href="http://www.lazada.vn/bourjois/" class="brand__link">Bourjois</a>, <a href="http://www.lazada.vn/cham-soc-sac-dep-suc-khoe-moi/" class="brand__link readmore">Xem thêm »</a> </div>
+      <div class="tag_item"> <span class="tag_item_text">Thời trang phụ kiện:</span> <a href="http://www.lazada.vn/invicta/" class="brand__link">Invicta</a>, <a href="http://www.lazada.vn/stuhrling-original/" class="brand__link">Stuhrling Original</a>, <a href="http://www.lazada.vn/casio/" class="brand__link">Casio</a>, <a href="http://www.lazada.vn/titan/" class="brand__link">Titan</a>, <a href="http://www.lazada.vn/kenneth-cole/" class="brand__link">Kenneth Cole</a>, <a href="http://www.lazada.vn/guess/" class="brand__link">Guess</a>, <a href="http://www.lazada.vn/thoi-trang-phu-kien/" class="brand__link readmore">Xem thêm »</a> </div>
+      <div class="tag_item"> <span class="tag_item_text">Thể thao dã ngoại:</span> <a href="http://www.lazada.vn/nike/?nike-golf/" class="brand__link">Nike Golf</a>, <a href="http://www.lazada.vn/giay-trang-phuc-the-thao/puma/" class="brand__link">Puma</a>, <a href="http://www.lazada.vn/speedo/" class="brand__link">Speedo</a>, <a href="http://www.lazada.vn/figo/" class="brand__link">Figo Sport</a>, <a href="http://www.lazada.vn/everlast/" class="brand__link">Everlast</a>, <a href="http://www.lazada.vn/the-thao-da-ngoai/" class="brand__link readmore">Xem thêm »</a> </div>
+    </div>
+  </div>
+  <!--End Footer-->
+  <div class="cf"></div>
+  <div id="footer_bottom">
+    <div id="copyright" class="fl"> Copyright © 2013 By <strong>vietbas.com</strong></div>
+    <div id="paymentarea" class="fr"> <img src="Images/card1.jpg" alt="" /> <img src="Images/card2.jpg" alt="" /> <img src="Images/card3.jpg" alt="" /> <img src="Images/card4.jpg" alt="" /> <img src="Images/card5.jpg" alt="" /></div>
+  </div>
+  <!--End Footer-->
+  <div class="cf"></div>
+</div>
+<!--End Page-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+<script type="text/javascript" src="Scripts/global.js?v=20141101.000704"></script>
+<script type="text/javascript" src="Scripts/product.js?v=20141103.211152"></script>
+<!--[if lt IE 8]>  <script>  	function Messi(e,t){var n=this;n.options=jQuery.extend({},Messi.prototype.options,t||{});n.messi=jQuery(n.template);n.setContent(e);if(n.options.title==null){jQuery(".messi-titlebox",n.messi).remove()}else{jQuery(".messi-title",n.messi).append(n.options.title);if(n.options.buttons.length===0&&!n.options.autoclose){if(n.options.closeButton){var r=jQuery('<span class="messi-closebtn"></span>');r.bind("click",function(){n.hide()});jQuery(".messi-titlebox",this.messi).prepend(r)}}if(n.options.titleClass!=null)jQuery(".messi-titlebox",this.messi).addClass(n.options.titleClass)}if(n.options.width!=null)jQuery(".messi-box",n.messi).css("width",n.options.width);if(n.options.buttons.length>0){for(var i=0;i<n.options.buttons.length;i++){var s=n.options.buttons[i]["class"]?n.options.buttons[i]["class"]:"";var o=jQuery('<div class="btnbox"><button class="btn '+s+'" href="#">'+n.options.buttons[i].label+"</button></div>").data("value",n.options.buttons[i].val);o.on("click","button",function(){var e=jQuery.data(this,"value");var t=n.options.callback!=null?function(){n.options.callback(e)}:null;n.hide(t)});jQuery(".messi-actions",this.messi).append(o)}}else{jQuery(".messi-footbox",this.messi).remove()}if(n.options.buttons.length===0&&n.options.title==null&&!n.options.autoclose){if(n.options.closeButton){var r=jQuery('<span class="messi-closebtn"></span>');r.bind("click",function(){n.hide()});jQuery(".messi-content",this.messi).prepend(r)}}n.modal=n.options.modal?jQuery('<div class="messi-modal"></div>').css({opacity:n.options.modalOpacity,width:jQuery(document).width(),height:jQuery(document).height(),"z-index":n.options.zIndex+jQuery(".messi").length}).appendTo(document.body):null;if(n.options.show)n.show();jQuery(window).bind("resize",function(){n.resize()});if(n.options.autoclose!=null){setTimeout(function(e){e.hide()},n.options.autoclose,this)}return n}Messi.prototype={options:{autoclose:null,buttons:[],callback:null,center:true,closeButton:true,height:"auto",title:null,titleClass:null,modal:false,modalOpacity:.2,padding:"10px",show:true,unload:true,viewport:{top:"0px",left:"0px"},width:"500px",zIndex:99999},template:'<div class="messi"><div class="messi-box"><div class="messi-wrapper"><div class="messi-titlebox"><span class="messi-title"></span></div><div class="messi-content"></div><div class="messi-footbox"><div class="messi-actions"></div></div></div></div></div>',content:"<div></div>",visible:false,setContent:function(e){jQuery(".messi-content",this.messi).css({padding:this.options.padding,height:this.options.height}).empty().append(e)},viewport:function(){return{top:(jQuery(window).height()-this.messi.height())/2+jQuery(window).scrollTop()+"px",left:(jQuery(window).width()-this.messi.width())/2+jQuery(window).scrollLeft()+"px"}},show:function(){if(this.visible)return;if(this.options.modal&&this.modal!=null)this.modal.show();this.messi.appendTo(document.body);if(this.options.center)this.options.viewport=this.viewport(jQuery(".messi-box",this.messi));this.messi.css({top:this.options.viewport.top,left:this.options.viewport.left,"z-index":this.options.zIndex+jQuery(".messi").length}).show().animate({opacity:1},300);this.visible=true},hide:function(e){if(!this.visible)return;var t=this;this.messi.animate({opacity:0},300,function(){if(t.options.modal&&t.modal!=null)t.modal.remove();t.messi.css({display:"none"}).remove();t.visible=false;if(e)e.call();if(t.options.unload)t.unload()});return this},resize:function(){if(this.options.modal){jQuery(".messi-modal").css({width:jQuery(document).width(),height:jQuery(document).height()})}if(this.options.center){this.options.viewport=this.viewport(jQuery(".messi-box",this.messi));this.messi.css({top:this.options.viewport.top,left:this.options.viewport.left})}},toggle:function(){this[this.visible?"hide":"show"]();return this},unload:function(){if(this.visible)this.hide();jQuery(window).unbind("resize",function(){this.resize()});this.messi.remove()}};jQuery.extend(Messi,{alert:function(e,t,n){var r=[{id:"ok",label:"OK",val:"OK"}];n=jQuery.extend({closeButton:false,buttons:r,callback:function(){}},n||{},{show:true,unload:true,callback:t});return new Messi(e,n)},ask:function(e,t,n){var r=[{id:"yes",label:"Yes",val:"Y","class":"btn-success"},{id:"no",label:"No",val:"N","class":"btn-danger"}];n=jQuery.extend({closeButton:false,modal:true,buttons:r,callback:function(){}},n||{},{show:true,unload:true,callback:t});return new Messi(e,n)},img:function(e,t){var n=new Image;jQuery(n).load(function(){var e={width:jQuery(window).width()-50,height:jQuery(window).height()-50};var r=this.width>e.width||this.height>e.height?Math.min(e.width/this.width,e.height/this.height):1;jQuery(n).css({width:this.width*r,height:this.height*r});t=jQuery.extend(t||{},{show:true,unload:true,closeButton:true,width:this.width*r,height:this.height*r,padding:0});new Messi(n,t)}).error(function(){console.log("Error loading "+e)}).attr("src",e)},load:function(e,t){var n=jQuery.extend(n||{},{show:true,unload:true,params:{}});var r={url:e,data:n.params,dataType:"html",cache:false,error:function(e,t,n){console.log(e.responseText)},success:function(e){new Messi(e,n);switch(t){case"login":var r=new VarienForm("login-form",true);break;case"sendfriend":var i=new VarienForm("product_sendtofriend_form");i.submit=function(){if(this.validator.validate()){this.form.submit()}}.bind(i);break}}};jQuery.ajax(r)}})  </script>  <![endif]-->
+<style>  			
+.product-box .jcarousel-container-vertical {  				height: 400px  			}  			.product-box  .jcarousel-container-vertical .jcarousel-clip-vertical {  				height: 365px  			}  					
+</style>
+<script>  			$j(document).ready(function() {  			    $j('.jcarousel-vertical').jcarousel({  			        vertical: true,  			        scroll: 5,  			        			    });   			});  		</script>
+<script type="text/javascript">
+$(document).ready(function() { 
+ $('#freeshipping, #method_payment').click(function (e) {
+  e.preventDefault();
+  var tab = $('.simpleTabs a[href="#deliveryInfo"]');
+  if (tab.length > 0) {
+   tab.trigger('click');
+   $('html, body').stop(true,true).animate({'scrollTop': tab.offset().top + 'px'}, 400);
+  }
+ });
+ $('#return_product').click(function (e) {
+                                                        e.preventDefault();
+                                                        var tab = $('.simpleTabs a[href="#returnPolicy"]');
+                                                        if (tab.length > 0) {
+                                                            tab.trigger('click');
+                                                            $('html, body').stop(true,true).animate({'scrollTop': tab.offset().top + 'px'}, 400);
+                                                        }
+                                                    });
+});
+</script>
+<!--LightBox-->
+<link type="text/css" rel="stylesheet" href="Styles/featherlight.min.css" title="Featherlight Styles" />
+<script src="Scripts/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

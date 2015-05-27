@@ -1,0 +1,94 @@
+#nav {
+	position: absolute;
+	right: 0;
+	top: 120px;
+}
+#nav:after, #nav ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#nav ul, #nav li, #nav a {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+#nav > ul {
+	position: relative;
+	display: block;
+	z-index: 500;
+}
+#nav > ul > li {
+	float: left;
+	display:inline-block;
+}
+#nav > ul > li.active > a, #nav > ul > li:hover > a {
+	color: #fff200
+}
+#nav > ul > li > a {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	z-index: 50;
+	color: #FFFFFF;
+	display: inline-block;	
+	line-height: 40px;
+	padding: 0 15px;
+	text-decoration: none;
+}
+#nav ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 30px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background: url(../Images/submenuBg.png) 0 0 repeat;
+}
+#nav ul ul ul {
+	top: 40px;
+}
+#nav ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 200px
+}
+#nav > ul > li:hover > ul {
+	left: auto;
+	top: 40px;
+	opacity: 1;
+}
+#nav ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#nav ul ul li a {
+	border-bottom: 1px dotted #9c9c9c;
+	filter: none;
+	display: block;
+	line-height: 35px;
+	padding: 0 10px;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#nav ul ul li:hover > a {
+	background: #542f27;
+}
+#nav ul ul li:last-child > a, #nav ul ul li.last > a {
+	border-bottom: 0;
+}

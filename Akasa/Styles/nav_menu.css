@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,vietnamese,latin-ext);
+#nav, #cssmenu {
+	height: 34px;
+	background: #079b00;
+	margin-bottom: 5px;
+}
+#nav {
+	border-bottom: 4px solid #ff9000;
+}
+#cssmenu {
+	position: relative;
+}
+#cssmenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+#cssmenu:after, #cssmenu ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#cssmenu ul, #cssmenu li, #cssmenu a {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#cssmenu > ul {
+	float: left;
+	position: relative;
+	display: block;
+	z-index: 500;
+}
+#cssmenu > ul > li {
+	float: left;
+	display:inline-block;
+	margin: 0;
+}
+#cssmenu > ul > li:first-child {
+	background: none;
+	padding: 0
+}
+#cssmenu ul li a {
+	display: block;
+	text-decoration: none;
+}
+#cssmenu > ul > li > a {
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 700;
+	padding: 0 20px;
+	line-height: 34px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	z-index: 50;
+}
+#cssmenu > ul > li > a.home_icon {
+	padding: 13px 20px
+}
+#cssmenu > ul > li.active > a, #cssmenu > ul > li:hover > a {
+	background: #ff9000;
+	color: #FFFFFF
+}
+#cssmenu ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 35px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background:#fffefc;
+	-moz-box-shadow: 0 2px 5px #666666;
+	-webkit-box-shadow: 0 2px 5px #666666;
+	box-shadow: 0 2px 5px #666666;
+}
+#cssmenu ul ul ul {
+	top: 34px;
+}
+#cssmenu ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 217px
+}
+#cssmenu > ul > li:hover > ul {
+	left: auto;
+	top: 34px;
+	opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#cssmenu ul ul li a {
+	border-bottom: 1px dotted #FFFFFF;
+	filter: none;
+	font-size: 90%;
+	display: block;
+	line-height: 100%;
+	padding: 10px;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#cssmenu ul ul li:hover > a {
+	background: #f89b1c; /* Old browsers */
+	background: -moz-linear-gradient(top, #f89b1c 0%, #f6871e 72%, #f5811f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f89b1c), color-stop(72%, #f6871e), color-stop(100%, #f5811f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f89b1c 0%, #f6871e 72%, #f5811f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f89b1c 0%, #f6871e 72%, #f5811f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f89b1c 0%, #f6871e 72%, #f5811f 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f89b1c 0%, #f6871e 72%, #f5811f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f89b1c', endColorstr='#f5811f', GradientType=0 ); /* IE6-9 */
+	color: #FFFFFF;
+}
+#cssmenu ul ul li:last-child > a, #cssmenu ul ul li.last > a {
+	border-bottom: 0;
+}

@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Chuyên trang Báo Nhà quản lý</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link rel="stylesheet" href="Styles/block.css" type="text/css" />
+<script src="Scripts/jquery-1.7.min.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Top Menu-->
+  <div class="top">
+    <p>Tòa soạn: 04. 3 2811044 - 04. 3 936969 </p>
+    <div class="top_menu"> <a href="#"><img src="Images/editNapThe.gif" width="85" height="23" /></a> <a target="_blank" href="#"><img src="Images/editKhuvucchuyengia.gif" width="179" height="23"></a> <a href="#"><img src="Images/editLienhetoasoan.gif" width="155" height="23"> </a></div>
+    <div class="search">
+      <form target="_blank" name="Search" id="Search" action="" onsubmit="return CheckValue(document.Search.q);">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+      </form>
+    </div>
+  </div>
+  <!--End Top Menu-->
+  <div id="page">
+    <!--#begin Header-->
+    <div class="header"> <a href="index.html" alt="Nhà Quản Lý" class="logo"><img src="Images/logo.jpg" width="398" height="121" alt="Nhà Quản Lý" border="" /></a> <a href="#" class="banner_Header"><img src="Images/banner_header_01.jpg" width="283" height="82" alt="" /></a> <a href="#" class="banner_Header"><img src="Images/banner_header_02.jpg" width="280" height="82" alt="" /></a> </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="nav_menu">
+      <div class="nav_inner">
+        <script language="javascript">
+    function _over(obj) { 
+        obj.style.background="url(/vi-vn/images/left_menu.png) no-repeat";
+    }
+    function _out(obj) {
+        obj.style.background = "url(/vi-vn/images/transparent.gif) no-repeat";
+    }
+</script>
+        <ul>
+          <li class="active"><a href="index.html"> <span> TRANG CHỦ</span></a> </li>
+          <li><a href="danh_muc_cap_1.html"> <span> THÔNG TIN TỔNG HỢP</span></a> </li>
+          <li><a href=""> <span> CẨM NANG NHÀ QUẢN LÝ</span></a> </li>
+          <li><a href=""> <span> KẾT NỐI DOANH NGHIỆP</span></a> </li>
+          <li><a href=""> <span> DỊCH VỤ TRỰC TUYẾN</span></a> </li>
+          <li><a href=""> <span> DIỄN ĐÀN</span></a> </li>
+          <li><a href=""> <span> QUẢNG CÁO ONLINE</span></a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <div class="right">
+        <script type="text/javascript">
+
+$(document).ready(function() {		
+	
+	//Execute the slideShow
+	slideShow();
+
+});
+
+function slideShow() {
+
+	//Set the opacity of all images to 0
+	$('#gallery a').css({opacity: 0.0});
+	
+	//Get the first image and display it (set it to full opacity)
+	$('#gallery a:first').css({opacity: 1.0});
+	
+	//Set the caption background to semi-transparent
+	$('#gallery .caption').css({opacity: 0.7});
+
+	//Resize the width of the caption according to the image width
+	$('#gallery .caption').css({width: $('#gallery a').find('img').css('width')});
+	
+	//Get the caption of the first image from REL attribute and display it
+	$('#gallery .content').html($('#gallery a:first').find('img').attr('rel'))
+	.animate({opacity: 0.7}, 400);
+	
+	//Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
+	setInterval('gallery()',6000);
+	
+}
+
+function gallery() {
+	
+	//if no IMGs have the show class, grab the first image
+	var current = ($('#gallery a.show')?  $('#gallery a.show') : $('#gallery a:first'));
+
+	//Get next image, if it reached the end of the slideshow, rotate it back to the first image
+	var next = ((current.next().length) ? ((current.next().hasClass('caption'))? $('#gallery a:first') :current.next()) : $('#gallery a:first'));	
+	
+	//Get next image caption
+	var caption = next.find('img').attr('rel');	
+	
+	//Set the fade in effect for the next image, show class has higher z-index
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+
+	//Hide the current image
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+	
+	//Set the opacity to 0 and height to 1px
+	$('#gallery .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+	
+	//Animate the caption, opacity to 0.7 and heigth to 100px, a slide up effect
+	$('#gallery .caption').animate({opacity: 0.7},100 ).animate({height: '100px'},500 );
+	
+	//Display the content
+	$('#gallery .content').html(caption);
+	
+	
+}
+
+</script>
+        <div id="gallery"> <a href="#" class="show"> <img src="Images/banner_slide.jpg" alt="Flowing Rock" width="705" height="300" title="" alt="" rel="<h3>PGS.TS. Lê Xuân Bá1</h3>
+Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. Những hạn chế và thách thức này đã  bộc lộ rõ ngay từ những tháng đầu năm 2011khi tình hình kinh " /> </a> <a href="#"> <img src="Images/banner_slide.jpg" alt="Flowing Rock" width="705" height="300" title="" alt="" rel="<h3>PGS.TS. Lê Xuân Bá1</h3>
+Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. Những hạn chế và thách thức này đã  bộc lộ rõ ngay từ những tháng đầu năm 2011khi tình hình kinh " /> </a> <a href="#"> <img src="Images/banner_slide.jpg" alt="Flowing Rock" width="705" height="300" title="" alt="" rel="<h3>PGS.TS. Lê Xuân Bá1</h3>
+Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. Những hạn chế và thách thức này đã  bộc lộ rõ ngay từ những tháng đầu năm 2011khi tình hình kinh " /> </a> <a href="#"> <img src="Images/banner_slide.jpg" alt="Flowing Rock" width="705" height="300" title="" alt="" rel="<h3>PGS.TS. Lê Xuân Bá1</h3>
+Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. Những hạn chế và thách thức này đã  bộc lộ rõ ngay từ những tháng đầu năm 2011khi tình hình kinh " /> </a> <a href="#"> <img src="Images/banner_slide.jpg" alt="Flowing Rock" width="705" height="300" title="" alt="" rel="<h3>PGS.TS. Lê Xuân Bá1</h3>
+Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. Những hạn chế và thách thức này đã  bộc lộ rõ ngay từ những tháng đầu năm 2011khi tình hình kinh " /> </a> <a href="#"> <img src="Images/banner_slide.jpg" alt="Flowing Rock" width="705" height="300" title="" alt="" rel="<h3>PGS.TS. Lê Xuân Bá1</h3>
+Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. Những hạn chế và thách thức này đã  bộc lộ rõ ngay từ những tháng đầu năm 2011khi tình hình kinh " /> </a> <a href="#"> <img src="Images/banner_slide.jpg" alt="Flowing Rock" width="705" height="300" title="" alt="" rel="<h3>PGS.TS. Lê Xuân Bá1</h3>
+Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. Những hạn chế và thách thức này đã  bộc lộ rõ ngay từ những tháng đầu năm 2011khi tình hình kinh " /> </a>
+          <div class="caption">
+            <div class="content"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <!--Focus-->
+        <div class="block focus">          
+            <h3 class="h3Title_block">TIÊU ĐIỂM</h3>
+            <div class="other_focus">
+            <a href="#" class="link_title" title="Quản trị điều hành">QUẢN TRỊ ĐIỀU HÀNH</a>
+            <a href="#" class="link_title" title="Hoạt động & sự kiện">HOẠT ĐỘNG & SỰ KIỆN</a>
+     </div>
+          <div class="line"></div>
+          
+          
+            <div class="top_News">
+              <div class="hot_News"> <a href="#" class="img_hot_News"><img src="Images/image_td_hot.jpg" width="280" height="150" alt="" /></a>
+                <h4 class="h4Title"><a href="#" class="link_title">Các chính sách kinh tế trong thời gian gần đây và tác động đến doanh ngiệp</a></h4>
+                <h2 class="conttent_hot_News">PGS.TS. Lê Xuân Bá1 - Kết thúc năm 2010, nền kinh tế Việt Nam đã đạt được kết quả tích cực trên hầu hết các lĩnh vực. Tuy nhiên, bên cạnh những điểm sáng thể hiện thành tựu đạt được nền kinh tế còn có nhiều hạn chế và thách thức. </h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="Toplist">
+                <div class="cate_Topnews"><a href="#" class="cate_img_topnews"><img src="Images/image_td_02.jpg" alt="" width="100" height="65" /></a>
+                  <div class="des_News">
+                        <h4 class="h4Title"><a href="chi_tiet_tin.html" class="link_title">BÁN HÀNG TRONG CƠN BÃO GIÁ: PHƯƠNG THỨC BÁN HÀNG CHỦ ĐỘNG</a></h4>
+                    <h2 class="conttent_hot_News">Bùi Tường Anh - Chủ tịch HĐTV Công ty CONCETTI, Chủ tịch HĐTV Công ty OMEGA Việt Nam.</h2>
+                  </div>
+                </div>
+                <div class="cate_Topnews"><a href="#" class="cate_img_topnews"><img src="Images/image_td_03.jpg" alt="" width="100" height="65" /></a>
+                  <div class="des_News">
+                    <h4 class="h4Title"><a href="#" class="link_title">DỰ BÁO TRIỂN VỌNG KINH TẾ VIỆT NAM 6 THÁNG CUỐI NĂM 2011</a></h4>
+                    <h2 class="conttent_hot_News">TS.Nguyễn Minh Phong - Viện nghiên cứu phát triển KT-XH Hà Nội.</h2>
+                  </div>
+                </div>
+                <div class="cate_Topnews"><a href="#" class="cate_img_topnews"><img src="Images/image_td_03.jpg" alt="" width="100" height="65" /></a>
+                  <div class="des_News">
+                    <h4 class="h4Title"><a href="#" class="link_title">DỰ BÁO TRIỂN VỌNG KINH TẾ VIỆT NAM 6 THÁNG CUỐI NĂM 2011</a></h4>
+                    <h2 class="conttent_hot_News">TS.Nguyễn Minh Phong - Viện nghiên cứu phát triển KT-XH Hà Nội.</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="clearfix"></div>
+        </div>        
+        <!--Main Below-->
+        <div class="container">
+          <!--Container Left-->
+          <div class="container_left">
+            <div class="banner_right_index"><img src="Images/banner_211_01.jpg" width="210" height="50" alt="" /></div>
+            <div class="banner_right_index"><img src="Images/banner_211_02.jpg" width="210" height="50" alt="" /></div>
+            <!--Management-->
+            <div class="block">
+              <h3 class="h3Title_block">CHÂN DUNG NHÀ QUẢN LÝ</span></h3>
+              <div class="line"></div>
+              <!--Jquery 01-->
+              <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+              <script type="text/javascript">
+/*$(window).load(function() {
+    $('#slider').nivoSlider({
+        directionNav : false,
+        controlNav   : false,
+        keyboardNav  : true
+        
+    });
+});*/
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_news').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 3,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+              <div id="slider_news">
+                <ul id="mycarousel_news" class="jcarousel-skin-tango">
+                  <li class="item">
+                    <div class="cate_Topnews"><a href="#" class="cate_img_topnews"><img src="Images/image_td_02.jpg" alt="" width="100" height="65" /></a>
+                      <div class="des_News">
+                        <h4 class="h4Title"><a href="chi_tiet_tin.html" class="link_title">BÁN HÀNG TRONG CƠN BÃO GIÁ: PHƯƠNG THỨC BÁN HÀNG CHỦ ĐỘNG</a></h4>
+                        <h2 class="conttent_hot_News">Bùi Tường Anh - Chủ tịch HĐTV Công ty CONCETTI, Chủ tịch HĐTV Công ty OMEGA Việt Nam.</h2>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="cate_Topnews"><a href="#" class="cate_img_topnews"><img src="Images/image_td_02.jpg" alt="" width="100" height="65" /></a>
+                      <div class="des_News">
+                        <h4 class="h4Title"><a href="chi_tiet_tin.html" class="link_title">BÁN HÀNG TRONG CƠN BÃO GIÁ: PHƯƠNG THỨC BÁN HÀNG CHỦ ĐỘNG</a></h4>
+                        <h2 class="conttent_hot_News">Bùi Tường Anh - Chủ tịch HĐTV Công ty CONCETTI, Chủ tịch HĐTV Công ty OMEGA Việt Nam.</h2>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <!--End Jquery 01-->
+              <div class="clearfix"></div>
+            </div>
+            <!--End Management-->
+            <!--Jquery 02-->
+            <!-- Jquery Life-->
+            <script type="text/javascript">
+/*$(window).load(function() {
+    $('#slider').nivoSlider({
+        directionNav : false,
+        controlNav   : false,
+        keyboardNav  : true
+        
+    });
+});*/
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 1,
+        wrap: 'circular',
+        scroll: 3,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+            <div id="slider_life">
+              <h3 class="life_Title"><a href="#">Giá trị sống</a></h3>
+              <ul id="mycarousel" class="jcarousel-skin-tango">
+                <li class="item"><a href="#"><img src="Images/image_gts_01.jpg" width="130" height="90" alt="" /></a>
+                  <h4 class="h4Title"><a href="#" class="link_title">Cuộc sống</a></h4>
+                </li>
+                <li class="item"><a href="#"><img src="Images/image_gts_02.jpg" width="130" height="90" alt="" /></a>
+                  <h4 class="h4Title"><a href="#" class="link_title">Ẩm thực</a></h4>
+                </li>
+                <li class="item"><a href="#"><img src="Images/image_gts_03.jpg" width="130" height="90" alt="" /></a>
+                  <h4 class="h4Title"><a href="#" class="link_title">Không gian sống</a></h4>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <!--End Jquery Life-->
+            <!--End Jquery 02-->
+            <div class="block b_m">
+              <div class="block_training">
+                <h3 class="h3Title_block">ĐÀO TẠO</span></h3>
+                <div class="line"></div>
+                <div class="cate_Content">
+                  <div class="cate_Topnews">
+                    <div class="des_News">
+                      <h4 class="h4Title"><a class="link_title" href="#">Xe không chính chủ bị phạt tối đa 4 triệu đồng</a></h4>
+                      <h2 class="conttent_hot_News"><a href="#" class="cate_img_topnews"><img src="Images/image_training.jpg" alt="" width="70" height="70" /></a> Ngồi thu mình trong góc một quán cà phê lớn trong tòa nhà Petro Việt Nam đầu đường Lê Duẩn (TP.HCM), anh Đức Việt - nhân viên một doanh nghiệp kinh doanh thép đang hý hoáy thao tác với chiếc điện thoại Nokia E61.</h2>
+                    </div>
+                  </div>
+                  <ul class="news_other">
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Xe không chính chủ bị phạt tối đa 4 triệu đồng</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="block_investment">
+                <h3 class="h3Title_block">ĐẦU TƯ</span></h3>
+                <div class="line"></div>
+                <div class="cate_Content">
+                  <div class="cate_Topnews">
+                    <div class="des_News">
+                      <h4 class="h4Title"><a class="link_title" href="#">Xe không chính chủ bị phạt tối đa 4 triệu đồng</a></h4>
+                      <h2 class="conttent_hot_News"><a href="#" class="cate_img_topnews"><img src="Images/image_training.jpg" alt="" width="70" height="70" /></a> Ngồi thu mình trong góc một quán cà phê lớn trong tòa nhà Petro Việt Nam đầu đường Lê Duẩn (TP.HCM), anh Đức Việt - nhân viên một doanh nghiệp kinh doanh thép đang hý hoáy thao tác với chiếc điện thoại Nokia E61.</h2>
+                    </div>
+                  </div>
+                  <ul class="news_other">
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Xe không chính chủ bị phạt tối đa 4 triệu đồng</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                    <li>
+                      <h4 class="h4Title"><a href="#" class="link_title">Teen Sài Gòn hóa thân thành nhân vật truyện tranh</a></h4>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <!--End Container Left-->
+          <!--Container Right-->
+          <div class="container_right">
+            <div id="slider_law">
+              <h3 class="h3Title_general">BẢN TIN PHÁP LUẬT</h3>
+              <div class="line"></div>
+              <ul id="mycarousel_law" class="jcarousel-skin-tango">
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Làm gì để quốc tế hóa tạp chí khoa học Việt Nam?</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Ngũ Đức, vốn liếng lớn nhất cho sự thành đạt</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Định nghĩa lại quản lý vi mô</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Lãnh đạo và quan điểm ‘đặt con người vào trung tâm của mọi quá trình’</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Thuyết nhu cầu của A.Maslow với việc phát triển kỹ năng khuyến khích nhân viên</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Làm gì để quốc tế hóa tạp chí khoa học Việt Nam?</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Ngũ Đức, vốn liếng lớn nhất cho sự thành đạt</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Định nghĩa lại quản lý vi mô</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Lãnh đạo và quan điểm ‘đặt con người vào trung tâm của mọi quá trình’</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Thuyết nhu cầu của A.Maslow với việc phát triển kỹ năng khuyến khích nhân viên</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Làm gì để quốc tế hóa tạp chí khoa học Việt Nam?</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Ngũ Đức, vốn liếng lớn nhất cho sự thành đạt</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Định nghĩa lại quản lý vi mô</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Lãnh đạo và quan điểm ‘đặt con người vào trung tâm của mọi quá trình’</a></h4>
+                </li>
+                <li>
+                  <h4 class="h4Title"><a class="link_title" href="#">Thuyết nhu cầu của A.Maslow với việc phát triển kỹ năng khuyến khích nhân viên</a></h4>
+                </li>
+              </ul>
+            </div>
+            <div class="banner_right_bot"><img src="Images/ad_by_NQL.jpg" width="200" height="180" alt="" /></div>
+          </div>
+          <!--End Container LeftRight-->
+        </div>
+        <!--End Main Below-->
+      </div>
+      <div class="left">
+        <div class="video"><img src="Images/video.jpg" width="290" height="208" alt="" /></div>
+        <div class="banner_left_top"><img src="Images/banner_left_01.jpg" width="290" height="98" alt="" /></div>
+        <div class="block">
+          <h3 class="h3Title_block">QUẢN LÝ <span>24/7</span></h3>
+          <div class="line"></div>
+          <ul class="general">
+            <li><a href="#" class="img_block"><img src="Images/image_ql_01.jpg" alt="" width="70" height="54" /></a>
+              <h4 class="h4Title"><a href="#" class="link_title">Bơm tiền ‘khủng khiếp‘: Gần 300.000 tỷ đồng mất hút</a></h4>
+              <span class="des">(VEF.VN) - Phát biểu trên diễn đàn Quốc hội mới đây, Thống đốc Bình cho biết, từ đầu năm đến nay,</span> </li>
+            <li><a href="#" class="img_block"><img src="Images/image_ql_02.jpg" alt="" width="70" height="54" /></a>
+              <h4 class="h4Title"><a href="#" class="link_title">Bơm tiền ‘khủng khiếp‘: Gần 300.000 tỷ đồng mất hút</a></h4>
+              <span class="des">(VEF.VN) - Phát biểu trên diễn đàn Quốc hội mới đây, Thống đốc Bình cho biết, từ đầu năm đến nay</span> </li>
+            <li><a href="#" class="img_block"><img src="Images/image_ql_03.jpg" alt="" width="70" height="54" /></a>
+              <h4 class="h4Title"><a href="#" class="link_title">Bơm tiền ‘khủng khiếp‘: Gần 300.000 tỷ đồng mất hút</a></h4>
+              <span class="des">(VEF.VN) - Phát biểu trên diễn đàn Quốc hội mới đây, Thống đốc Bình cho biết, từ đầu năm đến nay,</span> </li>
+            <li><a href="#" class="img_block"><img src="Images/image_ql_04.jpg" alt="" width="70" height="54" /></a>
+              <h4 class="h4Title"><a href="#" class="link_title">Bơm tiền ‘khủng khiếp‘: Gần 300.000 tỷ đồng mất hút</a></h4>
+              <span class="des">(VEF.VN) - Phát biểu trên diễn đàn Quốc hội mới đây, Thống đốc Bình cho biết, từ đầu năm đến nay, </span> </li>
+            <li><a href="#" class="img_block"><img src="Images/image_ql_04.jpg" alt="" width="70" height="54" /></a>
+              <h4 class="h4Title"><a href="#" class="link_title">Bơm tiền ‘khủng khiếp‘: Gần 300.000 tỷ đồng mất hút</a></h4>
+              <span class="des">(VEF.VN) - Phát biểu trên diễn đàn Quốc hội mới đây, Thống đốc Bình cho biết, từ đầu năm đến nay.</span> </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="banner_left_top"><img src="Images/banner_left_02.jpg" width="288" height="240" alt="" /></div>
+        <div class="banner_left_top"><img src="Images/banner_left_03.jpg" width="288" height="231" alt="" /></div>
+        <div class="banner_left_top"><img src="Images/banner_left_04.jpg" width="288" height="173" alt="" /></div>
+      </div>
+    </div>
+    <!--End Main-->
+    <!-- Menu Footer -->
+    <div class="footer">
+      <div class="menu_footer">
+        <div class="col_menuFooter">
+          <div class="ctentColuMenuFooter">
+            <h4><a target="_blank" href="javascript:void(0)">Thông tin tổng hợp </a></h4>
+            <div class="listMenuFooter"> <a href="http://nhaquanly.vn/Tin-tuc/82/66/Thu-ngo-tong-bien-tap.html">Thư ngỏ Tổng Biên Tập</a> <a href="http://nhaquanly.vn/">Tạp chí Nhà Quản Lý</a> <a href="http://nhaquanly.vn/gioithieuduan/">Dự án NQL Online</a> <a href="http://nhaquanly.vn/Tin-tuc/2/66/Nha-quan-ly-tieu-diem.html">Nhà quản lý tiêu điểm</a> <a href="http://nhaquanly.vn/diemtin/">Điểm tin “Quản lý 24/7” </a> <a href="http://nhaquanly.vn/Tin-tuc/15/66/Kien-thuc-quan-ly.html">Kiến thức quản lý</a> <a href="http://nhaquanly.vn/Tin-tuc/7/66/Gia-tri-song.html">Giá trị sống</a> </div>
+          </div>
+        </div>
+        <div class="col_menuFooter">
+          <div class="ctentColuMenuFooter">
+            <h4><a target="_blank" href="http://nhaquanly.vn/handbook/Cam-nang-nha-quan-ly.html">cẩm nang Nhà quản lý</a></h4>
+            <div class="listMenuFooter"> <a href="http://nhaquanly.vn/handbook/Cap-nhat-ban-tin-phap-luat.html">Cập nhật bản tin Pháp luật</a> <a href="http://nhaquanly.vn/handbook/Quy-hoach-nganh-vung.html">Qui hoạch ngành vùng</a> <a href="http://nhaquanly.vn/handbook/Tu-lieu-quan-ly-va-kinh-te.html">Tư liệu quản lý kinh tế</a> <a href="http://nhaquanly.vn/handbook/Tinh-huong-quan-ly.html">Tình huống quản lý</a> <a href="javascript: void(0);">Kỹ năng quản lý</a> <a href="http://nhaquanly.vn/handbook/Tu-sach-nha-quan-ly.html">Tủ sách Nhà Quản Lý</a> <a href="http://nhaquanly.vn/handbook/Mau-bieu-van-ban-tac-nghiep.html">Mẫu biểu văn bản tác nghiệp</a> <a href="javascript: void(0);">Tra cứu mã số thuế</a> </div>
+          </div>
+        </div>
+        <div class="col_menuFooter">
+          <div class="ctentColuMenuFooter">
+            <h4><a target="_blank" href="http://nhaquanly.vn/vipbrandnetwork/">Kết nối doanh nghiệp</a></h4>
+            <div class="listMenuFooter"> <a href="javascript: void(0);">Mạng thương hiệu VIP</a> <a href="javascript: void(0);">Mạng thương hiệu vùng</a> <a href="javascript: void(0);">Mạng dịch vụ VIP</a> <a href="javascript: void(0);">Mạng sản phẩm cao cấp</a> <a href="javascript: void(0);">Danh bạ hàng hiệu</a> <a href="javascript: void(0);">Tra cứu địa chỉ hữu ích</a> </div>
+          </div>
+        </div>
+        <div class="col_menuFooter">
+          <div class="ctentColuMenuFooter">
+            <h4><a target="_blank" href="http://nhaquanly.vn/onlineservices/">Dịch vụ trực tuyến</a></h4>
+            <div class="listMenuFooter"> <a href="javascript: void(0);">Chăm sóc sức khỏe NQL</a> <a href="javascript: void(0);">Đào tạo quản trị DN</a> <a href="javascript: void(0);">Đào tạo quản lý HC - VP</a> <a href="javascript: void(0);">Đào tạo nghiệp vụ trợ lý GĐ</a> <a href="javascript: void(0);">Đào tạo quản lý dự án</a> <a href="javascript: void(0);">Dịch vụ hỗ trợ Nhà quản Lý</a> <a href="javascript: void(0);">Siêu thị Nhà Quản Lý</a> </div>
+          </div>
+        </div>
+        <div class="col_menuFooter">
+          <div style="border-right: 0px;" target="_blank" class="ctentColuMenuFooter">
+            <h4><a href="http://nhaquanly.vn/forum/">Diễn đàn</a></h4>
+            <div class="listMenuFooter"> <a href="javascript: void(0);">Diễn đàn chuyên gia kinh tế</a> <a href="javascript: void(0);">Diễn đàn quản trị DN</a> <a href="javascript: void(0);">Diễn đàn Nhà Quản Lý Trẻ</a> <a href="javascript: void(0);">Diễn đàn “Vì sức khỏe NQL"</a> <a href="javascript: void(0);">Diễn đàn “Vì con em NQL”</a> <a href="javascript: void(0);">Blog Nhà Quản Lý Online</a> </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="copyright">
+        <p>Copyright: <strong>Báo điện tử Nhà Quản Lý</strong></p>
+        <p>Số giấy phép : 172/GP-BC, cấp ngày 20/09/2005.</p>
+        <p>Tổng biên tập : <strong>TS.Hàn Mạnh Tiến</strong></p>
+        <p>Được thiết kế & quản trị bởi <a href="http://www.dangcapviet.vn"><strong>Công ty cổ phần truyền thông & công nghệ Đẳng Cấp Việt</strong></a></p>
+      </div>
+    </div>
+    <!-- End Menu Footer -->
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

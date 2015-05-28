@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Comat Vietnam</title>
+<meta name="keywords" content="GS E&amp;C" />
+<link type="text/css" rel="stylesheet" media="all" href="Styles/common.css" />
+<link type="text/css" rel="stylesheet" media="all" href="Styles/main.css" />
+<script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="Scripts/front.js"></script>
+<script type="text/javascript" src="Scripts/jquery.slides.min.js"></script>
+<script type="text/javascript">
+    function OnSubmit(url, lang, boardCode, compositionNo) {
+        var param = "Lang=" + lang + "&BoardCode=" + boardCode + "&CompositionNo=" + compositionNo + "&count=Y";
+        $.ajax({
+            type: "POST",
+            url: "/en/Pr/PrNews.aspx",
+            dataType: "Text",
+            data: param,
+            success: function (msg) {
+                //location.href = url;
+                window.open(url);
+
+            }
+        }
+		);
+
+    }
+
+    jQuery(function ($) {
+        // List Tab Navigation
+        var $tab_list = $('.mainbox_3');
+        $tab_list.removeClass('jx').find('.banner').hide();
+        $tab_list.find('li li.active').parents('li').addClass('active');
+        $tab_list.find('li.active .banner').show();
+        $tab_list.each(function () {
+            var $this = $(this);
+        });
+        function listTabMenuToggle(event) {
+            var $this = $(this);
+            $this.next('.banner').show().parent('li').addClass('active').siblings('li').removeClass('active').find('.banner').hide();
+            if ($this.attr('href') === '#') {
+                return false;
+            }
+        }
+        $tab_list.find('li>a').click(listTabMenuToggle).focus(listTabMenuToggle);
+    });
+</script>
+<script type="text/javascript">
+    /* 2013 nav_mn */
+    $(document).ready(function () {
+        var ulMenuObj = {
+            propList: {
+                'height': 'height',
+                'margin-bottom': 'margin-bottom',
+                'margin-top': 'margin-top',
+                'padding-bottom': 'padding-bottom',
+                'padding-top': 'padding-top'
+            },
+            elList: [],
+            downPropList: {},
+            upPropList: {},
+            overflowList: {},
+            init: function () {
+                ulMenuObj.elList = $('.nav_mn ul');
+                ulMenuObj.elList.push($('.ab1')[0]);
+                ulMenuObj.elList.each(function (i, item) {
+                    var $item = $(item);
+                    var pList = ulMenuObj.propList
+                    var dProp = {};
+                    var uProp = {};
+                    for (var key in pList) {
+                        uProp[key] = '0px';
+                        dProp[key] = $item.css(key);
+                        $item.css(key, '0px');
+                    }
+                    ulMenuObj.upPropList[i] = uProp;
+                    ulMenuObj.downPropList[i] = dProp;
+                    ulMenuObj.overflowList[i] = $item.css('overflow');
+                });
+            },
+            slideUp: function () {
+                //$('.nav_menu').css( 'padding-left', '0px' )
+                ulMenuObj.elList.each(function (i, item) {
+                    var $item = $(item);
+                    var overflow = ulMenuObj.overflowList[i];
+                    $item.css('overflow', 'hidden');
+                    $item.stop().animate(ulMenuObj.upPropList[i], 300, function () {
+                        $('#headerWrap').css('background', 'url(Images/bg_header.png)');
+                        //
+                        $(this).hide();
+                        $(this).css('overflow', "visible");
+                        /*
+                        var prop = ulMenuObj.upPropList[i];
+                        for( var key in prop ){
+                        $(this).css(key, "");
+                        }
+                        */
+                        return false;
+                    });
+                });
+            },
+            slideDown: function () {
+                //$('.nav_menu').css( 'padding-left', '321px' )
+                $('#headerWrap').css('background-image', 'url(Images/bg_header2.png)');
+                //
+                ulMenuObj.elList.each(function (i, item) {
+                    var $item = $(item);
+                    var overflow = ulMenuObj.overflowList[i];
+                    $item.css('overflow', 'hidden');
+                    //*
+                    if ($item.css('display') == 'none') {
+                        var prop = ulMenuObj.upPropList[i];
+                        for (var key in prop) {
+                            $(this).css(key, prop[key]);
+                        }
+                    }
+                    //*/
+                    $item.stop().show().animate(ulMenuObj.downPropList[i], 300, function () {
+                        $(this).css('overflow', "visible");
+                        var prop = ulMenuObj.downPropList[i];
+                        for (var key in prop) {
+                            $(this).css(key, prop[key]);
+                            //$(this).css(key, "");
+                        }
+                        return false;
+                    });
+                })
+                //
+            },
+            focus: function (el) {
+                var $item = $(el);
+                if ($item.hasClass('m1')) {
+                    globalChangeTopMenuDesc(1);
+                } else if ($item.hasClass('m2')) {
+                    globalChangeTopMenuDesc(2);
+                } else if ($item.hasClass('m3')) {
+                    globalChangeTopMenuDesc(3);
+                } else if ($item.hasClass('m4')) {
+                    globalChangeTopMenuDesc(4);
+                } else if ($item.hasClass('m5')) {
+                    globalChangeTopMenuDesc(5);
+                } else if ($item.hasClass('m6')) {
+                    globalChangeTopMenuDesc(6);
+                } else if ($item.hasClass('m7')) {
+                    globalChangeTopMenuDesc(7);
+                }
+            },
+            focusin: function (e) {
+                ulMenuObj.slideDown();
+            },
+            focusout: function (e) {
+                ulMenuObj.slideUp();
+            },
+            show: function () {
+                $('.nav_menu').off('mouseover', ulMenuObj.show);
+                $('.nav_menu').on('mouseleave', ulMenuObj.hide);
+                ulMenuObj.slideDown();
+            },
+            hide: function () {
+                $('.nav_menu').off('mouseleave', ulMenuObj.hide);
+                ulMenuObj.slideUp();
+                $('.nav_menu').on('mouseover', ulMenuObj.show);
+            }
+        }
+
+        $('.nav_menu').on('mouseover', ulMenuObj.show);
+        $('.nav_menu').on('focusin', ulMenuObj.focusin);
+        $('.nav_menu').on('focusout', ulMenuObj.focusout);
+
+
+        $('.nav_mn>li>a').each(function (i, item) {
+            var $a = $(item);
+            $a.focusin(function (e) {
+                ulMenuObj.focus($(this).parent()[0]);
+            });
+            $a.mouseover(function () {
+                ulMenuObj.focus($(this).parent()[0]);
+            });
+        });
+
+        $('.nav_mn ul>li>a').each(function (i, item) {
+            $(item).focusin(function (e) {
+                ulMenuObj.focus($(this).parent().parent().parent()[0]);
+            });
+            $(item).mouseover(function () {
+                ulMenuObj.focus($(this).parent().parent().parent()[0]);
+            });
+        });
+
+
+        // nav_mn setting;
+        ulMenuObj.init();
+    });
+</script>
+</head>
+<body>
+<!-- Begin #header -->
+<div id="headerWrap">
+  <div id="header">
+    <div class="logo"><a href="http://www.gsconst.kr#1"><img src="Images/logo.png" alt="GS E&amp;C" /></a></div>
+    <div class="topmenu"> <span><a href="http://www.gsconst.kr/en">HOME</a></span> <span><a href="http://www.gsconst.kr/en/Sitemap.aspx">SITEMAP</a></span> <span class="last lang"><a href="" id="vn_lang"></a> <a href="" id="en_lang"></a></span> </div>
+    <!-- nav_menu -->
+    <div class="nav_menu">
+      <ul class="nav_mn">
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Management/Report.aspx" onmouseover="globalChangeTopMenuDesc(1);">Home</a> </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Company/Ceo.aspx" onmouseover="globalChangeTopMenuDesc(2);">Company</a>
+          <ul>
+            <li><a href="http://www.gsconst.kr/en/Management/Report.aspx">History</a></li>
+            <li><a href="http://www.gsconst.kr/en/Management/CustValue/Activation.aspx">Organization</a></li>
+            <li><a href="http://www.gsconst.kr/en/Management/Tech/Quality.aspx">Partner</a></li>
+          </ul>
+        </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx" onmouseover="globalChangeTopMenuDesc(3);">Business</a>
+          <ul>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Safety work</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">Temporary work</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Safety Tools</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">Design for Contruction</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Final washing and clean</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">MRO</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Agent business</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">Export business</a></li>
+          </ul>
+        </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Business/PlantBusi.aspx?Lang=en&amp;BusinessResultStep3=1" onmouseover="globalChangeTopMenuDesc(4);">Contact</a> </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/IR/Mng/Mng_01.aspx" onmouseover="globalChangeTopMenuDesc(5);">IR</a>
+          <ul>
+            <li><a href="http://www.gsconst.kr/en/IR/Mng/Mng_01.aspx">Management</a></li>
+            <li><a href="http://www.gsconst.kr/en/IR/Stock/Stock_01.aspx">Stock</a></li>
+            <li><a href="http://www.gsconst.kr/en/IR/Financial/Financial_01.aspx">Financials</a></li>
+            <li><a href="http://www.gsconst.kr/en/IR/Data/EarningRelease.aspx">IR Activity</a></li>
+          </ul>
+        </li>            
+      </ul>
+      <div class="ab1">
+        <div class="menu_txt"><img id="oTopMenuTxt" src="http://www.gsconst.kr/images/en/menu/menu_txt_1.gif" alt="" /></div>
+      </div>
+    </div>
+    <!-- //nav_menu -->
+  </div>
+</div>
+<!-- // End #header -->
+<!-- Begin #imageScroll -->
+<div id="imageScroll" style="height:560px;">
+  <div class="slide" id="slides">
+    <div class="main-cont cont1">
+      <p><img src="http://www.gsconst.kr/images/en/main/img_main_visual.png" alt="Plant. The leader in the global plant market. GS E&amp;C is Korea's representative global EPC contractor leveraging its experience in refineries, gas and petrochemical plants to continually provide premier design and construction services. We aim to increase customer satisfaction and become a Global Top Business Partner." /></p>
+    </div>
+    <div class="main-cont cont3">
+      <p><img src="http://www.gsconst.kr/images/en/main/img_main_visual3.png" alt="Made in Xi. Xi, taking the lead in apartments. Xi offers a new way of life. A home network system that enables control via your fingertips and a green smart system that gives consideration to the environment, all enables smartness and beauty. Xi, using the best technology to give you the greatest impression." /></p>
+    </div>
+    <div class="main-cont cont4">
+      <p><img src="http://www.gsconst.kr/images/en/main/img_main_visual4.png" alt="Green. GS E&amp;C sees farther. Though active and creative changes, GS E&amp;C is responding to environmental issues including climate change. By establishing low-carbon green management system and expanding green projects, GS E&amp;C is planning to achieve sustainable development based on green growth." /></p>
+    </div>
+    <div class="main-cont cont2">
+      <p><img src="http://www.gsconst.kr/images/en/main/img_main_visual2.png" alt="Sharing. Xi Love Sharing Community Services Group coming to the rescue of the needy. There are neighbors who need our help and we are continually sharing our resources with them. How does it feel to be happy while sharing? By bringing laughter to the faces of the needy as a result of sharing. GS E&amp;C is growing with and supporting them." /></p>
+    </div>
+  </div>
+</div>
+<!-- // End #imageScroll -->
+<script type="text/javascript">
+    $(function () {
+        $('#slides').slidesjs({
+            width: 940,
+            height: 560,
+            play: {
+                active: true,
+                auto: true,
+                interval: 4000,
+                swap: true,
+                effect: "fade"
+            },
+            navigation: {
+                effect: "fade"
+            },
+            pagination: {
+                effect: "fade"
+            }
+        });
+        $('#slides2').slidesjs({
+            width: 292,
+            height: 70,
+            navigation: false,
+            play: {
+                auto: true,
+                swap: true,
+                active: true
+            }
+        });
+    });
+</script>
+<!-- Begin #footer -->
+<div id="footer">
+  <div class="footbox">
+    <div class="contact">
+      <p><strong>COMAT Co., Ltd.</strong></p>
+      <p><strong>HO CHI MINH:</strong> 141 Tran Trong Cung, Tan Thuan Dong Ward, Dist.7, HCMC</p>
+      <p>Tel: (08) 3773-2844; (08) 3773-2832; Fax: (08) 3773-2854; Tax code: 0305973268</p>
+      <p><strong>HA NOI:</strong> Km8 + 400, Lot 2,  An Khanh Industrial, Hoai Duc District, Ha Noi</p>
+      <p>Tel: (04) 3399-6459;  (04) 3399-6460    Fax: (04) 3399-6461</p>
+    </div>
+    <div class="copyright">
+      <p> Copyright &copy; 2014 by <strong>thoitrangveston</strong>. All rights reserved</p>
+      <p> <a href="http://www.dangcapviet.vn" target="_blank">Thiết kế website</a> bởi <a href="http://www.esell.vn" title="Website Thương mại điện tử e-sell" target="_blank"> <img border="0" alt="logo e-sell" src="http://www.esell.vn/logo-esell.png"></a></p>
+    </div>
+  </div>
+</div>
+<!-- // End #footer -->
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* REQUIRED for core functionality */
+
+.responsive-tabs__heading {
+	display: none;
+}
+.responsive-tabs__list__item {
+	display: inline;
+	cursor:pointer;
+}
+ @media (max-width: 767px) {
+ .responsive-tabs__list {
+display: none;
+}
+ .responsive-tabs__heading {
+display: block;
+cursor: pointer;
+}
+ .responsive-tabs__panel--closed-accordion-only {
+display: none;
+}
+}
+ @media (min-width: 768px) {
+ .responsive-tabs__panel--closed-accordion-only {
+display: block !important;
+}
+}
+/* END - Required for core functionality */
+
+
+/* OPTIONAL - Basic Skin */
+
+.responsive-tabs-wrapper {
+	clear: both;
+	zoom: 1;
+	border-top: 1px dotted #CCCCCC
+}
+.responsive-tabs-wrapper:before, .responsive-tabs-wrapper:after {
+	content: "";
+	display: table;
+}
+.responsive-tabs-wrapper:after {
+	clear: both;
+}
+.responsive-tabs__heading:focus, .responsive-tabs__list__item:focus {
+	outline: 1px solid #ccc;
+}
+.responsive-tabs__heading--active:focus, .responsive-tabs__list__item--active:focus {
+	outline: none !important;
+}
+.responsive-tabs__list {
+	font-size: 1.1em;
+	margin: 2em 0 0 0;
+	padding: 0;
+	padding-bottom: 9px;
+	line-height: 1em;
+}
+.responsive-tabs__list__item {
+	background: #e8c1ea;
+	padding: 9px 30px;
+	margin-right: 0.5em;
+	color: #4b004f;
+	font-weight: 700;
+	text-transform: uppercase
+}
+.responsive-tabs__list__item:hover, .responsive-tabs__list__item--active, .responsive-tabs__list__item--active:hover {
+	background: #b100bc;
+	color: #FFFFFF
+}
+.responsive-tabs__panel {
+	border: 1px solid #CACACA;
+	padding: 10px;
+	margin-bottom: 20px
+}
+ @media (max-width: 767px) {
+ .responsive-tabs__heading {
+ padding: 0.5em;
+ margin-bottom: 2px;
+ background: #e8c1ea;
+ position: relative;
+ color: #4b004f;
+ font-size: 1.1em;
+}
+ .responsive-tabs__heading:after {
+ content:"";
+ display: block;
+ position: absolute;
+ right: 20px;
+ top: 40%;
+ width: 0;
+ height: 0;
+ border-left: 10px solid transparent;
+ border-right: 10px solid transparent;
+ border-top: 10px solid #000;
+}
+ .responsive-tabs__heading:hover, .responsive-tabs__heading--active:hover, .responsive-tabs__heading--active {
+background: #b100bc;
+ color: #FFFFFF
+}
+ .responsive-tabs__heading--active:after {
+ border-bottom: 10px solid #FFFFFF;
+ border-top:0;
+}
+}
+
+/* END - Optional - Basic Skin */

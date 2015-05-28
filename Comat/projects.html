@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Comat</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+ 
+
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'circular',
+		animation: 1500,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });	
+});
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page_inner">
+    <!--#begin Header-->
+    <div class="header page_inner"> <a class="logo" href="index.html"><img src="Images/logo.jpg" alt="" /></a>
+      <!--Search Tool-->
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword">
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+      <!--Main Menu-->
+      <div id="smoothmenu1" class="ddsmoothmenu">
+        <ul>
+          <li class="active"><a href="index.html">Home</a>
+          <li><a href="introduction.html">Introduction</a>
+            <ul class="children">
+              <li><a href="">Establish</a> </li>
+              <li><a href="#">Managerment Board</a> </li>
+              <li><a href="#">Organization Chart</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <li><a href="">About Us</a></li>
+          <li><a href="list_products.html">Products</a>
+            <ul class="children">
+              <li><a href="">Temporary work</a> </li>
+              <li><a href="#">Safety work</a> </li>
+              <li><a href="#">Safety Tools</a> </li>
+              <li><a href="#">Design for Construction</a> </li>
+              <li><a href="#">Construction MRO Sevice</a></li>
+              <li><a href="#">Final Washing and Clean</a></li>
+            </ul>
+          </li>
+          <li><a href="list_news.html">Services</a></li>
+          <li><a href="projects.html">Projects</a> </li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <!--End Main Menu-->
+      <div class="lang"><a href="" id="vn_lang"></a> <a href="" id="en_lang"></a> </div>
+    </div>
+    <!--#end Header-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <!--Vertical Menu-->
+        <div id="vertical_menu">
+          <ul class="topnav">
+            <li><a href="#">1. POSCO</a> </li>
+            <li><a href="#">2. GS</a> </li>
+            <li><a href="#">3. LOTTE</a> </li>
+            <li><a href="#">4. HYUNDAI</a> </li>
+            <li><a href="#">5. KUMHO</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Vertical Menu-->
+      </div>
+      <!--End Left Column-->
+      <div class="path"><span><a href="projects.html">Projects</a> - POSCO</span></div>
+      <!--Main Column-->
+      <div class="main_content">
+        <ul id="list_products">
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_01.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Himlam Riverside</a></div>
+          </li>
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_02.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Golden Island</a></div>
+          </li>
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_01.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Himlam Riverside</a></div>
+          </li>
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_02.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Golden Island</a></div>
+          </li>
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_01.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Himlam Riverside</a></div>
+          </li>
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_02.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Golden Island</a></div>
+          </li>
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_01.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Himlam Riverside</a></div>
+          </li>
+          <li class="cate_li"> <a href="detail_products.html"><img src="Images/project_02.jpg" alt="" width="170" height="113" /></a>
+            <div class="name_product"><a href="list_products.html">Golden Island</a></div>
+          </li>
+        </ul>
+        <div class="navigation"><b>1</b><a href="">2</a><a href="">3</a> ...<a href="">15</a> </div>
+      </div>
+      <!--End Main Column-->
+    </div>
+    <!--End Main-->
+    <!-- Footer -->
+    <div class="info_footer">
+      <p><strong>COMAT Co., Ltd.</strong></p>
+      <p><strong>HO CHI MINH:</strong> 141 Tran Trong Cung, Tan Thuan Dong Ward, Dist.7, HCMC</p>
+      <p>Tel: (08) 3773-2844; (08) 3773-2832; Fax: (08) 3773-2854; Tax code: 0305973268</p>
+      <p><strong>HA NOI:</strong> Km8 + 400, Lot 2,  An Khanh Industrial, Hoai Duc District, Ha Noi</p>
+      <p>Tel: (04) 3399-6459;  (04) 3399-6460    Fax: (04) 3399-6461</p>
+    </div>
+    <!-- End Footer -->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+</div>
+<!--End #Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

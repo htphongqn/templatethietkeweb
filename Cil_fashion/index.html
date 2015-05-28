@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CIL FASHION SHOP</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600&subset=latin,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Ads-->
+<script type="text/javascript" src="Scripts/scroll_ads.js"></script>
+<!-- Start Nivo Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#nivo_slide').nivoSlider();
+    });
+    </script>
+<!--Main Menu-->
+<link href="Styles/nav_menu.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--Top Page-->
+<div id="top_page">
+  <div class="wrap top_page_in">
+    <div id="hotline" class="fl">Hotline: 09 62 12 03 12</div>
+    <!--Account-->
+    <div id="account" class="fr"><span class="trigger">Đăng nhập / Đăng ký</span>
+      <div class="popup_login" id="dpop"> <span class="close_box_acc">X</span>
+        <div class="input_form">
+          <label for="LoginForm_email"> Email <span class="required">*</span></label>
+          <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi4_bt_login').click();return false;}} else {return true}; " class="input identity" maxlength="50" id="vi4_txtnameLogin" name="ctl00$vi4$txtnameLogin">
+        </div>
+        <div class="input_form">
+          <label for="LoginForm_password"> Mật khẩu <span class="required">*</span></label>
+          <input type="password" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi4_bt_login').click();return false;}} else {return true}; " class="input password" id="vi4_txtPassLogin" name="ctl00$vi4$txtPassLogin">
+        </div>
+        <div style="color: Red" class="errors"> </div>
+        <div id="loading-errors"> </div>
+        <div class="note_wrapper clearfix">
+          <div class="lost_password"> <a href="javascript:__doPostBack('ctl00$vi4$lbtquenmatkhau','')" class="link_acount" id="vi4_lbtquenmatkhau">Quên mật khẩu</a> </div>
+        </div>
+        <div class="input_form"> <a class="button" onclick="ajaxlogin();" id="vi4_bt_login" href="javascript:void(0)">Đăng nhập</a> </div>
+        <div class="note_wrapper"> Bạn chưa là thành viên? <a class="link_acount" href="register.html" rel="nofollow">Đăng ký ngay</a></div>
+      </div>
+      <script type="text/javascript">
+                $(document).ready(function () {
+                    var notH = 1,
+    $pop = $('.popup_login').hover(function () { notH ^= 1; });
+
+                    $(document).on('mouseup keyup', function (e) {
+                        if (notH || e.which == 27) $pop.stop().hide();
+                    });
+                    /////// CALL POPUP 
+                    $('.trigger').click(function () {
+                        $('.popup_login').slideToggle('fast').end().siblings().$('.popup_login').hide('fast');
+                        event.stopPropagation();
+                    });
+					$('.close_box_acc').click(function () {
+                        $('.popup_login').slideUp('fast');                       
+                    });
+                }); 
+            </script>
+    </div>
+    <!--End Account-->
+    <div id="cart_icon" class="fr"><a href="cart.html" class="link_cart">Có 0 sản phẩm</a></div>
+  </div>
+</div>
+<!--End Top Page-->
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a id="logo" class="fl" href="index.html"><img src="Images/logo.png" alt="CIL FASHION SHOP" /></a>
+    <p id="text_logo"><img src="Images/name_shop.png" alt="CIL FASHION SHOP" /></p>
+    <div id="search_form" class="fr">
+      <input name="ctl00$vi14$txtsearch" type="text" id="vi14_txtsearch" alt="Search" class="inputSearch" value="Nhập từ khóa để tìm kiếm..." onclick="this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;) this.value=&#39;Nhập từ khóa để tìm kiếm...&#39;;" onfocus="if(this.value==&#39;Nhập từ khóa để tìm kiếm...&#39;) this.value=&#39;&#39;;" onkeypress="searchKeyPress();" />
+      <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="nav_menu">
+    <ul>
+      <li class='active'><a href="index.html">Trang chủ</a></li>
+      <li><a href="index.html">Giới thiệu</a></li>
+      <li><a href="list_products.html">Sản phẩm</a>
+        <ul>
+          <li><a href="loai-san-pham-mayinphundate.html">BAO BÌ NHỰA </a>
+            <ul>
+              <li><a href="sanpham-a400.html" >AnyJet A400 </a></li>
+              <li><a href="sanpham-w43s.html" >Willett 43s </a></li>
+              <li><a href="sanpham-vj1210.html" >Videojet 1210 </a></li>
+              <li><a href="sanpham-reajetsc.html" >Rea Jet SC </a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="list_news.html">Thanh toán</a></li>
+      <li><a href="list_news.html">Tin tức</a></li>
+      <li><a href="lienhe.html">Tuyển dụng</a></li>
+      <li><a href="contactus.html">Liên hệ</a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <div class="slider-wrapper theme-pascal">
+    <div id="nivo_slide" class="nivoSlider"> <a href="http://viva-vietnam.blogspot.com"><img src="http://www.esell.vn/data/shops/300/aditems/401/banner_02.jpg" alt="" title=""/></a> <a href="https://letsplay2ne1.files.wordpress.com/2010/11/shopbanner1.jpg"><img src="http://img.sieumua.com/media/custom/banners/File-1420020566.jpg" alt="" title="" /></a> <a href="http://shareallworld.info/search/label/Movies"><img src="http://media3.sendo.vn/img/2014/7_11/banner21005x3001000x300_2j9ep5kdi51l1.jpg" alt="" title=""/></a></div>
+  </div>
+  <!-- #Main -->
+  <div class="main clearfix">
+    <!--Left Column-->
+    <div id="sidebar" class="fl">
+      <!--Vertical Menu-->
+      <div class="box">
+        <div class="box_Tab">Danh mục Sản phẩm</div>
+        <div class="box_content" id="vertical_menu">
+          <ul>
+            <li><a href="#">Áo Vest công sở & Áo vest điệu</a>
+              <ul>
+                <li><a href="#">Thiết bị ToTo</a></li>
+                <li><a href="#">Thiết bị Inax</a></li>
+                <li><a href="#">Thiết bị Caesar</a></li>
+                <li><a href="#">Thiết bị American</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Áo Gile văn phòng</a></li>
+            <li><a href="#">Áo sơ mi kiểu</a></li>
+            <li><a href="#">Đầm dạo phố</a></li>
+            <li><a href="#">Đầm dạ tiệc</a></li>
+            <li><a href="#">Chân váy</a></li>
+            <li><a href="#">Quần Tây nữ kiểu</a></li>
+            <li><a href="#">Áo khoác MangTo</a></li>
+            <li><a href="#">Áo Vest nam</a></li>
+            <li><a href="#">Áo Sơ mi nam</a></li>
+            <li><a href="#">Quần Tây nam</a></li>
+            <li><a href="#">Phụ kiện khác</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--end Vertical Menu-->
+      <!--Support Online-->
+      <div class="box">
+        <div class="box_Tab">Hỗ trợ trực tuyến</div>
+        <div class="box_content" id="support_online">
+          <ul>
+            <li class="hotline_l"><b>0937 85 3921</b></li>
+            <li class="nick_chat">Tư vấn bán hàng: <a href="ymsgr:sendim?huynhkhanhbooker2" class="yahoo"> <img src="Images/yahoo_icon.png" class="yahoo_status" width="22" height="22" alt="" /></a> <a href="skype:huynhkhanhbooker2?chat" class="sky"><img src="Images/skype_icon.png" width="22" height="22" alt="" /></a></li>
+            <li class="nick_chat">Tư vấn bán hàng: <a href="ymsgr:sendim?huynhkhanhbooker2" class="yahoo"> <img src="Images/yahoo_icon.png" class="yahoo_status" width="22" height="22" alt="" /></a> <a href="skype:huynhkhanhbooker2?chat" class="sky"><img src="Images/skype_icon.png" width="22" height="22" alt="" /></a></li>
+          </ul>
+        </div>
+      </div>
+      <!--end Support Online-->
+      <!--Link Web-->
+      <div class="box">
+        <div class="box_ct">
+          <div class="box_Tab">Liên kết website</div>
+          <div id="link_web" class="box_content">
+            <select name="link_web" class="type_option">
+              <option value="0">-----Liên kết website ------</option>
+              <option value="1">Esell.vn</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--End Link Web-->
+      <!--Access Status-->
+      <div class="box">
+        <div class="box_Tab">Thống kê truy cập</div>
+        <div class="box_content" id="access_status"> <span><i>Đang online:</i><b>14</b></span> <span><i>Tổng truy cập:</i><b>1234</b></span> </div>
+      </div>
+      <!--end Access Status-->
+    </div>
+    <!--End Left Column-->
+    <!--Main Column-->
+    <div id="main_content" class="fr">
+      <!--Popular Products-->
+      <div class="box">
+        <div class="main_Tab">Sản phẩm nổi bật</div>
+        <div class="box_content" id="list_products">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a  class="img_product" href="detail_products.html"><img src="http://sanphamchatluongcao.vn/sites/default/files/Thoi_trang_Lam_dep/8-2012/HanQuoc/thoi-trang-cong-so-hq3.jpg" alt="" /></a>
+                <h2 class="product_name"><a href="detail_products.html">áo mangto cổ điển,thắt nơ   MS:MT26</a></h2>
+                <div class="price"><b>1.600.000 đ</b></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a  class="img_product" href="detail_products.html"><img src="http://media.tinmoi.vn/2010/10/05/3_12_1286285114_75_1286269512-THOI-TRANG-CONG-SO-NGAY-NONG-9.jpg" alt="" /></a>
+                <h2 class="product_name"><a href="detail_products.html">áo mangto cổ điển,thắt nơ   MS:MT26</a></h2>
+                <div class="price"><b>1.600.000 đ</b></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a  class="img_product" href="detail_products.html"><img src="http://sanphamchatluongcao.vn/sites/default/files/Thoi_trang_Lam_dep/8-2012/HanQuoc/thoi-trang-cong-so-hq3.jpg" alt="" /></a>
+                <h2 class="product_name"><a href="detail_products.html">áo mangto cổ điển,thắt nơ   MS:MT26</a></h2>
+                <div class="price"><b>1.600.000 đ</b></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a  class="img_product" href="detail_products.html"><img src="http://media.tinmoi.vn/2010/10/05/3_12_1286285114_75_1286269512-THOI-TRANG-CONG-SO-NGAY-NONG-9.jpg" alt="" /></a>
+                <h2 class="product_name"><a href="detail_products.html">áo mangto cổ điển,thắt nơ   MS:MT26</a></h2>
+                <div class="price"><b>1.600.000 đ</b></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a  class="img_product" href="detail_products.html"><img src="http://sanphamchatluongcao.vn/sites/default/files/Thoi_trang_Lam_dep/8-2012/HanQuoc/thoi-trang-cong-so-hq3.jpg" alt="" /></a>
+                <h2 class="product_name"><a href="detail_products.html">áo mangto cổ điển,thắt nơ   MS:MT26</a></h2>
+                <div class="price"><b>1.600.000 đ</b></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a  class="img_product" href="detail_products.html"><img src="http://hangthoitrang365.com/uploads/products/20131125232016120.jpg" alt="" /></a>
+                <h2 class="product_name"><a href="detail_products.html">áo mangto cổ điển,thắt nơ   MS:MT26</a></h2>
+                <div class="price"><b>1.600.000 đ</b></div>
+              </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--End Popular Products-->
+    </div>
+    <!--End Main Column-->
+  </div>
+  <!--End Main-->
+  <!--Connect-->
+  <div id="connect" class="cf">
+    <div id="connect_inner">
+      <!--Social-->
+      <div id="social_network" class="fl"><a href="" title="Facebook"><span class="icon_facebook"></span></a><a href="" title="Google+"><span class="icon_gplus"></span></a><a href="" title="Youtube"><span class="icon_youtube"></span></a></div>
+      <!--Newletters-->
+      <div id="get_email" class="fr">
+        <label>Đăng ký nhận khuyến mãi:</label>
+        <input class="txf" value="Nhập Email của bạn" name="email">
+        <input type="submit" value="Gửi" class="btn" />
+      </div>
+    </div>
+  </div>
+  <!--end Connect-->
+  <!-- Footer -->
+  <div id="footer" class="cf">
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+        <div class="listMenuFooter"><a href="">Câu hỏi thường gặp</a><a href="">Kiểm tra hàng hóa</a><a href="">Mua hàng</a><a href="">Đổi / Trả hàng</a><a href="">Lợi ích mua online</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>VỀ CHÚNG TÔI</h3>
+        <div class="listMenuFooter"><a href="">Chính sách giao hàng</a><a href="">Nhận hàng tại Showroom</a><a href="">Giao hàng tận nơi</a><a href="">Chuyển phát nhanh</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>Liên Hệ - Hợp Tác</h3>
+        <div class="listMenuFooter"> <a href="">Bảo hành sản phẩm</a><a href="">Dịch vụ lắp đặt</a><a href="">Bảo trì tại nhà</a><a href="">Chuyển phát nhanh</a> </div>
+      </div>
+    </div>
+    <div class="col_menuFooter" id="info_footer">
+      <div class="ctentColuMenuFooter">
+        <p><strong>CIL FASHION SHOP</strong></p>
+        <p>Ðịa chỉ: 21 Nguyễn Dữ, P. Tân Quý, Q. Tân Phú, Tp. HCM </p>
+        <p>Điện thoại: 0937 85 3921</p>
+        <p>Email: cecilya1975@gmail.com </p>
+        <p>© 2014 Cilfashion.com. All Rights Reserved. </p>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+</div>
+<!--End Page-->
+<!--Ads-->
+<div id="divAdLeft">
+  <div style="padding: 2px 0px"> <a href='/san-pham/tui-xach-2.aspx' target='_parent'><img src='http://www.size.vn/wp-content/uploads/2013/08/thoi-trang-cong-so-16.jpg' vspace='1' width='130' alt='' /></a><a href='/san-pham/tui-xach-2.aspx' target='_parent'><img src='http://thienhoangco.com/wp-content/uploads/2013/09/thoi-trang-cong-so-12.jpg' vspace='1' width='130' alt='' /></a></div>
+</div>
+<div id="divAdRight">
+  <div style="padding: 2px 0px"> <a href='/san-pham/tui-xach-2.aspx' target='_parent'><img src='http://a9.vietbao.vn/images/vn905/Ben_Le/50937223_i8.jpg' vspace='1' width='130' alt='' /></a><a href='/san-pham/tui-xach-2.aspx' target='_parent'><img src='http://image2.tin247.com/pictures/2013/12/04/taj1386126161.jpg' vspace='1' width='130' alt='' /></a> </div>
+</div>
+<script type="text/javascript">
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 130;RightBannerW = 130;LeftAdjust = 3;RightAdjust = 3;TopAdjust = 35;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>
+<!--End Ads-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

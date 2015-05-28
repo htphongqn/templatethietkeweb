@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DSSP - Công nghệ Esell.vn</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/Common.js"></script>
+<script src="Scripts/jcarousellite_1.0.1c4.js" type="text/javascript"></script>
+<!--Scripts click Toggle-->
+<script type="text/javascript">
+        $(document).ready(function() {
+var notH = 1,
+    $pop = $('.contentEGP').hover(function(){notH^=1;});
+
+$(document).on('mouseup keyup', function( e ){
+  if(notH||e.which==27) $pop.stop().hide();
+});
+/////// CALL POPUP 
+$('#narrow_by_list .filter_name').click(function(){
+	jQuery(this).find('.contentEGP').slideDown("fast").end().siblings().find('.contentEGP').hide('fast');							 
+	event.stopPropagation();  
+});
+
+            //$(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown .location_selected").click(function() {
+                $(".dropdown .contentEGP").toggle();
+            });			                                    
+            $(".dropdown .contentEGP a").click(function() {
+                var text = $(this).html();
+                $(".dropdown .location_selected a .name_province").html(text);
+                $(".dropdown .contentEGP").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+			$(".dropdown .cate_selected").click(function() {
+				$(".dropdown ul.menu_hover").toggle();
+            });
+			$(".dropdown ul.menu_hover li").click(function() {
+                var text = $(this).html();
+                $(".dropdown .cate_selected a .title_select").html(text);
+                $(".dropdown ul.menu_hover").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+						    
+            //function getSelectedValue(id) {
+                //return $("#" + id).find(".location_selected a span.value").html();
+            //}
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown .contentEGP").hide();
+            });
+			
+			$(document).ready(function() {
+                $( ".sub-comment-content" ).hide();
+			$( ".aReply" ).click(function() {
+$( ".sub-comment-content" ).slideToggle( "fast", function() {
+// Animation complete.
+});
+});
+});
+
+            //$("#flagSwitcher").click(function() {
+                //$(".dropdown img.flag").toggleClass("flagvisibility");
+            //});		
+        });
+    </script>
+<!-- Start Nivo Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#nivo_slide').nivoSlider();
+    });
+    </script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_index').children('li');					
+
+			
+			$("#tabs_index").tabs("#tabs_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			
+			$("#tabs_detail").tabs("#tabs_detail_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+
+	</script>
+<!--Stick sidebar-->
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$(function(){ // document ready
+   if (!!$('#sticky').length) { // make sure "#sticky" element exists
+      var el = $('#sticky');
+      var stickyTop = $('#sticky').offset().top; // returns number
+      var footerTop = $('.footer').offset().top; // returns number
+      var stickyHeight = $('#sticky').height();
+      var limit = footerTop - stickyHeight - 20;
+      $(window).scroll(function(){ // scroll event
+          var windowTop = $(window).scrollTop(); // returns number
+            
+          if (stickyTop < windowTop){
+             el.css({ position: 'fixed', top: 0 });
+          }
+          else {
+             el.css('position','static');
+          }
+            
+          if (limit < windowTop) {
+          var diff = limit - windowTop;
+          el.css({top: diff});
+          }     
+        });
+   }
+});
+});//]]>  
+</script>
+<!-- Include the Etalage CSS -->
+<link rel="stylesheet" href="Styles/etalage.css">
+<!-- Include the Etalage plugin: -->
+<script src="Scripts/jquery.etalage.min.js"></script>
+<!-- Invoke the Etalage plugin -->
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 300,
+					thumb_image_height: 300,
+					source_image_width: 900,
+					source_image_height: 1200,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});				
+
+				// This is for the dropdown list example:
+				$('.dropdownlist').change(function(){
+					etalage_show( $(this).find('option:selected').attr('class') );
+				});
+
+			});
+		</script>
+<!--Jquery chay ngang-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Support-->
+  <div class="support_head"><span class="title_support"></span>
+    <div class="support_bg">
+      <p class="optionSupport"> <a href="http://beta.nhommua.com/tp-ho-chi-minh/tro-giup.html">Trợ giúp</a> <a href="javasript:void(0);">Liên hệ với nhómMua</a> </p>
+      <div class="infoSupport"> <span class="icoSupport"></span>
+        <p class="hotLine"> <span>08 7305 6615</span><br>
+          <span>08 7305 6616</span> </p>
+        <p class="timeSupport">thứ 2 - 6 : từ 8h-17h30</p>
+        <p class="timeSupport">thứ 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: từ 8h-12h</p>
+        <span class="icoMail"></span>
+        <p class="mailSupport">support@nhommua.com</p>
+        <div class="yahoo"> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a> <a href="ymsgr:sendim?hotro_nhommuahcm2"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=1" style="margin-right:4px"> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> </div>
+      </div>
+    </div>
+  </div>
+  <!--End Support-->
+  <!--Social network fixed-->
+  <div class="network_fixed"><span class="title_network_fixed"><span class="icon_facebook"></span>Facebook</span>
+    <div class="network_bg"> <img src="Images/verticle_network.png" alt="" /> </div>
+  </div>
+  <!--End Social network fixed-->
+  <!--Top Page-->
+  <div class="top_page">
+    <div class="top_link">
+      <div class="page_inner">
+        <div class="tab_head">
+          <div class="hotline_head"><span class="hotline_icon"></span>0918 856 738</div>
+          <div class="dropdown">
+            <div class="location_selected"><a href="#"><span class="name_province">Hồ Chí Minh</span><span class="arrow_down1"></span></a></div>
+            <div class="contentEGP dNewCity">
+              <div class="contentNewCity"> <span class="labelPopupTop">Chọn thành phố</span>
+                <p style="border:none;" class="optionSupport"> <a href="#">Hà Nội</a> <a href="#">Hồ Chí Minh</a><a href="#">Đà Nẵng</a> </p>
+              </div>
+            </div>
+          </div>
+          <a href="" class="coop_e">Hợp tác với Esell</a>
+          <!--Toggle Click-->
+          <div id="narrow_by_list">
+            <div class="filter_name" id="get_email">
+              <div class="title_filter">Nhận giá tốt<span class="arrow_down1"></span></div>
+              <div class="contentEGP">
+                <div class="innnerConnEGP">
+                  <h2>Nhận thông báo qua Email</h2>
+                  <div class="labelEGP"> <span style="width:125px">Chọn thành phố</span> <span>Nhập địa chỉ email</span> </div>
+                  <div class="boxEGP">
+                    <select name="" class="droplist">
+                      <option>Toàn Quốc</option>
+                      <option>Tp.Hồ Chí Minh</option>
+                      <option>Hà Nội</option>
+                    </select>
+                    <input type="text" placeholder="Nhập địa chỉ email của bạn" id="txtEmailGoodDeal_Top" class="iptEGP">
+                    <input type="hidden" value="8" id="hdCityGoodDeal_Top">
+                    <span class="btn_payment"> <a id="aSubmitGoodDeal_Top" href="javascript:void(0);">Gửi</a> </span> </div>
+                  <p id="pAlertGoodDeal_Top" class="email-error"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Toggle Click-->
+        </div>
+        <ul class="top_head_r">
+          <li class="account"><a href="login.html">Đăng nhập</a> | <a href="login.html">Đăng ký</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="page_inner">
+      <!--#begin Header-->
+      <div class="header"> <a class="logo" href="index.html"><img src="Images/logo_tech.png" alt="" width="141" /></a>
+        <div class="notice"> <a target="_blank" href="http://beta.nhommua.com/tp-ho-chi-minh/thong-bao.html"><span class="notice_icon"></span><b>Thông báo từ Esell</b></a> </div>
+        <div class="info_header">
+          <div class="function_web"><span class="delivery"></span>Thanh toán<br />
+            khi nhận hàng</div>
+          <div class="function_web"><span class="return"></span>Giao hàng<br />
+            toàn quốc</div>
+          <div class="function_web"><span class="payment"></span>Trả hàng<br />
+            trong 7 ngày</div>
+        </div>
+      </div>
+      <!--#end Header-->
+    </div>
+  </div>
+  <!--End Top Page-->
+  <!--Top Main-->
+  <div class="top_main">
+    <div class="page_inner">
+      <!--Search Tool-->
+      <div class="search_tool">
+        <div class="all_cate">
+          <div class="dropdown">
+            <div class="cate_selected"><a href="#"><span class="title_select">Tất cả</span><span class="arrow_down1"></span></a></div>
+            <ul class="menu_hover">
+              <li class=""><a href="/thoi-trang-quan-ao-gia-re_c56.html">Thời trang</a></li>
+              <li class=""><a href="/phu-kien-thoi-trang_c69.html">Phụ kiện thời trang</a></li>
+              <li class=""><a href="/nha-hang-quan-an-gia-re_c53.html">Nhà hàng - Ẩm thực</a></li>
+              <li class=""><a href="/lam-dep-da_c54.html">Sức khỏe - Làm đẹp</a></li>
+              <li class=""><a href="/du-lich-khach-san-resort-gia-re_c52.html">Du lịch - Khách sạn</a></li>
+              <li class=""><a href="/giai-tri-dao-tao_c55.html">Giải trí - Đào tạo</a></li>
+              <li class=""><a href="/gia-dung-noi-that_c57.html">Gia dụng - Nội thất</a></li>
+              <li class=""><a href="/dien-tu-cong-nghe_c59.html">Điện tử - Công nghệ</a></li>
+              <li class="end"><a href="/cham-soc-me-va-be_c68.html">Mẹ và Bé</a></li>
+            </ul>
+          </div>
+        </div>
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <a href="" class="submitSearch"><span class="icon_search"></span></a> </div>
+      <!--Search Tool-->
+      <div class="cart"><a href="cart.html" class="icon_cart"><span>0</span>Giỏ hàng</a></div>
+    </div>
+  </div>
+  <!--End Top Main-->
+  <div class="page">
+    <!-- #Main -->
+    <!--Path-->
+    <div class="current_path"><a href="index.html">Trang chủ</a><span class="spSeperator"></span> <a href="list_products.html">Nhà hàng - Ẩm thực</a><span class="spSeperator"></span> <a href="list_products.html">Nhà hàng</a> </div>
+    <!--End Path--->
+    <div class="main clearfix">
+      <!--Left Side-->
+      <div class="left_side">
+        <div class="box">
+          <div class="box_content">
+            <div class="title_box"><span>Điện thoại di động, Smartphone</span>
+              <label>Sắp xếp theo:
+                <select class="droplist" name="area">
+                  <option value="0" selected="selected">Xem theo giá</option>
+                  <option value="1">Từ cao xuống thấp</option>
+                  <option value="2">Từ thấp đến cao</option>
+                </select>
+              </label>
+            </div>
+            <div class="product_row">
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/mobile_01.jpg" alt="" width="168" height="168" /></a> </div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/camera_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Di Động NOKIA LUMIA 625</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/laptop_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/camera_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Di Động NOKIA LUMIA 625</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/laptop_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/camera_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Di Động NOKIA LUMIA 625</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/laptop_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/camera_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Di Động NOKIA LUMIA 625</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/laptop_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/mobile_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/camera_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Di Động NOKIA LUMIA 625</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/laptop_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/mobile_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--End Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/mobile_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/camera_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Di Động NOKIA LUMIA 625</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="product_inner">
+                  <div class="img_product"> <a href="detail_products.html"><img src="Images/laptop_01.jpg" alt="" width="168" height="168" /></a></div>
+                  <div class="product_name"><a href="detail_products.html">Ốp lưng Iphone 5 Prestige vintage Bar Vintage</a></div>
+                  <div class="price">60.000.000 VNĐ</div>
+                  <div class="f_price">65.000.000 VNĐ</div>
+                  <a href="" class="buy_bt">Mua ngay</a> </div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="pagination"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+        </div>
+      </div>
+      <!--End Left Side-->
+      <!--Right Side-->
+      <script src="Scripts/Stickysidebar.js"></script>
+      <div class="right_side">
+        <div class="menu menu2">
+          <div id="sidebar" class="sidebar product-sidebar left-sidebar">
+            <ul class="col">
+              <li class="mobile"><a rel="Điện thoại, Smartphones" href="list_products.html" class="link_title">Điện thoại, Smartphones</a></li>
+              <li class="camera row_menu"><a rel="Camera" href="" class="link_title">Camera</a></li>
+              <li class="entertainment row_menu"><a rel="Giải trí" href="" class="">Giải trí</a></li>
+              <li class="laptop"><a rel="Laptop" href="" class="">Laptop</a></li>
+              <li class="utensil row_menu"><a rel="Gia dụng" href="" class="link_title">Gia dụng</a></li>
+              <li class="electromechanis row_menu"><a rel="Điện cơ" href="" class="link_title">Điện cơ</a></li>
+              <li class="tablet"><a rel="Máy tính bảng" href="" class="">Máy tính bảng</a></li>
+              <li class="electron row_menu"><a rel="Điện tử" href="" class="link_title">Điện tử</a></li>
+              <li class="accessories row_menu"><a rel="Phụ kiện" href="" class="link_title">Phụ kiện</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--End Right Side-->
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!--Footer-->
+  <div class="footer">
+    <div class="topmenu_footer">
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Thông tin</a></h2>
+          <div class="listMenuFooter"><a href="">Giới thiệu về chúng tôi</a><a href="">Câu hỏi thường gặp</a><a href="">Tuyển dụng</a><a href="">Quy chế sàn giao dịch</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter custom_care">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Chăm sóc khách hàng</a></h2>
+          <p>Hotline: <span class="hotln">0918 856 738</span></p>
+          <p class="f_cc"><strong>Thứ 2-6</strong><br />
+            từ 8:00 - 17:30</p>
+          <p class="f_cc"><strong>Thứ 7</strong><br />
+            từ 8:00 - 12:00 </p>
+        </div>
+      </div>
+      <div class="col_menuFooter f_support">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Trợ giúp</a></h2>
+          <div class="listMenuFooter"><a href="">Hướng dẫn mua hàng</a><a href="">Hướng dẫn thanh toán</a><a href="">Quy định đổi trả - hoàn tiền</a><a href="">Tài khoản giao dịch</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter f_coop">
+        <div class="ctentColuMenuFooter"> <a class="btn_coop" href=""></a> </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="footer_bottom"> <img src="Images/logo_esell.png" alt="" width="196" class="img_general"  />
+      <div class="info_footer">
+        <p><strong>© 2013 Bản quyền thuộc CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT.</strong></p>
+        <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh - MST: 03 11 632 562</p>
+        <p>Điện thoại: (848) 39 483 961 - Fax: (848) 38 116 791 - Hotline: 0918 856 738</p>
+        <p>Email: <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a> - Website: <a href="http://www.dangcapviet.vn">www.dangcapviet.vn</a></p>
+      </div>
+      <div class="logo_ecom"> <img src="Images/logo_ecom.png" alt="" width="132" /> </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<script>
+		/*
+		* jQuery easing functions (for this demo)
+		*/
+		jQuery.extend( jQuery.easing,{
+			def: 'easeOutQuad',
+			swing: function (x, t, b, c, d) {
+				//alert(jQuery.easing.default);
+				return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+			},
+			easeInQuad: function (x, t, b, c, d) {
+				return c*(t/=d)*t + b;
+			},
+			easeOutQuad: function (x, t, b, c, d) {
+				return -c *(t/=d)*(t-2) + b;
+			},
+			easeInOutQuad: function (x, t, b, c, d) {
+				if ((t/=d/2) < 1) return c/2*t*t + b;
+				return -c/2 * ((--t)*(t-2) - 1) + b;
+			},
+			easeOutElastic: function (x, t, b, c, d) {
+				var s=1.70158;var p=0;var a=c;
+				if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+				if (a < Math.abs(c)) { a=c; var s=p/4; }
+				else var s = p/(2*Math.PI) * Math.asin (c/a);
+				return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+			},
+			easeInOutElastic: function (x, t, b, c, d) {
+				var s=1.70158;var p=0;var a=c;
+				if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
+				if (a < Math.abs(c)) { a=c; var s=p/4; }
+				else var s = p/(2*Math.PI) * Math.asin (c/a);
+				if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+				return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
+			},
+			easeInBack: function (x, t, b, c, d, s) {
+				if (s == undefined) s = 1.70158;
+				return c*(t/=d)*t*((s+1)*t - s) + b;
+			},
+			easeOutBack: function (x, t, b, c, d, s) {
+				if (s == undefined) s = 1.70158;
+				return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+			},
+			easeInOutBack: function (x, t, b, c, d, s) {
+				if (s == undefined) s = 1.70158; 
+				if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+				return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+			}
+		});
+
+		// init the plug-in and bind it to the #menu element
+		//------------------------------------------------------
+		$('.menu').stickyfloat();
+		$('.menu2').stickyfloat('update',{ duration:0 });
+
+
+		// Stuff which are for this DEMO page only
+		//------------------------------------------------------
+		$('.menu').on('click', 'button', function(){
+			var elem = $(this).parents('.menu');
+			elem.stickyfloat('update', { easing:this.innerHTML });
+		});
+
+		$('.menu input').on('change', function(){
+			var elem = $(this).parents('.menu'),
+				prop = this.className,
+				value = this.value,
+				options = {};
+
+			if( (value|0) === parseInt(value) ) // if number, normalize
+				value = value|0;
+
+			options[prop] = value;
+			elem.stickyfloat('update', options);
+		});
+
+		// after page refresh, make sure the values are returned to their defaults
+
+		$('.menu :text').each(function(){
+			$(this).val(this.defaultValue);
+		});
+
+		$('.menu :checkbox').on('change', function(){
+			var elem = $(this).parents('.menu'),
+				prop = this.className,
+				options = {};
+
+			options[prop] = this.checked ? true : false;
+			elem.stickyfloat('update', options);
+		});
+
+		$('.menu .cssTransition:checkbox').on('change', function(){
+			var elem = $(this).parents('.menu'),
+				val = this.checked ? 0 : elem.find('.duration').val();
+
+			elem.toggleClass('transition200');
+			elem.stickyfloat('update',{cssTransition: this.checked});
+		});
+
+		$('.menu :checkbox').each(function(){
+			$(this).prop('checked', this.defaultChecked);
+		});
+</script>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

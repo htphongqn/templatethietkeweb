@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ĐẲNG CẤP VIỆT</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Services-->
+<script src="Scripts/jquery.uniform.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+       	$('div.ser_box > div img').css('visibility','visible').css('opacity',0);
+	$('div.ser_box > div img img:first').css('opacity',1);
+	$('div.ser_box > div img img:last').css('opacity',1);
+	$('div.ser_box > div img').delay(500);
+	$('div.ser_box > div img').stop().animate({'opacity':1,'display':'inline'},2000,'swing',function(){
+		$(this).delay(300).stop().animate({'opacity':1},1000);
+	});
+	$('div.ser_box .item1 h3, div.ser_box .item2 h3, div.ser_box .item4 h3, div.ser_box .item6 h3, div.ser_box .item7 h3').css('visibility','visible').animate({'bottom':'0','opacity':1},1000,'swing');
+	$('div.ser_box .item3 h3').css('visibility','visible').animate({'bottom':'-105px','opacity':1},1000,'swing');
+    });
+    </script>
+<!--Lightbox-->
+<script src="Scripts/jquery.lightbox_me.js"></script>
+<script type="text/javascript">
+        $(function() {
+            function launch() {
+                 $('#box_lightbox').lightbox_me({centered: true, onLoad: function() { $('#box_lightbox').find('input:first').focus()}});
+            }
+            
+            $('#lightbox_me').click(function(e) {
+                $("#box_lightbox").lightbox_me({centered: true, onLoad: function() {
+					$("#box_lightbox").find("input:first").focus();
+				}});
+				
+                e.preventDefault();
+            });
+            
+            
+            $('table tr:nth-child(even)').addClass('stripe');
+        });
+    </script>
+<!--Main Menu-->
+<link href="Styles/dcmegamenu.css" rel="stylesheet" type="text/css" />
+<script type='text/javascript' src='Scripts/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='Scripts/jquery.dcmegamenu.1.2.js'></script>
+<script type="text/javascript">
+$(document).ready(function($){
+	$('#mega_menu').dcMegaMenu({
+		rowItems: '4',
+		speed: 'fast',
+		effect: 'slide'
+	});
+});
+</script>
+<!--Slide Camera-->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				loader: 'none',
+				pagination: true,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '../Images/',						
+            	height: '500px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	playPause: false,
+			});
+
+		});
+	</script>
+<!--Simple Slider-->
+<link rel="stylesheet" href="Styles/bjqs.css">
+<script src="Scripts/bjqs-1.3.min.js"></script>
+<script class="secret-source">
+        jQuery(document).ready(function($) {
+
+          $('#dt_project_slide').bjqs({
+            height      : 305,
+            width       : 534,
+            responsive  : true
+          });
+
+        });
+      </script>
+<!--Sap xep cot so le nhau-->
+<script type="text/javascript" src="Scripts/jquery.masonry.js"></script>
+<script type="text/javascript" src="Scripts/jquery.masonry.ordered.js"></script>
+<script>
+$(document).ready(function(){
+	$('#news_post_wrap').masonry({
+		itemSelector: '.post',
+		columnWidth: 244,
+		isAnimated: true,
+		layoutPriorities: {
+			shelfOrder: 1
+		}
+	});
+});
+</script>
+<!--Hoi dap-->
+<script>
+$(document).ready(function() { 
+  $('.question').click(function() {
+ 
+  if($(this).next().is(':hidden') != true) {
+                $(this).removeClass('active'); 
+    $(this).next().slideUp("normal");
+  } else {
+    $('.question').removeClass('active');  
+     //$('.answer').slideUp('normal');
+    if($(this).next().is(':hidden') == true) {
+    $(this).addClass('active');
+    $(this).next().slideDown('normal');
+     }   
+  }
+   });
+ 
+  $('.answer').hide();
+ 
+  $('.expand').click(function(event)
+    {$('.question').next().slideDown('normal');
+        {$('.question').addClass('active');}
+    }
+  );
+ 
+  $('.collapse').click(function(event)
+    {$('.question').next().slideUp('normal');
+        {$('.question').removeClass('active');}
+    }
+  );
+});
+</script>
+</head>
+<body>
+<div id="container">
+  <!--Support-->
+  <div class="support_head"> <a href="#" id="lightbox_me" class="try sprited title_support"></a>
+    <div id="box_lightbox">
+      <div class="box_lightbox_inner">
+        <h2 class="col_title">Điền vào form bên dưới để nhận tư vấn và báo giá miễn phí</h2>
+        <div class="form_sp">
+          <div class="row_sp">
+            <input type="text" placeholder="Họ tên*" id="ctl00_ctl07_ctl3ca67fe963664548a83695a154fe39f3_txt3ca67fe963664548a83695a154fe39f3" name="ctl00$ctl07$ctl3ca67fe963664548a83695a154fe39f3$txt3ca67fe963664548a83695a154fe39f3" class="inputbox" />
+            <span style="display:none;" class="row-error" id="ctl00_ctl07_ctl3ca67fe963664548a83695a154fe39f3_val3ca67fe963664548a83695a154fe39f3"> *</span></div>
+          <div class="row_sp">
+            <input type="text" placeholder="Công ty*" id="ctl00_ctl07_ctl7f16e8f0e4a146aa9b9ac957e35d258f_txt7f16e8f0e4a146aa9b9ac957e35d258f" name="ctl00$ctl07$ctl7f16e8f0e4a146aa9b9ac957e35d258f$txt7f16e8f0e4a146aa9b9ac957e35d258f" class="inputbox" />
+            <span style="display:none;" class="row-error" id="ctl00_ctl07_ctl7f16e8f0e4a146aa9b9ac957e35d258f_val7f16e8f0e4a146aa9b9ac957e35d258f"> *</span></div>
+          <div class="row_sp">
+            <input type="text" placeholder="Địa chỉ*" id="ctl00_ctl07_ctl462d3e46e8da48f0bb7fcb7defb60d59_txt462d3e46e8da48f0bb7fcb7defb60d59" name="ctl00$ctl07$ctl462d3e46e8da48f0bb7fcb7defb60d59$txt462d3e46e8da48f0bb7fcb7defb60d59" class="inputbox" />
+            <span style="display:none;" class="row-error" id="ctl00_ctl07_ctl462d3e46e8da48f0bb7fcb7defb60d59_val462d3e46e8da48f0bb7fcb7defb60d59"> *</span></div>
+          <div class="row_sp">
+            <input type="text" placeholder="Điện thoại*" id="ctl00_ctl07_ctldec39360e5cb410abd00c5839c27e6f9_txtdec39360e5cb410abd00c5839c27e6f9" name="ctl00$ctl07$ctldec39360e5cb410abd00c5839c27e6f9$txtdec39360e5cb410abd00c5839c27e6f9" class="inputbox" />
+            <span style="display:none;" class="row-error" id="ctl00_ctl07_ctldec39360e5cb410abd00c5839c27e6f9_valdec39360e5cb410abd00c5839c27e6f9"> *</span></div>
+          <div class="row_sp">
+            <input type="text" placeholder="Email*" id="ctl00_ctl07_ctl7d8c38321371409f93f2b22a0a93b61a_txt7d8c38321371409f93f2b22a0a93b61a" size="30" name="ctl00$ctl07$ctl7d8c38321371409f93f2b22a0a93b61a$txt7d8c38321371409f93f2b22a0a93b61a" class="inputbox" />
+            <span style="display:none;" class="row-error" id="ctl00_ctl07_ctl7d8c38321371409f93f2b22a0a93b61a_val7d8c38321371409f93f2b22a0a93b61a"> *</span><span style="display:none;" class="txterror" id="ctl00_ctl07_ctl7d8c38321371409f93f2b22a0a93b61a_ctl00">Email không hợp lệ.</span></div>
+          <div class="row_sp drop">
+            <select id="ctl00_ctl07_ctlb3adeb892cac439ab6d261899bd5aec9_ddb3adeb892cac439ab6d261899bd5aec9" name="ctl00$ctl07$ctlb3adeb892cac439ab6d261899bd5aec9$ddb3adeb892cac439ab6d261899bd5aec9" style="opacity: 0;">
+              <option value="">Kinh phí triển khai</option>
+              <option value="Từ 15 - 30 triệu VND">Làm Website Giới thiệu công ty/option>
+              <option value="Làm Website Giới thiệu Sản phẩm">Làm Website Giới thiệu Sản phẩm</option>
+              <option value="Làm Website Bán hàng Trực tuyến">Làm Website Bán hàng Trực tuyến</option>
+              <option value="Từ 100 - 200 triệu VND">Từ 100 - 200 triệu VND</option>
+              <option value="Trên 200 triệu VND">Trên 200 triệu VND</option>
+            </select>
+            <span style="visibility:hidden;" class="row-error" id="ctl00_ctl07_ctlb3adeb892cac439ab6d261899bd5aec9_valb3adeb892cac439ab6d261899bd5aec9"> *</span><span class="slect_label">Kinh phí triển khai</span></div>
+          <div class="row_sp">
+            <input type="text" placeholder="Thời gian dự kiến (tuần)" id="ctl00_ctl07_ctleb9d746fb8aa4758827dc609f9567423_txteb9d746fb8aa4758827dc609f9567423" name="ctl00$ctl07$ctleb9d746fb8aa4758827dc609f9567423$txteb9d746fb8aa4758827dc609f9567423" class="inputbox" />
+            <span style="display:none;" class="row-error" id="ctl00_ctl07_ctleb9d746fb8aa4758827dc609f9567423_valeb9d746fb8aa4758827dc609f9567423"> *</span></div>
+          <div class="row_sp">
+            <textarea placeholder="Ghi chú thêm" id="ctl00_ctl07_ctl5d9ce8d3bc12426fa8583c256f17ffd5_txt5d9ce8d3bc12426fa8583c256f17ffd5" cols="20" rows="2" name="ctl00$ctl07$ctl5d9ce8d3bc12426fa8583c256f17ffd5$txt5d9ce8d3bc12426fa8583c256f17ffd5"></textarea>
+            <span style="visibility:hidden;" class="row-error" id="ctl00_ctl07_ctl5d9ce8d3bc12426fa8583c256f17ffd5_val5d9ce8d3bc12426fa8583c256f17ffd5"> *</span></div>
+          <div class="row_sp">
+            <div class="frm_btn">
+              <input type="button" class="send_cmt" id="ctl00_ctl07_btnSubmit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl07$btnSubmit&quot;, &quot;&quot;, true, &quot;formwizard39c28705-d16f-4ed9-adca-be368154bf78&quot;, &quot;&quot;, false, true))" value="Gửi" name="ctl00$ctl07$btnSubmit">
+              <input type="reset" value="Xóa" class="send_cmt" id="ctl00_ctl07_btnReset" name="ctl00$ctl07$btnReset">
+              <input type="hidden" id="ctl00_ctl07_hdnResponseSetGuid" name="ctl00$ctl07$hdnResponseSetGuid">
+            </div>
+          </div>
+          <div class="cf"></div>
+        </div>
+        <div class="hot_sp">
+          <div class="chat_area"> <a onclick="OpenLiveSupport()"><span class="chat_icon"></span></a> <span class="lb_sp">Nhấn vào đây để chat với chúng tôi</span> </div>
+          <div class="or">hoặc</div>
+          <div class="hotline"><span class="hotline_icon"></span> <span class="lb_sp">Gọi cho chúng tôi <span class="number" href="tel:"> (+84 8) 3823 8364</span> </span></div>
+          <div class="cf"></div>
+        </div>
+        <a id="close_x" class="close sprited" href="#">close</a> </div>
+    </div>
+  </div>
+  <!--End Support-->
+  <!--#begin Header-->
+  <div class="header">
+    <div class="wrap">
+      <!--Logo-->
+      <div id="logo"> <a href="index.html" class="logo_pc"><img src="Images/logo.png" alt=""></a> </div>
+      <p class="slogan"><a href="index.html"><img src="Images/slogan.png" alt=""></a></p>
+      <!--Search Tool-->
+      <div id="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword">
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+      <!--Account-->
+      <div id="account"><a href="">Đăng nhập</a> | <a href="">Đăng ký</a> </div>
+      <!--Language-->
+      <div id="lang"><a title="Vietnamese" href="" class="vn_icon"></a> <a title="English" href="" class="eng_icon"></a> </div>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="nav_menu_wrap">
+    <div id="nav_menu">
+      <ul id="mega_menu" class="mega_menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a>
+          <ul>
+            <li><a href="#">Về Đẳng Cấp Việt</a></li>
+            <li><a href="#">Nhận xét của khách hàng</a></li>
+            <li><a href="#">Tin tức công ty</a></li>
+            <li><a href="#">Khuyến mãi</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Dịch vụ</a>
+          <ul>
+            <li> <a href="#">Phụ trợ cho Website</a>
+              <ul class="noli">
+                <li><a title="Quản trị và Bảo trì" href="/quan-tri-va-bao-tri" target="_self">Quản trị và Bảo trì</a></li>
+                <li><a title="Thiết kế Skin cho website" href="/thiet-ke-skin-cho-website" target="_self">Thiết kế Skin cho website</a></li>
+                <li><a title="Đăng ký tên miền (Domain)" href="/dang-ky-ten-mien-domain" target="_self">Đăng ký tên miền (Domain)</a></li>
+                <li><a title="Cho thuê Hosting Server" href="/cho-thue-hosting-server" target="_self">Cho thuê Hosting Server</a></li>
+                <li><a title="Phần mềm Live Support" href="/phan-mem-live-support" target="_self">Phần mềm Live Support</a></li>
+                <li><a title="Thêm Chức năng cho Website" href="/them-chuc-nang-cho-website" target="_self">Thêm Chức năng cho Website</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Thiết kế Website</a>
+              <ul class="noli">
+                <li><a title="Website Giới thiệu" href="/website-gioi-thieu" target="_self">Website Giới thiệu</a></li>
+                <li><a title="Website Bán hàng Trực tuyến" href="/website-ban-hang-truc-tuyen" target="_self">Website Bán hàng Trực tuyến</a></li>
+                <li><a title="Website Di động" href="http://www.canhcam.vn/mobile-web/gioi-thieu" target="_self">Website Di động</a></li>
+                <li><a title="Microsite" href="/microsite" target="_self">Microsite</a></li>
+              </ul>
+            </li>
+            <li> <a href="#">Công cụ Quảng bá</a>
+              <ul class="noli">
+                <li><a title="Tối ưu cho công cụ tìm kiếm (SEO)" href="/toi-uu-cho-cong-cu-tim-kiem-seo" target="_self">Tối ưu cho công cụ tìm kiếm (SEO)</a></li>
+                <li><a title="Quảng cáo Google AdWords" href="/quang-cao-google-adwords" target="_self">Quảng cáo Google AdWords</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Nhu cầu của bạn</a>
+              <ul class="noli">
+                <li><a title="Làm Website Giới thiệu Công ty" href="/lam-website-gioi-thieu-cong-ty" target="_self">Làm Website Giới thiệu Công ty</a></li>
+                <li><a title="Làm Website Giới thiệu Sản phẩm" href="/lam-website-gioi-thieu-san-pham" target="_self">Làm Website Giới thiệu Sản phẩm</a></li>
+                <li><a title="Làm Website Bán hàng Trực tuyến" href="/lam-website-ban-hang-truc-tuyen" target="_self">Làm Website Bán hàng Trực tuyến</a></li>
+                <li><a title="Làm Microsite cho chiến dịch quảng cáo" href="/lam-microsite-cho-chien-dich-quang-cao" target="_self">Làm Microsite cho chiến dịch quảng cáo</a></li>
+                <li><a title="Nâng cấp Tính năng Website" href="/nang-cap-tinh-nang-website" target="_self">Nâng cấp Tính năng Website</a></li>
+                <li><a title="Tăng Số lượng Truy cập Website" href="/tang-so-luong-truy-cap-website" target="_self">Tăng Số lượng Truy cập Website</a></li>
+              </ul>
+              <div class="other_request"><a href="/yeu-cau-bao-gia">Bạn có nhu cầu khác</a></div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="projects.html">Dự án</a>
+          <ul>
+            <li><a href="#">Thiết kế website Bán hàng</a>
+              <ul>
+                <li><a href="#">Item 3.1.1</a></li>
+                <li><a href="#">Item 3.1.2</a></li>
+                <li><a href="#">This is a long menu item string!</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Tư vấn thiết kế web</a>
+              <ul>
+                <li><a href="#">Item 3.1.1</a></li>
+                <li><a href="#">Item 3.1.2</a></li>
+                <li><a href="#">This is a long menu item string!</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Thiết kế website Thương mại điện tử</a>
+              <ul>
+                <li><a href="#">Item 3.1.1</a></li>
+                <li><a href="#">Item 3.1.2</a></li>
+                <li><a href="#">This is a long menu item string!</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Quy trình đặt hàng - triển khai - hỗ trợ</a>
+              <ul>
+                <li><a href="#">Item 3.1.1</a></li>
+                <li><a href="#">Item 3.1.2</a></li>
+                <li><a href="#">This is a long menu item string!</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Tin tức</a>
+          <ul>
+            <li><a href="#">Tin công ty</a>
+            <li><a href="#">Tin Khuyến mãi</a></li>
+            <li><a href="#">Tin Công nghệ</a></li>
+          </ul>
+        </li>
+        <li><a href="question.html">Hỏi đáp</a></li>
+        <li><a href="#">Tuyển dụng</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--End Main Menu-->
+  <div class="wrap">
+    <!-- #Main -->
+    <div class="main cf">
+      <div class="current_path"><span class="breadcrum"><a href="index.html">Trang chủ</a><span class="spSeperator"></span> <a href="list_news.html">Dự án</a></span>
+        <h1 class="h1Title">Dự án</h1>
+        <div class="top_select">
+          <select id="your_request" name="your_request" style="opacity: 0;">
+            <option value="">Xem theo ngành</option>
+            <option value="Tập đoàn - Tổng công ty">Tập đoàn - Tổng công ty (10)</option>
+            <option value="Khu công nghiệp">Khu công nghiệp (2)</option>
+            <option value="Ô tô - Xe máy">Ô tô - Xe máy (5)</option>
+            <option value="Bánh ngọt">Bánh ngọt (3)</option>
+            <option value="Dệt may - Thời trang">Dệt may - Thời trang (1)</option>
+          </select>
+          <span style="visibility:hidden;" class="row-error" id="your_request"> *</span><span class="slect_label">Xem theo ngành</span> </div>
+      </div>
+      <!--Projects-->
+      <ul id="projects">
+        <li class="project_item"> <a title="Website New Epoch Hotel" href="dt_project.html" target="_self"> <img width="166" height="166" alt="Website New Epoch Hotel" src="http://www.canhcam.vn/Data/Sites/1/media/News/128/193/FullSizeImages/newe_logo.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website khu công nghiệp Hiệp Phước" href="http://www.canhcam.vn/website-khu-cong-nghiep-hiep-phuoc" target="_self"> <img width="166" height="166" alt="Website khu công nghiệp Hiệp Phước" src="http://www.canhcam.vn/Data/Sites/1/media/News/131/189/FullSizeImages/hiepphuoc_logo.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website khu công nghiệp Long Hậu" href="http://www.canhcam.vn/website-khu-cong-nghiep-long-hau" target="_self"> <img width="166" height="166" alt="Website khu công nghiệp Long Hậu" src="http://www.canhcam.vn/Data/Sites/1/media/News/131/188/FullSizeImages/lh.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website khu công nghiệp Đức Hòa III" href="http://www.canhcam.vn/website-khu-cong-nghiep-duc-hoa-iii" target="_self"> <img width="166" height="166" alt="Website khu công nghiệp Đức Hòa III" src="http://www.canhcam.vn/Data/Sites/1/media/News/131/190/FullSizeImages/dh_logo.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website Anh Tin" href="http://www.canhcam.vn/website-anh-tin" target="_self"> <img width="166" height="166" alt="Website Anh Tin" src="http://www.canhcam.vn/Data/Sites/1/media/News/127/187/FullSizeImages/anhtin_s.jpg"> </a> </li>
+        <li class="project_item"> <a title="Giới thiệu website Hòn Tằm Resort" href="http://www.canhcam.vn/gioi-thieu-website-hon-tam-resort" target="_self"> <img width="166" height="166" alt="Giới thiệu website Hòn Tằm Resort" src="http://www.canhcam.vn/Data/Sites/1/media/News/128/182/FullSizeImages/hontam_logo.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website Tư Vấn Sáng Tạo" href="http://www.canhcam.vn/website-tu-van-sang-tao" target="_self"> <img width="166" height="166" alt="Website Tư Vấn Sáng Tạo" src="http://www.canhcam.vn/Data/Sites/1/media/News/147/170/FullSizeImages/sangtao.jpg"> </a> </li>
+        <li class="project_item"> <a title="Giới thiệu website Sieuthi24" href="http://www.canhcam.vn/gioi-thieu-website-sieuthi24" target="_self"> <img width="166" height="166" alt="Giới thiệu website Sieuthi24" src="http://www.canhcam.vn/Data/Sites/1/media/News/141/169/FullSizeImages/canhcam_logokhsieuthi24.jpg"> </a> </li>
+        <li class="project_item"> <a title="Giới thiệu website Tỏa sáng nghị lực Việt" href="http://www.canhcam.vn/gioi-thieu-website-toa-sang-nghi-luc-viet" target="_self"> <img width="166" height="166" alt="Giới thiệu website Tỏa sáng nghị lực Việt" src="http://www.canhcam.vn/Data/Sites/1/media/News/127/168/FullSizeImages/canhcam_logonick.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website Dalat Hasfarm" href="http://www.canhcam.vn/website-dalat-hasfarm" target="_blank"> <img width="166" height="166" alt="Website Dalat Hasfarm" src="http://www.canhcam.vn/Data/Sites/1/media/News/127/160/FullSizeImages/canhcam_logokhdlh.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website iService" href="http://www.canhcam.vn/website-iservice" target="_self"> <img width="166" height="166" alt="Website iService" src="http://www.canhcam.vn/Data/Sites/1/media/News/141/159/FullSizeImages/canhcam_logokhhuyphong.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website Đông Tây Promotion" href="http://www.canhcam.vn/website-dong-tay-promotion" target="_self"> <img width="166" height="166" alt="Website Đông Tây Promotion" src="http://www.canhcam.vn/Data/Sites/1/media/News/145/154/FullSizeImages/canhcam_logokhdongtay.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website Khang Điền" href="http://www.canhcam.vn/khai-truong-chinh-thuc-website-khang-dien" target="_self"> <img width="166" height="166" alt="Website Khang Điền" src="http://www.canhcam.vn/Data/Sites/1/media/News/123/151/FullSizeImages/khang-dien.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website Dai-ichi Life Việt Nam" href="http://www.canhcam.vn/website-dai-ichi-life-viet-nam" target="_self"> <img width="166" height="166" alt="Website Dai-ichi Life Việt Nam" src="http://www.canhcam.vn/Data/Sites/1/media/News/140/150/FullSizeImages/canhcam_logokhdaiichi.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website Thaco Logistics" href="http://www.canhcam.vn/website-thaco-logistics" target="_self"> <img width="166" height="166" alt="Website Thaco Logistics" src="http://www.canhcam.vn/Data/Sites/1/media/News/127/149/FullSizeImages/thaco-logistic.png"> </a> </li>
+        <li class="project_item"> <a title="Website Thiên Dược" href="http://www.canhcam.vn/website-thien-duoc" target="_self"> <img width="166" height="166" alt="Website Thiên Dược" src="http://www.canhcam.vn/Data/Sites/1/media/News/148/148/FullSizeImages/canhcam_logokhthienduoc.jpg"> </a> </li>
+        <li class="project_item"> <a title="Website PV Oil" href="http://www.canhcam.vn/website-pv-oil" target="_self"> <img width="166" height="166" alt="Website PV Oil" src="http://www.canhcam.vn/Data/Sites/1/media/News/125/146/FullSizeImages/canhcam_logokhpvoil.jpg"> </a> </li>
+        <li class="project_item"> <a title="Khai trương chính thức website KCN Vĩnh Lộc 2" href="http://www.canhcam.vn/khai-truong-chinh-thuc-website-kcn-vinh-loc-2" target="_self"> <img width="166" height="166" alt="Khai trương chính thức website KCN Vĩnh Lộc 2" src="http://www.canhcam.vn/Data/Sites/1/media/News/123/144/FullSizeImages/vinh-loc.png"> </a> </li>
+        <li class="project_item"> <a title="Website Danhtin mới" href="http://www.canhcam.vn/website-danhtin-moi" target="_self"> <img width="166" height="166" alt="Website Danhtin mới" src="http://www.canhcam.vn/Data/Sites/1/media/News/256/133/FullSizeImages/danh-tin.png"> </a> </li>
+        <li class="project_item"> <a title="Website Huda &ndash; Nồng nàn hương bia Huế" href="http://www.canhcam.vn/website-huda-nong-nan-huong-bia-hue" target="_self"> <img width="166" height="166" alt="Website Huda &ndash; Nồng nàn hương bia Huế" src="http://www.canhcam.vn/Data/Sites/1/media/News/143/132/FullSizeImages/huda.png"> </a> </li>
+      </ul>
+      <div class="cf"></div>
+      <div class="navigation">Xem trang: <b>1</b><a href="">2</a><a href="">3</a> ...<a href="">15</a> </div>    
+    <!--End Projects-->
+  </div>
+  <!--End Main-->
+  <div class="cf"></div>
+</div>
+<!--End Page-->
+<!--Customers-->
+<div class="customers">
+  <ul>
+    <li class="cus_item"> <a style="background-image: url('Images/vuonrauviet_logo.png')" title="Website Vườn rau Việt" href="http://vuonrauviet.com/" target="_self"> </a> </li>
+    <li class="cus_item"> <a style="background-image: url('Images/phongvelacviet_logo.png')" title="Website Phòng vé lạc Việt" href="http://phongvelacviet.com.vn/" target="_self"> </a> </li>
+    <li class="cus_item"> <a style="background-image: url('Images/nuocmamtulo_logo.png')" title="Website Nước mắm Tư Lò" href="http://nuocmamtulo.com/" target="_self"> </a> </li>
+    <li class="cus_item"> <a style="background-image: url('Images/saigondebrazil_logo.png')" title="Website Saigondebrazil" href="http://saigondebrazil.com/" target="_self"> </a> </li>
+    <li class="our-friends clitem5">
+      <div class="title"> <a href="/du-an"> <img alt="All Customers" src="Images/all_customers_text.png" /> </a> </div>
+    </li>
+    <li class="cus_item"> <a style="background-image: url('Images/muahangchinhhang_logo.png')" title="Website Mua hàng chính hãng" href="http://muahangchinhhang.vn/" target="_self"> </a> </li>
+    <li class="cus_item"> <a style="background-image: url('Images/sieumuanhanh_logo.png')" title="Website Siêu Mua Nhanh" href="http://sieumuanhanh.com" target="_self"> </a> </li>
+    <li class="cus_item"> <a style="background-image: url('Images/royal_logo.png')" title="Website Royal Phoenix" href="http://www.royalphoenix.com.vn/" target="_self"> </a> </li>
+    <li class="cus_item"> <a style="background-image: url('Images/hotelngocgiau_logo.png')" title="Website Khách sạn Ngọc Giàu" href="http://ngocgiauhotel.com" target="_self"> </a> </li>
+    <div class="cf"></div>
+  </ul>
+</div>
+<!--End Customers-->
+<!--Footer-->
+<div class="footer">
+  <div class="page_inner">
+    <div class="topmenu_footer">
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2>Giới thiệu</h2>
+          <div class="listMenuFooter"><a href="">Về Đẳng Cắp Việt</a><a href="">Nhận xét của khách hàng</a><a href="">Tin tức công ty</a><a href="">Tuyển dụng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2>Hỗ trợ khách hàng</h2>
+          <div class="listMenuFooter"><a href="">Yêu cầu báo giá</a><a href="">Yêu cầu tư vấn</a><a href="">Chính sách bảo mật</a><a href="">Hỏi – Đáp</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="social_network">
+        <div class="ctentColuMenuFooter">
+          <h2>Kết nối với chúng tôi</h2>
+          <div class="listMenuFooter"><a href=""><span class="facebook"></span>Faceboook</a><a href=""><span class="linkedin"></span>Linkedin</a><a href=""><span class="google_plus"></span>Google +</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="info_footer">
+        <div class="ctentColuMenuFooter">
+          <p><strong>CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT</strong></p>
+          <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh</p>
+          <p>Điện thoại: (848) 3811.6704 hoặc (848) 3811.6723</p>
+          <p> Fax: (848) 3811.6791 - Hotline: 0908.169.044</p>
+          <p>Email: <a href="mailto:info@www.dangcapviet.vn">info@www.dangcapviet.vn</a> - Website: <a href="index.html">www.dangcapviet.vn</a></p>
+          <p class="copyright">Copyright © 2014 By <strong>DangCapViet JSC</strong> - <a target="_blank" href="index.html">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </p>
+        </div>
+      </div>
+      <div class="cf"></div>
+    </div>
+  </div>
+</div>
+<!--End Footer-->
+</div>
+<!--End Container-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

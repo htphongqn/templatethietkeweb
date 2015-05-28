@@ -1,0 +1,100 @@
+/*Main Menu*/
+#nav_menu {
+	position: relative;
+	height: 40px;
+	background: url(../Images/menuBg.gif) 0 0 repeat-x;
+}
+#nav_menu:after, #nav_menu ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#nav_menu > ul {
+	position: relative;
+	display: block;
+	z-index: 500;
+}
+#nav_menu li {
+	position: relative
+}
+#nav_menu > ul > li {
+	float: left;
+	display:inline-block;
+}
+#nav_menu > ul > li.active > a, #nav_menu > ul > li:hover > a {
+	background: rgba(186, 38, 38, 0.7);
+	color: #FFFFFF
+}
+#nav_menu ul li a {
+	display: block;
+	text-decoration: none;
+}
+#nav_menu > ul > li > a {
+	display: block;
+	white-space: nowrap;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	padding: 0 20px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1.15em;
+	text-transform: uppercase;
+}
+#nav_menu ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 80px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background: #9e1b1b
+}
+#nav_menu ul ul ul {
+	top: 40px;
+}
+#nav_menu ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 180px
+}
+#nav_menu > ul > li:hover > ul {
+	left: 1px;
+	top: 40px;
+	opacity: 1;
+}
+#nav_menu ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#nav_menu ul ul li a {
+	border-bottom: 1px dotted #9c9c9c;
+	filter: none;
+	font-size: 100%;
+	display: block;
+	line-height: 32px;
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 10px;
+	color:#FFFFFF;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#nav_menu ul ul li:hover > a {
+	background: #303030;
+	color: #FFFFFF;
+}

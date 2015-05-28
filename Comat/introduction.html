@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Comat</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+ 
+
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'circular',
+		animation: 1500,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });	
+});
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page_inner">
+    <!--#begin Header-->
+    <div class="header page_inner"> <a class="logo" href="index.html"><img src="Images/logo.jpg" alt="" /></a>
+      <!--Search Tool-->
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword">
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+      <!--Main Menu-->
+      <div id="smoothmenu1" class="ddsmoothmenu">
+        <ul>
+          <li class="active"><a href="index.html">Home</a>
+          <li><a href="introduction.html">Introduction</a>
+            <ul class="children">
+              <li><a href="">Establish</a> </li>
+              <li><a href="#">Managerment Board</a> </li>
+              <li><a href="#">Organization Chart</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <li><a href="">About Us</a></li>
+          <li><a href="list_products.html">Products</a>
+            <ul class="children">
+              <li><a href="">Temporary work</a> </li>
+              <li><a href="#">Safety work</a> </li>
+              <li><a href="#">Safety Tools</a> </li>
+              <li><a href="#">Design for Construction</a> </li>
+              <li><a href="#">Construction MRO Sevice</a></li>
+              <li><a href="#">Final Washing and Clean</a></li>
+            </ul>
+          </li>
+          <li><a href="list_news.html">Services</a></li>
+          <li><a href="projects.html">Projects</a> </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <!--End Main Menu-->
+      <div class="lang"><a href="" id="vn_lang"></a> <a href="" id="en_lang"></a> </div>
+    </div>
+    <!--#end Header-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <!--Vertical Menu-->
+        <div id="vertical_menu">
+          <ul class="topnav">
+            <li><a href="#">1. Establish</a> </li>
+            <li><a href="#">2. Managerment Board</a> </li>
+            <li><a href="#">3. Organization Chart</a></li>
+            <li><a href="#">4. Contact Us</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Vertical Menu-->
+      </div>
+      <!--End Left Column-->
+      <div class="path"><span><a href="introduction.html">Introduction</a> - Establish</span></div>
+      <!--Main Column-->
+      <div class="main_content">
+        <div class="detail_info">
+          <h1 class="h1Title">Establish</span></h1>
+          <p class="date">06/05/2013</p>
+          <img src="Images/aboutus.jpg" alt="" width="150" class="img_general" />
+          <p>Giấy chứng nhận đăng ký Kinh doanh số 4103000229, cấp ngày 01/12/2000 của Sở Kế Hoạch &amp; Ðầu Tư TP Hồ Chí Minh.</p>
+          <p>1.   Tên công ty: CTY CỔ PHẦN XÂY DỰNG &amp; KINH DOANH ÐỊA ỐC HÒA BÌNH<br />
+            Tên giao dịch: HOA BINH CONSTRUCTION &amp; REAL ESTATE CORPORATION<br />
+            Tên viết tắt: HOA BINH CORPORATION (CÔNG TY CỔ PHẦN HOÀ BÌNH)</p>
+          <p>2.   Ðịa chỉ trụ sở chính: 235 Võ Thị Sáu, Phường 7, Quận 3, Thành phố Hồ Chí Minh.<br />
+            Ðiện thoại: (84-8) 39325030; Fax: (84-8) 39325221</p>
+          <p>Văn phòng 2: 41-43 Trần Cao Vân, Phường 6, Quận 3, Thành phố Hồ Chí Minh.<br />
+            Điện thoại: (84-8) 62907626; Fax: (84-8) 62907636<br />
+            E-mail: info@hoabinhcorporation.com<br />
+            Website: www.hoabinhcorporation.com</p>
+          <p>3.   Ngành nghề kinh doanh:<br />
+            - Xây dựng dân dụng và công nghiệp<br />
+            - Xây dựng cầu đường, công trình giao thông, xây dựng hệ thống cấp thoát nước<br />
+            - San lấp mặt bằng<br />
+            - Kinh doanh nhà<br />
+            - Tư vấn xây dựng (trừ tư vấn thiết kế công trình)<br />
+            - Sản xuất, mua bán hàng vật liệu xây dựng, hàng trang trí   nội thất<br />
+            - Dịch vụ: sửa chữa nhà &amp; trang trí nội thất.</p>
+          <p>4.   Vốn điều lệ: 151.195.400.000 đồng</p>
+          <p>5.   Giám đốc công ty: Kiến trúc sư LÊ VIẾT HẢI</p>
+          <p>6.   Ngày bắt đầu hoạt động của công ty cổ phần: 11/12/2000</p>
+          <p>Công ty Cổ phần Xây dựng &amp; Kinh doanh Ðịa ốc Hoà Bình được thành lập trên cơ sở thừa kế toàn bộ lực lượng của VĂN PHÒNG XÂY DỰNG HOÀ BÌNH (HOA BINH CONSTRUCTION) ở địa chỉ cũ là 52A Trương Ðịnh, Phường 7, Quận 3, Thành phố Hồ Chí Minh.</p>
+        </div>
+        <div class="function">
+          <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+          <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+        </div>
+        <!--Other News-->
+        <div class="other_news_sub">
+          <h2 class="other_newsT">Tin bài khác</h2>
+          <ul>
+            <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+          </ul>
+          <a class="view_all" href="">Xem tất cả &raquo;</a>
+          <div class="clearfix"></div>
+        </div>
+        <!--Other News-->
+      </div>
+      <!--End Main Column-->
+    </div>
+    <!--End Main-->
+    <!-- Footer -->
+    <div class="info_footer">
+      <p><strong>COMAT Co., Ltd.</strong></p>
+      <p><strong>HO CHI MINH:</strong> 141 Tran Trong Cung, Tan Thuan Dong Ward, Dist.7, HCMC</p>
+      <p>Tel: (08) 3773-2844; (08) 3773-2832; Fax: (08) 3773-2854; Tax code: 0305973268</p>
+      <p><strong>HA NOI:</strong> Km8 + 400, Lot 2,  An Khanh Industrial, Hoai Duc District, Ha Noi</p>
+      <p>Tel: (04) 3399-6459;  (04) 3399-6460    Fax: (04) 3399-6461</p>
+    </div>
+    <!-- End Footer -->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+</div>
+<!--End #Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

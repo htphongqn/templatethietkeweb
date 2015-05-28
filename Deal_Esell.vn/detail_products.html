@@ -1,0 +1,1334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Giỏ hàng - Deal Esell.vn</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="Scripts/simple_arcordion.js"></script>
+<!--Jquery chay ngang-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+<!--Scripts click Toggle-->
+<script type="text/javascript">
+        $(document).ready(function() {
+var notH = 1,
+    $pop = $('.contentEGP').hover(function(){notH^=1;});
+
+$(document).on('mouseup keyup', function( e ){
+  if(notH||e.which==27) $pop.stop().hide();
+});
+/////// CALL POPUP 
+$('#narrow_by_list .filter_name').click(function(){
+	jQuery(this).find('.contentEGP').slideDown("fast").end().siblings().find('.contentEGP').hide('fast');							 
+	event.stopPropagation();  
+});
+
+            //$(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown .location_selected").click(function() {
+                $(".dropdown .contentEGP").toggle();
+            });			                                    
+            $(".dropdown .contentEGP a").click(function() {
+                var text = $(this).html();
+                $(".dropdown .location_selected a .name_province").html(text);
+                $(".dropdown .contentEGP").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+			$(".dropdown .cate_selected").click(function() {
+				$(".dropdown ul.menu_hover").toggle();
+            });
+			$(".dropdown ul.menu_hover li").click(function() {
+                var text = $(this).html();
+                $(".dropdown .cate_selected a .title_select").html(text);
+                $(".dropdown ul.menu_hover").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+						    
+            //function getSelectedValue(id) {
+                //return $("#" + id).find(".location_selected a span.value").html();
+            //}
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown .contentEGP").hide();
+            });
+			
+			$(document).ready(function() {
+                $( ".sub-comment-content" ).hide();
+			$( ".aReply" ).click(function() {
+$( ".sub-comment-content" ).slideToggle( "fast", function() {
+// Animation complete.
+});
+});
+});
+
+            //$("#flagSwitcher").click(function() {
+                //$(".dropdown img.flag").toggleClass("flagvisibility");
+            //});		
+        });
+    </script>
+<!--Jquery Vertical menu-->
+<script>
+    $(function () {
+
+        $('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(500, function () {
+
+            });
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(500, function () {
+
+            });
+        });
+
+
+    })
+        </script>
+<!--Jquery Top banner-->
+<link rel="stylesheet" type="text/css" href="Styles/lofslide.css" />
+<script language="javascript" type="text/javascript" src="Scripts/script.js"></script>
+<script type="text/javascript">
+ $(document).ready( function(){	
+		var buttons = { previous:$('#lofslidecontent45 .lof-previous') ,
+						next:$('#lofslidecontent45 .lof-next') };
+						
+		$obj = $('#lofslidecontent45').lofJSidernews( { interval : 4000,
+												direction		: 'opacity',	
+											 	easing			: 'easeInOutQuad',
+												duration		: 1200,
+												auto		 	: true,
+												mainWidth		: 760,
+												buttons			: buttons} );	
+	});
+</script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_index').children('li');					
+
+			
+			$("#tabs_index").tabs("#tabs_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			
+			$("#tabs_detail").tabs("#tabs_detail_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+
+	</script>
+<!--Detail_img-->
+<link rel="stylesheet" type="text/css" href="Styles/jquery.ad-gallery.css">
+<script type="text/javascript" src="Scripts/jquery.ad-gallery.js?rand=390"></script>
+<script type="text/javascript" src="Scripts/common.js"></script>
+<script type="text/javascript" src="Scripts/Galary.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Support-->
+  <div class="support_head"><span class="title_support"></span>
+    <div class="support_bg">     
+                  <p class="optionSupport"> <a href="http://beta.nhommua.com/tp-ho-chi-minh/tro-giup.html">Trợ giúp</a> <a href="javasript:void(0);">Liên hệ với nhómMua</a> </p>
+                  <div class="infoSupport"> <span class="icoSupport"></span>
+                    <p class="hotLine"> <span>08 7305 6615</span><br>
+                      <span>08 7305 6616</span> </p>
+                    <p class="timeSupport">thứ 2 - 6 : từ 8h-17h30</p>
+                    <p class="timeSupport">thứ 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: từ 8h-12h</p>
+                    <span class="icoMail"></span>
+                    <p class="mailSupport">support@nhommua.com</p>
+                    <div class="yahoo"> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a> <a href="ymsgr:sendim?hotro_nhommuahcm2"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=1" style="margin-right:4px"> </a>
+                    <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a>
+                    <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> </div>
+                  </div>
+    </div>
+  </div>
+  <!--End Support-->
+  <div class="social_fixed"><img src="Images/social_network.png" alt="" /></div>
+  <!--Top Page-->
+  <div class="top_page">
+    <div class="top_link">
+      <div class="page_inner">
+        <div class="tab_head">
+          <div class="dropdown">
+            <div class="location_selected"><a href="#"><span class="name_province">Hồ Chí Minh</span><span class="arrow_down1"></span></a></div>
+            <div class="contentEGP dNewCity">
+              <div class="contentNewCity"> <span class="labelPopupTop">Chọn thành phố</span>
+                <p style="border:none;" class="optionSupport"> <a href="#">Hà Nội</a> <a href="#">Hồ Chí Minh</a><a href="#">Đà Nẵng</a> </p>
+              </div>
+            </div>
+          </div>
+          <a href="" class="coop_e">Hợp tác với Esell</a>
+          <!--Toggle Click-->
+          <div id="narrow_by_list">
+            <!--<div class="filter_name" id="popup_support"><span class="title_filter">Hỗ trợ khách hàng <span class="arrow_down1"></span></span>
+              <div class="contentEGP dSupport">
+                <div class="contentSupport"> <span class="labelPopupTop">Hỗ trợ khách hàng</span>
+                  <p class="optionSupport"> <a href="http://beta.nhommua.com/tp-ho-chi-minh/tro-giup.html">Trợ giúp</a> <a href="javasript:void(0);">Liên hệ với nhómMua</a> </p>
+                  <div class="infoSupport"> <span class="icoSupport"></span>
+                    <p class="hotLine"> <span>08 7305 6615</span><br>
+                      <span>08 7305 6616</span> </p>
+                    <p class="timeSupport">thứ 2 - 6 : từ 8h-17h30</p>
+                    <p class="timeSupport">thứ 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: từ 8h-12h</p>
+                    <span class="icoMail"></span>
+                    <p class="mailSupport">support@nhommua.com</p>
+                    <div class="yahoo"> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a> <a href="ymsgr:sendim?hotro_nhommuahcm2"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=1" style="margin-right:4px"> </a>
+                    <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a>
+                    <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+            <div class="filter_name" id="get_email"><span class="title_filter">Nhận giá tốt <span class="arrow_down1"></span></span>
+              <div class="contentEGP">
+                <div class="innnerConnEGP">
+                  <h2>Nhận thông báo qua Email</h2>
+                  <div class="labelEGP"> <span style="width:125px">Chọn thành phố</span> <span>Nhập địa chỉ email</span> </div>
+                  <div class="boxEGP">
+                    <select name="" class="droplist">
+                      <option>Toàn Quốc</option>
+                      <option>Tp.Hồ Chí Minh</option>
+                      <option>Hà Nội</option>
+                    </select>
+                    <input type="text" placeholder="Nhập địa chỉ email của bạn" id="txtEmailGoodDeal_Top" class="iptEGP">
+                    <input type="hidden" value="8" id="hdCityGoodDeal_Top">
+                    <span class="btn_payment"> <a id="aSubmitGoodDeal_Top" href="javascript:void(0);">Gửi</a> </span> </div>
+                  <p id="pAlertGoodDeal_Top" class="email-error"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Toggle Click-->
+        </div>
+        <ul class="top_head_r">
+          <li class="viewLK"> <a id="aPopup_LikeProduct"> <span class="countOD"><i id="countLike">1</i></span> <span class="icoLK"></span> </a>
+            <div id="dLikeProduct_Cont" class="contentEGP">
+              <div class="innerBoxODLK">
+                <p id="pLike_Title" class="titleOD" style="border-bottom: 1px solid rgb(140, 140, 140);">Có 1 sản phẩm được thích</p>
+                <div class="customScrollBox">
+                  <div id="listDealOD" class="listDealOD content">
+                    <div class="dealOD"> <a><img class="img_general" width="53" height="78" alt="GOLDEN LOTUS SPA MASSAGE CLUB" src="http://images.muachungdeals.net/Upload/20635/276x406/GOLDEN-LOTUS-SPA-MASSAGE-CLUB_2013101145221928.jpg"></a>
+                      <div class="detailDealOD"> <a>GOLDEN LOTUS SPA ...</a>
+                        <p>Giá <font style="color:#FF0000;font-weight:700">180.000<sup>đ</sup></font></p>
+                        <p>Đã mua <b>259</b></p>
+                        <div> <span class="btn_payment"> <a href="">Mua</a> </span> <span class="countdownTime">Còn 13 ngày 19 giờ 23 phút</span> </div>
+                        <span onclick="unLikeDeal('like_20635');" class="delDeal"></span> </div>
+                    </div>
+                    <div class="dealOD"> <a><img class="img_general" width="53" height="78" alt="GOLDEN LOTUS SPA MASSAGE CLUB" src="http://images.muachungdeals.net/Upload/20635/276x406/GOLDEN-LOTUS-SPA-MASSAGE-CLUB_2013101145221928.jpg"></a>
+                      <div class="detailDealOD"> <a>GOLDEN LOTUS SPA ...</a>
+                        <p>Giá <font style="color:#FF0000;font-weight:700">180.000<sup>đ</sup></font></p>
+                        <p>Đã mua <b>259</b></p>
+                        <div> <span class="btn_payment"> <a href="">Mua</a> </span> <span class="countdownTime">Còn 13 ngày 19 giờ 23 phút</span> </div>
+                        <span onclick="unLikeDeal('like_20635');" class="delDeal"></span> </div>
+                    </div>
+                  </div>
+                  <div style="display:none" class="dragger_container">
+                    <div class="dragger" style="top: 0px; display: none;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="account member">Thành viên<span class="arrow_down1"></span>
+            <div class="popup_login">              
+                <ul>
+                  <li><a href="">Thông tin cá nhân</a></li>
+                  <li><a href="">Lịch sử mua hàng</a></li>
+                  <li><a href="">Bình luận của tôi</a></li>
+                  <li><a href="">Sản phẩm yêu thích</a></li>
+                  <li><a href="">Đăng xuất</a></li>
+                </ul>
+              </div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="page_inner">
+      <!--#begin Header-->
+      <div class="header"> <a class="logo" href="index.html"><img src="Images/logo_deal.png" alt="" width="140" /></a>
+        <div class="notice"> <a target="_blank" href="http://beta.nhommua.com/tp-ho-chi-minh/thong-bao.html"><span class="notice_icon"></span><b>Thông báo từ Esell</b></a> </div>
+        <div class="info_header">
+          <div class="function_web"><span class="delivery"></span>Thanh toán<br />
+            khi nhận hàng</div>
+          <div class="function_web"><span class="return"></span>Giao hàng<br />
+            toàn quốc</div>
+          <div class="function_web"><span class="payment"></span>Trả hàng<br />
+            trong 7 ngày</div>
+        </div>
+      </div>
+      <!--#end Header-->
+    </div>
+  </div>
+  <!--End Top Page-->
+  <!--Top Main-->
+  <div class="top_main">
+    <div class="page_inner">
+      <div class="tab_cateBg">
+        <div class="title_cate">Danh mục ngành hàng<span class="arrow_down"></span> </div>
+        <!-- Main Menu-->
+        <div class="all_categories">
+          <div class="show_menu">
+            <!--Main Menu-->
+            <ul class="nav_menu">
+              <li class="m_li nob_li"><span class="deal_today"></span><a class="t_menu" href="list_products.html">Deal to day </a></li>
+              <li class="m_li"><span class="tour"></span><a class="t_menu" href="list_products.html">Du lịch & Khách sạn</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Máy đo huyết áp" href="/cat/view/21/may-do-huyet-ap">Nhà hàng & Ẩm thực</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/57/may-do-huyet-ap-dien-tu">Máy đo huyết áp điện tử</a></li>
+                      <li><a href="/cat/view/58/may-do-huyet-ap-co">Máy đo huyết áp cơ</a></li>
+                      <li><a href="/cat/view/59/may-do-huyet-ap-thuy-ngan">Máy đo huyết áp thủy ngân</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy đo đường huyết" href="/cat/view/83/may-do-duong-huyet">Máy đo đường huyết</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/86/may-do-duong-huyet-ca-nhan">Máy đo đường huyết cá nhân</a></li>
+                      <li><a href="/cat/view/143/phu-kien-may-do-duong-huyet">Phụ kiện máy đo đường huyết</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy ánh sáng sinh học" href="/cat/view/89/may-anh-sang-sinh-hoc">Máy ánh sáng sinh học</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy xông mũi họng" href="/cat/view/94/may-xong-mui-hong">Máy xông mũi họng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Nhiệt kế điện tử" href="/cat/view/22/nhiet-ke-dien-tu">Nhiệt kế điện tử</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy massage" href="/cat/view/112/may-massage">Máy massage</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/115/may-massage-vai-co">Máy massage vai cổ</a></li>
+                      <li><a href="/cat/view/116/massage-chan-toan-than">Massage chân, toàn thân</a></li>
+                      <li><a href="/cat/view/117/may-massage-xung-dien">Máy massage xung điện</a></li>
+                      <li><a href="/cat/view/229/may-massage-cam-tay">Máy massage cầm tay</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Ống nghe y tế" href="/cat/view/24/ong-nghe-y-te">Ống nghe y tế</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy theo dõi nhịp tim, bước đi" href="/cat/view/26/may-theo-doi-nhip-tim">Máy theo dõi nhịp tim, bước đi</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Cân điện tử" href="/cat/view/25/can-dien-tu">Cân điện tử</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dụng cụ tai mũi họng" href="/cat/view/165/dung-cu-tai-mui-hong">Dụng cụ tai mũi họng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đèn hồng ngoại" href="/cat/view/91/den-hong-ngoai">Đèn hồng ngoại</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy vật lý trị liệu" href="/cat/view/90/may-vat-ly-tri-lieu">Máy vật lý trị liệu</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy đo nồng độ oxy, điện tim" href="/cat/view/23/may-do-nong-do-oxy-do-dien-tim">Máy đo nồng độ oxy, điện tim</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Vớ Y Khoa" href="/cat/view/227/vo-y-khoa">Vớ Y Khoa</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/phu-quoc-thu-hoi-du-an.png.jpg" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"><span class="restaurant"></span><a class="t_menu" href="/cat/view/51/y-te-chuyen-dung">Nhà hàng & Ẩm thực</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị đo huyết áp" href="/cat/view/108/thiet-bi-do-huyet-ap">Thiết bị đo huyết áp</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/205/may-do-huyet-ap-co">Máy đo huyết áp cơ</a></li>
+                      <li><a href="/cat/view/206/may-do-huyet-ap-thuy-ngan">Máy đo huyết áp thủy ngân</a></li>
+                      <li><a href="/cat/view/207/huyet-ap-phong-kham-benh-vien">Huyết áp phòng khám, bệnh viện</a></li>
+                      <li><a href="/cat/view/208/huyet-ap-tu-chi-thiet-bi-hieu-chinh">Huyết áp tứ chi, thiết bị hiệu chỉnh</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Ống nghe bác sĩ" href="/cat/view/109/ong-nghe-bac-si">Ống nghe bác sĩ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy siêu âm" href="/cat/view/105/may-sieu-am">Máy siêu âm</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy điện tâm đồ" href="/cat/view/107/may-dien-tam-do">Máy điện tâm đồ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy tạo oxy" href="/cat/view/232/may-tao-oxy">Máy tạo oxy</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Màn hình theo dõi bệnh nhân" href="/cat/view/157/man-hinh-theo-doi-benh-nhan">Màn hình theo dõi bệnh nhân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dụng cụ y khoa khác" href="/cat/view/110/dung-cu-y-khoa-khac">Dụng cụ y khoa khác</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị nhi khoa" href="/cat/view/96/thiet-bi-nhi-khoa">Thiết bị nhi khoa</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị xét nghiệm y tế" href="/cat/view/61/thiet-bi-xet-nghiem-y-te">Thiết bị xét nghiệm y tế</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/101/may-xet-nghiem-sinh-hoa">Máy xét nghiệm sinh hóa</a></li>
+                      <li><a href="/cat/view/102/may-xet-nghiem-hoa-hoc">Máy xét nghiệm hóa học</a></li>
+                      <li><a href="/cat/view/103/may-xet-nghiem-nuoc-tieu">Máy xét nghiệm nước tiểu</a></li>
+                      <li><a href="/cat/view/104/may-xet-nghiem-dien-giai">Máy xét nghiệm điện giải</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy X-Quang" href="/cat/view/106/may-xquang">Máy X-Quang</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị phòng mổ" href="/cat/view/97/thiet-bi-phong-mo">Thiết bị phòng mổ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị sản phụ khoa" href="/cat/view/95/thiet-bi-san-phu-khoa">Thiết bị sản phụ khoa</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Vật tư tiêu hao y tế" href="/cat/view/62/vat-tu-tieu-hao-y-te">Vật tư tiêu hao y tế</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/98/xe-lan">Xe lăn</a></li>
+                      <li><a href="/cat/view/99/ghe--dung-cu-tap-di">Ghế - dụng cụ tập đi</a></li>
+                      <li><a href="/cat/view/100/dai--nep-vai">Đai - nẹp vải</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/am-thuc.png" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"><span class="fashion"></span><a class="t_menu" href="/cat/view/52/the-duc-the-thao">Thời trang</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị theo dõi tập luyện" href="/cat/view/210/thiet-bi-theo-doi-tap-luyen">Thiết bị theo dõi tập luyện</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy chạy bộ" href="/cat/view/209/may-chay-bo">Máy chạy bộ</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/187/may-chay-bo-dien">Máy chạy bộ điện</a></li>
+                      <li><a href="/cat/view/188/may-chay-bo-co">Máy chạy bộ cơ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy tập bụng" href="/cat/view/147/may-tap-bung">Máy tập bụng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Cơ thể cân đối và thẩm mỹ" href="/cat/view/185/co-the-can-doi-va-tham-my">Cơ thể cân đối và thẩm mỹ</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/146/may-rung-lac">Máy rung lắc</a></li>
+                      <li><a href="/cat/view/192/may-massage-tham-my">Máy massage thẩm mỹ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dụng cụ tập luyện" href="/cat/view/195/dung-cu-tap-the-hinh">Dụng cụ tập luyện</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Tập luyện" href="/cat/view/123/may-tap-the-duc">Tập luyện</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/186/tham-tap-the-duc">Thảm tập thể dục</a></li>
+                      <li><a href="/cat/view/189/may-stepper">Máy Stepper</a></li>
+                      <li><a href="/cat/view/190/may-tap-leo-nui">Máy tập leo núi</a></li>
+                      <li><a href="/cat/view/191/xe-dap-tap-the-duc">Xe đạp tập</a></li>
+                      <li><a href="/cat/view/193/phu-kien-bao-ve">Phụ kiện bảo vệ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/ads_middle02.jpg" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"><span class="health"></span><a class="t_menu" href="/cat/view/54/cham-soc-sac-dep">Sức khỏe & Làm đẹp</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Máy massage mặt" href="/cat/view/111/may-massage-mat">Máy massage mặt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy xông mặt" href="/cat/view/228/may-xong-mat">Máy xông mặt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm làm đẹp khác" href="/cat/view/114/san-pham-lam-dep-khac">Sản phẩm làm đẹp khác</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/banner_slide_05.jpg" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"><span class="shopping"></span><a class="t_menu" href="/cat/view/55/do-dung-me-va-be">Mua sắm</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Đồ cho bé bú" href="/cat/view/196/do-cho-be-bu">Đồ cho bé bú</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/197/binh-sua">Bình sữa</a></li>
+                      <li><a href="/cat/view/198/num-vu">Núm vú</a></li>
+                      <li><a href="/cat/view/199/ty-ngam">Ty ngậm</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ dùng cho bé ăn uống" href="/cat/view/225/do-cho-be-an-uong">Đồ dùng cho bé ăn uống</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/162/may-hut-sua">Máy hút sữa mẹ</a></li>
+                      <li><a href="/cat/view/163/may-xay-thuc-an">Máy xay thức ăn</a></li>
+                      <li><a href="/cat/view/226/may-ham-va-giu-am-sua">Máy hâm và giữ ấm sữa</a></li>
+                      <li><a href="/cat/view/161/may-tiet-trung">Máy tiệt trùng bình sữa</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Ghế ăn bột" href="/cat/view/160/ghe-an-bot">Ghế ăn bột</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ chăm sóc sức khỏe" href="/cat/view/200/do-cham-soc-suc-khoe-cho-be">Đồ chăm sóc sức khỏe</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ cho bé đi chơi" href="/cat/view/151/do-cho-be-di-choi">Đồ cho bé đi chơi</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/203/xe-day-em-be">Xe đẩy em bé</a></li>
+                      <li><a href="/cat/view/204/diu-em-be">Địu em bé</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ cho bé ngủ" href="/cat/view/152/do-cho-be-ngu">Đồ cho bé ngủ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ dùng cho mẹ" href="/cat/view/201/do-dung-cho-me">Đồ dùng cho mẹ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ dùng khác" href="/cat/view/202/do-dung-khac">Đồ dùng khác</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/banner_slide_02.jpg" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"><span class="services"></span><a class="t_menu" href="/cat/view/56/thuc-pham-dinh-duong">Dịch vụ</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Vitamin bổ sung dưỡng chất" href="/cat/view/127/vitamin-bo-sung-duong-chat">Vitamin bổ sung dưỡng chất</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/176/vitamin">Vitamin</a></li>
+                      <li><a href="/cat/view/177/phuc-hoi-xuong-khop">Phục hồi xương khớp</a></li>
+                      <li><a href="/cat/view/179/suc-khoe-tinh-than">Sức khỏe tinh thần</a></li>
+                      <li><a href="/cat/view/180/tang-cuong-thi-luc">Tăng cường thị lực</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm làm từ Sâm" href="/cat/view/214/san-pham-lam-tu-sam">Sản phẩm làm từ Sâm</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/218/nhan-sam">Nhân Sâm</a></li>
+                      <li><a href="/cat/view/219/hong-sam">Hồng Sâm</a></li>
+                      <li><a href="/cat/view/224/san-pham-sam-khac">Sản phẩm Sâm khác</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm làm từ Nấm" href="/cat/view/216/san-pham-lam-tu-nam">Sản phẩm làm từ Nấm</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Cao" href="/cat/view/215/cao">Cao</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm dành cho nữ" href="/cat/view/169/san-pham-danh-cho-nu">Sản phẩm dành cho nữ</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/181/thuc-pham-cham-soc-da-collagen">Thực phẩm collagen</a></li>
+                      <li><a href="/cat/view/182/sinh-ly-nu">Sinh lý nữ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm dành cho nam" href="/cat/view/170/san-pham-danh-cho-nam">Sản phẩm dành cho nam</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/183/tang-cuong-sinh-ly-nam">Tăng cường sinh lý nam</a></li>
+                      <li><a href="/cat/view/184/cac-loai-ruou-thuoc">Các loại rượu thuốc</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thực phẩm tăng cân, giảm cân" href="/cat/view/171/thuc-pham-tang-can-giam-can">Thực phẩm tăng cân, giảm cân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Trà" href="/cat/view/174/tra">Trà</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Yến Sào" href="/cat/view/217/yen-sao">Yến Sào</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dinh dưỡng thể thao" href="/cat/view/172/dinh-duong-the-thao">Dinh dưỡng thể thao</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/dien-tu.png" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"><span class="hisdeal"></span><a class="t_menu" href="/cat/view/126/cham-soc-ca-nhan">Giá tốt gần đây</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc răng" href="/cat/view/138/cham-soc-rang">Chăm sóc răng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc mắt" href="/cat/view/139/cham-soc-mat">Chăm sóc mắt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc tóc" href="/cat/view/140/cham-soc-toc">Chăm sóc tóc</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc chân" href="/cat/view/141/cham-soc-chan">Chăm sóc chân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Main Menu-->
+      </div>
+      <!--Search Tool-->
+      <div class="search_tool">
+        <div class="all_cate">
+          <div class="dropdown">
+            <div class="cate_selected"><a href="#"><span class="title_select">Tất cả</span><span class="arrow_down1"></span></a></div>
+            <ul class="menu_hover">
+              <li class=""><a href="/thoi-trang-quan-ao-gia-re_c56.html">Thời trang</a></li>
+              <li class=""><a href="/phu-kien-thoi-trang_c69.html">Phụ kiện thời trang</a></li>
+              <li class=""><a href="/nha-hang-quan-an-gia-re_c53.html">Nhà hàng - Ẩm thực</a></li>
+              <li class=""><a href="/lam-dep-da_c54.html">Sức khỏe - Làm đẹp</a></li>
+              <li class=""><a href="/du-lich-khach-san-resort-gia-re_c52.html">Du lịch - Khách sạn</a></li>
+              <li class=""><a href="/giai-tri-dao-tao_c55.html">Giải trí - Đào tạo</a></li>
+              <li class=""><a href="/gia-dung-noi-that_c57.html">Gia dụng - Nội thất</a></li>
+              <li class=""><a href="/dien-tu-cong-nghe_c59.html">Điện tử - Công nghệ</a></li>
+              <li class="end"><a href="/cham-soc-me-va-be_c68.html">Mẹ và Bé</a></li>
+            </ul>
+          </div>
+        </div>
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <a href="" class="submitSearch"><span class="icon_search"></span></a> </div>
+      <!--Search Tool-->
+      <div class="cart"><a href="cart.html" class="icon_cart"><span>0</span>Giỏ hàng</a></div>
+    </div>
+  </div>
+  <!--End Top Main-->
+  <div class="page">
+    <!--Path-->
+    <div class="current_path"><a href="index.html" class="aHome"></a><span class="spSeperator"></span>
+      <p><a href="list_products.html">Nhà hàng - Ẩm thực</a></p>
+      <span class="spSeperator"></span>
+      <p><a href="list_products.html">Nhà hàng</a></p>
+    </div>
+    <!--End Path--->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_side">
+        <!--Tab-->
+        <div class="box">
+          <div class="box_content">
+            <div id="gallery" class="ad-gallery">
+              <div class="ad-image-wrapper"> </div>
+              <div class="ad-nav">
+                <div class="ad-thumbs">
+                  <ul class="ad-thumb-list">
+                    <li> <a href="Images/product_dt01_600.jpg"> <img src="Images/product_dt01_600.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+                    <li> <a href="Images/product_dt02_600.jpg"> <img src="Images/product_dt02_600.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+                    <li> <a href="Images/product_dt03_600.jpg"> <img src="Images/product_dt03_600.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+                    <li> <a href="Images/product_dt04_600.jpg"> <img src="Images/product_dt04_600.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+                    <li> <a href="Images/product_dt01_600.jpg"> <img src="Images/product_dt01_600.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+                  </ul>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="nav" style="background: none">
+            <ul id="tabs_detail">
+              <li><a class="current" href="#" title="Thông tin">Thông tin</a></li>
+              <li><a href="#" title="Điều kện">Điều kện</a></li>
+              <li><a href="#" title="Điểm nổi bật">Điểm nổi bật</a></li>
+              <li><a href="#" title="Địa chỉ áp dụng">Địa chỉ áp dụng</a></li>
+              <li><a href="#" title="Bình luận">Bình luận</a></li>
+            </ul>
+          </div>
+          <div id="tabs_detail_content">
+            <div class="section">
+              <p>Nhắc đến chuỗi nhà hàng hàng cao cấp thuộc tập đoàn danh tiếng   Khaisilk, ắt hẳn bạn sẽ nghĩ ngay đến một không gian nhà hàng tráng lệ,   đẳng cấp cùng vô số những món ngon hảo hạng, thơm ngon, là ước muốn được   đặt chân đến của biết bao thực khách. Đến với deal lần này, đó sẽ không   còn là điều khó thực hiện bởi chỉ với 199.000 đồng từ Hotdeal, bạn đã   có cơ hội thưởng thức bữa tiệc buffet hoành tráng tại Nhà hàng Khaisilk -   Banian Tree – tọa lạc ngay tầng 1 của tòa nhà River Garden, phường Thảo   Điền, quận 2.</p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/25-07-2013/bbq%20sushi/32241_body_11.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/25-07-2013/bbq%20sushi/32241_body_4.1.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/27-07-2013/ao%20len%20min/untitled%20folder/32241_body_16.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p>Bữa tiệc buffet tối tại Banian Tree quy tụ trên 40 món ngon gồm chủ   yếu là các món nướng thơm phức, đậm đà cùng các loại sushi mang đậm   phong cách Nhật. Không chỉ hấp dẫn về hương vị món, chỉ bằng khứu giác   cảm nhận và đôi mắt chiêm ngưỡng, bạn đã không thể giấu nổi cảm xúc muốn   thưởng thức ngay. Các món được đầu tư công phu về hương vị, thành phần   món cùng cách bày trí đẹp mắt, chắc chắn sẽ chinh phục được bất cứ ai   khi đến thưởng thức bữa tiệc đẳng cấp này.</p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/25-07-2013/bbq%20sushi/32241_body_2.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/25-07-2013/bbq%20sushi/32241_body_4.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p>Mở màn cho bữa tiệc buffet tối, bạn có thể lựa chọn cho mình các món   Wakame Salad, Green Salad hay các loại súp mang hương vị dịu nhẹ. Tiếp   đến bạn sẽ không thể bỏ qua thực đơn hải sản nướng thơm phức bao gồm:   ếch nước sa tế, mực nướng sa tế, bạch tuộc nướng muối ớt, cá trứng Nhật   Bản nướng muối ớt… được tẩm ướp gia vị vô cùng vừa miệng. Bên cạnh đó,   thực đơn BBQ còn có thêm các loại rau củ tươi ngon như: cà tím, đậu bắp   nướng, tỏi cho bạn thưởng thức chung với các loại hải sản để có cảm giác   ăn thật nhiều nhưng vẫn không thấy ngán.</p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/11-10-2013/SPA%20SECRETS/untitled%20folder/40914_bosung_2.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="500" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/25-07-2013/bbq%20sushi/32241_body_6.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p>Đến với bữa tiệc buffet lần này tại Banian Tree, thực đơn sushi gồm   14 món cũng sẽ là cơ hội để bạn khám phá một trong những nét đặc trưng   của ẩm thực xứ sở phù tang. Từng cuộn sushi nhỏ xinh được xắp đặt tinh   tế, chỉ mới nhìn thôi bạn đã cảm thấy vô cùng thích thú và thèm thuồng.   Kết thúc bữa tiệc, các loại chè, trái cây sẽ để lại cho bạn những ấn   tượng thật khó phai.</p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/25-07-2013/bbq%20sushi/32241_body_7.1.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/25-07-2013/bbq%20sushi/32241_body_7.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/27-07-2013/ao%20len%20min/untitled%20folder/32241_body_20.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/11-10-2013/SPA%20SECRETS/untitled%20folder/40914_bosung_1.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="500" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/27-07-2013/ao%20len%20min/untitled%20folder/32241_body_22.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><em><strong>Về Nhà hàng Khaisilk - Banian Tree</strong></em></p>
+              <p>Kết hợp giữa nét hiện đại trong kiến trúc và tinh hoa nghệ thuật   truyền thống trong bày trí nội thất, Khaisilk - Banian Tree mang đậm   dáng dấp của một nhà hàng Việt Nam đương đại. Ngắm nhìn Khaisilk -   Banian Tree, người ta cảm nhận được một niềm đam mê sưu tập đồ cổ của   gia chủ. Này là bức phù điêu Chăm trầm mặc - liễn đối chứa ý tưởng nhân   sinh quan; gương cổ chạm nổi hình rồng nhẵn bóng và ẩn hiện sau tủ kính   là những đồng tiền xu, đĩa tráng men ngọc cổ kính hiếm thấy. Bước vào   Khaisilk - Banian Tree, bạn có thể bắt gặp đâu đó hình ảnh của đóa sen   hồng – linh hồn xứ Việt, mang đến cảm giác gần gũi và thân quen, như lạc   vào chốn đồng quê yên ả.</p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/29-07-2013/GOI%20HAPPY%20LIFE/untitled%20folder/32241_body_24.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p>Đến với nhà hàng Khaisilk - Banian Tree, thực khách dễ dàng tìm thấy   tinh hoa ẩm thực Việt được gói ghém trong những món ăn vốn được xem là   đặc sản của các vùng miền trong cả nước. Món ăn không chỉ thơm ngon, hấp   dẫn mà cách bày trí khéo léo của đầu bếp trứ danh tại nhà hàng cũng   khiến bạn không thể dừng đũa được. Thực đơn phong phú, đa dạng, giá cả   hợp lý, đội ngũ nhân viên phục vụ ân cần, nhiệt tình, chu đáo, Banian   Tree xứng đáng là điểm hẹn cuối tuần tuyệt vời dành cho bạn cùng bạn bè,   người thân.</p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/29-07-2013/GOI%20HAPPY%20LIFE/untitled%20folder/32241_body_25.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/29-07-2013/GOI%20HAPPY%20LIFE/untitled%20folder/32241_body_26.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="460" width="600" /></p>
+              <p> </p>
+              <p><img src="http://images.hotdeals.vn/images/11-10-2013/SPA%20SECRETS/untitled%20folder/40914_bosung_3.jpg" alt="KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema" height="500" width="600" /></p>
+              <p> </p>
+              <p><em><strong>Cơ hội hiếm có để tận hưởng bữa tiệc buffet sang trọng và đẳng cấp tại Nhà hàng Khaisilk -</strong></em> <em><strong>Banian Tree. Click MUA ngay thôi!</strong></em></p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="section">
+              <p>- Hotdeal giao voucher đến tận tay khách hàng.</p>
+              <p>- Thời hạn sử dụng voucher: 09/12/2013</p>
+              <p>- Địa điểm sử dụng voucher: <strong>Nhà Hàng Banian Tree</strong> - 170 Nguyễn Văn Hưởng, Phường Thảo Điền, Quận 2, Hồ Chí Minh, Việt Nam</p>
+              <p><strong>- Áp dụng cho KhaiSilk- buffet BBQ thịt nướng và sushi nhà hàng Banian tree (Không bao gồm nước uống và khăn).</strong></p>
+              <p><strong>- Áp dụng từ  18h00 - 22h00 thứ 6, 7 và Chủ nhật (trừ ngày lễ)</strong></p>
+              <p><strong>- Tặng 1 vé xem phim tại lâu đài Tajmasago trị giá 80.000 VNĐ.</strong></p>
+              <p><strong>- Áp dụng cho ăn tại chỗ, không áp dụng cho mang về. Không mang đồ ăn thức uống riêng vào nhà hàng.</strong></p>
+              <p>+ Trẻ em trên 1,2 m: Tính như người lớn.</p>
+              <p>+ Từ 0,9m - 1,2 m: phụ thu 100.000 đồng/bé. 2 bé được sử dụng 1 voucher.</p>
+              <p>+ Dưới 0,9 m: bé được miễn phí. Bé thứ 02 trở lên phụ thu 100.000 đồng/bé.       </p>
+              <p><strong>- Nhà Hàng Khaisilk - Banian Tree chịu trách nhiệm xuất hóa   đơn tài chính khi khách hàng yêu cầu. Chưa bao gồm 7% phí phục vụ trên   trị giá 199.000 VNĐ, Nhà hàng luôn tính 7% phí phục vụ khi ra bill.</strong></p>
+              <p>- Khách hàng liên hệ đặt chỗ trước 1 ngày. Hotline số: (08) 6683 5309, 0937770669</p>
+              <p>- Một khách hàng được mua nhiều phiếu.</p>
+              <p><strong>- Sử dụng 01 Voucher/người.  Không bù tiền.</strong></p>
+              <p>- Không áp dụng đồng thời với các chương trình khuyến mãi khác.</p>
+              <p>- Phiếu không có giá trị quy đổi thành tiền mặt, không trả lại tiền thừa.</p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="section">
+              <p>- Hệ thống nhà hàng Khaisilk tọa lạc ngay tầng 1   của tòa nhà River Garden, Thảo Điền, Q.2 - là hệ thống chuỗi nhà hàng   sang trọng, đẳng cấp với những món ăn vừa ngon miệng vừa đẹp mắt.</p>
+              <p>- Nhà hàng Khaisilk - Banian Tree - Quán Ăn Việt   theo phong cách Việt Nam, thực đơn ba miền, đậm đà bản sắc dân tộc với   cách trang trí độc đáo.</p>
+              <p><strong>- Voucher áp dụng cho Buffet BBQ và sushi tại Nhà hàng Khaisilk - Banian Tree gồm trên 40 món thơm ngon, hảo hạng.</strong></p>
+              <p>- Thực phẩm tươi ngon, được chọn lọc kỹ lưỡng, đảm bảo vệ sinh an toàn.</p>
+              <p>- Đầu bếp chuyên nghiệp, nhiều năm kinh nghiệm.</p>
+              <p>- Đội ngũ nhân viên phục vụ nhiệt tình, ân cần, chu đáo.</p>
+              <p>- Có bãi đậu xe dưới tầng hầm của tòa nhà.</p>
+              <p>- <strong>Đặc biệt, nhà hàng có chương trình giờ   vàng giảm giá bia Tiger, bia Budweiser và rượu vang ngoại của ChiLê   dành riêng cho khách hàng sử dụng voucher buffet. (Bia Tiger draught :   19.000 VNĐ/1 ly, bia Budweiser nhập khẩu từ Mỹ : 30.000 VNĐ/1 chai, rượu   vang: 35.000 VNĐ/ly)</strong></p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="section">
+              <div>
+                <h1> KhaiSilk- Buffet BBQ Thịt Nướng &amp; Sushi + Cinema</h1>
+              </div>
+              <div>199.000đ</div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="section">
+              <div class="inner-comment">
+                <div class="write-comment">
+                  <p>Viết lời bình <span>(Mỗi ngày từ 21h đến 7h chức năng bình luận sẽ bị khoá)</span></p>
+                  <span class="spanArea">
+                  <textarea placeholder="Bình luận của bạn" id="txtCommentDeal_20908" class="textareaCM"></textarea>
+                  </span> <a href="" class="btn_send">Viết bình luận</a> </div>
+              </div>
+              <div class="dList-comment" id="dCommentList">
+                <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="comment-content">
+                  <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img class="img_general" width="47" height="47" alt="hangnguyen2912 tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/1.jpg"> </a>
+                    <p class="user-info vip-close"> <a href="javascript:void(0);" itemprop="author">hangnguyen2912</a> - <em>Khách thân thiết</em><br>
+                      <span content="04:21PM - 25/10/2013" itemprop="datePublished">04:21PM - 25/10/2013</span> </p>
+                  </div>
+                  <div class="inner-content-cm">
+                    <p itemprop="description">NM chuyển sang giao VC cho mình được không ? Giúp mình giao Voucher vào chiều thứ 2, tại địa chỉ số 22 ngõ 12 Láng Hạ nhé</p>
+                  </div>
+                  <div class="title-idea"> <a href="javascript:void(0)" class="aReply">Trả lời (1)</a> </div>
+                </div>
+                <div class="sub-comment-content">
+                  <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="subCM-content">
+                    <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img width="47" height="47" alt="NhomMua tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/user/101450/101450.jpg"><em class="title-avatar nhommua"></em> </a>
+                      <p class="user-info no-vip"> <a href="javascript:void(0);" itemprop="author">NhomMua</a><br>
+                        <span content="03:47PM - 26/10/2013" itemprop="datePublished">03:47PM - 26/10/2013</span> </p>
+                    </div>
+                    <div class="inner-content-cm">
+                      <p itemprop="description">Chào bạn tuanthu_2203: Đối với deal này bạn có thể mua nhiều loại bánh với số lượng tùy thích. Nếu hóa đơn của bạn có giá trị lớn hơn giá trị voucher thì bạn vui lòng thanh toán thêm khoản vượt trội nhé. Thân</p>
+                    </div>
+                  </div>
+                  <div class="write-sub-comment">
+                    <textarea placeholder="Viết bình luận" id="txtSubComment_329557" class="textareaCM textareaSubCM"></textarea>
+                    <a href="" class="btn_send">Viết bình luận</a></div>
+                </div>
+                <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="comment-content">
+                  <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img class="img_general" width="47" height="47" alt="tinker tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/7.jpg"> </a>
+                    <p class="user-info vip-close"> <a href="javascript:void(0);" itemprop="author">tinker</a> - <em>Khách thân thiết</em><br>
+                      <span content="09:59AM - 25/10/2013" itemprop="datePublished">09:59AM - 25/10/2013</span> </p>
+                  </div>
+                  <div class="inner-content-cm">
+                    <p itemprop="description">Cua hang ui cho e hoi la moi banh minh chon 1 cai dc k? Nhug ai an roi cho e biet banh nao la ngon zay ah?</p>
+                  </div>
+                  <div class="title-idea"> <a href="javascript:void(0)" id="aShowSub_329446" class="aReply">Trả lời (3)</a> </div>
+                </div>
+                <div class="sub-comment-content">
+                  <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="subCM-content">
+                    <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img width="47" height="47" alt="NhomMua tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/user/101450/101450.jpg"><em class="title-avatar nhommua"></em> </a>
+                      <p class="user-info no-vip"> <a href="javascript:void(0);" itemprop="author">NhomMua</a><br>
+                        <span content="03:47PM - 26/10/2013" itemprop="datePublished">03:47PM - 26/10/2013</span> </p>
+                    </div>
+                    <div class="inner-content-cm">
+                      <p itemprop="description">Chào bạn tuanthu_2203: Đối với deal này bạn có thể mua nhiều loại bánh với số lượng tùy thích. Nếu hóa đơn của bạn có giá trị lớn hơn giá trị voucher thì bạn vui lòng thanh toán thêm khoản vượt trội nhé. Thân</p>
+                    </div>
+                  </div>
+                  <div class="write-sub-comment">
+                    <textarea placeholder="Viết bình luận" id="txtSubComment_329557" class="textareaCM textareaSubCM"></textarea>
+                    <a href="" class="btn_send">Viết bình luận</a></div>
+                </div>
+                <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="comment-content">
+                  <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img class="img_general" width="47" height="47" alt="Hangphan16 tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/5.jpg"> </a>
+                    <p class="user-info vip-close"> <a href="javascript:void(0);" itemprop="author">Hangphan16</a> - <em>Khách thân thiết</em><br>
+                      <span content="09:22AM - 25/10/2013" itemprop="datePublished">09:22AM - 25/10/2013</span> </p>
+                  </div>
+                  <div class="inner-content-cm">
+                    <p itemprop="description">Mình mới m...đã chuyển với lý do <strong style="color:#FF9933;font-size:16px;font-weight:bold;">"Chuyển qua bộ phận xử lý"</strong></p>
+                  </div>
+                  <div class="title-idea"> <a href="javascript:void(0)" id="aShowSub_329440" class="aReply">Trả lời (3)</a> </div>
+                </div>
+                <div class="sub-comment-content">
+                  <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="subCM-content">
+                    <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img width="47" height="47" alt="NhomMua tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/user/101450/101450.jpg"><em class="title-avatar nhommua"></em> </a>
+                      <p class="user-info no-vip"> <a href="javascript:void(0);" itemprop="author">NhomMua</a><br>
+                        <span content="03:47PM - 26/10/2013" itemprop="datePublished">03:47PM - 26/10/2013</span> </p>
+                    </div>
+                    <div class="inner-content-cm">
+                      <p itemprop="description">Chào bạn tuanthu_2203: Đối với deal này bạn có thể mua nhiều loại bánh với số lượng tùy thích. Nếu hóa đơn của bạn có giá trị lớn hơn giá trị voucher thì bạn vui lòng thanh toán thêm khoản vượt trội nhé. Thân</p>
+                    </div>
+                  </div>
+                  <div class="write-sub-comment">
+                    <textarea placeholder="Viết bình luận" id="txtSubComment_329557" class="textareaCM textareaSubCM"></textarea>
+                    <a href="" class="btn_send">Viết bình luận</a></div>
+                </div>
+                <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="comment-content">
+                  <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img class="img_general" width="47" height="47" alt="DaoLeThuyDung tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/user/580592/580592.jpg"> </a>
+                    <p class="user-info vip-close"> <a href="javascript:void(0);" itemprop="author">DaoLeThuyDung</a> - <em>Khách thân thiết</em><br>
+                      <span content="03:01PM - 24/10/2013" itemprop="datePublished">03:01PM - 24/10/2013</span> </p>
+                  </div>
+                  <div class="inner-content-cm">
+                    <p itemprop="description">Mình vừa đặt mua 4 voucher, Nhóm mua vui lòng mai giao cho minh được ko (từ 9g - 16g). Thanks!</p>
+                  </div>
+                  <div class="title-idea"> <a href="javascript:void(0)" id="aShowSub_329403" class="aReply">Trả lời (3)</a> </div>
+                </div>
+                <div class="sub-comment-content">
+                  <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="subCM-content">
+                    <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img width="47" height="47" alt="NhomMua tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/user/101450/101450.jpg"><em class="title-avatar nhommua"></em> </a>
+                      <p class="user-info no-vip"> <a href="javascript:void(0);" itemprop="author">NhomMua</a><br>
+                        <span content="03:47PM - 26/10/2013" itemprop="datePublished">03:47PM - 26/10/2013</span> </p>
+                    </div>
+                    <div class="inner-content-cm">
+                      <p itemprop="description">Chào bạn tuanthu_2203: Đối với deal này bạn có thể mua nhiều loại bánh với số lượng tùy thích. Nếu hóa đơn của bạn có giá trị lớn hơn giá trị voucher thì bạn vui lòng thanh toán thêm khoản vượt trội nhé. Thân</p>
+                    </div>
+                  </div>
+                  <div class="write-sub-comment">
+                    <textarea placeholder="Viết bình luận" id="txtSubComment_329557" class="textareaCM textareaSubCM"></textarea>
+                    <a href="" class="btn_send">Viết bình luận</a></div>
+                </div>
+                <div itemtype="http://schema.org/Review" itemscope="" itemprop="review" class="comment-content">
+                  <div class="profile-info"> <a href="javascript:void(0);" class="avatar-user"> <img class="img_general" width="47" height="47" alt="DaoLeThuyDung tại nhómMua" src="http://image.nhommua.com/Profiles/avatar/user/580592/580592.jpg"> </a>
+                    <p class="user-info vip-close"> <a href="javascript:void(0);" itemprop="author">DaoLeThuyDung</a> - <em>Khách thân thiết</em><br>
+                      <span content="02:36PM - 24/10/2013" itemprop="datePublished">02:36PM - 24/10/2013</span> </p>
+                  </div>
+                  <div class="inner-content-cm">
+                    <p itemprop="description">NM cho tôi hỏi, nếu tôi mua 4 voucher neu mua toi chi dc su dung 2 roi nguoi khac mua dum hả?</p>
+                  </div>
+                  <div class="title-idea"> <a href="javascript:void(0)" id="aShowSub_329401" class="aReply">Trả lời (1)</a> </div>
+                </div>
+                <div class="sub-comment-content"id="dSubCommentCont_329401"></div>
+                <div class="dvPaging">
+                  <div class="pagingOD">
+                    <p style="text-align:center"> <i>Trang:</i><span>1</span><a id="aCommentPage_20908_2" href="javascript:void(0);">2</a><a id="aCommentPage_20908_3" href="javascript:void(0);">3</a><a id="aCommentPage_20908_4" href="javascript:void(0);">4</a><a id="aCommentPage_20908_5" href="javascript:void(0);">5</a><a id="aCommentPage_20908_2" href="javascript:void(0);" class="btn-next">►</a> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Tab-->
+        <!--Box Buy Bottom-->
+        <div class="box_buyB">
+          <h2 class="title_buyB">KHAISILK-BUFFET BBQ THỊT NƯỚNG & SUSHI + CINEMA</h2>
+          <div class="percent_save">
+            <p> <del>860.000 đ</del> <span class="percent">[-42%]</span> </p>
+            <span class="price_bt">499.000 <sub>đ</sub></span></div>
+          <div class="btn_botDetail"><a class="btn_detail" href="">MUA</a>
+            <p>Vẫn còn mua được</p>
+          </div>
+        </div>
+        <!--End Box Buy Bottom-->
+        <!--The same Products-->
+        <div class="box">
+          <div class="other_pro">Sản phẩm tương tự</div>
+          <div id="slider_hoz">
+            <ul id="mycarousel" class="jcarousel-skin-tango">
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+                </a></li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+                </a></li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="product">
+                  <div class="product_inner">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="120" /></a></div>
+                    <a class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></a>
+                    <div class="product_name"><a href="detail_products.html">BUFFET TỐI SAMBA BRAZILIAN STEAK HOUSE BRAZILIAN STEAK HOUSE</a></div>
+                  </div>
+                  <div class="info_price"><span class="price">399 000 đ</span><span class="f_price">630 000 đ</span></div>
+                </div>
+                <!--End Product-->
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- End The same Products-->
+      </div>
+      <!--End Left Column--->
+      <!--Right Column-->
+      <div class="right_side">
+        <!--Box Info Detail-->
+        <div class="box">
+          <div class="box_content">
+            <div class="titleDeal"><span>KHAISILK-BUFFET BBQ THỊT NƯỚNG & SUSHI + CINEMA BBQ SUSHI + CINEMA BBQ</span></div>
+            <p class="short_des floatl">Thưởng thức tiệc buffet BBQ tối hoành tráng trong không gian sang trọng giá ưu đãi, giảm 67% cho khách hàng Esell</p>
+            <div class="info_dt_price floatl">
+              <p class="dt_price"><del>399 000 đ</del></p>
+              <p class="dt_f_price">630 000<span class="dvt">đ</span></p>
+              <div class="multip_quantity">x
+                <select id="PAID_0">
+                  <option selected="selected" value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <div class="info_dt_buy floatl"><span class="save">60%</span> <span class="count_buy">đã mua: <b>20</b></span> <span class="status_buy">Vẫn còn
+              mua được</span></div>
+            <div class="info_dt_payment floatl">
+              <p>Tổng số tiền:<br />
+                <span class="dt_price">199 000</span> <span class="dvt">đ</span></p>
+              <a class="btn_detail" href="" style="width: 100px">MUA</a> </div>
+            <div class="time_deal floatl">
+              <p class="first"><span class="dvt">10</span><br />
+                ngày</p>
+              <p><span class="dvt">12</span><br />
+                giờ</p>
+              <p><span class="dvt">39</span><br />
+                phút</p>
+              <p><span class="dvt">50</span><br />
+                giây</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Box Info Detail-->
+        <!--Box the same category products-->
+        <div class="box">
+          <div class="title_thesame_cate">Sản phẩm cùng danh mục</div>
+          <div class="box_content" id="thesame_cate_p">
+            <ul>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span> <span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="120" height="80" class="img_general" /></a>
+                <div class="product_name"><a href="detail_products.html">Lẩu Yến + Nước Yến bổ dưỡng - Yến Sào Saigon </a></div>
+                <div class="info_price"><span class="f_price">630 000 đ</span><span class="price">399 000 đ</span>
+                  <div class="deliver_icon"><span class="countBuy"></span>Đã mua: <b>300</b></div>
+                </div>
+                <!--End Product-->
+              </li>
+            </ul>
+            <a href="" class="view_more"><span class="icon_db_arrow"></span>Xem thêm</a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Box the same category products-->
+      </div>
+      <!--End Right Column--->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!--Footer-->
+  <div class="footer">
+    <div class="topmenu_footer">
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Thông tin</a></h2>
+          <div class="listMenuFooter"><a href="">Giới thiệu về chúng tôi</a><a href="">Câu hỏi thường gặp</a><a href="">Tuyển dụng</a><a href="">Quy chế sàn giao dịch</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter custom_care">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Chăm sóc khách hàng</a></h2>
+          <p>Hotline: <span class="hotln">0918 856 738</span></p>
+          <p class="f_cc"><strong>Thứ 2-6</strong><br />
+            từ 8:00 - 17:30</p>
+          <p class="f_cc"><strong>Thứ 7</strong><br />
+            từ 8:00 - 12:00 </p>
+        </div>
+      </div>
+      <div class="col_menuFooter f_support">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Trợ giúp</a></h2>
+          <div class="listMenuFooter"><a href="">Hướng dẫn mua hàng</a><a href="">Hướng dẫn thanh toán</a><a href="">Quy định đổi trả - hoàn tiền</a><a href="">Tài khoản giao dịch</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter f_coop">
+        <div class="ctentColuMenuFooter"> <a class="btn_coop" href=""></a> </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="footer_bottom"> <img src="Images/logo_esell.png" alt="" width="196" class="img_general"  />
+      <div class="info_footer">
+        <p><strong>© 2013 Bản quyền thuộc CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT.</strong></p>
+        <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh - MST: 03 11 632 562</p>
+        <p>Điện thoại: (848) 39 483 961 - Fax: (848) 38 116 791 - Hotline: 0918 856 738</p>
+        <p>Email: <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a> - Website: <a href="http://www.dangcapviet.vn">www.dangcapviet.vn</a></p>
+      </div>
+      <div class="logo_ecom"> <img src="Images/logo_ecom.png" alt="" width="132" /> </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+<!--Fly to Like button-->
+<script src="Scripts/index.js"></script>
+</body>
+</html>

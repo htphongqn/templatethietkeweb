@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Công tác xã hội</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Vertical Text-->
+<script src="Scripts/jquery.scrollbox.js"></script>
+<script>
+        $(function () {
+            $('#demo2').scrollbox({
+                linear: true,
+                step: 1,
+                delay: 0,
+                speed: 30
+            });
+            var queueNext = 7;
+            (function () {
+                $('#demo6-queue ul').append('<li><p>' + queueNext + '</p></li>');
+                queueNext++;
+                setTimeout(arguments.callee, 2000 + parseInt(Math.random() * 2000, 10));
+            } ());
+        });
+    </script>
+<!--Main Menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Scroll-->
+<link type="text/css" href="Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<!-- the mousewheel plugin -->
+<script type="text/javascript" src="Scripts/jquery.mousewheel.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="Scripts/jquery.jscrollpane.min.js"></script>
+<!-- scripts specific to this demo site -->
+<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				//$('.scroll-pane').jScrollPane();
+				$('.scroll-pane').jScrollPane(
+       			{
+           			verticalTrackHeight :100,
+           			verticalGutter   : 5
+        			});  
+			});
+		</script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_index').children('li');					
+
+			$("#tabs_index").tabs("#tabs_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Top Page-->
+  <div class="top_page">
+    <div class="page_inner">
+      <!--#begin Header-->
+      <div class="time">Thứ Hai, 30-12-2013 </div>
+      <div class="right_page">Email: <a href="ctxhtreemtphcm@yahoo.com.vn">ctxhtreemtphcm@yahoo.com.vn</a> | <a href="">Đăng nhập</a> </div>
+    </div>
+  </div>
+  <!--End Top Page-->
+  <div class="page_inner">
+    <div class="header"><a href="index.html" class="logo"><img src="Images/logo.jpg" alt="" /><span class="banner_text"><img src="Images/banner_text.png" alt="" /></span></a>
+      <div class="hotline"> <span class="hl_icon"></span>Hotline:<br />
+        <span class="number_phone">1900 545 559</span> </div>
+    </div>
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="list_news.html">Giới thiệu</a>
+          <ul>
+            <li><a href="#">Thông điệp</a>
+              <ul>
+                <li><a href="#">Thông điệp 1</a>
+                  <ul>
+                    <li><a href="#">Thông điệp 1-1</a>
+                      <ul>
+                        <li><a href="#">Thông điệp 1-1-1</a></li>
+                        <li><a href="#">Thông điệp 2-1-1</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Thông điệp 2-1</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Thông điệp 2</a>
+                  <ul>
+                    <li><a href="#">Thông điệp 1</a>
+                      <ul>
+                        <li><a href="#">Thông điệp 2-1</a>
+                          <ul>
+                            <li><a href="#">Thông điệp 2-1-1</a></li>
+                            <li><a href="#">Thông điệp 2-1-1</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Thông điệp 2-1</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Thông điệp 2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="#">Văn bản pháp quy</a></li>
+        <li><a href="question.html">Hỏi đáp</a></li>
+        <li><a href="#">Tấm lòng vàng</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+      <div class="search">
+        <input type="text" class="input_Search" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Main Col-->
+      <div class="main_content">
+        <div class="path"><a href="index.html">Trang chủ</a> &raquo; Tin tức</div>
+        <div class="box">
+          <div class="box_content" id="list_news">
+            <ul>
+              <li class="hot_news"><a href="news_detail.html"><img class="img_general" width="300" height="200" alt="" src="Images/logo.jpg" /></a>
+                <h2 class="news_Title"><a href="news_detail.html">Giây phút dưới lưỡi dao của nữ sinh 16 tuổig</a></h2>
+                <span class="date">30/012/2013 - 05:30 - AM</span>
+                <p>“Vào bệnh viện, tôi thấy người Hiền trắng bệch, bất động. Tôi cứ tưởng đã mất con”, ông Hoàng nói. Theo ông, do đi cấp cứu bằng xe máy, đường xóc nên Hiền mất gần 2,7 lít máu, tràn trong ổ bụng. .... <a href="news_detail.html" class="view_detail">Xem chi tiết</a></p>
+              </li>
+              <li><a href="news_detail.html"><img class="img_general" width="150" height="100" alt="" src="Images/logo.jpg" /></a>
+                <h2 class="h2Title"><a href="news_detail.html">Giây phút dưới lưỡi dao của nữ sinh 16 tuổig</a></h2>
+                <span class="date">30/012/2013 - 05:30 - AM</span>
+                <p>“Vào bệnh viện, tôi thấy người Hiền trắng bệch, bất động. Tôi cứ tưởng đã mất con”, ông Hoàng nói. Theo ông, do đi cấp cứu bằng xe máy, đường xóc nên Hiền mất gần 2,7 lít máu, tràn trong ổ bụng. .... <a href="news_detail.html" class="view_detail">Xem chi tiết</a></p>
+              </li>
+              <li><a href="news_detail.html"><img class="img_general" width="150" height="100" alt="" src="Images/logo.jpg" /></a>
+                <h2 class="h2Title"><a href="news_detail.html">Giây phút dưới lưỡi dao của nữ sinh 16 tuổig</a></h2>
+                <span class="date">30/012/2013 - 05:30 - AM</span>
+                <p>“Vào bệnh viện, tôi thấy người Hiền trắng bệch, bất động. Tôi cứ tưởng đã mất con”, ông Hoàng nói. Theo ông, do đi cấp cứu bằng xe máy, đường xóc nên Hiền mất gần 2,7 lít máu, tràn trong ổ bụng. .... <a href="news_detail.html" class="view_detail">Xem chi tiết</a></p>
+              </li>
+              <li><a href="news_detail.html"><img class="img_general" width="150" height="100" alt="" src="Images/logo.jpg" /></a>
+                <h2 class="h2Title"><a href="news_detail.html">Giây phút dưới lưỡi dao của nữ sinh 16 tuổig</a></h2>
+                <span class="date">30/012/2013 - 05:30 - AM</span>
+                <p>“Vào bệnh viện, tôi thấy người Hiền trắng bệch, bất động. Tôi cứ tưởng đã mất con”, ông Hoàng nói. Theo ông, do đi cấp cứu bằng xe máy, đường xóc nên Hiền mất gần 2,7 lít máu, tràn trong ổ bụng. .... <a href="news_detail.html" class="view_detail">Xem chi tiết</a></p>
+              </li>
+              <li><a href="news_detail.html"><img class="img_general" width="150" height="100" alt="" src="Images/logo.jpg" /></a>
+                <h2 class="h2Title"><a href="news_detail.html">Giây phút dưới lưỡi dao của nữ sinh 16 tuổig</a></h2>
+                <span class="date">30/012/2013 - 05:30 - AM</span>
+                <p>“Vào bệnh viện, tôi thấy người Hiền trắng bệch, bất động. Tôi cứ tưởng đã mất con”, ông Hoàng nói. Theo ông, do đi cấp cứu bằng xe máy, đường xóc nên Hiền mất gần 2,7 lít máu, tràn trong ổ bụng. .... <a href="news_detail.html" class="view_detail">Xem chi tiết</a></p>
+              </li>
+              <li><a href="news_detail.html"><img class="img_general" width="150" height="100" alt="" src="Images/logo.jpg" /></a>
+                <h2 class="h2Title"><a href="news_detail.html">Giây phút dưới lưỡi dao của nữ sinh 16 tuổig</a></h2>
+                <span class="date">30/012/2013 - 05:30 - AM</span>
+                <p>“Vào bệnh viện, tôi thấy người Hiền trắng bệch, bất động. Tôi cứ tưởng đã mất con”, ông Hoàng nói. Theo ông, do đi cấp cứu bằng xe máy, đường xóc nên Hiền mất gần 2,7 lít máu, tràn trong ổ bụng. .... <a href="news_detail.html" class="view_detail">Xem chi tiết</a></p>
+              </li>
+              <li><a href="news_detail.html"><img class="img_general" width="150" height="100" alt="" src="Images/logo.jpg" /></a>
+                <h2 class="h2Title"><a href="news_detail.html">Giây phút dưới lưỡi dao của nữ sinh 16 tuổig</a></h2>
+                <span class="date">30/012/2013 - 05:30 - AM</span>
+                <p>“Vào bệnh viện, tôi thấy người Hiền trắng bệch, bất động. Tôi cứ tưởng đã mất con”, ông Hoàng nói. Theo ông, do đi cấp cứu bằng xe máy, đường xóc nên Hiền mất gần 2,7 lít máu, tràn trong ổ bụng. .... <a href="news_detail.html" class="view_detail">Xem chi tiết</a></p>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="navigation"><b>1</b><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a> ...<a href="">15</a> </div>
+          </div>
+        </div>
+      </div>
+      <!--End Main Col-->
+      <!--Right Col-->
+      <div class="right_content">
+        <!--Tab news-->
+        <div class="box">
+          <div class="nav">
+            <ul id="tabs_index">
+              <li><a class="current tab_f" href="#" title="Tin nổi bật">Tin nổi bật</a></li>
+              <li><a href="#" title="Tin mới">Tin mới</a></li>
+            </ul>
+          </div>
+          <div id="tabs_content">
+            <div class="section scroll-pane">
+              <ul>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="section scroll-pane">
+              <ul>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+                <li> <a href="detail_news.html">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></li>
+                <li> <a href="detail_news.html">Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức </a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Tab news-->
+        <!--Question-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Hỏi đáp</div>
+            <div id="demo2" class="scroll-text">
+              <ul>
+                <li><a href="" title="Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?"><b>Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?</b>
+                  <p> - Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức</p>
+                  </a></li>
+                <li><a href="" title="Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?"><b>Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?</b>
+                  <p> - Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức</p>
+                  </a></li>
+                <li><a href="" title="Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?"><b>Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?</b>
+                  <p> - Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức</p>
+                  </a></li>
+                <li><a href="" title="Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?"><b>Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?</b>
+                  <p> - Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức</p>
+                  </a></li>
+                <li><a href="" title="Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?"><b>Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?</b>
+                  <p> - Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức</p>
+                  </a></li>
+                <li><a href="" title="Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?"><b>Làm sao để Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục ?</b>
+                  <p> - Trẻ bị xâm hại tình dục - hồi chuông báo động sự suy đồi đạo đức</p>
+                  </a></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Question-->
+        <!--Images Activity-->
+        <div class="box">
+          <div class="box_content news_index">
+            <div class="box_Tab">Hình ảnh hoạt động</div>
+            <div class="popular_news"> <a href="detail_news.html"><img src="Images/activity.jpg" alt="" width="260" /></a>
+              <h3 class="pop_new_T"><a href="">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</a></h3>
+            </div>
+            <ul>
+              <li> <a href="detail_news.html">Truyền thông giáo dục tâm lý giới tính</a></li>
+              <li> <a href="detail_news.html">Toạ đàm</a></li>
+              <li> <a href="detail_news.html">Truyền thông giáo dục tâm lý giới tính</a></li>
+              <li> <a href="detail_news.html">Toạ đàm</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Images Activity-->
+        <!--Video-->
+        <div class="box">
+          <div class="box_content news_index">
+            <div class="box_Tab">Video</div>
+            <div class="popular_news"><img src="Images/video.jpg" alt="" width="260" />
+              <h3 class="pop_new_T">Truyền Thông Sức khoẻ giới tính và phòng tránh xâm hại tình dục</h3>
+            </div>
+            <ul>
+              <li> <a href="detail_news.html">Truyền thông giáo dục tâm lý giới tính</a></li>
+              <li> <a href="detail_news.html">Toạ đàm</a></li>
+              <li> <a href="detail_news.html">Truyền thông giáo dục tâm lý giới tính</a></li>
+              <li> <a href="detail_news.html">Toạ đàm</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Video-->
+        <!--Law Document-->
+        <div class="box">
+          <div class="box_content news_index">
+            <div class="box_Tab">Văn bản pháp quy</div>
+            <ul id="law_doc">
+              <li> <a href="detail_news.html">Công văn số 4310/TCT-CS v/v chính sách thuế GTGT</a></li>
+              <li> <a href="detail_news.html">Công văn số 4301/TCT-DNL ngày 10/12/2013 v/v Hướng dẫn thuế GTGT đối với hàng thuốc nổ TNT nhập cho đổi hàng dự trữ Quốc gia</a></li>
+              <li> <a href="detail_news.html">Công văn của Tổng cục Thuế số 4353/TCT-CS ngày 12/12/2013 v/v chính sách thuế TNDN</a></li>
+              <li> <a href="detail_news.html">Công văn của Tổng cục Thuế số 4352/TCT-CS ngày 12/12/2012 v/v cấp hoá đơn lẻ đối với doanh thu cho thuê địa điểm đặt trạm phát sóng</a></li>
+              <li><a href="">Công văn của Tổng cục Thuế số 4358/TCT-CS ngày 12/12/2013 v/v Chính sách thuế TNDN</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Law Document-->
+        <!--Link Web-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Liên kết website</div>
+            <div id="link_web">
+              <select name="link_web" class="type_option">
+                <option value="0">Đẳng Cấp Việt</option>
+                <option value="1">Esell.vn</option>
+              </select>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Link Web-->
+        <!--Ads-->
+        <div class="ads"> <img src="Images/ads_01.jpg" alt="" width="280" /> <img src="Images/ads_01.jpg" alt="" width="280" /> </div>
+        <!--End Ads-->
+      </div>
+      <!--End Right Col-->
+    </div>
+    <!--End Main-->
+    <!--Ads-->
+    <div class="ads"> <img src="Images/ads_02.jpg" alt="" width="990" /> </div>
+    <!--End Ads-->
+    <!--Footer-->
+    <div class="footer">
+      <div class="info_company">
+        <p><strong>Trung tâm công tác xã hội trẻ em thành phố Hồ Chí Minh</strong></p>
+        <p>Địa chỉ: 214/19/27 Nguyễn Văn Nguyễn, Phường Tân Định Tp.Hồ Chí Minh</p>
+        <p>Email: <a href="mailto:ctxhtreemtphcm@yahoo.com.vn">ctxhtreemtphcm@yahoo.com.vn</a></p>
+        <p>Điện thoại: 1900 545 559</p>
+      </div>
+      <div class="right_foo">
+        <!--Footer Menu-->
+        <p class="footer_menu"><a href="index.html">Trang chủ</a> | <a href="">Giới thiệu</a> | <a href="">Tin tức</a> | <a href="">Văn bản pháp quy</a> | <a href="">Hỏi đáp</a> | <a href="">Tấm lòng vàng</a> | <a href="">Liên hệ</a></p>
+        <!--End Footer Menu-->
+        <p class="visitor">Tổng truy cập: <b>1 900</b> - Đang xem: <b>30</b></p>
+        <p class="copyright"> Copyright © 2013 By <strong>- Trung tâm công tác xã hội trẻ em TP. Hồ Chí Minh.</strong><br />
+          <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </p>
+      </div>
+    </div>
+    <!--End Footer-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Comat Vietnam</title>
+<meta name="keywords" content="GS E&amp;C" />
+<link type="text/css" rel="stylesheet" media="all" href="Styles/common.css" />
+<link type="text/css" rel="stylesheet" media="all" href="Styles/main.css" />
+<link type="text/css" rel="stylesheet" media="all" href="Styles/layout.css" />
+<link type="text/css" rel="stylesheet" media="all" href="Styles/board.css" />
+<link type="text/css" rel="stylesheet" media="all" href="Styles/contents.css" />
+<script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="Scripts/front.js"></script>
+<script type="text/javascript" src="Scripts/jquery.slides.min.js"></script>
+<script type="text/javascript">
+    function OnSubmit(url, lang, boardCode, compositionNo) {
+        var param = "Lang=" + lang + "&BoardCode=" + boardCode + "&CompositionNo=" + compositionNo + "&count=Y";
+        $.ajax({
+            type: "POST",
+            url: "/en/Pr/PrNews.aspx",
+            dataType: "Text",
+            data: param,
+            success: function (msg) {
+                //location.href = url;
+                window.open(url);
+
+            }
+        }
+		);
+
+    }
+
+    jQuery(function ($) {
+        // List Tab Navigation
+        var $tab_list = $('.mainbox_3');
+        $tab_list.removeClass('jx').find('.banner').hide();
+        $tab_list.find('li li.active').parents('li').addClass('active');
+        $tab_list.find('li.active .banner').show();
+        $tab_list.each(function () {
+            var $this = $(this);
+        });
+        function listTabMenuToggle(event) {
+            var $this = $(this);
+            $this.next('.banner').show().parent('li').addClass('active').siblings('li').removeClass('active').find('.banner').hide();
+            if ($this.attr('href') === '#') {
+                return false;
+            }
+        }
+        $tab_list.find('li>a').click(listTabMenuToggle).focus(listTabMenuToggle);
+    });
+</script>
+<script type="text/javascript">
+    /* 2013 nav_mn */
+    $(document).ready(function () {
+        var ulMenuObj = {
+            propList: {
+                'height': 'height',
+                'margin-bottom': 'margin-bottom',
+                'margin-top': 'margin-top',
+                'padding-bottom': 'padding-bottom',
+                'padding-top': 'padding-top'
+            },
+            elList: [],
+            downPropList: {},
+            upPropList: {},
+            overflowList: {},
+            init: function () {
+                ulMenuObj.elList = $('.nav_mn ul');
+                ulMenuObj.elList.push($('.ab1')[0]);
+                ulMenuObj.elList.each(function (i, item) {
+                    var $item = $(item);
+                    var pList = ulMenuObj.propList
+                    var dProp = {};
+                    var uProp = {};
+                    for (var key in pList) {
+                        uProp[key] = '0px';
+                        dProp[key] = $item.css(key);
+                        $item.css(key, '0px');
+                    }
+                    ulMenuObj.upPropList[i] = uProp;
+                    ulMenuObj.downPropList[i] = dProp;
+                    ulMenuObj.overflowList[i] = $item.css('overflow');
+                });
+            },
+            slideUp: function () {
+                //$('.nav_menu').css( 'padding-left', '0px' )
+                ulMenuObj.elList.each(function (i, item) {
+                    var $item = $(item);
+                    var overflow = ulMenuObj.overflowList[i];
+                    $item.css('overflow', 'hidden');
+                    $item.stop().animate(ulMenuObj.upPropList[i], 300, function () {
+                        $('#headerWrap').css('background-image', 'url(Images/bg_header.png)');
+                        //
+                        $(this).hide();
+                        $(this).css('overflow', "visible");
+                        /*
+                        var prop = ulMenuObj.upPropList[i];
+                        for( var key in prop ){
+                        $(this).css(key, "");
+                        }
+                        */
+                        return false;
+                    });
+                });
+            },
+            slideDown: function () {
+                //$('.nav_menu').css( 'padding-left', '321px' )
+                $('#headerWrap').css('background-image', 'url(Images/bg_header2.png)');
+                //
+                ulMenuObj.elList.each(function (i, item) {
+                    var $item = $(item);
+                    var overflow = ulMenuObj.overflowList[i];
+                    $item.css('overflow', 'hidden');
+                    //*
+                    if ($item.css('display') == 'none') {
+                        var prop = ulMenuObj.upPropList[i];
+                        for (var key in prop) {
+                            $(this).css(key, prop[key]);
+                        }
+                    }
+                    //*/
+                    $item.stop().show().animate(ulMenuObj.downPropList[i], 300, function () {
+                        $(this).css('overflow', "visible");
+                        var prop = ulMenuObj.downPropList[i];
+                        for (var key in prop) {
+                            $(this).css(key, prop[key]);
+                            //$(this).css(key, "");
+                        }
+                        return false;
+                    });
+                })
+                //
+            },
+            focus: function (el) {
+                var $item = $(el);
+                if ($item.hasClass('m1')) {
+                    globalChangeTopMenuDesc(1);
+                } else if ($item.hasClass('m2')) {
+                    globalChangeTopMenuDesc(2);
+                } else if ($item.hasClass('m3')) {
+                    globalChangeTopMenuDesc(3);
+                } else if ($item.hasClass('m4')) {
+                    globalChangeTopMenuDesc(4);
+                } else if ($item.hasClass('m5')) {
+                    globalChangeTopMenuDesc(5);
+                } else if ($item.hasClass('m6')) {
+                    globalChangeTopMenuDesc(6);
+                } else if ($item.hasClass('m7')) {
+                    globalChangeTopMenuDesc(7);
+                }
+            },
+            focusin: function (e) {
+                ulMenuObj.slideDown();
+            },
+            focusout: function (e) {
+                ulMenuObj.slideUp();
+            },
+            show: function () {
+                $('.nav_menu').off('mouseover', ulMenuObj.show);
+                $('.nav_menu').on('mouseleave', ulMenuObj.hide);
+                ulMenuObj.slideDown();
+            },
+            hide: function () {
+                $('.nav_menu').off('mouseleave', ulMenuObj.hide);
+                ulMenuObj.slideUp();
+                $('.nav_menu').on('mouseover', ulMenuObj.show);
+            }
+        }
+
+        $('.nav_menu').on('mouseover', ulMenuObj.show);
+        $('.nav_menu').on('focusin', ulMenuObj.focusin);
+        $('.nav_menu').on('focusout', ulMenuObj.focusout);
+
+
+        $('.nav_mn>li>a').each(function (i, item) {
+            var $a = $(item);
+            $a.focusin(function (e) {
+                ulMenuObj.focus($(this).parent()[0]);
+            });
+            $a.mouseover(function () {
+                ulMenuObj.focus($(this).parent()[0]);
+            });
+        });
+
+        $('.nav_mn ul>li>a').each(function (i, item) {
+            $(item).focusin(function (e) {
+                ulMenuObj.focus($(this).parent().parent().parent()[0]);
+            });
+            $(item).mouseover(function () {
+                ulMenuObj.focus($(this).parent().parent().parent()[0]);
+            });
+        });
+
+
+        // nav_mn setting;
+        ulMenuObj.init();
+    });
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="Scripts/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('img');
+	DD_belatedPNG.fix('.familyWebSite');
+	DD_belatedPNG.fix('.flex-control-nav li a');
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- Begin #header -->
+<div id="headerWrap">
+  <div id="header">
+    <div class="logo"><a href="http://www.gsconst.kr#1"><img src="Images/logo.png" alt="GS E&amp;C" /></a></div>
+    <div class="topmenu"> <span><a href="http://www.gsconst.kr/en">HOME</a></span> <span><a href="http://www.gsconst.kr/en/Sitemap.aspx">SITEMAP</a></span> <span class="last lang"><a href="" id="vn_lang"></a> <a href="" id="en_lang"></a></span> </div>
+    <!-- nav_menu -->
+    <div class="nav_menu">
+      <ul class="nav_mn">
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Management/Report.aspx" onmouseover="globalChangeTopMenuDesc(1);">Home</a> </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Company/Ceo.aspx" onmouseover="globalChangeTopMenuDesc(2);">Company</a>
+          <ul>
+            <li><a href="http://www.gsconst.kr/en/Management/Report.aspx">History</a></li>
+            <li><a href="http://www.gsconst.kr/en/Management/CustValue/Activation.aspx">Organization</a></li>
+            <li><a href="http://www.gsconst.kr/en/Management/Tech/Quality.aspx">Partner</a></li>
+          </ul>
+        </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx" onmouseover="globalChangeTopMenuDesc(3);">Business</a>
+          <ul>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Safety work</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">Temporary work</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Safety Tools</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">Design for Contruction</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Final washing and clean</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">MRO</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/PresidentTech.aspx">Agent business</a></li>
+            <li><a href="http://www.gsconst.kr/en/Innovation/ResearchInstitute.aspx">Export business</a></li>
+          </ul>
+        </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/Business/PlantBusi.aspx?Lang=en&amp;BusinessResultStep3=1" onmouseover="globalChangeTopMenuDesc(4);">Contact</a> </li>
+        <li class="menu_item"> <a href="http://www.gsconst.kr/en/IR/Mng/Mng_01.aspx" onmouseover="globalChangeTopMenuDesc(5);">IR</a>
+          <ul>
+            <li><a href="http://www.gsconst.kr/en/IR/Mng/Mng_01.aspx">Management</a></li>
+            <li><a href="http://www.gsconst.kr/en/IR/Stock/Stock_01.aspx">Stock</a></li>
+            <li><a href="http://www.gsconst.kr/en/IR/Financial/Financial_01.aspx">Financials</a></li>
+            <li><a href="http://www.gsconst.kr/en/IR/Data/EarningRelease.aspx">IR Activity</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="ab1">
+        <div class="menu_txt"><img id="oTopMenuTxt" src="http://www.gsconst.kr/images/en/menu/menu_txt_1.gif" alt="" /></div>
+      </div>
+    </div>
+    <!-- //nav_menu -->
+  </div>
+</div>
+<!-- // End #header -->
+<!-- Begin #container -->
+<div id="container">
+  <div class="location"><a href="index.html">HOME</a> &gt; <a href="">Business</a> &gt; <a href=""><em>Safety work</em></a></div>
+  <div class="contents">
+    <script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('.leftMenu li').mouseover(function(){
+    //show the box
+    $(this).children('.leftMenu li .subMenuBox').stop().css("display","block");
+});
+
+$('.leftMenu li').mouseleave(function(){
+    //hide the box	
+    $(this).children('.leftMenu li .subMenuBox').stop().css("display","none");
+});
+});//]]>  
+</script>
+    <div class="sidebar"> <a id="pagenav_mn"></a>
+      <h2>Business</h2>
+      <ul class="leftMenu" style="background: url(Images/left_bg_business.jpg) no-repeat right 0; min-height:670px">
+        <li id="prNews"><a class="active" href="/en/Pr/PrNews.aspx?Lang=en">Safety work</a></li>
+        <li><a href="/en/Pr/GsCF/?BbsId=PR_CF_EN">Temporary work</a>
+          <ul class="subMenuBox">
+            <li id="prCF"><a href="/en/Pr/GsCF/?BbsId=PR_CF_EN">GS E&amp;C CF</a></li>
+            <li id="xiCf"><a href="/en/Pr/XiCF/?BbsId=PR_XI_CF_EN">Xi CF</a></li>
+            <li id="techResearch"><a href="/en/Pr/techResearch.aspx">Technology Center</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/Pr/prCi.aspx">Safety Tools</a>
+          <ul class="subMenuBox">
+            <li id="prCi"><a href="/en/Pr/prCi.aspx">CI</a></li>
+            <li id="prBi"><a href="/en/Pr/prCi.aspx">BI</a></li>
+          </ul>
+        </li>
+        <li id="prEBroBrochure"><a href="/en/Pr/Brochure/?BbsId=BROCHURE_EN">Design for Contruction</a></li>
+        <li id="prNews"><a href="/en/Pr/PrNews.aspx?Lang=en">Final washing and clean</a></li>
+        <li><a href="/en/Pr/GsCF/?BbsId=PR_CF_EN">MRO</a></li>
+        <li id="prNews"><a href="/en/Pr/PrNews.aspx?Lang=en">Agent business</a></li>
+        <li><a href="/en/Pr/GsCF/?BbsId=PR_CF_EN">Export business</a></li>
+      </ul>
+    </div>
+    <div class="mainbar" id="bodyStart">
+      <div class="pageTitle">
+        <h3>Safety work</h3>
+        <p>Mô tả chuyên mục</p>
+      </div>
+      <div class="bodystart">
+        <div class="hr_6"></div>
+        <!-- bodystart -->
+        <div class="detail_info">
+          <p>Gói gọn những giấc mơ trong một dự án không hề là điều dễ dàng. Nhưng với niềm tin và tâm huyết của một chủ đầu tư có năng lực, <strong><a title="Căn hộ Him Lam Riverside" href="http://www.himlam-riverside.com">Căn hộ Him Lam Riverside</a></strong> đã mang đến cho cư dân nơi đây những giá trị thiết thực và sự trải nghiệm tuyệt vời nhất.<strong><a title="Căn hộ Him Lam Riverside" href="http://www.himlam-riverside.com">Him Lam Riverside</a></strong> là sự kết hợp khéo léo của cuộc sống tiện nghi thành thị và không gian   thiên nhiên dịu mát. Với tiện ích nội khu và ngoại khu đẳng cấp xung   quanh, <strong><a title="Căn hộ Him Lam Riverside" href="http://www.himlam-riverside.com">Căn hộ Him Lam Riverside</a></strong> hứa hẹn sẽ là nơi bạn được tận hưởng một cuộc sống “xanh” đúng nghĩa,   một không gian sảng khoái, giúp bạn cân bằng cuộc sống, sức khỏe cùng   niềm say mê trở  lại với bạn.</p>
+          <p>Nằm trong nội khu đô thị Him Lam Tân Hưng (tổng diện tích của dự án: <strong>58,3 ha</strong>) – Him Lam Riverside thừa hưởng toàn bộ tiện ích khu đô thị với:</p>
+          <p>- Dự án có khu đại siêu thị rộng hơn <strong>3,1ha</strong> do tập đoàn Lotte – Hàn Quốc xây dựng</p>
+          <p>- Khu trung tâm thương mại – tài chính ngân hàng chạy dọc theo tuyến đường Bắc – Nam</p>
+          <p>- Khu trường học chất lượng cao rộng hơn <strong>3ha</strong> và trường mầm non rộng <strong>0,88ha</strong></p>
+          <p>- Khu trò chơi trí tuệ trẻ em đầu tiên tại Việt nam Vikid <strong>3ha</strong></p>
+          <p>- Đất cây xanh, sân chơi, đường nội bộ: <strong>5 ha</strong></p>
+          <p>- Đất cây xanh –TDTT: <strong>5,7 ha</strong><br />
+            <a href="http://www.himlamland.com/admin/upload/duan/DA-BN161274070985.jpg"><img alt="" src="http://www.himlamland.com/admin/upload/duan/DA-BN161274070985.jpg" width="600" /></a></p>
+          <p>Chọn cuộc sống tại <strong><a title="Căn hộ Him Lam Riverside" href="http://www.himlam-riverside.com">Căn hộ Him Lam Riverside</a></strong> là bạn đã chọn cho mình một <strong>không gian sống thanh bình giữa thiên nhiên</strong> trong lòng phố thị. Một công viên tràn ngập ánh nắng, một dòng sông   hiền hòa, sự tinh tế của những mảng xanh…Để mỗi sớm mai thức dậy, bạn   được thả hồn mình trong bầu không khí trong lành, tươi mát, lắng nghe   tiếng chim hót, cùng người thân tản bộ…hay hạnh phúc khi được theo từng   bước chân con yêu đến trường….</p>
+          <p><img alt="" src="http://i761.photobucket.com/albums/xx253/betron_photos/81GF4-phoi-canh-goc-L_zpsefa43134.jpg" border="0" height="270" width="630" /></p>
+          <h4><a name="TOC-H-b-i-trung-t-m" id="TOC-H-b-i-trung-t-m"></a><strong></strong></h4>
+          <p>Xuất phát từ ý tưởng mang đến cho bạn và gia đình một cuộc sống đẳng   cấp, một nơi thư giãn tuyệt vời sau một ngày làm việc mệt nhọc, chủ đầu   tư đã xây dựng một <strong>hồ bơi tuyệt đẹp và quy mô</strong> nằm ngay trong khuôn viên dự án.</p>
+          <p><img alt="" src="http://i761.photobucket.com/albums/xx253/betron_photos/T12Y6-ho-boi-copy-L_zps59752b00.jpg" border="0" height="268" width="625" /></p>
+          <p>Đã bao giờ bạn mơ ước về một nơi mà cuộc  sống sẽ có nhiều tiện ích   đến vậy? Thì nay, mơ ước đó đã trở thành sự thật ngay tại nơi bạn sống, <strong>một không gian sống cao cấp phải đi liền với những dịch vụ cao cấp</strong>. Không cần đi đâu xa, <strong>một nhà hàng năm sao</strong> luôn sẵn sàng phục vụ bạn.</p>
+          <p><img alt="" src="http://www.himlamriverside.com/admin/upload/tienich/TI8cntower360.jpg" border="0" height="301" width="600" /></p>
+          <p>Nằm trong khuôn viên Khu đô thị Him Lam Tân Hưng và liền kề dự án, <strong>V-kids là sân chơi dành cho trẻ em</strong>,   không chỉ để giải trí mà còn phát triển thể chất và trí tuệ. Không gian   được thiết kế xinh xắn, với những gam màu sắc tươi vui phù hợp với lứa   tuổi các bé.</p>
+          <p>Nhiều trò chơi hấp dẫn cho các bé lựa chọn với: Khu trò chơi vận   động; Thư viện sách; Trò chơi ghép hình sáng tạo Lego; Khu sáng tạo với   vẽ tranh cát, tô tượng; Phòng chụp ảnh in ly, in lịch; Ẩm thực dinh   dưỡng; Khu tổ chức tiệc sinh nhật.</p>
+          <p>Tại đây con của bạn sẽ được phát triển một cách toàn diện nhất.</p>
+          <p><img alt="" src="http://www.himlamriverside.com/admin/upload/tienich/TI13vikid-l.jpg" border="0" height="445" width="600" /></p>
+          <p><strong></strong></p>
+          <h4><a name="TOC-Nh-tr-n-i-khu" id="TOC-Nh-tr-n-i-khu"></a><strong></strong></h4>
+          <p>Để thế hệ tương lai của gia đình bạn có điều kiện phát triển toàn   diện về thể chất và trí tuệ ngay từ nhỏ và bạn sẽ không con lo lắng về   việc đưa đón con tới những ngôi trường mẫu giáo xa nhà. Tại đây chúng   tôi đầu tư và dành những gì tốt đẹp nhất cho con em bạn bằng<strong> nhà trẻ nội khu ngay tại dự án</strong>.</p>
+          <p><img alt="" src="http://www.himlamriverside.com/admin/upload/tienich/TI7nhatre.jpg" border="0" height="494" width="608" /></p>
+          <h4><a name="TOC-Spa" id="TOC-Spa"></a></h4>
+          <p><strong>Vstar School nằm ngay trong khu Đô thị mới Him Lam Tân Hưng</strong> với diện tích trên<strong> 30.000 m2</strong>,    đây là sự lựa chọn lý tưởng cho các bậc cha mẹ mong muốn đứa con yêu   quý của mình được học tập trong một ngôi trường có cơ sở vật chất hiện   đại, tiện nghi, một môi trường giáo dục tiên tiến.</p>
+          <p>Ngoài ra, Vstar School còn tự hào về đội ngũ cán bộ quản lý già dặn   kinh nghiệm, có hội đồng sư phạm giàu tài năng và tâm huyết sự nghiệp   trồng người…và cả sự ủng hộ nhiệt tình của quý phụ huynh. Đó chính là   nền tảng tạo nên thành công cho một ngôi trường luôn dẫn đầu về chất   lượng với tỷ lệ đậu tốt nghiệp Trung học phổ thông 100% hàng năm.</p>
+          <p><a href="http://www.thanhnien.com.vn/Pictures20135/MinhNguyet/14/sao-viet1.jpg"><img alt="" src="http://www.thanhnien.com.vn/Pictures20135/MinhNguyet/14/sao-viet1.jpg" height="318" width="500" /></a></p>
+          <p><strong>Khu Gym &amp; Spa hiện đại tại khu căn hộ</strong> sẽ là điểm đến yêu thích của mọi người. Đặc biệt là giới trẻ. Dịch vụ   hoàn hảo nơi đây không chỉ giúp bạn phục hồi sức khỏe mà còn mang đến   cho bạn sự thư giãn tuyệt vời, sảng khoái.</p>
+          <p><img alt="" src="http://www.himlamriverside.com/admin/upload/tienich/TI6spa.jpg" border="0" height="338" width="608" /></p>
+          <h4><a name="TOC-S-n-th-thao-trung-t-m" id="TOC-S-n-th-thao-trung-t-m"></a></h4>
+          <p><strong>Khu căn hộ có sân thể thao trung tâm được đầu tư</strong> nhằm đáp ứng được trọn vẹn nhất những nhu cầu rèn luyện sức khỏe và vui   chơi giải trí cho cư dân của Him Lam Riverside. Đây hứa hẹn sẽ ra nơi   gắn kết cộng đồng xích lại gần nhau hơn trong các hoạt động thể thao.</p>
+          <p><img alt="" src="http://www.himlamriverside.com/admin/upload/tienich/TI4footabll.jpg" border="0" height="338" width="608" /></p>
+          <h4><a name="TOC-Trung-t-m-th-ng-m-i" id="TOC-Trung-t-m-th-ng-m-i"></a></h4>
+          <p><strong>Chủ đầu tư dự án cam kết: Trung tâm thương mại sẽ bao gồm những thương hiệu nổi tiếng và uy tín trên thị trường</strong>.   Chỉ cần bước chân ra khỏi cửa và thêm mấy phút đi dạo trên con đường   đầy cây xanh và nắng vàng, bạn sẽ đến ngày khu mua sắm của các gian   hàng.</p>
+          <p><img alt="" src="http://www.himlamriverside.com/admin/upload/tienich/TI3shopping.jpg" border="0" height="338" width="608" /></p>
+        </div>
+        <div class="function">
+          <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+          <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+        </div>
+        <!--Other News-->
+        <div class="other_news_sub">
+          <h2 class="other_newsT">Tin bài khác</h2>
+          <ul>
+            <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+          </ul>
+          <a class="view_all" href="">Xem tất cả &raquo;</a>
+          <div class="clearfix"></div>
+        </div>
+        <!--Other News-->
+      </div>
+      <!-- // bodyend -->
+    </div>
+  </div>
+</div>
+</div>
+<!-- // End #container -->
+<!-- Begin #footer -->
+<div id="footer">
+  <div class="footbox">
+    <div class="contact">
+      <p><strong>COMAT Co., Ltd.</strong></p>
+      <p><strong>HO CHI MINH:</strong> 141 Tran Trong Cung, Tan Thuan Dong Ward, Dist.7, HCMC</p>
+      <p>Tel: (08) 3773-2844; (08) 3773-2832; Fax: (08) 3773-2854; Tax code: 0305973268</p>
+      <p><strong>HA NOI:</strong> Km8 + 400, Lot 2,  An Khanh Industrial, Hoai Duc District, Ha Noi</p>
+      <p>Tel: (04) 3399-6459;  (04) 3399-6460    Fax: (04) 3399-6461</p>
+    </div>
+    <div class="copyright">
+      <p> Copyright &copy; 2014 by <strong>thoitrangveston</strong>. All rights reserved</p>
+      <p> <a href="http://www.dangcapviet.vn" target="_blank">Thiết kế website</a> bởi <a href="http://www.esell.vn" title="Website Thương mại điện tử e-sell" target="_blank"> <img border="0" alt="logo e-sell" src="http://www.esell.vn/logo-esell.png"></a></p>
+    </div>
+  </div>
+</div>
+<!-- // End #footer -->
+</body>
+</html>

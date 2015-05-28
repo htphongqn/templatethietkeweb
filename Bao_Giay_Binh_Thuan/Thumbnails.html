@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<link href="Styles/template.css" rel="stylesheet" type="text/css" />
+<title></title>
+</head>
+<body style="background: #d9dfe9;width: 100%; height:100%;">
+<div id="thumbnails">
+  <ul class="page_thumbs">
+    <li> <a title="Trang 1" href="#trang-1"><img src="http://baogiay.baoninhthuan.com.vn//Data/bao-anh-dan-toc-va-mien-nui/18/Thumbnail/Page_41_w_90.png" alt="" />
+      <h3>1</h3>
+      </a> </li>
+    <li> <a title="Trang 2" href="#trang-2"><img src="http://baogiay.baoninhthuan.com.vn//Data/bao-anh-dan-toc-va-mien-nui/18/Thumbnail/Page_43_w_90.png" alt="" />
+      <h3>2</h3>
+      </a> </li>
+    <li> <a title="Trang 3" href="#trang-3"><img src="http://baogiay.baoninhthuan.com.vn//Data/bao-anh-dan-toc-va-mien-nui/18/Thumbnail/Page_45_w_90.png" alt="" />
+      <h3>3</h3>
+      </a> </li>
+    <li> <a title="Trang 4" href="#trang-4"><img src="http://baogiay.baoninhthuan.com.vn//Data/bao-anh-dan-toc-va-mien-nui/18/Thumbnail/Page_46_w_90.png" alt="" />
+      <h3>4</h3>
+      </a> </li>
+    <li> <a title="Trang 3" href="#trang-5"><img src="http://baogiay.baoninhthuan.com.vn//Data/bao-anh-dan-toc-va-mien-nui/18/Thumbnail/Page_20_w_90.png" alt="" />
+      <h3>5</h3>
+      </a> </li>
+    <li> <a title="Trang 4" href="#trang-6"><img src="http://baogiay.baoninhthuan.com.vn//Data/bao-anh-dan-toc-va-mien-nui/18/Thumbnail/Page_28_w_90.png" alt="" />
+      <h3>6</h3>
+      </a> </li>
+  </ul>
+</div>
+<script type="text/javascript" language="javascript"> 
+            var w=window.parent; 
+            function loadpages() {
+                 if(w.thumbs){
+                    w.thumbs.list.load(document.getElementById("thumbnails"));
+                 } else{
+                    setTimeout(loadpages, 300);
+                 } 
+            } 
+            loadpages();
+            function wheel() { var d = 0, e = window.event || arguments[0]; if (e.wheelDelta) { d = e.wheelDelta / 120; if (window.opera) { d = -d; } d = d * 50; } else if (e.detail) { d = (-e.detail / 3) * 50; } window.scrollBy(0, -d); return false; }; if (window.addEventListener) { window.addEventListener('DOMMouseScroll', wheel, false); } else { window.onmousewheel = document.onmousewheel = wheel; }
+            document.onclick = function () {
+                var a = w.menu.papers;
+                if (!a.isshow) { a = w.menu.issues; }
+                if (!a.isshow) { a = w.menu.pages; }
+                if (!a.isshow) { return; }
+                a.show();
+            };
+       </script>
+</div>
+</body>
+</html>

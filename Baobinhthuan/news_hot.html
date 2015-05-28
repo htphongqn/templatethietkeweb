@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "_http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="_http://www.w3.org/1999/xhtml">
+<head>
+<title>Tin mới nhất | Mobile Thanh Nien Online</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="screen" href="Styles/mobile_media.css" />
+<script language="javascript" type="text/javascript">
+        function Searching() 
+        {
+            var myTextbox = document.getElementById("txtSearch");
+            if (myTextbox.value.length > 0) {
+                window.location = "/Search.aspx?k=" + myTextbox.value;
+            }
+            else {
+                alert("Vui lòng nhập từ khóa vào để tìm kiếm");
+            }
+        }
+
+        function enterPressed(evn) {
+            var browserName = navigator.appName;
+
+            if (browserName == "Microsoft Internet Explorer") {
+                if (window.event.keyCode == 13) {
+                    Searching();
+                }
+            }
+            else {
+                if (evn.keyCode == 13) {
+                    Searching();
+                }
+            }
+        }
+
+        function ShowTime() {
+            var dt = new Date();
+            var strMonth = new Array("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12");
+            var strDay = new Array("Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy");
+            var date = strDay[dt.getDay()] + ", ";
+            var years = dt.getYear();
+            var days = dt.getDate();
+            if (years < 1900) years += 1900;
+            if (days < 10)
+                date += "0" + dt.getDate() + "/" + strMonth[dt.getMonth()] + "/" + years;
+            else
+                date += "" + dt.getDate() + "/" + strMonth[dt.getMonth()] + "/" + years;
+            var phut = dt.getMinutes();
+            if (phut < 10) {
+                phut = "0" + phut;
+            }
+            if (document.getElementById("timer") != null) {
+                document.getElementById("timer").innerHTML = date;
+            }
+        }
+
+        document.onkeyup = enterPressed;
+
+        //tat onload doIframe();
+        function doIframe() {
+            o = document.getElementsByName('QC_frame');
+            for (i = 0; i < o.length; i++) {
+                if (/\bautoHeight\b/.test(o[i].className)) {
+                    AutoSize(o[i]);
+                    addEvent(o[i], 'load', doIframe);
+                }
+            }
+        }
+
+        function AutoSize(e) {
+                e.height = e.contentWindow.document.body.scrollHeight-20;
+                e.width = e.contentWindow.document.body.scrollWidth ;
+        }
+
+        function addEvent(obj, evType, fn) {
+            if (obj.addEventListener) {
+                obj.addEventListener(evType, fn, false);
+                return true;
+            } else if (obj.attachEvent) {
+                var r = obj.attachEvent("on" + evType, fn);
+                return r;
+            } else {
+                return false;
+            }
+        }
+    </script>
+<script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-5707772-1']);
+        _gaq.push(['_setDomainName', 'thanhnien.com.vn']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+ 
+</script>
+<meta name="viewport" content="width=device-width,user-scalable=yes" />
+</head>
+<body onload="ShowTime();WriteLog();">
+<div class="top"><span class="clock"><span class="time-news" id="timer">Thứ năm, 25/07/2013</span></span><span class="tn_online"><a onclick="window.location ='http://www.thanhnien.com.vn/pages/default.aspx'" style="cursor:pointer">Phiên bản đầy đủ</a></span></div>
+<div class="header">
+  <div class="logo"><a href="news_hot.html"><img alt="Báo Bình Thuận" src="Images/LOGO.gif" width="220" style="border:0px"></a></div>
+  <div class="m-banner">
+    <div class="m-advertise">
+      <!--/* Mobie - Adserver 1 */-->
+      <img src="Images/avw.php.gif" alt="" /></div>
+  </div>
+  <div class="search">
+    <div class="text-Search">
+      <input type="text" style="height:24px;width:169px;" onfocus="this.value='';" onblur="if(!this.value)this.value='Nhập từ khóa..';" class="SearchInput" id="vnctcHeaderx1_vnctcMenu1_txtKeyword" value="Nhập từ khóa..." name="vnctcHeaderx1:vnctcMenu1:txtKeyword">
+    </div>
+    <div class="img-search">
+      <input type="image" border="0" src="Images/search-button-without-text-hi.png" id="vnctcHeaderx1_vnctcMenu1_btnSearch" name="vnctcHeaderx1:vnctcMenu1:btnSearch">
+    </div>
+  </div>
+</div>
+<div id="tab" class="menu-tab">
+  <div id="New" class="active"><a href="news_hot.html">Tin mới nhất</a></div>
+  <div id="Category"><a href="categories.html">Chuyên mục</a></div>
+</div>
+<div class="main">
+  <div class="main-ds">
+    <div class="Sub_Title"></div>
+    <h1 class="news_title"><a style="cursor:hand" href='news_detail.html'>Vụ sinh viên mất tích ở núi Phanxipang: Cầu mong điều kỳ diệu sẽ đến</a></h1>
+    <table class="image-mota">
+      <tr>
+        <td class="image_newshot"><a style="cursor:hand" href='Detail.aspx?ID=156451'><img alt='' src="http://www.thanhnien.com.vn/mobile//Pictures20137/VuBang/Fanshifan1thunho.jpg" /></a></td>
+      </tr>
+    </table>
+    <div class="content_mautin">
+      <div class="ExternalClassB542AEF9EC2B4F208F0C4E587F5980E6">(TNO) Sau hơn chục ngày được cho là mất tích ở núi Phanxipang, các đội tìm kiếm của H.Sa Pa chưa thể lần ra bất cứ dấu hiệu, manh mối nào để tìm thấy nạn nhân Phạm Ngọc Ánh.</div>
+    </div>
+    <ul>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156439" style="cursor:hand">Nhắc đến Việt Nam, người Mỹ nghĩ đến một quốc gia, không phải một cuộc chiến</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156444" style="cursor:hand">Hai thanh niên đi mua súng gặp... công an</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156440" style="cursor:hand">'Kẻ trộm mặt trăng 2' bị cấm chiếu tại Trung Quốc</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156452" style="cursor:hand">Cựu Tổng thống Mỹ George H.W. Bush cạo đầu</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156432" style="cursor:hand">Nhiều ‘ông lớn’ nhà nước thua lỗ, mất vốn</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156450" style="cursor:hand">Nhiều xe quá tải ngang nhiên vượt trạm cân</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156449" style="cursor:hand">Tuyên án tử hình người chồng nhẫn tâm dùng búa giết vợ</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156404" style="cursor:hand">Gặp Phương Mỹ Chi - cô bé 10 tuổi hát dân ca triệu người mê</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156420" style="cursor:hand">Tạo sô diễn giúp Siu Black trả nợ</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156425" style="cursor:hand">Dàn sao nhạc điện tử quốc tế ‘đổ bộ’ TP.HCM</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156431" style="cursor:hand">Vì sao hoàng nhi nước Anh có tên George Alexander Louis?</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156419" style="cursor:hand">Bí ẩn lực mua vàng</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156387" style="cursor:hand">Bắt 4 cán bộ, nhân viên ngân hàng đánh bạc</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156433" style="cursor:hand">Bắt thêm 2 nghi can băng bắt cóc tống tiền, thu giữ súng và roi điện</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156390" style="cursor:hand">Thêm hàng loạt trường ĐH-CĐ công bố điểm thi</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156382" style="cursor:hand">Nhóm Bee.T bật khóc cảm ơn nhạc sĩ Phương Uyên</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156392" style="cursor:hand">Hình ảnh Chủ tịch nước Trương Tấn Sang đến Hoa Kỳ</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156238" style="cursor:hand">Ca sĩ Phương Thanh: Nghệ sĩ thân thiết bàn chuyện hỗ trợ Siu Black</a></li>
+      <li class="link_mautin1"><a href="Detail.aspx?ID=156383" style="cursor:hand">Thảm họa đường sắt tại Tây Ban Nha, ít nhất 45 người chết</a></li>
+    </ul>
+  </div>
+</div>
+<div class="m-banner">
+  <div class='m-advertise'><img src="Images/avw.php.gif" alt="" /></div>
+</div>
+<div class="foot"><span>© 2003-2012 Bản quyền thuộc về  	
+Báo Bình Thuận </span></div>
+</html>
+</body>

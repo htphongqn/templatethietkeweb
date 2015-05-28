@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "_http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="_http://www.w3.org/1999/xhtml">
+<head>
+<title>Chi tiết tin | Mobile Thanh Nien Online</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="screen" href="Styles/mobile_media.css" />
+<script language="javascript" type="text/javascript">
+        function Searching() 
+        {
+            var myTextbox = document.getElementById("txtSearch");
+            if (myTextbox.value.length > 0) {
+                window.location = "/Search.aspx?k=" + myTextbox.value;
+            }
+            else {
+                alert("Vui lòng nhập từ khóa vào để tìm kiếm");
+            }
+        }
+
+        function enterPressed(evn) {
+            var browserName = navigator.appName;
+
+            if (browserName == "Microsoft Internet Explorer") {
+                if (window.event.keyCode == 13) {
+                    Searching();
+                }
+            }
+            else {
+                if (evn.keyCode == 13) {
+                    Searching();
+                }
+            }
+        }
+
+        function ShowTime() {
+            var dt = new Date();
+            var strMonth = new Array("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12");
+            var strDay = new Array("Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy");
+            var date = strDay[dt.getDay()] + ", ";
+            var years = dt.getYear();
+            var days = dt.getDate();
+            if (years < 1900) years += 1900;
+            if (days < 10)
+                date += "0" + dt.getDate() + "/" + strMonth[dt.getMonth()] + "/" + years;
+            else
+                date += "" + dt.getDate() + "/" + strMonth[dt.getMonth()] + "/" + years;
+            var phut = dt.getMinutes();
+            if (phut < 10) {
+                phut = "0" + phut;
+            }
+            if (document.getElementById("timer") != null) {
+                document.getElementById("timer").innerHTML = date;
+            }
+        }
+
+        document.onkeyup = enterPressed;
+
+        //tat onload doIframe();
+        function doIframe() {
+            o = document.getElementsByName('QC_frame');
+            for (i = 0; i < o.length; i++) {
+                if (/\bautoHeight\b/.test(o[i].className)) {
+                    AutoSize(o[i]);
+                    addEvent(o[i], 'load', doIframe);
+                }
+            }
+        }
+
+        function AutoSize(e) {
+                e.height = e.contentWindow.document.body.scrollHeight-20;
+                e.width = e.contentWindow.document.body.scrollWidth ;
+        }
+
+        function addEvent(obj, evType, fn) {
+            if (obj.addEventListener) {
+                obj.addEventListener(evType, fn, false);
+                return true;
+            } else if (obj.attachEvent) {
+                var r = obj.attachEvent("on" + evType, fn);
+                return r;
+            } else {
+                return false;
+            }
+        }
+    </script>
+<script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-5707772-1']);
+        _gaq.push(['_setDomainName', 'thanhnien.com.vn']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+ 
+</script>
+<meta name="viewport" content="width=device-width,user-scalable=yes" />
+</head>
+<body onload="ShowTime();WriteLog();">
+<div class="top"><span class="clock"><span class="time-news" id="timer">Thứ năm, 25/07/2013</span></span><span class="tn_online"><a onclick="window.location ='http://www.thanhnien.com.vn/pages/default.aspx'" style="cursor:pointer">Phiên bản đầy đủ</a></span></div>
+<div class="header">
+  <div class="logo"><a href="news_hot.html"><img alt="Báo Bình Thuận" src="Images/LOGO.gif" width="220" style="border:0px"></a></div>
+  <div class="m-banner">
+    <div class="m-advertise">
+      <!--/* Mobie - Adserver 1 */-->
+      <img src="Images/avw.php.gif" alt="" /></div>
+  </div>
+  <div class="search">
+    <div class="text-Search">
+      <input type="text" style="height:24px;width:169px;" onfocus="this.value='';" onblur="if(!this.value)this.value='Nhập từ khóa..';" class="SearchInput" id="vnctcHeaderx1_vnctcMenu1_txtKeyword" value="Nhập từ khóa..." name="vnctcHeaderx1:vnctcMenu1:txtKeyword">
+    </div>
+    <div class="img-search">
+      <input type="image" border="0" src="Images/search-button-without-text-hi.png" id="vnctcHeaderx1_vnctcMenu1_btnSearch" name="vnctcHeaderx1:vnctcMenu1:btnSearch">
+    </div>
+  </div>
+</div>
+<div id="tab" class="menu-tab">
+  <div id="New" class="active"><a href="news_hot.html">Tin mới nhất</a></div>
+  <div id="Category"><a href="categories.html">Chuyên mục</a></div>
+</div>
+<div class="main-news">
+  <div class="Sub_Title">Chủ tịch nước Trương Tấn Sang hội đàm với Tổng thống Barack Obama:</div>
+  <h1 class="news_title">Đã đến lúc xác lập quan hệ đối tác toàn diện</h1>
+  <div class="date">26/07/2013</div>
+  <table class="image-mota">
+    <tr>
+      <td class="Image"><img alt='' src="http://www.thanhnien.com.vn/Pictures20137/Thanh/3/CTN-tn.jpg" /></td>
+    <tr></tr>
+    <td class="MotaImage"></td>
+    </tr>
+  </table>
+  <div class="PageContend">
+    <h2 class="ms-rteElement-H2">Phát biểu tại cuộc họp báo kết thúc buổi hội đàm với Chủ tịch nước Trương Tấn Sang tại Nhà Trắng trưa 25.7 (giờ địa phương), Tổng thống Mỹ Barack Obama nói: “Chúng tôi đã quyết tâm kết thúc Hiệp định đối tác kinh tế chiến lược xuyên Thái Bình Dương này vào cuối năm nay”.</h2>
+    <p class="ms-rteElement-H2">&gt;&gt; Hình ảnh Chủ tịch nước Trương Tấn Sang đến Hoa Kỳ</a><br />
+      &gt;&gt; Chủ tịch nước gặp nhân viên Đại sứ quán tại Hoa Kỳ</a></p>
+    <p><strong>Coi trọng khu vực châu Á - Thái Bình Dương</strong></p>
+    <p>Tại cuộc hội đàm trước khi họp báo, Tổng thống Obama hoan nghênh Chủ tịch nước Trương Tấn Sang và đoàn đại biểu cấp cao Nhà nước Việt Nam tới thăm chính thức Mỹ, khẳng định coi trọng quan hệ Việt - Mỹ và vai trò của Việt Nam tại khu vực, mong muốn quan hệ giữa hai nước trong thời gian tới sẽ tiếp tục phát triển mạnh mẽ. Tổng thống Obama khẳng định: Mỹ tiếp tục coi trọng khu vực châu Á - Thái Bình Dương (TBD) trong tổng thể chiến lược chung của Mỹ, trong đó có vai trò trung tâm của ASEAN trong một cấu trúc khu vực đang định hình cũng như các cơ chế hợp tác tiểu khu vực; mong muốn thúc đẩy quan hệ với ASEAN cũng như các đối tác khác của Mỹ tại Đông Bắc Á…</p>
+    <p>
+      </td>
+      </tr>
+      </tbody>
+      </table>
+    </p>
+    <p>Chủ tịch nước Trương Tấn Sang cám ơn Tổng thống Obama đã mời Chủ tịch nước thăm chính thức Mỹ, khẳng định Việt Nam hoan nghênh Mỹ tăng cường hợp tác với châu Á - TBD vì hòa bình, ổn định và thịnh vượng của khu vực. Chủ tịch nước cũng khẳng định “Việt Nam coi trọng và mong muốn tiếp tục thúc đẩy quan hệ với Mỹ”.</p>
+    <p>Hai bên đã nhất trí đánh giá quan hệ hai nước thời gian qua đã phát triển sâu rộng trên nhiều lĩnh vực, trên cả bình diện song phương và đa phương, tạo nền tảng cho quan hệ bước sang một giai đoạn phát triển mới. Trên cơ sở đó, hai nhà lãnh đạo đã quyết định xác lập quan hệ Đối tác toàn diện Việt - Mỹ dựa trên các nguyên tắc tôn trọng Hiến chương LHQ, luật pháp quốc tế, tôn trọng thể chế chính trị, độc lập, chủ quyền và toàn vẹn lãnh thổ của nhau.</p>
+    <p>Quan hệ Đối tác toàn diện Việt - Mỹ sẽ tạo ra khuôn khổ mới cho quan hệ hợp tác giữa hai nước trong các lĩnh vực như chính trị - ngoại giao, kinh tế - thương mại, khoa học - công nghệ, giáo dục - đào tạo, môi trường và y tế, hợp tác nhân đạo - giải quyết hậu quả chiến tranh, quốc phòng - an ninh, bảo vệ và thúc đẩy quyền con người, và văn hóa - thể thao - du lịch...</p>
+    <p>Hai nhà lãnh đạo tin tưởng Đối tác toàn diện Việt - Mỹ sẽ không chỉ phục vụ tốt hơn lợi ích hai nước mà còn đóng góp vào hòa bình, ổn định, hợp tác và phát triển ở châu Á - TBD và trên thế giới.</p>
+    <p>Tại cuộc hội đàm, Tổng thống Barack Obama và Chủ tịch nước Trương Tấn Sang cũng đã trao đổi các biện pháp nhằm đưa quan hệ hai nước đi vào chiều sâu, thiết thực và hiệu quả hơn nữa trong thời gian tới, trong đó có tăng cường trao đổi đoàn cấp cao, thiết lập các cơ chế hợp tác mới hoặc nâng cấp các cơ chế hiện có. Hai nhà lãnh đạo hoan nghênh việc thiết lập cơ chế đối thoại thường kỳ giữa hai Bộ trưởng Ngoại giao và nhấn mạnh: hợp tác kinh tế, thương mại, đầu tư là nền tảng và động lực của Đối tác toàn diện Việt - Mỹ; khẳng định cam kết hoàn tất đàm phán TPP vào thời điểm sớm nhất có thể trong năm, tính đến sự đa dạng về trình độ phát triển của mỗi nước trong khuôn khổ một hiệp định cân bằng và toàn diện.</p>
+    <p><strong>Ông Obama sẽ sang thăm Việt Nam</strong></p>
+    <p>Đáng chú ý, tại cuộc hội đàm, hai nhà lãnh đạo đã nhất trí quan điểm giải quyết tranh chấp ở biển Đông bằng các biện pháp hòa bình, phù hợp với luật pháp quốc tế. Trong đó có Công ước LHQ về luật Biển (UNCLOS) năm 1982, đồng thời tái khẳng định ủng hộ nguyên tắc không sử dụng vũ lực hoặc đe dọa sử dụng vũ lực để giải quyết tranh chấp trên biển và lãnh thổ.</p>
+    <p>Liên quan vấn đề này, hai nhà lãnh đạo cũng đã nhấn mạnh giá trị của việc tuân thủ đầy đủ Tuyên bố về ứng xử của các bên tại biển Đông (DOC) giữa ASEAN và Trung Quốc, và tầm quan trọng của việc khởi động đàm phán để đạt được Bộ quy tắc ứng xử (COC) hữu hiệu trên biển Đông.</p>
+    <p>Đặc biệt, tại cuộc hội đàm, Chủ tịch nước Trương Tấn Sang đã giới thiệu với Tổng thống Obama bức thư Chủ tịch Hồ Chí Minh gửi Tổng thống Harry S.Truman ngày 16.2.1946, trong đó bày tỏ Việt Nam mong muốn được “hoàn toàn độc lập” và ý nguyện thiết lập “hợp tác đầy đủ” với Mỹ (bức thư gốc hiện đang được lưu giữ tại Cục Lưu trữ quốc gia Mỹ). Nhân dịp này, Chủ tịch nước Trương Tấn Sang đã mời Tổng thống Obama và phu nhân thăm chính thức Việt Nam vào thời gian thích hợp và Tổng thống Obama đã vui vẻ nhận lời sẽ sang thăm Việt Nam trong nhiệm kỳ này.</p>
+    <p> </p>
+    <p> </p>
+    <p style="text-align:right"><strong>Bảo Cầm <br />
+      </strong>(<em>từ Washington D.C</em>)</p>
+  </div>
+  <div class="other">Tin khác</div>
+  <ul class="CungChuyenMuc1">
+    <li class="mob_news01"><a style="cursor:hand" href="Detail.aspx?ID=156559">Tuyên bố chung của Chủ tịch nước Trương Tấn Sang và Tổng thống Barack Obama</a></li>
+    <li class="mob_news01"><a style="cursor:hand" href="Detail.aspx?ID=156513">Kiểm toán không loại trừ đơn vị nào</a></li>
+    <li class="mob_news01"><a style="cursor:hand" href="Detail.aspx?ID=156511">Kiểm soát thu nhập của người có chức vụ, quyền hạn</a></li>
+    <li class="mob_news01"><a style="cursor:hand" href="Detail.aspx?ID=156502">Duy trì lịch tiêm vắc xin viêm gan B cho trẻ</a></li>
+    <li class="mob_news01"><a style="cursor:hand" href="Detail.aspx?ID=156506">1 người bị thương trong vụ truy bắt gỗ lậu</a></li>
+  </ul>
+  <div class='view_more'><a href='categories.html'>Xem thêm</a></div>
+</div>
+<div class="m-banner">
+  <div class='m-advertise'><img src="Images/avw.php.gif" alt="" /></div>
+</div>
+<div class="foot"><span>© 2003-2012 Bản quyền thuộc về  	
+Báo Bình Thuận </span></div>
+</html>
+</body>

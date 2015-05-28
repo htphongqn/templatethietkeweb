@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Báo Bình Thuận</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.9.1.js"></script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#hot_news').cycle({
+						 timeout:	   3000,
+						 prev:    '#prev2',
+				         next:    '#next2',
+						 speed:		   0
+						 });
+	$('#fade_gallery').cycle({timeout:	   4000});
+	});
+</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Scripts Link web-->
+<script type="text/javascript">
+	$(document).ready(function(){
+  		$(".icon_link_web").click(function(){
+    		$("#list_link_web").slideToggle();
+  		});
+	});
+</script>
+<link rel="stylesheet" href="Styles/jquery-ui.css" />
+<script src="Scripts/jquery-ui.js"></script>
+<script>
+$(function() {
+$(".datepicker").datepicker({ dateFormat: "dd-mm-yy" }).val()
+});
+</script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			$("#tabs_detail").tabs("#tabs_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>   
+</head>
+<body>
+<!--#begin Wrap-->
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="index.html" id="logo"><img src="http://baobinhthuan.com.vn/vn/app_themes/theme01/Images/LOGO.gif" alt="Báo Bình Thuận" /> </a>
+    <div id="header_right" class="fr">
+      <ul id="top_menu" class="fr">
+        <li><a href=""> <img src="http://baobinhthuan.com.vn/data/categories/474/tt.jpg" alt="" />Trang chủ </a></li>
+        <li><a href=""> <img src="http://baobinhthuan.com.vn/data/categories/514/gt.jpg" alt="" />Giới thiệu </a></li>
+        <li><a href=""> <img src="http://baobinhthuan.com.vn/data/categories/458/sitemap.jpg" alt="" />Sơ đồ </a></li>
+        <li><a href=""> <img src="http://baobinhthuan.com.vn/data/categories/455/lh.jpg" alt="" />Liên hệ </a></li>
+        <li><a href=""> <img src="http://baobinhthuan.com.vn/data/categories/671/english.gif" alt="" />English </a></li>
+        <li><a href=""> <img src="http://baobinhthuan.com.vn/data/categories/590/qc.jpg" alt="" />Mail </a></li>
+        <li><a href=""> <img src="http://baobinhthuan.com.vn/data/categories/671/english.gif" alt="" />LH quảng cáo </a></li>
+      </ul>
+      <div id="banner_head">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://baobinhthuan.com.vn/data/flash/swflash.cab#version=5,0,0,0" width="566" height="117" id="ShockwaveFlash1">
+          <param name="movie" value="http://baobinhthuan.com.vn/data/periods/1/Banerchinh.swf">
+          <param name="Menu" value="0">
+          <param name="quality" value="high">
+          <embed width="566" height="117" src="http://baobinhthuan.com.vn/data/periods/1/Banerchinh.swf"></embed>
+        </object>
+      </div>
+    </div>
+    <div class="cf"></div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="list_news.html">Chính trị</a>
+        <ul>
+          <li><a href="#">Nghị quyết TW4</a></li>
+          <li><a href="#">Tư tưởng Hồ Chí Minh</a></li>
+          <li><a href="#">Biển đảo</a></li>
+        </ul>
+      </li>
+      <li><a href="introduction.html" class="parent">Xã hội</a> </li>
+      <li><a href="#">Kinh tế</a></li>
+      <li><a href="list_news.html">Pháp luật</a></li>
+      <li><a href="list_news.html">Du lịch</a></li>
+      <li><a href="#">Văn hóa</a></li>
+      <li><a href="list_news.html">Đời sống</a>
+        <ul>
+          <li><a href="#">Sức khỏe của bạn</a></li>
+          <li><a href="#">Y tế</a></li>
+          <li><a href="#">Môi trường</a></li>
+          <li><a href="#">Khoa học</a></li>
+          <li><a href="#">Không gian đẹp</a></li>
+        </ul>
+      </li>
+      <li><a href="list_news.html">Quốc tế</a></li>
+      <li><a href="#">Trong nước</a></li>
+      <li><a href="list_news.html">G dục- T niên</a></li>
+      <li><a href="list_news.html">Bạn đọc</a></li>
+      <li><a href="#">Thể thao</a></li>
+      <li><a href="list_news.html">English</a></li>
+    </ul>
+    <div class="cf"></div>
+    <div id="top_main_info" class="fl">
+      <div class="time_today">Thứ tư, ngày 28/05/2014</div>
+      <div class="new_info">
+        <marquee width="100%" height="auto" direction="left" scrolldelay="1" scrollamount="3" onmouseout="this.start()" onmouseover="this.stop()">
+        <a href="default.aspx?cat_id=578&amp;news_id=66485#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl0_lnkNewsScrollTitle">Một phụ nữ Pakistan bị gia đình ném đá đến chết </a> <a href="default.aspx?cat_id=578&amp;news_id=66484#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl1_lnkNewsScrollTitle">Mỹ: Trung Quốc là bên duy nhất gây hấn và khiêu khích ở Biển Đông </a> <a href="default.aspx?cat_id=652&amp;news_id=66483#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl2_lnkNewsScrollTitle">Bánh tráng xoài đảo Phú Quý </a> <a href="default.aspx?cat_id=588&amp;news_id=66482#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl3_lnkNewsScrollTitle">Kiên quyết bám biển, giữ vững vùng lãnh hải thiêng liêng của Tổ quốc <img border="0" src="http://baobinhthuan.com.vn/vn/Images/video2.gif"> </a> <a href="default.aspx?cat_id=578&amp;news_id=66481#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl4_lnkNewsScrollTitle">Moscow đề nghị Kiev ngừng chiến dịch quân sự vào đông Ukraine </a> <a href="default.aspx?cat_id=569&amp;news_id=66479#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl5_lnkNewsScrollTitle">Phó Thủ tướng Vũ Đức Đam:Những hành động đơn phương, trái luật quốc tế phải bị loại bỏ </a> <a href="default.aspx?cat_id=570&amp;news_id=66478#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl6_lnkNewsScrollTitle">Trà dâm bụt giúp giảm cholesterol và hạ huyết áp </a> <a href="default.aspx?cat_id=582&amp;news_id=66477#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl7_lnkNewsScrollTitle">VFF làm việc với HLV tuyển nữ Trần Vân Phát </a> <a href="default.aspx?cat_id=582&amp;news_id=66476#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl8_lnkNewsScrollTitle">Tay vợt Hoàng Nam đứng trước cơ hội lọt vào top 30 trẻ thế giới </a> <a href="default.aspx?cat_id=633&amp;news_id=66475#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl9_lnkNewsScrollTitle">Giàn khoan Hải Dương 981 dịch chuyển 23 hải lý, vẫn trong vùng biển Việt Nam</a> <a href="default.aspx?cat_id=569&amp;news_id=66474#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl10_lnkNewsScrollTitle">Hôm nay, Quốc hội thảo luận Luật Doanh nghiệp sửa đổi </a> <a href="default.aspx?cat_id=578&amp;news_id=66473#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl11_lnkNewsScrollTitle">Nhật Bản muốn xây dựng bộ quy tắc ứng xử trên không </a> <a href="default.aspx?cat_id=578&amp;news_id=66472#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl12_lnkNewsScrollTitle">Cháy bệnh viện Hàn Quốc, 21 người thiệt mạng </a> <a href="default.aspx?cat_id=578&amp;news_id=66471#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl13_lnkNewsScrollTitle">Bầu cử Tổng thống Ai Cập: phe ủng hộ Tướng el-Sisi ăn mừng </a> <a href="default.aspx?cat_id=578&amp;news_id=66470#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl14_lnkNewsScrollTitle">Triều Tiên dọa 'đụng độ thảm khốc' với Mỹ </a> <a href="default.aspx?cat_id=633&amp;news_id=66469#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl15_lnkNewsScrollTitle">Tàu cá Đà Nẵng lật úp sau hai cú đâm chí mạng</a> <a href="default.aspx?cat_id=633&amp;news_id=66468#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl16_lnkNewsScrollTitle">Muốn không lệ thuộc kinh tế Trung Quốc, doanh nghiệp phải đoàn kết</a> <a href="default.aspx?cat_id=686&amp;news_id=66467#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl17_lnkNewsScrollTitle">Vì biển, đảo quê&nbsp; hương</a> <a href="default.aspx?cat_id=571&amp;news_id=66466#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl18_lnkNewsScrollTitle">Trường THPT Lê Lợi: Năm học 2014&nbsp; - 2015 tuyển sinh thêm cấp THCS và thực hiện chế độ bán trú, nội trú </a> <a href="default.aspx?cat_id=510&amp;news_id=66465#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl19_lnkNewsScrollTitle">Thuận Hòa: Xanh lên nhờ những công trình thủy lợi </a> <a href="default.aspx?cat_id=572&amp;news_id=66464#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl20_lnkNewsScrollTitle">Kiên quyết phản đối Trung Quốc đặt giàn khoan Hải Dương 981 trái phép ở Việt Nam </a> <a href="default.aspx?cat_id=652&amp;news_id=66463#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl21_lnkNewsScrollTitle">Thành lập Trung tâm chăm sóc sức khỏe cho người cao tuổi tại Phan Thiết </a> <a href="default.aspx?cat_id=702&amp;news_id=66462#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl22_lnkNewsScrollTitle">Một bức ảnh phản cảm </a> <a href="default.aspx?cat_id=573&amp;news_id=66461#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl23_lnkNewsScrollTitle">Cần&nbsp; đẩy nhanh tiến độ cấp giấy chứng nhận quyền sử dụng đất </a> <a href="default.aspx?cat_id=576&amp;news_id=66460#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl24_lnkNewsScrollTitle">Đất lúa thu hồi được hỗ trợ 2,5 lần giá đất nông nghiệp </a> <a href="default.aspx?cat_id=571&amp;news_id=66459#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl25_lnkNewsScrollTitle">Trước kỳ thi tốt nghiệp THPT: Thí sinh đặc biệt lưu ý đến giờ giấc các môn thi </a> <a href="default.aspx?cat_id=510&amp;news_id=66458#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl26_lnkNewsScrollTitle">Trao nhiều “cần câu” cho nông, ngư dân </a> <a href="default.aspx?cat_id=580&amp;news_id=66457#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl27_lnkNewsScrollTitle">Ngày xưa, đội chiếu bóng lưu động </a> <a href="default.aspx?cat_id=588&amp;news_id=66456#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl28_lnkNewsScrollTitle">Những điều giản dị dạy con yêu nước </a> <a href="default.aspx?cat_id=571&amp;news_id=66455#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl29_lnkNewsScrollTitle">Sinh viên Việt Nam giàu nghị lực lên báo New York Times </a> <a href="default.aspx?cat_id=569&amp;news_id=66454#content" id="vnctcHeaderx1_vnctcMenu1_vnctc_newsrun1_repNewsScroll__ctl30_lnkNewsScrollTitle">Trung Quốc đâm chìm tàu cá Việt Nam là hành động khủng bố </a>
+        </marquee>
+      </div>
+      <div id="search_form">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+      </div>
+    </div>
+  </div>
+  <!--End Main Menu-->
+  <!--Main-->
+  <div id="main">
+    <!--Main Column-->
+    <div id="main_content" class="fl">
+      <!--Left Col 1-->
+      <div id="main_col_1" class="fl">
+        <!--List News-->
+        <div class="box">
+          <div id="tab_list_page"><a href="default.aspx?cat_id=580" class="HotCat4_title" id="vnctcHomeLeft_Detail1_vnctcContent1__ctl0_cat_name">Văn hóa</a><span id="today">Thứ năm, ngày 29/05/2014</span></div>
+          <div id="list_News_page">
+            <div class="hot_listNews_page"> <a href="" class="h3hot_listNews_page">Ngày xưa, đội chiếu bóng lưu động </a>
+              <p class="date">Cập nhật ngày 28-05-2014</p>
+              <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn//data/news/2014/5/66457/ngay.jpg" alt="" /></a>
+              <p class="short_des">BT- Alô, alô, đội chiếu bóng lưu động số… kính mời đồng bào, đồng chí và các bạn đón xem chương trình chiếu bóng tối nay, tại bãi chiếu… vào lúc 8 giờ, với bộ phim…</p>
+            </div>
+            <ul>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66413/chuas.jpg" alt="" /></a> <a href="" class="h3list_News_page">Chùa Trường Sa Lớn – khoảng không tĩnh lặng giữa biển khơi </a>
+                <p class="date">Cập nhật ngày 28-05-2014&nbsp;<img src="Images/New.gif" alt="" width="28" height="14" /></p>
+                <p class="short_des">BT- Chùa Trường Sa Lớn thuộc huyện đảo Trường Sa, tỉnh Khánh Hòa nằm ngay tại vị trí trung tâm đảo, từ cầu tàu lớn đã nhìn thấy cổng chùa uy nghiêm. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66389/dem6s.jpg" alt="" /></a> <a href="" class="h3list_News_page">Đêm chung kết cuộc thi Hoa hậu Đại Dương Việt Nam 2014 </a>
+                <p class="date">Cập nhật ngày 28-05-2014&nbsp;<img src="Images/New.gif" alt="" width="28" height="14" /></p>
+                <p class="short_des">BTO- Đêm chung kết cuộc thi Hoa hậu Đại Dương diễn ra tại Quảng trường Nguyễn Tất Thành, thành phố Phan Thiết. Tham dự có đại diện lãnh đạo tỉnh, đông đảo khán giả cùng Ban giám khảo và 29 thí sinh. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66352/songs.jpg" alt="" /></a> <a href="" class="h3list_News_page"> Nguyễn Vĩnh Lộc khá thành công với ca khúc Sóng nuốt căm hờn </a>
+                <p class="date">Cập nhật ngày 28-05-2014&nbsp;<img src="Images/New.gif" alt="" width="28" height="14" /></p>
+                <p class="short_des">BTO- “Phẫn nộ trước sự ngang ngược của Trung Quốc hạ đặt trái phép giàn khoan Hải Dương - 981 trong vùng biển nước ta và những hành động bá quyền nước lớn của họ khi xâm phạm chủ quyền lãnh hải Việt Nam. Với tấm lòng nhiệt huyết của mình, tôi viết bài hát:  Sóng nuốt căm hờn </p>
+              </li>
+              <li> <a href="" class="h3list_News_page">Chùa Trường Sa Lớn – khoảng không tĩnh lặng giữa biển khơi </a>
+                <p class="date">Cập nhật ngày 28-05-2014&nbsp;<img src="Images/New.gif" alt="" width="28" height="14" /></p>
+                <p class="short_des">BT- Chùa Trường Sa Lớn thuộc huyện đảo Trường Sa, tỉnh Khánh Hòa nằm ngay tại vị trí trung tâm đảo, từ cầu tàu lớn đã nhìn thấy cổng chùa uy nghiêm. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66389/dem6s.jpg" alt="" /></a> <a href="" class="h3list_News_page">Đêm chung kết cuộc thi Hoa hậu Đại Dương Việt Nam 2014 </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- Đêm chung kết cuộc thi Hoa hậu Đại Dương diễn ra tại Quảng trường Nguyễn Tất Thành, thành phố Phan Thiết. Tham dự có đại diện lãnh đạo tỉnh, đông đảo khán giả cùng Ban giám khảo và 29 thí sinh. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn//data/news/2014/5/66352/song.jpg" alt="" /></a> <a href="" class="h3list_News_page"> Nguyễn Vĩnh Lộc khá thành công với ca khúc Sóng nuốt căm hờn </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- “Phẫn nộ trước sự ngang ngược của Trung Quốc hạ đặt trái phép giàn khoan Hải Dương - 981 trong vùng biển nước ta và những hành động bá quyền nước lớn của họ khi xâm phạm chủ quyền lãnh hải Việt Nam. Với tấm lòng nhiệt huyết của mình, tôi viết bài hát:  Sóng nuốt căm hờn </p>
+              </li>
+              <li> <a href="" class="h3list_News_page">Chùa Trường Sa Lớn – khoảng không tĩnh lặng giữa biển khơi </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BT- Chùa Trường Sa Lớn thuộc huyện đảo Trường Sa, tỉnh Khánh Hòa nằm ngay tại vị trí trung tâm đảo, từ cầu tàu lớn đã nhìn thấy cổng chùa uy nghiêm. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66389/dem6s.jpg" alt="" /></a> <a href="" class="h3list_News_page">Đêm chung kết cuộc thi Hoa hậu Đại Dương Việt Nam 2014 </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- Đêm chung kết cuộc thi Hoa hậu Đại Dương diễn ra tại Quảng trường Nguyễn Tất Thành, thành phố Phan Thiết. Tham dự có đại diện lãnh đạo tỉnh, đông đảo khán giả cùng Ban giám khảo và 29 thí sinh. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66352/songs.jpg" alt="" /></a> <a href="" class="h3list_News_page"> Nguyễn Vĩnh Lộc khá thành công với ca khúc Sóng nuốt căm hờn </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- “Phẫn nộ trước sự ngang ngược của Trung Quốc hạ đặt trái phép giàn khoan Hải Dương - 981 trong vùng biển nước ta và những hành động bá quyền nước lớn của họ khi xâm phạm chủ quyền lãnh hải Việt Nam. Với tấm lòng nhiệt huyết của mình, tôi viết bài hát:  Sóng nuốt căm hờn </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66413/chuas.jpg" alt="" /></a> <a href="" class="h3list_News_page">Chùa Trường Sa Lớn – khoảng không tĩnh lặng giữa biển khơi </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BT- Chùa Trường Sa Lớn thuộc huyện đảo Trường Sa, tỉnh Khánh Hòa nằm ngay tại vị trí trung tâm đảo, từ cầu tàu lớn đã nhìn thấy cổng chùa uy nghiêm. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66389/dem6s.jpg" alt="" /></a> <a href="" class="h3list_News_page">Đêm chung kết cuộc thi Hoa hậu Đại Dương Việt Nam 2014 </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- Đêm chung kết cuộc thi Hoa hậu Đại Dương diễn ra tại Quảng trường Nguyễn Tất Thành, thành phố Phan Thiết. Tham dự có đại diện lãnh đạo tỉnh, đông đảo khán giả cùng Ban giám khảo và 29 thí sinh. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66352/songs.jpg" alt="" /></a> <a href="" class="h3list_News_page"> Nguyễn Vĩnh Lộc khá thành công với ca khúc Sóng nuốt căm hờn </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- “Phẫn nộ trước sự ngang ngược của Trung Quốc hạ đặt trái phép giàn khoan Hải Dương - 981 trong vùng biển nước ta và những hành động bá quyền nước lớn của họ khi xâm phạm chủ quyền lãnh hải Việt Nam. Với tấm lòng nhiệt huyết của mình, tôi viết bài hát:  Sóng nuốt căm hờn </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66389/dem6s.jpg" alt="" /></a> <a href="" class="h3list_News_page">Đêm chung kết cuộc thi Hoa hậu Đại Dương Việt Nam 2014 </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- Đêm chung kết cuộc thi Hoa hậu Đại Dương diễn ra tại Quảng trường Nguyễn Tất Thành, thành phố Phan Thiết. Tham dự có đại diện lãnh đạo tỉnh, đông đảo khán giả cùng Ban giám khảo và 29 thí sinh. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66352/songs.jpg" alt="" /></a> <a href="" class="h3list_News_page"> Nguyễn Vĩnh Lộc khá thành công với ca khúc Sóng nuốt căm hờn </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- “Phẫn nộ trước sự ngang ngược của Trung Quốc hạ đặt trái phép giàn khoan Hải Dương - 981 trong vùng biển nước ta và những hành động bá quyền nước lớn của họ khi xâm phạm chủ quyền lãnh hải Việt Nam. Với tấm lòng nhiệt huyết của mình, tôi viết bài hát:  Sóng nuốt căm hờn </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66413/chuas.jpg" alt="" /></a> <a href="" class="h3list_News_page">Chùa Trường Sa Lớn – khoảng không tĩnh lặng giữa biển khơi </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BT- Chùa Trường Sa Lớn thuộc huyện đảo Trường Sa, tỉnh Khánh Hòa nằm ngay tại vị trí trung tâm đảo, từ cầu tàu lớn đã nhìn thấy cổng chùa uy nghiêm. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66389/dem6s.jpg" alt="" /></a> <a href="" class="h3list_News_page">Đêm chung kết cuộc thi Hoa hậu Đại Dương Việt Nam 2014 </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- Đêm chung kết cuộc thi Hoa hậu Đại Dương diễn ra tại Quảng trường Nguyễn Tất Thành, thành phố Phan Thiết. Tham dự có đại diện lãnh đạo tỉnh, đông đảo khán giả cùng Ban giám khảo và 29 thí sinh. </p>
+              </li>
+              <li> <a href="news_detail.html"><img class="img_general" src="http://baobinhthuan.com.vn/data/news/2014/5/66352/songs.jpg" alt="" /></a> <a href="" class="h3list_News_page"> Nguyễn Vĩnh Lộc khá thành công với ca khúc Sóng nuốt căm hờn </a>
+                <p class="date">Cập nhật ngày 28-05-2014</p>
+                <p class="short_des">BTO- “Phẫn nộ trước sự ngang ngược của Trung Quốc hạ đặt trái phép giàn khoan Hải Dương - 981 trong vùng biển nước ta và những hành động bá quyền nước lớn của họ khi xâm phạm chủ quyền lãnh hải Việt Nam. Với tấm lòng nhiệt huyết của mình, tôi viết bài hát:  Sóng nuốt căm hờn </p>
+              </li>
+            </ul>
+            <div class="navigation"><a href="" class="pre">Đầu</a><a href=""><<</a><a href="">3</a><a href="">4</a><a href="">5</a><a href="">6</a><a href="">7</a><a href="">8</a>...<a href="">15</a><a href="">16</a><a href="">17</a><a href="">>></a><a href="" class="next">Cuối</a> </div>
+            <div class="cf"></div>
+          </div>
+        </div>
+        <!--End List News--->
+</div>
+<!--End Left Col 1-->
+<!--Left Col 2-->
+<div id="main_col_2" class="fr">
+  <!--Category Home-->
+  <div class="box" id="focus">
+    <div class="box_ct"> <img src="Images/TieuDiem1.gif" alt="" />
+      <ul>
+        <li><a href="" class="h4Title">Vì biển, đảo quê  hương</a></li>
+        <li><a href="" class="h4Title">Kiên quyết phản đối Trung Quốc đặt giàn khoan Hải Dương 981 trái phép ở Việt Nam</a></li>
+        <li><a href=""><img src="http://baobinhthuan.com.vn/data/news/2014/5/66461/candays.jpg" alt="" class="img_general" /></a> <a href="" class="h4Title">Cần  đẩy nhanh tiến độ cấp giấy chứng nhận quyền sử dụng đất </a></li>
+        <li><a href=""><img src="http://baobinhthuan.com.vn/data/news/2014/5/66442/ramats.jpg" alt="" class="img_general" /></a> <a href="" class="h4Title">“Ra mắt” 45 mẫu sản phẩm lưu niệm đặc trưng phục vụ du lịch Bình Thuận </a></li>
+        <li><a href=""><img src="http://baobinhthuan.com.vn/data/news/2014/5/66431/xets.jpg" alt="" class="img_general" /></a> <a href="" class="h4Title">Xét xử phúc thẩm vụ án Lê Duy Khiêm lợi dụng chức vụ quyền hạn trong thi hành công vụ </a></li>
+        <li><a href=""><img src="http://baobinhthuan.com.vn/data/news/2014/5/66415/dekhongs.jpg" alt="" class="img_general" /></a> <a href="" class="h4Title">Để không thiếu nước tưới thanh long </a></li>
+        <li><a href=""><img src="http://baobinhthuan.com.vn/data/news/2014/5/66414/ngayes.jpg" alt="" class="img_general" /></a> <a href="" class="h4Title"> Ngày hè bổ ích: Với “Học kỳ quân đội - rèn luyện kỹ năng sống cho thiếu nhi” </a></li>
+      </ul>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Category Home-->
+  <!--Category Home-->
+  <div class="box" id="necessary_info">
+    <div class="box_ct">
+      <div class="box_Tab"> Thông tin cần biết </div>
+      <ul>
+        <li><a href=""><img src="Images/tt1.jpg" alt="" /></a></li>
+        <li><a href=""><img src="Images/tt7.jpg" alt="" /></a></li>
+        <li><a href=""><img src="Images/tt4.jpg" alt="" /></a></li>
+        <li><a href=""><img src="Images/tt5.jpg" alt="" /></a></li>
+        <li><a href=""><img src="Images/cach.jpg" alt="" /></a></li>
+        <li><a href=""><img src="Images/tt8.jpg" alt="" /></a></li>
+        <li><a href=""><img src="Images/tt9.jpg" alt="" /></a></li>
+      </ul>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Category Home-->
+  <!--Category Home-->
+  <div class="box" id="heart_for_poor">
+    <div class="box_ct">
+      <div class="box_Tab"> Những tấm lòng vì người nghèo </div>
+      <a href="" class="h3Title"> Cần lắm một mái nhà </a> <img src="http://baobinhthuan.com.vn/data/news/2014/5/66206/canlams.jpg" alt="" class="img_general" />
+      <p class="short_des">BT- Mới đây, tôi cùng đi với các anh chị bên Hội Cựu thanh niên xung phong Bình Thuận và Hội Trường Sơn - Đường Hồ Chí Minh đến thăm nhà những hội viên nghèo. </p>
+      <a href="" class="view_all blue">Xem chi tiết</a>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Category Home-->
+  <div class="box cate_home_maincol2">
+    <div class="box_ct">
+      <!--Category Home-->
+      <div class="cate_home_maincol2_item">
+        <div class="box_Tab"> <a href="">Chuyên mục: Đi, thấy và viết</a> </div>
+        <a href="" class="h3Title"> Gian nan đường vào nghĩa trang Động Đỏ </a> <img src="http://baobinhthuan.com.vn/data/news/2014/5/66120/gianan-150.jpg" alt="" class="img_general" />
+        <p class="short_des"> BTO - Từ lâu, tất cả hộ gia đình trong xã Phan Rí Thành (Bắc Bình) có người thân qua đời đều phải chấp hành quy định của UBND xã về địa điểm chôn cất, theo quy định này thì người chết phải đem chôn ở “Nghĩa trang Động Đỏ”. </p>
+        <a href="" class="view_all blue">Xem chi tiết</a> </div>
+      <!--Category Home-->
+      <div class="cate_home_maincol2_item">
+        <div class="box_Tab"> <a href="">Phản hồi trên BTO</a> </div>
+        <a href="" class="h3Title"> Phản hồi trên BTO tuần qua </a>
+        <p class="short_des"> BT- Tuần qua, cùng với cả nước các tầng lớp nhân dân ở Bình Thuận tiếp tục phản đối và yêu cầu phía Trung Quốc phải rút ngay giàn khoan Hải Dương 981 ra khỏi vùng biển Việt Nam. Chuyên mục “Bình Thuận hướng về biển – đảo tổ quốc” nhận được rất nhiều ý kiến của bà con nông dân, ngư dân, văn nghệ sĩ, nhà khoa học, cựu chiến binh… </p>
+        <a href="" class="view_all blue">Xem chi tiết</a> </div>
+      <!--Category Home-->
+      <div class="cate_home_maincol2_item">
+        <div class="box_Tab"> <a href="">Bạn đọc</a> </div>
+        <a href="" class="h3Title"> Cần  đẩy nhanh tiến độ cấp giấy chứng nhận quyền sử dụng đất </a> <img src="http://baobinhthuan.com.vn/data/news/2014/5/66461/candays.jpg" alt="" class="img_general" />
+        <p class="short_des"> BT- Một số hộ dân ngụ tại phường Hàm Tiến (Phan Thiết) phản ánh: Tại các khu dân cư khu phố 1, khu dân cư 1/8 phường Hàm Tiến, các hộ dân mong muốn được hướng dẫn làm thủ tục cấp giấy chứng nhận quyền sử dụng đất (QSDĐ) nhưng nhiều năm nay vẫn chưa được triển khai nên việc giao dịch, thế chấp tài sản để làm ăn gặp trở ngại. </p>
+        <a href="" class="view_all blue">Xem chi tiết</a> </div>
+      <!--Category Home-->
+      <div class="cate_home_maincol2_item">
+        <div class="box_Tab"> <a href="">Đơn thư</a> </div>
+        <a href="" class="h3Title"> Đất lúa thu hồi được hỗ trợ 2,5 lần giá đất nông nghiệp </a> <img src="http://baobinhthuan.com.vn/data/news/2014/5/66460/datluas.jpg" alt="" class="img_general" />
+        <p class="short_des"> BT- Ông Nguyễn Văn Long, ngụ tại xã Tiến Lợi (Phan Thiết) phản ánh: Gia đình ông có đất bị thu hồi để triển khai dự án. Ông đã nhận tiền đền bù thiệt hại theo đất nông nghiệp, nhưng ông không biết có được nhận tiền hỗ trợ khác ở mức 2,5 lần đất nông nghiệp hay không, vì hiện nay ông chưa nhận được thông báo có tiền hỗ trợ. </p>
+        <a href="" class="view_all blue">Xem chi tiết</a> </div>
+      <!--Category Home-->
+      <div class="cate_home_maincol2_item">
+        <div class="box_Tab"> <a href="">Luật sư của bạn</a> </div>
+        <a href="" class="h3Title"> Sau khi ly hôn, muốn chứng minh tài sản riêng thì cần những điều kiện gì? </a>
+        <p class="short_des"> BTO- Tôi có một việc cần Quý báo tư vấn như sau: Chị tôi đã xây dựng gia đình và đã có với nhau 4 cháu, thời gian chung sống đã khá lâu rồi. Ba trong số 4 người con đã lập gia đình, 1 anh cả và 2 cô em gái. Duy chỉ còn 1 em gái là chưa lập gia đình. Do mâu thuẫn gia đình mà anh chị tôi đã không thể chung sống được với nhau. Trước khi ra toà xử ly hôn, chị tôi muốn biết được về quyền sở hữu tài sản cụ thể như sau: </p>
+        <a href="" class="view_all blue">Xem chi tiết</a> </div>
+      <!--Category Home-->
+      <div class="cate_home_maincol2_item">
+        <div class="box_Tab"> <a href="">Tin nóng 24/7</a> </div>
+        <a href="" class="h3Title"> Một bức ảnh phản cảm </a> <img src="http://baobinhthuan.com.vn/data/news/2014/5/66462/mots.jpg" alt="" class="img_general" />
+        <p class="short_des">BT- Tại một khách sạn cao tầng trên đường Từ Văn Tư nối dài - thuộc khu dân cư Trung tâm thương mại bắc Phan Thiết, treo một bức ảnh lớn về hai cặp tình nhân đứng bên tàu lửa và trên đường ray xe lửa có đôi nam nữ ngồi chuyện trò…Đây là bức ảnh xưa được vẽ lại. </p>
+        <a href="" class="view_all blue">Xem chi tiết</a> </div>
+      <!--Category Home-->
+      <div class="cate_home_maincol2_item">
+        <div class="box_Tab"> <a href="">Hộp thư bạn đọc</a> </div>
+        <a href="" class="h3Title"> Hộp thư bạn đọc từ ngày 14 đến ngày 30/4/2014 </a>
+        <p class="short_des"> BTO- Từ ngày 14 đến ngày 30/4/2014, Báo Bình Thuận Online (BTO) đã nhận được nhiều tin, bài, ảnh… của các cộng tác viên như: Phạm Năng Hiền, Trần Minh Tùng, Thiên Loan, Nguyễn Nguyên Vũ, Trần Thị Huyền Trang, Võ Đình Tiến, Lê Trang Thùy Nhung, Phạm Tấn Thiên, Nguyễn Minh Sơn, Việt Quốc, Thanh Thủy, Phan Cao Thông, Lê Hữu Phước, Nguyễn Trọng Việt </p>
+        <a href="" class="view_all blue">Xem chi tiết</a> </div>
+      <!--End Category Home-->
+      <div class="cf"></div>
+    </div>
+  </div>
+</div>
+<!--End Left Col 2-->
+</div>
+<!--End Main Column-->
+<!--Right Column-->
+<div id="right_col" class="fr">
+  <!--Ads Top Right-->
+  <div class="box">
+    <div class="box_ct ads"><a href=""><img src="http://baobinhthuan.com.vn/data/aditems/129/AHOCTAP_HOCHIMINH.jpg" alt="" /></a> <a href=""><img src="http://baobinhthuan.com.vn/data/aditems/146/biendao.jpg" alt="" /></a> <a href="">
+      <object width="303" height="100" id="ShockwaveFlash1" codebase="http://baobinhthuan.com.vn/data/flash/swflash.cab#version=5,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+        <param value="http://baobinhthuan.com.vn/data/aditems/90/dulich1.swf" name="movie">
+        <param value="0" name="Menu">
+        <param value="high" name="quality">
+        <embed width="303" height="100" src="http://baobinhthuan.com.vn/data/aditems/90/dulich1.swf">
+      </object>
+      </a> <a href="">
+      <embed width="300" height="150" src="http://baobinhthuan.com.vn/data/aditems/135/SR PHAN THIET.swf"> 
+      </a> <a href="">
+      <object width="300" height="100" id="ShockwaveFlash1" codebase="http://baobinhthuan.com.vn/data/flash/swflash.cab#version=5,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+        <param value="http://baobinhthuan.com.vn/data/aditems/184/viet1.swf" name="movie">
+        <param value="0" name="Menu">
+        <param value="high" name="quality">
+        <embed width="300" height="100" src="http://baobinhthuan.com.vn/data/aditems/184/viet1.swf">
+      </object>
+      </a> <a href="">
+      <object width="300" height="100" id="ShockwaveFlash1" codebase="http://baobinhthuan.com.vn/data/flash/swflash.cab#version=5,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+        <param value="http://baobinhthuan.com.vn/data/aditems/186/nhan.swf" name="movie">
+        <param value="0" name="Menu">
+        <param value="high" name="quality">
+        <embed width="300" height="100" src="http://baobinhthuan.com.vn/data/aditems/186/nhan.swf">
+      </object>
+      </a> <a href=""><img border="0" src="http://baobinhthuan.com.vn/data/aditems/188/logomobile.gif" alt="" /></a> <a href=""><img border="0" src="http://baobinhthuan.com.vn/data/aditems/198/ffff.gif" alt="" /></a> <a href="" class="ads_2_col"><img src="http://baobinhthuan.com.vn/data/aditems/115/giaoluu.jpg" alt="" /></a> <a href="" class="ads_2_col"><img src="http://baobinhthuan.com.vn/data/aditems/116/baogiay.jpg" alt="" /></a> </div>
+  </div>
+  <!--End Ads Top Right-->
+  <!--Video-->
+  <div class="box" id="video">
+    <div class="box_Tab"> Phóng sự Video </div>
+    <div class="box_ct">
+      <div class="hot_cate_right" id="hot_video"><img src="Images/bg_Video1.gif" alt="" width="280" height="200" /> <a href="" class="title_hot_other">Ngọt ngào mùa Valentine</a></div>
+      <ul id="list_videos">
+        <li><a href="video.html" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/341/chung.jpg" alt="" /></a> <a href="video.html" class="title_other_cate">Đêm chung kết cuộc thi Hoa hậu Đại Dương &nbsp;2014: Bảo vệ môi trường biển gắn với bảo vệ chủ quyền lãnh hải Tổ quốc</a></li>
+        <li><a href="" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/340/bieu1.jpg" alt="" /></a> <a href="" class="title_other_cate">29 người đẹp biểu diễn tài năng tại Muine Bay Resort</a></li>
+        <li><a href="" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/339/vongthi.jpg" alt="" /></a> <a href="" class="title_other_cate">Vòng thi người đẹp bikini diễn ra tại Sailing Bay Beach Resort</a></li>
+        <li><a href="" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/337/khaimac.jpg" alt="" /></a> <a href="" class="title_other_cate">Khai mạc Đại hội thể dục thể thao tỉnh Bình Thuận lần thứ VII &ndash; 2014</a></li>
+        <li><a href="" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/336/xaham.jpg" alt="" /></a> <a href="" class="title_other_cate">Xã Hàm Hiệp: Chênh vênh cầu Xuân Điền</a></li>
+        <li><a href="" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/333/cautreo.jpg" alt="" /></a> <a href="" class="title_other_cate">Cầu treo lắc lẻo…</a></li>
+        <li><a href="" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/330/vao.jpg" alt="" /></a> <a href="" class="title_other_cate">Vào bếp cùng du khách nước ngoài</a></li>
+        <li><a href="" class="video_outer"><img src="http://baobinhthuan.com.vn/data/pgcategories/328/duan.jpg" alt="" /></a> <a href="" class="title_other_cate">Dự án mở rộng, nâng cấp quốc lộ 1A: Bắc Bình nỗ lực giao mặt bằng đúng hẹn</a></li>
+      </ul>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Video-->
+  <!--Gallery Images-->
+  <div class="box" id="gallery_images">
+    <div class="box_Tab">Phóng sự ảnh</div>
+    <div class="box_ct">
+      <div class="hot_cate_right" id="hot_gallery">
+        <div id="fade_gallery">
+          <div><a href="gallery.html"><img src="http://baobinhthuan.com.vn/data/pgcategories/334/hiepluc.jpg" alt="" width="100%" /></a> <a href="gallery.html" class="title_hot_other">“Hiệp lực” phục vụ Dự án nâng cấp, mở rộng QL1A đoạn qua Bình Thuận</a></div>
+          <div><a href=""><img src="http://baobinhthuan.com.vn/data/pgcategories/331/trieucuong1.jpg" alt="" width="100%" /></a> <a href="" class="title_hot_other">Triều cường dâng cao làm sập, cuốn trôi nhiều nhà dân</a></div>
+          <div><a href=""><img src="http://baobinhthuan.com.vn/data/pgcategories/327/hoiha4.jpg" alt="" width="100%" /></a> <a href="" class="title_hot_other">Hối hả thi công mở rộng Quốc lộ 1A</a></div>
+        </div>
+      </div>
+      <ul class="list_right_news">
+        <li> <a href="">“Hiệp lực” phục vụ Dự án nâng cấp, mở rộng QL1A đoạn qua Bình Thuận</a></li>
+        <li> <a href="">Triều cường dâng cao làm sập, cuốn trôi nhiều nhà dân</a></li>
+        <li> <a href="">Hối hả thi công mở rộng Quốc lộ 1A</a></li>
+      </ul>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Gallery Images-->
+  <!--Ads Middle Right-->
+  <div class="box">
+    <div class="box_ct ads"><a href=""><img src="http://baobinhthuan.com.vn/data/aditems/27/mucls.jpg" alt="" /></a> <a href=""><img src="http://baobinhthuan.com.vn/data/aditems/71/lachong.jpg" alt="" /></a> </div>
+  </div>
+  <!--End Middle Right-->
+  <!--Box Support-->
+  <div class="box" id="box_support">
+    <div class="box_ct">
+      <div class="fl" id="status_access">
+        <div class="status_item"><b>Số lượt truy cập: <span class="hitcounter_value">44194049</span></b></div>
+        <div class="status_item">Đang online: <b class="online">36221</b></div>
+      </div>
+      <div id="nick_chat" class="fr"> <b>Hỗ trợ trực tuyến:</b><a href="ymsgr:sendim?xuanhungbbt"><img width="100%" border="0" src="http://mail.opi.yahoo.com/online?u=vanh_n&amp;m=g&amp;t=2"></a> <a href="ymsgr:sendim?quangtuan79bbt"><img width="100%" border="0" src="http://mail.opi.yahoo.com/online?u=vanh_n&amp;m=g&amp;t=2"></a> </div>
+      <div class="fl" id="link_web"><span class="title_link_web">Trang web liên kết:</span>
+        <div><span class="icon_link_web"></span>
+          <ul id="list_link_web">
+            <li><a href="http://binhthuan.gov.vn/wps/portal" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Cổng thông tin Bình Thuận </a> </li>
+            <li><a href="http://www.baovethientam.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Cong ty bao ve </a> </li>
+            <li><a href="http://www.sodepabc.com" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Sim so dep </a> </li>
+            <li><a href="http://baovevn.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Bao ve </a> </li>
+            <li><a href="http://baoninhthuan.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Ninh Thuận </a> </li>
+            <li><a href="http://www.baodienbienphu.com.vn" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Điện Biên Phủ </a> </li>
+            <li><a href="http://baogialai.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Gia Lai </a> </li>
+            <li><a href="http://www.baolangson.com.vn" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Lạng Sơn </a> </li>
+            <li><a href="http://baolaichau.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Lai Châu </a> </li>
+            <li><a href="http://www.baoquangtri.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Quảng Trị </a> </li>
+            <li><a href="http://baonamdinh.com.vn" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Nam Định </a> </li>
+            <li><a href="http://moihop.binhthuan.gov.vn/login.asp" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Giấy mời hợp </a> </li>
+            <li><a href="http://www.xaydungdang.org.vn" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Xây Dựng Đảng </a> </li>
+            <li><a href="http://www.baobariavungtau.com.vn" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Bà Rịa - Vũng Tàu </a> </li>
+            <li><a href="http://www.vnanet.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Thông tấn xã VN </a> </li>
+            <li><a href="http://www.nhandan.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Nhân Dân </a> </li>
+            <li><a href="http://www.baothuathienhue.vn" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Thừa Thiên Huế </a> </li>
+            <li><a href="http://www.baobacgiang.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Bắc Giang </a> </li>
+            <li><a href="http://baokhanhhoa.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Khánh Hòa </a> </li>
+            <li><a href="http://baophuyen.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Phú Yên </a> </li>
+            <li><a href="http://baodongnai.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Đồng Nai </a> </li>
+            <li><a href="http://baocaobang.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Cao Bằng </a> </li>
+            <li><a href="http://baobinhduong.org.vn/default.aspx" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Bình Dương </a> </li>
+            <li><a href="http://baobinhphuoc.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Bình Phước </a> </li>
+            <li><a href="http://www.baohaugiang.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Hậu Giang </a> </li>
+            <li><a href="http://www.baotayninh.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Tây Ninh </a> </li>
+            <li><a href="http://baodongthap.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Đồng Tháp </a> </li>
+            <li><a href="http://baovinhlong.com.vn/" target="_blank" class="link" onclick="SnapWebUI.toggleExpand();">Báo Vĩnh Long </a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Box Support-->
+  <!--Ads 2 Column-->
+  <div class="box">
+    <div class="box_ct ads"><a target="_blank" href="http://www.baovebinhthuan.com/" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/189/baovebt.gif" alt="" /></a> <a target="_blank" href="http://www.agribankbinhthuan.com.vn/" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/197/agr.jpg" alt="" /></a> <a target="_blank" href="http://ahasport.com.vn/default.asp" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/62/logo-AHA.jpg" alt="" /></a><a target="_blank" href="http://www.navibank.com.vn/" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/183/navi.jpg" alt="" /></a><a target="_blank" href="http://www.khangnong.vn/Default.aspx" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/67/khangnong1.gif" alt="" /></a><a target="_blank" href="http://www.dnacollege.edu.vn/" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/196/Logo-DNA-(Mới)---thêm-chữ---đã-chỉnh-sữa-(23.jpg" alt="" /></a><a target="_blank" href="http://leloipt.edu.vn/" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/130/Chon-2.gif" alt="" /></a><a target="_blank" href="http://thegioicuadep.net/" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/200/logoero.jpg" alt="" /></a><a target="_blank" href="http://karaokedoremi.com.vn/index.php" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/121/Logo-Doremi-file-Jpeg.jpg" alt="" /></a> <a target="_blank" href="http://karaokedoremi.com.vn/index.php" class="ads_2_col"><img class="ads_right" src="http://baobinhthuan.com.vn/data/aditems/201/TRUNGNGA.jpg"></a>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Ads 2 Column-->
+  <!--Publications-->
+  <div class="box" id="publications">
+    <div class="box_ct"> Link tai tro: <span style="font-size: 11px;"> Tải <a title="game iwin" target="_blank" href="http://gameiwinn.com/"><strong>game iwin</strong></a> online <a title="Xem phim online chất lượng cao" target="_blank" href="http://phimtructuyenhd.com"><b>Xem Phim Online</b></a> <a title="Camera ip" target="_blank" href="http://minhan.com.vn/shops/camera-ip/"><b>camera ip</b></a> <a title="Rao vat mien phi" target="_blank" href="http://raovat3m.com/"><b>Rao vat mien phi</b></a> Web <a title="xem phim" target="_blank" href="http://phimdocquyen.com/"><b>xem phim</b></a> nhanh <a title="nap the garena" target="_blank" href="http://napthegarenavn.org/">nap the garena</a> <a title="nap the garena" target="_blank" href="http://www.napthegarena.vn">nap the garena</a> <a title="dat nen binh duong;đất nền bình dương" target="_blank" href="http://sandiaocdatnguon.com/dat-nen-binh-duong-gia-re-2/">dat nen binh duong</a> <a title="dat nen my phuoc 4 gia re;đất nền mỹ phước 4 giá rẻ" target="_blank" href="http://sandiaocdatnguon.com/dat-nen-my-phuoc-4-gia-re-dat-nen-binh-duong-2/">dat nen my phuoc 4 gia re</a> <a title="nap the garena" target="_blank" href="http://napthegarena.us/">nap the garena</a> <a title="Nap the lien minh huyen thoai" target="_blank" href="http://napthegarena.us/nap-the-lien-minh-huyen-thoai.php">Nap the lien minh huyen thoai</a> <a title="nap the fifa online 3" target="_blank" href="http://napthegarena.us/nap-the-fifa-online-3.php">nap the fifa online 3</a> <a title="bep gas malloca" target="_blank" href="http://vattu24h.net/Noi-that-nha-bep/Bep-gas/Bep-gas-Malloca/Bep-gas-am-inox-cao-cap-GHS-915C.html">Bep gas malloca</a> <a title="Bon nuoc" target="_blank" href="http://vattu24h.net/Vat-tu-thiet-bi-nuoc/Bon-inox/Bon-nuoc-inox-Dai-Thanh.html">Bon nuoc</a> <a title="Chậu rửa chén" target="_blank" href="http://kelas.org/">Chậu rửa chén</a> <a title="nap the zing" target="_blank" href="http://napthezingpay.org/">nap the zing</a> <a title="at chu bai" target="_blank" href="http://atchubai.tv/">Át Chủ Bài VTC</a> <a title="hoi uc vo lam" target="_blank" href="http://hoiucvolam.net/">Hồi Ức Võ Lâm</a> <a title="nap zing xu" target="_blank" href="http://napthezingpay.org/">Nap Zing Xu</a> <a title="nap the vcoin" target="_blank" href="http://napvcoin.pro/">nap the vcoin</a> |<a title="nap the vtc" target="_blank" href="http://napvcoin.pro/nap-the-vtc.php">nap the vtc</a> <a target="_blank" title="xem tivi" href="http://www.xemtiviso.com"><b>Xem tivi</b></a> <a title="tra chanh quan" target="_blank" href="http://trachanhquanvn.com/">tra chanh quan</a> online <a title="nấm linh chi" target="_blank" href="http://namlinhchinui.com/">nấm linh chi</a> <a title="túi xách" target="_blank" href="http://tuixachnu.vn/">túi xách</a> <a title="sieu thi lam dep" target="_blank" href="http://sieuthilamdep.net/">sieu thi lam dep</a> <a title="ionline" target="_blank" href="http://ionlinex.vn">ionline</a> <a title="iwin online" target="_blank" href="http://gameiwinonline.net/">game iwin</a> <a title="tai iwin online" target="_blank" href="http://iwin280.com/">tai iwin</a> <a title="Xem tivi online chất lượng cao" target="_blank" href="http://tivionline.vn"><b>Xem tivi</b></a> online <a title="Đồng hồ Citizen" target="_blank" href="http://www.donghocitizen.vn/">Đồng hồ Citizen</a>| <a title="Đồng hồ Seiko" target="_blank" href="http://www.donghoseiko.vn/">Đồng hồ Seiko</a>| <a target="_blank" title="Giày dép" href="http://www.giaydepsaigon.vn">Giày dép</a>| <a target="_blank" title="Mẹ và bé" href="http://www.beyeuoi.vn">Mẹ và bé</a>| <a target="_blank" title="Ẩm thực Tây Nguyên" href="http://www.amthuctaynguyen.vn/">Ẩm thực Tây Nguyên</a>| <a target="_blank" title="Nhà hàng ẩm thực" href="http://www.langamthuctaynguyen.vn/">Nhà hàng ẩm thực</a>| <a target="_blank" title="Món ăn uống ngon" href="http://monanuongngon.com/">Món ăn uống ngon</a>| <a target="_blank" title="Quần áo nam nữ" href="http://www.quanaonamnu.vn/">Quần áo nam nữ</a>| <a target="_blank" title="Mua bán đồng hồ" href="http://www.donghosaigon.vn/">Mua bán đồng hồ</a>| <a target="_blank" title="Đồng hồ Casio" href="http://www.donghocasio.vn/">Đồng hồ Casio</a>| <a target="_blank" title="Cà phê sạch" href="http://www.cafesach.com.vn">Cà phê sạch</a>| <a target="_blank" title="Mắt kính nam nữ" href="http://www.matkinhnamnu.com/">Mắt kính nam nữ</a>| <a target="_blank" title="Quần Jeans nam nữ" href="http://www.quanjeannamnu.vn/">Quần Jeans nam nữ</a>| <a target="_blank" title="Cà phê nguyên chất sạch" href="http://www.caphenguyenchat.vn/">Cà phê nguyên chất sạch</a>| <a target="_blank" title="Giày dép nam nữ" href="http://www.giaydepnamnu.vn/">Giày dép nam nữ</a>| <a title="Games cho điện thoại, Games cho điện thoại cảm ứng samsung" target="_blank" href="http://gamechodienthoai.net/">Game cho dien thoai cam ung</a> <a title="xem phim, xem phim online" target="_blank" href="http://xemphimso.com/">xem phim</a> <a title="xem phim online" target="_blank" href="http://heyphim.com/">xem phim</a> <a title="xem phim online, xem phim full hd nhanh nhat" target="_blank" href="http://xemphimfullhd.com/">xem phim online</a> <a title="cho thue xe may o da nang, cho thue xe may tai da nang, thue xe may tai da nang , thue xe may o da nang, thue xe may da nang, motorbike rental da nang, thuê xe máy đà nẵng, thuê xe máy tại đà nẵng, thuê xe máy ở đà nẵng" href="http://thuexemientrung.vn" target="_blank">thue xe may da nang</a> <a target="_blank" title="son nha dep, tho son nha gia re" href="http://sonnha24h.com/">Son nha dep</a> <a target="_blank" title="Chon so Vinaphone, Sim vina so dep" href="http://simvina.com.vn/">Chon so Vinaphone</a> <a href="http://bigone.ws/" target="_blank" title="Bigone">bigone</a> <a title="an cung nguu hoang hoan" target="_blank" href="http://ancungnguuhoan.com/">an cung nguu hoang hoan</a> </span>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Publications-->
+  <!--Ads Bottom-->
+  <div class="box">
+    <div class="box_ct ads"><a target="_blank" href="http://www.baovebinhthuan.com/"><img src="http://baobinhthuan.com.vn/data/aditems/51/qc_bot1.jpg" alt="" /></a>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--End Ads Bottom-->
+</div>
+<!--End Right Column-->
+<div class="cf"></div>
+</div>
+<!--End Main Content-->
+<!-- Begin of footer-->
+<div id="footer">
+  <div id="menu_footer"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Sơ đồ</a><a href="">Liên hệ</a><a href="">English</a><a href="">Mail</a><a href="">LH quảng cáo</a></div>
+  <div id="foo_l" class="fl">
+    <div id="info_footer">
+      <p><span style=" color: #015DA9;
+    font-family: Tahoma;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+">Báo Bình Thuận</span></p>
+      <p>&nbsp;</p>
+      <p> Theo giấy phép số 161/GP-BTTTT cấp ngày 3/2/2010 của Bộ Thông tin và Truyền Thông </p>
+      <p>Tổng Biên tập: Lê Hồng Văn – Phó Tổng biên tập phụ trách báo điện tử: Đặng Dũng – Trưởng phòng điện tử: Bùi Quang Tuấn</p>
+      <p>Địa chỉ: Khu Hùng Vương, Từ Văn Tư (nối dài), Tp.Phan Thiết, Tỉnh Bình Thuận </p>
+      <p>Điện thoại: (062)3604533 - Fax: (062)3822817 - Email: <a href="mailto:baobinhthuan@gmail.com">baobinhthuan@gmail.com</a></p>
+      <p>&nbsp;</p>
+      <p> © Ghi rõ nguồn "Báo Bình Thuận" khi sử dụng lại thông tin từ Bình Thuận Online </p>
+    </div>
+  </div>
+  <div id="foo_r" class="fr"> <a onclick="javascript:setAsHomePage(this)" href="javascript:void(0);" id="set_home" class="fr"><img border="0" src="Images/sethome.png"></a>
+    <p id="design_by" class="fr"><a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+    <p id="pagerank" class="fr"><img src="http://pr.prchecker.info/getpr.php?codex=aHR0cDovL3d3dy5iYW9iaW5odGh1YW4uY29tLnZuL3ZuL2hvbWV4LmFzcHg=&tag=2" alt="" width="88" /></p>
+  </div>
+  <div class="cf"></div>
+</div>
+<!-- End of footer-->
+</div>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body></html>

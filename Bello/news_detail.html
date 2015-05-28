@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Bello</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Skitter Styles -->
+<link href="Styles/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+<!-- Skitter JS -->
+<script type="text/javascript" language="javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" language="javascript" src="Scripts/jquery.skitter.min.js"></script>
+<!-- Init Skitter -->
+<script type="text/javascript" language="javascript">
+		$(document).ready(function() {
+			$('.box_skitter_large').skitter({
+				theme: 'clean',
+				numbers_align: 'center',
+				progressbar: false, 
+				dots: true, 
+				preview: false,
+				animation: 'randomSmart',
+				interval: 2000
+			});
+		});
+	</script>
+<!--Main Menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+ 
+
+</script>
+<!-- bxSlider Javascript file -->
+<script src="Scripts/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="Styles/jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+$('.bxslider').bxSlider({
+  mode: 'horizontal',
+  captions: false,
+  auto: true,
+  autoControls: false,
+  pager: false,
+  minSlides: 3,
+  maxSlides: 4,
+  slideWidth: 272,
+  slideMargin: 30
+});
+$('.bxslider_products').bxSlider({
+  mode: 'horizontal',
+  captions: false,
+  auto: false,
+  autoControls: false,
+  pager: false,
+  minSlides: 3,
+  maxSlides: 4,
+  slideWidth: 90,
+  slideMargin: 10
+});
+  });
+</script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_home').children('li');					
+
+			$("#tabs_home").tabs("#tabs_content_home .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+</head>
+<body>
+<!--Support-->
+<div class="support_head"> <span class="title_support"></span>
+  <div class="support_bg">
+    <ul>
+      <li> Hỗ trợ 1<br />
+        <a href="ymsgr:sendim?sieumuanhanh" title=""> <img src="http://opi.yahoo.com/online?u=sieumuanhanh&amp;m=g&amp;t=1" width="64"
+                        height="16" border="0"></a></li>
+      <li> Hỗ trợ 1<br />
+        <a href="skype:sieumuanhanh?call" title=""> <img src="http://mystatus.skype.com/smallclassic/sieumuanhanh" title="" width="64"
+                                height="16" alt=""></a></li>
+      <li> Hỗ trợ 1<br />
+        <a href="ymsgr:sendim?sieumuanhanh" title=""> <img src="http://opi.yahoo.com/online?u=sieumuanhanh&amp;m=g&amp;t=1" width="64"
+                        height="16" border="0"></a></li>
+      <li> Hỗ trợ 1<br />
+        <a href="skype:sieumuanhanh?call" title=""> <img src="http://mystatus.skype.com/smallclassic/sieumuanhanh" title="" width="64"
+                                height="16" alt=""></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+<!--End Support-->
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="/trang-chu.aspx" id="logo"> <img src="Images/logo.png" alt="Nội y Bello" /></a>
+    <div id="header_right">
+      <!--Social-->
+      <div id="social_network" class="fr"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_gplus"></span></a> <a href=""><span class="icon_youtube"></span></a><a href=""><span class="icon_twitter"></span></a> </div>
+      <!--End Social-->
+      <div id="member" class="fr"><a href="">Đăng nhập</a> | <a href="">Đăng ký</a></div>
+      <div id="hotline" class="fr"><b>0906 798 217</b></div>
+      <!--Search Tool-->
+      <div id="search_form" class="fr">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <a href="" class="submitSearch"></a> </div>
+      <!--End Search Tool-->
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="index.html">TRANG CHỦ</a> </li>
+      <li><a href="introduction.html">CỬA HÀNG</a> </li>
+      <li><a href="list_products.html">DỊCH VỤ</a>
+        <ul>
+          <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+          <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="list_products.html">SẢN PHẨM</a></li>
+      <li><a href="list_news.html">TIN TỨC & SỰ KIỆN</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+    <div id="cart"><a href="cart.html">Giỏ hàng</a></div>
+  </div>
+  <!--End Main Menu-->
+  <!--Ads-->
+  <div class="box" id="ads_middle"> <a href="" title="Hướng dẫn cách đo size áo ngực"><img src="Images/ads1.jpg" alt="Hướng dẫn cách đo size áo ngực" /></a> <a href="" title="Hướng dẫn cách đo size áo ngực"><img src="Images/ads2.jpg" alt="Hướng dẫn cách đo size áo ngực" /></a> </div>
+  <!-- End Ads -->
+  <!--Main Content-->
+  <div id="main" class="cf">
+    <!--Left Column-->
+    <div id="left_col" class="fl">
+      <!--Left Menu-->
+      <div class="box">
+        <div class="box_ct">
+          <div class="box_Tab box_Tab_l"><span>Danh mục sản phẩm</span></div>
+          <div id="topnav">
+            <ul>
+              <li class="active"><a href="">Hàng Hiệu</a></li>
+              <li><a href="">Áo ngực</a></li>
+              <li><a href="">Bộ đồ lót</a></li>
+              <li><a href="">Váy ngủ</a></li>
+              <li><a href="">Nội y nam</a></li>
+              <li><a href="">Quần Gen</a></li>
+              <li><a href="">Phụ kiện</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--End Left Menu-->
+      <!--Support-->
+      <div class="box">
+        <div class="box_ct" id="box_support">
+          <div class="box_Tab box_Tab_l"><span>HỖ TRỢ TRỰC TUYẾN</span></div>
+          <ul>
+            <li><b class="title_sp fl">Hỗ trợ</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="114" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Hỗ trợ</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="114" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Link Web-->
+      <div class="box">
+        <div class="box_ct">
+          <div class="box_Tab box_Tab_l"><span>Liên kết website</span></div>
+          <div id="link_web">
+            <select name="link_web" class="type_option">
+              <option value="0">Đẳng Cấp Việt</option>
+              <option value="1">Esell.vn</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--End Link Web-->
+      <!--Ads-->
+      <div class="box ads"> <a href=""><img src="http://www.dochoinguoilon.us/upload/product/1394691834_quanlotsexy2.jpg" alt="" width="100%" /></a> <a href=""><img src="http://www.shopchiem.com/files/Triumph_Max-700-WHUD.jpg" alt="" width="100%" /></a> <a href=""><img src="http://s1.img.edn.vn/2012/8/e/8e91193a4f387d1590b9d7cab6af3c2c.jpg" alt="" width="100%" /></a> <a href=""><img src="http://st.muasam.ngoisao.net/uploads/topic/12/06/29/09/1222077427_44507_12_06_29_09_src.jpg" alt="" width="100%" /></a> </div>
+      <!--End Ads-->
+    </div>
+    <!--end Left Column-->
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div class="box_ct" id="detail_news">
+          <div id="info_g">
+            <h2 class="h2Title">Sắm quần lót đẹp để trở nên... hạnh phúc</h2>
+            <p class="date">06/05/2013</p>
+            <p>Đồ lót là một yếu tố quan trọng trong thời trang, nó cũng cần hợp   “mốt”, hoàn cảnh và cơ thể bạn. Cùng lướt qua bí kíp thời trang đặc biệt   này:</p>
+            <p><strong>Quần lót kiểu Brazil</strong></p>
+            <p>Trên thang điểm dành cho sự sexy, người Brazil chỉ đứng sau người   Pháp. Những chiếc quần lót này thường che kín gần hết vòng ba nhưng lại   được làm hoàn toàn bằng lưới hoặc ren, vì thế, vẫn đủ gợi cảm, đủ “úp   mở” để trí tưởng tượng được khơi gợi. Chiếc quần này hoàn toàn phù hợp   với quý cô có vòng ba “phì nhiêu”!</p>
+            <p><img alt="Sắm quần lót đẹp để trở nên... hạnh phúc - 1" onclick="return openNewImage(this, '')" src="http://anh.24h.com.vn/upload/4-2012/images/2012-11-14/1352863542-thoi-trang-noi-y-ton-dang--3-.jpg" /></p>
+            <p><strong>Quần lót lọt khe</strong></p>
+            <p>Quần lót lọt khe ra đời tại Pháp nhằm phục vụ những quý cô “cả thẹn”   sợ hãi bị lộ đồ nội y trong những trang phục ôm sát. Tuy nhiên, theo   dòng chảy của thời trang, những chiếc quần bé xíu này lại là thứ vũ khí   tuyệt đối gợi cảm của phụ nữ. Nó sẽ giúp bạn phô bày vòng ba căng tròn   một cách “thực dụng” và quyến rũ nhất.</p>
+            <p>Để trở nên khiêu gợi hơn, bạn nên &quot;phủ&quot; lên đôi chân của mình một đôi   tất bằng ren kiểu cổ điển. Một người phụ nữ cổ điển nhưng ẩn chứa sự   nổi loạn chưa bao giờ hết hấp dẫn!</p>
+            <p><img alt="Sắm quần lót đẹp để trở nên... hạnh phúc - 2" onclick="return openNewImage(this, '')" src="http://anh.24h.com.vn/upload/4-2012/images/2012-11-14/1352863542-thoi-trang-noi-y-ton-dang--4-.jpg" /></p>
+            <p><strong>Quần lót kiểu quần soóc</strong></p>
+            <p>Kiểu quần này có kiểu dáng tương tự chiếc quần “ra trận” của võ sĩ   quyền Anh hay các loại quần nhỏ của nam giới, tuy nhiên, chính điều   tưởng chừng như rất nam tính này lại mang đến vẻ cuốn hút giới tính mạnh   mẽ cho nữ giới. Khỏe khoắn, sexy, mạnh mẽ là những tính từ mà cánh mày   râu chỉ có thể nghĩ tới khi nhìn bạn trong chiếc quần đặc biệt này.</p>
+            <p>Nếu bạn có vòng 3 hơi chảy xệ hoặc vùng đùi hơi to thì chiếc quần này   là dành cho bạn. Hãy chọn những chiếc quần có màu sắc bắt mắt hoặc kẹo   ngọt để tăng vẻ sinh động!</p>
+            <p><img alt="Sắm quần lót đẹp để trở nên... hạnh phúc - 3" onclick="return openNewImage(this, '')" src="http://anh.24h.com.vn/upload/4-2012/images/2012-11-14/1352863542-thoi-trang-noi-y-ton-dang--5-.jpg" /></p>
+            <p><strong>Quần lót cạp trễ</strong></p>
+            <p>Quần lót cạp trễ là chiếc quần mang đến cho bạn sự thoải mái nhất.   Như tên gọi của chúng, phần cạp quần nằm dưới phần hông-phần gợi cảm   nhất của phụ nữ, làm cho chúng trở thành đối tác hoàn hảo cho quần jeans   cạp trễ. Bạn có thể chọn những chiếc quần có phần cạp cổ điển, hoặc   chọn những chiếc quần bằng satin và ren nữ tính được thêm thắt những   chiếc ruy-băng để giảm thiểu sự đơn điệu!</p>
+            <p>Những quý cô có vòng hông đẹp và đầy đặn thì còn chần chừ gì nữa mà   không chọn ngay cho mình chiếc quần loại này để tôn lên ưu điểm quyến rũ   của mình.</p>
+            <p><img alt="Sắm quần lót đẹp để trở nên... hạnh phúc - 4" onclick="return openNewImage(this, '')" src="http://anh.24h.com.vn/upload/4-2012/images/2012-11-14/1352863542-thoi-trang-noi-y-ton-dang--6-.jpg" /></p>
+            <p><strong>Quần lót định hình (shapewear)</strong></p>
+            <p>Những chiếc quần lót định hình là chiếc quần duy nhất có thể tôn lên   đường cong đồng hồ cát của bạn (đặc biệt là những quý cô chẳng may sở   hữu vòng eo bánh mì), giúp bạn cảm thấy mình nữ tính và quyến rũ dù là   ngoài hay đằng sau lớp váy áo. Bạn có thể lựa chọn cho mình chiếc quần   eo cao với áo lót cực kỳ khiêu gợi như Dita Von Teese, hoặc bảo thủ hơn   với chiếc áo lót liền quần.</p>
+            <p><img alt="Sắm quần lót đẹp để trở nên... hạnh phúc - 5" onclick="return openNewImage(this, '')" src="http://anh.24h.com.vn/upload/4-2012/images/2012-11-14/1352863542-thoi-trang-noi-y-ton-dang--7-.jpg" /></p>
+            <p>Nhưng dù kiểu dáng nào, đồ lót luôn vừa là món đồ làm đẹp của phụ nữ,   vừa là thứ giúp họ chăm sóc nâng niu cơ thể, là thứ trực tiếp mang lại   cảm hứng cho phụ nữ cũng như… đàn ông.</p>
+            <p>Hãy sắm sửa cho mình những bộ đồ lót chất lượng tốt và phù hợp- đó là   cách thức đơn giản nhất để bạn trở thành người phụ nữ hạnh phúc!</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--end Right Column-->
+  </div>
+  <!--End Main Content-->
+  <!-- Begin of footer-->
+  <div id="footer">
+    <div id="info_footer" class="fl">
+      <p><strong>ĐỒ LÓT GIÁ SỈ</strong></p>
+      <p>6/4A KP6 TT. Hóc Môn, H. Hóc Môn, TP. HCM</p>
+      <p>Điện thoại: 0942118811</p>
+      <p>Website: dolotgiasi.vn</p>
+    </div>
+    <!--Status-->
+    <div id="status" class="fr"><span>Lượt truy cập</span>
+      <div class="all_visitor"><img title="Vinaora Visitors Counter 2.0" alt="mod_vvisit_counter" src="Images/3.png"><img title="Vinaora Visitors Counter 2.0" alt="mod_vvisit_counter" src="Images/1.png"><img title="Vinaora Visitors Counter 2.0" alt="mod_vvisit_counter" src="Images/9.png"><img title="Vinaora Visitors Counter 2.0" alt="mod_vvisit_counter" src="Images/5.png"><img title="Vinaora Visitors Counter 2.0" alt="mod_vvisit_counter" src="Images/9.png"><img title="Vinaora Visitors Counter 2.0" alt="mod_vvisit_counter" src="Images/9.png"><img title="Vinaora Visitors Counter 2.0" alt="mod_vvisit_counter" src="Images/7.png"></div>
+    </div>
+    <div id="copyright" class="fr">Copyright © Đồ lót giá sỉ. All Rights Reserved<br />
+      <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn">Đẳng Cấp Việt</a></div>
+  </div>
+  <!-- End of footer-->
+</div>
+<!-- End wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

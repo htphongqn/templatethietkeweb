@@ -1,0 +1,163 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,vietnamese,latin-ext);
+#cssmenu {
+	width: 100%;
+	height: 46px;
+	background: #b10406
+}
+#cssmenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+#cssmenu > ul {
+	position: relative;
+	display: block;
+	float: left;
+	z-index: 500;
+}
+#cssmenu > ul > li {
+	float: left;
+	display: block;
+	position: relative;
+	display:inline-block;
+	padding: 0;
+	margin-left: 10px;
+}
+#cssmenu > ul > li.active > a, #cssmenu > ul > li:hover > a {
+	color: #FFFFFF
+}
+#cssmenu ul li a {
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+#cssmenu > ul > li > a {
+	font-size: 1em;
+	font-weight: 500;
+	padding: 16px;
+	text-align: center;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	z-index: 50;
+	position: relative
+}
+#cssmenu li.has-sub::after {
+ display: block;
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+}
+#cssmenu > ul > li.has-sub::after {
+ right: 0;
+ top: 20px;
+ border: 5px solid transparent;
+ border-top-color: #FFFFFF;
+ z-index: 20;
+}
+#cssmenu > ul > li:hover::after {
+ border-top-color: #AAA;
+}
+#cssmenu ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 80px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background:#c8241f;
+	-moz-box-shadow: 2px 3px 5px #444;
+	-webkit-box-shadow:  2px 3px 5px #444;
+	box-shadow:  2px 3px 5px #444;
+}
+#cssmenu ul ul ul {
+	top: 40px;
+}
+#cssmenu ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 200px
+}
+#cssmenu > ul > li:hover > ul {
+	left: 0;
+	top: 46px;
+	opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#cssmenu ul ul li a {
+	padding: 10px 15px;
+	font-size: 13px;
+	color:#FFFFFF;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#cssmenu ul ul li:hover > a {
+	background: #e52d2a;
+	color: #FFFFFF;
+}
+#cssmenu ul ul li:last-child > a, #cssmenu ul ul li.last > a {
+	border-bottom: 0;
+}
+.submenuArrow {
+	border: 6px solid transparent;
+	width: 0;
+	height: 0;
+	border-bottom-color: #fff;
+	position: absolute;
+	top: -12px;
+}
+#cssmenu ul ul li.has-sub::after {
+ border: 4px solid transparent;
+ border-left-color: #FFFFFF;
+ right: 10px;
+ top: 12px;
+ -moz-transition: all .2s ease;
+ -ms-transition: all .2s ease;
+ -o-transition: all .2s ease;
+ transition: all .2s ease;
+ -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+#cssmenu ul ul li.has-sub:hover::after {
+ border-left-color: #111111;
+}
+#cssmenu > ul > li.active > .mask_menu, #cssmenu > ul > li:hover > .mask_menu {
+	position: absolute;
+	left: 0;
+	top: 6px;
+	z-index: 1;
+	height: 31px;
+	width: 100%;
+	background: url(../Images/mask_menuBg.png) center center repeat;
+	transform: skew(-28deg);
+	-webkit-transform: skew(-15deg);
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
+	-ms-transform: skew(-15deg);
+	border-bottom: 1px solid #a95d52;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow:1px 1px 2px #222222 inset;
+	-webkit-box-shadow:1px 1px 2px #222222 inset;
+	box-shadow:1px 1px 2px #222222 inset;
+}

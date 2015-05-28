@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Giỏ hàng - Bé Yêu</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.9.0.min.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div class="header">
+      <object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0'  id='ShockwaveFlash1' style='width:1000px;height:320px' >
+        <param name='movie' value='Images/sss1375063382.swf' />
+        <param name='Menu' value='0' />
+        <param name='quality' value='high' />
+        <param name='wmode' value='transparent' />
+        <embed width='1000px' height='320px' src='Images/sss1375063382.swf' wmode='transparent' ></embed>
+      </object>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+    <script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+ 
+
+</script>
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="home active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="list_products.html">Sản phẩm</a>
+          <ul class="children">
+            <li><a href="#">Good Guys</a></li>
+            <li><a href="#">Bad Guys</a></li>
+            <li><a href="#">Good Gals</a></li>
+            <li><a href="#">Bad Gals</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <div class="box">
+          <h1 class="h1Tab">Danh mục sản phẩm</h1>
+          <div class="box_content_center">
+            <script src="Scripts/drop_menu.js" type="text/javascript"></script>
+            <div id="myslidemenu" class="jqueryslidemenu">
+              <ul>
+                <li class=" subfolderstyle"><a href="">Đồ dùng cho mẹ</a>
+                  <ul>
+                    <li><a href="list_product.html">Máy hút sữa Mẹ và Phụ kiện</a></li>
+                    <li><a href="#">Túi/bình trữ sữa Mẹ</a></li>
+                    <li><a href="#">Túi chườm Nóng, Lạnh</a></li>
+                    <li><a href="#">Túi ngăn chia đồ túi xách</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Đồ dùng cho bé</a>
+                  <ul>
+                    <li><a href="list_product.html">Máy hút sữa Mẹ và Phụ kiện</a></li>
+                    <li><a href="#">Túi/bình trữ sữa Mẹ</a></li>
+                    <li><a href="#">Túi chườm Nóng, Lạnh</a></li>
+                    <li><a href="#">Túi ngăn chia đồ túi xách</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Phụ kiện bé trai</a></li>
+                <li><a href="">Phụ kiện bé gái</a></li>
+                <li><a href="">Đồ chơi cho bé</a></li>
+                <li><a href="">Đồ dùng gia đình</a></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box" id="ads"><img src="Images/ads_01.jpg" alt="" /><img src="Images/ads_02.jpg" alt="" /><img src="Images/ads_03.jpg" alt="" /><img src="Images/ads_03.jpg" alt="" /><img src="Images/ads_03.jpg" alt="" /></div>
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <div id="search" class="box_content_center">
+          <label>Tìm kiếm</label>
+          <input name="keyword" type="text" class="inputSearch" style="width: 150px" />
+          <label>Giá từ: </label>
+          <input name="price1" type="text" class="inputSearch" value="0" />
+          <label>~ đến</label>
+          <input name="price2" type="text" class="inputSearch" value="0" />
+          <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+          <div class="clearfix"></div>
+        </div>
+        <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_products.html">Giỏ hàng</a></div>
+        <div class="box">
+          <table cellspacing="1" cellpadding="5" bgcolor="#FFC1D1" width="100%">
+            <tr>
+              <th scope="col" style="color:Black;background-color:#FFFFFF;">Sản phẩm</th>
+              <th scope="col" style="color:Black;background-color:#FFFFFF;">Tên sản phẩm</th>
+              <th scope="col" style="color:Black;background-color:#FFFFFF;">Số lượng</th>
+              <th scope="col" style="color:Black;background-color:#FFFFFF;">Đơn giá</th>
+              <th scope="col" style="color:Black;background-color:#FFFFFF;">Thành tiền</th>
+              <th scope="col" style="color:Black;background-color:#FFFFFF;">Xóa</th>
+            </tr>
+            <tr>
+              <td valign="middle" align="center" style="color:Black;;background-color:#FFFFFF;"><a href='/san-pham/ao-thun-t80-0501-T80-05-01.aspx' target='_parent'><img src="Images/product_01.jpg" width='100' height='65' /></a></td>
+              <td valign="middle" align="center" style="color:Black;font-weight:bold;;background-color:#FFFFFF;">Áo thun T80-0501 </td>
+              <td valign="middle" align="center" style="color:Black;;background-color:#FFFFFF;">
+              <input name="ctl00$cphMain$GrdGiohang$ctl02$txtSoLuong" type="text" value="1" id="cphMain_GrdGiohang_txtSoLuong_0" class="input_quantity Black" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById(&#39;cphMain_IbtnCapNhatGioHang&#39;).click();return false;}} else {return true}; " style="width:35px;" />
+              </td>
+              <td valign="middle" align="center" style="color:Black;;background-color:#FFFFFF;">80.000 VNĐ</td>
+              <td valign="middle" align="center" style="color:Red;border-color:Black;;background-color:#FFFFFF;">80.000 VNĐ</td>
+              <td valign="middle" align="center" style="color:Black;;background-color:#FFFFFF;"><a href="javascript:__doPostBack(&#39;ctl00$cphMain$GrdGiohang&#39;,&#39;Delete$0&#39;)" style="color:Black;">Xóa</a></td>
+            </tr>
+            <tr>
+              <th align="right" bgcolor="F2F2F2" class="Black" colspan="4">Tổng Tiền:</th>
+              <td valign="middle" align="center" colspan="2" style="color:Black;;background-color:#FFFFFF;" class="price">
+              <span style="color:Red;">80.000 VNĐ</span>
+              </td>
+            </tr>
+          </table>
+          <div style="padding: 10px 5px;">
+                            <a class="continue" href="/trang-chu.aspx">
+                                <img alt="" src="Images/Cart_Continue_buy.png"></a> <a class="continue">
+                                    <input type="image" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$IbtnCapNhatGioHang&quot;, &quot;&quot;, true, &quot;G1&quot;, &quot;&quot;, false, false))" src="Images/Cart_Updete.png" id="ContentPlaceHolder1_IbtnCapNhatGioHang" name="ctl00$ContentPlaceHolder1$IbtnCapNhatGioHang"></a> <a class="checkout_button" href="/thanh-toan.aspx" style="float: right;">
+                                            <img src="Images/Cart_Pay.png"></a></div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Main Column-->
+      <!--Right Column-->
+      <div class="right_content">
+        <div class="box">
+          <div class="box_content_center" id="cart"> <a href=""><img src="Images/cart_icon.png" class="img_general" alt="" />Giỏ hàng của bạn có 0 (SP) - 0.000 đ</a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1Tab">Hỗ trợ trực tuyến</h1>
+          <div class="box_content_center" id="support"> <a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=2'/></a><br />
+            <p>Thương - 0907.270.357</p>
+            <a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=2'/></a><br />
+            <p>Tư vấn</p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1Tab">Facebook</h1>
+          <div class="box_content_center" id="like_face"> <img src="Images/like_face.png" alt="" width="165" />
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1Tab">Thống kê truy cập</h1>
+          <div class="box_content_center" id="visitors">
+            <p><img src="Images/online_icon.png" alt="" align="absbottom" style="margin-right: 10px">Đang online: <strong>12 000</strong></p>
+            <p><img src="Images/visitors_icon.png" alt="" align="absbottom" style="margin-right: 10px">Tổng số: <strong>123 000</strong></p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="h1Tab">Tin tức</h1>
+          <div class="box_content_center" id="news">
+            <ul>
+              <li><a href="news_detail.html"><img width="75" height="50" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p class="Title_news"><a href="news_detail.html">Hướng dẫn cấu hình camera phần 2!</a></p>
+              </li>
+              <li><a href="news_detail.html"><img width="75" height="50" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p class="Title_news"><a href="news_detail.html">Hướng dẫn cấu hình camera phần 2!</a></p>
+              </li>
+              <li><a href="news_detail.html"><img width="75" height="50" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p class="Title_news"><a href="news_detail.html">Hướng dẫn cấu hình camera phần 2!</a></p>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box" id="ads"><img src="Images/ads_03.jpg" alt="" /><img src="Images/ads_03.jpg" alt="" /><img src="Images/ads_03.jpg" alt="" /></div>
+      </div>
+      <!--End Right Column-->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <div class="footer">
+    <div class="footer_inner">
+      <div class="footer_menu"><a href="">Trang chủ</a> | <a href="">Giới thiệu</a> | <a href="">Sản Phẩm</a> | <a href="">Khuyến mãi</a> | <a href="">Phí vận chuyển</a> | <a href="">Tin tức</a> | <a href="">Liên hệ</a></div>
+      <div class="copyright">
+        <p>Copyright © 2013 By <strong>beyeu123.com</strong>.</p>
+        <p> <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+      </div>
+      <div class="clearfix"></div>
+      <div class="info_footer">
+        <p><strong>41 HOÀNG HOA THÁM - P13 - QTÂN BÌNH - TP. HỒ CHÍ MINH</strong></p>
+        <p><strong>Email</strong>: <a href="mailto:cuahangbeyeu123@yahoo.com">cuahangbeyeu123@yahoo.com</a></p>
+        <p><strong>ĐT</strong>:  0907 270 357  - 0988 249 456 (Thương)</p>
+        <p style="color: #FF0000"><strong>(Cửa hàng bán hàng online Quý khách vui lòng Alô trước khi tới nhà xem hàng mẫu)</strong></p>
+      </div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

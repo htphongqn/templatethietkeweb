@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ghế hớt tóc</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Start Nivo Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<!-- Start Slider Scripts -->
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!---Hoz menu-->
+<link type="text/css" href="Styles/menu_hoz.css" rel="stylesheet" />
+<script type="text/javascript" src="Scripts/menu_hoz.js"></script>
+<script type="text/javascript">
+	document.write('<div style="display:none;"><a href="http://apycom.com/">jQuery Menu by Apycom</a></div>');
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_trademarks').jcarousel({
+        auto: 2,
+        wrap: 'circular',
+		animation: 1500,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+	jQuery('#mycarousel_products').jcarousel({
+        vertical: true,
+		auto: 2,
+		animation: 1500,
+        scroll: 1,
+		wrap: 'circular',
+    });
+});
+</script>
+<!--Stick ads-->
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$(function(){ // document ready
+   if (!!$('#sticky_L').length) { // make sure "#sticky" element exists
+      var el = $('#sticky_L');
+      var stickyTop_L = $('#sticky_L').offset().top; // returns number
+      var footerTop = $('#slider_trademarks').offset().top; // returns number
+      var stickyHeight_L = $('#sticky_L').height();
+      var limit = footerTop - stickyHeight_L - 20;
+      $(window).scroll(function(){ // scroll event
+          var windowTop = $(window).scrollTop(); // returns number
+            
+          if (stickyTop_L < windowTop){
+             el.css({ position: 'fixed', top: 0 });			
+          }
+          else {
+             el.css({ position: 'absolute', top: 190 });
+          }
+            
+          if (limit < windowTop) {
+          var diff = limit - windowTop;
+          el.css({top: diff});
+          }     
+        });
+   }
+});
+$(function(){ // document ready
+   if (!!$('#sticky_R').length) { // make sure "#sticky" element exists
+      var el = $('#sticky_R');
+      var stickyTop_L = $('#sticky_R').offset().top; // returns number
+      var footerTop = $('#slider_trademarks').offset().top; // returns number
+      var stickyHeight_L = $('#sticky_R').height();
+      var limit = footerTop - stickyHeight_L - 20;
+      $(window).scroll(function(){ // scroll event
+          var windowTop = $(window).scrollTop(); // returns number
+            
+          if (stickyTop_L < windowTop){
+             el.css({ position: 'fixed', top: 0 });			
+          }
+          else {
+             el.css({ position: 'absolute', top: 190 });
+          }
+            
+          if (limit < windowTop) {
+          var diff = limit - windowTop;
+          el.css({top: diff});
+          }     
+        });
+   }
+});
+});//]]>  
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Ads truot-->
+  <div id="sticky_L" class="banner banner_l"> <a href="http://namkna.blogspot.com/" target="_blank"><img src="Images/product_01.jpg" alt="" width="150" /></a><a href="http://namkna.blogspot.com/" target="_blank"><img src="Images/product_01.jpg" alt="" width="150" /></a><a href="http://namkna.blogspot.com/" target="_blank"><img src="Images/product_01.jpg" alt="" width="150" /></a> </div>
+  <div id="sticky_R" class="banner banner_r"> <a href="http://namkna.blogspot.com/" target="_blank"><img src="Images/product_02.jpg" alt="" width="150" /></a><a href="http://namkna.blogspot.com/" target="_blank"><img src="Images/product_02.jpg" alt="" width="150" /></a><a href="http://namkna.blogspot.com/" target="_blank"><img src="Images/product_02.jpg" alt="" width="150" /></a></div>
+  <!--End Ads truot-->
+  <!--#begin Header-->
+  <div class="header">
+    <div class="page"><a class="logo" href="index.html"><img src="Images/logo.jpg" alt="" /></a>
+      <p class="slogan"><img src="Images/name_company.png" alt="" /></p>
+      <!--Search Tool-->
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword">
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+      <p class="cart"><a href="cart.html"><span class="icon_cart"></span>[<b>0</b>] sản phẩm</a></p>
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="menu">
+    <ul class="menu">
+      <li class="home"><a href="#" class="parent"><span>Trang chủ</span></a> </li>
+      <li><a href="news_detail.html" class="parent"><span>Giới thiệu</span></a> </li>
+      <li><a href="list_products.html"><span>Sản phẩm</span></a>
+        <div>
+          <ul>
+            <li><a href="#" class="parent"><span>Ghế hớt tóc Nam</span></a>
+              <div>
+                <ul>
+                  <li><a href="#"><span>Sub Item 1.1</span></a></li>
+                  <li><a href="#"><span>Sub Item 1.2</span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#" class="parent"><span>Ghế hớt tóc Nữ</span></a>
+              <div>
+                <ul>
+                  <li><a href="#"><span>Sub Item 2.1</span></a></li>
+                  <li><a href="#"><span>Sub Item 2.2</span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Ghế Nail</span></a></li>
+            <li><a href="#"><span>Giường gối sắt</span></a></li>
+            <li><a href="#"><span>Sub Item 5</span></a></li>
+            <li><a href="#"><span>Sub Item 6</span></a></li>
+            <li><a href="#"><span>Sub Item 7</span></a></li>
+            <li><a href="#"><span>Sub Item 3</span></a></li>
+            <li><a href="#"><span>Sub Item 4</span></a></li>
+            <li><a href="#"><span>Sub Item 5</span></a></li>
+            <li><a href="#"><span>Sub Item 6</span></a></li>
+            <li><a href="#"><span>Sub Item 7</span></a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="list_news.html"><span>Tin tức</span></a></li>
+      <li><a href="list_news.html"><span>Khuyến mãi</span></a></li>
+      <li><a href="image_gallery.html"><span>Tuyển Dụng</span></a></li>
+      <li class="last"><a href="#"><span>Liên hệ</span></a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <div class="page_inner">
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <!--Support Online-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Hỗ trợ trực tuyến</div>
+            <div id="support">
+              <p class="hotline"><b>Hotline</b> <span class="number_hotln">08 66 767 952</span> <span class="number_hotln">08 66 767 952</span></p>
+              <ul>
+                <li> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1" style="vertical-align: middle; margin-right: 3px" /></a>
+                  <label>Kinh doanh</label>
+                </li>
+                <li> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1" style="vertical-align: middle; margin-right: 3px" /></a>
+                  <label>Kinh doanh</label>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Support Online-->
+        <!--Vertical Menu-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Danh mục sản phẩm</div>
+            <ul class="topnav">
+              <li><a href="">Ghế hớt tóc Nam</a>
+                <ul>
+                  <li><a href="#">Ghế hớt tóc Nam 1</a></li>
+                  <li><a href="#">Ghế hớt tóc Nam 1</a></li>
+                  <li><a href="#">Ghế hớt tóc Nam 1</a></li>
+                  <li><a href="#">Ghế hớt tóc Nam 1</a></li>
+                  <li><a href="#">Ghế hớt tóc Nam 1</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Ghế hớt tóc Nữ</a></li>
+              <li><a href="#">Ghế Nail</a></li>
+              <li><a href="#">Giường gối sắt</a></li>
+              <li><a href="#">Giường gối thùng</a></li>
+              <li><a href="#">Giường Massage Inox</a></li>
+              <li><a href="#">Giường gối Inox</a></li>
+              <li><a href="#">Giường Massage sắt</a></li>
+              <li><a href="#">Sản phẩm bàn chảy</a></li>
+              <li><a href="#">Xe đẩy dụng cụ bồn gội</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Vertical Menu-->
+        <!--Slide Vertical Products-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Thống kê truy cập</div>
+            <div id="slider_products">
+              <ul id="mycarousel_products" class="jcarousel-skin-tango">
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="180" height="180" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                    <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+                  </div>
+                  <!--End Product-->
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Slide Vertical Products-->
+        <!--Link Video-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Video</div>
+            <div id="video"><img src="Images/video.jpg" alt="" />
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Video-->
+        <!--Access Status-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Thống kê truy cập</div>
+            <div id="access_status">
+              <p>
+                <label>Đang online:</label>
+                <b>11</b></p>
+              <p>
+                <label>Hôm nay:</label>
+                <b>150</b></p>
+              <p>
+                <label>Tổng lượt xem:</label>
+                <b>471 123</b></p>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Access Status-->
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <div class="slider-wrapper theme-pascal">
+          <div id="slider" class="nivoSlider"> <a href="http://viva-vietnam.blogspot.com"><img src="Images/slider_01.jpg" alt="" title=""/></a> <a href="http://shareallworld.info/search/label/Tourist"><img src="Images/slider_02.jpg" alt="" title="" /></a> <a href="http://shareallworld.info/search/label/Movies"><img src="Images/slider_03.jpg" alt="" title=""/></a> <a href="http://shareallworld.info/search/label/MMO"><img src="Images/slider_04.jpg" alt="" title="" /></a> </div>
+        </div>
+        <!--Best Sell Products-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Sản phẩm mới</div>
+            <div class="product_row">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Best Sell Products-->
+        <!--Popular Products-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab">Sản phẩm nổi bật</div>
+            <div class="product_row">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/product_02.jpg" alt="" width="220" height="220" /> <span class="caption simple_caption">20 660 000 đ</span> </a> </div>
+                <div class="product_name"><a href="detail_products.html">Sản phẩm của cửa hàng</a></div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Popular Products-->
+      </div>
+      <!--End Main Column-->
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!-- Jquery Partners -->
+  <div id="slider_trademarks">
+    <div class="page">
+      <ul id="mycarousel_trademarks" class="jcarousel-skin-tango">
+        <li class="item"><a href=""><img src="Images/logo_trademark01.jpg" width="200" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_trademark02.jpg" width="200" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_trademark03.jpg" width="200" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_trademark01.jpg" width="200" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_trademark02.jpg" width="200" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_trademark02.jpg" width="200" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_trademark03.jpg" width="200" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_trademark02.jpg" width="200" height="70" alt="" /></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--End Jquery Partners-->
+  <!-- Footer -->
+  <div class="footer">
+    <div class="topmenu_footer">
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h3><a href="">Chính sách</a></h3>
+          <div class="listMenuFooter"><a href="">Chính sách</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h3><a href="">Sản phẩm</a></h3>
+          <div class="listMenuFooter"><a href="">Ghế hớt tóc Nam</a><a href="">Ghế hớt tóc Nữ</a><a href="">Ghế Nail</a><a href="">Giường gối sắt</a><a href="">Giường gối thùng</a><a href="">Chính sách đổi trả hàng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h3><a href="">Liên kết & Hợp tác</a></h3>
+          <div class="listMenuFooter"><a href="">Bất động sản</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="info_footer">
+        <div class="ctentColuMenuFooter">
+          <p><strong>Ghế gội Ghế Masage</strong></p>
+          <p>Địa chỉ: số 6 Lê Duẩn, huyện Côn Đảo, tỉnh Bà Rịa - Vũng Tàu</p>
+          <p>Điện thoại: 0913 393 747</p>
+          <p>Email: <a href="mailto:ghehottocvn@yaho.com">ghehottocvn@yaho.com</a></p>
+          <p>&nbsp;</p>
+          <p><strong>Trụ sở chính</strong></p>
+          <p>Địa chỉ: 413/13 Lê Văn Cuối, Quận Tân Phú, Tp.HCM</p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- End Footer -->
+  <div class="copyright"> Copyright © 2013 <strong>NamLongVina</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </div>
+</div>
+<!--End #Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

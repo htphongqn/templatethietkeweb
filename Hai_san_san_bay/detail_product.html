@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Hải Sản Sân Bay</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="Scripts/haisan.js"></script>
+<!--Responsive Slides-->
+<link rel="stylesheet" href="Styles/responsiveslides.css">
+<script src="Scripts/responsiveslides.min.js"></script>
+<!--Main Menu-->
+<link href="Styles/nav.css" rel="stylesheet" type="text/css" />
+<!--Fancybox-->
+<link href="Styles/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.fancybox.js"></script>
+<!--Zoom-->
+<script type="text/javascript" src="Scripts/cloudzoom.js"></script>
+<!--DatePicker Plugin-->
+<link rel="stylesheet" href="Styles/BeatPicker.min.css"/>
+<script src="Scripts/BeatPicker.min.js"></script>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+(function ($) {
+        // VERTICALLY ALIGN FUNCTION
+        $.fn.vAlign = function() {
+            return this.each(function(i){
+            var ah = $(this).height();
+            var ph = $(this).parent().height();
+            var mh = Math.ceil((ph-ah) / 2);
+            $(this).css('margin-top', mh);
+            });
+        };
+    })(jQuery);
+$(document).ready(function() {
+    $(".img_cate img, .img_product img, .image_gallery img").vAlign();
+});
+});//]]>  
+</script>
+</head>
+<body>
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" id="logo"> <img src="Images/logo.png" alt="DOANH NGHIỆP TƯ NHÂN THƯƠNG MẠI Hải Sản Sân Bay" /></a>
+    <p class="text_logo"><img src="Images/name_company.png" alt="DOANH NGHIỆP TƯ NHÂN THƯƠNG MẠI Hải Sản Sân Bay" /></p>
+    <!--Search Tool-->
+    <div id="hotline" class="fr">083 8455024</div>
+    <!--End Search Tool-->
+  </div>
+</div>
+<!--#end Header-->
+<!--Top Menu-->
+<div id="nav">
+  <div id='cssmenu'>
+    <!--Search Tool-->
+    <div id="search_form" class="fl"> <a href="" class="submitSearch"></a>
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Tìm kiếm..." />
+      <div class="mask_input"></div>
+    </div>
+    <!--End Search Tool-->
+    <ul class="font1">
+      <li class='active'><a href='index.html'><span>Khuyến Mại</span></a></li>
+      <li class='has-sub'><a href='product.html'><span>Thực Đơn</span></a>
+        <ul>
+          <li class=''><a href='product.html'><span>Về Crepitee Coffee</span></a></li>
+          <li class=''><a href='product.html'><span>Hệ thống phân phối</span></a></li>
+          <li class='last'><a href='product.html'><span>Phương châm hoạt động</span></a></li>
+        </ul>
+      </li>
+      <li class=''><a href='list_products.html'><span>Voucher</span></a></li>
+      <li class=""><a href='list_news.html'><span>Hình Ảnh</span></a></li>
+      <li class=''><a href='list_news.html'><span>Nhà Hàng</span></a></li>
+      <li class=""><a href='gallery.html'><span>THƯ VIỆN</span></a></li>
+      <li class=''><a href='images.html'><span>Tin Tức</span></a></li>
+      <li class='last'><a href='contact.html'><span>LIÊN HỆ</span></a></li>
+    </ul>
+  </div>
+</div>
+<!--End Top Menu-->
+<div class="wrap">
+  <!--Main Content-->
+  <div id="main" class="cf">
+    <!--Left Column-->
+    <div id="left_col" class="fl">
+      <!--Form Reservations-->
+      <div class="box">
+        <div class="box_ct form_reservations">
+          <div class="title_web">ĐẶT BÀN TRỰC TUYẾN</div>
+          <div class="row_form">
+            <label class="left_row_form">Tên:</label>
+            <div class="right_row_form">
+              <input name="full_name" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Email:</label>
+            <div class="right_row_form">
+              <input name="email" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">SĐT:</label>
+            <div class="right_row_form">
+              <input name="phonenumber" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Số người:</label>
+            <div class="right_row_form">
+              <input name="number" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Giờ:</label>
+            <div class="right_row_form">
+              <input name="time" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Ngày:</label>
+            <div class="right_row_form">
+              <input type="text" data-beatpicker="true" data-beatpicker-position="['right','*']" data-beatpicker-module="clear" data-beatpicker-format="['DD','MM','YYYY'],separator:'/'" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form"> <a href="" class="btn_reser">HOTLINE</a> <a href="" class="btn_reser"> ĐẶT BÀN</a> </div>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Form Reservations-->
+      <!--Left Menu-->
+      <div class="box">
+        <div id="box_category" class="box_ct">
+          <div class="title_web">Thực đơn</div>
+          <ul>
+            <li class="cat-header"> <a href="http://livedemo00.template-help.com/opencart_41473/index.php?route=product/category&amp;path=25">Mực</a>
+              <ul>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực Một Nắng</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực Khô</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực ống</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực trứng</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực lá</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực nang</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Răng mực</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Bạch tuộc</a></li>
+              </ul>
+            </li>
+            <li class="cat-header"><a href="">Tôm</a>
+              <ul>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm tích</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm mủ ni</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm sú</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm càng xanh</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm hùm</a></li>
+              </ul>
+            </li>
+            <li class="cat-header"><a href="">Cua</a></li>
+            <li class="cat-header"><a href="">Ghẹ</a></li>
+            <li class="cat-header"><a href="">Cá</a></li>
+            <li class="cat-header"><a href="">Sò</a></li>
+            <li class="cat-header"><a href="">Ốc</a></li>
+          </ul>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Left Menu-->
+      <!--Support-->
+      <div class="box">
+        <div class="box_ct" id="box_support">
+          <div class="title_web">HỖ TRỢ TRỰC TUYẾN</div>
+          <ul>
+            <li><b class="title_sp fl">Hỗ trợ</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="114" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Hỗ trợ</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="114" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Support-->
+      <!--Link Web-->
+      <div class="box">
+        <div class="box_ct" id="link_web">
+          <div class="title_web">Liên kết website</div>
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Link Web-->
+      <!--Ads-->
+      <div class="box ads"> <a href=""><img src="http://www.captainds.com/uploaded/image/large/DeluxeSeafoodPlatter2.jpg" alt="" width="100%" /></a> <a href=""><img src="http://www.lienbangtravel.com/images/datnuoc-vietnam/amthuc/151011-cua-dong-mien-tay.jpg" alt="" width="100%" /></a> <a href=""><img src="http://web-images.chacha.com/images/Gallery/4491/10-healthy-seafood-choices-1341017024-aug-23-2012-1-600x400.jpg" alt="" width="100%" /></a> <a href=""><img src="http://www.hakodate.travel/en/img/img_hero_seafood.jpg" alt="" width="100%" /></a> </div>
+      <!--End Ads-->
+    </div>
+    <!--end Left Column-->
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Thư viện ảnh</a></div>
+      <!--Detail Products-->
+      <div class="box">
+        <div class="box_ct" id="detail_dtp">
+          <div class="proleftdet">
+            <div class="img-box"><a title="Cá chim đen loai 1" href="http://dohaisan.com/uploads/files/bai%20viet/ca-chim-den.jpg" rel="gallery1" class="zoom_dt"><img data-cloudzoom="zoomImage:&quot;http://dohaisan.com/uploads/files/bai%20viet/ca-chim-den.jpg&quot;" src="http://dohaisan.com/uploads/files/bai%20viet/ca-chim-den.jpg" id="mainImg" alt="ca-chim-den"></a></div>
+          </div>
+          <script type="text/javascript"> var options = { zoomMatchSize:true, tintColor:"#000", tintOpacity:0.25, zoomPosition:3, captionSource:"", captionPosition:"bottom", maxMagnification:4/*zoomPosition:'inside', zoomOffsetX:0*/}; $('#mainImg').CloudZoom(options);</script>
+          <!--end: #dp-thumb-->
+          <div id="dtp_info">
+            <h2 class="h2Title font1">Cá chim đen loai 1</h2>
+            <div class="dtp_status" id="like_face"> <img src="Images/social_network1.jpg" alt="" /> </div>
+            <div class="description_dtp">
+              <p>Cá chim đen biển loại 1 :</p>
+              <p>- Loại từ 1kg đến 1,5kg/ 1 con</p>
+              <p>- Cá tươi cực ngon</p>
+              <p>- Giao tận nhà miễn phí nếu mua 3kg trở lên</p>
+            </div>
+            <!--end: .dtp_addcart-->
+            <a class="btn_contact_dtp font1" href="">Liên hệ đặt mua</a> </div>
+          <div class="cf"></div>
+          <!--Text Detail-->
+          <div class="box_Tab">Thông tin sản phẩm</div>
+          <div id="info_g">
+            <div id="content_block_description">
+              <h2>Dây chuyền lọc nước tinh khiết đóng bình.</h2>
+              <p>Các thiết bị lọc nước của Công ty Cổ phần công nghệ môi trường Thiên   Sơn được nhập khẩu và lắp ráp dựa trên công nghệ màng lọc tiên tiến, với   công nghệ màng lọc thẩm thấu RO loại bỏ các hạt tạp chất, phần tử kim   loại nặng, vi sinh vật, vv có trong nước cấp sẽ được loại bỏ đến 90%,   chất lượng nước sau quá trình lọc đạt các của bộ y tế ban hành. Công ty   có dây truyền sản xuất tiên tiến và chuyên biệt vì vậy có thể cung cấp   cho các khách hàng nhiều loại thiết bị lọc nước tinh khiết có công suất   và ứng dụng trong các lĩnh vực khác nhau, ví dụ như các thiết bị lọc   màng, vi lọc, lọc tia cực tím, lọc Nano và điện thẩm tách. Với thiết bị   lọc nước tinh khiết RO công nghiệp, chúng tôi cung cấp các thiết bị lọc   có công suất từ 0,25 m3/giờ đến 500 m3/giờ. Các sản phẩm khác bao gồm bộ   lọc cơ học, trao đổi ion, siêu lọc sợi rỗng, hệ thống thẩm thấu ngược   (RO) .... Chúng tôi áp dụng chương trình điều khiển lôgic và công nghệ   điều khiển vi tính để tự đông hóa trong quá trình điều khiển. Với  kinh   nghiệm trong quá trình thi công và lắp đặt, công ty đã đạt được những   thành tựu suất sắc trong lĩnh vực công nghiệp nhiều khó khăn, phức tạp -   lĩnh vực xử lý nước tinh khiết, với yêu cầu cao về an toàn vì sản phẩm   có liên quan trực tiếp tới sức khỏe người sử dụng.</p>
+            </div>
+          </div>
+          <!--End Text Detail-->
+        </div>
+      </div>
+      <!--End Detail Products-->
+      <!-- Jquery The same Products -->
+      <div class="box" id="the_same_P">
+        <div class="box_ct" id="list_menu_seafood">
+          <div class="box_Tab">Sản phẩm tương tự</div>
+          <ul class="row_menu_seafood">
+            <li>
+              <!--Start Dishes-->
+              <div class="dishes"><a href="detail_product.html" class="img_product trans" title="Thực Đơn Chính"> <img src="http://www.captainds.com/uploaded/image/large/DeluxeSeafoodPlatter2.jpg" alt="Thực Đơn Chính" class="trans" /> </a>
+                <h3 class="dishes_name"><a href="detail_product.html" title="Thực Đơn Chính">Thực Đơn Chính</a></h3>
+              </div>
+              <!--End Dishes-->
+            </li>
+            <li>
+              <!--Start Dishes-->
+              <div class="dishes"><a href="detail_product.html" class="img_product trans" title="Thực Đơn Chính"> <img src="http://www.daytonlocal.com/restaurants/images/seafood-restaurants.jpg" alt="Thực Đơn Chính" class="trans" /> </a>
+                <h3 class="dishes_name"><a href="detail_product.html" title="Thực Đơn Chính">Thực Đơn Chính</a></h3>
+              </div>
+              <!--End Dishes-->
+            </li>
+            <li>
+              <!--Start Dishes-->
+              <div class="dishes"><a href="detail_product.html" class="img_product trans" title="Thực Đơn Chính"> <img src="http://thuyenhaisan.com/wp-content/uploads/2013/01/Barnacles-Seafood-Platter.jpg" alt="Thực Đơn Chính" class="trans" /> </a>
+                <h3 class="dishes_name"><a href="detail_product.html" title="Thực Đơn Chính">Thực Đơn Chính</a></h3>
+              </div>
+              <!--End Dishes-->
+            </li>
+            <li>
+              <!--Start Dishes-->
+              <div class="dishes"><a href="detail_product.html" class="img_product trans" title="Thực Đơn Chính"> <img src="http://www.topnotchbbq.com.au/images/seafood1.jpg" alt="Thực Đơn Chính" class="trans" /> </a>
+                <h3 class="dishes_name"><a href="detail_product.html" title="Thực Đơn Chính">Thực Đơn Chính</a></h3>
+              </div>
+              <!--End Dishes-->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--End Jquery The same Products-->
+    </div>
+    <!--end Right Column-->
+  </div>
+  <!--End Main Content-->
+</div>
+<!-- End wrap-->
+<!-- Begin of footer-->
+<div id="footer">
+  <div class="wrap">
+    <!--Info Footer-->
+    <div id="info_footer" class="fl">
+      <p><strong>CÔNG TY TNHH MỘT THÀNH VIÊN HẢI SẢN SÂN BAY</strong></p>
+      <p>Địa chỉ: 22 Phan Đình Giót, Phường 2,Q.Tân Bình,TP.HCM</p>
+      <p>Điện thoại: 083 8455024</p>
+      <p>Mã số thuế: 0312858788</p>
+      <p>Email: anhtuantadt@gmail.com</p>
+    </div>
+    <!--end Info Footer-->
+    <!--Get Email-->
+    <div id="get_email" class="fl">
+      <div>ĐĂNG KÝ BẢN TIN</div>
+      <p>Đăng ký ngay để nhận nhưng ưu đãi hấp dẫn và thưởng thức những món ăn mới nhất.</p>
+      <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Nhập email" onfocus="if (this.value=='Nhập email') this.value='';" onblur="if (this.value=='') this.value='Nhập email';" class="input_mail" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+      <input type="image" src="Images/mail_icon.png" name="send_mail" class="send_button" />
+    </div>
+    <!--End Get Email-->
+    <!--Social-->
+    <div id="social_network" class="fr"><a href="" title="Facebook"><span class="icon_facebook"></span></a><a href="" title="Google+"><span class="icon_gplus"></span></a><a href="" title="Youtube"><span class="icon_youtube"></span></a></div>
+    <!--End Social-->
+    <div id="copyright" class="fr">Copyright © 2014 By <strong>haisansanbay</strong><br />
+      <a href="http://www.dangcapviet.vn" target="_blank">Thiết kế website</a> bởi <a href="http://www.dangcapviet.vn" title="Đẳng Cấp Việt" target="_blank">Đẳng Cấp Việt</a></div>
+  </div>
+</div>
+<!-- End of footer-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

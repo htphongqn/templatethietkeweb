@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Gia Phát</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Detail-->
+<link href="Styles/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" src="Scripts/pirobox_extended.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#dpt-img').piroBox_ext({
+	   piro_speed : 700,
+		bg_alpha : 0.6,
+		piro_scroll : true // pirobox always positioned at the center of the page
+	});
+});
+</script>
+<link type="text/css" rel="stylesheet" href="Styles/zoom.css"/>
+<script type="text/javascript" src="Scripts/zoom.js"></script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {
+            jQuery('#mycarousel_new_P, #mycarousel_ads').jcarousel({
+                auto: 0,
+                animation: 1000,               
+				 wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            }); 
+			jQuery('#mycarousel_otherP').jcarousel({
+                auto: 0,
+                animation: 1000,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });            			
+        });
+    </script>
+</head>
+<body>
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Gia Phát" /> </a>
+    <p class="text-logo"><a href=""><img src="images/name_company.png" alt="Gia Phát" /></a></p>
+    <div id="hotline"><img src="Images/hotline_number.png" alt=""  /></div>
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li><a href="index.html"><img src="Images/home_icon.png" alt="" /></a> </li>
+        <li><a href="">Giới thiệu</a> </li>
+        <li><a href="list_products.html">Sản phẩm</a>
+          <ul>
+            <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Trang điểm</a></li>
+            <li><a href="#">Nước hoa</a></li>
+            <li><a href="list_news.html">Tin tức</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Hình ảnh</a></li>
+        <li><a href="#">Tuyển dụng</a></li>
+        <li><a href="list_news.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <div id="lang"> <img src="Images/vn_icon.jpg" alt="Tieng Viet" id="tv"/> <img src="Images/en_icon.jpg" alt="Tieng Anh" id="ta"/> </div>
+  </div>
+</div>
+<!--#end Header-->
+<div class="wrap">
+  <!--Categories Home-->
+  <div id="categories_intro">
+    <div class="intro_item">
+      <div class="intro_itemBg">
+        <h2 class="intro_title"> <a href="/tin-tuc/tu-van-thanh-lap-cong-ty.html">In ấn</a></h2>
+        <a href="" class="img_cate"><img src="Images/printing.jpg" alt="" /></a> </div>
+    </div>
+    <div class="intro_item">
+      <div class="intro_itemBg">
+        <h2 class="intro_title"> <a href="/tin-tuc/tu-van-thanh-lap-cong-ty.html">QUẢNG CÁO</a></h2>
+        <a href="" class="img_cate"><img src="Images/ads.jpg" alt="" /></a> </div>
+    </div>
+    <div class="intro_item">
+      <div class="intro_itemBg">
+        <h2 class="intro_title"> <a href="/tin-tuc/tu-van-thanh-lap-cong-ty.html">DỊCH VỤ</a></h2>
+        <a href="" class="img_cate"><img src="Images/services.jpg" alt="" /></a> </div>
+    </div>
+  </div>
+  <!--End Categories Home-->
+  <div class="cf"></div>
+</div>
+<!--Footer-->
+<div id="footer">
+  <div class="wrap">
+    <div id="info_footer">
+      <p>Bản quyền thuộc về CÔNG TY TNHH TM QUẢNG CÁO GIA PHÁT</p>
+      <p>VP: 926/42, Nguyễn Kiệm, P. 3, Quận Gò Vấp, Tp. HCM - ĐT: (08) 3894 2021 - Fax: (08) 3894 1319</p>
+      <p>Email: <a href="mailto:quatanggiaphat@gmail.com">quatanggiaphat@gmail.com</a> - Website: <a href="http://www.quangcaogiaphat.com">quangcaogiaphat.com</a></p>
+    </div>
+    <!--Status-->
+    <div id="access_status">
+      <p>Lượt truy cập: <b>3</b></p>
+      <p>Tổng truy cập: <b>50000</b></p>
+    </div>
+    <!--End Status-->
+    <div id="copyright">
+      <p>Copyright 2014 by giahan.vn - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+    </div>
+  </div>
+</div>
+<!--End Footer-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

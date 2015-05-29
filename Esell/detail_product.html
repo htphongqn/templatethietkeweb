@@ -1,0 +1,1495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Esell.vn</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Main Menu-->
+<link href="Styles/newheadfooter.css" rel="stylesheet" type="text/css" />
+<!--Nivo Slider Responsive-->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="top_page">
+  <div class="wrap" id="top_link">
+    <div class="hotline_top fl"> <span class="top_ico hotline_ico"></span>0918 856 738</div>
+    <ul class="link_right fr">
+      <li>
+        <div class="filter_name"> <span class="top_ico account_ico"></span><span class="tt_linktop">Đăng nhập / Đăng ký</span>
+          <div class="contentEGP popup_login" id="dpop">
+            <div class="input_form">
+              <label for="LoginForm_email"> Email <span class="required">*</span></label>
+              <input type="text" id="txtemail" maxlength="50" class="input identity">
+            </div>
+            <div class="input_form">
+              <label for="LoginForm_password"> Mật khẩu <span class="required">*</span></label>
+              <input type="password" id="txtpass" class="input password">
+            </div>
+            <div class="errors" style="color: Red"> </div>
+            <div id="loading-errors"> </div>
+            <div class="note_wrapper clearfix">
+              <div class="lost_password"> <a class="link_acount" onclick="showquyenmk();" href="javascript:void(0)">Quên mật khẩu</a> </div>
+            </div>
+            <div class="input_form"> <a href="javascript:void(0)" onclick="ajaxlogin();" class="button">Đăng nhập</a> </div>
+            <div class="note_wrapper"> Bạn chưa là thành viên? <a rel="nofollow" href="register.html" class="link_acount">Đăng
+              ký ngay</a></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="filter_name" id="dLikeProduct"> <span class="top_ico liked_ico"></span><span class="tt_linktop">Sản phẩm yêu thích</span>
+          <div class="contentEGP dropdown liked_P">
+            <div id="likecount"> Có <b style="color: #FF0000">3</b> sản phẩm được yêu thích</div>
+            <div class="list_liked_P">
+              <ul>
+                <li>
+                  <!--Start Product-->
+                  <div class="liked_item_P">
+                    <div class="img_general"> <a href="/may-do-duong-huyet-omron-hgm-111.html"> <img src="http://happybuy.vn/data/news/1667/may-do-duong-huyet-omron-hgm-111.jpg"> </a> </div>
+                    <div class="r_product_info">
+                      <h4> <a href="/may-do-duong-huyet-omron-hgm-111.html"> Máy đo đường huyết Omron HGM 111</a></h4>
+                      <div class="info_price"> <span class="f_price"><del> 1,500,000 VNĐ</del></span> <span class="main_price"> 1,350,000 VNĐ</span> </div>
+                    </div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li>
+                  <!--Start Product-->
+                  <div class="liked_item_P">
+                    <div class="img_general"> <a href="/may-do-huyet-ap-bap-tay-omron-hem-7322.html"> <img src="http://happybuy.vn/data/news/1655/may-do-huyet-ap-bap-tay-omron-hem-7322.jpg"> </a> </div>
+                    <div class="r_product_info">
+                      <h4> <a href="/may-do-huyet-ap-bap-tay-omron-hem-7322.html"> Máy đo huyết áp bắp tay Omron HEM 7322</a></h4>
+                      <div class="info_price"> <span class="f_price"><del> 1,900,000 VNĐ</del></span> <span class="main_price"> 1,600,000 VNĐ</span> </div>
+                    </div>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li>
+                  <!--Start Product-->
+                  <div class="liked_item_P">
+                    <div class="img_general"> <a href="/may-do-huyet-ap-bap-tay-alpk2-k2-231.html"> <img src="http://happybuy.vn/data/news/1634/may-do-huyet-ap-bap-tay-alpk2-k2-231.jpg"> </a> </div>
+                    <div class="r_product_info">
+                      <h4> <a href="/may-do-huyet-ap-bap-tay-alpk2-k2-231.html"> Máy đo huyết áp bắp tay ALPK2 K2 231</a></h4>
+                      <div class="info_price"> <span class="f_price"><del> 1,390,000 VNĐ</del></span> <span class="main_price"> 1,190,000 VNĐ</span> </div>
+                    </div>
+                  </div>
+                  <!--End Product-->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <!--Toggle Click-->
+        <div class="filter_name"> <span class="top_ico check_order_ico"></span><span class="tt_linktop">Kiểm tra đơn hàng</span>
+          <div class="contentEGP dropdown orderTracking">
+            <div class="dropdown_title">Kiểm tra đơn hàng</div>
+            <div class="input_form">
+              <label for="order_number">Vui lòng nhập mã đơn hàng:</label>
+              <input type="text" id="orderNr" value="" name="orderNr" class="form__input__text">
+            </div>
+            <div class="input_form">
+              <label for="order_number">Vui lòng nhập địa chỉ email:</label>
+              <input type="text" id="email" value="" name="email" class="form__input__text">
+            </div>
+            <p class="form_text">Nếu bạn có mắc thắc nào khác, <a class="link_acount" target="_blank" href="http://www.lazada.vn/faq/#answer-faq-orderstatus-ans">Nhấn vào đây</a> </p>
+            <div class="input_form"> <a class="button" href="">Kiểm tra</a></div>
+          </div>
+        </div>
+        <!--End Toggle Click-->
+      </li>
+      <li>
+        <div class="filter_name"> <span class="top_ico support_ico"></span><span class="tt_linktop">Chăm sóc khách hàng</span>
+          <div class="contentEGP dropdown dropdown_items"> <a target="_top" class="dropdown_item" href="http://www.lazada.vn/helpcenter/">Trung tâm hỗ trợ</a> <a target="_parent" class="dropdown_item" href="http://www.lazada.vn/helpcenter/orders-payment/#answer-faq-placeorder-ans">Đơn hàng &amp; Thanh toán</a> <a target="_top" class="dropdown_item" href="http://www.lazada.vn/helpcenter/shipping-delivery/#answer-faq-delivery-ans">Giao hàng &amp; Nhận hàng</a> <a target="_top" class="dropdown_item" href="http://www.lazada.vn/helpcenter/returns-refunds/#answer-faq-return-ans">Đổi trả hàng &amp; Hoàn tiền</a></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="right_fixed">
+  <!--Support-->
+  <div class="support_head"> <span class="title_support"></span>
+    <div class="support_bg">
+      <p class="optionSupport"><a href="http://sieumuanhanh.com/tin-tuc-n/lien-he-voi-chung-toi.aspx">Liên hệ với Esell.vn</a> </p>
+      <div class="infoSupport"> <span class="icoSupport"></span>
+        <p class="hotLine"> <span>(848) 3948 3961</span><br />
+          <span>0908 169 044</span></p>
+        <p class="timeSupport"> <strong>Thời gian làm việc:</strong></p>
+        <p class="timeSupport"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8h - 17h30 từ thứ 2 đến thứ 6</p>
+        <p class="timeSupport"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8h - 12h ngày thứ 7</p>
+        <span class="icoMail"></span>
+        <p class="mailSupport"><a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a></p>
+        <div class="yahoo"> <a href="ymsgr:sendIM?tonyngo4u" title=""> <img src="http://opi.yahoo.com/online?u=tonyngo4u&amp;m=g&amp;t=1" height="16" border="0" alt='' /></a> <a href="skype:sieumuanhanh?call" title=""> <img src="http://mystatus.skype.com/smallclassic/sieumuanhanh" title="" height="16" alt="" /></a> </div>
+      </div>
+    </div>
+    <!--Ads Right Fixed-->
+  </div>
+  <!--End Support-->
+  <div class="ads ads_fixed_side cf"><a href=""><img src="http://static.lazada.vn/floor/VN.2015-02-27.FL.3.2.cb4120f867760eaf558cd70e60d2e076.jpg" alt="" /></a></div>
+</div>
+<!--Left Fix Side-->
+<script type='text/javascript'>//<![CDATA[ 
+$(function() {    
+			var sticky_navigation_offset_top = $('#left_fix_side').offset().top;
+			var sticky_navigation = function(){
+				var scroll_top = $(window).scrollTop();
+				if (scroll_top > sticky_navigation_offset_top) { 
+					$('#left_fix_side').css({ 'position': 'fixed', 'top':40 });
+					$('.cart_head').addClass('cart_fixed');
+				} else {
+					$('#left_fix_side').css({ 'position': 'fixed', 'top':170 }); 
+					$('.cart_head').removeClass('cart_fixed');
+				}   
+			};
+			
+			sticky_navigation();
+			
+			$(window).scroll(function() {
+			sticky_navigation();
+			});
+		});// JavaScript Document
+</script>
+<div id="left_fix_side">
+  <!--Viewed Products-->
+  <div id="viewed_P" class="item_side_fix">
+    <div class="tt_viewedP">Sản phẩm đã xem (<i>4</i>)</div>
+    <div id="slide_viewed_P">
+      <ul>
+        <li><a href="/quat-thap-co-dieu-khien-tiross-16-ts955.html" title="Quạt Tháp Có Điều Khiển Tiross 16"> <img src="http://happybuy.vn/data/news/1606/quat-thap-co-dieu-khien-tiross-16-ts955.jpg" width="42" height="42" /></a> </li>
+        <li><a href="/chao-chien-trung-mini-12cm.html" title="Chảo Chiên Trứng Mini 12cm"> <img src="http://happybuy.vn/data/news/1566/chao-chien-trung-mini-12cm.jpg" width="42" height="42" /></a> </li>
+        <li><a href="/ban-ui-sharp-am-565tv-do.html" title="Bàn ủi Sharp AM-565TV - Đỏ"> <img src="http://happybuy.vn/data/news/1548/ban-ui-sharp-am-565tv-do.jpg" width="42" height="42" /></a> </li>
+        <li><a href="/quat-thap-co-dieu-khien-tiross-16-ts955.html" title="Quạt Tháp Có Điều Khiển Tiross 16"> <img src="http://happybuy.vn/data/news/1606/quat-thap-co-dieu-khien-tiross-16-ts955.jpg" width="42" height="42" /></a> </li>
+        <li><a href="/chao-chien-trung-mini-12cm.html" title="Chảo Chiên Trứng Mini 12cm"> <img src="http://happybuy.vn/data/news/1566/chao-chien-trung-mini-12cm.jpg" width="42" height="42" /></a> </li>
+        <li><a href="/ban-ui-sharp-am-565tv-do.html" title="Bàn ủi Sharp AM-565TV - Đỏ"> <img src="http://happybuy.vn/data/news/1548/ban-ui-sharp-am-565tv-do.jpg" width="42" height="42" /></a> </li>
+      </ul>
+      <div class="cf"></div>
+      <a id="prev_viewedP" class="prev" href="#">&lt;</a> <a id="next_viewedP" class="next" href="#">&gt;</a></div>
+  </div>
+  <!--end Viewed Products-->
+  <!--Convert Mobile Version-->
+  <div class="item_side_fix cf"><a href="" title="Chuyển sang phiên bản Mobile" class="icon_mobile trans"></a></div>
+  <!--end Convert Mobile Version-->
+</div>
+<!--end Left Fix Side-->
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" id="logo" class="fl"><img src="images/logo.png" alt="Esell.vn" /> </a>
+    <div id="header_r" class="fr">
+      <!--Register Button-->
+      <div class="fr"> <a href="" title="Đăng ký ngay nhận nhiều ưu đãi"><span class="register_button"></span></a></div>
+      <!--end Register Button-->
+      <div class="cart_head fr"> <a href="cart.html"><span class="icon_cart"></span><i>Giỏ hàng</i> <b class="quantity_cart">0</b></a></div>
+      <div class="search_form fr">
+        <input type="text" onfocus="if(this.value=='Tìm kiếm theo sản phẩm, danh mục hay nhãn hàng mong muốn') this.value='';" onblur="if(this.value=='') this.value='Tìm kiếm theo sản phẩm, danh mục hay nhãn hàng mong muốn';" value="Tìm kiếm theo sản phẩm, danh mục hay nhãn hàng mong muốn" size="30" class="inputSearch ui-autocomplete-input" alt="Search" id="vi5_txtsearch" name="ctl00$vi5$txtsearch" autocomplete="off">
+        <div class="search_dropdown">
+          <div class="select_wrap">
+            <select>
+              <option selected="selected" value="0">Tất cả</option>
+              <option value="264">Thiết Bị Vệ Sinh</option>
+              <option value="286">Đồ D&#249;ng Ph&#242;ng Tắm</option>
+              <option value="274">Nh&#224; Bếp - Nội Trợ</option>
+              <option value="495">Đồ Gia Dụng</option>
+              <option value="485">Chiếu S&#225;ng - Trang Tr&#237;</option>
+              <option value="540">Kh&#243;a - Phụ Kiện Cửa</option>
+              <option value="615">Điện D&#226;n Dụng</option>
+              <option value="633">Nh&#224; H&#224;ng - Kh&#225;ch Sạn</option>
+              <option value="672">Điện Tử - Tin Học</option>
+              <option value="304">Camera An Ninh</option>
+            </select>
+          </div>
+        </div>
+        <input type="submit" class="btn" id="vi5_btnSearch" value="" name="ctl00$vi5$btnSearch">
+      </div>
+    </div>
+  </div>
+</div>
+<!--#end Header-->
+<!--Top Main-->
+<script type='text/javascript'>//<![CDATA[ 
+$(function() {    
+			var sticky_navigation_offset_top = $('.top_main').offset().top;
+			var sticky_navigation = function(){
+				var scroll_top = $(window).scrollTop();
+				if (scroll_top > sticky_navigation_offset_top) { 
+					$('.top_main').css({ 'position': 'fixed', 'top':0 });
+				} else {
+					$('.top_main').css({ 'position': 'relative' }); 
+				}   
+			};
+			
+			sticky_navigation();
+			
+			$(window).scroll(function() {
+			sticky_navigation();
+			});
+		});// JavaScript Document
+</script>
+<div class="box top_main">
+  <div class="wrap">
+    <!-- Main Menu-->
+    <div class="all_categories fl">
+      <div class="show_menu">
+        <div class="tab_cate"><span>DANH MỤC SẢN PHẨM<i class="arr_down"></i></span></div>
+        <!--Main Menu-->
+        <ul class="nav_menu">
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate1.png" /></i><a href="list_products.html" class="t_menu">Thời trang nữ</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thang-nhom-chu-a.aspx" title=" Thang Nhôm Chữ A"> Thang Nhôm Chữ A</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thang-nhom-rut.aspx" title=" Thang Nhôm Rút"> Thang Nhôm Rút</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thang-nhom-gap.aspx" title=" Thang Nhôm Gấp"> Thang Nhôm Gấp</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thang-nhom-truot.aspx" title=" Thang Nhôm Trượt"> Thang Nhôm Trượt</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thang-ghe.aspx" title=" Thang Ghế"> Thang Ghế</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thang-nhom-rut-chu-a.aspx" title=" Thang Nhôm Rút Chữ A"> Thang Nhôm Rút Chữ A</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate2.png" /></i><a href="/chuyen-muc/thiet-bi-do-dien.aspx" class="t_menu">Thời trang nam</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/ampe-kim.aspx" title=" Ampe Kìm"> Ampe Kìm</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/dong-ho-van-nang.aspx" title=" Đồng Hồ Vạn Năng"> Đồng Hồ Vạn Năng</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/do-dien-tro-cach-dien.aspx" title=" Đo Điện Trở Cách Điện"> Đo Điện Trở Cách Điện</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/do-dien-tro-dat.aspx" title=" Đo Điện Trở Đất"> Đo Điện Trở Đất</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/but-thu-dien.aspx" title=" Bút Thử Điện"> Bút Thử Điện</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-do-pha.aspx" title=" Thiết Bị Dò Pha"> Thiết Bị Dò Pha</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/do-cuong-do-anh-sang.aspx" title=" Đo Cường Độ Ánh Sáng"> Đo Cường Độ Ánh Sáng</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/do-nhiet-do.aspx" title=" Đo Nhiệt Độ"> Đo Nhiệt Độ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate3.png" /></i><a href="/chuyen-muc/thiet-bi-nang-do.aspx" class="t_menu">Mẹ và bé</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/con-doi.aspx" title=" Con Đội"> Con Đội</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/pa-lang-xich-keo-tay.aspx" title=" Pa Lăng Xích Kéo Tay"> Pa Lăng Xích Kéo Tay</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/pa-lang-xich-lac-tay.aspx" title=" Pa Lăng Xích Lắc Tay"> Pa Lăng Xích Lắc Tay</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/xe-day.aspx" title=" Xe Đẩy"> Xe Đẩy</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/kich-cang-cap.aspx" title=" Kích Căng Cáp"> Kích Căng Cáp</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate4.png" /></i><a href="/chuyen-muc/thiet-bi-bao-quan.aspx" class="t_menu">Đồ gia dụng</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thung-dung-do-nghe.aspx" title=" Thùng Đựng Đồ Nghề"> Thùng Đựng Đồ Nghề</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/tui-dung-do-nghe.aspx" title=" Túi Đựng Đồ Nghề"> Túi Đựng Đồ Nghề</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/hop-bao-quan.aspx" title=" Hộp Bảo Quản"> Hộp Bảo Quản</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/o-khoa-hop-dung-chia.aspx" title=" Ổ Khóa, Hộp Đựng Chìa"> Ổ Khóa, Hộp Đựng Chìa</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate5.png" /></i><a href="/chuyen-muc/dung-cu-cam-tay.aspx" class="t_menu">Thực phẩm</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/kem-cam-tay.aspx" title=" Kềm Cầm Tay"> Kềm Cầm Tay</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/kem-mui-nhon.aspx"> Kềm Mũi Nhọn</a> </li>
+                    <li><a href="/chuyen-muc/kem-rut-dinh.aspx"> Kềm Rút Đinh</a> </li>
+                    <li><a href="/chuyen-muc/kem-tuot-day.aspx"> Kềm Tuốt Dây</a> </li>
+                    <li><a href="/chuyen-muc/kem-mo-qua.aspx"> Kềm Mỏ Quạ</a> </li>
+                    <li><a href="/chuyen-muc/kem-mo-phe.aspx"> Kềm Mở Phe</a> </li>
+                    <li><a href="/chuyen-muc/kem-dien.aspx"> Kềm Điện</a> </li>
+                    <li><a href="/chuyen-muc/kem-da-nang.aspx"> Kềm Đa Năng</a> </li>
+                    <li><a href="/chuyen-muc/kem-cong-luc.aspx"> Kềm Cộng Lực</a> </li>
+                    <li><a href="/chuyen-muc/kem-chet.aspx"> Kềm Chết</a> </li>
+                    <li><a href="/chuyen-muc/kem-cat.aspx"> Kềm Cắt</a> </li>
+                    <li><a href="/chuyen-muc/kem-bam-cos.aspx"> Kềm Bấm Cos</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/dung-cu-cat.aspx" title=" Dụng Cụ Cắt"> Dụng Cụ Cắt</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/cua-go.aspx"> Cưa Gỗ</a> </li>
+                    <li><a href="/chuyen-muc/cua-sat.aspx"> Cưa Sắt</a> </li>
+                    <li><a href="/chuyen-muc/dao.aspx"> Dao</a> </li>
+                    <li><a href="/chuyen-muc/luoi-dao.aspx"> Lưỡi Dao</a> </li>
+                    <li><a href="/chuyen-muc/keo.aspx"> Kéo</a> </li>
+                    <li><a href="/chuyen-muc/luoi-cua.aspx"> Lưỡi Cưa</a> </li>
+                    <li><a href="/chuyen-muc/mui-duc.aspx"> Mũi Đục</a> </li>
+                    <li><a href="/chuyen-muc/mui-khoan.aspx"> Mũi Khoan</a> </li>
+                    <li><a href="/chuyen-muc/mui-khoet.aspx"> Mũi Khoét</a> </li>
+                    <li><a href="/chuyen-muc/taro.aspx"> Taro</a> </li>
+                    <li><a href="/chuyen-muc/da-mai-va-da-cat.aspx"> Đá mài và đá cắt</a> </li>
+                    <li><a href="/chuyen-muc/ban-cat-gach.aspx"> Bàn cắt gạch</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/bua-cam-tay.aspx" title=" Búa Cầm Tay"> Búa Cầm Tay</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/bua-cao-su.aspx"> Búa Cao Su</a> </li>
+                    <li><a href="/chuyen-muc/bua-nhua.aspx"> Búa Nhựa</a> </li>
+                    <li><a href="/chuyen-muc/bua-dau-tron.aspx"> Búa Đầu Tròn</a> </li>
+                    <li><a href="/chuyen-muc/bua-go.aspx"> Búa Gò</a> </li>
+                    <li><a href="/chuyen-muc/bua-nho-dinh.aspx"> Búa Nhổ Đinh</a> </li>
+                    <li><a href="/chuyen-muc/bua-dau-vuong.aspx"> Búa đầu vuông</a> </li>
+                    <li><a href="/chuyen-muc/bua-dau-luc-giac.aspx"> Búa đầu lục giác</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/can-bong-lan.aspx" title=" Cán Bông Lăn"> Cán Bông Lăn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/can-chinh-luc.aspx" title=" Cần chỉnh lực"> Cần chỉnh lực</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/bo-dong-so-va-chu.aspx" title=" Bộ đóng số và chữ"> Bộ đóng số và chữ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/bo-dung-cu.aspx" title=" Bộ dụng cụ"> Bộ dụng cụ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/ong-dieu.aspx" title=" Ống Điếu"> Ống Điếu</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/can-tu-dong.aspx"> Cần Tự Động</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-kep.aspx" title=" Thiết Bị Kẹp"> Thiết Bị Kẹp</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/cao-2-chau.aspx"> Cảo 2 Chấu</a> </li>
+                    <li><a href="/chuyen-muc/cao-3-chau.aspx"> Cảo 3 Chấu</a> </li>
+                    <li><a href="/chuyen-muc/cao-chu-c.aspx"> Cảo Chữ C</a> </li>
+                    <li><a href="/chuyen-muc/cao-chu-f.aspx"> Cảo Chữ F</a> </li>
+                    <li><a href="/chuyen-muc/e-to-thuong.aspx"> Ê Tô Thường</a> </li>
+                    <li><a href="/chuyen-muc/cao-day-xich.aspx"> Cảo dây xích</a> </li>
+                    <li><a href="/chuyen-muc/cao-chu-h.aspx"> Cảo chữ H</a> </li>
+                    <li><a href="/chuyen-muc/cao-thuy-luc.aspx"> Cảo Thủy Lực</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/co-le-mo-let.aspx" title=" Cờ Lê Mỏ Lết"> Cờ Lê Mỏ Lết</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/co-le-don.aspx"> Cờ Lê Đơn</a> </li>
+                    <li><a href="/chuyen-muc/co-le-bo.aspx"> Cờ Lê Bộ</a> </li>
+                    <li><a href="/chuyen-muc/mo-let-thuong.aspx"> Mỏ Lết Thường</a> </li>
+                    <li><a href="/chuyen-muc/mo-let-rang.aspx"> Mỏ Lết Răng</a> </li>
+                    <li><a href="/chuyen-muc/co-le-dong.aspx"> Cờ Lê Đóng</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/tuoc-no-vit.aspx" title=" Tuốc Nơ Vít"> Tuốc Nơ Vít</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/vit-bake.aspx"> Vít Bake</a> </li>
+                    <li><a href="/chuyen-muc/vit-dep.aspx"> Vít Dẹp</a> </li>
+                    <li><a href="/chuyen-muc/tuoc-no-bo.aspx"> Tuốc Nơ Bộ</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/tuyp-cam-tay.aspx" title=" Tuýp Cầm Tay"> Tuýp Cầm Tay</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/tuyp-bo.aspx"> Tuýp Bộ</a> </li>
+                    <li><a href="/chuyen-muc/tuyp-le.aspx"> Tuýp Lẻ</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/luc-giac.aspx" title=" Lục Giác"> Lục Giác</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/luc-giac-don.aspx"> Lục Giác Đơn</a> </li>
+                    <li><a href="/chuyen-muc/luc-giac-bo.aspx"> Lục Giác Bộ</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate6.png" /></i><a href="/chuyen-muc/dung-cu-dung-dien.aspx" class="t_menu">Mỹ phẩm</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cha-nham.aspx" title=" Máy Chà Nhám"> Máy Chà Nhám</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/may-cha-nham-bang.aspx"> Máy Chà Nhám Băng</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-rung.aspx"> Máy Chà Nhám Rung</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-dia.aspx"> Máy Chà Nhám Đĩa</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-thuong.aspx"> Máy Chà Nhám Thường</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-ban.aspx"> Máy Chà Nhám Bàn</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-khoan.aspx" title=" Máy Khoan"> Máy Khoan</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/may-khoan-ban.aspx"> Máy Khoan Bàn</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-be-tong.aspx"> Máy Khoan Bê Tông</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-bua.aspx"> Máy Khoan Búa</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-toc-do-cao.aspx"> Máy Khoan Tốc Độ Cao</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-goc.aspx"> Máy Khoan Góc</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-sat.aspx"> Máy khoan sắt</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cua.aspx" title=" Máy Cưa"> Máy Cưa</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/may-cua-dia.aspx"> Máy Cưa Đĩa</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-kiem.aspx"> Máy Cưa Kiếm</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-long.aspx"> Máy Cưa Lọng</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-xich-dien.aspx"> Máy Cưa Xích Điện</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-ban.aspx"> Máy cưa bàn</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cat.aspx" title=" Máy Cắt"> Máy Cắt</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/may-cat-gach.aspx"> Máy Cắt Gạch</a> </li>
+                    <li><a href="/chuyen-muc/may-cat-sat.aspx"> Máy Cắt Sắt</a> </li>
+                    <li><a href="/chuyen-muc/may-cat-goc-da-nang.aspx"> Máy Cắt Góc Đa Năng</a> </li>
+                    <li><a href="/chuyen-muc/may-cat-xop.aspx"> Máy Cắt Xốp</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-mai.aspx" title=" Máy Mài"> Máy Mài</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/may-mai-ban.aspx"> Máy Mài Bàn</a> </li>
+                    <li><a href="/chuyen-muc/may-mai-goc.aspx"> Máy Mài Góc</a> </li>
+                    <li><a href="/chuyen-muc/may-mai-khuon.aspx"> Máy Mài Khuôn</a> </li>
+                    <li><a href="/chuyen-muc/may-mai-thang.aspx"> Máy Mài Thẳng</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-phay.aspx" title=" Máy Phay"> Máy Phay</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-van-oc.aspx" title=" Máy Vặn Ốc"> Máy Vặn Ốc</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-van-vit.aspx" title=" Máy Vặn Vít"> Máy Vặn Vít</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-thoi-hoi-nong.aspx" title=" Máy Thổi Hơi Nóng"> Máy Thổi Hơi Nóng</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-ban-keo.aspx" title=" Máy Bắn Keo"> Máy Bắn Keo</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-xit-rua.aspx" title=" Máy Xịt Rửa"> Máy Xịt Rửa</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/mo-han.aspx" title=" Mỏ hàn"> Mỏ hàn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-tien.aspx" title=" Máy tiện"> Máy tiện</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/motor.aspx" title=" Motor"> Motor</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cat-co-cam-tay.aspx" title=" Máy Cắt Cỏ Cầm Tay"> Máy Cắt Cỏ Cầm Tay</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/dung-cu-da-nang.aspx" title=" Dụng Cụ Đa Năng"> Dụng Cụ Đa Năng</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-hut-bui.aspx" title=" Máy hút bụi"> Máy hút bụi</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-nen-khi.aspx" title=" Máy nén khí"> Máy nén khí</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-bao.aspx" title=" Máy Bào"> Máy Bào</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-danh-bong.aspx" title=" Máy Đánh Bóng"> Máy Đánh Bóng</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-duc-be-tong.aspx" title=" Máy Đục Bê Tông"> Máy Đục Bê Tông</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate7.png" /></i><a href="/chuyen-muc/thiet-bi-nganh-han.aspx" class="t_menu">Điện thoại & Máy tính</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-han-que.aspx" title=" Máy Hàn Que"> Máy Hàn Que</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-han-mig.aspx" title=" Máy Hàn MIG"> Máy Hàn MIG</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-han-tig.aspx" title=" Máy Hàn TIG"> Máy Hàn TIG</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-bien-the-han.aspx" title=" Máy Biến Thế Hàn"> Máy Biến Thế Hàn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-han-cat.aspx" title=" Máy Hàn Cắt"> Máy Hàn Cắt</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-bam-han.aspx" title=" Máy Bấm Hàn"> Máy Bấm Hàn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/que-han.aspx" title=" Que Hàn"> Que Hàn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/kem-han.aspx" title=" Kềm Hàn"> Kềm Hàn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/kinh-han.aspx" title=" Kình Hàn"> Kình Hàn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate8.png" /></i><a href="/chuyen-muc/dung-cu-dung-xang.aspx" class="t_menu">Thể thao & Giải trí</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cua-xich.aspx" title=" Máy Cưa Xích"> Máy Cưa Xích</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cat-be-tong.aspx" title=" Máy Cắt Bê Tông"> Máy Cắt Bê Tông</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-tia-hang-rao.aspx" title=" Máy Tỉa Hàng Rào"> Máy Tỉa Hàng Rào</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cat-co-chay-xang.aspx" title=" Máy Cắt Cỏ Chạy Xăng"> Máy Cắt Cỏ Chạy Xăng</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-chay-xang-khac.aspx" title=" Máy Chạy Xăng Khác"> Máy Chạy Xăng Khác</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate6.png" /></i><a href="/chuyen-muc/dung-cu-dung-pin.aspx" class="t_menu">Mỹ phẩm</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-khoan-pin.aspx" title=" Máy khoan pin"> Máy khoan pin</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-van-vit-pin.aspx" title=" Máy Vặn Vít Pin"> Máy Vặn Vít Pin</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cat-co-chay-pin.aspx" title=" Máy Cắt Cỏ Chạy Pin"> Máy Cắt Cỏ Chạy Pin</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/dung-cu-khac.aspx" title=" Dụng cụ khác"> Dụng cụ khác</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate7.png" /></i><a href="/chuyen-muc/dung-cu-do-chinh-xac.aspx" class="t_menu">Điện thoại & Máy tính</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-cam-tay.aspx" title=" Thước Cầm Tay"> Thước Cầm Tay</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/thuoc-cuon.aspx"> Thước Cuộn</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-do-goc.aspx"> Thước Đo Góc</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-thang-xep.aspx"> Thước Thằng Xếp</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-vuong.aspx"> Thước Vuông</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/dung-cu-so.aspx" title=" Dụng Cụ So"> Dụng Cụ So</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/dong-ho-so.aspx"> Đồng Hồ So</a> </li>
+                    <li><a href="/chuyen-muc/khoi-v-chuan.aspx"> Khối V Chuẩn</a> </li>
+                    <li><a href="/chuyen-muc/ban-ra-chuan.aspx"> Bàn Rà Chuẩn</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-kep-caliper.aspx" title=" Thước Kẹp Caliper"> Thước Kẹp Caliper</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/thuoc-kep-dien-tu.aspx"> Thước Kẹp Điện Tử</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-kep-dong-ho.aspx"> Thước Kẹp Đồng Hồ</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-kep-co-khi.aspx"> Thước Kẹp Cơ Khí</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-panme.aspx" title=" Thước Panme"> Thước Panme</a> </p>
+                  <ul>
+                    <li><a href="/chuyen-muc/panme-do-ngoai-co.aspx"> Panme Đo Ngoài Cơ</a> </li>
+                    <li><a href="/chuyen-muc/panme-do-trong.aspx"> Panme Đo Trong</a> </li>
+                    <li><a href="/chuyen-muc/panme-do-ngoai-dien-tu.aspx"> Panme Đo Ngoài Điện Tử</a> </li>
+                    <li><a href="/chuyen-muc/panme-dong-ho.aspx"> Panme Đồng Hồ</a> </li>
+                  </ul>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-thuy.aspx" title=" Thước Thủy"> Thước Thủy</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-do-lo.aspx" title=" Thước Đo Lỗ"> Thước Đo Lỗ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-do-do-sau.aspx" title=" Thước Đo Độ Sâu"> Thước Đo Độ Sâu</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-do-do-day.aspx" title=" Thước Đo Độ Dày"> Thước Đo Độ Dày</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-do-do-cao.aspx" title=" Thước Đo Độ Cao"> Thước Đo Độ Cao</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-do-do-am.aspx" title=" Thiết Bị Đo Độ Ẩm"> Thiết Bị Đo Độ Ẩm</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-do-nhiet-do.aspx" title=" Thiết Bị Đo Nhiệt Độ"> Thiết Bị Đo Nhiệt Độ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/do-khoang-cach.aspx" title=" Đo khoảng Cách"> Đo khoảng Cách</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-do-kim-loai.aspx" title=" Thiết Bị Dò Kim Loại"> Thiết Bị Dò Kim Loại</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-can-bang-laser.aspx" title=" Thiết Bị Cân Bằng Laser"> Thiết Bị Cân Bằng Laser</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/duong-do-ban-kinh.aspx" title=" Dưỡng Đo Bán Kính"> Dưỡng Đo Bán Kính</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-bat-muc.aspx" title=" Thiết Bị Bật Mực"> Thiết Bị Bật Mực</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/duong-do-ren.aspx" title=" Dượng Đo Ren"> Dượng Đo Ren</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/chan-de-gia-do.aspx" title=" Chân Đế Giá Đỡ"> Chân Đế Giá Đỡ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thuoc-lan-duong.aspx" title=" Thước Lăn Đường"> Thước Lăn Đường</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><i class="icon_cate"><img alt="" src="Images/sprites_icon/cate8.png" /></i><a href="/chuyen-muc/dung-cu-dung-khi-nen.aspx" class="t_menu">Thể thao & Giải trí</a>
+            <div class="list_categories">
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-bom-mo.aspx" title=" Thiết Bị Bơm Mỡ"> Thiết Bị Bơm Mỡ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-go-ri.aspx" title=" Thiết Bị Gõ Rĩ"> Thiết Bị Gõ Rĩ</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/day-hoi-tu-rut.aspx" title=" Dây Hơi Tự Rút"> Dây Hơi Tự Rút</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/sung-rut-rive.aspx" title=" Súng Rút Rive"> Súng Rút Rive</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cha-nham-hoi.aspx" title=" Máy Chà Nhám Hơi"> Máy Chà Nhám Hơi</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-danh-bong-hoi.aspx" title=" Máy Đánh Bóng Hơi"> Máy Đánh Bóng Hơi</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-khoan-hoi.aspx" title=" Máy Khoan Hơi"> Máy Khoan Hơi</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-mai-hoi.aspx" title=" Máy Mài Hơi"> Máy Mài Hơi</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-van-oc-van-vit.aspx" title=" Máy Vặn Ốc Vặn Vít"> Máy Vặn Ốc Vặn Vít</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/thiet-bi-phun-son.aspx" title=" Thiết Bị Phun Sơn"> Thiết Bị Phun Sơn</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-ban-dinh.aspx" title=" Máy Bắn Đinh"> Máy Bắn Đinh</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/dung-cu-tuoi-cay.aspx" title=" Dụng cụ tưới cây"> Dụng cụ tưới cây</a> </p>
+                  <div class="cf"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a href="/chuyen-muc/may-cua-kiem-khi.aspx" title=" Máy Cưa Kiếm Khí"> Máy Cưa Kiếm Khí</a> </p>
+                  <div class="cf"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--end Main Menu-->
+    <!--Right Top Main-->
+    <div id="right_top_main" class="fr">
+      <!--Function Web-->
+      <div class="info_header">
+        <div class="info_item"><span class="info_ico genuine_icon"></span><b>Hàng chính hãng</b> </div>
+        <div class="info_item"><span class="info_ico return_icon"></span><b>Đổi trả dễ dàng</b> </div>
+        <div class="info_item"><span class="info_ico delivery_icon"></span><b>Giao hàng tận nơi</b> </div>
+        <div class="info_item"><span class="info_ico payment_icon"></span><b>Thanh toán khi nhận hàng</b> </div>
+      </div>
+      <!--end Function Web-->
+    </div>
+    <!--End Right Top Main-->
+  </div>
+</div>
+<!--End Top Main -->
+<div class="wrap cf">
+  <!--Main Content-->
+  <div id="main" class="cf">
+    <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_products.html">Sản phẩm</a> » SHINANO</div>
+    <!--Detail Products-->
+    <!--Fancybox-->
+    <link rel="stylesheet" href="Styles/detail_product.css" type="text/css" />
+    <link href="Styles/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.fancybox.js"></script>
+    <script type='text/javascript'>//<![CDATA[
+    $(document).ready(function () {       
+        $(".fancybox").fancybox({
+            openEffect: 'elastic',
+            closeEffect: 'elastic',
+            autoPlay: 'true',
+            playSpeed: '4000'
+        });
+    });	
+</script>
+    <div class="box">
+      <div id="detail_products">
+        <h1 class="h1Title">Chuột quang Apoint M1 (Đen phối đỏ)</h1>
+        <div class="pro_left">
+          <div class="pro_l_in">
+            <link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+            <script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+            <div class="zoom-desc fl">
+              <ul>
+                <li> <a href='http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7513-377923-1-zoom.jpg' class='cloud-zoom-gallery fancybox'  data-fancybox-group="gallery" title='Red' rel="useZoom: 'zoom1', smallImage: 'http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7513-377923-1-zoom.jpg' "><img class="zoom-tiny-image" src="http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7513-377923-1-zoom.jpg" alt = ""/></a> </li>
+                <li> <a href='http://static-03.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7514-377923-2-zoom.jpg' class='cloud-zoom-gallery fancybox'  data-fancybox-group="gallery" title='Blue' rel="useZoom: 'zoom1', smallImage: ' http://static-03.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7514-377923-2-zoom.jpg'"><img src="http://static-03.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7514-377923-2-zoom.jpg" alt = "" border="0" class="zoom-tiny-image"/></a> </li>
+                <li> <a href='http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg' class='cloud-zoom-gallery fancybox'  data-fancybox-group="gallery" title='Red' rel="useZoom: 'zoom1', smallImage: 'http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg' "><img class="zoom-tiny-image" src="http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg" alt = ""/></a> </li>
+                <li> <a href='http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg' class='cloud-zoom-gallery fancybox'  data-fancybox-group="gallery" title='Blue' rel="useZoom: 'zoom1', smallImage: ' http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg'"><img src="http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg" alt = "" border="0" class="zoom-tiny-image"/></a> </li>
+                <li><a href='http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg' class='cloud-zoom-gallery fancybox'  data-fancybox-group="gallery" title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg' "><img src="http://static-01.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7515-377923-3-zoom.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                <li> <a href='http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7516-377923-4-zoom.jpg' class='cloud-zoom-gallery fancybox'  data-fancybox-group="gallery" title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7516-377923-4-zoom.jpg' "><img src="http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7516-377923-4-zoom.jpg" alt = "" border="0" class="zoom-tiny-image"/></a> </li>
+              </ul>
+              <div class="cf"></div>
+              <a id="prev_thumb" class="prev" href="#">&lt;</a> <a id="next_thumb" class="next" href="#">&gt;</a> </div>
+            <div class="zoom-section fl">
+              <div class="zoom-small-image"><a href='http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7513-377923-1-zoom.jpg' class = 'cloud-zoom' id='zoom1' rel="adjustX: 10, adjustY:-4" title="Acicte magna ipsum dolor"><img class="mainImage" src="http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7513-377923-1-zoom.jpg" alt='' title="Newfeel Yorktown Ber 112635" /></a></div>
+              <div class="zoom_area"> <img src="Images/zoom_icon.png" style=" position:absolute; top:3px;"><a class="fancybox" href="http://static-02.lazada.vn/p/chuot-quang-apoint-m1-en-phoi-o-7513-377923-1-zoom.jpg" data-fancybox-group="gallery" title=""  style="margin-left:20px;">Click to view large image</a></div>
+            </div>
+          </div>
+        </div>
+        <!--end: #dp-thumb-->
+        <div id="dtp_info" class="fl">
+          <!--Info Detail Products-->
+          <div class="info_dtp_product fl">
+            <div class="dtp_row" id="code_P"><span class="tt_status">Mã sản phẩm:</span> <b>FJ-3390-HN</b> </div>
+            <div class="dtp_row" id="viewed_count"> <span class="tt_status">Lượt xem:</span> <b style="color: #d20000">10</b></div>
+            <div class="dtp_row" id=" short_des_dtp">- Dung lượng 20.000 mah<br />
+              - Thiết kế thời trang với chất liệu cao cấp<br />
+              - 2 cổng USB sạc cho Smartphone, Ipad...<br />
+              - Sử dụng Lõi Samsung , BH 12 Tháng<br />
+              - Full hộp new 100% Gồm: Pin, cáp Romoss, tài liệu, Tem chính hãng, phiếu bảo hành 12 tháng<br />
+              - Cam kết 100 % Hàng chính hãng ROMOSS</div>
+            <div class="dtp_row price_detail">
+              <div class="col_detail fl">
+                <div class="dtp_price"><b>3.910.000 VNĐ</b></div>
+                <div class="f_price">Giá trước đây: <del>1.700.000 VNĐ</del></div>
+                <div class="prod_saving">Tiết kiệm: <b>20%</b></div>
+              </div>
+              <div class="col_detail fr">
+                <div class="dtp_row">
+                  <div class="status_product available fr">Còn hàng</div>
+                  <!--<div class="status_product unavailable fr">Hết hàng</div>-->
+                </div>
+                <div class="dtp_row links_more"> <a id="cphMain_ctl00_lblike" class="like_pr" href="javascript:__doPostBack('ctl00$cphMain$ctl00$lblike','')"><span class="heart_icon"></span>Sản phẩm yêu thích</a></div>
+              </div>
+            </div>
+            <div class="dtp_row buy_function"> <a class="addtocart_btn fl" id="cphMain_ctl00_hplBuy" href="cart.html"><span>Mua ngay</span></a> </div>
+          </div>
+          <!--end Info Detail Products-->
+          <!--Support Detail-->
+          <div class="prod_r_content fr">
+            <div class="dtp_row"><img src="Images/like_P.jpg" alt="" /></div>
+            <div class="box_ct cf">
+              <div class="product_leadtime_title">Chọn địa chỉ của bạn để kiểm tra hình thức giao hàng</div>
+              <div class="dtp_row">
+                <label for="delivery_province">Tỉnh/Thành phố:</label>
+                <span class="select_item slect_location">
+                <select id="delivery_province">
+                  <option value="-1" selected="selected" class="select_select_option"> Xin chọn </option>
+                  <option value="271" class="select_select_option"> Hồ Chí Minh </option>
+                  <option value="232" class="select_select_option"> Hà Nội </option>
+                  <option value="260" class="select_select_option"> Đà Nẵng </option>
+                  <option value="280" class="select_select_option"> Cần Thơ </option>
+                  <option value="242" class="select_select_option"> Hải Phòng </option>
+                  <option value="265" class="select_select_option"> Khánh Hòa </option>
+                  <option value="431" class="select_select_option"> Bà Rịa Vũng Tàu </option>
+                  <option value="281" class="select_select_option"> Đồng Nai </option>
+                  <option value="558" class="select_select_option"> Đăk Lăk </option>
+                  <option value="272" class="select_select_option"> An Giang </option>
+                  <option value="234" class="select_select_option"> Bắc Giang </option>
+                  <option value="233" class="select_select_option"> Bắc Kạn </option>
+                  <option value="276" class="select_select_option"> Bạc Liêu </option>
+                  <option value="273" class="select_select_option"> Bình Dương </option>
+                  <option value="274" class="select_select_option"> Bình Phước </option>
+                  <option value="278" class="select_select_option"> Bình Thuận </option>
+                  <option value="261" class="select_select_option"> Bình Định </option>
+                  <option value="235" class="select_select_option"> Bắc Ninh </option>
+                  <option value="279" class="select_select_option"> Cà Mau </option>
+                  <option value="236" class="select_select_option"> Cao Bằng </option>
+                  <option value="277" class="select_select_option"> Bến Tre </option>
+                  <option value="577" class="select_select_option"> Đăk Nông </option>
+                  <option value="237" class="select_select_option"> Điện Biên </option>
+                  <option value="282" class="select_select_option"> Đồng Tháp </option>
+                  <option value="262" class="select_select_option"> Gia Lai </option>
+                  <option value="238" class="select_select_option"> Hà Giang </option>
+                  <option value="239" class="select_select_option"> Hà Nam </option>
+                  <option value="240" class="select_select_option"> Hà Tĩnh </option>
+                  <option value="241" class="select_select_option"> Hải Dương </option>
+                  <option value="283" class="select_select_option"> Hậu Giang </option>
+                  <option value="244" class="select_select_option"> Hòa Bình </option>
+                  <option value="243" class="select_select_option"> Hưng Yên </option>
+                  <option value="284" class="select_select_option"> Kiên Giang </option>
+                  <option value="264" class="select_select_option"> Kon Tum </option>
+                  <option value="246" class="select_select_option"> Lai Châu </option>
+                  <option value="286" class="select_select_option"> Lâm Đồng </option>
+                  <option value="247" class="select_select_option"> Lạng Sơn </option>
+                  <option value="245" class="select_select_option"> Lào Cai </option>
+                  <option value="285" class="select_select_option"> Long An </option>
+                  <option value="248" class="select_select_option"> Nam Định </option>
+                  <option value="249" class="select_select_option"> Nghệ An </option>
+                  <option value="250" class="select_select_option"> Ninh Bình </option>
+                  <option value="287" class="select_select_option"> Ninh Thuận </option>
+                  <option value="251" class="select_select_option"> Phú Thọ </option>
+                  <option value="266" class="select_select_option"> Phú Yên </option>
+                  <option value="267" class="select_select_option"> Quảng Bình </option>
+                  <option value="269" class="select_select_option"> Quảng Nam </option>
+                  <option value="270" class="select_select_option"> Quảng Ngãi </option>
+                  <option value="252" class="select_select_option"> Quảng Ninh </option>
+                  <option value="268" class="select_select_option"> Quảng Trị </option>
+                  <option value="288" class="select_select_option"> Sóc Trăng </option>
+                  <option value="253" class="select_select_option"> Sơn La </option>
+                  <option value="289" class="select_select_option"> Tây Ninh </option>
+                  <option value="254" class="select_select_option"> Thái Bình </option>
+                  <option value="255" class="select_select_option"> Thái Nguyên </option>
+                  <option value="256" class="select_select_option"> Thanh Hóa </option>
+                  <option value="263" class="select_select_option"> Thừa Thiên Huế </option>
+                  <option value="290" class="select_select_option"> Tiền Giang </option>
+                  <option value="291" class="select_select_option"> Trà Vinh </option>
+                  <option value="257" class="select_select_option"> Tuyên Quang </option>
+                  <option value="292" class="select_select_option"> Vĩnh Long </option>
+                  <option value="258" class="select_select_option"> Vĩnh Phúc </option>
+                  <option value="259" class="select_select_option"> Yên Bái </option>
+                </select>
+                </span> </div>
+              <div class="dtp_row">
+                <label>Quận/Huyện:</label>
+                <span class="select_item slect_zip">
+                <select id="delivery_zip">
+                  <option selected="selected" class="select__select__option">Xin chọn</option>
+                  <option value="1106">Văn Phòng Lazada Quận 1</option>
+                  <option value="1115">Văn Phòng Lazada Bình Thạnh</option>
+                  <option value="718">Quận 1</option>
+                  <option value="727">Quận 10</option>
+                  <option value="728">Quận 11</option>
+                  <option value="729">Quận 12</option>
+                  <option value="719">Quận 2</option>
+                  <option value="720">Quận 3</option>
+                  <option value="721">Quận 4</option>
+                  <option value="722">Quận 5</option>
+                  <option value="738">Huyện Cần Giờ</option>
+                  <option value="723">Quận 6</option>
+                  <option value="724">Quận 7</option>
+                  <option value="725">Quận 8</option>
+                  <option value="726">Quận 9</option>
+                  <option value="730">Quận Bình Tân</option>
+                  <option value="731">Quận Bình Thạnh</option>
+                  <option value="737">Huyện Bình Chánh</option>
+                  <option value="732">Quận Gò Vấp</option>
+                  <option value="739">Huyện Củ Chi</option>
+                  <option value="733">Quận Phú Nhuận</option>
+                  <option value="740">Huyện Hóc Môn</option>
+                  <option value="734">Quận Tân Bình</option>
+                  <option value="741">Huyện Nhà Bè</option>
+                  <option value="735">Quận Tân Phú</option>
+                  <option value="736">Quận Thủ Đức</option>
+                </select>
+                </span> </div>
+              <div class="delivery_types"><b>Giao hàng tiêu chuẩn</b> (17 Tháng 3) - Giao hàng miễn phí (*)&nbsp;
+                <div class="hint_icon">
+                  <div class="popup_delivery_hint">
+                    <!--- Start CMS products_delivery_type_standard_popup_content-->
+                    Áp dụng biểu phí và theo thời gian giao hàng tiêu chuẩn của Lazada.
+                    <!--- End CMS products_delivery_type_standard_popup_content-->
+                  </div>
+                </div>
+              </div>
+              <div class="method_payment"> <span>Thẻ ATM nội địa</span><span>Thanh toán khi nhận hàng </span> </div>
+            </div>
+            <div class="box_ct method_payment"> <span>Bảo đảm chính hãng 100%</span><span>Đổi trả dễ dàng</span><span>Giao hàng tận nơi</span><span>Thanh toán khi nhận hàng</span> </div>
+          </div>
+          <!--End Support Detail-->
+        </div>
+      </div>
+      <div class="cf"></div>
+    </div>
+    <!--End Detail Products-->
+    <div class="box">
+      <!--Sidebar Detail Products-->
+      <div id="l_slP" class="fl">
+        <script type='text/javascript'>//<![CDATA[ 
+$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+</script>
+        <!--Tab Detail Products-->
+        <div id="tabs-container">
+          <ul class="tabs-menu tabs_detail">
+            <li class="current"><a href="#tab-1" title="Chi tiết sản phẩm">Chi tiết sản phẩm</a></li>
+            <li><a href="#tab-2" title="Thông số kỹ thuật">Thông số kỹ thuật</a></li>
+            <li><a href="#tab-3" title="Nhận xét về sản phẩm">Nhận xét về sản phẩm</a></li>
+          </ul>
+          <div class="tab_area cf">
+            <div id="tab-1" class="tab-content tabs_detail_content">
+              <!--Features-->
+              <p>Chuột quang có dây <strong>Apoint M1</strong> chính hãng sử dụng cho máy tính giúp người dùng làm việc hiệu quả hơn.</p>
+              <p><img src="http://static-02.lazada.vn/p/apoint-7513-377923-1-zoom.jpg" data-original="http://static-02.lazada.vn/p/apoint-7513-377923-1-zoom.jpg" alt="apoint-7513-377923-1-zoom.jpg" /></p>
+              <p><img src="http://www.lazada.vn/chuot-quang-apoint-m1-den-phoi-do-329773.html" data-original="http://static-03.lazada.vn/p/apoint-7514-377923-2-zoom.jpg" alt="apoint-7514-377923-2-zoom.jpg" /></p>
+              <p><em>Chuột quang có dây Apoint M1 cá tính, hiện đại</em></p>
+              <div><strong>ĐẶC ĐIỂM NỔI BẬT</strong></div>
+              <strong> Kiểu dáng mạnh mẽ, hiện đại </strong><br />
+              Chuột quang có dây <strong>Apoint M1</strong> chính hãng kiểu dáng thời trang với   màu sắc đen phổ biến, có đèn báo hiệu khi kết nối thiết bị và khi làm   việc, hoạt động. Chuột được thiết kế hiện đại mạnh mẽ, thân chuột dài,   với các nút điều chỉnh hợp lý, vừa vặn với cỡ tay người dùng, cho bạn   thao tác chuẩn xác.
+              <p><strong>Kết nối USB 2.0 phổ biến, tiện dụng</strong><br />
+                Đặc biệt là đối với những bạn đang sử dụng laptop, gặp khó khăn trong   việc điều khiển chuột cảm ứng thì chuột quang Apoint M1 sẽ là một giải   pháp phù hợp nhất cho bạn. Chuột có dây kết nối USB 2.0 phổ biến với các   thiết bị hiện nay. Bên cạnh đó, với những ưu điểm: gọn nhẹ, độ nhanh   nhạy cao, điều khiển dễ dàng, những chú chuột quang có dây <strong>Apoint M1</strong> đem lại hiệu quả làm việc tốt hơn cho người sử dụng.</p>
+              <!--end Features-->
+              <div class="cf"></div>
+            </div>
+            <div id="tab-2" class="tab-content">
+              <!--Info Brand-->
+              -	Độ phân giải của chuột từ 1000/1600/2000 DPI<br />
+              -	Chất liệu: nhựa abs<br />
+              -	Chiều dài dây: 160cm <br />
+              -	Chiều dài thân chuột: 10cm <br />
+              -	Bảo hành: 12 tháng
+              <!--end Info Brand-->
+              <div class="cf"></div>
+            </div>
+            <div id="tab-3" class="tab-content">
+              <!--Comment-->
+              <div class="comment_part">
+                <div class="postcomment">
+                  <div id="ContentPlaceHolder1_ctl00_UpdatePanel1">
+                    <div class="content_cmt" style="clear: both; margin: 5px auto; width: 99.6%;">
+                      <ul style="display: block; font-size: 14px; margin: 0 auto; float: left; width: 99%;">
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="pcm">
+                    <div class="image-user"> <img src="Images/noavatar.png"> </div>
+                    <div class="inputcomment" style="margin: 10px;">
+                      <input value="184" name="productId" id="productId" data-val-required="The productId field is required."
+                                            data-val-number="The field productId must be a number." data-val="true" type="hidden">
+                      <input value="0" name="VoteCount" id="VoteCount" data-val-required="The VoteCount field is required."
+                                            data-val-number="The field VoteCount must be a number." data-val="true" type="hidden">
+                      <input name="ctl00$ContentPlaceHolder1$ctl00$FullName" type="text" id="ContentPlaceHolder1_ctl00_FullName" value="Nhập tên của bạn" onfocus="if ( this.value == this.defaultValue ) this.value = &#39;&#39;" onblur="if ( this.value == &#39;&#39; ) this.value = this.defaultValue" data-val-required="Vui l&amp;#242;ng nhập họ t&amp;#234;n !" data-val="true" class="nhapten" />
+                      <span data-valmsg-replace="true" data-valmsg-for="FullName" class="field-validation-valid"> </span>
+                      <input name="ctl00$ContentPlaceHolder1$ctl00$Email" type="text" id="ContentPlaceHolder1_ctl00_Email" value="Địa chỉ email của bạn" onfocus="if ( this.value == this.defaultValue ) this.value = &#39;&#39;" onblur="if ( this.value == &#39;&#39; ) this.value = this.defaultValue" data-val-required="Nhập email của bạn !" data-val="true" class="diachi" />
+                      <span id="ContentPlaceHolder1_ctl00_lberror" style="color:Red;"></span> </div>
+                    <div class="clear"> </div>
+                  </div>
+                  <div class="pcmnd">
+                    <input name="ctl00$ContentPlaceHolder1$ctl00$tieude" type="text" id="ContentPlaceHolder1_ctl00_tieude" value="Nhập tiêu đề" class="nhapten" data-val-number="The field productId must be a number." data-val-required="Nhập tiêu đề." onblur="if ( this.value == &#39;&#39; ) this.value = this.defaultValue" style="margin-top: 5px; margin-bottom: 6px; width: 692px;" onfocus="if ( this.value == this.defaultValue ) this.value = &#39;&#39;" data-val="true" />
+                    <textarea name="ctl00$ContentPlaceHolder1$ctl00$Content" id="ContentPlaceHolder1_ctl00_Content" rows="2" onfocus="if ( this.value == this.defaultValue ) this.value = &#39;&#39;" onblur="if ( this.value == &#39;&#39; ) this.value = this.defaultValue" data-val-required="Nhập nhận xét của bạn." data-val="true" cols="20">Nhận xét về sản phẩm</textarea>
+                  </div>
+                  <div class="send_comment">
+                    <div style='background-color:White;' ><img src="Images/CaptchaImage.axd.jpg" border="0" alt="Captcha" width="250" height="60" /></div>
+                    <input name="ctl00$ContentPlaceHolder1$ctl00$Send_txtCapcha" type="text" id="ContentPlaceHolder1_ctl00_Send_txtCapcha" style="float: left; width: 200px; margin-right: 37px; padding: 6px 5px;" class="inputbox" />
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$ctl00$btn_post_comment" value="Gửi nhận xét" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$ctl00$btn_post_comment&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_ctl00_btn_post_comment" class="buttoncm" />
+                  </div>
+                </div>
+              </div>
+              <!--End Comment-->
+              <div class="cf"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Tab Detail Products-->
+        <!--The Same Products-->
+        <div class="box">
+          <div class="tt_popP"><span>Sản phẩm tương tự</span></div>
+          <div id="thesame_products" class="sl_products">
+            <ul>
+              <li>
+                <!--Start Product-->
+                <div class="product"> <a class="img_product" href="/hop-com-ham-nong-tu-dong-magic-bullet.html"> <img src="http://happybuy.vn/data/news/1549/hop-com-ham-nong-tu-dong-magic-bullet.jpg" alt="Hộp cơm hâm nóng tự động Magic Bullet"></a>
+                  <h3 class="product_name"> <a href="/hop-com-ham-nong-tu-dong-magic-bullet.html"> Hộp cơm hâm nóng tự động Magic Bullet</a></h3>
+                  <div class="info_price"> <span class="f_price"><del> 300,000 VNĐ</del></span> <span class="main_price"> 130,000 VNĐ</span> </div>
+                  <div class="reduce"> -57%</div>
+                  <div class="addtocart"> <a href="../vi-vn/addtocart.aspx?id=1549">Mua ngay</a></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <div class="product"> <a class="img_product" href="/ban-ui-sharp-am-565tv-do.html"> <img src="http://happybuy.vn/data/news/1548/ban-ui-sharp-am-565tv-do.jpg" alt="Bàn ủi Sharp AM-565TV - Đỏ"></a>
+                  <h3 class="product_name"> <a href="/ban-ui-sharp-am-565tv-do.html"> Bàn ủi Sharp AM-565TV - Đỏ</a></h3>
+                  <div class="info_price"> <span class="f_price"><del> 790,000 VNĐ</del></span> <span class="main_price"> 419,000 VNĐ</span> </div>
+                  <div class="reduce"> -47%</div>
+                  <div class="addtocart"> <a href="../vi-vn/addtocart.aspx?id=1548">Mua ngay</a></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <div class="product"> <a class="img_product" href="/may-danh-trung-philips-6610.html"> <img src="http://happybuy.vn/data/news/1547/may-danh-trung-cam-tay-philips-99.jpg" alt="Máy đánh trứng Philips 6610"></a>
+                  <h3 class="product_name"> <a href="/may-danh-trung-philips-6610.html"> Máy đánh trứng Philips 6610</a></h3>
+                  <div class="info_price"> <span class="f_price"><del> 300,000 VNĐ</del></span> <span class="main_price"> 149,000 VNĐ</span> </div>
+                  <div class="reduce"> -50%</div>
+                  <div class="addtocart"> <a href="../vi-vn/addtocart.aspx?id=1547">Mua ngay</a></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <div class="product"> <a class="img_product" href="/may-massage-cam-tay-sony.html"> <img src="http://happybuy.vn/data/news/1691/may-massage-cam-tay-sony.jpg" alt="Máy massage cầm tay Sony"></a>
+                  <h3 class="product_name"> <a href="/may-massage-cam-tay-sony.html"> Máy massage cầm tay Sony</a></h3>
+                  <div class="info_price"> <span class="f_price"><del> 550,000 VNĐ</del></span> <span class="main_price"> 340,000 VNĐ</span> </div>
+                  <div class="reduce"> -38%</div>
+                  <div class="addtocart"> <a href="../vi-vn/addtocart.aspx?id=1691">Mua ngay</a></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <div class="product"> <a class="img_product" href="/pin-du-phong-romoss-sense4-10400mah-bh-12-thang.html"> <img src="http://happybuy.vn/data/news/1621/pin-du-phong-romoss-sense4-10400mah-bh-12-thang.jpg" alt="Pin dự phòng Romoss Sense4 10400mAh BH 12 tháng"></a>
+                  <h3 class="product_name"> <a href="/pin-du-phong-romoss-sense4-10400mah-bh-12-thang.html"> Pin dự phòng Romoss Sense4 10400mAh BH 12 tháng</a></h3>
+                  <div class="info_price"> <span class="f_price"><del> 750,000 VNĐ</del></span> <span class="main_price"> 415,000 VNĐ</span> </div>
+                  <div class="reduce"> -45%</div>
+                  <div class="addtocart"> <a href="../vi-vn/addtocart.aspx?id=1621">Mua ngay</a></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <div class="product"> <a class="img_product" href="/pin-sac-romoss-20000-mah-sense-6-chinh-hang.html"> <img src="http://happybuy.vn/data/news/1620/pin-sac-romoss-20000-mah-sense-6-chinh-hang.jpg" alt="Pin Sạc Romoss 20000 mah Sense 6 chính hãng"></a>
+                  <h3 class="product_name"> <a href="/pin-sac-romoss-20000-mah-sense-6-chinh-hang.html"> Pin Sạc Romoss 20000 mah Sense 6 chính hãng</a></h3>
+                  <div class="info_price"> <span class="f_price"><del> 1,100,000 VNĐ</del></span> <span class="main_price"> 545,000 VNĐ</span> </div>
+                  <div class="reduce"> -50%</div>
+                  <div class="addtocart"> <a href="../vi-vn/addtocart.aspx?id=1620">Mua ngay</a></div>
+                </div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <div class="product"> <a class="img_product" href="/pin-sac-du-phong-romoss-polymos-10-400-mah.html"> <img src="http://happybuy.vn/data/news/1616/pin-sac-du-phong-romoss-polymos-10-400-mah.jpg" alt="Pin sạc dự phòng Romoss Polymos 10.400 mah"></a>
+                  <h3 class="product_name"> <a href="/pin-sac-du-phong-romoss-polymos-10-400-mah.html"> Pin sạc dự phòng Romoss Polymos 10.400 mah</a></h3>
+                  <div class="info_price"> <span class="f_price"><del> 850,000 VNĐ</del></span> <span class="main_price"> 490,000 VNĐ</span> </div>
+                  <div class="reduce"> -42%</div>
+                  <div class="addtocart"> <a href="../vi-vn/addtocart.aspx?id=1616">Mua ngay</a></div>
+                </div>
+                <!--End Product-->
+              </li>
+            </ul>
+            <div class="cf"></div>
+            <a id="prev_thesameP" class="prev" href="#">&lt;</a> <a id="next_thesameP" class="next" href="#">&gt;</a> </div>
+        </div>
+        <!--end The Same Products-->
+      </div>
+      <!--end Sidebar Detail Products-->
+      <!--Other Products-->
+      <div id="other_products" class="fr">
+        <div class="tt_popP"><span>Có Thể Bạn Quan Tâm</span></div>
+        <div class="box_ct">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product">
+                <h3 class="product_name"> <a href="/may-do-huyet-ap-co-tay-medisana-hgd.html"> Máy đo huyết áp cổ tay Medisana HGD</a></h3>
+                <a class="img_product" href="/may-do-huyet-ap-co-tay-medisana-hgd.html"> <img src="http://happybuy.vn/data/news/1654/may-do-huyet-ap-co-tay-medisana-hgd.jpg" alt="Máy đo huyết áp cổ tay Medisana HGD"></a>
+                <div class="info_price"> <span class="f_price"><del> 2,590,000 VNĐ</del></span> <span class="main_price"> 2,290,000 VNĐ</span> </div>
+                <div class="btn_P"> <a class="view_detail" href="/may-do-huyet-ap-co-tay-medisana-hgd.html">Chi tiết</a></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product">
+                <h3 class="product_name"> <a href="/may-do-duong-huyet-microlife-mgr-100.html"> Máy đo đường huyết Microlife MGR 100</a></h3>
+                <a class="img_product" href="/may-do-duong-huyet-microlife-mgr-100.html"> <img src="http://happybuy.vn/data/news/1666/may-do-duong-huyet-microlife-mgr-100.jpg" alt="Máy đo đường huyết Microlife MGR 100"></a>
+                <div class="info_price"> <span class="f_price"><del> 1,250,000 VNĐ</del></span> <span class="main_price"> 1,050,000 VNĐ</span> </div>
+                <div class="btn_P"> <a class="view_detail" href="/may-do-duong-huyet-microlife-mgr-100.html">Chi tiết</a></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product">
+                <h3 class="product_name"> <a href="/bep-dien-tu-me-2107-cao-cap.html"> Bếp Điện Từ ME 2107 cao cấp</a></h3>
+                <a class="img_product" href="/bep-dien-tu-me-2107-cao-cap.html"> <img src="http://happybuy.vn/data/news/1568/bep-dien-tu-me-2107-cao-cap.jpg" alt="Bếp Điện Từ ME 2107 cao cấp"></a>
+                <div class="info_price"> <span class="f_price"><del> 1,050,000 VNĐ</del></span> <span class="main_price"> 799,000 VNĐ</span> </div>
+                <div class="btn_P"> <a class="view_detail" href="/bep-dien-tu-me-2107-cao-cap.html">Chi tiết</a></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product">
+                <h3 class="product_name"> <a href="/may-do-huyet-ap-bap-tay-laica-bm-2001.html"> Máy Đo Huyết Áp Bắp Tay Laica BM 2001</a></h3>
+                <a class="img_product" href="/may-do-huyet-ap-bap-tay-laica-bm-2001.html"> <img src="http://happybuy.vn/data/news/1681/may-do-huyet-ap-bap-tay-laica-bm-2001.jpg" alt="Máy Đo Huyết Áp Bắp Tay Laica BM 2001"></a>
+                <div class="info_price"> <span class="f_price"><del> 1,200,000 VNĐ</del></span> <span class="main_price"> 680,000 VNĐ</span> </div>
+                <div class="btn_P"> <a class="view_detail" href="/may-do-huyet-ap-bap-tay-laica-bm-2001.html">Chi tiết</a></div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product">
+                <h3 class="product_name"> <a href="/may-do-huyet-ap-bap-tay-alpk2-k2-1802.html"> Máy đo huyết áp bắp tay ALPK2 K2 1802</a></h3>
+                <a class="img_product" href="/may-do-huyet-ap-bap-tay-alpk2-k2-1802.html"> <img src="http://happybuy.vn/data/news/1635/may-do-huyet-ap-bap-tay-alpk2-k2-1802.jpg" alt="Máy đo huyết áp bắp tay ALPK2 K2 1802"></a>
+                <div class="info_price"> <span class="f_price"><del> 1,430,000 VNĐ</del></span> <span class="main_price"> 1,280,000 VNĐ</span> </div>
+                <div class="btn_P"> <a class="view_detail" href="/may-do-huyet-ap-bap-tay-alpk2-k2-1802.html">Chi tiết</a></div>
+              </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--End Other Products-->
+    </div>
+  </div>
+  <!--End Main Wrap-->
+  <!--Slide Trade-mark-->
+  <div class="box" id="trade_mark">
+    <div class="tt_trademark">Thương hiệu Nổi bật</div>
+    <div id="sl_trademark">
+      <ul>
+        <li> <a href='chuyen-muc/hioki.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/75/logo_01.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/kyoritsu.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/89/kyoritsu.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/nikawa.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/91/nikawa.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/poongsan.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/92/poongsan.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/stanley.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/93/stanley.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/stihl.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/94/STIHL.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/daesan.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/95/DAESAN.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/makita.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/96/MAKITA.jpg' alt='' /></a> </li>
+        <li> <a href='' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/97/maktec.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/mitutoyo.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/98/Mitutoyo.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/black-decker.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/99/black_decker.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/top.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/100/TOP.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/xtend-climb.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/104/XtendClimb.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/metabo.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/105/METABO.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/toptul.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/106/TOPTUL.jpg' alt='' /></a> </li>
+        <li> <a href='chuyen-muc/hong-ky.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/107/hongky.jpg' alt='' /></a> </li>
+        <li><a href='http://www.Esell.vn/chuyen-muc/bosch.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/108/Bosch.jpg' alt='' /></a> </li>
+      </ul>
+      <div class="cf"></div>
+      <a id="prev_trademark" class="prev" href="#">&lt;</a> <a id="next_trademark" class="next" href="#">&gt;</a> </div>
+  </div>
+  <!--End Slide Trade-mark-->
+  <div id="footer" class="cf">
+    <!--Footer Column-->
+    <div id="footer_columns">
+      <ul id="list_col_footer">
+        <!--Column Footer-->
+        <li class="col_foo">
+          <div class="col_F_ct">
+            <h3 class="title_col_footer">Thông tin</h3>
+            <ul class="list_menu_footer">
+              <li><a class="footer_item_link" href="http://www.lazada.vn/faq/">Tổng quan Esell</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-tra-hang">Thông báo từ Esell</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Điều khoản mua bán hàng hóa</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/faq/">Chính sách bảo mật</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-tra-hang">Cẩm nang mua sắm</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Hỏi đáp</a></li>
+              <li><a class="footer_item_link" href="list_news.html">Tin tức</a></li>
+            </ul>
+          </div>
+        </li>
+        <!--end Column Footer-->
+        <!--Column Footer-->
+        <li class="col_foo">
+          <div class="col_F_ct">
+            <h3 class="title_col_footer">Hỗ trợ khách hàng</h3>
+            <ul class="list_menu_footer">
+              <li><a class="footer_item_link" href="http://www.lazada.vn/faq/">Liên hệ</a></li>
+              <li><a class="footer_item_link" href="news_detail_tinchinhsach.html">Giao hàng</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Cách thức thanh toán</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Hướng dẫn đặt hàng</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Chính sách đổi trả hàng</a></li>
+              <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Trung tâm bảo hành</a></li>
+            </ul>
+          </div>
+        </li>
+        <!--end Column Footer-->
+        <!--Column Footer-->
+        <li class="col_foo">
+          <div class="col_F_ct">
+            <h3 class="title_col_footer">Chăm sóc khách hàng</h3>
+            <div> Hotline: <b style="color: #FF0000">0918 856 738</b><br />
+              Thứ 2 - thứ 6: 7h - 20h<br />
+              Thứ 7, CN & ngày lễ: 8h - 17h </div>
+            <!--Social-->
+            <div id="social_network" class="cf">
+              <div class="lb_col_foo"><b>Kết nối với Esell</b></div>
+              <a href="" title="Facebook"><span class="icon_facebook"></span></a><a href="" title="Twitter"><span class="icon_twitter"></span></a><a href="" title="Google+ trans"><span class="icon_gplus"></span></a><a href="" title="Youtube"><span class="icon_youtube"></span></a></div>
+          </div>
+        </li>
+        <!--end Column Footer-->
+        <!--Column Footer-->
+        <li class="col_foo">
+          <div class="col_F_ct">
+            <!--Info Footer-->
+            <div id="info_footer">
+              <p><strong>CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT</strong></p>
+              <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh     -  MST: 03 11 632 562</p>
+              <p>Điện thoại: (848) 39 483 961 - Fax: (848) 38 116 791 - Hotline: 0918 856 738</p>
+              <p>Email: info@dangcapviet.vn - Website: www.dangcapviet.vn</p>
+            </div>
+            <!--end Info Footer-->
+            <!--Payment Services-->
+            <div id="paymentarea" class="cf">
+              <div class="lb_col_foo"><b>Dịch vụ thanh toán:</b></div>
+              <img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2000px-MasterCard_Logo.svg.png"> <img alt="" src="http://www.lotterycasino.net/images/logo-visa-DEBIT.png"> <img alt="" src="http://tonthatquy-realestate.com/wp-content/uploads/2014/10/vietcombank-logo.jpg"> <img alt="" src="http://otcmarket.vn/public/media/media/logo/TCBANK1375326066.jpg"> <img alt="" src="http://susu.vn/hinh_wshot/bc322881588d6744573fc1f6ebb90fe0.jpg"></div>
+            <!--end Payment Services-->
+            <!--Register to get email-->
+            <div id="get_email" class="cf">
+              <div class="lb_col_foo"><b>Đăng ký nhận tin:</b></div>
+              <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; "
+                    value="Nhập địa chỉ Email của bạn" onfocus="if (this.value=='Email…') this.value='';"
+                    onblur="if (this.value=='') this.value='Nhập địa chỉ Email của bạn';" class="input_email"
+                    id="Txtemail" />
+              <a href="javascript:void(0)" onclick="regis_mail()" class="send_button">Đăng ký</a> </div>
+            <!--end Register to get email-->
+          </div>
+        </li>
+        <!--end Column Footer-->
+      </ul>
+    </div>
+    <!--end Footer Column-->
+    <!--Categories Footer-->
+    <div id="category_footer" class="cf">
+      <div class="lb_cate_foo">Sản phẩm, Danh mục mới &nổi bật</div>
+      <div>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/iphone-6-47-8mp-16gb-xam-214304.html">Apple iPhone 6</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/lg-nexus-5-d821-full-hd-495-8mp-16gb-trang-109829.html">Google Nexus 5</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/apple-ipad-4-with-retina-display-32gb-wifi-trang-46947.html">Apple Ipad 4</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/samsung-galaxy-note-101-2014-sm-p601-wqxga-101-16gb-wifi-3g-trang-115277.html">Samsung Galaxy Note 10.1</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/nokia-lumia-930-5-fhd-20mp-32gb-den-139948.html">Nokia Lumia 930</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/sony-xperia-z2-ips-lcd-52-207mp-16gb-den-143976.html">Sony Xperia Z2</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/asus-zenfone-5-a501cg-ips-50-8mp-8gb-2-sim-do-126636.html">Asus ZenFone 5</a></h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sony/" class="footer_item_link">Tivi Sony</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/samsung/" class="footer_item_link">Tivi Samsung</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/lg/" class="footer_item_link">Tivi LG</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/toshiba/" class="footer_item_link">Tivi Toshiba</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/panasonic/" class="footer_item_link">Tivi Panasonic</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sharp/" class="footer_item_link">Tivi Sharp</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/tcl/" class="footer_item_link">Tivi TCL</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/iphone-6-47-8mp-16gb-xam-214304.html">Apple iPhone 6</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/lg-nexus-5-d821-full-hd-495-8mp-16gb-trang-109829.html">Google Nexus 5</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/apple-ipad-4-with-retina-display-32gb-wifi-trang-46947.html">Apple Ipad 4</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/samsung-galaxy-note-101-2014-sm-p601-wqxga-101-16gb-wifi-3g-trang-115277.html">Samsung Galaxy Note 10.1</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/nokia-lumia-930-5-fhd-20mp-32gb-den-139948.html">Nokia Lumia 930</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/sony-xperia-z2-ips-lcd-52-207mp-16gb-den-143976.html">Sony Xperia Z2</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/asus-zenfone-5-a501cg-ips-50-8mp-8gb-2-sim-do-126636.html">Asus ZenFone 5</a></h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sony/" class="footer_item_link">Tivi Sony</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/samsung/" class="footer_item_link">Tivi Samsung</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/lg/" class="footer_item_link">Tivi LG</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/toshiba/" class="footer_item_link">Tivi Toshiba</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/panasonic/" class="footer_item_link">Tivi Panasonic</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sharp/" class="footer_item_link">Tivi Sharp</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/tcl/" class="footer_item_link">Tivi TCL</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/iphone-6-47-8mp-16gb-xam-214304.html">Apple iPhone 6</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/lg-nexus-5-d821-full-hd-495-8mp-16gb-trang-109829.html">Google Nexus 5</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/apple-ipad-4-with-retina-display-32gb-wifi-trang-46947.html">Apple Ipad 4</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/samsung-galaxy-note-101-2014-sm-p601-wqxga-101-16gb-wifi-3g-trang-115277.html">Samsung Galaxy Note 10.1</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/nokia-lumia-930-5-fhd-20mp-32gb-den-139948.html">Nokia Lumia 930</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/sony-xperia-z2-ips-lcd-52-207mp-16gb-den-143976.html">Sony Xperia Z2</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/asus-zenfone-5-a501cg-ips-50-8mp-8gb-2-sim-do-126636.html">Asus ZenFone 5</a></h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sony/" class="footer_item_link">Tivi Sony</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/samsung/" class="footer_item_link">Tivi Samsung</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/lg/" class="footer_item_link">Tivi LG</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/toshiba/" class="footer_item_link">Tivi Toshiba</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/panasonic/" class="footer_item_link">Tivi Panasonic</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sharp/" class="footer_item_link">Tivi Sharp</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/tcl/" class="footer_item_link">Tivi TCL</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/iphone-6-47-8mp-16gb-xam-214304.html">Apple iPhone 6</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/lg-nexus-5-d821-full-hd-495-8mp-16gb-trang-109829.html">Google Nexus 5</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/apple-ipad-4-with-retina-display-32gb-wifi-trang-46947.html">Apple Ipad 4</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/samsung-galaxy-note-101-2014-sm-p601-wqxga-101-16gb-wifi-3g-trang-115277.html">Samsung Galaxy Note 10.1</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/nokia-lumia-930-5-fhd-20mp-32gb-den-139948.html">Nokia Lumia 930</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/sony-xperia-z2-ips-lcd-52-207mp-16gb-den-143976.html">Sony Xperia Z2</a></h2>
+        <h2 class="footer_link"> <a class="footer_item_link" href="http://www.lazada.vn/asus-zenfone-5-a501cg-ips-50-8mp-8gb-2-sim-do-126636.html">Asus ZenFone 5</a></h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sony/" class="footer_item_link">Tivi Sony</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/samsung/" class="footer_item_link">Tivi Samsung</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/lg/" class="footer_item_link">Tivi LG</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/toshiba/" class="footer_item_link">Tivi Toshiba</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/panasonic/" class="footer_item_link">Tivi Panasonic</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/sharp/" class="footer_item_link">Tivi Sharp</a>, </h2>
+        <h2 class="footer_link"> <a href="http://www.lazada.vn/tivi/tcl/" class="footer_item_link">Tivi TCL</a></h2>
+      </div>
+    </div>
+    <!--end Categories Footer-->
+  </div>
+  <!--end Footer-->
+</div>
+<!-- End wrap-->
+<!--Footer Bottom-->
+<div id="footer_bottom" class="cf">
+  <div class="wrap">
+    <div id="copyright">Copyright © 2013 by Esell.vn. All rights reserved.</div>
+  </div>
+</div>
+<!--end Footer Bottom-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+<!--Slide Banner-->
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<!--Carousel Assets-->
+<script type="text/javascript" src="Scripts/jquery.carouFredSel-5.6.0-packed.js"></script>
+<script type="text/javascript" src="Scripts/all_scripts.js"></script>
+</body>
+</html>

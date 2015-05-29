@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Hải Sản Sân Bay</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="Scripts/haisan.js"></script>
+<!--Responsive Slides-->
+<link rel="stylesheet" href="Styles/responsiveslides.css">
+<script src="Scripts/responsiveslides.min.js"></script>
+<!--Main Menu-->
+<link href="Styles/nav.css" rel="stylesheet" type="text/css" />
+<!--Fancybox-->
+<link href="Styles/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.fancybox.js"></script>
+<!--Zoom-->
+<script type="text/javascript" src="Scripts/cloudzoom.js"></script>
+<!--DatePicker Plugin-->
+<link rel="stylesheet" href="Styles/BeatPicker.min.css"/>
+<script src="Scripts/BeatPicker.min.js"></script>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+(function ($) {
+        // VERTICALLY ALIGN FUNCTION
+        $.fn.vAlign = function() {
+            return this.each(function(i){
+            var ah = $(this).height();
+            var ph = $(this).parent().height();
+            var mh = Math.ceil((ph-ah) / 2);
+            $(this).css('margin-top', mh);
+            });
+        };
+    })(jQuery);
+$(document).ready(function() {
+    $(".img_cate img, .img_product img, .image_gallery img").vAlign();
+});
+});//]]>  
+</script>
+</head>
+<body>
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" id="logo"> <img src="Images/logo.png" alt="DOANH NGHIỆP TƯ NHÂN THƯƠNG MẠI Hải Sản Sân Bay" /></a>
+    <p class="text_logo"><img src="Images/name_company.png" alt="DOANH NGHIỆP TƯ NHÂN THƯƠNG MẠI Hải Sản Sân Bay" /></p>
+    <!--Search Tool-->
+    <div id="hotline" class="fr">083 8455024</div>
+    <!--End Search Tool-->
+  </div>
+</div>
+<!--#end Header-->
+<!--Top Menu-->
+<div id="nav">
+  <div id='cssmenu'>
+    <!--Search Tool-->
+    <div id="search_form" class="fl"> <a href="" class="submitSearch"></a>
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Tìm kiếm..." />
+      <div class="mask_input"></div>
+    </div>
+    <!--End Search Tool-->
+    <ul class="font1">
+      <li class='active'><a href='index.html'><span>Khuyến Mại</span></a></li>
+      <li class='has-sub'><a href='product.html'><span>Thực Đơn</span></a>
+        <ul>
+          <li class=''><a href='product.html'><span>Về Crepitee Coffee</span></a></li>
+          <li class=''><a href='product.html'><span>Hệ thống phân phối</span></a></li>
+          <li class='last'><a href='product.html'><span>Phương châm hoạt động</span></a></li>
+        </ul>
+      </li>
+      <li class=''><a href='list_products.html'><span>Voucher</span></a></li>
+      <li class=""><a href='list_news.html'><span>Hình Ảnh</span></a></li>
+      <li class=''><a href='list_news.html'><span>Nhà Hàng</span></a></li>
+      <li class=""><a href='gallery.html'><span>THƯ VIỆN</span></a></li>
+      <li class=''><a href='images.html'><span>Tin Tức</span></a></li>
+      <li class='last'><a href='contact.html'><span>LIÊN HỆ</span></a></li>
+    </ul>
+  </div>
+</div>
+<!--End Top Menu-->
+<div class="wrap">
+  <!--Main Content-->
+  <div id="main" class="cf">
+    <!--Left Column-->
+    <div id="left_col" class="fl">
+      <!--Form Reservations-->
+      <div class="box">
+        <div class="box_ct form_reservations">
+          <div class="title_web">ĐẶT BÀN TRỰC TUYẾN</div>
+          <div class="row_form">
+            <label class="left_row_form">Tên:</label>
+            <div class="right_row_form">
+              <input name="full_name" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Email:</label>
+            <div class="right_row_form">
+              <input name="email" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">SĐT:</label>
+            <div class="right_row_form">
+              <input name="phonenumber" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Số người:</label>
+            <div class="right_row_form">
+              <input name="number" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Giờ:</label>
+            <div class="right_row_form">
+              <input name="time" type="text" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form">
+            <label class="left_row_form">Ngày:</label>
+            <div class="right_row_form">
+              <input type="text" data-beatpicker="true" data-beatpicker-position="['right','*']" data-beatpicker-module="clear" data-beatpicker-format="['DD','MM','YYYY'],separator:'/'" class="inputbox" />
+            </div>
+          </div>
+          <div class="row_form"> <a href="" class="btn_reser">HOTLINE</a> <a href="" class="btn_reser"> ĐẶT BÀN</a> </div>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Form Reservations-->
+      <!--Left Menu-->
+      <div class="box">
+        <div id="box_category" class="box_ct">
+          <div class="title_web">Thực đơn</div>
+          <ul>
+            <li class="cat-header"> <a href="http://livedemo00.template-help.com/opencart_41473/index.php?route=product/category&amp;path=25">Mực</a>
+              <ul>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực Một Nắng</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực Khô</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực ống</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực trứng</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực lá</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Mực nang</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Răng mực</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Bạch tuộc</a></li>
+              </ul>
+            </li>
+            <li class="cat-header"><a href="">Tôm</a>
+              <ul>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm tích</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm mủ ni</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm sú</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm càng xanh</a></li>
+                <li><a title="Mực Một Nắng" href="/san-pham/muc-mot-nang.html">Tôm hùm</a></li>
+              </ul>
+            </li>
+            <li class="cat-header"><a href="">Cua</a></li>
+            <li class="cat-header"><a href="">Ghẹ</a></li>
+            <li class="cat-header"><a href="">Cá</a></li>
+            <li class="cat-header"><a href="">Sò</a></li>
+            <li class="cat-header"><a href="">Ốc</a></li>
+          </ul>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Left Menu-->
+      <!--Support-->
+      <div class="box">
+        <div class="box_ct" id="box_support">
+          <div class="title_web">HỖ TRỢ TRỰC TUYẾN</div>
+          <ul>
+            <li><b class="title_sp fl">Hỗ trợ</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="114" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Hỗ trợ</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="114" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Support-->
+      <!--Link Web-->
+      <div class="box">
+        <div class="box_ct" id="link_web">
+          <div class="title_web">Liên kết website</div>
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+        </div>
+        <div class="bottom_boxBg"></div>
+      </div>
+      <!--End Link Web-->
+      <!--Ads-->
+      <div class="box ads"> <a href=""><img src="http://www.captainds.com/uploaded/image/large/DeluxeSeafoodPlatter2.jpg" alt="" width="100%" /></a> <a href=""><img src="http://www.lienbangtravel.com/images/datnuoc-vietnam/amthuc/151011-cua-dong-mien-tay.jpg" alt="" width="100%" /></a> <a href=""><img src="http://web-images.chacha.com/images/Gallery/4491/10-healthy-seafood-choices-1341017024-aug-23-2012-1-600x400.jpg" alt="" width="100%" /></a> <a href=""><img src="http://www.hakodate.travel/en/img/img_hero_seafood.jpg" alt="" width="100%" /></a> </div>
+      <!--End Ads-->
+    </div>
+    <!--end Left Column-->
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div class="box_ct" id="detail_news">
+          <div id="info_g">
+            <h2 class="h2Title font1">Ăn tôm hùm đúng cách ?</h2>
+            <p class="date">06/05/2013</p>
+            <p>Cách truyền thống để ăn tôm hùm là hấp hoặc luộc. Nhưng không phải ai cũng biết xử lý một con tôm hùm chín trên bàn ăn. </p>
+            <p>Tôm hùm bổ dưỡng, nhiều canxi và khoáng chất, vốn là món <a href="http://www.cungcaphaisan.com/" title="hải sản">hải sản</a> ưa  thích của quý ông. Ở Mỹ, món tôm hùm vùng Maine được coi là biểu tượng  của sự viên mãn và thành đạt. <br />
+              <br />
+              Làm thế nào để biết con tôm hùm nào còn tươi, nạc thịt? Đầu bếp trong nhà hàng xử lý <a href="http://www.cungcaphaisan.com/san-pham/tom-hum.html" title="">tôm hùm</a> tươi ra sao?<br />
+              <br />
+              Dưới   đây là câu chuyện chế biến tôm hùm và cách thưởng thức tôm hùm đúng  điệu từ bà Melissa Bouchard, bếp trưởng nhà hàng <a href="http://www.cungcaphaisan.com/" title="">hải sản</a> danh tiếng Dimilo's on  the Water, bang Portland (Maine, Mỹ). Trong mùa hè, nhà hàng này dùng  150 con tôm hùm sống phục vụ khách du lịch mỗi ngày.<br />
+              <br />
+            </p>
+            <div><img _fl="" alt="1. Khi chọn tôm hùm tươi còn bơi lội trong bể, nên chọn con động cựa nhiều nhất. Mặc dù tôm hùm lúc tươi sẽ có màu khác nhau như xanh đậm, nâu hoặc đen, nhưng đến khi nấu chín, chúng đồng loạt chuyển qua màu đỏ gạch." title="1. Khi chọn tôm hùm tươi còn bơi lội trong bể, nên chọn con động cựa nhiều nhất. Mặc dù tôm hùm lúc tươi sẽ có màu khác nhau như xanh đậm, nâu hoặc đen, nhưng đến khi nấu chín, chúng đồng loạt chuyển qua màu đỏ gạch." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/dcc1.jpg" width="568" />
+              <div>Khi   chọn tôm hùm tươi còn bơi lội trong bể, nên chọn con động cựa nhiều  nhất. Mặc dù tôm hùm lúc tươi sẽ có màu khác nhau như xanh đậm, nâu hoặc   đen, nhưng đến khi nấu chín, chúng đồng loạt chuyển qua màu đỏ gạch.</div>
+            </div>
+            <br />
+            <div><img _fl="" alt=" 2. Một con tôm hùm tươi ngon sẽ giơ đuôi và càng lên trên không khí khi bị tóm ra khỏi bể chứa. Tôm hùm nên được nấu trong cùng một ngày nó bị đánh bắt, nhưng loại hải sản này có thể nấu chậm hơn bằng cách bỏ trong tủ lạnh, phủ khăn lạnh và ẩm lên tôm sống." title=" 2. Một con tôm hùm tươi ngon sẽ giơ đuôi và càng lên trên không khí khi bị tóm ra khỏi bể chứa. Tôm hùm nên được nấu trong cùng một ngày nó bị đánh bắt, nhưng loại hải sản này có thể nấu chậm hơn bằng cách bỏ trong tủ lạnh, phủ khăn lạnh và ẩm lên tôm sống." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/be82.jpg" width="568" />
+              <div> Một con <a href="http://www.cungcaphaisan.com/san-pham/tom-hum.html" title="">tôm hùm</a> tươi ngon sẽ giơ đuôi và càng lên trên không khí khi bị   tóm ra khỏi bể chứa. Tôm hùm nên được nấu trong cùng một ngày nó bị  đánh bắt, nhưng loại hải sản này có thể nấu chậm hơn bằng cách bỏ trong  tủ lạnh, phủ khăn lạnh và ẩm lên tôm sống.</div>
+            </div>
+            <br />
+            <div><img _fl="" alt=" 3. Người ta " dính.="dính." tôm="" hùm="" sống="" bằng="" cách="" thả="" chúng="" vào="" nước="" ngọt="" bởi="" đây="" là="" sinh="" vật="" mặn.="" trước="" đó,="" càng="" nên="" được="" bó="" chặt="" băng="" title=" 3. Người ta " src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/4163.jpg" width="568" />
+              <div> Người ta &quot;giết&quot; tôm hùm sống bằng cách thả chúng vào nước ngọt bởi đây  là sinh vật nước mặn. Trước đó, càng tôm nên được bó chặt bằng băng  dính.</div>
+            </div>
+            <br />
+            <div><img _fl="" alt="4. Cách truyền thống để ăn tôm hùm là hấp hoặc luộc chín. Ngoài ra, tôm hùm còn có thể được nướng hoặc đốt lò. Trước đó, đầu bếp phải dùng dao sắc xẻ dọc thân và làm sạch con tôm. Thời gian nấu tôm dưới bất kì phương pháp nào cũng kéo dài từ 10 đến 25 phút." title="4. Cách truyền thống để ăn tôm hùm là hấp hoặc luộc chín. Ngoài ra, tôm hùm còn có thể được nướng hoặc đốt lò. Trước đó, đầu bếp phải dùng dao sắc xẻ dọc thân và làm sạch con tôm. Thời gian nấu tôm dưới bất kì phương pháp nào cũng kéo dài từ 10 đến 25 phút." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/5f54.jpg" width="568" />
+              <div>Cách   truyền thống để ăn tôm hùm là hấp hoặc luộc chín. Ngoài ra, tôm hùm còn   có thể được nướng hoặc đốt lò. Trước đó, đầu bếp phải dùng dao sắc xẻ  dọc thân và làm sạch con tôm. Thời gian nấu tôm dưới bất kì phương pháp  nào cũng kéo dài từ 10 đến 25 phút.</div>
+            </div>
+            <br />
+            <div><img _fl="" alt=" 5. Đây là con tôm khi đã chín. Hầu hết các nhà hàng khi phục vụ tôm hùm thường đi kèm khăn ăn//tạp dề nhỏ và nước rửa tay vì loại hải sản này khá mùi." title=" 5. Đây là con tôm khi đã chín. Hầu hết các nhà hàng khi phục vụ tôm hùm thường đi kèm khăn ăn//tạp dề nhỏ và nước rửa tay vì loại hải sản này khá mùi." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/30d5.jpg" width="568" />
+              <div> Đây là con tôm khi đã chín. Hầu hết các nhà hàng khi phục vụ tôm hùm  thường đi kèm khăn ăn//tạp dề nhỏ và nước rửa tay vì loại hải sản này  khá &quot;mùi&quot;.<br />
+                <br />
+              </div>
+            </div>
+            <div><img _fl="" alt="Một chiếc kẹp tôm và xiên thịt là đồ nhất định phải có. " title="Một chiếc kẹp tôm và xiên thịt là đồ nhất định phải có. " src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/7f06.jpg" width="568" />
+              <div>Một chiếc kẹp tôm và xiên thịt là đồ nhất định phải có. </div>
+            </div>
+            <br />
+            <div><a href="http://www.cungcaphaisan.com/san-pham/tom-hum.html" title=""><img _fl="" alt="7. Khi tôm hùm chín đã được đặt lên bàn, " công="" nhàng.="nhàng." thưởng="" thức="" bắt="" đầu="" với="" việc="" tách="" càng="" tôm.="" một="" tay="" giữ="" con="" tôm,="" kia="" túm="" tôm="" và="" vặn="" xoắn="" nhẹ="" title="7. Khi tôm hùm chín đã được đặt lên bàn, " src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/8427.jpg" border="0" width="568" /></a>
+              <div>Khi   tôm hùm chín đã được đặt lên bàn, &quot;công cuộc&quot; thưởng thức bắt đầu với  việc tách càng tôm. Một tay giữ con tôm, tay kia túm càng tôm và vặn  xoắn nhẹ nhàng.</div>
+            </div>
+            <br />
+            <div><img _fl="" alt="Bẻ đi phần càng tôm nhỏ hơn." title="Bẻ đi phần càng tôm nhỏ hơn." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/74c8.jpg" width="568" />
+              <div>Bẻ đi phần càng tôm nhỏ hơn.</div>
+            </div>
+            <br />
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div><img _fl="" alt="Dùng xiên thịt nhỏ để xoáy thịt tôm ra khỏi càng." title="Dùng xiên thịt nhỏ để xoáy thịt tôm ra khỏi càng." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/usethepicktopullthemeatoutfromtheshell.jpg" width="568" />
+                      <div>Dùng xiên thịt nhỏ để xoáy thịt tôm ra khỏi càng.</div>
+                    </div>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div><img _fl="" alt="10. Dùng kìm để bẻ tiếp phần càng tôm lớn. Xong đó bẻ đôi phần này, để lộ ra phần thịt thơm bên trong. Lại dùng xiên thịt nhỏ để lấy phần thịt này ra. " title="10. Dùng kìm để bẻ tiếp phần càng tôm lớn. Xong đó bẻ đôi phần này, để lộ ra phần thịt thơm bên trong. Lại dùng xiên thịt nhỏ để lấy phần thịt này ra. " src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/c6f10.jpg" width="568" />
+              <div>Dùng   kìm để bẻ tiếp phần càng tôm lớn. Xong đó bẻ đôi phần này, để lộ ra  phần thịt thơm bên trong. Lại dùng xiên thịt nhỏ để lấy phần thịt này  ra. </div>
+            </div>
+            <br />
+            <div><a href="http://www.cungcaphaisan.com/san-pham/tom-hum.html" title=""><img _fl="" alt=" 11. Chú ý không nên bỏ qua phần thịt trong đốt chân tôm (phần nối càng tôm với mình tôm)." title=" 11. Chú ý không nên bỏ qua phần thịt trong đốt chân tôm (phần nối càng tôm với mình tôm)." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/42f11.jpg" border="0" width="568" /></a>
+              <div> Chú ý không nên bỏ qua phần thịt trong đốt chân tôm (phần nối càng tôm với mình tôm).</div>
+            </div>
+            <br />
+            <div><img _fl="" alt="Chuyển qua công đoạn xử lý phần đuôi tôm." title="Chuyển qua công đoạn xử lý phần đuôi tôm." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/7c112.jpg" width="568" />
+              <div>Chuyển qua công đoạn xử lý phần đuôi tôm.</div>
+            </div>
+            <br />
+            <div><img _fl="" alt=" 13. Một tay giữ phần đầu tôm chúi xuống dưới, tay kia nhấc ngược đuôi tôm lên. Vặn xoắn đuôi tôm để tách đuôi ra khỏi mình tôm." title=" 13. Một tay giữ phần đầu tôm chúi xuống dưới, tay kia nhấc ngược đuôi tôm lên. Vặn xoắn đuôi tôm để tách đuôi ra khỏi mình tôm." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/13.jpg" width="568" />
+              <div> Một tay giữ phần đầu tôm chúi xuống dưới, tay kia nhấc ngược đuôi tôm lên. Vặn xoắn đuôi tôm để tách đuôi ra khỏi mình tôm.</div>
+            </div>
+            <br />
+            <div><a href="http://www.cungcaphaisan.com/san-pham/tom-hum.html" title=""><img _fl="" alt="14. Sau đó, lật ngửa phần đuôi và bóp vỡ vỏ để lấy thịt. Chú ý phần chót đuôi tôm vẫn còn 1 chút thịt, người ăn có thể bóp vỏ để lấy phần thịt này ra. Phần chót đuôi còn dính một chất màu xanh nhạt, nên bỏ phần này đi. Phần thịt lấy từ đuôi ra nên liền một khối chứ không nên xé nhỏ." title="14. Sau đó, lật ngửa phần đuôi và bóp vỡ vỏ để lấy thịt. Chú ý phần chót đuôi tôm vẫn còn 1 chút thịt, người ăn có thể bóp vỏ để lấy phần thịt này ra. Phần chót đuôi còn dính một chất màu xanh nhạt, nên bỏ phần này đi. Phần thịt lấy từ đuôi ra nên liền một khối chứ không nên xé nhỏ." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/14.jpg" border="0" width="568" /></a>
+              <div>Sau   đó, lật ngửa phần đuôi và bóp vỡ vỏ để lấy thịt. Chú ý phần chót đuôi  tôm vẫn còn 1 chút thịt, người ăn có thể bóp vỏ để lấy phần thịt này ra.   Phần chót đuôi còn dính một chất màu xanh nhạt, nên bỏ phần này đi.  Phần thịt lấy từ đuôi ra nên liền một khối chứ không nên xé nhỏ.</div>
+            </div>
+            <br />
+            <div><img _fl="" alt="15. Các phần khác của tôm hùm còn chứa thịt là càng tôm và phần mình tôm dưới lớp vỏ cứng. Trong trường hợp khách hàng khó bóc tôm, nhà hàng sẽ dùng dao cắt tôm là 2 phần." title="15. Các phần khác của tôm hùm còn chứa thịt là càng tôm và phần mình tôm dưới lớp vỏ cứng. Trong trường hợp khách hàng khó bóc tôm, nhà hàng sẽ dùng dao cắt tôm là 2 phần." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/15.jpg" width="568" />
+              <div>Các   phần khác của tôm hùm còn chứa thịt là càng tôm và phần mình tôm dưới  lớp vỏ cứng. Trong trường hợp khách hàng khó bóc tôm, nhà hàng sẽ dùng  dao cắt tôm là 2 phần.<br />
+                <br />
+              </div>
+            </div>
+            <div><img _fl="" alt="Món tôm hùm bóc hoàn chỉnh. " title="Món tôm hùm bóc hoàn chỉnh. " src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/16.jpg" width="568" />
+              <div>Phần tôm hùm bóc hoàn chỉnh. </div>
+            </div>
+            <br />
+            <div><img _fl="" alt="17. Tôm hùm bóc vỏ thường ăn kèm với món soup, khoai tây chiên hoặc khoai tây nướng." title="17. Tôm hùm bóc vỏ thường ăn kèm với món soup, khoai tây chiên hoặc khoai tây nướng." src="http://admin.gafin.vn/Images/Uploaded/Share/2013/07/30/17.jpg" width="568" />
+              <div>Tôm hùm bóc vỏ thường ăn kèm với món soup, khoai tây chiên hoặc khoai tây nướng.</div>
+              <p align="left"><strong>Nguồn</strong>: Báo Dân Việt </p>
+            </div>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--end Right Column-->
+  </div>
+  <!--End Main Content-->
+</div>
+<!-- End wrap-->
+<!-- Begin of footer-->
+<div id="footer">
+  <div class="wrap">
+    <!--Info Footer-->
+    <div id="info_footer" class="fl">
+      <p><strong>CÔNG TY TNHH MỘT THÀNH VIÊN HẢI SẢN SÂN BAY</strong></p>
+      <p>Địa chỉ: 22 Phan Đình Giót, Phường 2,Q.Tân Bình,TP.HCM</p>
+      <p>Điện thoại: 083 8455024</p>
+      <p>Mã số thuế: 0312858788</p>
+      <p>Email: anhtuantadt@gmail.com</p>
+    </div>
+    <!--end Info Footer-->
+    <!--Get Email-->
+    <div id="get_email" class="fl">
+      <div>ĐĂNG KÝ BẢN TIN</div>
+      <p>Đăng ký ngay để nhận nhưng ưu đãi hấp dẫn và thưởng thức những món ăn mới nhất.</p>
+      <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Nhập email" onfocus="if (this.value=='Nhập email') this.value='';" onblur="if (this.value=='') this.value='Nhập email';" class="input_mail" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+      <input type="image" src="Images/mail_icon.png" name="send_mail" class="send_button" />
+    </div>
+    <!--End Get Email-->
+    <!--Social-->
+    <div id="social_network" class="fr"><a href="" title="Facebook"><span class="icon_facebook"></span></a><a href="" title="Google+"><span class="icon_gplus"></span></a><a href="" title="Youtube"><span class="icon_youtube"></span></a></div>
+    <!--End Social-->
+    <div id="copyright" class="fr">Copyright © 2014 By <strong>haisansanbay</strong><br />
+      <a href="http://www.dangcapviet.vn" target="_blank">Thiết kế website</a> bởi <a href="http://www.dangcapviet.vn" title="Đẳng Cấp Việt" target="_blank">Đẳng Cấp Việt</a></div>
+  </div>
+</div>
+<!-- End of footer-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

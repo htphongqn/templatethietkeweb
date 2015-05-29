@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Đồng hồ Phượng</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/scroll_ads.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			$("#tabs_detail").tabs("#tabs_dtcontent .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+<link href="Styles/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" src="Scripts/pirobox_extended.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#dpt-img').piroBox_ext({
+	   piro_speed : 700,
+		bg_alpha : 0.6,
+		piro_scroll : true // pirobox always positioned at the center of the page
+	});
+});
+</script>
+<link rel="stylesheet" href="Styles/colorbox/colorbox.css" />
+<script src="Scripts/jquery.colorbox.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".inline").colorbox({inline:true, innerWidth:550, innerHeight:480});
+	});
+</script>
+<link type="text/css" rel="stylesheet" href="Styles/zoom.css"/>
+<script type="text/javascript" src="Scripts/zoom.js"></script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {    	
+	jQuery('#mycarousel_trademarks').jcarousel({
+        auto: 2,
+        wrap: 'circular',
+		animation: 1000,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+	jQuery('#mycarousel_saleoff_P, #mycarousel_other_P').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+		animation: 1000,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+  <!--#begin Header-->
+  <div class="header"> <a id="logo" href="index.html"><img src="Images/logo.png" alt="" /></a>
+    <div id="header_right">
+      <div class="row_header" id="top_menu"> <a title="Trang chủ" rel="nofollow" target="_self" href="/vn/index.php" class="text">Trang chủ</a><a class="line">&nbsp;|&nbsp;</a><a title="Hệ thống cửa hàng" target="_self" href="/he-thong-cua-hang-18.html" class="text">Hệ thống cửa hàng</a><a class="line">&nbsp;|&nbsp;</a><a title="Tin tức" target="_self" href="list_news.html" class="text">Tin tức</a><a class="line">&nbsp;|&nbsp;</a><a title="Liên hệ" rel="nofollow" target="_self" href="/lien-he.html" class="text">Liên hệ</a><a class="line">&nbsp;|&nbsp;</a> <a title="Đăng ký" href="/dang-ky.html" class="text" rel="nofollow"><img align="absmiddle" title="Đăng ký" alt="Đăng ký" src="Images/icon-register.png">&nbsp;Đăng ký</a> <a class="line" rel="nofollow">&nbsp;|&nbsp;</a> <a title="Đăng nhập" href="/dang-nhap.html" class="text" rel="nofollow"><img align="absmiddle" title="Đăng nhập" alt="Đăng nhập" src="Images/icon-login.png">&nbsp;Đăng nhập</a> </div>
+      <div class="row_header cf">
+        <div id="support">
+          <ul>
+            <li><img align="absmiddle" alt="Yahoo" src="Images/icon_yahoo.png">&nbsp;Yahoo
+              <ul class="css3 radius3">
+                <li id="arow-up"></li>
+                <li id="icon_type"><img title="đồng hồ" alt="đồng hồ" src="Images/ic.png">&nbsp;Chát trực tuyến</li>
+                <li id="list"><a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=1">&nbsp;Bán hàng trực tuyến</a></li>
+                <li id="list"><a title="
+Chăm sóc khách hàng" href="ymsgr:sendIM?gallewatch5"><img alt="
+Chăm sóc khách hàng" src="http://opi.yahoo.com/online?u=gallewatch5&amp;m=g&amp;t=1">&nbsp;
+                  Chăm sóc khách hàng</a></li>
+                <li id="list"><a title="
+Hỗ trợ kỹ thuật" href="ymsgr:sendIM?quangnhat2626"><img alt="
+Hỗ trợ kỹ thuật" src="http://opi.yahoo.com/online?u=quangnhat2626&amp;m=g&amp;t=1">&nbsp;
+                  Hỗ trợ kỹ thuật</a></li>
+                <li class="clear"></li>
+              </ul>
+            </li>
+            <li><img align="absmiddle" title="hotline" alt="hotline" src="Images/icon_skype.png">&nbsp;Skype
+              <ul class="css3 radius3">
+                <li id="arow-up"></li>
+                <li id="icon_type"><img title="đồng hồ" alt="đồng hồ" src="Images/ic.png">&nbsp;Chát trực tuyến</li>
+                <li id="list"><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallicon/thampham1911">&nbsp;Chăm sóc khách hàng</a></li>
+                <li id="list"><a title="
+Chăm sóc khách hàng" href="skype:vuongquynhmai?chat"><img title="
+Chăm sóc khách hàng" alt="
+Chăm sóc khách hàng" src="http://mystatus.skype.com/smallicon/vuongquynhmai">&nbsp;
+                  Chăm sóc khách hàng</a></li>
+                <li id="list"><a title="
+Chăm sóc khách hàng" href="skype:gallewatch5?chat"><img title="
+Chăm sóc khách hàng" alt="
+Chăm sóc khách hàng" src="http://mystatus.skype.com/smallicon/gallewatch5">&nbsp;
+                  Chăm sóc khách hàng</a></li>
+                <li id="list"><a title="
+Kỹ thuật" href="skype:quangnhat5760?chat"><img title="
+Kỹ thuật" alt="
+Kỹ thuật" src="http://mystatus.skype.com/smallicon/quangnhat5760">&nbsp;
+                  Kỹ thuật</a></li>
+                <li class="clear"></li>
+              </ul>
+            </li>
+            <li><img align="absmiddle" title="hotline" alt="hotline" src="Images/icon_hotline.png">&nbsp;0977 253 186
+              <ul class="css3 radius3">
+                <li id="arow-up"></li>
+                <li id="icon_type"><img title="hỗ trợ" alt="hỗ trợ" src="Images/ic.png">&nbsp;Chát trực tuyến</li>
+                <li id="list"><strong>Kinh doanh</strong>:&nbsp;04 3976 4617 máy lẻ 112</li>
+                <li id="list"><strong> Chăm sóc KH</strong>:&nbsp;04 3976 4617 máy lẻ 110</li>
+                <li id="list"><strong> Kỹ thuật</strong>:&nbsp;04 3976 4617 máy lẻ 107</li>
+                <li id="list"><strong> Hotline</strong>:&nbsp;0977.253.186 </li>
+                <li class="clear"></li>
+              </ul>
+            </li>
+            <li><a rel="nofollow" href="/Gio-hang.html" title="giỏ hàng" class="bs-item"><img align="absmiddle" title="giỏ hàng" alt="giỏ hàng" src="Images/icon-cart.png">&nbsp;<span id="aaaxxx"></span>&nbsp;SẢN PHẨM&nbsp;&nbsp;&nbsp;</a></li>
+          </ul>
+          <span id="aaaxxx"></span>
+          <script type="text/javascript">countShoppingCart_pro('shopping_cart');</script>
+        </div>
+        <!--end: #support-->
+        <script type="text/javascript">
+		//$("#support a#yahoo").click(function(){
+			function sh(id){
+			if ($('#box-'+id).is(':hidden')){ $('#box-'+id).slideDown('normal'); $('#box-'+id).focus();}
+			else{ $('#box-'+id).slideUp('normal');}
+			}
+		//});
+	</script>
+        <div class="search_form">
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+          <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+        </div>
+        <!--end: #search-form-->
+      </div>
+      <!--end: #search-share-->
+      <div id="main_menu" class="cf">
+        <ul id="nav_menu">
+          <li><span><a title="Thương hiệu1" target="_self" href="/thuong-hieu.html" id="par_mnu">Thương hiệu</a></span>
+            <div class="Sub_mnu_thuonghieu">
+              <!-- Begin Sub_mnu_product -->
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-12-0-0-0-0-0-0.html" title="CANDINO">CANDINO</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-20-0-0-0-0-0-0.html" title="CENTURY">CENTURY</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-14-0-0-0-0-0-0.html" title="D&amp;G">D&amp;G</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-38-0-0-0-0-0-0.html" title="D&amp;G Trang sức ">D&amp;G Trang sức </a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-34-0-0-0-0-0-0.html" title="ENICAR">ENICAR</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-42-0-0-0-0-0-0.html" title="ERNEST BOREL">ERNEST BOREL</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-16-0-0-0-0-0-0.html" title="FESTINA">FESTINA</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-41-0-0-0-0-0-0.html" title="FRANCIS DELON">FRANCIS DELON</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-77-0-0-0-0-0-0.html" title="FREDERIQUE CONSTANT ">FREDERIQUE CONSTANT </a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-28-0-0-0-0-0-0.html" title="HERMLE">HERMLE</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-3-0-0-0-0-0-0.html" title="MOSCHINO">MOSCHINO</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-39-0-0-0-0-0-0.html" title="MOSCHINO Trang sức">MOSCHINO Trang sức</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-13-0-0-0-0-0-0.html" title="ORIENT">ORIENT</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-36-0-0-0-0-0-0.html" title="PERRELET">PERRELET</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-18-0-0-0-0-0-0.html" title="POLICE">POLICE</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-27-0-0-0-0-0-0.html" title="ROAMER">ROAMER</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-26-0-0-0-0-0-0.html" title="ROMANSON">ROMANSON</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-69-0-0-0-0-0-0.html" title="SEIKO">SEIKO</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-75-0-0-0-0-0-0.html" title="TAG HEUER">TAG HEUER</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-32-0-0-0-0-0-0.html" title="THOMAS SABO">THOMAS SABO</a></div>
+              <div id="mnu_list_thuonghieu"><a href="/thuong-hieu/f0-37-0-0-0-0-0-0.html" title="THOMAS SABO - Trang Sức">THOMAS SABO - Trang Sức</a></div>
+            </div>
+            <!-- End Sub_mnu_product -->
+          </li>
+          <li><span><a title="Khuyễn mãi2" target="_self" href="/sale-off.html" id="par_mnu">Khuyễn mãi</a></span></li>
+          <li><span><a title="Đồng hồ nam3" target="_self" href="/dong-ho-nam.html" id="par_mnu">Đồng hồ nam</a></span>
+            <div id="Sub_mnu_product_3" class="Sub_mnu_product">
+              <!-- Begin Sub_mnu_product -->
+              <div class="col_field">
+                <h2>Thương hiệu</h2>
+                <div id="list_field"><a title="CANDINO" href="/dong-ho-nam/f0-12-0-0-0-0-0-0.html">CANDINO</a></div>
+                <div id="list_field"><a title="CENTURY" href="/dong-ho-nam/f0-20-0-0-0-0-0-0.html">CENTURY</a></div>
+                <div id="list_field"><a title="D&amp;G" href="/dong-ho-nam/f0-14-0-0-0-0-0-0.html">D&amp;G</a></div>
+                <div id="list_field"><a title="ENICAR" href="/dong-ho-nam/f0-34-0-0-0-0-0-0.html">ENICAR</a></div>
+                <div id="list_field"><a title="ERNEST BOREL" href="/dong-ho-nam/f0-42-0-0-0-0-0-0.html">ERNEST BOREL</a></div>
+                <div id="list_field"><a title="FESTINA" href="/dong-ho-nam/f0-16-0-0-0-0-0-0.html">FESTINA</a></div>
+                <div id="list_field"><a title="FRANCIS DELON" href="/dong-ho-nam/f0-41-0-0-0-0-0-0.html">FRANCIS DELON</a></div>
+                <div id="list_field"><a title="FREDERIQUE CONSTANT " href="/dong-ho-nam/f0-77-0-0-0-0-0-0.html">FREDERIQUE CONSTANT </a></div>
+                <div id="list_field"><a title="MOSCHINO" href="/dong-ho-nam/f0-3-0-0-0-0-0-0.html">MOSCHINO</a></div>
+                <div id="list_field"><a title="ORIENT" href="/dong-ho-nam/f0-13-0-0-0-0-0-0.html">ORIENT</a></div>
+                <div id="list_field"><a title="gallewatch" href="/dong-ho-nam.html" style="text-decoration:underline">See ALL</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại</h2>
+                <div id="list_field"><a title="Đồng hồ cơ" href="/dong-ho-nam/f0-0-2-0-0-0-0-0.html">Đồng hồ cơ</a></div>
+                <div id="list_field"><a title="Đồng hồ điện tử" href="/dong-ho-nam/f0-0-1-0-0-0-0-0.html">Đồng hồ điện tử</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Khoảng giá</h2>
+                <div id="list_field"><a href="/dong-ho-nam/f0-0-0-0-0-18-0-0.html">Dưới 2 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nam/f0-0-0-0-0-19-0-0.html">Từ 2 triệu - 5 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nam/f0-0-0-0-0-11-0-0.html">Từ 5 triệu - 10 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nam/f0-0-0-0-0-13-0-0.html">Từ 10 triệu - 20 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nam/f0-0-0-0-0-14-0-0.html">Từ 20 triệu - 50 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nam/f0-0-0-0-0-15-0-0.html">Từ 50 triệu - 100 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nam/f0-0-0-0-0-16-0-0.html">Trên 100 triệu</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại Dây</h2>
+                <div id="list_field"><a title="Dây da" href="/dong-ho-nam/f0-0-0-8-0-0-0-0.html">Dây da</a></div>
+                <div id="list_field"><a title="Dây da cá sấu" href="/dong-ho-nam/f0-0-0-49-0-0-0-0.html">Dây da cá sấu</a></div>
+                <div id="list_field"><a title="Khác" href="/dong-ho-nam/f0-0-0-68-0-0-0-0.html">Khác</a></div>
+                <div id="list_field"><a title="Mạ vàng 18K" href="/dong-ho-nam/f0-0-0-54-0-0-0-0.html">Mạ vàng 18K</a></div>
+                <div id="list_field"><a title="PU" href="/dong-ho-nam/f0-0-0-50-0-0-0-0.html">PU</a></div>
+                <div id="list_field"><a title="Thép không gỉ" href="/dong-ho-nam/f0-0-0-59-0-0-0-0.html">Thép không gỉ</a></div>
+                <div id="list_field"><a title="Titan" href="/dong-ho-nam/f0-0-0-74-0-0-0-0.html">Titan</a></div>
+              </div>
+            </div>
+            <!-- End Sub_mnu_product -->
+          </li>
+          <li><span><a title="Đồng hồ nữ4" target="_self" href="/dong-ho-nu.html" id="par_mnu">Đồng hồ nữ</a></span>
+            <div id="Sub_mnu_product_4" class="Sub_mnu_product">
+              <!-- Begin Sub_mnu_product -->
+              <div class="col_field">
+                <h2>Thương hiệu</h2>
+                <div id="list_field"><a title="CANDINO" href="/dong-ho-nu/f0-12-0-0-0-0-0-0.html">CANDINO</a></div>
+                <div id="list_field"><a title="CENTURY" href="/dong-ho-nu/f0-20-0-0-0-0-0-0.html">CENTURY</a></div>
+                <div id="list_field"><a title="D&amp;G" href="/dong-ho-nu/f0-14-0-0-0-0-0-0.html">D&amp;G</a></div>
+                <div id="list_field"><a title="ENICAR" href="/dong-ho-nu/f0-34-0-0-0-0-0-0.html">ENICAR</a></div>
+                <div id="list_field"><a title="ERNEST BOREL" href="/dong-ho-nu/f0-42-0-0-0-0-0-0.html">ERNEST BOREL</a></div>
+                <div id="list_field"><a title="FESTINA" href="/dong-ho-nu/f0-16-0-0-0-0-0-0.html">FESTINA</a></div>
+                <div id="list_field"><a title="FRANCIS DELON" href="/dong-ho-nu/f0-41-0-0-0-0-0-0.html">FRANCIS DELON</a></div>
+                <div id="list_field"><a title="FREDERIQUE CONSTANT " href="/dong-ho-nu/f0-77-0-0-0-0-0-0.html">FREDERIQUE CONSTANT </a></div>
+                <div id="list_field"><a title="MOSCHINO" href="/dong-ho-nu/f0-3-0-0-0-0-0-0.html">MOSCHINO</a></div>
+                <div id="list_field"><a title="ORIENT" href="/dong-ho-nu/f0-13-0-0-0-0-0-0.html">ORIENT</a></div>
+                <div id="list_field"><a title="gallewatch" href="/dong-ho-nu.html" style="text-decoration:underline">See ALL</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại</h2>
+                <div id="list_field"><a title="Đồng hồ cơ" href="/dong-ho-nu/f0-0-2-0-0-0-0-0.html">Đồng hồ cơ</a></div>
+                <div id="list_field"><a title="Đồng hồ điện tử" href="/dong-ho-nu/f0-0-1-0-0-0-0-0.html">Đồng hồ điện tử</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Khoảng giá</h2>
+                <div id="list_field"><a href="/dong-ho-nu/f0-0-0-0-0-18-0-0.html">Dưới 2 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nu/f0-0-0-0-0-19-0-0.html">Từ 2 triệu - 5 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nu/f0-0-0-0-0-11-0-0.html">Từ 5 triệu - 10 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nu/f0-0-0-0-0-13-0-0.html">Từ 10 triệu - 20 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nu/f0-0-0-0-0-14-0-0.html">Từ 20 triệu - 50 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nu/f0-0-0-0-0-15-0-0.html">Từ 50 triệu - 100 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-nu/f0-0-0-0-0-16-0-0.html">Trên 100 triệu</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại Dây</h2>
+                <div id="list_field"><a title="Dây da" href="/dong-ho-nu/f0-0-0-8-0-0-0-0.html">Dây da</a></div>
+                <div id="list_field"><a title="Dây da cá sấu" href="/dong-ho-nu/f0-0-0-49-0-0-0-0.html">Dây da cá sấu</a></div>
+                <div id="list_field"><a title="Khác" href="/dong-ho-nu/f0-0-0-68-0-0-0-0.html">Khác</a></div>
+                <div id="list_field"><a title="Mạ vàng 18K" href="/dong-ho-nu/f0-0-0-54-0-0-0-0.html">Mạ vàng 18K</a></div>
+                <div id="list_field"><a title="Plastic" href="/dong-ho-nu/f0-0-0-66-0-0-0-0.html">Plastic</a></div>
+                <div id="list_field"><a title="PU" href="/dong-ho-nu/f0-0-0-50-0-0-0-0.html">PU</a></div>
+                <div id="list_field"><a title="Satin" href="/dong-ho-nu/f0-0-0-72-0-0-0-0.html">Satin</a></div>
+                <div id="list_field"><a title="Thép không gỉ" href="/dong-ho-nu/f0-0-0-59-0-0-0-0.html">Thép không gỉ</a></div>
+                <div id="list_field"><a title="Vàng nguyên khối" href="/dong-ho-nu/f0-0-0-76-0-0-0-0.html">Vàng nguyên khối</a></div>
+                <div id="list_field"><a title="Vàng trắng 18 ct" href="/dong-ho-nu/f0-0-0-52-0-0-0-0.html">Vàng trắng 18 ct</a></div>
+              </div>
+            </div>
+            <!-- End Sub_mnu_product -->
+          </li>
+          <li><span><a title="Đồng hồ đôi5" target="_self" href="/dong-ho-doi.html" id="par_mnu">Đồng hồ đôi</a></span>
+            <div id="Sub_mnu_product_5" class="Sub_mnu_product">
+              <!-- Begin Sub_mnu_product -->
+              <div class="col_field">
+                <h2>Thương hiệu</h2>
+                <div id="list_field"><a title="CANDINO" href="/dong-ho-doi/f0-12-0-0-0-0-0-0.html">CANDINO</a></div>
+                <div id="list_field"><a title="CENTURY" href="/dong-ho-doi/f0-20-0-0-0-0-0-0.html">CENTURY</a></div>
+                <div id="list_field"><a title="ERNEST BOREL" href="/dong-ho-doi/f0-42-0-0-0-0-0-0.html">ERNEST BOREL</a></div>
+                <div id="list_field"><a title="FRANCIS DELON" href="/dong-ho-doi/f0-41-0-0-0-0-0-0.html">FRANCIS DELON</a></div>
+                <div id="list_field"><a title="ROAMER" href="/dong-ho-doi/f0-27-0-0-0-0-0-0.html">ROAMER</a></div>
+                <div id="list_field"><a title="ROMANSON" href="/dong-ho-doi/f0-26-0-0-0-0-0-0.html">ROMANSON</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại</h2>
+                <div id="list_field"><a title="Đồng hồ cơ" href="/dong-ho-doi/f0-0-2-0-0-0-0-0.html">Đồng hồ cơ</a></div>
+                <div id="list_field"><a title="Đồng hồ điện tử" href="/dong-ho-doi/f0-0-1-0-0-0-0-0.html">Đồng hồ điện tử</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Khoảng giá</h2>
+                <div id="list_field"><a href="/dong-ho-doi/f0-0-0-0-0-18-0-0.html">Dưới 2 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-doi/f0-0-0-0-0-19-0-0.html">Từ 2 triệu - 5 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-doi/f0-0-0-0-0-11-0-0.html">Từ 5 triệu - 10 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-doi/f0-0-0-0-0-13-0-0.html">Từ 10 triệu - 20 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-doi/f0-0-0-0-0-14-0-0.html">Từ 20 triệu - 50 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-doi/f0-0-0-0-0-15-0-0.html">Từ 50 triệu - 100 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-doi/f0-0-0-0-0-16-0-0.html">Trên 100 triệu</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại Dây</h2>
+                <div id="list_field"><a title="Dây da" href="/dong-ho-doi/f0-0-0-8-0-0-0-0.html">Dây da</a></div>
+                <div id="list_field"><a title="Khác" href="/dong-ho-doi/f0-0-0-68-0-0-0-0.html">Khác</a></div>
+                <div id="list_field"><a title="Thép không gỉ" href="/dong-ho-doi/f0-0-0-59-0-0-0-0.html">Thép không gỉ</a></div>
+              </div>
+            </div>
+            <!-- End Sub_mnu_product -->
+          </li>
+          <li><span><a title="Đồng hồ khác6" target="_self" href="/dong-ho-khac.html" id="par_mnu">Đồng hồ khác</a></span>
+            <div id="Sub_mnu_product_6" class="Sub_mnu_product">
+              <!-- Begin Sub_mnu_product -->
+              <div class="col_field">
+                <h2>Thương hiệu</h2>
+                <div id="list_field"><a title="HERMLE" href="/dong-ho-khac/f0-28-0-0-0-0-0-0.html">HERMLE</a></div>
+                <div id="list_field"><a title="ORIENT" href="/dong-ho-khac/f0-13-0-0-0-0-0-0.html">ORIENT</a></div>
+                <div id="list_field"><a title="THOMAS SABO" href="/dong-ho-khac/f0-32-0-0-0-0-0-0.html">THOMAS SABO</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại</h2>
+                <div id="list_field"><a title="Đồng hồ cây" href="/dong-ho-khac/f0-0-46-0-0-0-0-0.html">Đồng hồ cây</a></div>
+                <div id="list_field"><a title="Đồng hồ để bàn" href="/dong-ho-khac/f0-0-11-0-0-0-0-0.html">Đồng hồ để bàn</a></div>
+                <div id="list_field"><a title="Đồng hồ điện tử" href="/dong-ho-khac/f0-0-1-0-0-0-0-0.html">Đồng hồ điện tử</a></div>
+                <div id="list_field"><a title="Đồng hồ treo tường" href="/dong-ho-khac/f0-0-47-0-0-0-0-0.html">Đồng hồ treo tường</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Khoảng giá</h2>
+                <div id="list_field"><a href="/dong-ho-khac/f0-0-0-0-0-18-0-0.html">Dưới 2 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-khac/f0-0-0-0-0-19-0-0.html">Từ 2 triệu - 5 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-khac/f0-0-0-0-0-11-0-0.html">Từ 5 triệu - 10 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-khac/f0-0-0-0-0-13-0-0.html">Từ 10 triệu - 20 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-khac/f0-0-0-0-0-14-0-0.html">Từ 20 triệu - 50 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-khac/f0-0-0-0-0-15-0-0.html">Từ 50 triệu - 100 triệu</a></div>
+                <div id="list_field"><a href="/dong-ho-khac/f0-0-0-0-0-16-0-0.html">Trên 100 triệu</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại Dây</h2>
+                <div id="list_field"><a title="Khác" href="/dong-ho-khac/f0-0-0-68-0-0-0-0.html">Khác</a></div>
+                <div id="list_field"><a title="Plastic" href="/dong-ho-khac/f0-0-0-66-0-0-0-0.html">Plastic</a></div>
+                <div id="list_field"><a title="Thép không gỉ" href="/dong-ho-khac/f0-0-0-59-0-0-0-0.html">Thép không gỉ</a></div>
+              </div>
+            </div>
+            <!-- End Sub_mnu_product -->
+          </li>
+          <li><span><a title="Trang sức7" target="_self" href="/trang-suc.html" id="par_mnu">Trang sức</a></span>
+            <div id="Sub_mnu_product_7" class="Sub_mnu_product">
+              <!-- Begin Sub_mnu_product -->
+              <div class="col_field">
+                <h2>Thương hiệu</h2>
+                <div id="list_field"><a title="CENTURY" href="/trang-suc/f0-20-0-0-0-0-0-0.html">CENTURY</a></div>
+                <div id="list_field"><a title="D&amp;G Trang sức " href="/trang-suc/f0-38-0-0-0-0-0-0.html">D&amp;G Trang sức </a></div>
+                <div id="list_field"><a title="MOSCHINO Trang sức" href="/trang-suc/f0-39-0-0-0-0-0-0.html">MOSCHINO Trang sức</a></div>
+                <div id="list_field"><a title="THOMAS SABO - Trang Sức" href="/trang-suc/f0-37-0-0-0-0-0-0.html">THOMAS SABO - Trang Sức</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại</h2>
+                <div id="list_field"><a title="Dây chuyền" href="/trang-suc/f0-0-22-0-0-0-0-0.html">Dây chuyền</a></div>
+                <div id="list_field"><a title="Khuyên tai" href="/trang-suc/f0-0-23-0-0-0-0-0.html">Khuyên tai</a></div>
+                <div id="list_field"><a title="Mặt dây chuyền" href="/trang-suc/f0-0-44-0-0-0-0-0.html">Mặt dây chuyền</a></div>
+                <div id="list_field"><a title="Nhẫn" href="/trang-suc/f0-0-25-0-0-0-0-0.html">Nhẫn</a></div>
+                <div id="list_field"><a title="Trang sức" href="/trang-suc/f0-0-21-0-0-0-0-0.html">Trang sức</a></div>
+                <div id="list_field"><a title="Vòng tay" href="/trang-suc/f0-0-24-0-0-0-0-0.html">Vòng tay</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Khoảng giá</h2>
+                <div id="list_field"><a href="/trang-suc/f0-0-0-0-0-18-0-0.html">Dưới 2 triệu</a></div>
+                <div id="list_field"><a href="/trang-suc/f0-0-0-0-0-19-0-0.html">Từ 2 triệu - 5 triệu</a></div>
+                <div id="list_field"><a href="/trang-suc/f0-0-0-0-0-11-0-0.html">Từ 5 triệu - 10 triệu</a></div>
+                <div id="list_field"><a href="/trang-suc/f0-0-0-0-0-13-0-0.html">Từ 10 triệu - 20 triệu</a></div>
+                <div id="list_field"><a href="/trang-suc/f0-0-0-0-0-14-0-0.html">Từ 20 triệu - 50 triệu</a></div>
+                <div id="list_field"><a href="/trang-suc/f0-0-0-0-0-15-0-0.html">Từ 50 triệu - 100 triệu</a></div>
+                <div id="list_field"><a href="/trang-suc/f0-0-0-0-0-16-0-0.html">Trên 100 triệu</a></div>
+              </div>
+              <div class="col_field">
+                <h2>Loại Dây</h2>
+              </div>
+            </div>
+            <!-- End Sub_mnu_product -->
+          </li>
+        </ul>
+      </div>
+      <!--end: #menu-top-->
+      <div class="cf"></div>
+    </div>
+  </div>
+  <!--#end Header-->
+  <!-- #Main -->
+  <div class="main cf">
+    <!--Left Column-->
+    <div class="left_content">
+      <!--News Viewed-->
+      <div class="box">
+        <div class="title_left">Tin tức</div>
+        <div class="vertical_menu">
+          <ul class="topnav">
+            <li> <a href="news_detail.html"> Thế giới đồng hồ</a> </li>
+            <li> <a href="news_detail.html"> Tin thương hiệu</a> </li>
+            <li> <a href="news_detail.html"> Tin khuyến mãi</a> </li>
+          </ul>
+        </div>
+      </div>
+      <!--End News Viewed-->
+    </div>
+    <!--End Left Column-->
+    <!--Main Column-->
+    <div class="main_content">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tin tức</a></div>
+      <!--Detail news-->
+      <div class="box">        
+        <div id="detail_news">
+          <div class="detail_info">
+            <h1 class="h1Title">Những thực phẩm nên tránh khi đang uống kháng sinh</span></h1>
+            <p class="date">06/05/2013</p>
+            <p>Khi đang uống kháng sinh điều trị một chứng bệnh nào đó, bạn nên tránh ăn những thực phẩm dưới đây:</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa có thể làm nặng nề thêm cho đường ruột của bạn trong khi bạn đang dùng thuốc kháng sinh. Hầu hết các dược sĩ đều đặc biệt khuyến cáo không uống sữa khi đang uống thuốc kháng sinh ciprofloxacin.</p>
+            <p>Ngoài ra, các sản phẩm chứa nhiều chất béo khác cũng có thể làm trầm trọng thêm các triệu chứng của bệnh tiêu chảy - một tác dụng phụ khi uống thuốc kháng sinh.</p>
+            <p>Thực phẩm chứa nhiều chất xơ</p>
+            <p>Một số loại rau quả có chứa nhiều chất xơ  hoặc các loại đậu cũng có thể gây tiêu chảy nặng thêm khi bạn đang dùng thuốc kháng sinh.</p>
+            <p>Bên cạnh đó, các thực phẩm như ngũ cốc, lúa mì tuy có thể tăng cường chất sắt và calci cho cơ thể nhưng lại cản trở khả năng hấp thụ một số thuốc kháng sinh khi vào cơ thể, đặc biệt là khi bạn đang uống thuốc kháng sinh quinolone, trong đó bao gồm các loại thuốc như ciprofloxacin, acid nalidixic và cinoxacin, sparfloxacin và trovafloxacin.</p>
+            <p>Thực phẩm có tính acid</p>
+            <p>Hàm lượng acid trong một số thực phẩm nhất định có thể làm gián đoạn khả năng hấp thụ thuốc của cơ thể.</p>
+            <p>Nói chung, khi uống thuốc kháng sinh, tuy bạn không luôn luôn phải tránh xa chúng hoàn toàn, nhưng đôi khi việc tiêu thụ thực phẩm chua hoặc đồ uống có chứa nhiều acid như cà chua, nước trái cây, đồ uống có ga cũng có thể hạn chế sự hấp thu của thuốc khi vào cơ thể.</p>
+            <p>Rượu</p>
+            <p>Nhiều dược sĩ đều chỉ ra rằng rượu không can thiệp bất lợi trực tiếp vào việc uống thuốc kháng sinh. Tuy nhiên, thuốc kháng sinh và rượu có thể có tác dụng phụ tương tự nhau. Vì thế, nếu bạn uống cả hai cùng một lúc, chúng có thể gia tăng cơ hội bạn phải chịu trận với những nguy cơ buồn nôn, chóng mặt hoặc buồn ngủ...</p>
+            <p>Những loại thuốc này có thể điểm mặt bao gồm: penicillin G, ampicillin, floxin, oxacillin, gentamycin và ciprofloxacin. Khi uống những loại thuốc này, bạn có thể phải ăn/uống các thực phẩm 3 giờ trước/sau 
+              
+              khi uống thuốc.</p>
+            <p>Lưu ý: Tránh dùng các loại sữa, các sản phẩm chế biến từ sữa, trừ sữa chua, khi bạn đang uống thuốc kháng sinh. Nguyên nhân là do lượng calci có nhiều trong sữa và các sản phẩm từ sữa có thể cản trở sự hấp thu của thuốc kháng sinh. Tuy nhiên, sữa chua thì bạn vẫn có thể ăn bình thường vì nó có chứa nhiều men vi sinh giúp khôi phục lại sự cân bằng cho đường ruột, tránh tiêu chảy khi sử dụng thuốc kháng sinh.</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <h3 class="other_newsT">Tin bài khác</h3>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--End Main Column-->
+  </div>
+  <!--End Main-->
+  <!-- Footer -->
+  <div id="footer">
+    <div id="topmenu_f">
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2>Về chúng tôi</h2>
+          <div class="listMenuFooter"><a href="">Đồng hồ Phương</a><a href="">Triết lý kinh doanh</a><a href="">Truyền thông & sự kiện</a><a href="">Hoạt động xã hội</a><a href="">Liên kết & Hợp tác</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2>Tin tức</h2>
+          <div class="listMenuFooter"><a href="">Tin khuyến mại</a><a href="">Tin thương hiệu</a><a href="">Thế giới đồng hồ</a><a href="">Lịch sử thương hiệu</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2>Sản phẩm & Dịch vụ</h2>
+          <div class="listMenuFooter"><a href="">Đồng hồ đeo tay</a><a href="">Đồng hồ khác</a><a href="">Phụ kiện dây da</a><a href="">Dịch vụ & Sửa chữa</a><a href="">Liên kết & Hợp tác</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2>Hướng dẫn</h2>
+          <div class="listMenuFooter"><a href="">Tin khuyến mại</a><a href="">Hướng dẫn mua hàng</a><a href="">Hướng dẫn sử dụng</a><a href="">Hướng dẫn thanh toán</a><a href="">Câu hỏi thường gặp</a></div>
+        </div>
+      </div>
+      <div class="cf"></div>
+    </div>
+    <!--Other Infomation-->
+    <div class="cf"></div>
+    <div id="connect">
+      <div class="social_network"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a> <a href=""><span class="icon_gplus"></span></a><a href=""> <span class="icon_youtube"></span></a><a href=""> <span class="icon_email"></span></a></div>
+      <div class="cf"></div>
+      <div id="get_email">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="--Đăng ký Email để nhận bản tin--" onfocus="if (this.value=='--Đăng ký Email để nhận bản tin--') this.value='';" onblur="if (this.value=='') this.value='--Đăng ký Email để nhận bản tin--';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+        <a href="" class="send_button">Đăng ký</a> </div>
+      <!--End Get Email-->
+    </div>
+    <div id="info_footer">
+      <div class="footer_ct">
+        <p><strong>Mỹ phẩm Hàn Quốc số 1</strong></p>
+        <p>Địa chỉ: 93B Nguyễn Văn Câu, P. 12, Quân 12, Tp. Hồ Chí Minh</p>
+        <p>Điện thoại: (+84) 08 123 456 - Fax: (+84) 08 123 456</p>
+        <p>Email: <a href="mailto:info@mphq.vn">info@mphq.vn</a></p>
+      </div>
+      <div class="visitors cf">
+        <p>Tổng truy cập: <strong>12 000 </strong></p>
+        <p>Đang Online: <strong>20</strong></p>
+      </div>
+      <div class="copyright cf"> Copyright © 2013 By <strong>donghoPhuong</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </div>
+    </div>
+    <!--End Other Infomation-->
+  </div>
+  <!-- End Footer -->
+</div>
+<!--End Wrapper-->
+<div id="divAdLeft">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/thuong-hieu/f0-77-0-0-0-0-0-0.html" target="_self" title="left"><img alt="left" title="left" border="0" src="Images/banner_fc_2.jpg" vspace="1" width="130" /></a></div>
+</div>
+<div id="divAdRight">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/he-thong-cua-hang-18.html" target="_self" title="Banner dọc ngoài "><img alt="Banner dọc ngoài " title="Banner dọc ngoài " border="0" src="Images/BANNER_HE_THONG_CUA_HANG_1.jpg" vspace="1" width="130" /></a></div>
+</div>
+<script type="text/javascript">
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 130;RightBannerW = 130;LeftAdjust = 2;RightAdjust = 2;TopAdjust = 10;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/**
+ *********************************************
+ * Prototype of styles for horizontal CSS-menu
+ * @data 25.01.2010
+ *********************************************
+ * (X)HTML-scheme:
+ *  <div id="menu">
+ *      <ul class="menu">
+ *          <li><a href="#" class="parent"><span>level 1</span></a>
+ *              <div><ul>
+ *                  <li><a href="#" class="parent"><span>level 2</span></a>
+ *                      <div><ul><li><a href="#"><span>level 3</span></a></li></ul></div>
+ *                  </li>
+ *              </ul></div>
+ *          </li>
+ *          <li class="last"><a href="#"><span>level 1</span></a></li>
+ *      </ul>
+ *  </div>
+ *********************************************
+ */
+
+/* menu::base */
+#menu {
+	position:relative;
+	z-index:100;
+	height:31px;
+	width:1000px;
+	margin: 0 auto;
+	background: none;
+}
+#menu .menu {
+	width:1000px;
+	margin: 0 auto;
+	height: 31px;
+}
+#menu * {
+	list-style:none;
+	border:0;
+	padding:0;
+	margin:0;
+}
+#menu a {
+	display:block;
+	padding:0 20px;
+	line-height: 31px;
+	background: url(../Images/menu_Bg.png) 100% -62px no-repeat !important;
+	font-size: 13px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#menu .current {
+	position: relative;
+	z-index:100;
+}
+#menu .current a {
+	padding-right: 40px;
+	margin-right: -20px;
+	background: url(../Images/menu_Bg.png) 100% 0 no-repeat !important;
+}
+#menu .last a {
+	padding-right: 40px;
+	background: url(../Images/menu_Bg.png) 100% -31px no-repeat !important;
+}
+#menu li li a {
+	background: url(../Images/menu_Bg.png) 100% -62px no-repeat !important;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 0;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-topright: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+#menu li {
+	float:left;
+	background:#000;
+}
+#menu li li {
+	float:none;
+	_border:1px solid #bb3e3e; /** fix for ie6 */
+	position: relative;
+}
+#menu div {
+	visibility:hidden;
+	position:absolute;
+	background:url(images/pix.gif);
+}
+#menu div div {
+	margin:-31px 0 0 0;
+	left:100%;
+}
+#menu li:hover>div {
+	visibility:visible;
+}
+/* menu::special styles */
+/* menu::level 1 */
+#menu a {
+	text-decoration:none;
+	color:#333333;
+	position:relative;
+	z-index:77;
+}
+#menu a:hover {
+	color:#005baa;
+}
+#menu a:hover span {
+	color:#005baa;
+}
+#menu>ul>li:hover>a {
+	background:url(images/back.png);
+	color:#333333;
+}
+#menu>ul>li:hover>a span {
+	color:#005baa;
+}
+#menu span {
+	font-weight: bold;
+	color: #333333;
+}
+#menu li {
+	background:none;
+}
+/* menu::level >= 2 */
+#menu li li a {
+	padding:0;
+	position:static;
+	border-top: 1px solid #FFFFFF;
+}
+#menu li li a:hover {
+	background: url(../Images/bg_repeat.png) 0 -80px repeat-x;
+}
+#menu li li a span {
+	color:#333333;
+	font-size: 13px;
+}
+#menu li li a:hover span {
+	color:#005baa;
+}
+#menu li li a.parent span {
+	background: url(../Images/arrow_left.png) no-repeat right 13px;
+	_background-position: right 13px;
+}
+*+html #menu li li a.parent span {
+	background: url(../Images/arrow_left.png) no-repeat right 13px;
+}
+#menu li li a.parent:hover span {
+	background: url(../Images/arrow_left.png) no-repeat right 13px;
+}
+*+html #menu li li a.parent:hover span {
+	background-position:right -48px;
+}
+#menu li li span {
+	display:block;
+	text-transform:none;
+	line-height:31px;
+	padding:0 10px;
+}
+#menu li div {
+	background: #ededed;
+	width: 200px;
+	position: absolute;
+	top: 31px;
+	z-index: 99999;
+}
+/** <fix for ie6> */
+#menu div div {
+	_margin-top:-25px;
+	_background:#bb3e3e;
+}
+#menu li li li {
+	_border:1px solid #bb3e3e;
+}
+#menu div div div {
+	_background:#bb3e3e;
+}
+#menu li li li li {
+	_border:1px solid #bb3e3e;
+}
+/** </fix for ie6> */
+
+/* lava lamp */
+div#menu li.back {
+	width:10px;
+	height:31px;
+	z-index:8;
+	position:absolute;
+}
+div#menu li.back .left {
+	width:auto;
+	height:31px;
+	float:none;
+	position:relative;
+	top:0;
+	left:0;
+	visibility:visible;
+}

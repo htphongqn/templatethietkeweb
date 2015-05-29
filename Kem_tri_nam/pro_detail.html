@@ -1,0 +1,1015 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kem trị nám</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/jquery.scrollbox.js"></script>
+<script>
+$(function () {
+  $('#demo2').scrollbox({
+    linear: true,
+    step: 1,
+    delay: 0,
+    speed: 30
+  });  
+  var queueNext = 7;
+  (function () {
+    $('#demo6-queue ul').append('<li><p>'+ queueNext +'</p></li>');
+    queueNext++;
+    setTimeout(arguments.callee, 2000 + parseInt(Math.random() * 3000, 10));
+  }());
+});
+</script>
+<!-- Start Camera Slider Scripts -->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script type="text/javascript">
+		jQuery(function(){			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: false,
+            	height: '365px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	hover: false,
+            	loader: 'none',
+            	playPause: false,
+            	pagination: false
+			});			
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {    
+	jQuery('#mycarousel_products, #mycarousel_new_products, #mycarousel_saleoff_products').jcarousel({
+        vertical: true,
+		auto: 3,
+		animation: 1000,
+        scroll: 1,
+		wrap: 'circular',
+    });	
+	jQuery('#mycarousel_other_products').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+		animation: 1000,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });	
+});
+</script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#fade_brand_cosmetic').cycle({timeout:	   2500, fx: "blindX"});
+	$('#fade_brand_perfume').cycle({timeout:	   3500, fx: "wipe"});	
+	});
+
+</script>
+<!--Main Menu-->
+<script>
+    $(function () {
+
+        $('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(500, function () {
+
+            });
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(500, function () {
+
+            });
+        });
+
+
+    })
+        </script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			$("#tabs_detail").tabs("#tabs_dtcontent .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+<!-- Include the Etalage CSS -->
+<link rel="stylesheet" href="Styles/etalage.css">
+<!-- Include the Etalage plugin: -->
+<script src="Scripts/jquery.etalage.min.js"></script>
+<!-- Invoke the Etalage plugin -->
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 350,
+					thumb_image_height: 350,
+					source_image_width: 800,
+					source_image_height: 800,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});				
+
+				// This is for the dropdown list example:
+				$('.dropdownlist').change(function(){
+					etalage_show( $(this).find('option:selected').attr('class') );
+				});
+
+			});
+		</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div class="header"> <a href="index.html" class="logo"><img src="Images/logo.jpg" alt="" /></a>
+      <p class="top_link"> <a href="cart.html"><span class="icon_cart"></span>Giỏ hàng [<b>0</b>]</a> | <a href="" id="login">Đăng Nhập</a>
+        </li>
+        | <a href="" id="register">Đăng ký</a> </p>
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="introduction.html" class="parent">Giới thiệu</a> </li>
+        <li><a href="list_products.html">Mỹ phẩm dưỡng da</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">BÀ NỘI TRỢ SÀNH ĐIỆU</a></li>
+            <li><a href="#">Lookbook xuân hè - 2013</a></li>
+            <li><a href="#">BST Thu - Đông 2012</a></li>
+            <li><a href="#">GLAMOROUS COLOR</a></li>
+            <li><a href="#">Enjoy Day</a></li>
+          </ul>
+        </li>
+        <li><a href="list_products.html">Máy làm đẹp da</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Trang điểm</a></li>
+            <li><a href="#">Nước hoa</a></li>
+            <li><a href="list_news.html">Tin tức</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Trang điểm</a></li>
+        <li><a href="#">Nước hoa</a></li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <!-- Vertical Menu-->
+        <div class="vertical_menu">
+          <div class="title_cate"><span>Mỹ phẩm dưỡng da</span></div>
+          <!--Main Menu-->
+          <div class="nav_menu">
+            <ul class="nav_menu_inner">
+              <li class="m_li"> <a class="t_menu" href="list_products.html">Dòng DR’s Secret</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Máy đo huyết áp" href="/cat/view/21/may-do-huyet-ap">Máy đo huyết áp</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/57/may-do-huyet-ap-dien-tu">Máy đo huyết áp điện tử</a></li>
+                      <li><a href="/cat/view/58/may-do-huyet-ap-co">Máy đo huyết áp cơ</a></li>
+                      <li><a href="/cat/view/59/may-do-huyet-ap-thuy-ngan">Máy đo huyết áp thủy ngân</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy đo đường huyết" href="/cat/view/83/may-do-duong-huyet">Máy đo đường huyết</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/86/may-do-duong-huyet-ca-nhan">Máy đo đường huyết cá nhân</a></li>
+                      <li><a href="/cat/view/143/phu-kien-may-do-duong-huyet">Hướng sẫn sử dụng máy đo đường huyết</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy ánh sáng sinh học" href="/cat/view/89/may-anh-sang-sinh-hoc">Máy ánh sáng sinh học</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy xông mũi họng" href="/cat/view/94/may-xong-mui-hong">Máy xông mũi họng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Nhiệt kế điện tử" href="/cat/view/22/nhiet-ke-dien-tu">Nhiệt kế điện tử</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy massage" href="/cat/view/112/may-massage">Máy massage</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/115/may-massage-vai-co">Máy massage vai cổ</a></li>
+                      <li><a href="/cat/view/116/massage-chan-toan-than">Massage chân, toàn thân</a></li>
+                      <li><a href="/cat/view/117/may-massage-xung-dien">Máy massage xung điện</a></li>
+                      <li><a href="/cat/view/229/may-massage-cam-tay">Máy massage cầm tay</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Ống nghe y tế" href="/cat/view/24/ong-nghe-y-te">Ống nghe y tế</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy theo dõi nhịp tim, bước đi" href="/cat/view/26/may-theo-doi-nhip-tim">Máy theo dõi nhịp tim, bước đi</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Cân điện tử" href="/cat/view/25/can-dien-tu">Cân điện tử</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dụng cụ tai mũi họng" href="/cat/view/165/dung-cu-tai-mui-hong">Dụng cụ tai mũi họng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đèn hồng ngoại" href="/cat/view/91/den-hong-ngoai">Đèn hồng ngoại</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy vật lý trị liệu" href="/cat/view/90/may-vat-ly-tri-lieu">Máy vật lý trị liệu</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy đo nồng độ oxy, điện tim" href="/cat/view/23/may-do-nong-do-oxy-do-dien-tim">Máy đo nồng độ oxy, điện tim</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Vớ Y Khoa" href="/cat/view/227/vo-y-khoa">Vớ Y Khoa</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/thoi-trang1386987860.png" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/51/y-te-chuyen-dung">DR's Secret Touch</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị đo huyết áp" href="/cat/view/108/thiet-bi-do-huyet-ap">Thiết bị đo huyết áp</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/205/may-do-huyet-ap-co">Máy đo huyết áp cơ</a></li>
+                      <li><a href="/cat/view/206/may-do-huyet-ap-thuy-ngan">Máy đo huyết áp thủy ngân</a></li>
+                      <li><a href="/cat/view/207/huyet-ap-phong-kham-benh-vien">Huyết áp phòng khám, bệnh viện</a></li>
+                      <li><a href="/cat/view/208/huyet-ap-tu-chi-thiet-bi-hieu-chinh">Huyết áp tứ chi, thiết bị hiệu chỉnh</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Ống nghe bác sĩ" href="/cat/view/109/ong-nghe-bac-si">Ống nghe bác sĩ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy siêu âm" href="/cat/view/105/may-sieu-am">Máy siêu âm</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy điện tâm đồ" href="/cat/view/107/may-dien-tam-do">Máy điện tâm đồ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy tạo oxy" href="/cat/view/232/may-tao-oxy">Máy tạo oxy</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Màn hình theo dõi bệnh nhân" href="/cat/view/157/man-hinh-theo-doi-benh-nhan">Màn hình theo dõi bệnh nhân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dụng cụ y khoa khác" href="/cat/view/110/dung-cu-y-khoa-khac">Dụng cụ y khoa khác</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị nhi khoa" href="/cat/view/96/thiet-bi-nhi-khoa">Thiết bị nhi khoa</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị xét nghiệm y tế" href="/cat/view/61/thiet-bi-xet-nghiem-y-te">Thiết bị xét nghiệm y tế</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/101/may-xet-nghiem-sinh-hoa">Máy xét nghiệm sinh hóa</a></li>
+                      <li><a href="/cat/view/102/may-xet-nghiem-hoa-hoc">Máy xét nghiệm hóa học</a></li>
+                      <li><a href="/cat/view/103/may-xet-nghiem-nuoc-tieu">Máy xét nghiệm nước tiểu</a></li>
+                      <li><a href="/cat/view/104/may-xet-nghiem-dien-giai">Máy xét nghiệm điện giải</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy X-Quang" href="/cat/view/106/may-xquang">Máy X-Quang</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị phòng mổ" href="/cat/view/97/thiet-bi-phong-mo">Thiết bị phòng mổ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị sản phụ khoa" href="/cat/view/95/thiet-bi-san-phu-khoa">Thiết bị sản phụ khoa</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Vật tư tiêu hao y tế" href="/cat/view/62/vat-tu-tieu-hao-y-te">Vật tư tiêu hao y tế</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/98/xe-lan">Xe lăn</a></li>
+                      <li><a href="/cat/view/99/ghe--dung-cu-tap-di">Ghế - dụng cụ tập đi</a></li>
+                      <li><a href="/cat/view/100/dai--nep-vai">Đai - nẹp vải</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/me-va-be.png" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/52/the-duc-the-thao">DR's Secret T Series</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Thiết bị theo dõi tập luyện" href="/cat/view/210/thiet-bi-theo-doi-tap-luyen">Thiết bị theo dõi tập luyện</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy chạy bộ" href="/cat/view/209/may-chay-bo">Máy chạy bộ</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/187/may-chay-bo-dien">Máy chạy bộ điện</a></li>
+                      <li><a href="/cat/view/188/may-chay-bo-co">Máy chạy bộ cơ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy tập bụng" href="/cat/view/147/may-tap-bung">Máy tập bụng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Cơ thể cân đối và thẩm mỹ" href="/cat/view/185/co-the-can-doi-va-tham-my">Cơ thể cân đối và thẩm mỹ</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/146/may-rung-lac">Máy rung lắc</a></li>
+                      <li><a href="/cat/view/192/may-massage-tham-my">Máy massage thẩm mỹ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dụng cụ tập luyện" href="/cat/view/195/dung-cu-tap-the-hinh">Dụng cụ tập luyện</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Tập luyện" href="/cat/view/123/may-tap-the-duc">Tập luyện</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/186/tham-tap-the-duc">Thảm tập thể dục</a></li>
+                      <li><a href="/cat/view/189/may-stepper">Máy Stepper</a></li>
+                      <li><a href="/cat/view/190/may-tap-leo-nui">Máy tập leo núi</a></li>
+                      <li><a href="/cat/view/191/xe-dap-tap-the-duc">Xe đạp tập</a></li>
+                      <li><a href="/cat/view/193/phu-kien-bao-ve">Hướng sẫn sử dụng bảo vệ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/xe-may1387418986.gif" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/54/cham-soc-sac-dep">DR's Secret Enhancement Series</a>
+                <div class="list_categories">
+                  <div class="pc_menu">
+                    <p><a title="Máy massage mặt" href="/cat/view/111/may-massage-mat">Máy massage mặt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Máy xông mặt" href="/cat/view/228/may-xong-mat">Máy xông mặt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm làm đẹp khác" href="/cat/view/114/san-pham-lam-dep-khac">Sản phẩm làm đẹp khác</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/55/do-dung-me-va-be">Thời Trang - Hướng sẫn sử dụng</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Đồ cho bé bú" href="/cat/view/196/do-cho-be-bu">Đồ cho bé bú</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/197/binh-sua">Bình sữa</a></li>
+                      <li><a href="/cat/view/198/num-vu">Núm vú</a></li>
+                      <li><a href="/cat/view/199/ty-ngam">Ty ngậm</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ dùng cho bé ăn uống" href="/cat/view/225/do-cho-be-an-uong">Đồ dùng cho bé ăn uống</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/162/may-hut-sua">Máy hút sữa mẹ</a></li>
+                      <li><a href="/cat/view/163/may-xay-thuc-an">Máy xay thức ăn</a></li>
+                      <li><a href="/cat/view/226/may-ham-va-giu-am-sua">Máy hâm và giữ ấm sữa</a></li>
+                      <li><a href="/cat/view/161/may-tiet-trung">Máy tiệt trùng bình sữa</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Ghế ăn bột" href="/cat/view/160/ghe-an-bot">Ghế ăn bột</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ chăm sóc sức khỏe" href="/cat/view/200/do-cham-soc-suc-khoe-cho-be">Đồ chăm sóc sức khỏe</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ cho bé đi chơi" href="/cat/view/151/do-cho-be-di-choi">Đồ cho bé đi chơi</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/203/xe-day-em-be">Xe đẩy em bé</a></li>
+                      <li><a href="/cat/view/204/diu-em-be">Địu em bé</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ cho bé ngủ" href="/cat/view/152/do-cho-be-ngu">Đồ cho bé ngủ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ dùng cho mẹ" href="/cat/view/201/do-dung-cho-me">Đồ dùng cho mẹ</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Đồ dùng khác" href="/cat/view/202/do-dung-khac">Đồ dùng khác</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/me-va-be.png" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/56/thuc-pham-dinh-duong">Dịch Vụ - Spa - Ăn Uống</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Vitamin bổ sung dưỡng chất" href="/cat/view/127/vitamin-bo-sung-duong-chat">Vitamin bổ sung dưỡng chất</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/176/vitamin">Vitamin</a></li>
+                      <li><a href="/cat/view/177/phuc-hoi-xuong-khop">Phục hồi xương khớp</a></li>
+                      <li><a href="/cat/view/179/suc-khoe-tinh-than">Sức khỏe tinh thần</a></li>
+                      <li><a href="/cat/view/180/tang-cuong-thi-luc">Tăng cường thị lực</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm làm từ Sâm" href="/cat/view/214/san-pham-lam-tu-sam">Sản phẩm làm từ Sâm</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/218/nhan-sam">Nhân Sâm</a></li>
+                      <li><a href="/cat/view/219/hong-sam">Hồng Sâm</a></li>
+                      <li><a href="/cat/view/224/san-pham-sam-khac">Sản phẩm Sâm khác</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm làm từ Nấm" href="/cat/view/216/san-pham-lam-tu-nam">Sản phẩm làm từ Nấm</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Cao" href="/cat/view/215/cao">Cao</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm dành cho nữ" href="/cat/view/169/san-pham-danh-cho-nu">Sản phẩm dành cho nữ</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/181/thuc-pham-cham-soc-da-collagen">Thực phẩm collagen</a></li>
+                      <li><a href="/cat/view/182/sinh-ly-nu">Sinh lý nữ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Sản phẩm dành cho nam" href="/cat/view/170/san-pham-danh-cho-nam">Sản phẩm dành cho nam</a></p>
+                    <ul>
+                      <li style="padding-left:5px"></li>
+                      <li><a href="/cat/view/183/tang-cuong-sinh-ly-nam">Tăng cường sinh lý nam</a></li>
+                      <li><a href="/cat/view/184/cac-loai-ruou-thuoc">Các loại rượu thuốc</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Thực phẩm tăng cân, giảm cân" href="/cat/view/171/thuc-pham-tang-can-giam-can">Thực phẩm tăng cân, giảm cân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Trà" href="/cat/view/174/tra">Trà</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Yến Sào" href="/cat/view/217/yen-sao">Yến Sào</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Dinh dưỡng thể thao" href="/cat/view/172/dinh-duong-the-thao">Dinh dưỡng thể thao</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/o-to.gif" alt="" /></div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/126/cham-soc-ca-nhan">Chăm Sóc Sức Khỏe</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc răng" href="/cat/view/138/cham-soc-rang">Chăm sóc răng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc mắt" href="/cat/view/139/cham-soc-mat">Chăm sóc mắt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc tóc" href="/cat/view/140/cham-soc-toc">Chăm sóc tóc</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc chân" href="/cat/view/141/cham-soc-chan">Chăm sóc chân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/126/cham-soc-ca-nhan">Sản Phẩm Làm Đẹp</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc răng" href="/cat/view/138/cham-soc-rang">Chăm sóc răng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc mắt" href="/cat/view/139/cham-soc-mat">Chăm sóc mắt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc tóc" href="/cat/view/140/cham-soc-toc">Chăm sóc tóc</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc chân" href="/cat/view/141/cham-soc-chan">Chăm sóc chân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="m_li"> <a class="t_menu" href="/cat/view/126/cham-soc-ca-nhan">Thế Giới Ô Tô</a>
+                <div class="list_categories" style="right: 0px; display: none;">
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc răng" href="/cat/view/138/cham-soc-rang">Chăm sóc răng</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc mắt" href="/cat/view/139/cham-soc-mat">Chăm sóc mắt</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc tóc" href="/cat/view/140/cham-soc-toc">Chăm sóc tóc</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="pc_menu">
+                    <p><a title="Chăm sóc chân" href="/cat/view/141/cham-soc-chan">Chăm sóc chân</a></p>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="image_cate"><img src="Images/thoi-trang1386987860.png" alt="" /></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Vertical Menu-->
+        <!--Saleoff Products-->
+        <div class="box">
+          <div class="slider_products white_Bg" id="new_pro">
+            <div class="box_Tab_index"><span>Sản phẩm mới</span></div>
+            <ul id="mycarousel_new_products" class="jcarousel-skin-tango">
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Saleoff Products-->
+        <!--New Products-->
+        <div class="box">
+          <div class="slider_products white_Bg" id="saleoff_pro">
+            <div class="box_Tab_index"><span>Sản phẩm khuyến mãi</span></div>
+            <ul id="mycarousel_saleoff_products" class="jcarousel-skin-tango">
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li class="item">
+                <!--Start Product-->
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="70" height="70" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="price">1.050.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End New Products-->
+        <!--Ads-->
+        <div class="box ads">
+        <img src="Images/ads_left01.jpg" alt="" width="210" /> <img src="Images/ads_left02.jpg" alt="" width="210" /> </div>
+      <!--End Ads-->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Left Column-->
+    <!--Main Column-->
+    <div class="main_content" style="width: 720px">
+      <div class="path"><a href="index.html">Trang chủ</a> &raquo; <a href="list_products.html">Mỹ phẩm dưỡng da</a></div>
+      <!--Detail Products-->
+      <div class="box">
+        <div class="product_slide">
+          <ul id="etalage">
+            <li> <img class="etalage_thumb_image" src="Images/touch_ok_t-tljuaumtwv.jpg" /> <img class="etalage_source_image" src="Images/touch_ok_t-tljuaumtwv.jpg" title="" /></li>
+            <li> <img class="etalage_thumb_image" src="Images/dr-secret-c5-essence-ngan-ngua-lao-hoa-lam-trang-da-my3t4j0ihp.jpg" /> <img class="etalage_source_image" src="Images/dr-secret-c5-essence-ngan-ngua-lao-hoa-lam-trang-da-my3t4j0ihp.jpg" title="" /> </li>
+            <li> <img class="etalage_thumb_image" src="Images/aestier-mask_ok-69rf8yby6n.jpg" /> <img class="etalage_source_image" src="Images/aestier-mask_ok-69rf8yby6n.jpg" /> </li>
+            <li> <img class="etalage_thumb_image" src="Images/total_base_ok-d43o8vsu2i.jpg" /> <img class="etalage_source_image" src="Images/total_base_ok-d43o8vsu2i.jpg" title="" /></li>
+            <li> <img class="etalage_thumb_image" src="Images/dr-secret-c5-essence-ngan-ngua-lao-hoa-lam-trang-da-my3t4j0ihp.jpg" /> <img class="etalage_source_image" src="Images/dr-secret-c5-essence-ngan-ngua-lao-hoa-lam-trang-da-my3t4j0ihp.jpg" title="" /> </li>
+            <li> <img class="etalage_thumb_image" src="Images/aestier-mask_ok-69rf8yby6n.jpg" /> <img class="etalage_source_image" src="Images/aestier-mask_ok-69rf8yby6n.jpg" /> </li>
+            <button onclick="etalage_previous()" class="etalage_previous"></button>
+            <button onclick="etalage_next()" class="etalage_next"></button>
+          </ul>
+        </div>
+        <div class="dt_infop">
+          <h1 class="h1Title">DR's Secret C15 Essence - Giúp Ngăn Ngừa Lão Hóa & Làm Trắng Da</h1>
+          <div class="dt_description">
+            <div class="row_des r_grey">
+              <div class="title_des">Mã sản phẩm:</div>
+              <div class="property">DR021</div>
+            </div>
+            <div class="row_des">
+              <div class="title_des">Màu sắc:</div>
+              <div class="property"><span class="color"><img src="Images/yellow_color.jpg" alt="" width="10" height="10" /> <img src="Images/orange_color.jpg" alt="" width="10" height="10" /> <img src="Images/pink_color.jpg" alt="" width="10" height="10" /></span></div>
+            </div>
+            <div class="row_des r_grey">
+              <div class="title_des">Giá bán:</div>
+              <div class="property"><span class="f_price">1.511.000 VNĐ</span></div>
+            </div>
+            <div class="row_des">
+              <div class="title_des">Giá giảm:</div>
+              <div class="property"><span class="dt_price">1.000.000</span> VNĐ</div>
+            </div>
+            <div class="row_des r_grey">
+              <div class="title_des">Dung lượng:</div>
+              <div class="property">118 ml</div>
+            </div>
+            <div class="row_des">
+              <div class="title_des">Xuất xứ:</div>
+              <div class="property">Hoa Kỳ</div>
+            </div>
+            <div class="row_des r_grey">
+              <div class="title_des">Khách xem:</div>
+              <div class="property">80.000</div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <p style="font-weight: 700; color: #0070b1; text-align: center">Giao hàng tận nơi</p>
+          <a href="cart.html" class="bt_buy"></a> </div>
+      </div>
+      <!--Tab Products 01-->
+      <div class="box">
+        <div class="tab_nav">
+          <ul id="tabs_detail">
+            <li><a class="current" href="#" title="Mô tả">Mô tả</a></li>
+            <li><a href="#" title="Kiến thức tham khảo">Kiến thức tham khảo</a></li>
+            <li><a class="current" href="#" title="Công dụng">Công dụng</a></li>
+            <li><a href="#" title="Hướng sẫn sử dụng">Hướng sẫn sử dụng</a></li>
+          </ul>
+        </div>
+        <div id="tabs_dtcontent">
+          <div class="section">
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ   giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách   nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối.   Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm   cho làn da mượt mà và tươi trẻ.</p>
+            <div class="file_attachments">
+              <h4> File đính kèm</h4>
+              <ul>
+                <li><img width="24px" style="float:left; margin-right:10px;height:19px" src="http://beta.shp.vn/data/ext_files/9/pdf.gif"><a title="BCTC QUÝ 3 - 2013" target="_blank" href="/data/news/1635/BCTC Q3 2013.pdf">Filedinhkem.pdf</a></li>
+                <li><img width="24px" style="float:left; margin-right:10px;height:19px" src="http://beta.shp.vn/data/ext_files/9/pdf.gif"><a title="BCTC QUÝ 3 - 2013" target="_blank" href="/data/news/1635/BCTC Q3 2013.pdf">Filedinhkem.pdf</a></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="section">
+            <div>
+              <div>
+                <p> Nha đam từ ngàn xưa được mệnh danh là loài thực vật “dành cho phái   đẹp”. Nha đam thuộc họ xương rồng, phát triển mạnh ở những vùng khô nóng   nên cấu trúc lá nha đam mọng nước. Lá nha đam chứa một loại gel trong,   có khả năng làm dịu tổn thương và giảm kích ứng da một cách rõ rệt.   Ngoài ra, tinh chất nha đam giúp làn da dưỡng ẩm sâu, kháng viêm và tăng   cường miễn dịch cho làn da.</p>
+                <p> Nha đam chứa rất nhiều chất chống ôxy hóa như bêta-caroten, vitamin E   và đặc biệt là vitamin C giúp làm sáng da, trung hòa gốc tự do và làm   chậm tiến trình lão hóa của các tế bào.</p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="section">
+            <ul>
+              <li> Sữa rửa mặt giúp làm sạch bụi bẩn, chất cặn bã, tế bào chết trên da mặt</li>
+              <li> Không chứa chất tẩy mạnh nên không làm khô ráp da</li>
+              <li> Chứa vitamin C và tinh chất nha đam, giúp làm sáng và dưỡng ẩm cho da</li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="section">
+            <div>
+              <div>
+                <ul>
+                  <li> Làm ướt mặt với nước</li>
+                  <li> Cho DR’s Secret Cleanser vào lòng bàn tay ướt (khoảng đường tròn 1.5cm)</li>
+                  <li> Tạo một ít bọt. Thoa đều lên mặt kết hợp chuyển động tròn</li>
+                  <li> Rửa lại bằng nước sạch. Lau khô da bằng khăn giấy mềm</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <!--End Tab Products 01-->
+      <!-- Jquery The same Products -->
+      <div class="box">
+        <div class="box_Tab_index"><span>Các sản phẩm khác</span></div>
+        <div id="thesame_cate_P">
+          <ul id="mycarousel_other_products" class="jcarousel-skin-tango">
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Jquery The same Products-->
+      <!--End Detail Products-->
+    </div>
+    <!--End Main Column-->
+  </div>
+  <!--End Main-->
+  <div class="clearfix"></div>
+</div>
+<!--End Page-->
+<div id="sticker">
+    <div id="beforefooter-support">
+      <div class="wraper">
+        <div class="transport">Giao hàng trước, thanh toán sau, <span style="font-size: 14px; font-weight: 700"><span style="font-size: 18px">Miễn phí</span> vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước</span></div>
+        <div class="hotline"><span class="hotline_icon"></span>01243456789</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+$(document).ready(function() {
+	var s = $("#sticker");
+	var pos = s.position();	
+	var stickermax = $(document).outerHeight() - $("#footer").outerHeight() - s.outerHeight() - 1000; //40 value is the total of the top and bottom margin
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		//s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+		if (windowpos <= pos.top && windowpos < stickermax) {
+			s.attr("style", ""); //kill absolute positioning
+			s.addClass("stick"); //stick it
+		} else if (windowpos >= stickermax) {
+			s.removeClass(); //un-stick
+			s.css({position: "relative"}); //set sticker right above the footer
+			
+		} else {
+			s.removeClass(); //top of page
+		}
+	});
+	//alert(stickermax); //uncomment to show max sticker postition value on doc.ready
+});
+</script>
+  <!--Footer-->
+<div class="footer">
+  <div class="menu_footer"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Mỹ phẩm dưỡng da</a><a href="">Máy làm đẹp da</a><a href="">Thực phẩm chức năng</a><a href="">Khuyến mãi</a><a href="">Hỏi đáp</a><a href="">Trang điểm</a><a href="">Nước hoa</a><a href="">Tin tức</a><a href="">Liên hệ</a></div>
+  <!--Menu Footer-->
+  <div class="topmenu_footer">
+    <div class="col_menuFooter" id="social_network">
+      <h3>Hãy tìm chúng tôi trên:</h3>
+      <div class="ctentColuMenuFooter"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a><a href=""> <span class="icon_rss"></span></a> <a href=""><span class="icon_gplus"></span></a> </div>
+    </div>
+    <div class="col_menuFooter" id="access_status">
+      <h3>Thống kê truy cập</h3>
+      <div class="ctentColuMenuFooter">
+        <!--Access Status-->
+        <p>Hôm qua: <b>71</b></p>
+        <p>Đang online: <b>71</b></p>
+        <p>Tổng truy cập: <b>471 000</b></p>
+        <!--End Access Status-->
+      </div>
+    </div>
+    <div class="col_menuFooter" id="link_web">
+      <h3>Liên kết web:</h3>
+      <div class="ctentColuMenuFooter">
+        <select name="link_web" class="type_option">
+          <option value="0">Đẳng Cấp Việt</option>
+          <option value="1">Esell.vn</option>
+        </select>
+      </div>
+    </div>
+    <div class="col_menuFooter" id="transport">
+      <div class="ctentColuMenuFooter">
+        <p><img src="Images/Travel-Airplane-icon.png" alt="" class="img_general"  />Giao hàng trước, thanh toán sau, Miễn phí vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước </p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <!--End Menu Footer-->
+</div>
+<!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

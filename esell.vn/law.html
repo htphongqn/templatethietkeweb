@@ -1,0 +1,932 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>QUY CHẾ SÀN GIAO DỊCH THƯƠNG MẠI</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link rel="stylesheet" href="Styles/block.css" type="text/css" />
+<link rel="stylesheet" href="Styles/shopping.css" type="text/css" />
+<link rel="stylesheet" href="Styles/scroll.css" type="text/css" />
+<link rel="stylesheet" href="Styles/shop_detail.css" type="text/css" />
+<!-- Slider -->
+<link rel="stylesheet" href="Styles/slider.css" type="text/css" />
+<script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+.style31 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.style7 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333333;
+}
+.style4 {	font-size: 14px;
+	color: #333333;
+}
+p.MsoNormal {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+}
+.style5 {	color: #333333;
+}
+span.MsoHyperlink {color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+.style9 {	font-size: 14px;
+}
+-->
+</style>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div id="page">
+    <!--#begin Header-->
+    <div id="header">
+      <div id="header-inner">
+        <div id="logo"> <a href="index.html" alt="Esell"><img src="Images/logo.png" alt="" border="" /></a></div>
+        <div id="header-right">
+          <div class="topmenu">
+            <ul class="menu">
+              <li><a href="list_product.html">Sản phẩm</a></li>
+              <li><a href="list_shop.html">Cửa hàng</a></li>
+              <li><a href="company_index.html">Doanh nghiệp</a></li>
+              <li><a href="human_index.html">Doanh nhân</a></li>
+              <li class="dealmenu"><a href="deal_index.html">Deal hôm nay</a></li>
+              <li><a href="#">Esell của tôi</a></li>      
+              <li class="last"><a href="seller/law_seller.html#seller1">Hỗ trợ khách hàng</a></li>
+            </ul>
+          </div>
+          <!--#Đăng nhập-->
+          <div id="login">
+            <ul class="menu">
+              <li><a href="login.html">Đăng nhập</a></li>
+              <li class="last"><a href="register.html">Đăng ký</a></li>
+            </ul>
+          </div>
+          <div id="local">Khu vực:
+            <select name="khuvuc" class="type-option">
+              <option value="0">Toàn quốc</option>
+              <option value="1">Miền Bắc</option>
+              <option value="2">Miền Trung</option>
+              <option value="3">Miền Nam</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="header-bottom">
+        <div id="search">
+          <form action="search_product.html" method="post">
+            <table width="100%" border="0" cellspacing="0" cellpadding="1">
+              <tr>
+                <td class="search"><input name="searchword" class="inputbox" type="text" size="70" value="Nhập từ khóa tìm kiếm..." onblur="if (this.value=='') this.value='Nhập từ khóa tìm kiếm...';" onfocus="if (this.value=='Nhập từ khóa tìm kiếm...') this.value='';" /></td>
+                <td valign="top"><select name="seach" class="type-option">
+                    <option value="0">Tất cả sản phẩm</option>
+                    <option value="1">Tất cả cửa hàng</option>
+                    <option value="2">Tất cả doanh nghiệp</option>                    <option value="3">Tất cả doanh nhân</option>
+                  </select></td>
+                <td align="left" valign="top"><input type="submit" value="" class="bt-search" onclick="this.form.searchword.focus();"/></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div id="cart">
+          <div id="quantity">0</div>
+          <a href="#">Giỏ hàng</a></div>
+      </div>
+    </div>
+    <!--#end Header-->
+    <!-- #Main -->
+    <div id="main" class="clearfix">
+      <div id="sidebar">
+        <div id="sidebar_inner">
+          <div class="block">
+            <div class="blockcontent nopadding noborder_bottom">
+              <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                  <li><a href="#">Điện thoại - Viễn thông</a>
+                    <ul>
+                      <li><a href="list_product.html">Kỹ thuật số</a></li>
+                      <li><a href="#">Điện thoại chính hãng</a></li>
+                      <li><a href="#">Laptop - phụ kiện</a></li>
+                      <li><a href="#">Điện máy - gia dụng</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Máy tính - Linh kiện</a></li>
+                  <li><a href="#">Điện tử - Nhạc cụ</a></li>
+                  <li><a href="#">Máy ảnh - Máy quay</a></li>
+                  <li><a href="#">Đồ dùng sinh hoạt</a></li>
+                  <li><a href="#">Hàng thời trang</a></li>
+                  <li><a href="#">Bất động sản</a></li>
+                  <li class="last"><a href="#">Dịch vụ - Giải trí - Du lịch</a></li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Chào mừng bạn đến với Esell</h3>
+            <div class="blockcontent">
+              <ul class="wellcome">
+                <li class="active">Cho dù bạn mới sử dụng hay đã rành mạch về Esell, chúng tôi vẫn có cách để hướng dẫn bạn dễ dàng sử dụng trang web này.</li>
+                <li><a href="wellcome.html">Bạn mới đến Esell.</a></li>
+                <li><a href="buyer/how_order.html">Làm sao để mua hàng.</a></li>
+                <li><a href="seller/how_create_shop.html">Bán hàng bằng cách nào.</a></li>
+                <!--<li><a href="#">Làm tăng doanh số bán hàng.</a></li>-->
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Tin khuyến mãi từ cửa hàng</h3>
+            <div class="blockcontent nopadding_bottom">
+              <ul class="news_selloff">
+                <li class="active"><a href="#">CỬA THOÁT HIỂM.</a></li>
+                <li><a href="#">Chuyên bán các loại mành che nắng chất...</a></li>
+                <li><a href="#l">Đông trùng hạ thảo đặc biệt - hỗ trợ...</a></li>
+                <li><a href="#l">Nước tẩy rửa cho ngành Thủy Sản và thực...</a></li>
+                <li><a href="#l">Đất Giá Rẻ, Sổ Hồng Chính Chủ</a></li>
+                <li><a href="#">Cho thuê phòng khép kín mới xây gần các...</a></li>
+                <li><a href="#">Tủ bếp xinh,tủ bếp nhôm</a></li>
+                <li class="navi"><a href="#">1</a>&nbsp;<a href="#">2</a>&nbsp;<a href="#">3</a> >> <a href="#">Xem tất cả</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Cửa hàng tiêu biểu</h3>
+            <div id="play"><a href="#"><img src="Images/hover.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a></div>
+            <div class="blockcontent nopadding padding_top noborder_bottom ">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image" align="center"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634592413935015000-603.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image" align="center"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634600807206146250-591.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634835745809463750-421.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634844437431122500-270.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634855661274736250-919.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634862600907113750-448.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634871270758165000-368.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right_round_bottom">
+              <div class="left_round_bottom">
+                <div class="line_round_bottom"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- New shop -->
+          <div class="block">
+            <h3 class="blocktitle">Cửa hàng mới</h3>
+            <div id="play"><a href="#"><img src="Images/hover.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a></div>
+            <div class="blockcontent padding noborder_bottom">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634600807206146250-591.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Sách, văn phòng phẩm Dangcapdigital</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634835745809463750-421.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Trung tâm di động Trà My</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634862600907113750-448.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Điện, điện tử GreenDeal</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634871270758165000-368.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Spa Hoa Anh Đào</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634844437431122500-270.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Bentolove</div>
+                </div>
+              </div>
+            </div>
+            <div class="right_round_bottom">
+              <div class="left_round_bottom">
+                <div class="line_round_bottom"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- Facebook -->
+          <div class="block" id="facebook">
+            <div class="blockcontent padding">
+              <div style="float: left; height: 50px;"><img src="Images/logo1.png" alt="" /></div>
+              <span>Cổng thuương mại điện tử Esell.vn trên Facebook</span><br />
+              <img src="Images/like.png" alt="" />
+              <p><strong>23 000</strong> người Thích esell.vn</p>
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face1.jpg" alt="" /></a></div>
+                    <div class="nick_name">Oanh</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face2.jpg" alt="" /></a></div>
+                    <div class="nick_name">Đinh Hà</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face3.jpg" alt="" /></a></div>
+                    <div class="nick_name">Huỳnh</div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face4.jpg" alt="" /></a></div>
+                    <div class="nick_name">Vũ</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face5.jpg" alt="" /></a></div>
+                    <div class="nick_name">Hà</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face6.jpg" alt="" /></a></div>
+                    <div class="nick_name">Dorsaf</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="block"> <a href="#"><img src="Images/banner1.jpg" width="200" height="115" alt="" /></a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="content-inside">
+          <div class="path1 boder_bottom"><a href="index.html">Trang chủ</a> > QUY CHẾ SÀN GIAO DỊCH THƯƠNG MẠI ĐIỆN TỬ (TMĐT)</div>
+          <!-- List news -->
+          <div class="block">
+            <div class="blockcontent padding noborder">
+<style type="text/css">
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style2 {
+	font-size: 18px;
+}
+.style3 {
+	font-size: 16px;
+}
+.style5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+.style6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333333;
+}
+.style7 {
+	font-size: 14px;
+	color: #333333;
+}
+.style8 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333333;
+}
+p.MsoNormal, p.style6, p.style7, p.style8, p.style11 { margin-bottom: 10px; line-height: 18px; }
+                </style>            
+              <p class="MsoNormal">
+              <h1><span style="line-height: 115%;" class="style8"><strong>QUY 
+                CHẾ SÀN GIAO DỊCH THƯƠNG MẠI ĐIỆN TỬ (TMĐT)&nbsp;</strong></span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style2"><strong>WWW.ESELL.VN</strong></span></a></h1>
+              <span style="font-size: 12.0pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;">
+              <o:p></o:p>
+              </span>
+              </p>
+              <br>
+              <br />
+              <p class="MsoNormal" style="text-align: justify"><span style="line-height: 115%;" class="style7">1. Sàn giao dịch TMĐT E-Sell 
+                (website/wapsite&nbsp;</span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31">www.esell.vn</span></a><span style="line-height: 115%;" class="style7">&nbsp;) 
+                  do Công ty Cổ phẩn CN&amp;TT Đẳng Cấp Việt là đơn vị chủ quản, chịu trách nhiệm quản 
+                  lý. Trang web/wapsite này cung cấp dịch vụ trực tuyến sàn giao dịch điện tử và 
+                  giới thiệu các chương trình khuyến mại, tiếp thị dịch vụ theo ủy quyền của các 
+                  Thương nhân hợp pháp khác.
+  <o:p></o:p>
+</span></p>
+              <p class="MsoNormal" style="text-align: justify"> <span style="line-height: 115%;" class="style7">2. Thành viên tham gia giao dịch 
+                trên Sàn giao dịch TMĐT&nbsp;</span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31">www.esell.vn</span></a><span style="line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;" class="style4">&nbsp;</span><span style="line-height: 115%;" class="style7">là 
+                  cá nhân có các đặc điểm sau: 1, có nhu cầu mua, sử dụng các hàng hóa, dịch vụ 
+                  được đăng tải trên Sàn giao dịch hoặc có nhu cầu bán sản phẩm, dịch vụ, quảng bá 
+                  thương hiệu hoặc có nhu cầu trao đổi thông tin, tìm kiếm đối tác hoặc cả 3 nhu 
+                  cầu trên; 2, có đầy đủ năng lực hành vi dân sự và phải đăng ký kê khai ban đầu 
+                  về các thông tin cá nhân, thông tin doanh nghiệp bắt buộc theo yêu cầu và được 
+                  Ban quản lý Sàn giao dịch TMĐT Esell.vn chính thức công nhận và được phép sử 
+                  dụng dịch vụ trên&nbsp;</span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31">www.esell.vn</span></a><span style="line-height: 115%;" class="style7">&nbsp;.
+  <o:p></o:p>
+</span></p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> Từ &quot;dịch vụ&quot; bao gồm tất cả các dịch vụ do Sàn giao dịch TMĐT Esell.vn cung cấp 
+                hoặc liên quan đến Sàn giao dịch TMĐT www.esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 3. Tất cả các nội dung trong bản Quy chế này phải tuân thủ theo hệ thống pháp 
+                luật hiện hành của Việt Nam. Thành viên khi tham gia vào Sàn giao dịch TMĐT 
+                Esell.vn phải tự tìm hiểu trách nhiệm pháp lý của mình đối với luật pháp hiện 
+                hành của Việt Nam và cam kết thực hiện đúng những nội dung trong Quy chế của Sàn 
+                giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;II.&nbsp;QUY TRÌNH GIAO DỊCH:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif;"> <span class="style5">1. Ban quản lý Sàn giao dịch TMĐT Esell.vn cung cấp cho 
+                Thành viên thông tin về</span><span style="mso-spacerun: yes" class="style5">&nbsp; </span><span class="style5">sản phẩm, dịch vụ, các chương trình khuyến mãi, 
+                  thông tin doanh nghiệp, doanh nhân và các công cụ để thực hiện dễ dàng việc tìm 
+                  kiếm, mua bán và quảng bá sản phẩm, thương hiệu. Các sản phẩm, dịch vụ trên đây 
+                  do các Thành viên được cấp phép giới thiệu, đưa ra mức giá và phương thức thanh 
+                  toán. Thành viên tham khảo và lựa chọn mua/sử dụng các sản phẩm, dịch vụ của các 
+                  thành viên khác được tổ chức thực hiện trên Sàn giao dịch esell.vn, nếu xét thấy 
+                  phù hợp với nhu cầu cá nhân.</span>
+  <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 2. Ban quản lý Sàn giao dịch TMĐT esell.vn chấp nhận hai hình thức giao hàng và 
+                thanh toán. Thành viên đăng bán tự tổ chức việc giao hàng và thu tiền tại nhà 
+                cho thành viên đăng ký mua hoặc ban quản lý sàn giao dịch esell.vn sẽ hỗ trợ 
+                dịch vụ giao hàng hóa (có tính phí cho người bán) và thu hộ tiền cho các Thành 
+                viên đã bán hàng hóa cho các Thành viên khác.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 3. Để hỗ trợ cho các thành viên khi thanh toán, Ban quản lý Sàn đưa ra các 
+                phương thức thanh toán linh hoạt, Thành viên có thể tham khảo và lựa chọn áp 
+                dụng nếu phù hợp:
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> a) Thanh toán khi giao hàng
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 1: Khách hàng tìm kiếm sản phẩm mong muốn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 2: Khách hàng đăng ký mua hàng;
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 3: Hệ thống xác nhận đơn hàng, gửi 2 mã code (được hệ thống hình thành 
+                ngẫu nhiên) cho khách hàng: Mã đặt hàng và mã xác nhận giao hàng. Đồng thời gửi 
+                và chỉ gửi mã đặt hàng cho thành viên đăng bán để hoàn tất việc xác nhận đơn 
+                hàng.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 4: &quot;Thành viên đăng ký bán&quot; trực tiếp hoặc gián tiếp (thông qua 
+                việc sử dụng dịch vụ hỗ 
+                trợ của esell) để giao hàng và nhận thanh toán từ khách hàng. Xác nhận việc giao 
+                hàng bằng cách nhận code xác nhận từ khách hàng.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> b) Thanh toán trực tuyến.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 1: Khách hàng tìm kiếm sản phẩm mong muốn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 2: Khách hàng đăng ký mua hàng và thanh toán trực tuyến qua các phương 
+                tiện thanh toán phổ biến hiện nay như ví điện tử, internet banking, thẻ thanh 
+                toán quốc tế...
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 3: Hệ thống xác nhận đơn hàng, gửi 2 mã code (được hệ thống hình thành 
+                ngẫu nhiên) cho khách hàng: Mã đặt hàng và mã xác nhận giao hàng. Đồng thời gửi 
+                và chỉ gửi mã đặt hàng cho thành viên đăng bán để hoàn tất việc xác nhận đơn 
+                hàng.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bước 4: &quot;Thành viên đăng ký bán&quot; trực tiếp hoặc gián tiếp (thông qua sử dụng dịch vụ hỗ 
+                trợ của esell) để giao cho khách hàng. Xác nhận việc giao hàng bằng cách nhận 
+                code xác nhận từ khách hàng.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"><strong>ĐIỀU&nbsp;III.&nbsp;ĐẢM BẢO AN TOÀN GIAO DỊCH:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> Ban quản lý đã sử dụng các dịch vụ để bảo vệ thông tin và việc thanh toán của 
+                khách hàng. Để đảm bảo các giao dịch được tiến hành thành công, hạn chế tối đa 
+                rủi ro có thể phát sinh, yêu cầu các Thành viên tham gia Sàn giao dịch TMĐT 
+                esell.vn lưu ý và tuân thủ các nội dung cam kết như sau:
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> a) Bảo vệ thông tin và việc thanh toán của khách hàng là việc hệ thống của Sàn 
+                giao dịch TMĐT esell.vn được thiết kế để hỗ trợ cho thành viên có thể không đặt 
+                hàng cho đến khi thành viên an toàn thoát khỏi chế độ đặt hàng;
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> b) Ngay sau khi thành viên nhấp vào “Mua&quot; trình duyệt của thành viên sẽ đi vào 
+                chế độ an toàn. Dữ liệu liên quan đến đặt hàng của thành viên, thông tin cá nhân 
+                của thành viên và chi tiết thanh toán sẽ đi qua tất cả các máy chủ của chúng tôi 
+                với hình thức mã hóa. Ngay sau khi thành viên đặt hàng đã hoàn thành, thành viên 
+                thoát khỏi chế độ an toàn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> c) Thành viên không nên đưa thông tin chi tiết về việc thanh toán với bất kỳ ai 
+                bằng điện thoại di động, e-mail. Chúng tôi không chịu trách nhiệm về những mất 
+                mát thành viên có thể gánh chịu trong việc trao đổi thông tin của thành viên qua 
+                điện thoại di động, internet hoặc e-mail.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify"> <span style="line-height: 115%;" class="style7">d) Thành viên tuyệt đối không sử 
+                dụng bất kỳ chương trình, công cụ hay hình thức nào khác để can thiệp vào hệ 
+                thống hay làm thay đổi cấu trúc dữ liệu. Nghiêm cấm việc phát tán, truyền bá hay 
+                cổ vũ cho bất kỳ hoạt động nào nhằm can thiệp, phá hoại hay xâm nhập vào hệ 
+                thống website/wapsite </span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31">www.esell.vn</span></a><span style="line-height: 115%;" class="style7">&nbsp;. 
+                  Mọi vi phạm sẽ bị xử lý theo Quy chế và quy định của pháp luật.
+  <o:p></o:p>
+</span></p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;IV.&nbsp;BẢO VỆ QUYỀN LỢI KHÁCH HÀNG:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 1. Nhằm bảo vệ quyền lợi thành viên, Ban quản lý Sàn giao dịch TMĐT Esell.vn 
+                cung cấp cho thành viên những thông tin quan trọng cần biết trước khi tham gia 
+                giao dịch mua hàng hóa/dịch vụ được khuyến mãi trên Sàn, đảm bảo thành viên mua 
+                hàng hóa/dịch vụ được an toàn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 2. Ban quản lý Sàn đề nghị các cá nhân khi đăng ký là thành viên, phải thực hiện 
+                các yêu cầu sau:
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify"> <span style="line-height: 115%;" class="style7">a) Thành viên phải đăng ký kê 
+                khai ban đầu các thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên lạc, 
+                email, số chứng minh nhân dân, điện thoại, số tài khoản, số thẻ thanh toán, …. và chịu trách nhiệm về tính pháp lý của những thông tin trên; được Ban quản lý 
+                sàn TMĐT Esell.vn chính thức công nhận và cho phép sử dụng dịch vụ của Sàn giao 
+                dịch TMĐT website/wapsite&nbsp;</span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31">www.esell.vn</span></a><span style="line-height: 115%;" class="style7">&nbsp;.
+  <o:p></o:p>
+</span></p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> b) Các Khách hàng, Thành viên khi sử dụng và tham gia giao dịch trên Sàn TMĐT 
+                Esell.vn mặc nhiên chấp nhận và đồng ý rằng:
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bạn là một cá nhân hoặc với tư cách đại diện cho doanh nghiệp.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Có đầy đủ năng lực hành vi dân sự;
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify"> <span style="line-height: 115%;" class="style7">- Việc bạn truy cập trang web/wap&nbsp;</span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31">www.esell.vn</span></a><span style="line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;" class="style4">&nbsp;</span><span style="line-height: 115%;" class="style7">này 
+                tại mọi thời điểm, địa điểm bạn phải thực hiện đầy đủ các điều khoản trong Quy 
+                chế này;
+                <o:p></o:p>
+              </span></p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Bạn phải bảo vệ mật khẩu của bạn và giám sát các thông tin có liên quan đến 
+                tài khoản của bạn, bạn hiểu và đồng ý rằng bạn sẽ chịu trách nhiệm cả về việc 
+                tài khoản của bạn được sử dụng bởi bất cứ ai mà bạn cho phép truy cập vào nó;
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Các thông tin mà bạn cung cấp cho Ban quản lý Sàn giao dịch TMĐT Esell.vn là 
+                thông tin cá nhân của bạn, các thông tin đó là chính xác, đầy đủ và đúng sự thật;
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> - Sàn giao dịch TMĐT Esell.vn sẽ không hoàn trả lại số tiền mà Thành viên đã 
+                thanh toán trước cho Sàn giao dịch trừ trường hợp quy định tại Khoản 6, Khoản 7 
+                Điều này.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> c) Thành viên phải xem xét kỹ các thông tin liên quan đến các sản phẩm, dịch vụ 
+                được giới thiệu trên Sàn giao dịch về: giá, thương hiệu, các dịch vụ hỗ trợ cụ 
+                thể, điều kiện sử dụng, địa chỉ, phương thức giao hàng, phương thức thanh toán, 
+                số tài khoản ngân hàng và các thông tin có liên quan …mà Ban quản lý Sàn đã yêu 
+                cầu các Thành viên khi đăng bán phải cung cấp, kể cả các thông tin có liên quan 
+                đến cá nhân, doanh nghiệp thực hiện việc đăng bán như: tên doanh nghiệp, điện 
+                thoại liên lạc, địa chỉ trụ sở chính, địa điểm kinh doanh, phương thức liên hệ 
+                để Thành viên trực tiếp liên lạc và thực hiện các giao dịch mua sản phẩm, dịch 
+                vụ.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify"> <span style="line-height: 115%;" class="style7">3. Thành viên khi truy cập vào 
+                trang web/wapsite&nbsp;</span><a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31">www.esell.vn</span></a><span style="line-height: 115%;" class="style7">&nbsp;đều 
+                  biết và hiểu rằng: việc thành viên mua hàng hóa, dịch vụ trên Sàn giao dịch đều 
+                  do các Thành viên có nhu cầu thực hiện việc giới thiệu, quảng bá, kinh doanh 
+                  thông qua dịch vụ của Esell.vn, Ban quản lý Sàn Esell.vn chỉ hỗ trợ công cụ thực 
+                  hiện các hoạt động đó cho các Thành viên có nhu cầu, nên trong mọi trường hợp, 
+                  Thành viên đăng ký bán phải có trách nhiệm giải quyết mọi khiếu nại của người 
+                  mua (Thành viên) liên quan tới toàn bộ chất lượng của hàng hóa, dịch vụ và quá 
+                  trình cung cấp hàng hóa/dịch vụ theo đúng cam kết đã công bố trên Sàn giao dịch.
+  <o:p></o:p>
+</span></p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 4. Thành viên có quyền trực tiếp gửi khiếu nại và yêu cầu bồi thường đến Thành 
+                viên đăng bán nếu thành viên mua có chứng cứ cho rằng hàng hóa, dịch vụ do 
+                thương nhân đó cung cấp không đảm bảo chất lượng, thông số kỹ thuật, chế độ bảo 
+                hành sản phẩm…. như các thông tin đã công bố trên Sàn giao dịch.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> Ban quản lý sàn giao dịch TMĐT esell.vn sẽ chịu trách nhiệm lưu trữ các sản phẩm 
+                mẫu từ các thành viên đăng ký cửa hàng online và sẽ cung cấp kịp thời sản phẩm 
+                mẫu này cho cơ quan có thẩm quyền khi có yêu cầu.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 5. Thành viên có thể gửi khiếu nại thông qua kênh Chăm sóc khách hàng của Ban 
+                quản lý Sàn giao dịch Esell.vn, khi nhận được các thông tin khiếu nại của thành 
+                viên, Ban quản lý Sàn giao dịch sẽ hỗ trợ thành viên chuyển ngay khiếu nại đó 
+                đến các Thành viên khác có liên quan bằng các phương thức nhanh nhất.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 6. Nếu Thành viên đăng ký kinh nào từ chối đơn đặt hàng do chính Thành viên đó 
+                phát hành (có đăng ký mẫu với cơ quan nhà nước và esell.vn) hoặc ủy quyền cho 
+                Esell.vn phát hành, Sàn giao dịch TMĐT Esell.vn sẽ hoàn trả lại số tiền ngang 
+                bằng với &quot;giá trị thanh toán&quot; mà thành viên đã chi trả khi mua sản phẩm, dịch vụ 
+                đó.
+  <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify"> <span style="line-height: 115%;" class="style7">7. Esell.vn sẽ thực hiện mọi nỗ 
+                lực hợp lý để giải quyết các khiếu nại của thành viên truy cập và sử dụng dịch 
+                vụ trên Sàn giao dịch&nbsp;</span><span style="mso-field-code: HYPERLINK"><span class="MsoHyperlink" style="color: #333333"><span style="line-height: 115%;" class="style31">www.esell.vn&nbsp;</span></span></span><span style="line-height: 115%;" class="style7">liên 
+                  quan đến thao tác kỹ thuật và quá trình đặt mua (nếu có). Nếu những nỗ lực đó 
+                  thất bại, bằng cách sử dụng trang website/wapsite </span> <a href="http://www.soko.vn/"><span style="line-height: 115%;" class="style31"> esell.vn</span></a> <span style="line-height: 115%;" class="style7">này, thành 
+                    viên đồng ý rằng bất kỳ khiếu nại, tranh chấp của thành viên có thể có đối với 
+                    Esell.vn trong phạm vi nói trên, đều được giải quyết theo đúng quy định của pháp 
+                    luật Việt Nam, và tổng trách nhiệm của Esell.vn không vượt quá số tiền mà 
+                    Esell.vn thu được từ thành viên đối với vụ việc có liên quan đến khiếu nại của 
+                    thành viên.
+  <o:p></o:p>
+</span></p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 8. Mọi thông tin giao dịch được bảo mật, trừ trường hợp buộc phải cung cấp khi 
+                Cơ quan pháp luật yêu cầu.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;V.&nbsp;QUẢN LÝ THÔNG TIN XẤU:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif;"> <span class="style5">1. Thành viên sẽ tự chịu trách nhiệm về bảo mật và lưu giữ 
+                mọi hoạt động sử dụng dịch vụ dưới tên đăng ký, mật khẩu và hộp thư </span> <span style="mso-spacerun: yes" class="style5">&nbsp;</span><span class="style5">điện 
+                  tử của mình.</span>
+  <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 2. Thành viên có trách nhiệm thông báo kịp thời cho Sàn Giao dịch TMĐT Esell.vn 
+                về những hành vi sử dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng 
+                ký và mật khẩu của bên thứ ba để có biện pháp giải quyết phù hợp.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 3. Thành viên không sử dụng dịch vụ của Sàn giao dịch TMĐT Esell.vn vào những 
+                mục đích bất hợp pháp, không hợp lý, lừa đảo, đe doạ, thăm dò thông tin bất hợp 
+                pháp, phá hoại, tạo ra và phát tán virus gây hư hại tới hệ thống, cấu hình, 
+                truyền tải thông tin của Sàn giao dịch TMĐT Esell.vn hay sử dụng dịch vụ của 
+                mình vào mục đích đầu cơ, lũng đoạn thị trường tạo những đơn đặt hàng giả, kể cả 
+                phục vụ cho việc phán đoán nhu cầu thị trường. Trong trường hợp vi phạm thì 
+                thành viên phải chịu trách nhiệm về các hành vi của mình trước pháp luật.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 4. Thành viên không được thay đổi, chỉnh sửa, gán gép, copy, truyền bá, phân 
+                phối, cung cấp và tạo những chức năng tương tự của dịch vụ do Sàn giao dịch TMĐT 
+                Esell.vn cung cấp cho một bên thứ ba nếu không được sự đồng ý của Sàn giao dịch 
+                TMĐT Esell.vn trong bản Quy chế này.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 5. Thành viên không được hành động gây mất uy tín của Sàn giao dịch TMĐT 
+                Esell.vn dưới mọi hình thức như gây mất đoàn kết giữa các thành viên bằng cách 
+                sử dụng tên đăng ký thứ hai, thông qua một bên thứ ba hoặc tuyên truyền, phổ 
+                biến những thông tin không có lợi cho uy tín của Sàn giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;VI.&nbsp;GIỚI HẠN TRÁCH NHIỆM TRONG TRƯỜNG HỢP PHÁT SINH LỖI KỸ THUẬT 
+                TRÊN SÀN GIAO DỊCH:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 1. Khi thực hiện các giao dịch trên Sàn, bắt buộc các thành viên phải thực hiện 
+                đúng theo các quy trình hướng dẫn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify"> <span style="line-height: 115%;" class="style7">2. Ban quản lý Sàn giao dịch 
+                TMĐT Esell.vn cam kết cung cấp chất lượng dịch vụ tốt nhất cho các thành viên 
+                tham gia giao dịch. Trường hợp phát sinh lỗi kỹ thuật, lỗi phần mềm hoặc các lỗi 
+                khách quan khác dẫn đến Thành viên không thể tham gia giao dịch được thì các 
+                Thành viên thông báo cho Ban quản lý Sàn giao dịch TMĐT qua địa chỉ email:&nbsp;</span><a href="mailto:admin@soko.vn"><span style="line-height: 115%;" class="style31">admin@esell.vn</span></a><span style="line-height: 115%;" class="style31"><span class="style5">, 
+                  hoặc số điện thoại tư vấn. Ban quản lý Sàn sẽ khắc phục lỗi trong thời gian sớm 
+                  nhất, tạo điều kiện cho các Thành viên tham gia Sàn giao dịch TMĐT Esell.vn;</span>
+  <o:p></o:p>
+</span></p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 3. Tuy nhiên, Ban quản lý Sàn giao dịch TMĐT Esell.vn sẽ không chịu trách nhiệm 
+                giải quyết trong trường hợp khiếu nại, thông báo của các Thành viên không đến 
+                được Ban quản lý, phát sinh từ lỗi kỹ thuật, lỗi đường truyền, phần mềm hoặc các 
+                lỗi khác không do Ban quản lý gây ra.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;VII.&nbsp;QUYỀN VÀ TRÁCH NHIỆM CỦA BAN QUẢN LÝ SÀN GIAO DỊCH 
+                TMĐT&nbsp;ESELL.VN&nbsp;:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 1.&nbsp;Quyền của Ban quản lý Sàn giao dịch TMĐT&nbsp;esell.vn:
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> a) Sàn giao dịch TMĐT esell.vn sẽ tổ chức các công cụ hỗ trợ các Thành viên muốn 
+                giới thiệu, quảng bá và kinh doanh các sản phẩm, dịch vụ của mình đến cộng đồng 
+                người tiêu dùng; các công cụ để tìm kiếm, tra cứu thông tin sản phẩm, doanh 
+                nghiệp doanh nhân, đặt mua sản phẩm, dịch vụ mong muốn sau khi các thành viên 
+                này hoàn tất các thủ tục đăng ký kê khai trực tuyến các thông tin cần thiết và 
+                đồng ý với quy chế mà ban quản lý sàn giao dịch TMĐT esell đưa ra.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> b) Ban quản lý Sàn giao dịch TMĐT Esell.vn có trách nhiệm yêu cầu các Thành viên 
+                đăng ký kinh doanh phải cung cấp đầy đủ và chịu trách nhiệm pháp lý về các thông 
+                tin có liên quan đến sản phẩm, dịch vụ đăng tải tại esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> c) Trong trường hợp có cơ sở để chứng minh thành viên cung cấp thông tin cho Sàn 
+                giao dịch TMĐT Esell.vn không chính xác, sai lệch, không đầy đủ hoặc vi phạm 
+                pháp luật hay thuần phong mỹ tục Việt Nam thì Ban quản lý Sàn giao dịch TMĐT 
+                Esell.vn có quyền từ chối, tạm ngừng hoặc chấm dứt quyền sử dụng dịch vụ của 
+                thành viên.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> d) Ban quản lý Sàn giao dịch TMĐT Esell.vn có thể chấm dứt quyền thành viên và 
+                quyền sử dụng một hoặc tất cả các dịch vụ của thành viên và sẽ thông báo cho 
+                thành viên trong thời hạn ít nhất là một (01) ngày trong trường hợp thành viên 
+                vi phạm các Quy chế của Sàn giao dịch TMĐT Esell.vn hoặc có những hành vi ảnh 
+                hưởng đến hoạt động kinh doanh trên Sàn giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> e) Ban quản lý Sàn giao dịch TMĐT Esell.vn sẽ xem xét việc chấm dứt quyền sử 
+                dụng dịch vụ và quyền thành viên của thành viên nếu thành viên không tham gia 
+                hoạt động giao dịch và trao đổi thông tin trên Sàn giao dịch TMĐT Esell.vn liên 
+                tục trong ba (03) tháng. Nếu muốn tiếp tục trở thành thành viên và được cấp lại 
+                quyền sử dụng dịch vụ thì phải đăng ký lại từ đầu theo mẫu và thủ tục của Sàn 
+                giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> f) Ban quản lý Sàn giao dịch TMĐT Esell.vn có thể chấm dứt ngay quyền sử dụng 
+                dịch vụ và quyền thành viên của thành viên nếu Sàn giao dịch TMĐT Esell.vn phát 
+                hiện thành viên bị kết án hoặc đang trong thời gian thụ án, trong trường hợp 
+                thành viên tiếp tục hoạt động có thể gây cho Sàn giao dịch TMĐT Esell.vn trách 
+                nhiệm pháp lý, có những hoạt động lừa đảo, giả mạo, gây rối loạn thị trường, gây 
+                mất đoàn kết đối với các thành viên khác của Sàn giao dịch TMĐT Esell.vn , hoạt 
+                động vi phạm pháp luật hiện hành của Việt Nam. Trong trường hợp chấm dứt quyền 
+                thành viên và quyền sử dụng dịch vụ thì tất cả các chứng nhận, các quyền của 
+                thành viên được cấp sẽ mặc nhiên hết giá trị và bị chấm dứt.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> g) Sàn giao dịch TMĐT Esell.vn giữ bản quyền sử dụng dịch vụ và các nội dung 
+                trên Sàn giao dịch TMĐT Esell.vn theo luật bản quyền quốc tế và các quy định 
+                pháp luật về bảo hộ sở hữu trí tuệ tại Việt Nam. “Sàn giao dịch TMĐT Esell.vn ”, 
+                và tất cả các biểu tượng, nội dung theo các ngôn ngữ khác nhau đều thuộc quyền 
+                sở hữu của Công ty Đẳng cấp Việt. Nghiêm cấm mọi hành vi sao chép, sử dụng và 
+                phổ biến bất hợp pháp các quyền sở hữu trên.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 2.&nbsp;Trách nhiệm của Ban quản lý Sàn giao dịch TMĐT Esell.vn
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> a) Ban quản lý Sàn giao dịch TMĐT Esell.vn chịu trách nhiệm xây dựng Sàn giao 
+                dịch bao gồm một số công việc chính như: nghiên cứu, thiết kế, mua sắm các thiết 
+                bị phần cứng và phần mềm, kết nối Internet, xây dựng chính sách phục vụ cho hoạt 
+                động Sàn giao dịch TMĐT Esell.vn trong điều kiện và phạm vi cho phép.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> b) Ban quản lý Sàn giao dịch TMĐT Esell.vn sẽ tiến hành triển khai và hợp tác 
+                với các đối tác trong việc xây dựng hệ thống các dịch vụ, các công cụ tiện ích 
+                phục vụ cho việc giao dịch của các thành viên tham gia và người sử dụng trên Sàn 
+                giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> c) Ban quản lý Sàn giao dịch TMĐT Esell.vn chịu trách nhiệm định hướng, xây dựng, 
+                bổ sung hệ thống các kiến thức, thông tin về: nghiệp vụ ngoại thương, thương mại 
+                điện tử, hệ thống văn bản pháp luật thương mại trong nước và quốc tế, thị trường 
+                nước ngoài, cũng như các tin tức có liên quan đến hoạt động của Sàn giao dịch 
+                TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> d) Ban quản lý Sàn giao dịch TMĐT Esell.vn sẽ tiến hành các hoạt động xúc tiến, 
+                quảng bá Sàn giao dịch TMĐT Esell.vn ra thị trường nước ngoài trong phạm vi và 
+                điều kiện cho phép, góp phần mở rộng, kết nối đáp ứng các nhu cầu tìm kiếm bạn 
+                hàng và phát triển thị trường nước ngoài của các thành viên tham gia Sàn giao 
+                dịch TMĐT Esell.vn .
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> e) Ban quản lý Sàn giao dịch TMĐT Esell.vn sẽ cố gắng đến mức cao nhất trong 
+                phạm vi và điều kiện có thể để duy trì hoạt động bình thường của Sàn giao dịch 
+                TMĐT Esell.vn và khắc phục các sự cố như: sự cố kỹ thuật về máy móc, lỗi phần 
+                mềm, hệ thống đường truyền internet, nhân sự, các biến động xã hội, thiên tai, 
+                mất điện, các quyết định của cơ quan nhà nước hay một tổ chức liên quan thứ ba. 
+                Tuy nhiên nếu những sự cố trên xẩy ra nằm ngoài khả năng kiểm soát, là những 
+                trường hợp bất khả kháng mà gây thiệt hại cho thành viên thì Sàn giao dịch TMĐT 
+                Esell.vn không phải chịu trách nhiệm liên đới.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> f) Ban quản lý Sàn giao dịch TMĐT Esell.vn sẽ tư vấn cho các thành viên thực 
+                hiện quá trình mua bán qua Sàn giao dịch TMĐT Esell.vn đặc biệt là việc áp dụng 
+                chức năng thanh toán trực tuyến, chức năng bảo mật.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;VIII.&nbsp;QUYỀN VÀ TRÁCH NHIỆM CỦA THÀNH VIÊN, NGƯỜI TRUY CẬP:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> Đối với người truy cập mà chưa đăng nhập vào hệ thống, esell.vn sẽ hỗ trợ các 
+                công cụ về tìm kiếm, tra cứu thông tin về sản phẩm, dịch vụ, doanh nghiệp, doanh 
+                nhân và đặt mua sản phẩm.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> Thành viên đã đăng ký phải thực hiện đăng nhập hệ thống thì mới có đầy đủ các 
+                quyền và lợi ích của thành viên.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 1.&nbsp;Quyền của thành viên
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> a) Đối với các thành viên tham gia Sàn giao dịch TMĐT Esell.vn sẽ được miễn phí 
+                thành viên. Phí thành viên được hiểu là khoản phí để được tham gia hoạt động 
+                trên Sàn giao dịch TMĐT Esell.vn không tính đến các khoản phí khác như phí thuê 
+                quảng cáo, các dịch vụ gia tăng, các khoản phí khác trên Sàn giao dịch TMĐT 
+                Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> b) Thành viên sẽ được cấp một tên đăng ký và mật khẩu riêng để được vào sử dụng 
+                các dịch vụ và các giao dịch của mình trên Sàn giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> c) Thành viên sẽ được tạo tài khoản ảo để quản lý số tiền mà thành viên đã nạp 
+                vào (tài khoản chính) hay được thưởng (tài khoản phụ). Số tiền trong tài khoản 
+                này sẽ được dùng để thực hiện một số hoạt động trên esell.vn
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> d) Thành viên sẽ được nhân viên của Sàn giao dịch TMĐT Esell.vn hỗ trợ để sử 
+                dụng được các công cụ, các tính năng phục vụ cho việc quản lý hay tiến hành giao 
+                dịch và sử dụng các dịch vụ tiện ích trên Sàn giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> e) Thành viên có quyền đóng góp ý kiến cho Sàn giao dịch TMĐT Esell.vn trong quá 
+                trình hoạt động. Các kiến nghị được gửi trực tiếp bằng thư, fax hoặc email đến 
+                cho Sàn giao dịch TMĐT Esell.vn.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> f) Thành viên có quyền thảo luận để tạo thành một cộng đồng người tiêu dùng, 
+                cộng đồng doanh nghiệp và cộng đồng doanh nhân.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 2.&nbsp;Trách nhiệm của thành viên
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> a) Thành viên sẽ tự chịu trách nhiệm về bảo mật và lưu giữ và mọi hoạt động sử 
+                dụng dịch vụ dưới tên đăng ký, mật khẩu và hộp thư điện tử của mình. Thành viên 
+                có trách nhiệm thông báo kịp thời cho Sàn giao dịch TMĐT esell.vn về những hành 
+                vi sử dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu 
+                của mình để hai bên cùng hợp tác xử lý.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> b) Thành viên cam kết những thông tin cung cấp cho Sàn giao dịch TMĐT esell.vn 
+                và những thông tin đang tải lên Sàn giao dịch TMĐT esell.vn là chính xác và hoàn 
+                chỉnh. Thành viên đồng ý giữ và thay đổi các thông tin trên Sàn giao dịch TMĐT 
+                Esell.vn là cập nhật, chính xác và hoàn chỉnh.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> c) Thành viên cam kết, đồng ý không sử dụng dịch vụ của Sàn giao dịch TMĐT 
+                Esell.vn vào những mục đích bất hợp pháp, không hợp lý, lừa đảo, đe doạ, thăm rò 
+                thông tin bất hợp pháp, phá hoại, tạo ra và phát tán virus gây hư hại tới hệ 
+                thống, cấu hình, truyền tải thông tin của Sàn giao dịch TMĐT Esell.vn hay sử 
+                dụng dịch vụ của mình vào mục đích đầu cơ, lũng đoạn thị trường tạo những đơn 
+                đặt hàng, chào hàng giả, kể cả phục vụ cho việc phán đoán nhu cầu thị trường. 
+                Trong trường hợp vi phạm thì thành viên phải chịu trách nhiệm về các hành vi của 
+                mình trước pháp luật.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> d) Thành viên cam kết không được thay đổi, chỉnh sửa, gán ghép, copy, truyền bá, 
+                phân phối, cung cấp và tạo những công cụ tương tự của dịch vụ do Sàn giao dịch 
+                TMĐT Esell.vn cung cấp cho một bên thứ ba nếu không được sự đồng ý của Sàn giao 
+                dịch TMĐT Esell.vn trong bản Quy chế này.
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> e) Thành viên không được hành động gây mất uy tín của Sàn giao dịch TMĐT 
+                Esell.vn dưới mọi hình thức như gây mất đoàn kết giữa các thành viên bằng cách 
+                sử dụng tên đăng ký thứ hai, thông qua một bên thứ ba hoặc tuyên truyền, phổ 
+                biến những thông tin không có lợi cho uy tín của Sàn giao dịch TMĐT Esell.vn
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;IX.&nbsp;ĐIỀU KHOẢN ÁP DỤNG :</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> 1. Quy chế của Sàn giao dịch TMĐT Esell.vn chính thức có hiệu lực thi hành kể từ 
+                ngày ký Quyết định ban hành kèm theo Quy chế này. Esell.vn có quyền và có thể 
+                thay đổi Quy chế này bằng cách thông báo lên Sàn giao dịch TMĐT Esell.vn cho các 
+                thành viên biết. Quy chế sửa đổi có hiệu lực kể từ ngày Quyết định về việc sửa 
+                đổi Quy chế có hiệu lực. Việc thành viên tiếp tục sử dụng dịch vụ sau khi Quy 
+                chế sửa đổi được công bố và thực thi đồng nghĩa với việc họ đã chấp nhận Quy chế 
+                sửa đổi.
+                <o:p></o:p>
+              </p>
+<br>
+              <p class="MsoNormal" style="font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;">2. Địa chỉ liên lạc chính thức của Sàn giao dịch TMĐT Esell.vn là:
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> Địa chỉ: 232/17 đường Cộng Hòa, P.12, Q.Tân Bình
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="font-size: 12.0pt; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <span class="style9">Điện thoại: </span> <span style="font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; display: inline !important; float: none;" class="style4"> (848) 3811.6704 hoặc (848) 3811.6723</span><span class="style9"> Fax: </span> <span style="font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"> <span class="style9">&nbsp;</span></span><span style="font-family: Arial; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; display: inline !important; float: none;" class="style9">(848) 
+                3811.6791</span>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal"><span style="line-height: 115%;" class="style7">Email:&nbsp;<a href="mailto:info@esell.vn">info</a></span><span style="line-height: 115%;" class="style31"><a href="mailto:info@esell.vn">@esell.vn</a></span><span style="font-size: 12.0pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;">
+                <o:p> hoặc <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a></o:p>
+              </span></p>
+              <p class="MsoNormal" style="font-size: 16px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> <strong>ĐIỀU&nbsp;X.&nbsp;ĐIỀU KHOẢN CAM KẾT:</strong>
+                <o:p></o:p>
+              </p>
+              <p class="MsoNormal" style="text-align: justify; font-size: 14px; line-height: 115%; font-family: Arial, Helvetica, sans-serif; color: #333333;"> Ban quản lý Sàn giao dịch thương mại điện tử Esell.vn và Thành viên (người truy 
+                cập) đồng ý cam kết thực hiện đúng các điều khoản trong nội dung bản Quy chế này</p>
+<br>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #End Main -->
+<!-- footer -->
+<div id="footer">
+  <div id="footer_inner">
+    <div id="footer_top">
+      <div class="list">
+        <div class="row clearfix">
+          <div class="cate">
+            <div class="block">
+              <h2>Giới thiệu</h2>
+              <ul class="block_footer">
+                <li><a href="introduction.html">Giới thiệu về esell</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="law.html">Quy chế hoạt động</a></li>
+                <li><a href="property.html">Quyền sở hữu trí tuệ</a></li>
+                <li><a href="job.html">Tuyển dụng</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người bán</h2>
+              <ul class="block_footer">
+              <li><a href="seller/law_seller.html#seller1">Quyền lợi người bán</a></li>
+              	<li><a href="seller/law_seller.html#seller2">Quy định dành cho người bán</a></li>
+                <li><a href="seller/how_create_shop.html">Hướng dẫn cách tạo cửa hàng</a></li>                                 
+                <li><a href="seller/penalty.html">Hình thức xử lý vi phạm</a></li>                               
+                <!--<li><a href="#">Đăng bán sản phẩm, dịch vụ</a></li>
+                <li><a href="#">Giải pháp nâng cao doanh thu</a></li>
+                <li class="last"><a href="#">Xem thêm</a></li>-->
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người mua</h2>
+              <ul class="block_footer">
+              	<li><a href="buyer/law_buyer.html#buyer1">Quyền lợi người mua</a></li>
+              	<li><a href="buyer/law_buyer.html#buyer2">Quy định dành cho người mua</a></li>                
+                <li><a href="buyer/how_register.html">Đăng ký thành viên</a></li>                               
+                <li><a href="buyer/how_order.html">Hướng dẫn đặt mua</a></li>
+                <li class="last"><a href="buyer/law_buyer.html">Xem thêm</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Liên kết hợp tác</h2>
+              <ul class="block_footer">
+                 <li><a href="http://www.vacd.vn" target="_blank">Hội các nhà quản trị doanh nghiệp</a></li>
+                <li><a href="http://www.saigonbank.com.vn/" target="_blank">Ngân hàng Saigon Bank</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div id="footer_bottom">
+      <div class="copyright"><p>© <script src="Scripts/copyright.js" language="JavaScript" type="text/javascript"></script> Bản quyền thuộc CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT</p>    
+        <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh - MST: 0311632562</p>
+		<p>Điện thoại: (848) 3948 3961 - Fax: (848) 3811.6791 - Hotline: 0908.169.044</p>
+		<p>Email: <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a> - Website: <a href="www.dangcapviet.vn">www.dangcapviet.vn</a></p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #footer -->
+</body>
+</html>

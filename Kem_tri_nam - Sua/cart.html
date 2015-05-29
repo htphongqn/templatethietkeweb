@@ -1,0 +1,1123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kem trị nám</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/jquery.scrollbox.js"></script>
+<script>
+$(function () {
+  $('#demo2').scrollbox({
+    linear: true,
+    step: 1,
+    delay: 0,
+    speed: 30
+  });  
+  var queueNext = 7;
+  (function () {
+    $('#demo6-queue ul').append('<li><p>'+ queueNext +'</p></li>');
+    queueNext++;
+    setTimeout(arguments.callee, 2000 + parseInt(Math.random() * 3000, 10));
+  }());
+});
+</script>
+<!-- Start Camera Slider Scripts -->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script type="text/javascript">
+		jQuery(function(){			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: false,
+            	height: '365px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	hover: false,
+            	loader: 'none',
+            	playPause: false,
+            	pagination: false
+			});			
+		});
+	</script>
+<!---Hoz menu-->
+<!-- from include-js.jhtml -->
+<script src="Scripts/jquery.cookie.min.js"></script>
+<!-- from include-js.jhtml -->
+<script src="Scripts/common-functions.js" type="text/javascript"></script>
+<!-- from include-js.jhtml -->
+<script type="text/javascript">
+var lightSiteEnabled = false;
+var skincareEnabled = true;
+var skincareBrandsCat = "";
+
+var skincareBrandsCat = "scbrands";
+  
+var makeupEnabled = true;
+var makeupBrandsCat = "";
+
+makeupBrandsCat = "mkbrands";
+  
+var fragranceEnabled = true;
+var fragranceBrandsCat = "";
+
+fragranceBrandsCat = "frbrands";
+  
+var bodyEnabled = true;
+var bodyBrandsCat = "";
+
+bodyBrandsCat = "bdbrands";
+  
+var hairEnabled = true;
+var hairBrandsCat = "";
+
+hairBrandsCat = "hrbrands";
+  
+var accessoriesEnabled = true;
+var accessoriesBrandsCat="";
+
+var wellnessEnabled = true;
+var wellnessBrandsCat = "";
+
+var menEnabled = false;
+var menBrandsCat = "";
+
+menBrandsCat = "mnbrands";
+    
+var kidsEnabled = false;
+var kidsBrandsCat = "";
+
+var oralcareEnabled = false;
+var oralcareBrandsCat = "";
+
+var daretobeEnabled = false;
+var daretobeBrandsCat = "";
+
+var verymeEnabled = true;
+var verymeBrandsCat = "";
+
+</script>
+<script src="Scripts/maxi_menu.js" type="text/javascript"></script>
+<link rel="stylesheet" href="Styles/maxi_menu.css" type="text/css" media="screen,projection"/>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {    
+	jQuery('#mycarousel_products, #mycarousel_new_products, #mycarousel_saleoff_products').jcarousel({
+        vertical: true,
+		auto: 3,
+		animation: 1000,
+        scroll: 1,
+		wrap: 'circular',
+    });	
+});
+</script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#fade_brand_cosmetic').cycle({timeout:	   2500, fx: "blindX"});
+	$('#fade_brand_perfume').cycle({timeout:	   3500, fx: "wipe"});	
+	});
+
+</script>
+<!--Main Menu-->
+<script>
+    $(function () {
+
+        $('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(500, function () {
+
+            });
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(500, function () {
+
+            });
+        });
+
+
+    })
+        </script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div class="header"> <a href="index.html" class="logo"><img src="Images/logo.jpg" alt="" /></a>
+      <p class="top_link"> <a href="cart.html"><span class="icon_cart"></span>Giỏ hàng [<b>0</b>]</a> | <a href="" id="login">Đăng Nhập</a>
+        </li>
+        | <a href="" id="register">Đăng ký</a> </p>
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="menuProductsBox">
+      <div id="menuProductsBoxInner">
+        <!-- top-menu - level 2 -->
+        <ul id="topmenuLv2-products" class="topmenuLv2-products">
+          <li class="home-icon"><a href="http://vn.oriflame.com/index.jhtml">&nbsp;</a></li>
+          <li id="mn2-skincare"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=skincare"> <span>Dưỡng da</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-skincare" style="">
+              <div class="category twoColumns">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <div class="listContainer3">
+                    <ul class="categories-list listCol1">
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Daily care</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Anti-ageing" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscantiageing">Anti-ageing</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Blemish control" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscteenagerscare">Blemish control</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Cleansers" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptsccleansers">Cleansers</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Day creams" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscdaycreams">Day creams</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Eye creams" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptsceyecreams">Eye creams</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Lip balms" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptsclipbalms">Lip balms</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Night creams" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscnightcreams">Night creams</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Toners" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptsctoners">Toners</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Special care</div>
+                      </li>
+                    </ul>
+                    <ul class="listCol2 categories-list last">
+                      <li><a target="" class="ellipsis-wrapper" title="Facial masks" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscfacialmasks">Facial masks</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Peeling" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscpeeling">Peeling</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Serums" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscserums">Serums</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Special treatment" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscspecialtreatment">Special treatment</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Sun care</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Self tanners" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscselftanning">Self tanners</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Men</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="After shave" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscaftershave">After shave</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Other" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscother">Other</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Shaving products" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=ptscshavingproducts">Shaving products</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>Nhãn hàng thông dụng</span></div>
+                <ul>
+                  <li><a title="Aqua-Rhythm" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=scaquarhythm" class="ellipsis-wrapper">Aqua-Rhythm</a></li>
+                  <li><a title="Bioclinic" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=scbioclinic" class="ellipsis-wrapper">Bioclinic</a></li>
+                  <li><a title="Diamond Cellular" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=scdiamondcellular" class="ellipsis-wrapper">Diamond Cellular</a></li>
+                  <li><a title="Ecobeauty" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=scecobeauty" class="ellipsis-wrapper">Ecobeauty</a></li>
+                  <li><a title="Ecollagen" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=scecollagen" class="ellipsis-wrapper">Ecollagen</a></li>
+                  <li><a title="Essentials" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=skincare&amp;brandCat=scessentials" class="ellipsis-wrapper">Essentials</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">sản phẩm liên quan</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/best-offers.jhtml?prodCat=skincare" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">Ứng dụng trực tuyến</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/skincare-guide" class="ellipsis-wrapper">Cẩm nang chăm sóc da</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22457"> <img alt="Kem dưỡng da" title="Kem dưỡng da" src="http://vn.oriflame.com/catalog-images/product/global/22457_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22457">
+                  <div class="title">Kem dưỡng da</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price"> VND 449.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22457"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border" style="width: 812px;"></div>
+                <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=skincare"> <span>Các sản phẩm chăm sóc da</span> </a> </div>
+            </div>
+          </li>
+          <li id="mn2-makeup"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=makeup"> <span>Trang Điểm</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-makeup">
+              <div class="category twoColumns">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <div class="listContainer2">
+                    <ul class="categories-list listCol1">
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Eyes</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Beauty tools" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkbeautytoolseyes">Beauty tools</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Eyeliner" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkeyeliner">Eyeliner</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Eye pencils" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkeyepencils">Eye pencils</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Eye shadow" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkeyeshadow">Eye shadow</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Mascara" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkmascara">Mascara</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Face</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Beauty tools" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkbeautytoolsface">Beauty tools</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Bronzers" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkbronzers">Bronzers</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Concealer" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkconcealer">Concealer</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Foundation" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkfoundation">Foundation</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Powder" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkpowder">Powder</a></li>
+                    </ul>
+                    <ul class="listCol2 categories-list last">
+                      <li><a target="" class="ellipsis-wrapper" title="Primer" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkprimer">Primer</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Rouge" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkrouge">Rouge</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Lips</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Beauty tools" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkbeautytoolsllips">Beauty tools</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Lip gloss" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmklipgloss">Lip gloss</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Lip pencil" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmklippencil">Lip pencil</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Lipstick" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmklipstick">Lipstick</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Other" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkother">Other</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Nails</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Beauty tools" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmkbeautytoolsnails">Beauty tools</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Nail care" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmknailcare">Nail care</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Nail polish" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=ptmknailpolish">Nail polish</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>Nhãn hàng thông dụng</span></div>
+                <ul>
+                  <li><a title="Giordani Gold Eyes" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=mkgiordanigoldeyes" class="ellipsis-wrapper">Giordani Gold Eyes</a></li>
+                  <li><a title="Giordani Gold Face" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=mkgiordanigoldface" class="ellipsis-wrapper">Giordani Gold Face</a></li>
+                  <li><a title="Giordani Gold Lips" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=mkgiordanigoldlips" class="ellipsis-wrapper">Giordani Gold Lips</a></li>
+                  <li><a title="More by Demi" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=mkmorebydemi" class="ellipsis-wrapper">More by Demi</a></li>
+                  <li><a title="Oriflame Beauty Eyes" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=mkoriflamebeautyeyes" class="ellipsis-wrapper">Oriflame Beauty Eyes</a></li>
+                  <li><a title="Oriflame Beauty Face" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=makeup&amp;brandCat=mkoriflamebeautyface" class="ellipsis-wrapper">Oriflame Beauty Face</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">sản phẩm liên quan</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/best-offers.jhtml?prodCat=makeup" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">Ứng dụng trực tuyến</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/makeup-studio/index.jhtml" class="ellipsis-wrapper">Trang điểm trực tuyến</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=23050"> <img alt="Hộp trang điểm" title="Hộp trang điểm" src="http://vn.oriflame.com/catalog-images/product/global/23050_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=23050">
+                  <div class="title">Hộp trang điểm</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price"> VND 799.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=23050"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border"></div>
+                <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=makeup"> <span>Các sản phẩm trang điểm</span> </a> </div>
+            </div>
+          </li>
+          <li id="mn2-fragrance"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=fragrance"> <span>Nước Hoa</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-fragrance">
+              <div class="category twoColumns">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <div class="listContainer4">
+                    <ul class="categories-list listCol1">
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Women</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Aromatic" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenaromatic">Aromatic</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Chypre" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenchypre">Chypre</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Citrus" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomencitrus">Citrus</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Floral" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenfloral">Floral</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Fruity" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenfruity">Fruity</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Green" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomengreen">Green</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Oriental" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenoriental">Oriental</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Spicy" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenspicy">Spicy</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Watery" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenwatery">Watery</a></li>
+                    </ul>
+                    <ul class="listCol2 categories-list last">
+                      <li><a target="" class="ellipsis-wrapper" title="Woody" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrwomenwoody">Woody</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Men</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Aromatic" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmenaromatic">Aromatic</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Citrus" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmencitrus">Citrus</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Fougere" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmenfougere">Fougere</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Fruity" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmenfruity">Fruity</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Oriental" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmenoriental">Oriental</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Spicy" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmenspicy">Spicy</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Watery" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmenwatery">Watery</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Woody" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=ptfrmenwoody">Woody</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>Nhãn hàng thông dụng</span></div>
+                <ul>
+                  <li><a title="Enigma" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=fragrance&amp;brandCat=frenigma" class="ellipsis-wrapper">Enigma</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">sản phẩm liên quan</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/best-offers.jhtml?prodCat=fragrance" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">Ứng dụng trực tuyến</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/fragrance-guide" class="ellipsis-wrapper">Cẩm nang nước hoa</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22444"> <img alt="Nước hoa By Marcel Eau de Parfum" title="Nước hoa By Marcel Eau de Parfum" src="http://vn.oriflame.com/catalog-images/product/global/22444_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22444">
+                  <div class="title">Nước hoa By Marcel Eau de Parfum</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price"> VND 879.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22444"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border" style="width: 772px;"></div>
+                <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=fragrance"> <span>Các sản phẩm nước hoa</span> </a> </div>
+            </div>
+          </li>
+          <li id="mn2-body"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=body"> <span>Dưỡng Thể</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-body">
+              <div class="category threeColumns">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <div class="listContainer4">
+                    <ul class="categories-list listCol1">
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Body care</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Antiperspirants" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdantiperspirants">Antiperspirants</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Beauty tools" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdbeautytools">Beauty tools</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Body lotion &amp; creams" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdbodylotioncreams">Body lotion &amp; ...</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Body peeling" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdbodypeeling">Body peeling</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Body Spray" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdbodyspray">Body Spray</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Body wash" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdbodywash">Body wash</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Deodorants" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbddeodorants">Deodorants</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Others" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdothers">Others</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Roll-on" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdrollon">Roll-on</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Shower gels" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdshowergels">Shower gels</a></li>
+                    </ul>
+                    <ul class="listCol2 categories-list">
+                      <li><a target="" class="ellipsis-wrapper" title="Soaps" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdsoaps">Soaps</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Foot care</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Beauty tools" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdfootbeautytools">Beauty tools</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Creams" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdfootcreams">Creams</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Special care" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdfootspecialcare">Special care</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Hand care</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Creams" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdhandcreams">Creams</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Special care" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdhandspecialcare">Special care</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Special care</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Anti cellulite care" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdanticellulite">Anti cellulite care</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Depilation" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbddepilation">Depilation</a></li>
+                    </ul>
+                    <ul class="listCol3 categories-list last">
+                      <li><a target="" class="ellipsis-wrapper" title="Intimate care" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdintimatecare">Intimate care</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Sun Care</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Self Tanners" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdselftanning">Self Tanners</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">Men</div>
+                      </li>
+                      <li><a target="" class="ellipsis-wrapper" title="Deodorants" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdmendeodorants">Deodorants</a></li>
+                      <li><a target="" class="ellipsis-wrapper" title="Hair &amp; Body wash" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdmenshower">Hair &amp; Body wash</a></li>
+                      <li>
+                        <div class="ellipsis-wrapper maxi-menu-h2">KHÁC</div>
+                      </li>
+                      <li><a class="ellipsis-wrapper" title="Dental care" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbddentalcare">Dental care</a></li>
+                      <li><a class="ellipsis-wrapper" title="Kids &amp; Baby care" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=ptbdbabycare">Kids &amp; Baby care</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>Nhãn hàng thông dụng</span></div>
+                <ul>
+                  <li><a title="Feet Up" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=bdfeetup" class="ellipsis-wrapper">Feet Up</a></li>
+                  <li><a title="Hand Care" href="/products/product-list.jhtml?prodCat=body&amp;brandCat=bdhandcare" class="ellipsis-wrapper">Hand Care</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">sản phẩm liên quan</div>
+                  </li>
+                  <li><a href="/products/best-offers.jhtml?prodCat=body" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="/products/product-detail.jhtml?prodCode=10807"> <img alt="Oriflame Hippo Soap" title="Oriflame Hippo Soap" src="/catalog-images/product/global/10807_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="/products/product-detail.jhtml?prodCode=10807">
+                  <div class="title">Oriflame Hippo Soap</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price"> VND 49.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="/products/product-detail.jhtml?prodCode=10807"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border" style="width: 937px;"></div>
+                <a href="/products/category.jhtml?prodCat=body"> <span>Các sản phẩm dưỡng thể</span> </a> </div>
+            </div>
+          </li>
+          <li id="mn2-hair"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=hair"> <span>Tóc</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-hair">
+              <div class="category oneColumn">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <ul class="categories-list">
+                    <li><a class="ellipsis-wrapper" title="2 in 1" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=pthr2in1">2 in 1</a></li>
+                    <li><a class="ellipsis-wrapper" title="Conditioners" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=pthrconditioners">Conditioners</a></li>
+                    <li><a class="ellipsis-wrapper" title="Shampoons" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=pthrshampoos">Shampoons</a></li>
+                    <li><a class="ellipsis-wrapper" title="Styling products" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=pthrstylingproducts">Styling products</a></li>
+                    <li><a class="ellipsis-wrapper" title="Styling tools" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=pthrstylingtools">Styling tools</a></li>
+                    <li><a class="ellipsis-wrapper" title="Treatments" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=pthrtreatments">Treatments</a></li>
+                    <li><a class="ellipsis-wrapper" title="Men" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=pthrmen">Men</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>Nhãn hàng thông dụng</span></div>
+                <ul>
+                  <li><a title="Hair X" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=hrhairx" class="ellipsis-wrapper">Hair X</a></li>
+                  <li><a title="Milk &amp; Honey Gold" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=hrmilkandhoneygold" class="ellipsis-wrapper">Milk &amp; Honey Gold</a></li>
+                  <li><a title="Nature Hair Care" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=hrnaturehaircare" class="ellipsis-wrapper">Nature Hair Care</a></li>
+                  <li><a title="Nature Secrets" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=hrnaturesecrets" class="ellipsis-wrapper">Nature Secrets</a></li>
+                  <li><a title="North for Men" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=hair&amp;brandCat=hrnorthformen" class="ellipsis-wrapper">North for Men</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">sản phẩm liên quan</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/best-offers.jhtml?prodCat=hair" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22695"> <img alt="Dầu xả" title="Dầu xả" src="http://vn.oriflame.com/catalog-images/product/global/22695_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22695">
+                  <div class="title">Dầu xả</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price red"> VND 89.000 </p>
+                    <p class="origPrice"> VND 115.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22695"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border" style="width: 772px;"></div>
+                <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=hair"> <span>Các sản phẩm chăm sóc tóc</span> </a> </div>
+            </div>
+          </li>
+          <li id="mn2-accessories"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=accessories"> <span>Phụ Kiện</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-accessories">
+              <div class="category oneColumn">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <ul class="categories-list">
+                    <li><a class="ellipsis-wrapper" title="Dành cho nam" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=accessories&amp;brandCat=acmen">Dành cho nam</a></li>
+                    <li><a class="ellipsis-wrapper" title="Dành cho trẻ em" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=accessories&amp;brandCat=ackids">Dành cho trẻ em</a></li>
+                    <li><a class="ellipsis-wrapper" title="Deco &amp; Gifts" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=accessories&amp;brandCat=acdecogifts">Deco &amp; Gifts</a></li>
+                    <li><a class="ellipsis-wrapper" title="Nữ trang" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=accessories&amp;brandCat=acjewellery">Nữ trang</a></li>
+                    <li><a class="ellipsis-wrapper" title="Oriflame Foundation" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=accessories&amp;brandCat=acoriflamefoundation">Oriflame Foundation</a></li>
+                    <li><a class="ellipsis-wrapper" title="Phụ kiện thời trang " href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=accessories&amp;brandCat=acfashionaccessories">Phụ kiện thời trang </a></li>
+                    <li><a class="ellipsis-wrapper" title="Phụ kiện trang điểm" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=accessories&amp;brandCat=accosmeticaccessories">Phụ kiện trang điểm</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>sản phẩm liên quan</span></div>
+                <ul class="nobrands">
+                  <li><a href="http://vn.oriflame.com/products/best-offers.jhtml?prodCat=accessories" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=24143"> <img alt="Bóp đựng cọ" title="Bóp đựng cọ" src="http://vn.oriflame.com/catalog-images/product/global/24143_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=24143">
+                  <div class="title">Bóp đựng cọ</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price"> VND 329.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=24143"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border" style="width: 733px;"></div>
+                <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=accessories"> <span>Trang Phụ kiện trang sức</span> </a> </div>
+            </div>
+          </li>
+          <li id="mn2-wellness"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=wellness"> <span>Wellness</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-wellness">
+              <div class="category oneColumn">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <ul class="categories-list">
+                    <li><a class="ellipsis-wrapper" title="Giải pháp làm đẹp" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=webeautysolutions">Giải pháp làm đẹp</a></li>
+                    <li><a class="ellipsis-wrapper" title="Hair &amp; Nail NutriComplex" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=wehairnailnutricomplex">Hair &amp; Nail NutriComplex</a></li>
+                    <li><a class="ellipsis-wrapper" title="Kế hoạch giảm cân" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=weweightmanagement">Kế hoạch giảm cân</a></li>
+                    <li><a class="ellipsis-wrapper" title="Multivitamin &amp; Mineral" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=wemultivitmineral">Multivitamin &amp; Mineral</a></li>
+                    <li><a class="ellipsis-wrapper" title="Natural Balance Shake" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=weshakes">Natural Balance Shake</a></li>
+                    <li><a class="ellipsis-wrapper" title="Omega 3" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=weomega3">Omega 3</a></li>
+                    <li><a class="ellipsis-wrapper" title="Sức khỏe hàng ngày" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=weeverydayhealth">Sức khỏe hàng ngày</a></li>
+                    <li><a class="ellipsis-wrapper" title="Sức khỏe trẻ em" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=wechildrenhealth">Sức khỏe trẻ em</a></li>
+                    <li><a class="ellipsis-wrapper" title="Swedish Beauty Complex" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=weswedbeacomplex">Swedish Beauty Complex</a></li>
+                    <li><a class="ellipsis-wrapper" title="Wellness Kids" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=wekids">Wellness Kids</a></li>
+                    <li><a class="ellipsis-wrapper" title="WellnessPack" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=wellness&amp;brandCat=wewellnesspack">WellnessPack</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>sản phẩm liên quan</span></div>
+                <ul class="nobrands">
+                  <li><a href="http://vn.oriflame.com/products/best-offers.jhtml?prodCat=wellness" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                  <li>
+                    <div class="ellipsis-wrapper maxi-menu-h2">Ứng dụng trực tuyến</div>
+                  </li>
+                  <li><a href="http://vn.oriflame.com/products/wellness-experts" class="ellipsis-wrapper">Trung Tâm Nghiên Cứu Thông Tin Wellness</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22138"> <img alt="Natural Balance Shake chocolate" title="Natural Balance Shake chocolate" src="http://vn.oriflame.com/catalog-images/product/global/22138_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22138">
+                  <div class="title">Natural Balance Shake chocolate</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price"> VND 809.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22138"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border" style="width: 786px;"></div>
+                <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=wellness"> <span>Các sản phẩm Wellness</span> </a> </div>
+            </div>
+          </li>
+          <li id="mn2-veryme"> <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=veryme"> <span>Very me</span><span class="arrow responsive"></span> </a>
+            <div class="maxi-menu" id="maxi-menu-veryme">
+              <div class="category oneColumn">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>DANH MỤC SẢN PHẨM</span></div>
+                <div class="categories-div">
+                  <!-- brands -->
+                  <ul class="categories-list">
+                    <li>
+                      <div class="ellipsis-wrapper maxi-menu-h2">Fragrance</div>
+                    </li>
+                    <li><a target="" class="ellipsis-wrapper" title="Men" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmfrmen">Men</a></li>
+                    <li><a target="" class="ellipsis-wrapper" title="Women" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmfrwomen">Women</a></li>
+                    <li>
+                      <div class="ellipsis-wrapper maxi-menu-h2">Make-up</div>
+                    </li>
+                    <li><a target="" class="ellipsis-wrapper" title="Clickit" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmmkclickit">Clickit</a></li>
+                    <li><a target="" class="ellipsis-wrapper" title="Eyes" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmmkeyes">Eyes</a></li>
+                    <li><a target="" class="ellipsis-wrapper" title="Face" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmmkface">Face</a></li>
+                    <li><a target="" class="ellipsis-wrapper" title="Lips" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmmklips">Lips</a></li>
+                    <li><a target="" class="ellipsis-wrapper" title="Nails" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmmknails">Nails</a></li>
+                    <li>
+                      <div class="ellipsis-wrapper maxi-menu-h2">KHÁC</div>
+                    </li>
+                    <li><a class="ellipsis-wrapper" title="Accessories" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmaccessories">Accessories</a></li>
+                    <li><a class="ellipsis-wrapper" title="Body" href="http://vn.oriflame.com/products/product-list.jhtml?prodCat=veryme&amp;brandCat=vmbody">Body</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="more-products">
+                <div class="ellipsis-wrapper maxi-menu-h1"><span>sản phẩm liên quan</span></div>
+                <ul class="nobrands">
+                  <li><a href="http://vn.oriflame.com/products/best-offers.jhtml?prodCat=veryme" class="ellipsis-wrapper">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                </ul>
+              </div>
+              <div class="popular-product">
+                <div class="maxi-menu-h1 ellipsis-wrapper"><span>Sản phẩm yêu thích</span></div>
+                <div class="popularProductBox"> <a target="_top" class="img-box" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22953"> <img alt="Nước hoa Rock Angel Eau de Toilette" title="Nước hoa Rock Angel Eau de Toilette" src="http://vn.oriflame.com/catalog-images/product/global/22953_4.png"><br>
+                  </a> <a target="_top" class="a-img-prodlist-s" href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22953">
+                  <div class="title">Nước hoa Rock Angel Eau de Toilette</div>
+                  </a>
+                  <p class="spacer"></p>
+                  <div class="priceBox">
+                    <p class="price"> VND 399.000 </p>
+                  </div>
+                  <p class="go-to-product"> <a href="http://vn.oriflame.com/products/product-detail.jhtml?prodCode=22953"> Đến trang sản phẩm </a> </p>
+                </div>
+              </div>
+              <div class="go-to-all">
+                <div class="border" style="width: 733px;"></div>
+                <a href="http://vn.oriflame.com/products/category.jhtml?prodCat=veryme"> <span>Trang sản phẩm Very Me</span> </a> </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <div class="path"><a href="index.html">Trang chủ</a> &raquo; <a href="cart.html">Giỏ hàng</a></div>
+      <!--Cart-->
+      <div class="box">
+        <div class="box_Tab_index"><span>Giỏ hàng của bạn</span></div>
+        <table summary="basket_table_summary" class="table_cart">
+          <tr>
+            <th colspan="2">Sản phẩm</th>
+            <th>Xóa</th>
+            <th class="colPad">Giá</th>
+            <th class="quantity">Số lượng</th>
+            <th></th>
+            <th class="total-price totalPrice">Tổng cộng</th>
+          </tr>
+          <tr>
+            <td class="productImage"><img alt="Colour Drop Lipstick - Drop of Fuchsia" src="http://vn.oriflame.com/catalog-images/product/global/26908_5.png"></td>
+            <td class="productName"><div class="name"> Colour Drop Lipstick - Drop of Fuchsia</div>
+              <div>26908</div></td>
+            <td class="remove"><a href="#" title="Lấy sản phẩm ra khỏi giỏ hàng" id="removeBI3615113409" class="remove"><img src="Images/DeleteRed.png" alt="" /></a></td>
+            <td class="price"> VND 159.000 </td>
+            <td class="quantity"><div class="input_quantity">
+                <input type="text" maxlength="2" value="1" class="text_box" name="qty3615113409" id="qty3615113409">
+                <div class="decorative">
+                  <div class="errorTextOnline hidden"></div>
+                </div>
+              </div></td>
+            <td></td>
+            <td class="totalPrice" id="price3615113409">VND 159.000 </td>
+          </tr>
+          <tr>
+            <td class="productImage"><img alt="Colour Drop Lipstick - Drop of Fuchsia" src="http://vn.oriflame.com/catalog-images/product/global/26908_5.png"></td>
+            <td class="productName"><div class="name"> Colour Drop Lipstick - Drop of Fuchsia</div>
+              <div>26908</div></td>
+            <td class="remove"><a href="#" title="Lấy sản phẩm ra khỏi giỏ hàng" id="removeBI3615113409" class="remove"><img src="Images/DeleteRed.png" alt="" /></a></td>
+            <td class="price"> VND 159.000 </td>
+            <td class="quantity"><div class="input_quantity">
+                <input type="text" maxlength="2" value="1" class="text_box" name="qty3615113409" id="qty3615113409">
+                <div class="decorative">
+                  <div class="errorTextOnline hidden"></div>
+                </div>
+              </div></td>
+            <td></td>
+            <td class="totalPrice" id="price3615113409">VND 159.000 </td>
+          </tr>
+        </table>
+        <div class="total_Price"> Tổng cộng: <span class="itemValue">VND 159.000 </span> </div>
+        <div style="float: right; clear: right; padding: 10px 5px;"> <a style="width: 110px; float: right;" href="/thanh-toan.aspx" class="button_payment">Thanh toán</a> <a style="width: 140px; float: right;" href="/trang-chu.aspx" class="button_payment">Tiếp tục mua hàng</a> </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--bxSlider-->
+	<link rel="stylesheet" href="Styles/jquery.bxslider.css" type="text/css" />
+	<script src="Scripts/jquery.bxslider.js"></script>
+	<script type="text/javascript">
+  $(document).ready(function(){
+    
+$('.bxslider').bxSlider({
+  minSlides: 3,
+  maxSlides: 5,
+  slideWidth: 190,
+  slideMargin: 3
+});
+  });
+</script>
+      <div class="box">
+          <div class="yourProducts"> <span>Có thể bạn quan tâm</span> <span class="basketItemsCount">(<span id="cphMain_lbQuantity1">1</span>)</span> </div>
+          <div id="thesame_cate_P">
+            <ul class="bxslider">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-pink"><img width="120" height="120" alt="" src="/data/news/1407/24607_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Pink" href="/san-pham/very-me-lip-crayon-pink"> Very Me Lip Crayon - Pink</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-nude"><img width="120" height="120" alt="" src="/data/news/1408/24604_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Nude" href="/san-pham/very-me-lip-crayon-nude"> Very Me Lip Crayon - Nude</a></h3>
+                        <!---->
+                        <div class="price"> 79.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-nougat"><img width="120" height="120" alt="" src="/data/news/1409/24606_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Nougat" href="/san-pham/very-me-lip-crayon-nougat"> Very Me Lip Crayon - Nougat</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-fuchsia"><img width="120" height="120" alt="" src="/data/news/1410/24608_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Fuchsia" href="/san-pham/very-me-lip-crayon-fuchsia"> Very Me Lip Crayon - Fuchsia</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-coral"><img width="120" height="120" alt="" src="/data/news/1411/24605_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Coral" href="/san-pham/very-me-lip-crayon-coral"> Very Me Lip Crayon - Coral</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+              
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/test-1"><img width="120" height="120" alt="" src="/data/news/1372/dr-secret-moistuizer-.jpg"></a>
+                        <h3 class="product_name"> <a title="test 1" href="/san-pham/test-1"> test 1</a></h3>
+                        <!---->
+                        <div class="price"> 1.510.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/marcel-marongiu-lip-gloss"><img width="120" height="120" alt="" src="/data/news/1401/25313_4.png"></a>
+                        <h3 class="product_name"> <a title="Marcel Marongiu Lip Gloss" href="/san-pham/marcel-marongiu-lip-gloss"> Marcel Marongiu Lip Gloss</a></h3>
+                        <!---->
+                        <div class="price"> 179.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/gloss-booster-red-currant"><img width="120" height="120" alt="" src="/data/news/1402/10672_4.png"></a>
+                        <h3 class="product_name"> <a title="GLOSS booster - Red Currant" href="/san-pham/gloss-booster-red-currant"> GLOSS booster - Red Currant</a></h3>
+                        <!---->
+                        <div class="price"> 155.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/giordani-gold-lip-lacquer-vivid-magenta"><img width="120" height="120" alt="" src="/data/news/1403/20608_4.png"></a>
+                        <h3 class="product_name"> <a title="Giordani Gold Lip Lacquer - Vivid Magenta" href="/san-pham/giordani-gold-lip-lacquer-vivid-magenta"> Giordani Gold Lip Lacquer - Vivid Magenta</a></h3>
+                        <!---->
+                        <div class="price"> 249.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-mirror-gloss-cerise"><img width="120" height="120" alt="" src="/data/news/1404/26499_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Mirror Gloss - Cerise" href="/san-pham/very-me-mirror-gloss-cerise"> Very Me Mirror Gloss - Cerise</a></h3>
+                        <!--<p class='origPrice'>149.000 VNĐ</p>-->
+                        <div class="price"> 89.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-mirror-gloss"><img width="120" height="120" alt="" src="/data/news/1405/26497_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Mirror Gloss" href="/san-pham/very-me-mirror-gloss"> Very Me Mirror Gloss</a></h3>
+                        <!--<p class='origPrice'>149.000 VNĐ</p>-->
+                        <div class="price"> 89.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/wonder-colour-lip-liner"><img width="120" height="120" alt="" src="/data/news/1406/24035_4.png"></a>
+                        <h3 class="product_name"> <a title="Wonder Colour Lip Liner" href="/san-pham/wonder-colour-lip-liner"> Wonder Colour Lip Liner</a></h3>
+                        <!---->
+                        <div class="price"> 119.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-pink"><img width="120" height="120" alt="" src="/data/news/1407/24607_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Pink" href="/san-pham/very-me-lip-crayon-pink"> Very Me Lip Crayon - Pink</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-nude"><img width="120" height="120" alt="" src="/data/news/1408/24604_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Nude" href="/san-pham/very-me-lip-crayon-nude"> Very Me Lip Crayon - Nude</a></h3>
+                        <!---->
+                        <div class="price"> 79.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-nougat"><img width="120" height="120" alt="" src="/data/news/1409/24606_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Nougat" href="/san-pham/very-me-lip-crayon-nougat"> Very Me Lip Crayon - Nougat</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-fuchsia"><img width="120" height="120" alt="" src="/data/news/1410/24608_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Fuchsia" href="/san-pham/very-me-lip-crayon-fuchsia"> Very Me Lip Crayon - Fuchsia</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+                  <li class="item" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-lip-crayon-coral"><img width="120" height="120" alt="" src="/data/news/1411/24605_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Lip Crayon - Coral" href="/san-pham/very-me-lip-crayon-coral"> Very Me Lip Crayon - Coral</a></h3>
+                        <!--<p class='origPrice'>79.000 VNĐ</p>-->
+                        <div class="price"> 39.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                
+            <li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/test-1"><img width="120" height="120" alt="" src="/data/news/1372/dr-secret-moistuizer-.jpg"></a>
+                        <h3 class="product_name"> <a title="test 1" href="/san-pham/test-1"> test 1</a></h3>
+                        <!---->
+                        <div class="price"> 1.510.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/marcel-marongiu-lip-gloss"><img width="120" height="120" alt="" src="/data/news/1401/25313_4.png"></a>
+                        <h3 class="product_name"> <a title="Marcel Marongiu Lip Gloss" href="/san-pham/marcel-marongiu-lip-gloss"> Marcel Marongiu Lip Gloss</a></h3>
+                        <!---->
+                        <div class="price"> 179.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/gloss-booster-red-currant"><img width="120" height="120" alt="" src="/data/news/1402/10672_4.png"></a>
+                        <h3 class="product_name"> <a title="GLOSS booster - Red Currant" href="/san-pham/gloss-booster-red-currant"> GLOSS booster - Red Currant</a></h3>
+                        <!---->
+                        <div class="price"> 155.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/giordani-gold-lip-lacquer-vivid-magenta"><img width="120" height="120" alt="" src="/data/news/1403/20608_4.png"></a>
+                        <h3 class="product_name"> <a title="Giordani Gold Lip Lacquer - Vivid Magenta" href="/san-pham/giordani-gold-lip-lacquer-vivid-magenta"> Giordani Gold Lip Lacquer - Vivid Magenta</a></h3>
+                        <!---->
+                        <div class="price"> 249.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li><li class="item bx-clone" style="float: left; list-style: none outside none; position: relative; width: 190px; margin-right: 3px;">
+                    <!--Start Product-->
+                    <div class="product">
+                      <div class="product_inner"> <a target="_parent" href="/san-pham/very-me-mirror-gloss-cerise"><img width="120" height="120" alt="" src="/data/news/1404/26499_4.png"></a>
+                        <h3 class="product_name"> <a title="Very Me Mirror Gloss - Cerise" href="/san-pham/very-me-mirror-gloss-cerise"> Very Me Mirror Gloss - Cerise</a></h3>
+                        <!--<p class='origPrice'>149.000 VNĐ</p>-->
+                        <div class="price"> 89.000 VNĐ</div>
+                      </div>
+                    </div>
+                    <!--End Product-->
+                  </li></ul>
+            <div class="showAll">
+              <div class="showAllLink" id="showAllLink">Hiển thị tất cả</div>
+              <div class="closeShowAllLink" id="closeShowAllLink">Đóng tất cả</div>
+            </div>
+            <script>
+$( ".showAllLink" ).click(function() {
+	$("#thesame_cate_P .bx-viewport").addClass('viewport-auto');
+	$("#thesame_cate_P ul").addClass('width-ul');
+	$("#thesame_cate_P .bx-controls").css('display', 'none');
+	$(this).css('display', 'none');
+	$(".closeShowAllLink").css('display', 'block');
+	$(".showAll").addClass('close');
+});
+$( ".closeShowAllLink" ).click(function() {
+	$("#thesame_cate_P .bx-viewport").removeClass('viewport-auto');
+	$("#thesame_cate_P ul").removeClass('width-ul');
+	$("#thesame_cate_P .bx-controls").css('display', 'block');
+	$(this).css('display', 'none');
+	$(".showAllLink").css('display', 'block');
+	$(".showAll").removeClass('close');
+});
+</script>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      <!--End Cart-->
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <div id="sticker">
+    <div id="beforefooter-support">
+      <div class="wraper">
+        <div class="transport">Giao hàng trước, thanh toán sau, <span style="font-size: 14px; font-weight: 700"><span style="font-size: 18px">Miễn phí</span> vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước</span></div>
+        <div class="hotline"><span class="hotline_icon"></span>01243456789</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+$(document).ready(function() {
+	var s = $("#sticker");
+	var pos = s.position();	
+	var stickermax = $(document).outerHeight() - $("#footer").outerHeight() - s.outerHeight() - 1000; //40 value is the total of the top and bottom margin
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		//s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+		if (windowpos <= pos.top && windowpos < stickermax) {
+			s.attr("style", ""); //kill absolute positioning
+			s.addClass("stick"); //stick it
+		} else if (windowpos >= stickermax) {
+			s.removeClass(); //un-stick
+			s.css({position: "relative"}); //set sticker right above the footer
+			
+		} else {
+			s.removeClass(); //top of page
+		}
+	});
+	//alert(stickermax); //uncomment to show max sticker postition value on doc.ready
+});
+</script>
+  <!--Footer-->
+  <div class="footer">
+    <div class="menu_footer"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Mỹ phẩm dưỡng da</a><a href="">Máy làm đẹp da</a><a href="">Thực phẩm chức năng</a><a href="">Khuyến mãi</a><a href="">Hỏi đáp</a><a href="">Trang điểm</a><a href="">Nước hoa</a><a href="">Tin tức</a><a href="">Liên hệ</a></div>
+    <!--Menu Footer-->
+    <div class="topmenu_footer">
+      <div class="col_menuFooter" id="social_network">
+        <h3>Hãy tìm chúng tôi trên:</h3>
+        <div class="ctentColuMenuFooter"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a><a href=""> <span class="icon_rss"></span></a> <a href=""><span class="icon_gplus"></span></a> </div>
+      </div>
+      <div class="col_menuFooter" id="access_status">
+        <h3>Thống kê truy cập</h3>
+        <div class="ctentColuMenuFooter">
+          <!--Access Status-->
+          <p>Hôm qua: <b>71</b></p>
+          <p>Đang online: <b>71</b></p>
+          <p>Tổng truy cập: <b>471 000</b></p>
+          <!--End Access Status-->
+        </div>
+      </div>
+      <div class="col_menuFooter" id="link_web">
+        <h3>Liên kết web:</h3>
+        <div class="ctentColuMenuFooter">
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="transport">
+        <div class="ctentColuMenuFooter">
+          <p><img src="Images/Travel-Airplane-icon.png" alt="" class="img_general"  />Giao hàng trước, thanh toán sau, Miễn phí vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--End Menu Footer-->
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

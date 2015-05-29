@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Esell</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link rel="stylesheet" href="Styles/block.css" type="text/css" />
+<link rel="stylesheet" href="Styles/shopping.css" type="text/css" />
+<link rel="stylesheet" href="Styles/scroll.css" type="text/css" />
+<!-- Slider -->
+<link rel="stylesheet" href="Styles/slider.css" type="text/css" />
+<script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+<!-- Menu sidebar -->
+<script type="text/javascript">
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div id="page">
+    <!--#begin Header-->
+    <div id="header">
+      <div id="header-inner">
+        <div id="logo"> <a href="index.html" alt="Esell"><img src="Images/logo.png" alt="" border="" /></a></div>
+        <div id="header-right">
+          <div class="topmenu">
+            <ul class="menu">
+              <li><a href="list_product.html">Sản phẩm</a></li>
+              <li><a href="list_shop.html">Cửa hàng</a></li>
+              <li><a href="company_index.html">Doanh nghiệp</a></li>
+              <li><a href="human_index.html">Doanh nhân</a></li>
+              <li class="dealmenu"><a href="deal_index.html">Deal hôm nay</a></li>
+              <li><a href="#">Esell của tôi</a></li>
+              <li class="last"><a href="seller/law_seller.html#seller1">Hỗ trợ khách hàng</a></li>
+            </ul>
+          </div>
+          <!--#Đăng nhập-->
+          <div id="login">
+            <ul class="menu">
+              <li><a href="login.html">Đăng nhập</a></li>
+              <li class="last"><a href="register.html">Đăng ký</a></li>
+            </ul>
+          </div>
+          <div id="local">Khu vực:
+            <select name="khuvuc" class="type-option">
+              <option value="0">Toàn quốc</option>
+              <option value="1">Miền Bắc</option>
+              <option value="2">Miền Trung</option>
+              <option value="3">Miền Nam</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="header-bottom">
+        <div id="search">
+          <form action="search_product.html" method="post">
+            <table width="100%" border="0" cellspacing="0" cellpadding="1">
+              <tr>
+                <td class="search"><input name="searchword" class="inputbox" type="text" size="70" value="Nhập từ khóa tìm kiếm..." onblur="if (this.value=='') this.value='Nhập từ khóa tìm kiếm...';" onfocus="if (this.value=='Nhập từ khóa tìm kiếm...') this.value='';" /></td>
+                <td valign="top"><select name="seach" class="type-option">
+                    <option value="0">Tất cả sản phẩm</option>
+                    <option value="1">Tất cả cửa hàng</option>
+                    <option value="2">Tất cả doanh nghiệp</option>                    <option value="3">Tất cả doanh nhân</option>
+                  </select></td>
+                <td align="left" valign="top"><input type="submit" value="" class="bt-search" onclick="this.form.searchword.focus();"/></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div id="cart">
+          <div id="quantity">0</div>
+          <a href="#">Giỏ hàng</a></div>
+      </div>
+    </div>
+    <!--#end Header-->
+    <!-- #Main -->
+    <div id="main" class="clearfix">
+      <div id="sidebar">
+        <div id="sidebar_inner">
+          <div class="block">
+            <div class="blockcontent nopadding noborder_bottom">
+              <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                  <li><a href="list_product.html">Tất cả sản phẩm</a></li>
+                  <li><a href="#">Điện thoại - Viễn thông</a>
+                    <ul>
+                      <li><a href="list_product.html">Kỹ thuật số</a></li>
+                      <li><a href="#">Điện thoại chính hãng</a></li>
+                      <li><a href="#">Laptop - phụ kiện</a></li>
+                      <li><a href="#">Điện máy - gia dụng</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Máy tính - Linh kiện</a></li>
+                  <li><a href="#">Điện tử - Nhạc cụ</a></li>
+                  <li><a href="#">Máy ảnh - Máy quay</a></li>
+                  <li><a href="#">Đồ dùng sinh hoạt</a></li>
+                  <li><a href="#">Hàng thời trang</a></li>
+                  <li><a href="#">Bất động sản</a></li>
+                  <li class="last"><a href="#">Dịch vụ - Giải trí - Du lịch</a></li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Chào mừng bạn đến với Esell</h3>
+            <div class="blockcontent">
+              <ul class="wellcome">
+                <li class="active">Cho dù bạn mới sử dụng hay đã rành mạch về Esell, chúng tôi vẫn có cách để hướng dẫn bạn dễ dàng sử dụng trang web này.</li>
+                <li><a href="wellcome.html">Bạn mới đến Esell.</a></li>
+                <li><a href="buyer/how_order.html">Làm sao để mua hàng.</a></li>
+                <li><a href="seller/how_create_shop.html">Bán hàng bằng cách nào.</a></li>
+                <!--<li><a href="#">Làm tăng doanh số bán hàng.</a></li>-->
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Tin khuyến mãi từ cửa hàng</h3>
+            <div class="blockcontent nopadding_bottom">
+              <ul class="news_selloff">
+                <li class="active"><a href="#">CỬA THOÁT HIỂM.</a></li>
+                <li><a href="#">Chuyên bán các loại mành che nắng chất...</a></li>
+                <li><a href="#l">Đông trùng hạ thảo đặc biệt - hỗ trợ...</a></li>
+                <li><a href="#l">Nước tẩy rửa cho ngành Thủy Sản và thực...</a></li>
+                <li><a href="#l">Đất Giá Rẻ, Sổ Hồng Chính Chủ</a></li>
+                <li><a href="#">Cho thuê phòng khép kín mới xây gần các...</a></li>
+                <li><a href="#">Tủ bếp xinh,tủ bếp nhôm</a></li>
+                <li class="navi"><a href="#">1</a>&nbsp;<a href="#">2</a>&nbsp;<a href="#">3</a> >> <a href="#">Xem tất cả</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Cửa hàng tiêu biểu</h3>
+            <div id="play"><a href="#"><img src="Images/hover.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a></div>
+            <div class="blockcontent nopadding padding_top noborder_bottom ">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image" align="center"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634592413935015000-603.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image" align="center"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634600807206146250-591.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634835745809463750-421.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634844437431122500-270.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634855661274736250-919.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634862600907113750-448.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634871270758165000-368.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right_round_bottom">
+              <div class="left_round_bottom">
+                <div class="line_round_bottom"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- New shop -->
+          <style type="text/css">
+		  .shop_new .box_title h3, .shop_new .box_title span {
+    color: #000000;
+    float: left;
+    font-size: 16px;
+    line-height: 24px;
+    width: 130px;
+}
+.shop_new .box_title .page_shop {
+    float: right;
+    height: 10px;
+    margin-top: 8px;
+}
+.shop_new .box_title .page_shop a {
+    background: url("bullets.png") no-repeat scroll -19px 0 transparent;
+    float: left;
+    margin-left: 10px;
+    padding: 5px;
+    text-indent: -999px;
+}
+.shop_new .box_title .page_shop a:hover {
+    background: url("bullets.png") no-repeat scroll 0 0 transparent;
+    margin-left: 10px;
+    padding: 5px;
+}
+.shop_new .box_title .page_shop a.active {
+    background: url("bullets.png") no-repeat scroll 0 0 transparent;
+    margin-left: 10px;
+    padding: 5px;
+}
+.shop_new ul {
+    float: left;
+    list-style: none outside none;
+    width: 170px;
+}
+.shop_new ul li {
+    float: left;
+    height: 80px;
+    margin-bottom: 10px;
+    margin-left: 1px;
+    width: 168px;
+}
+.shop_new ul li img {
+    border: 1px solid #AAAAAA;
+    float: left;
+    height: 72px;
+    margin-bottom: 10px;
+    margin-right: 6px;
+    padding: 3px;
+    width: 72px;
+}
+.shop_new ul li p {
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+		  </style>
+          <div class="block">
+            <h3 class="blocktitle">Cửa hàng mới</h3>
+            <div id="nav_shop_new" class="page_shop"><a href="javascript:;" class="active">1</a><a href="javascript:;">2</a></div>
+<script src="Scripts/lib.pack.split.js" type="text/javascript"></script>
+<script src="Scripts/jquery.cycle.all.js" type="text/javascript"></script>
+<script src="Scripts/core.pack.js" type="text/javascript"></script>            
+            <div class="blockcontent padding noborder_bottom shop_new">
+            <style type="text/css">
+			.shop_new .box_title .page_shop {
+    float: right;
+    height: 10px;
+    margin-top: 8px;
+}
+.shop_new .box_title .page_shop a {
+    background: url("bullets.png") no-repeat scroll -19px 0 transparent;
+    float: left;
+    margin-left: 10px;
+    padding: 5px;
+    text-indent: -999px;
+}
+.shop_new .box_title .page_shop a:hover {
+    background: url("bullets.png") no-repeat scroll 0 0 transparent;
+    margin-left: 10px;
+    padding: 5px;
+}
+.shop_new .box_title .page_shop a.active {
+    background: url("bullets.png") no-repeat scroll 0 0 transparent;
+    margin-left: 10px;
+    padding: 5px;
+}
+.shop_new ul {
+    float: left;
+    list-style: none outside none;
+    width: 170px;
+}
+.shop_new ul li {
+    float: left;
+    height: 80px;
+    margin-bottom: 10px;
+    margin-left: 1px;
+    width: 168px;
+}
+.shop_new ul li img {
+    border: 1px solid #AAAAAA;
+    float: left;
+    height: 72px;
+    margin-bottom: 10px;
+    margin-right: 6px;
+    padding: 3px;
+    width: 72px;
+}
+.shop_new ul li p {
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+			</style>
+            <div class="slides_shopnew">
+              <ul>
+                <li> <a href="http://nava.vn/cungmua247" title="CungMua247"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/5/29/635054175969708750-841.jpg" alt="CungMua247" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/cungmua247">CungMua247</a></p>
+                </li>
+                <li> <a href="http://nava.vn/zonbig" title="zonbig"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/6/6/635061523236250000-981.jpg" alt="zonbig" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/zonbig">zonbig</a></p>
+                </li>
+                <li> <a href="http://nava.vn/thoitranguyennhi" title="THỜI TRANG UYÊN NHI"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/5/27/635052478617521250-308.jpg" alt="THỜI TRANG UYÊN NHI" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/thoitranguyennhi">THỜI TRANG UYÊN NHI</a></p>
+                </li>
+                <li> <a href="http://nava.vn/wthndxwvu/trung-tam-mobile-345.html" title="Trung Tâm Mobile 345"><img src="http://static.nava.vn/nava_shop/res/images/default/avatar-shop-120.jpg" alt="Trung Tâm Mobile 345" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/wthndxwvu/trung-tam-mobile-345.html">Trung Tâm Mobile 345</a></p>
+                </li>
+                <li> <a href="http://nava.vn/thoitrangbeyeu123" title="Thời Trang Bé Yêu 123"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/4/11/635012942396556250-325.jpg" alt="Thời Trang Bé Yêu 123" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/thoitrangbeyeu123">Thời Trang Bé Yêu 123</a></p>
+                </li>
+              </ul>
+              <ul>
+                <li> <a href="http://nava.vn/wtfmdwlls/in-ao-ky-thuat-so.html" title="In áo kỹ thuật số"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/4/4/635007020238443750-756.jpg" alt="In áo kỹ thuật số" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/wtfmdwlls/in-ao-ky-thuat-so.html">In áo kỹ thuật số</a></p>
+                </li>
+                <li> <a href="http://nava.vn/wthbkeiss/alvin-shop.html" title="ALVIN SHOP"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/4/3/635005912864693750-690.jpg" alt="ALVIN SHOP" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/wthbkeiss/alvin-shop.html">ALVIN SHOP</a></p>
+                </li>
+                <li> <a href="http://nava.vn/hoanghamobile" title="HOÀNG HÀ MOBILE"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/4/9/635011040635306250-150.jpg" alt="HOÀNG HÀ MOBILE" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/hoanghamobile">HOÀNG HÀ MOBILE</a></p>
+                </li>
+                <li> <a href="http://nava.vn/doubledouble" title="Double Double"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/4/24/635023944354986250-454.jpg" alt="Double Double" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/doubledouble">Double Double</a></p>
+                </li>
+                <li> <a href="http://nava.vn/wthbbjmow/andu-shop.html" title="Andu Shop"><img src="http://shop.gonct.info/nava_shop/images/shop/avatar/thumb/2013/3/25/634997711038147500-237.jpg" alt="Andu Shop" width="72" height="72" /></a>
+                  <p><a href="http://nava.vn/wthbbjmow/andu-shop.html">Andu Shop</a></p>
+                </li>
+              </ul>
+            </div>
+            
+            
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634600807206146250-591.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Sách, văn phòng phẩm Dangcapdigital</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634835745809463750-421.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Trung tâm di động Trà My</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634862600907113750-448.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Điện, điện tử GreenDeal</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634871270758165000-368.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Spa Hoa Anh Đào</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634844437431122500-270.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Bentolove</div>
+                </div>
+              </div>
+            </div>
+            <div class="right_round_bottom">
+              <div class="left_round_bottom">
+                <div class="line_round_bottom"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- Facebook -->
+          <div class="block" id="facebook">
+            <div class="blockcontent padding">
+              <div style="float: left; height: 50px;"><img src="Images/logo1.png" alt="" /></div>
+              <span>Cổng thuương mại điện tử Esell.vn trên Facebook</span><br />
+              <img src="Images/like.png" alt="" />
+              <p><strong>23 000</strong> người Thích esell.vn</p>
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face1.jpg" alt="" /></a></div>
+                    <div class="nick_name">Oanh</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face2.jpg" alt="" /></a></div>
+                    <div class="nick_name">Đinh Hà</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face3.jpg" alt="" /></a></div>
+                    <div class="nick_name">Huỳnh</div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face4.jpg" alt="" /></a></div>
+                    <div class="nick_name">Vũ</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face5.jpg" alt="" /></a></div>
+                    <div class="nick_name">Hà</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face6.jpg" alt="" /></a></div>
+                    <div class="nick_name">Dorsaf</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="block"> <a href="#"><img src="Images/banner1.jpg" width="200" height="115" alt="" /></a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="content-inside">
+          <!-- Slider -->
+          <div id="focus" style="padding: 0; margin: 0;">
+            <ul>
+              <li><img src="Images/silder/Banner_1.jpg" title="" alt="" height="300" width="795" /></li>
+              <li><img src="Images/silder/Banner_2.jpg" title="" alt="" height="300" width="795" /></li>
+              <li><img src="Images/silder/Banner_3.jpg" title="" alt="" height="300" width="795" /></li>
+            </ul>
+          </div>
+          <div class="slider">
+            <script type="text/javascript" src="Scripts/slider_jquery.js"></script>
+          </div>
+          <!--Scroll-->
+          <!--#Begin SP basn-->
+          <script type='text/javascript' src='Scripts/jquery-1.7.2.js'></script>
+          <script type='text/javascript' src='Scripts/actions.js'></script>
+          <div class="block">
+            <div class="right_round_top">
+              <div class="left_round_top">
+                <div class="line_round_top">
+                  <h3 class="blocktitle bestsell">Sản phẩm được ưa thích và bán chạy
+                    <div class="pagenav"> <span class="bestseller_scroll"></span> </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="blockcontent noborder_top noborder_bottom">
+              <div id="main-scroll" style="background: none;">
+                <div class="second-scroll">
+                  <div class="slide-scroll" style="height: 150px; width: 795px;">
+                    <ul id="zt-scroll168" class="zt-scroll" style="left: 0px;">
+                      <li class="item">
+                        <div class="itemproduct_inner">
+                          <div class="item_image"><a href="product_detail/product_detail1.html"><img src="Images/product/wave-rsx/honda-wave-110-rsx-2012-vanh-duc-trang-den-do.jpg" alt="" width="158" height="88" /></a></div>
+                          <div class="item_name"><a href="product_detail/product_detail1.html">Honda-wave-110-rsx-2012...</a></div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="itemproduct_inner">
+                          <div class="item_image"><a href="product_detail/product_detail3.html"><img src="Images/product/Dien thoai, vien thong/Mobile/Nokia/Lumia 920/lumia_920.jpg" alt="" width="158" height="88" /></a></div>
+                          <div class="item_name"><a href="product_detail/product_detail3.html">Mobile-Nokia-Lumia920</a></div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="itemproduct_inner">
+                          <div class="item_image"><a href="product_detail/product_detail4.html"><img src="Images/product/Dien thoai, vien thong/Mobile/SamSung/Galaxy Duos/hqw1345604947.jpg" alt="" width="158" height="88" /></a></div>
+                          <div class="item_name"><a href="product_detail/product_detail4.html">Samsung-Galaxy Duos1</a></div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="itemproduct_inner">
+                          <div class="item_image"><a href="product_detail/product_detail2.html"><img src="Images/product/Dien, dien tu/thiet bi hinh anh/Panasonic/TH-L32C5V/panasonic-2645-23083-1-zoom.jpg" alt="" width="158" height="88" /></a></div>
+                          <div class="item_name"><a href="product_detail/product_detail2.html">Tivi-Panasonic-TH-L32C5V</a></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pagenav"> <span id="pre168" class="pre-scroll">Prev</span> <span id="next168" class="next-scroll">Next</span> </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="right_round_bottom">
+              <div class="left_round_bottom">
+                <div class="line_round_bottom"></div>
+              </div>
+            </div>
+            <!--Scroll-->
+          </div>
+          <!-- SP updated -->
+          <div class="block">
+            <h3 class="blocktitle main_title">Sản phẩm mới cập nhật</h3>
+            <div class="blockcontent nopadding noborder_right noborder_bottom">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail1.html"><img src="Images/product/Oto, xe may, xe dap/wave-rsx/honda-wave-110-rsx-2012-vanh-duc-trang-den-do.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail1.html">Honda-wave-110-rsx-2012...</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">38.500.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail2.html"><img src="Images/product/Dien, dien tu/thiet bi hinh anh/Panasonic/TH-L32C5V/panasonic-2645-23083-1-zoom.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail2.html">Tivi-Panasonic-TH-L32C5V</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">17.200.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail3.html"><img src="Images/product/Dien thoai, vien thong/Mobile/Nokia/Lumia 920/lumia_920.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail3.html">Mobile-Nokia-Lumia920</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">9.450.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate product_last">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail4.html"><img src="Images/product/Dien thoai, vien thong/Mobile/SamSung/Galaxy Duos/hqw1345604947.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail4.html">Samsung-Galaxy Duos1</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">3.450.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail5.html"><img src="Images/product/Dien thoai, vien thong/Mobile/SamSung/Galaxy Note II/fjh1348458373.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail5.html">Samsung-galaxy note II2</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">6.250.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail6.html"><img src="Images/product/Dien, dien tu/thiet bi hinh anh/Panasonic/TC-L32E5/panasonic-tc-l32e5-anh-3.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail6.html">Tivi-panasonic-TC-L32E5</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">9.450.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail7.html"><img src="Images/product/Thoi trang/Ao khoac bong chay/634867727714258750561.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail7.html">Aó khoác bóng chày</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">196.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate product_last">
+                    <!-- Begin: product -->
+                    <div class="product">
+                      <div class="product_image"> <a href="product_detail/product_detail8.html"><img src="Images/product/Suc khoe, sac dep/Sua tam Provence/Provence_6.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail8.html">Sữa tắm Prôvence</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">75.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <!-- SP selloff -->
+          <div class="block">
+            <h3 class="blocktitle main_title">Sản phẩm khuyến mãi</h3>
+            <div class="blockcontent nopadding noborder_right noborder_bottom">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail4.html"><img src="Images/product/Dien thoai, vien thong/Mobile/SamSung/Galaxy Duos/hqw1345604947.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail4.html">Samsung-Galaxy Duos1</a> </div>
+                      <div class="company"><a href="shop-detail.com"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">3.000.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>3.450.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail8.html"><img src="Images/product/Suc khoe, sac dep/Sua tam Provence/Provence_6.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail8.html">Sữa tắm Prôvence</a></div>
+                      <div class="company"><a href="shop-detail.com"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">62.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>75.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail3.html"><img src="Images/product/Dien thoai, vien thong/Mobile/Nokia/Lumia 920/lumia_920.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail3.html">Mobile-Nokia-Lumia920</a><a href="product_detail/product_detail1.html"></a> </div>
+                      <div class="company"><a href="shop-detail.com"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">8.450.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>9.450.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate product_last">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail1.html"><img src="Images/product/Oto, xe may, xe dap/wave-rsx/honda-wave-110-rsx-2012-vanh-duc-trang-den-do.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail1.html">Honda-wave-110-rsx-2012...</a> </div>
+                      <div class="company"><a href="shop-detail.com"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">35.500.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>38.500.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail7.html"><img src="Images/product/Thoi trang/Ao khoac bong chay/634867727714258750561.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail7.html">Aó khoác bóng chày</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">185.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>196.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail5.html"><img src="Images/product/Dien thoai, vien thong/Mobile/SamSung/Galaxy Note II/fjh1348458373.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail5.html">Samsung-galaxy note II2</a> </div>
+                      <div class="company"><a href="shop-detail.com"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">6.050.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>6.250.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail2.html"><img src="Images/product/Dien, dien tu/thiet bi hinh anh/Panasonic/TH-L32C5V/panasonic-2645-23083-1-zoom.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail2.html">Tivi-Panasonic-TH-L32C5V</a> </div>
+                      <div class="company"><a href="Shop_detail_1/shop_detail.html"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">15.200.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>17.200.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate product_last">
+                    <!-- Begin: product -->
+                    <div class="product selloff">
+                      <div class="product_image"> <a href="product_detail/product_detail6.html"><img src="Images/product/Dien, dien tu/thiet bi hinh anh/Panasonic/TC-L32E5/panasonic-tc-l32e5-anh-3.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="product_name"> <a href="product_detail/product_detail6.html"></a>Tivi-panasonic-TC-L32E5 </div>
+                      <div class="company"><a href="shop-detail.com"><img src="Images/star.gif" alt="VIP" align="absmiddle"/>CT CP TTH</a></div>
+                      <div class = "cate_price">8.450.000 đ</div>
+                      <div class = "first_price">Giá gốc: <span>9.450.000 đ</span></div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="blockcontent nopadding noborder"> <a href="#"><img src="Images/banner4.jpg" width="795" height="50" alt="" /></a> </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- Deal today -->
+          <div class="block">
+            <h3 class="blocktitle main_title">Deal hôm nay</h3>
+            <div class="blockcontent nopadding noborder_right noborder_bottom">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_MayTinhbotui.html">Máy Tính Casino FX</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 10%</div>
+                        <a href="deal_detail/deal_detail_MayTinhbotui.html"><img src="Images/deal-today/Casino_FX.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>5</span></div>
+                      <div class = "cate_price1">59.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html">Đậu Nành Tuyết</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 30%</div>
+                        <a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html"><img src="Images/deal-today/Daunanhtuyet.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>500</span></div>
+                      <div class = "cate_price1">150.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html">Đậu Nành Tuyết</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 30%</div>
+                        <a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html"><img src="Images/deal-today/Daunanhtuyet.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>500</span></div>
+                      <div class = "cate_price1">150.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_MayTinhbotui.html">Máy Tính Casino FX</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 10%</div>
+                        <a href="deal_detail/deal_detail_MayTinhbotui.html"><img src="Images/deal-today/Casino_FX.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>5</span></div>
+                      <div class = "cate_price1">59.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html">Đậu Nành Tuyết</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 30%</div>
+                        <a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html"><img src="Images/deal-today/Daunanhtuyet.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>500</span></div>
+                      <div class = "cate_price1">150.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_GiayBuPBeXinhXan.html">Giày Bệt Búp Bê Xinh Xắn</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 50%</div>
+                        <a href="deal_detail/deal_detail_GiayBuPBeXinhXan.html"><img src="Images/deal-today/GiayThoiTrang_1.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>100</span></div>
+                      <div class = "cate_price1">29.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html">Đậu Nành Tuyết</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 30%</div>
+                        <a href="deal_detail/deal_detail_Combo_DauNanhTuyet.html"><img src="Images/deal-today/Daunanhtuyet.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>500</span></div>
+                      <div class = "cate_price1">150.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                  <div class="cate">
+                    <!-- Begin: product -->
+                    <div class="product deal_today">
+                      <div class="product_title"><a href="deal_detail/deal_detail_GiayBuPBeXinhXan.html">Giày Bệt Búp Bê Xinh Xắn</a></div>
+                      <div class="product_image">
+                        <div class="product_status">Cháy hàng</div>
+                        <div class="product_reduce">Giảm 50%</div>
+                        <a href="deal_detail/deal_detail_GiayBuPBeXinhXan.html"><img src="Images/deal-today/GiayThoiTrang_1.jpg" alt="" width="175" height="175" /></a></div>
+                      <div class="order">Đã mua: <span>100</span></div>
+                      <div class = "cate_price1">29.000 đ</div>
+                    </div>
+                    <!-- End: product -->
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <!-- Bank -->
+          <div id="bank">
+            <ul class="bank">
+              <li class="active"><a href="#"><img src="Images/bank/bank1.jpg" alt="" /></a></li>
+              <li><a href="#"><img src="Images/bank/bank2.jpg" alt="" /></a></li>
+              <li><a href="#"><img src="Images/bank/bank3.jpg" alt="" /></a></li>
+              <li><a href="#"><img src="Images/bank/bank4.jpg" alt="" /></a></li>
+              <li><a href="#"><img src="Images/bank/bank5.jpg" alt="" /></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #End Main -->
+<!-- footer -->
+<div id="footer">
+  <div id="footer_inner">
+    <div id="footer_top">
+      <div class="list">
+        <div class="row clearfix">
+          <div class="cate">
+            <div class="block">
+              <h2>Giới thiệu</h2>
+              <ul class="block_footer">
+                <li><a href="introduction.html">Giới thiệu về esell</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="law.html">Quy chế hoạt động</a></li>
+                <li><a href="property.html">Quyền sở hữu trí tuệ</a></li>
+                <li><a href="job.html">Tuyển dụng</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người bán</h2>
+              <ul class="block_footer">
+              <li><a href="seller/law_seller.html#seller1">Quyền lợi người bán</a></li>
+              	<li><a href="seller/law_seller.html#seller2">Quy định dành cho người bán</a></li>
+                <li><a href="seller/how_create_shop.html">Hướng dẫn cách tạo cửa hàng</a></li>                                 
+                <li><a href="seller/penalty.html">Hình thức xử lý vi phạm</a></li>                               
+                <!--<li><a href="#">Đăng bán sản phẩm, dịch vụ</a></li>
+                <li><a href="#">Giải pháp nâng cao doanh thu</a></li>
+                <li class="last"><a href="#">Xem thêm</a></li>-->
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người mua</h2>
+              <ul class="block_footer">
+              	<li><a href="buyer/law_buyer.html#buyer1">Quyền lợi người mua</a></li>
+              	<li><a href="buyer/law_buyer.html#buyer2">Quy định dành cho người mua</a></li>                
+                <li><a href="buyer/how_register.html">Đăng ký thành viên</a></li>                               
+                <li><a href="buyer/how_order.html">Hướng dẫn đặt mua</a></li>
+                <li class="last"><a href="buyer/law_buyer.html">Xem thêm</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Liên kết hợp tác</h2>
+              <ul class="block_footer">
+                 <li><a href="http://www.vacd.vn" target="_blank">Hội các nhà quản trị doanh nghiệp</a></li>
+                <li><a href="http://www.saigonbank.com.vn/" target="_blank">Ngân hàng Saigon Bank</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div id="footer_bottom">
+      <div class="copyright"><p>© <script src="Scripts/copyright.js" language="JavaScript" type="text/javascript"></script> Bản quyền thuộc CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT</p>    
+        <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh - MST: 0311632562</p>
+		<p>Điện thoại: (848) 3948 3961 - Fax: (848) 3811.6791 - Hotline: 0908.169.044</p>
+		<p>Email: <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a> - Website: <a href="www.dangcapviet.vn">www.dangcapviet.vn</a></p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #footer -->
+</body>
+</html>

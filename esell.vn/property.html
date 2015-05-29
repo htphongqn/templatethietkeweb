@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Quyền sở hữu trí tuệ</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link rel="stylesheet" href="Styles/block.css" type="text/css" />
+<link rel="stylesheet" href="Styles/shopping.css" type="text/css" />
+<link rel="stylesheet" href="Styles/scroll.css" type="text/css" />
+<!-- Slider -->
+<link rel="stylesheet" href="Styles/slider.css" type="text/css" />
+<script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+<!-- Menu sidebar -->
+<script type="text/javascript">
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+<style type="text/css">
+<!--
+.style11 {	color: #333333;
+}
+p.MsoNormal {margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+}
+-->
+</style>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div id="page">
+    <!--#begin Header-->
+    <div id="header">
+      <div id="header-inner">
+        <div id="logo"> <a href="index.html" alt="Esell"><img src="Images/logo.png" alt="" border="" /></a></div>
+        <div id="header-right">
+          <div class="topmenu">
+            <ul class="menu">
+            <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="list_shop.html">Cửa hàng</a></li>
+              <li><a href="company_index.html">Doanh nghiệp</a></li>
+              <li><a href="human_index.html">Doanh nhân</a></li>
+              <li class="dealmenu"><a href="deal_index.html">Deal hôm nay</a></li>
+              <li><a href="#">Esell của tôi</a></li>
+              <li class="last"><a href="seller/law_seller.html#seller1">Hỗ trợ khách hàng</a></li>
+            </ul>
+          </div>
+          <!--#Đăng nhập-->
+          <div id="login">
+            <ul class="menu">
+              <li><a href="login.html">Đăng nhập</a></li>
+              <li class="last"><a href="register.html">Đăng ký</a></li>
+            </ul>
+          </div>
+          <div id="local">Khu vực:
+            <select name="khuvuc" class="type-option">
+              <option value="0">Toàn quốc</option>
+              <option value="1">Miền Bắc</option>
+              <option value="2">Miền Trung</option>
+              <option value="3">Miền Nam</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="header-bottom">
+        <div id="search">
+          <form action="search_product.html" method="post">
+            <table width="100%" border="0" cellspacing="0" cellpadding="1">
+              <tr>
+                <td class="search"><input name="searchword" class="inputbox" type="text" size="70" value="Nhập từ khóa tìm kiếm..." onblur="if (this.value=='') this.value='Nhập từ khóa tìm kiếm...';" onfocus="if (this.value=='Nhập từ khóa tìm kiếm...') this.value='';" /></td>
+                <td valign="top"><select name="seach" class="type-option">
+                    <option value="0">Tất cả sản phẩm</option>
+                    <option value="1">Tất cả cửa hàng</option>
+                    <option value="2">Tất cả doanh nghiệp</option>                    <option value="3">Tất cả doanh nhân</option>
+                  </select></td>
+                <td align="left" valign="top"><input type="submit" value="" class="bt-search" onclick="this.form.searchword.focus();"/></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div id="cart">
+          <div id="quantity">0</div>
+          <a href="#">Giỏ hàng</a></div>
+      </div>
+    </div>
+    <!--#end Header-->
+    <!-- #Main -->
+    <div id="main" class="clearfix">
+      <div id="sidebar">
+        <div id="sidebar_inner">
+          <div class="block">
+            <div class="blockcontent nopadding noborder_bottom">
+              <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                  <li><a href="#">Điện thoại - Viễn thông</a>
+                    <ul>
+                      <li><a href="list_product.html">Kỹ thuật số</a></li>
+                      <li><a href="#">Điện thoại chính hãng</a></li>
+                      <li><a href="#">Laptop - phụ kiện</a></li>
+                      <li><a href="#">Điện máy - gia dụng</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Máy tính - Linh kiện</a></li>
+                  <li><a href="#">Điện tử - Nhạc cụ</a></li>
+                  <li><a href="#">Máy ảnh - Máy quay</a></li>
+                  <li><a href="#">Đồ dùng sinh hoạt</a></li>
+                  <li><a href="#">Hàng thời trang</a></li>
+                  <li><a href="#">Bất động sản</a></li>
+                  <li class="last"><a href="#">Dịch vụ - Giải trí - Du lịch</a></li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Chào mừng bạn đến với Esell</h3>
+            <div class="blockcontent">
+              <ul class="wellcome">
+                <li class="active">Cho dù bạn mới sử dụng hay đã rành mạch về Esell, chúng tôi vẫn có cách để hướng dẫn bạn dễ dàng sử dụng trang web này.</li>
+                <li><a href="wellcome.html">Bạn mới đến Esell.</a></li>
+                <li><a href="buyer/how_order.html">Làm sao để mua hàng.</a></li>
+                <li><a href="seller/how_create_shop.html">Bán hàng bằng cách nào.</a></li>
+                <!--<li><a href="#">Làm tăng doanh số bán hàng.</a></li>-->
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Tin khuyến mãi từ cửa hàng</h3>
+            <div class="blockcontent nopadding_bottom">
+              <ul class="news_selloff">
+                <li class="active"><a href="#">CỬA THOÁT HIỂM.</a></li>
+                <li><a href="#">Chuyên bán các loại mành che nắng chất...</a></li>
+                <li><a href="#l">Đông trùng hạ thảo đặc biệt - hỗ trợ...</a></li>
+                <li><a href="#l">Nước tẩy rửa cho ngành Thủy Sản và thực...</a></li>
+                <li><a href="#l">Đất Giá Rẻ, Sổ Hồng Chính Chủ</a></li>
+                <li><a href="#">Cho thuê phòng khép kín mới xây gần các...</a></li>
+                <li><a href="#">Tủ bếp xinh,tủ bếp nhôm</a></li>
+                <li class="navi"><a href="#">1</a>&nbsp;<a href="#">2</a>&nbsp;<a href="#">3</a> >> <a href="#">Xem tất cả</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3 class="blocktitle">Cửa hàng tiêu biểu</h3>
+            <div id="play"><a href="#"><img src="Images/hover.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a></div>
+            <div class="blockcontent nopadding padding_top noborder_bottom ">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image" align="center"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634592413935015000-603.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image" align="center"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634600807206146250-591.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634835745809463750-421.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634844437431122500-270.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634855661274736250-919.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634862600907113750-448.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ">
+                    <div class="shop_image"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634871270758165000-368.jpg" alt="" width="87" height="87" /></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right_round_bottom">
+              <div class="left_round_bottom">
+                <div class="line_round_bottom"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- New shop -->
+          <div class="block">
+            <h3 class="blocktitle">Cửa hàng mới</h3>
+            <div id="play"><a href="#"><img src="Images/hover.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a><a href="#"><img src="Images/active.png" alt="" /></a></div>
+            <div class="blockcontent padding noborder_bottom">
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634600807206146250-591.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Sách, văn phòng phẩm Dangcapdigital</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634835745809463750-421.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Trung tâm di động Trà My</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634862600907113750-448.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Điện, điện tử GreenDeal</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634871270758165000-368.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Spa Hoa Anh Đào</div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_image new_shop"><a href="Shop_detail_1/shop_detail.html"><img src="Images/shop/634844437431122500-270.jpg" alt="" width="72" height="72" /></a></div>
+                  <div class="description">Bentolove</div>
+                </div>
+              </div>
+            </div>
+            <div class="right_round_bottom">
+              <div class="left_round_bottom">
+                <div class="line_round_bottom"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- Facebook -->
+          <div class="block" id="facebook">
+            <div class="blockcontent padding">
+              <div style="float: left; height: 50px;"><img src="Images/logo1.png" alt="" /></div>
+              <span>Cổng thuương mại điện tử Esell.vn trên Facebook</span><br />
+              <img src="Images/like.png" alt="" />
+              <p><strong>23 000</strong> người Thích esell.vn</p>
+              <br>
+              <div class="list">
+                <div class="row clearfix">
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face1.jpg" alt="" /></a></div>
+                    <div class="nick_name">Oanh</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face2.jpg" alt="" /></a></div>
+                    <div class="nick_name">Đinh Hà</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face3.jpg" alt="" /></a></div>
+                    <div class="nick_name">Huỳnh</div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face4.jpg" alt="" /></a></div>
+                    <div class="nick_name">Vũ</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face5.jpg" alt="" /></a></div>
+                    <div class="nick_name">Hà</div>
+                  </div>
+                  <div class="shop_categ facebook">
+                    <div class="shop_image"><a href="#"><img src="Images/facebook/face6.jpg" alt="" /></a></div>
+                    <div class="nick_name">Dorsaf</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="block"> <a href="#"><img src="Images/banner1.jpg" width="200" height="115" alt="" /></a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="content-inside">
+          <div class="path1 boder_bottom"><a href="index.html">Trang chủ</a> > Quyền sở hữu trí tuệ</div>
+          <!-- List news -->
+          <div class="block">
+            <div class="blockcontent padding noborder">
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> <span class="style2"><strong>Giới thiệu</strong></span> - <span class="style3"> Quyền sở hữu trí tuệ</span></p>
+              <br>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333">Esell.vn cam kết bảo vệ quyền sở hữu trí tuệ của các bên thứ ba cũng như không 
+ngừng nỗ lực xây dựng một môi trường giao dịch thật sự an toàn cho tất cả thành 
+viên. Quy định Quyền sở hữu trí tuệ (Quyền SHTT) này được xây dựng nhằm đảm bảo 
+rằng những sản phẩm được đăng bán tại&nbsp;www.esell.vn&nbsp;không vi phạm bản quyền, 
+quyền thương hiệu hay những quyền hợp pháp khác của một hoặc nhiều bên thứ ba 
+bất kỳ.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> Theo quy định này, chúng tôi cho phép người sở hữu Quyền SHTT thông báo cho 
+                chúng tôi khi quyền lợi của mình bị xâm phạm. Chúng tôi sẽ nhanh chóng gỡ bỏ 
+                những mặt hàng được xác định vi phạm ra khỏi&nbsp;www.esell.vn</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> <strong>Thông báo :</strong></p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> Nếu Quyền SHTT của bạn bị xâm phạm thì hãy thông báo ngay cho chúng tôi theo quy 
+                trình dưới đây:</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> - Gửi chúng tôi bản&nbsp;Thông báo về việc bị xâm phạm Quyền sở hữu trí tuệ&nbsp;với đầy 
+                đủ thông tin cùng các tài liệu, căn cứ chứng minh việc sở hữu hợp pháp Quyền 
+                SHTT của bạn. Xin lưu ý rằng:&nbsp;<br style="mso-special-character: line-break" />
+  <![if !supportLineBreakNewLine]>
+  <br style="mso-special-character: line-break" />
+  <![endif]>
+  &nbsp;&nbsp;&nbsp; + Để làm cơ sở khắc phục vấn đề của bạn, các tài 
+                liệu này phải được gửi đến chúng tôi dưới dạng văn bản.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333">&nbsp;&nbsp;&nbsp; 
+                + Chỉ chủ nhân sở hữu Quyền SHTT thực sự mới được phép gửi thông báo này. Nếu 
+                bạn không phải là người bị xâm hại, bạn có thể giúp chúng tôi bằng cách thông 
+                báo đến người bị xâm hại.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> - Sau khi nhận được thông báo hợp lệ của bạn, chúng tôi sẽ tiến hành xem xét kỹ 
+                lưỡng tính chính xác và đầy đủ những thông tin bạn cung cấp. Nếu chúng tôi kết 
+                luận rằng bạn thực tế đã bị xâm phạm Quyền SHTT, chúng tôi sẽ nhanh chóng tháo 
+                gỡ một (hoặc nhiều) mặt hàng đang xâm phạm đến Quyền SHTT hợp pháp của bạn.&nbsp;<br />
+  <br />
+                - Trong trường hợp thông tin bạn cung cấp chưa đủ tin cậy, chúng tôi sẽ gửi 
+                email yêu cầu bạn bổ sung các thông tin, tài liệu, bằng chứng còn thiếu cùng 
+                những hướng dẫn khác có liên quan.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> <strong>Gỡ bỏ các mặt hàng vi phạm :</strong></p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> - Chúng tôi toàn quyền quyết định việc gỡ bỏ các mặt hàng vi phạm Quyền SHTT của 
+                các bên thứ ba mà không phải thông báo trước cho thành viên đã đăng tin rao bán, 
+                đấu giá các mặt hàng này.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> - Trong trường hợp bạn là thành viên có sản phẩm bị gỡ bỏ khỏi esell.vn, bạn 
+                mặc định rằng tin đăng của mình đã vi phạm một hoặc nhiều vi phạm chính sách của 
+                chúng tôi trong đó có Quy định Quyền SHTT này. Trong mọi trường hợp, bạn đều có 
+                quyền liên hệ với chúng tôi để được giải thích rõ nguyên nhân.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> - Nếu bạn có tin đăng bị gỡ bỏ do Quy định này và nếu bạn cho rằng bạn có đủ 
+                quyền hợp pháp đăng bán mặt hàng này thì bạn cần phải:</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> &nbsp;&nbsp;&nbsp;&nbsp; +
+                Liên hệ trực tiếp với cá nhân/tổ chức gửi thông báo về việc bị xâm phạm để giải 
+                trình. Nếu cá nhân/tổ chức này xác nhận bạn được quyền hoặc cho phép bạn đăng 
+                tin rao bán các mặt hàng bị gỡ bỏ, chúng tôi sẽ cho phép bạn đăng bán lại các 
+                mặt hàng này. Hoặc:</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> &nbsp;&nbsp;&nbsp;&nbsp; +
+                Gửi cho chúng tôi văn bản giải trình rõ các cơ sở, căn cứ xác thực bạn không vi 
+                phạm Quyền SHTT của bên thứ ba khác hoặc bạn có quyền hợp pháp đăng bán sản phẩm 
+                này. Chúng tôi sẽ dựa vào các cơ sở này để tiến hành các bước thẩm định phù hợp 
+                nhằm xác định bạn thực tế có vi phạm quy định này hay không.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #333333"> Vì một môi trường mua bán, trao đổi thông tin thực sự an toàn cho tất cả thành viên, chúng 
+                tôi khuyến cáo mỗi thành viên phải tôn trọng quyền SHTT của bất kỳ bên thứ ba 
+                nào.</p>
+              <p class="MsoNormal" style="font-size: 14px; font-family: Arial, Helvetica, sans-serif">Nếu bạn có bất kỳ thắc mắc, góp ý hay phản hồi về quy định này, vui lòng gửi mail đến&nbsp;<a target="_blank" class="style11" href="mailto:info@esell.vm">info</a><a target="_blank" class="style11" href="mailto:info@esell.vm">@esell.vn</a>&nbsp;<span class="style11">hoặc 
+                  liên hệ ngay với chúng tôi qua số điện thoại&nbsp;</span><span style="color: rgb(68, 68, 68); font-family: Arial; font-size: 11.111111640930176px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span></span><span style="color: rgb(68, 68, 68); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; display: inline !important; float: none;">(848) 
+                    3948.3961</span><span class="style11">&nbsp;(Tp. HCM). Chúng tôi luôn hoan nghênh mọi 
+                      ý kiến góp ý và phản hồi quý giá của bạn.</span></p>
+<br>
+              <br>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #End Main -->
+<!-- footer -->
+<div id="footer">
+  <div id="footer_inner">
+    <div id="footer_top">
+      <div class="list">
+        <div class="row clearfix">
+          <div class="cate">
+            <div class="block">
+              <h2>Giới thiệu</h2>
+              <ul class="block_footer">
+                <li><a href="introduction.html">Giới thiệu về esell</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="law.html">Quy chế hoạt động</a></li>
+                <li><a href="property.html">Quyền sở hữu trí tuệ</a></li>
+                <li><a href="job.html">Tuyển dụng</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người bán</h2>
+              <ul class="block_footer">
+              <li><a href="seller/law_seller.html#seller1">Quyền lợi người bán</a></li>
+              	<li><a href="seller/law_seller.html#seller2">Quy định dành cho người bán</a></li>
+                <li><a href="seller/how_create_shop.html">Hướng dẫn cách tạo cửa hàng</a></li>                                 
+                <li><a href="seller/penalty.html">Hình thức xử lý vi phạm</a></li>                               
+                <!--<li><a href="#">Đăng bán sản phẩm, dịch vụ</a></li>
+                <li><a href="#">Giải pháp nâng cao doanh thu</a></li>
+                <li class="last"><a href="#">Xem thêm</a></li>-->
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người mua</h2>
+              <ul class="block_footer">
+              	<li><a href="buyer/law_buyer.html#buyer1">Quyền lợi người mua</a></li>
+              	<li><a href="buyer/law_buyer.html#buyer2">Quy định dành cho người mua</a></li>                
+                <li><a href="buyer/how_register.html">Đăng ký thành viên</a></li>                               
+                <li><a href="buyer/how_order.html">Hướng dẫn đặt mua</a></li>
+                <li class="last"><a href="buyer/law_buyer.html">Xem thêm</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Liên kết hợp tác</h2>
+              <ul class="block_footer">
+                 <li><a href="http://www.vacd.vn" target="_blank">Hội các nhà quản trị doanh nghiệp</a></li>
+                <li><a href="http://www.saigonbank.com.vn/" target="_blank">Ngân hàng Saigon Bank</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div id="footer_bottom">
+      <div class="copyright"><p>© <script src="Scripts/copyright.js" language="JavaScript" type="text/javascript"></script> Bản quyền thuộc CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT</p>    
+        <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh - MST: 0311632562</p>
+		<p>Điện thoại: (848) 3948 3961 - Fax: (848) 3811.6791 - Hotline: 0908.169.044</p>
+		<p>Email: <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a> - Website: <a href="www.dangcapviet.vn">www.dangcapviet.vn</a></p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #footer -->
+</body>
+</html>

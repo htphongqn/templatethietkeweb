@@ -1,0 +1,1472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Hotel 24h</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Jquery Rating-->
+<link rel="stylesheet" href="Styles/jRating.jquery.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jRating.jquery.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('.basic').jRating({
+				step:true // no half-star when mousemove);		
+			});
+		});
+	</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'circular',
+		animation: 500,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });	
+});
+</script>
+<!--Calendar Picker-->
+<link rel="stylesheet" href="Styles/jquery-ui.css" />
+<script src="Scripts/jquery-ui.js"></script>
+<script>
+$(function() {
+$(".datepicker").datepicker({ dateFormat: "dd-mm-yy" }).val()
+});
+</script>
+<!--Vertical Select-->
+<script type="text/javascript">
+
+		$(document).ready(function() {
+			// Tạo các biến chứa các giá trị cần thiết
+			var acc_head = $('.accordion_menu > li > a'),
+				acc_body = $('.accordion_menu li > .sub-menu');
+
+			// Mở menu tab đầu tiên khi load trang web
+			acc_head.first().addClass('active').next().slideDown('normal');
+
+			// Tạo sự kiện click cho các thẻ a trong tab
+			acc_head.on('click', function(event) {
+
+				// Không cho link đến thẻ a trong tab
+				event.preventDefault();
+				
+				// Hiển thị và ẩn tab khi ta click
+				if ($(this).attr('class') != 'active'){
+					acc_body.slideUp('medium');
+					$(this).next().stop(true,true).slideToggle('medium');
+					acc_head.removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+		});
+	</script>
+<!-- Image Slideshow -->
+<link rel="stylesheet" type="text/css" href="Styles/jquery.ad-gallery.css">
+<script type="text/javascript" src="Scripts/jquery.ad-gallery.js?rand=390"></script>
+<script type="text/javascript" src="Scripts/common.js"></script>
+<script type="text/javascript" src="Scripts/Galary.js"></script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			$("#tabs_detail").tabs("#tabs_dtcontent .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+<script src="Scripts/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+			// <![CDATA[
+
+    $(document).ready(function () {
+        $('#tabs_payment').tabify();
+    });
+					
+			// ]]>
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div class="header"> <a href="" class="logo"><img src="Images/logo.png" alt="" width="199" /></a>
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="Tìm kiếm" />
+      </div>
+      <p class="account"> <a href="" class="link_title">Đăng nhập</a> | <a href="" class="link_title">Đăng ký</a> </p>
+      <p class="social_network"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a> <a href=""><span class="icon_gplus"></span></a> <a href=""><span class="icon_p"></span></a> <a href=""><span class="icon_linkedin"></span></a> <a href=""><span class="icon_youtube"></span></a></p>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="list_news.html">Giới thiệu</a>
+          <ul class="children">
+            <li><a href="#">Thông điệp</a></li>
+            <li><a href="#">Trách nhiệm xã hội</a></li>
+            <li><a href="#">Thành tựu</a></li>
+          </ul>
+        </li>
+        <li><a href="list_news.html">Khách sạn</a>
+          <ul class="children">
+            <li><a href="#">Cao su thiên nhiên</a></li>
+            <li><a href="#">Mủ cao su</a></li>
+            <li><a href="#">Cao su sơ chế</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Vé máy bay</a></li>
+        <li><a href="">Đăng ký & Đối tác</a> </li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="#">Cảm nhận</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Tư vấn</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left_col-->
+      <div class="left_content">
+        <!--Support Online-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab_index">Hỗ trợ trực tuyến</div>
+            <div id="support" class="b_general">
+              <p class="hotline"><span class="icon_hotline"></span><span class="number_hotln">08 66 767 952</span> <span class="number_hotln">08 66 767 952</span></p>
+              <ul>
+                <li> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1" /></a>
+                  <label>Hỗ trợ 01</label>
+                </li>
+                <li> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1" /></a>
+                  <label>Hỗ trợ 02</label>
+                </li>
+                <li> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1" /></a>
+                  <label>Hỗ trợ 03</label>
+                </li>
+                <li> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="Images/skype.png" title="thuctapcungdoanhnghiep3" width="36" alt=""> </a>
+                  <label>Hỗ trợ 01</label>
+                </li>
+                <li> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="Images/skype.png" title="thuctapcungdoanhnghiep3" width="36" alt=""> </a>
+                  <label>Hỗ trợ 01</label>
+                </li>
+                <li> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="Images/skype.png" title="thuctapcungdoanhnghiep3" width="36" alt=""> </a>
+                  <label>Hỗ trợ 01</label>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Support Online-->
+        <!--Send Email-->
+        <div class="box" id="get_email">
+          <input type="text" size="40" value="eeeeee" id="pass" name="email" class="inputbox" />
+          <a href="" class="send_button">Đăng ký</a>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Send Email-->
+        <!--Look like rating-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab_index">Khách sạn tương tự</div>
+            <div class="b_general box_rating" id="look_like_hotels">
+              <ul>
+                <li>
+                  <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                  -<a class="province title" href="">Vũng Tàu</a>
+                  <div class="rating">
+                    <div class="star_icon one_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>1/5</span> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="rating_content">
+                    <p>10 -12 Nguyễn Trãi, P. Bến Thành, Ho Chi Minh City</p>
+                  </div>
+                </li>
+                <li>
+                  <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                  -<a class="province title" href="">Vũng Tàu</a>
+                  <div class="rating">
+                    <div class="star_icon two_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>2/5</span> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="rating_content">
+                    <p>10 -12 Nguyễn Trãi, P. Bến Thành, Ho Chi Minh City</p>
+                  </div>
+                </li>
+                <li>
+                  <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                  -<a class="province title" href="">Vũng Tàu</a>
+                  <div class="rating">
+                    <div class="star_icon three_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>3/5</span> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="rating_content">
+                    <p>10 -12 Nguyễn Trãi, P. Bến Thành, Ho Chi Minh City</p>
+                  </div>
+                </li>
+                <li>
+                  <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                  -<a class="province title" href="">Vũng Tàu</a>
+                  <div class="rating">
+                    <div class="star_icon four_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>4/5</span> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="rating_content">
+                    <p>10 -12 Nguyễn Trãi, P. Bến Thành, Ho Chi Minh City</p>
+                  </div>
+                </li>
+                <li>
+                  <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                  -<a class="province title" href="">Vũng Tàu</a>
+                  <div class="rating">
+                    <div class="star_icon five_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>5/5</span> </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="rating_content">
+                    <p>10 -12 Nguyễn Trãi, P. Bến Thành, Ho Chi Minh City</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Look like rating-->
+        <!--Popular Select-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab_index">Lựa chọn phổ biến</div>
+            <div class="b_general box_rating" id="popular_selecting">
+              <ul>
+                <li><a href=""><img src="Images/hotel_01.jpg" alt="" width="80" height="80" class="img_general" /></a>
+                  <div class="rating">
+                    <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                    <a class="province" href="">Vũng Tàu</a>
+                    <div class="star_icon one_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>1/5</span> </div>
+                  </div>
+                </li>
+                <li><a href=""><img src="Images/hotel_01.jpg" alt="" width="80" height="80" class="img_general" /></a>
+                  <div class="rating">
+                    <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                    <a class="province" href="">Vũng Tàu</a>
+                    <div class="star_icon one_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>1/5</span> </div>
+                  </div>
+                </li>
+                <li><a href=""><img src="Images/hotel_01.jpg" alt="" width="80" height="80" class="img_general" /></a>
+                  <div class="rating">
+                    <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                    <a class="province" href="">Vũng Tàu</a>
+                    <div class="star_icon one_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>1/5</span> </div>
+                  </div>
+                </li>
+                <li><a href=""><img src="Images/hotel_01.jpg" alt="" width="80" height="80" class="img_general" /></a>
+                  <div class="rating">
+                    <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                    <a class="province" href="">Vũng Tàu</a>
+                    <div class="star_icon one_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>1/5</span> </div>
+                  </div>
+                </li>
+                <li><a href=""><img src="Images/hotel_01.jpg" alt="" width="80" height="80" class="img_general" /></a>
+                  <div class="rating">
+                    <h3 class="name_hotel"><a href="detail_news.html">Khách sạn Thùy Dương</a></h3>
+                    <a class="province" href="">Vũng Tàu</a>
+                    <div class="star_icon one_point"></div>
+                    <div class="datasSent"> Điểm đánh giá : <span>1/5</span> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Popular Select-->
+        <div class="clearfix"></div>
+      </div>
+      <!--End Left_col-->
+      <!--Right_col-->
+      <div class="main_content">
+        <div class="current_path"><a href="index.html">Trang chủ</a><span class="spSeperator"></span><a href="list_news.html">Khách sạn</a><span class="spSeperator"></span><a href="list_news.html">Khách sạn Hồ Chí Minh (Sài Gòn)</a><span class="spSeperator"></span><a href="detail_news.html">Liberty Central Saigon Riverside Hotel</a></div>
+        <!--Detail Hotel-->
+        <div class="box" id="detail_hotel">
+          <h1 class="name_hotel"><a href="">Paradise Saigon Boutique Hotel</a></h1>
+          <p class="address">288 Lê Thánh Tôn, Quận 1, TP. Hồ Chí Minh -  - <a title="Paradise Saigon Boutique Hotel, Tp. Hồ Chí Minh - Hiển thị bản đồ" onclick="return false;" rel="14" data-coords="105.85239708423615,21.032361006956343" data-google-track="Click/Action: sr_map_link_used" class="show_map" id="show_id621765" href="#">Hiển thị bản đồ</a></p>
+          <div class="all_rating"> <span class="star_icon two_point"></span> <span class="jq_tooltip" title="15 người đã thích khách sạn này"><span class="like_icon"></span><span class="added_to_fav_lists">20</span></span> <span class="info_point"><i>Tốt: <b>2/5</b></i> _ điểm từ 3.000 đánh giá</span></div>
+          <div class="view_price_room"> <span>Ngày nhận phòng</span>
+            <input type="text" class="datepicker" />
+            <span>Ngày trả phòng</span>
+            <input type="text" class="datepicker" />
+            <span>1 đêm</span> <a class="booking_button" href=""></a> </div>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Detail Hotel-->
+        <!-- Image Slideshow -->
+        <div class="box">
+          <div id="gallery" class="ad-gallery">
+            <div class="ad-image-wrapper"> </div>
+            <div class="ad-nav">
+              <div class="ad-thumbs">
+                <ul class="ad-thumb-list">
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/109/10973613.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055208.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg"> <img src="http://q-ec.bstatic.com/images/hotel/840x460/240/24055347.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973659.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                  <li> <a href="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg"> <img src="http://r-ec.bstatic.com/images/hotel/840x460/109/10973606.jpg" title="" alt="" width="40" height="40" /> </a> </li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Image Slideshow-->
+        <!--Tab 01-->
+        <div class="box">
+          <div class="nav">
+            <ul id="tabs_detail">
+              <li><a class="current" href="#" title="Chi tiết">Chi tiết</a></li>
+              <li><a href="#" title="Tiện nghi">Tiện nghi</a></li>
+              <li><a href="#" title="Khuyến mãi">Khuyến mãi</a></li>
+              <li><a href="#" title="Đặt phòng">Đặt phòng</a></li>
+              <li><a href="#" title="Đánh giá">Đánh giá</a></li>
+            </ul>
+          </div>
+          <div id="tabs_dtcontent">
+            <!--Section-->
+            <div class="section">
+              <div class="detail_info">
+                <p>Tọa lạc tại vị trí đắc địa ở Quận 1, Paradise Saigon Boutique Hotel cách Chợ Bến Thành và Dinh Thống Nhất 600 m. Khách sạn này có lễ tân 24 giờ và truy cập Wi-Fi miễn phí trong toàn bộ khuôn viên.</p>
+                <p>Với tầm nhìn ra quang cảnh thành phố, các phòng máy lạnh hiện đại này được trang bị tủ quần áo, truyền hình cáp màn hình phẳng, minibar và khu vực tiếp khách. Mỗi phòng còn có phòng tắm riêng với tiện nghi vòi sen, máy sấy tóc cùng đồ vệ sinh cá nhân miễn phí.</p>
+                <p>Paradise Saigon Boutique Hotel cung cấp tiện nghi phòng hội họp và bàn đặt tour hỗ trợ khách với dịch vụ sắp xếp đi lại/tham quan. Du khách có thể tận dụng trung tâm thể dục hoặc tận hưởng mát-xa thư giãn ở spa. Dịch vụ để hành lý và giặt ủi cũng có tại đây.</p>
+                <p>Khách sạn có nhà hàng phục vụ tiệc ngon miệng bao gồm các món ăn Việt Nam và phương Tây. Bia, rượu vang và đủ loại đồ uống có tại quán bar. Quý khách cũng có thể dùng bữa trong sự riêng tư tại phòng nghỉ.</p>
+                <p>Paradise Saigon Boutique Hotel cách Bảo tàng Quân đội khoảng 3,8 km và cách Sân bay Quốc tế Tân Sơn Nhất 7 km. Dịch vụ đưa đón sân bay có thể được sắp xếp theo yêu cầu với một khoản chi phí.</p>
+                <p>Qui định nhận phòng<br />
+                  * Khi đến nhận phòng vui lòng mang theo:<br />
+                  - CMND hoặc hộ chiếu<br />
+                  - Phiếu xác nhận đặt phòng do Hotel24h cấp<br />
+                  Qui định hủy đổi của khách sạn<br />
+                  - Huỷ phòng trước 6 ngày (trừ thứ 7, CN, Lễ) không tính phí<br />
+                  - Huỷ phòng sau 6 ngày (trừ thứ 7, CN, Lễ) tính phí 100% tổng giá trị tiền phòng<br />
+                  - Giai đoạn Lễ, Tết tất cả các booking không được hoàn, huỷ hoặc thay đổi<br />
+                  Qui định về trẻ em và giường phụ<br />
+                  - Trẻ em dưới 12 tuổi: ngủ chung với bố mẹ được miễn phí tiền phòng và ăn sáng (tối đa 1 trẻ/phòng)<br />
+                  - Trẻ em từ 12 tuổi trở lên: tính phí như người lớn<br />
+                  - Extra bed: 210.000 vnd (tuỳ thuộc công suất phòng giường phụ sẽ được thay thế bằng nệm phụ)<br />
+                  Quy định hủy/đổi dịch vụ<br />
+                  Phí hủy/đổi của một đặt dịch vụ = mức phí hủy/đổi của khách sạn + mức phí xử lý giao dịch của Hotel24h.<br />
+                  Mức phí hủy/đổi của khách sạn: là mức phí được tính dựa vào điều kiện hủy phòng.<br />
+                  Mức phí xử lý giao dịch của Hotel24h như sau:<br />
+                  Đặt dịch vụ dưới 5 triệu: từ 50,000 vnđ đến 2% tổng giá trị dịch vụ<br />
+                  Đặt dịch vụ trên 5 triệu: 1,5% tổng giá trị dịch vụ</p>
+              </div>
+              <div class="function">
+                <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+                <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!--End Section-->
+            <!--Section-->
+            <div class="section">
+              <div class="unit_facilities common_room_facilities">
+                <div class="description" id="outdoors_facility">
+                  <h3> <span class="facility_icon"></span> <span> Outdoors </span> </h3>
+                  <p class="firstpar"> Terrace </p>
+                </div>
+                <div class="description" id="internet_policy">
+                  <h3> <span class="facility_icon"></span> <span>Internet</span></h3>
+                  <!-- BEGIN policy.inc -->
+                  <p class="positive_policy_free"> <strong style="color: #eb0f0f;">Free!</strong> Wi-Fi is available in all areas and is free of charge. </p>
+                  <!-- END policy.inc -->
+                </div>
+                <div id="parking_policy" class="description">
+                  <h3> <span class="facility_icon"></span> <span>Parking</span></h3>
+                  <!-- BEGIN policy.inc -->
+                  <p class="positive_policy_free"> <strong style="color: #eb0f0f;">Free!</strong> Free private parking is available  at a location nearby (reservation is needed). </p>
+                  <!-- END policy.inc -->
+                </div>
+                <div class="description" id="services_facility">
+                  <h3> <span class="facility_icon"></span> <span> Services </span> </h3>
+                  <p class="firstpar"> Room Service,
+                    Airport Shuttle,
+                    Shuttle Service (Surcharge),
+                    24-Hour Front Desk,
+                    Currency Exchange,
+                    Tour Desk,
+                    Ticket Service,
+                    Baggage Storage,
+                    Laundry,
+                    Ironing Service,
+                    VIP Room Facilities </p>
+                </div>
+                <div class="description facility_icon_id_1">
+                  <h3> <span class="facility_icon"></span> <span> General </span> </h3>
+                  <p class="firstpar"> Safe,
+                    Chapel/Shrine,
+                    Non-smoking Rooms,
+                    Elevator,
+                    Air Conditioning </p>
+                </div>
+                <div class="description facility_icon_id_languages">
+                  <h3> <span class="facility_icon"></span> <span>Languages spoken</span> </h3>
+                  <p class="firstpar"> Vietnamese, English </p>
+                </div>
+                <!-- BEGIN hotelFacilityPolicies.inc -->
+                <!-- END hotelFacilityPolicies.inc -->
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!--End Section-->
+            <!--Section-->
+            <div class="section">
+              <div id="hotelPoliciesInc" class="descriptionsContainer">
+                <div class="description">
+                  <h3><span>Check-in</span></h3>
+                  <p> From 14:00 </p>
+                  <div style="clear:both"></div>
+                </div>
+                <div class="description">
+                  <h3><span>Check-out</span></h3>
+                  <p> Until 12:00 </p>
+                  <div style="clear:both"></div>
+                </div>
+                <div class="description tracked"> <a name="hotel_cancellation_policy"></a>
+                  <h3><span><img height="1" width="1" alt="" src="http://r-ec.bstatic.com/static/img/transparent/85e02501df1560d359a473f544224481a83c9aa7.png">Cancellation/<br>
+                    prepayment</span></h3>
+                  <p> Cancellation and prepayment policies vary according to room type.
+                    Please check what <a id="rm_cond_link" href="#availability_target">room conditions</a> may apply when selecting your room above. </p>
+                  <div style="clear:both"></div>
+                </div>
+                <div class="description">
+                  <h3><span><img height="1" width="1" alt="" src="http://r-ec.bstatic.com/static/img/transparent/85e02501df1560d359a473f544224481a83c9aa7.png">Children and extra beds</span></h3>
+                  <!-- BEGIN policy.inc -->
+                  <p class="positive_policy_free"> <strong style="color: #390;">Free!</strong> All children under 7 years stay free of charge when using existing beds. </p>
+                  <!-- END policy.inc -->
+                  <!-- BEGIN policy.inc -->
+                  <p>One older child or adult is charged USD 10 per person per night  in an extra bed.</p>
+                  <!-- END policy.inc -->
+                  <!-- BEGIN policy.inc -->
+                  <p>The maximum number of extra beds in a room is 1.</p>
+                  <!-- END policy.inc -->
+                  <!-- BEGIN policy.inc -->
+                  <p>There is no capacity for baby beds in the room.</p>
+                  <!-- END policy.inc -->
+                  <p>Additional fees are not calculated automatically in the total cost and will have to be paid for separately during your stay.</p>
+                  <div style="clear:both"></div>
+                </div>
+                <div class="description">
+                  <h3><span><img height="1" width="1" alt="" src="http://r-ec.bstatic.com/static/img/transparent/85e02501df1560d359a473f544224481a83c9aa7.png">Pets</span></h3>
+                  <!-- BEGIN policy.inc -->
+                  <p>Pets are not allowed.</p>
+                  <!-- END policy.inc -->
+                  <div style="clear:both"></div>
+                </div>
+                <div class="description hp_bp_payment_method">
+                  <h3><span>Cards accepted at this property</span></h3>
+                  <div style="padding-left: 140px;">
+                    <p> </p>
+                    <div title="American Express" class="creditcard americanexpress"></div>
+                    <div title="Visa" class="creditcard visa"></div>
+                    <div title="Euro/Mastercard" class="creditcard euromastercard"></div>
+                    <div title="UnionPay credit card" class="creditcard unionpaycreditcard"></div>
+                    <div class="clear-left"></div>
+                    <p></p>
+                  </div>
+                  <p class="cc_disclaimer">Saint Paul Hotel accepts these cards and reserves the right to pre-authorize your card prior to arrival.</p>
+                  <div style="clear:both"></div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!--End Section-->
+            <!--Section-->
+            <div class="section">
+              <h3 class="green_Tab"><span>Chi tiết đặt phòng, Thông tin liên hệ và Thanh toán</span></h3>
+              <p>Quý khách đặt 1 đêm, nhận phòng ngày <b>04/02/2014</b> và trả phòng ngày <b>05/02/2014</b></p>
+              <table class="rooms ui-widget-content ui-corner-all">
+                <thead>
+                  <tr>
+                    <th>STT </th>
+                    <th> Loại phòng </th>
+                    <th> Giường phụ </th>
+                    <th class="hide"> Tổng giá
+                      1
+                      đêm <br>
+                      <span class="note"> VND</span> </th>
+                    <th style="font-size: 1em;" class="thNormalRateExtra hide"> Giảm thêm cho thành viên </th>
+                    <th class="customer_name"> Họ tên khách hàng <br>
+                      <span class="note">(tên một người đại diện của phòng)</span> </th>
+                  </tr>
+                </thead>
+                <tr roomid="d8ee1e83-e7fe-4864-9024-fbd3544d50fb" class="room">
+                  <td class="stt" align="center"> Phòng
+                    1 </td>
+                  <td class="loai-phong" align="center"><span class="room_name"> Superior</span></td>
+                  <td class="assitant_bed" align="center"><select roomid="d8ee1e83-e7fe-4864-9024-fbd3544d50fb" class="ddlExtraBeds text ui-widget-content ui-corner-all" id="ctl00_Holder_Content_repRooms_ctl00_ddlExtraBeds" name="ctl00$Holder_Content$repRooms$ctl00$ddlExtraBeds">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                    <input type="hidden" value="" class="txtExtraBedRate" id="ctl00_Holder_Content_repRooms_ctl00_txtExtraBedRate" name="ctl00$Holder_Content$repRooms$ctl00$txtExtraBedRate"></td>
+                  <td class="price_room hide" align="center"><div class="price_room"><span>2.910<span class="thd">.000</span></span></div>
+                    <div class="detail_room"> chi tiết</div>
+                    <div class="hide" id="ctl00_Holder_Content_repRooms_ctl00_divDetailedRates">
+                      <div title="Giá phòng Superior" class="detailed-rates hide" ratesid="RateForNight0">
+                        <table class="detailed-rates">
+                          <tr>
+                            <th class="stay-date">Ngày lưu trú</th>
+                            <th class="daily-rate">Giá phòng mỗi ngày</th>
+                            <th class="daily-rate">Giảm thêm cho thành viên</th>
+                          </tr>
+                          <tr class="trRateForNight0">
+                            <td class="stay-date">04/02</td>
+                            <td class="daily-rate">2.910<span class="thd">.000</span></td>
+                            <td class="daily-rate">0%</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <input type="hidden" value="&lt;span&gt;2.910&lt;span class='thd'&gt;.000&lt;/span&gt;&lt;/span&gt;" class="txtBaseRateAfterTax_SubTotal" id="ctl00_Holder_Content_repRooms_ctl00_txtBaseRateAfterTax_SubTotal" name="ctl00$Holder_Content$repRooms$ctl00$txtBaseRateAfterTax_SubTotal"></td>
+                  <td class="tdNormalRateExtra_SubTotal hide">&nbsp;
+                    <input type="hidden" value="0" class="txtNormalRateExtra_SubTotal" id="ctl00_Holder_Content_repRooms_ctl00_txtNormalRateExtra_SubTotal" name="ctl00$Holder_Content$repRooms$ctl00$txtNormalRateExtra_SubTotal"></td>
+                  <td class="customer_name" align="center"><input type="text" class="txtCustomerName text ui-widget-content ui-corner-all" id="ctl00_Holder_Content_repRooms_ctl00_txtCustomerName" name="ctl00$Holder_Content$repRooms$ctl00$txtCustomerName">
+                    <br>
+                    <span class="copy-customer_name">Sử dụng tên này <br>
+                    cho tất cả các phòng »</span></td>
+                </tr>
+              </table>
+              <div class="info_dt_booking">
+                <div style="float: left; width: 400px;">
+                  <p><b>Điều kiện hủy phòng</b></p>
+                  <p><b>Qui định trả phòng</b><br>
+                    - Hủy phòng trước 5 ngày (trừ thứ 7, CN) trước ngày khách đến: không tính phí<br>
+                    - Hủy phòng sau 5 ngày (trừ thứ 7, CN) trước ngày khách đến: tính phí 100% tổng tiền phòng<br>
+                    <strong>- Giai đoạn Lễ, Tết tất cả các booking không được hủy, không hoàn, không đổi.</strong></p>
+                  <span class="link" id="lnkQuiDinhCuaKhachSan"><i>Qui định của khách sạn »</i></span>
+                  <div title="Quy định và lưu ý của khách sạn" class="hide" id="divQuiDinhCuaKhachSan"> <b>Giờ nhận phòng:</b> 14:00<br>
+                    <b>Giờ trả phòng:</b> 12:00<br>
+                    <br>
+                    <div class="clear"> </div>
+                    <b>Qui định nhận phòng</b><br>
+                    * Khách đến nhận phòng vui lòng mang theo:<br>
+                    - CMND hoặc Passport<br>
+                    - Phiếu xác nhận đặt phòng do Hotel24h cấp<br>
+                    <b>Qui định trả phòng</b><br>
+                    - Hủy phòng trước 5 ngày (trừ thứ 7, CN) trước ngày khách đến: không tính phí<br>
+                    - Hủy phòng sau 5 ngày (trừ thứ 7, CN) trước ngày khách đến: tính phí 100% tổng tiền phòng<br>
+                    <strong>- Giai đoạn Lễ, Tết tất cả các booking không được hủy, không hoàn, không đổi.</strong><br>
+                    <div class="qui-dinh">
+                      <div class="sub-sub-title">Qui định về trẻ em và giường phụ</div>
+                      - Trẻ em dưới 12 tuổi: miễn phí tiền phòng, ngủ chung với bố mẹ, phụ thu ăn sáng: 210.000 vnd (tối đa 1 trẻ/phòng)<br>
+                      - Trẻ em từ 12 tuổi trở lên: tính phí như người lớn<br>
+                      - Extra bed: 840.000 vnd, bao gồm ăn sáng&nbsp;(tuỳ thuộc công suất phòng, giường phụ sẽ được thay thế bằng nệm phụ)</div>
+                    <p><b>Qui định khác</b></p>
+                  </div>
+                  <span class="smaller">Xin vui lòng đọc kĩ các quy định của khách sạn trước khi đặt
+                  phòng</span> <br>
+                  <br>
+                  <span class="quiet"><i>Ghi chú của khách hàng</i></span>
+                  <textarea style="height:60px;width:380px;" class="txtBookingNotes ui-widget-content ui-corner-all text" id="ctl00_Holder_Content_txtBookingNotes" cols="20" rows="2" name="ctl00$Holder_Content$txtBookingNotes"></textarea>
+                </div>
+                <div style="float: right;" class="divSummaryRates1 ui-widget-content ui-corner-all">
+                  <div class="SummaryRates1">
+                    <table width="100%" cellspacing="0" cellpadding="5" border="0">
+                      <tr class="fees">
+                        <td align="center"><table>
+                            <tr>
+                              <td style="padding: 5px 5px 10px 5px;"><b>Tổng giá</b></td>
+                              <td align="right" style="padding: 5px 5px 10px 5px;"><b>2.910.000</b> VND</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 5px 5px 10px 5px;"><b>Phí xử lý giao dịch</b></td>
+                              <td align="right" style="padding: 5px 5px 10px 5px;">7.000 VND</td>
+                            </tr>
+                            <tr>
+                              <td style="border-top:2px dashed #ccc" colspan="2"></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td align="center" style="padding: 5px 0 10px 0; border-bottom: solid 1px #ccc;"><div class="hide"> <b>Tổng cộng</b> &nbsp; <span class="green TotalFormat"> <span class="Total" id="ctl00_Holder_Content_lblTotalRate">2.917.000 VND</span> </span> </div>
+                          <div class=""> <b>Giá phòng sẽ được báo qua điện thoại hoặc email</b> </div></td>
+                      </tr>
+                      <tr class="trNormalRateExtra_Total hide">
+                        <td align="center" style="padding: 12px 0 12px 0; border-bottom: solid 1px #ccc;
+color: #6BB31F; font-size: 1.2em;"> Giảm thêm cho thành viên <span id="ctl00_Holder_Content_lblNormalRateExtra_Total"></span></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style="padding: 10px 0 10px 0;"> cho đặt phòng <b> 1
+                          đêm</b> tại <b> Khách sạn Pullman Saigon Centre</b><br>
+                          từ ngày <b> 04/02/2014</b> đến ngày <b> 05/02/2014</b>:
+                          <ul style="list-style: disc inside; margin: 10px 0">
+                            <li><b> 1</b> phòng <b> Superior</b> (1đêm) </li>
+                            <li class="liExtraBeds hide"><span class="spnExtraBeds"></span> giường phụ <span style="font-weight: normal;"> (1
+                              đêm)</span></li>
+                          </ul></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="clear"> </div>
+                </div>
+                <div class="clear"> </div>
+                <div class="info_contact">
+                  <div class="sub-title">
+                    <h3 class="green_Tab"><span> Thông tin liên hệ</span></h3>
+                  </div>
+                  <div class="sub-content">
+                    <input type="hidden" value="1055" class="txtHotelIdInt">
+                    <input type="hidden" value="71a20f6a-f044-462e-9990-b89272d42bae-03601s08120" class="txtRateKey">
+                    <table cellspacing="0" cellpadding="5" border="0">
+                      <tr>
+                        <td> Họ tên </td>
+                        <td><input type="text" errormessage="Xin vui lòng nhập họ tên." class="txtCustomerFullName required ui-widget-content ui-corner-all text" id="ctl00_Holder_Content_txtCustomerFullName" name="ctl00$Holder_Content$txtCustomerFullName"></td>
+                      </tr>
+                      <tr>
+                        <td> Email </td>
+                        <td><input type="text" errormessage="Xin vui lòng nhập email." class="txtEmail required ui-widget-content ui-corner-all text" id="ctl00_Holder_Content_txtEmail" name="ctl00$Holder_Content$txtEmail"></td>
+                      </tr>
+                      <tr>
+                        <td> Di động </td>
+                        <td><input type="text" errormessage="Xin vui lòng nhập số Di động." class="txtPhone1 required ui-widget-content ui-corner-all text" id="ctl00_Holder_Content_txtPhone1" name="ctl00$Holder_Content$txtPhone1"></td>
+                      </tr>
+                      <tr>
+                        <td> Điện thoại bàn </td>
+                        <td><input type="text" class="txtPhone2 ui-widget-content ui-corner-all text" id="ctl00_Holder_Content_txtPhone2" name="ctl00$Holder_Content$txtPhone2"></td>
+                      </tr>
+                      <tr>
+                        <td> Địa chỉ </td>
+                        <td><input type="text" class="txtAddress ui-widget-content ui-corner-all text" id="ctl00_Holder_Content_txtAddress" name="ctl00$Holder_Content$txtAddress"></td>
+                      </tr>
+                      <tr>
+                        <td> Ghi chú </td>
+                        <td><input type="text" class="txtContactNotes ui-widget-content ui-corner-all text" id="ctl00_Holder_Content_txtContactNotes" name="ctl00$Holder_Content$txtContactNotes"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="confirm_payment">
+                  <div class="sub-title">
+                    <h3 class="green_Tab"><span> Xác nhận thanh toán</span></h3>
+                  </div>
+                  <div class="sub-content">
+                    <p>Xin vui lòng xác nhận lại tất cả các chi tiết đặt dịch vụ và thông tin liên hệ ở
+                      trên. Nếu tất cả đã chính xác, quý khách sẽ tiếp tục với các bước thanh toán.</p>
+                    <p>Quý khách hãy chọn một trong các phương thức thanh toán sau:</p>
+                    <input type="hidden" value="C24" class="hidPaymentMethod" id="ctl00_Holder_Content_hidPaymentMethod" name="ctl00$Holder_Content$hidPaymentMethod">
+                    <input type="hidden" class="hidPaymentNotes" id="ctl00_Holder_Content_hidPaymentNotes" name="ctl00$Holder_Content$hidPaymentNotes" value="Địa chỉ văn phòng Hotel24h:
+Tầng 11, Tòa Nhà HDTC, Số 36 Bùi Thị Xuân, Phường Bến Thành, Quận 1, TP.HCM">
+                    <div id="tabs_payment">
+                      <ul class="tabs_payment">
+                        <li><a class="active" href="#tabs-1" title="Chuyển khoản ngân hàng / ATM">Chuyển khoản ngân hàng / ATM</a></li>
+                        <li><a href="#tabs-2" title="Thu tiền tận nhà">Thu tiền tận nhà</a></li>
+                        <li><a href="#tabs-3" title="Thanh toán tại văn phòng Hotel24h">Thanh toán tại văn phòng Hotel24h</a></li>
+                        <li><a href="#tabs-4" title="Thẻ tín dụng">Thẻ tín dụng</a></li>
+                        <li><a href="#tabs-5" title="Thẻ nội địa">Thẻ nội địa</a></li>
+                      </ul>
+                      <!-- styles needed by jScrollPane - include in your own sites -->
+                      <div id="tabs-1" class="tab_payment_content">
+                        <div class="payment_description"> <b>Xin lưu ý, việc thu tiền chỉ được tiến hành sau khi quý khách nhận được xác nhận
+                          còn phòng từ Hotel24h</b> <br>
+                          <br>
+                          Hotel24h sẽ chủ động liên hệ với quý khách (qua email hoặc điện thoại) trong vòng
+                          8 tiếng giờ hành chính kể từ khi nhận được yêu cầu đặt phòng của quý khách (từ lúc
+                          form này được gởi đi) để xác nhận tình trạng phòng và thời hạn thanh toán. <br>
+                          <br>
+                          Hotel24h có tài khoản tại nhiều ngân hàng, để thuận lợi cho việc chuyển khoản của
+                          quý khách. Xin vui lòng chọn một trong những tài khoản dưới đây: </div>
+                        <div class="clear"> </div>
+                        <!--Scripts click Toggle-->
+                        <script type="text/javascript">
+      
+		
+		$(document).ready(function() {
+    $('.chk_bank').click(function() {
+        $(this).next('.divBankDetails').slideToggle();		
+    });
+    
+  
+});
+    </script>
+                        <div class="divBanks">
+                          <div class="divBankNames">
+                            <table cellspacing="0" border="0" style="width:100%;border-collapse:collapse;" class="tblBankNames" id="ctl00_Holder_Content_repBankNames">
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" checked="checked" value="Ngân hàng ACB" class="radBanks" id="radBankName_3e955557_b0a1_46a6_8a1c_3cff623ee1e" name="BankNames">
+                                    Ngân hàng ACB </div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng ACB </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 41 Lê Lợi, P. Bến Nghé, Quận 1, TP. HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Phòng Giao Dịch Lê Lợi </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 6260 8339 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Sacombank" class="radBanks" id="radBankName_90f3b7d1_60be_41ee_872f_784ca9fdc51a" name="BankNames">
+                                    Ngân hàng Sacombank</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Agribank </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 50 Bến Chương Dương, P.Bến Nghé, Quận 1 </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> TP.HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 1700201190162 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Agribank" class="radBanks" id="radBankName_4e79b203_4ad0_4081_9a0f_f6b0fc9ea15f" name="BankNames">
+                                    Ngân hàng Agribank</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân Hàng ANZ - TK cá nhân </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 14 LE THAI TO, QUAN HOAN KIEM, HA NOI </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Sở Giao Dịch Hà Nội </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Trần Minh Phương </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 3793788 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Standard Chartered" class="radBanks" id="radBankName_656a73a4_8cec_4008_811c_e0139e1bc045" name="BankNames">
+                                    Ngân hàng Standard Chartered</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng BIDV </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 46-48 Lý Tự Trọng, P.Bến Nghé, Q.1, Tp.HCM. </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Phòng Giao Dịch Bùi Thị Xuân </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 310 1000 0730 759 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân Hàng ANZ - TK cá nhân" class="radBanks" id="radBankName_c1778a7f_f39f_40f2_9cc9_165829db8831" name="BankNames">
+                                    Ngân Hàng ANZ - TK cá nhân</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Eximbank </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 66 Phó Đức Chính P. Nguyễn Thái Bình Q.1 TP. HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Sở Giao dịch 1 </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 200014851203208 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Standard Chartered" class="radBanks" id="radBankName_da48db2a_848e_4b58_9c03_6dcd1585d132" name="BankNames">
+                                    Ngân hàng Standard Chartered</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng HSBC - TK cá nhân </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 235 Đồng Khởi, Quận 1 </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> HSBC Việt Nam </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Trần Minh Phương </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 006021877041 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng BIDV" class="radBanks" id="radBankName_873a15ff_d860_419c_a67e_2168e0cba3f8" name="BankNames">
+                                    Ngân hàng BIDV</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân Hàng Quân Đội (MB Bank) </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> Cao Ốc An Phú, Khu đô thị An Phú-An Khánh, Q.2, HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> CN An Phú </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công ty CP DV Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 1561100008004 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Techcombank" class="radBanks" id="radBankName_ea7fb4cb_8bcb_4a9c_befe_cfcdad5ccc96" name="BankNames">
+                                    Ngân hàng Techcombank</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân Hàng Quân Đội (MB Bank) - TK Cá Nhân </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> Cao Ốc An Phú, Khu đô thị An Phú-An Khánh, Q.2, HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> CN An Phú </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Trần Minh Phương </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 1560100098007 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Eximbank" class="radBanks" id="radBankName_da2d78d7_6f35_4db8_b655_21b8ec8bdd83" name="BankNames">
+                                    Ngân hàng Eximbank</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Sacombank </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 260 Cống Quỳnh, P. Phạm Ngũ Lão, Quận 1, TP. HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Phòng Giao Dịch Cống Quỳnh </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 060 004 315 467 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân Hàng TMCP Sài Gòn - Hà Nội (SHB)" class="radBanks" id="radBankName_baeb194e_00ab_4de2_9738_00e4375d2a17" name="BankNames">
+                                    Ngân Hàng TMCP Sài Gòn - Hà Nội (SHB)</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Standard Chartered </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 37 Tôn Đức Thắng, QUận 1 </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> CN TPHCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công ty CP DV Chu Du Hai Bon - Tài Khoản tiền USD </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 99136885088 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng HSBC - TK cá nhân" class="radBanks" id="radBankName_762e90ee_f02e_4c05_8df4_052df456847b" name="BankNames">
+                                    Ngân hàng HSBC - TK cá nhân</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Standard Chartered </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 37 Tôn Đức Thắng, Q1. </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> CN TPHCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công ty CP DV Chu Du Hai Bốn - Tài Khoản VNĐ </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> VND99136885099 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Vietcombank" class="radBanks" id="radBankName_f3067bf0_5ed9_43e1_bd5f_0342ecce999b" name="BankNames">
+                                    Ngân hàng Vietcombank</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Techcombank </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 24 - 26 Pasteur, P. Bến Nghé, Quận 1, TP. HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Chi nhánh Hồ Chí Minh </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 102 2172 9462 017 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân Hàng Quân Đội (MB Bank)" class="radBanks" id="radBankName_e1e9224c_9b73_41ef_8265_68feac434a41" name="BankNames">
+                                    Ngân Hàng Quân Đội (MB Bank)</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân Hàng TMCP Sài Gòn - Hà Nội (SHB) </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 41-43-45 Pasteur, Q1 </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> TP.HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 1002284577 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Vietcombank - TK cá nhân" class="radBanks" id="radBankName_069031b8_0b76_4252_b338_0111ad3f1837" name="BankNames">
+                                    Ngân hàng Vietcombank - TK cá nhân</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Vietcombank </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 69 Bùi Thị Xuân, P. Phạm Ngũ Lão, Quận 1, TP. HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Chi Nhánh Bến Thành </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 033 100 383 6910 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân Hàng Quân Đội (MB Bank) - TK Cá Nhân" class="radBanks" id="radBankName_ba1caf0a_fba0_4380_bde6_bdd793e0d2d6" name="BankNames">
+                                    Ngân Hàng Quân Đội (MB Bank) - TK Cá Nhân</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Vietcombank - TK cá nhân </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> TPHCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> TP.HCM </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Trần Minh Phương </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 0071000035814 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                                <td><div class="chk_bank">
+                                    <input type="radio" value="Ngân hàng Vietinbank" class="radBanks" id="radBankName_f95db732_bb96_43c0_8453_1bd5fcf4da80" name="BankNames">
+                                    Ngân hàng Vietinbank</div>
+                                  <div class="divBankDetails">
+                                    <table cellspacing="0" cellpadding="5" border="0">
+                                      <tr>
+                                        <td nowrap=""><b>Ngân hàng:</b></td>
+                                        <td nowrap=""> Ngân hàng Vietinbank </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Địa chỉ:</b></td>
+                                        <td nowrap=""> 125 Cống Quỳnh, P. PNL, Q.1 </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Chi nhánh:</b></td>
+                                        <td nowrap=""> Phòng Giao Dịch Cống Quỳnh </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Tên tài khoản:</b></td>
+                                        <td nowrap=""> Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn </td>
+                                      </tr>
+                                      <tr>
+                                        <td nowrap=""><b>Số tài khoản:</b></td>
+                                        <td nowrap=""> 10201 0000 814 232 </td>
+                                      </tr>
+                                    </table>
+                                  </div></td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix"> </div>
+                    </div>
+                    <div id="tabs-2" class="tab_payment_content">
+                      <div class="payment_description">
+                        <p><b>Xin lưu ý, việc thu tiền chỉ được tiến hành sau khi quý khách nhận được xác nhận
+                          còn phòng từ Hotel24h</b></p>
+                        <p> Hotel24h sẽ chủ động liên hệ với quý khách (qua email hoặc điện thoại) trong vòng
+                          8 tiếng giờ hành chính kể từ khi nhận được yêu cầu đặt phòng của quý khách (từ lúc
+                          form này được gởi đi) để xác nhận tình trạng phòng và thời hạn thanh toán</p>
+                        <p>Xin điền đầy đủ thông tin về địa điểm thu tiền. Thông tin càng rõ ràng và chi tiết
+                          thì việc thu tiền càng nhanh chóng và thuận tiện.</p>
+                        <p><b>Địa điểm thu tiền</b><br>
+                          <textarea style="height:60px;width:380px;" title="Nội thành HCM và Hà Nội" class="txtAddressToCollectCash text ui-widget-content ui-corner-all" id="ctl00_Holder_Content_txtAddressToCollectCash" cols="20" rows="2" name="ctl00$Holder_Content$txtAddressToCollectCash"></textarea>
+                        </p>
+                        <p> <b>Qui định về mức phí thu tiền tại địa chỉ của khách hàng</b></p>
+                        <p> <b>Tại HCM</b><br>
+                          Quận 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, Bình Thạnh, Tân Bình, Phú Nhuận: Miễn phí<br>
+                          Quận Tân Phú, Gò Vấp: phí 30.000 vnđ (miễn phí cho đặt phòng trên 20 triệu)<br>
+                          Quận 12, Thủ Đức, Bình Tân: phí 50.000 vnđ (miễn phí cho đặt phòng trên 20 triệu)<br>
+                          Quận 9, Bình Chánh: xin vui lòng liên hệ cskh để được sắp xếp cụ thể về thời gian và mức phí.</p>
+                        <p><b>Tại Hà Nội</b><br>
+                          Quận Ba Đình, Quận Đống Đa, Quận Hai Bà Trưng, Quận Hoàn Kiếm: miễn phí<br>
+                          Quận Cầu Giấy, Quận Hoàng Mai, Quận Tây Hồ, Quận Thanh Xuân: 20.000 vnđ (miễn phí cho đặt phòng trên 20 triệu)<br>
+                          Quận Hà Đông, Quận Long Biên: hiện tại Hotel24h chưa cung cấp dịch vụ thu tiền tận nhà tại 2 khu vực này, mong quý khách thông cảm.</p>
+                      </div>
+                      <div class="clearfix"> </div>
+                    </div>
+                    <div id="tabs-3" class="tab_payment_content">
+                      <div class="payment_description"> <b>Xin lưu ý, quý khách chỉ đến văn phòng Hotel24h để thanh toán sau khi quý khách
+                        nhận được xác nhận còn phòng từ Hotel24h</b> <br>
+                        <br>
+                        Hotel24h sẽ chủ động liên hệ với quý khách (qua email hoặc điện thoại) trong vòng
+                        8 tiếng giờ hành chính kể từ khi nhận được yêu cầu đặt phòng của quý khách (từ lúc
+                        form này được gởi đi) để xác nhận tình trạng phòng và thời hạn thanh toán. <br>
+                        <br>
+                        <span class="spnPaymentMethodPOS_Hotel24hAddress"><b>Địa chỉ văn phòng Hotel24h:</b> Tầng 11, Tòa Nhà HDTC, Số 36 Bùi Thị Xuân, Phường Bến Thành, Quận 1, TP.HCM</span> <br>
+                        <br>
+                        <b>Tổng đài dịch vụ:</b> 1900 5454 40<br>
+                        <br>
+                        <table cellspacing="0" cellpadding="5" border="0">
+                          <tr>
+                            <td nowrap=""><b>Giờ làm việc:</b> &nbsp; &nbsp; &nbsp; </td>
+                            <td nowrap=""> 8:00 - 20:00 - Thứ 2 đến Thứ 6 </td>
+                          </tr>
+                          <tr>
+                            <td nowrap="">&nbsp;</td>
+                            <td nowrap=""> 8:00 - 17:00 - Thứ 7 và Chủ Nhật </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="clearfix"> </div>
+                    </div>
+                    <div id="tabs-4" class="tab_payment_content">
+                      <div class="payment_description"> <b>Xin lưu ý, việc thanh toán chỉ diễn ra sau khi quý khách nhận được xác nhận còn
+                        phòng từ Hotel24h.</b><br>
+                        <br>
+                        Hotel24h sẽ chủ động liên hệ với quý khách (qua email hoặc điện thoại) trong vòng
+                        8 tiếng giờ hành chính kể từ khi nhận được yêu cầu đặt phòng của quý khách (từ lúc
+                        form này được gởi đi) để xác nhận tình trạng phòng và thời hạn thanh toán </div>
+                      <div class="clearfix"> </div>
+                    </div>
+                    <div id="tabs-5" class="tab_payment_content">
+                      <div class="payment_description"> <b>Xin lưu ý, việc thanh toán chỉ diễn ra sau khi quý khách nhận được xác nhận còn
+                        phòng từ Hotel24h.</b><br>
+                        <br>
+                        Hotel24h sẽ chủ động liên hệ với quý khách (qua email hoặc điện thoại) trong vòng
+                        8 tiếng giờ hành chính kể từ khi nhận được yêu cầu đặt phòng của quý khách (từ lúc
+                        form này được gởi đi) để xác nhận tình trạng phòng và thời hạn thanh toán </div>
+                      <div class="clearfix"> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="float: none; clear: both; margin: 0 auto 20px auto; width: 400px" class="divSummaryRates1 ui-widget-content ui-corner-all">
+                <table width="100%" cellspacing="0" cellpadding="5" border="0">
+                  <tr class="fees">
+                    <td align="center"><table>
+                        <tr>
+                          <td style="padding: 5px 5px 10px 5px;"><b>Tổng giá</b></td>
+                          <td align="right" style="padding: 5px 5px 10px 5px;"><b>2.910.000</b> VND</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 5px 10px 5px;"><b>Phí xử lý giao dịch</b></td>
+                          <td align="right" style="padding: 5px 5px 10px 5px;">7.000 VND</td>
+                        </tr>
+                        <tr>
+                          <td style="border-top:2px dashed #ccc" colspan="2"></td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding: 5px 0 10px 0; border-bottom: solid 1px #ccc;"><div class="hide"> <b>Tổng cộng</b> &nbsp; <span class="TotalFormat"> <span class="Total" id="ctl00_Holder_Content_lblTotalRate_Footer">2.917.000 VND</span> </span> </div>
+                      <div class=""> <b>Giá phòng sẽ được báo qua điện thoại hoặc email</b> </div></td>
+                  </tr>
+                  <tr class="trNormalRateExtra_Total hide">
+                    <td align="center" style="padding: 12px 0 12px 0; border-bottom: solid 1px #ccc;
+color: #6BB31F; font-size: 1.2em;"> Giảm thêm cho thành viên <span id="ctl00_Holder_Content_lblNormalRateExtra_Total_Footer"></span></td>
+                  </tr>
+                  <tr>
+                    <td valign="top" style="padding: 10px 0 10px 0;"> cho đặt phòng <b> 1
+                      đêm</b> tại <b>Khách sạn Pullman Saigon Centre</b><br>
+                      từ ngày <b> 04/02/2014</b> đến ngày <b> 05/02/2014</b>:
+                      <ul style="list-style: disc inside; margin: 10px 0">
+                        <li><b> 1</b> phòng <b> Superior</b> (1đêm) </li>
+                        <li class="liExtraBeds hide"><span class="spnExtraBeds"></span> giường phụ <span style="font-weight: normal;"> (1
+                          đêm)</span></li>
+                      </ul></td>
+                  </tr>
+                </table>
+              </div>
+              <div style="float: left; margin-bottom: 20px;" id="TermsPrivacyPolicy">
+                <input type="checkbox" class="chkTermsAndConditions" id="chkTermsAndConditions">
+                <label for="chkTermsAndConditions"> Tôi đã đọc và chấp nhận các <a class="lnkChinhSachKhachSan" href="#">chính sách
+                  của khách sạn</a>, <a target="_blank" href="http://www.Hotel24h.com/noi-ve-Hotel24h/395/dieu-khoan-dieu-kien-va-thong-bao-cua-Hotel24h.html">điều khoản &amp; điều kiện</a>, và <a target="_blank" href="http://www.Hotel24h.com/noi-ve-Hotel24h/396/chinh-sach-quyen-rieng-tu-cua-Hotel24h.html">chính sách quyền riêng tư</a></label>
+                <div style="color: Red; font-weight: bold; padding-top: 2px; display: none;" id="MessErrorTerm">Vui lòng chọn ô "Tôi đã đọc và chấp nhận các chính sách ..."</div>
+                <div style="padding-top: 20px;" title="Quy định và lưu ý của khách sạn" id="divDialog_ChinhSachKhachSan"> </div>
+              </div>
+              <div class="buttons"> <a href="/ks/1055/khach-san-pullman-saigon-centre.html" class="button" id="lbtnDatPhong" role="button" aria-disabled="false">
+                <button class="c_button" name="book" type="submit">Đặt phòng khách sạn</button>
+                </a> <a href="/ks/1055/khach-san-pullman-saigon-centre.html" class="button" id="lbtnDatPhong" role="button" aria-disabled="false">
+                <button class="c_button" name="book" type="submit">Hủy đặt phòng</button>
+                </a> </div>
+              <div class="clearfix"></div>
+            </div>
+            <!--End Section-->
+            <!--Section-->
+            <div class="section">
+              <div class="basic" data-average="2" data-id="1"></div>
+              <div class="datasSent">
+                <p></p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!--End Section-->
+          </div>
+        </div>
+        <!--End Tab 01-->
+      </div>
+      <!--End Right_col-->
+      <div class="clearfix"></div>
+      <!-- Handbook  Hotel -->
+      <div class="box" id="handbook_travel">
+        <div class="green_Tab"><span>Cẩm nang du lịch</span></div>
+        <div class="travel_news">
+          <label>Tin du lịch</label>
+          <div class="hot_news"><a href=""><img src="Images/news.jpg" alt="" width="120" height="80" class="img_general" /></a>
+            <h3 class="h3Title"><a href="">Ghé thăm Thành Đô - thủ phủ của Tứ Xuyên</a></h3>
+            <p>Ghé thăm Thành Đô - thủ phủ của Tứ Xuyên Thủ phủ Thành Đô của tỉnh Tứ Xuyên được du khách bình chọn là một trong 5 điểm đến nhất định phải tới khi có dịp du ngoạn Trung Hoa</p>
+          </div>
+          <ul>
+            <li><a href="" class="link_title">Xôi chè, thức quà ấm lòng mùa thu Hà Nội</a> </li>
+            <li><a href="" class="link_title">Hà Nội tiến hành tu bổ và tôn tạo Khuê Văn Các</a> </li>
+            <li><a href="" class="link_title">Vẻ đẹp huyền thoại Hồ Núi Cốc (Thái Nguyên)</a> </li>
+            <li><a href="" class="link_title">Hơn 50.000 lượt người tham quan tại các cuộc trưng bày, triển lãm năm 2013 tại Lào Cai</a> </li>
+            <li><a href="" class="link_title">Lễ hội Chichibu Yomatsuri lung linh trong đêm</a> </li>
+          </ul>
+        </div>
+        <!--List Hotels-->
+        <div class="list_hotels">
+          <label>KHÁCH SẠN THEO THÀNH PHỐ</label>
+          <ul>
+            <li><a href="" class="link_title">Khách sạn An Giang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Nha Trang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Đà Nẵng</a> </li>
+            <li><a href="" class="link_title">Khách sạn Sapa</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hội An</a> </li>
+            <li><a href="" class="link_title">Khách sạn Bến Tre</a> </li>
+            <li><a href="" class="link_title">Khách sạn Phú Quốc</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hạ Long</a> </li>
+            <li><a href="" class="link_title">Khách sạn Tam Kỳ</a> </li>
+            <li><a href="" class="link_title">Khách sạn Kon Tum</a> </li>
+            <li><a href="" class="link_title">Khách sạn Cà Mau</a> </li>
+            <li><a href="" class="link_title">Khách sạn An Giang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Nha Trang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Đà Nẵng</a> </li>
+            <li><a href="" class="link_title">Khách sạn Sapa</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hội An</a> </li>
+            <li><a href="" class="link_title">Khách sạn Bến Tre</a> </li>
+            <li><a href="" class="link_title">Khách sạn Phú Quốc</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hạ Long</a> </li>
+            <li><a href="" class="link_title">Khách sạn Tam Kỳ</a> </li>
+            <li><a href="" class="link_title">Khách sạn Kon Tum</a> </li>
+            <li><a href="" class="link_title">Khách sạn Cà Mau</a> </li>
+            <li><a href="" class="link_title">Khách sạn An Giang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Nha Trang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Đà Nẵng</a> </li>
+            <li><a href="" class="link_title">Khách sạn Sapa</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hội An</a> </li>
+            <li><a href="" class="link_title">Khách sạn Bến Tre</a> </li>
+            <li><a href="" class="link_title">Khách sạn Phú Quốc</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hạ Long</a> </li>
+            <li><a href="" class="link_title">Khách sạn Tam Kỳ</a> </li>
+            <li><a href="" class="link_title">Khách sạn Kon Tum</a> </li>
+            <li><a href="" class="link_title">Khách sạn Cà Mau</a> </li>
+            <li><a href="" class="link_title">Khách sạn An Giang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Nha Trang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Đà Nẵng</a> </li>
+            <li><a href="" class="link_title">Khách sạn Sapa</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hội An</a> </li>
+            <li><a href="" class="link_title">Khách sạn Bến Tre</a> </li>
+            <li><a href="" class="link_title">Khách sạn Phú Quốc</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hạ Long</a> </li>
+            <li><a href="" class="link_title">Khách sạn Tam Kỳ</a> </li>
+            <li><a href="" class="link_title">Khách sạn Kon Tum</a> </li>
+            <li><a href="" class="link_title">Khách sạn Cà Mau</a> </li>
+            <li><a href="" class="link_title">Khách sạn An Giang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Nha Trang</a> </li>
+            <li><a href="" class="link_title">Khách sạn Đà Nẵng</a> </li>
+            <li><a href="" class="link_title">Khách sạn Sapa</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hội An</a> </li>
+            <li><a href="" class="link_title">Khách sạn Bến Tre</a> </li>
+            <li><a href="" class="link_title">Khách sạn Phú Quốc</a> </li>
+            <li><a href="" class="link_title">Khách sạn Hạ Long</a> </li>
+            <li><a href="" class="link_title">Khách sạn Tam Kỳ</a> </li>
+            <li><a href="" class="link_title">Khách sạn Kon Tum</a> </li>
+            <li><a href="" class="link_title">Khách sạn Cà Mau</a> </li>
+            <li><a href="" class="link_title">Khách sạn Kon Tum</a> </li>
+            <li><a href="" class="link_title">Khách sạn Cà Mau</a> </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Handbook Hotel-->
+    </div>
+    <!--End Main-->
+    <div class="footer">
+      <div class="footer_menu"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Điều kiện và điều khoản</a><a href="">Đánh giá khách sạn</a><a href="">Tin tức</a><a href="">Liên hệ</a><a href="">Voucher quà tặng</a><a href="">Đặt Phòng Khách Sạn Việt Nam</a><a href="">Nói Về Hotel24h</a><a href="">Blog Du Lịch</a><a href="">Hình Ảnh Du Lịch</a><a href="">Hướng Dẫn Du Lịch</a><a href="">Câu Hỏi Thường Gặp</a><a href="">Thông Tin Khách Sạn Khách Sạn Quốc Tế</a><a href="">Đăng Ký Nhận Thư Khuyến Mãi</a></div>
+      <div class="copyright">
+        <p>Copyright © 2013 by <strong>Công Ty Cổ Phần Dịch Vụ Hotel 24h</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+        <p>Địa chỉ: Tầng 11, Tòa Nhà HDTC, Số 36 Bùi Thị Xuân, Q.1, TP.HCM. Điện thoại: 0909 123 456</p>
+        <p>Đặt phòng khách sạn trong nước và quốc tế. Khuyến mãi và đánh giá khách sạn chỉ có tại hotel 24h</p>
+        <p>Email: <a href="mailto:info@hotel24h.com">info@hotel24h.com</a> - Website: <a href="http://www.hotel24h.net">www.hotel24h.net</a></p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+</div>
+<!--End Wrapper-->
+</body>
+</html>

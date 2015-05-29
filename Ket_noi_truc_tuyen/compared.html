@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Compare Products - Kết nối trực tuyến</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_index_01').children('li');					
+
+			$("#tabs_index_01").tabs("#tabs_content_01 .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_index_02').children('li');					
+
+			
+			$("#tabs_index_02").tabs("#tabs_content_02 .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+
+	</script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			
+			$("#tabs_detail").tabs("#tabs_detail_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+
+	</script>
+<!--Slide Products-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_products_viewed').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 4,
+        initCallback: mycarousel_initCallback
+    });
+    jQuery('#mycarousel_products_liked').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 4,
+        initCallback: mycarousel_initCallback
+    });	
+	jQuery('#mycarousel_logo').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+        scroll: 4,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+<!-- Include the Etalage CSS -->
+<link rel="stylesheet" href="Styles/etalage.css">
+<!-- Include the Etalage plugin: -->
+<script src="Scripts/jquery.etalage.min.js"></script>
+<!-- Invoke the Etalage plugin -->
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 350,
+					thumb_image_height: 350,
+					source_image_width: 900,
+
+
+					source_image_height: 1200,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});				
+
+				// This is for the dropdown list example:
+				$('.dropdownlist').change(function(){
+					etalage_show( $(this).find('option:selected').attr('class') );
+				});
+
+			});
+		</script>
+<!--jRating-->
+<link rel="stylesheet" href="Styles/jRating.jquery.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jRating.jquery.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('.basic').jRating();			
+		});
+	</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--End Top Page-->
+  <div class="page">
+    <!--#begin Header-->
+    <div class="top_link">
+      <div class="hotline">Hotline: 0907 288 920 | <a href="">Hỏi đáp</a></div>
+      <div class="features"><span><a href="">Giao hàng toàn Quốc</a></span> <span><a href="">Thanh toán khi nhận</a></span> <span><a href="">7 ngày trả hàng</a></span></div>
+      <div class="account_user">
+        <ul>
+          <li><a href="" style="border-left: none">Danh sách yêu thích</a></li>
+          <li><a href="">Tài khoản</a></li>
+          <li class="bubbleInfo"><a title="Đăng nhập" class="trigger" href="">Đăng nhập</a>
+            <div id="dpop" class="popup_login">
+              <div class="input_form">
+                <input type="text" onblur="FormatValidateCharBlur('txtusername')" maxlength="50" name="txtusername" id="txtusername" placeholder="Nhập Email hoặc sđt" class="input identity">
+              </div>
+              <div class="input_form">
+                <input type="password" onblur="ValidatePassword()" placeholder="Nhập mật khẩu" name="txtpassword" id="txtpassword" class="input password">
+              </div>
+              <div class="note_wrapper clearfix">
+                <div class="lost_password"><a class="link_acount" href="">Quên mật khẩu</a></div>
+                <div class="remember_password">
+                  <input type="checkbox" checked="checked" name="lost_password" id="lost_password" class="checkbox lost_password">
+                  <label for="lost_password">Ghi nhớ</label>
+                </div>
+              </div>
+              <div class="input_form">
+                <input type="submit" value="ĐĂNG NHẬP" onclick="ValidateBeforeSubmit(); return false;" name="submit" id="submit" class="button">
+              </div>
+              <div class="note_wrapper">Nếu bạn chưa có tài khoản: <a rel="nofollow" onclick="SetLinkRegister();" href="" class="link_acount">Đăng ký ngay</a></div>
+              <div class="note_wrapper menu_account">
+                <ul>
+                  <li><a href="">Hồ sơ cá nhân</a></li>
+                  <li><a href="">Thông tin đơn hàng</a></li>
+                  <li><a href="">Đăng xuất</a></li>
+                </ul>
+              </div>
+            </div>
+            <script type="text/javascript">    
+    $(function () {
+        $('.bubbleInfo').each(function () {
+            var distance = 10;
+            var time = 50;
+            var hideDelay = 50;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.popup_login', this).css('opacity', 0);
+
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 30,
+                        left: -100,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 0
+                    }, time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });
+    });    
+    </script>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header"> <a class="logo" href="index.html"><img src="Images/logo.png" alt="" /></a>
+      <div class="search">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="btn_search" value="Tìm kiếm" />
+      </div>
+      <div class="cart"><a href="cart.html">Giỏ hàng</a></div>
+      <div class="support">
+        <script type="text/javascript" language="javascript">
+   
+    $(document).ready(function() {
+
+      $("#toggle").click(function(){
+         $(".popup_support").toggle();
+      });
+	
+
+   });
+   </script>
+        <a id="toggle">Hỗ trợ trực tuyến</a>
+        <div class="popup_support">
+          <ul>
+            <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=1' alt="" class="img_general" /></a>Kinh doanh 01</span></li>
+            <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=1' alt="" class="img_general" /></a>Kinh doanh 02</span></li>
+            <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=1' alt="" class="img_general" /></a>Kinh doanh 03</span></li>
+            <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=1' alt="" class="img_general" /></a>Kinh doanh 04</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+    <script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+ 
+
+</script>
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="home active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="list_products.html">Sản phẩm</a>
+          <ul>
+            <li><a href="#">Quần Áo Thể Thao</a></li>
+            <li><a href="#">Bad Guys</a></li>
+            <li><a href="#">Áo Len & Cardigan</a></li>
+            <li><a href="#">Bad Gals</a></li>
+            <li><a href="#">Balo & Túi Laptop</a></li>
+            <li><a href="#">Bad Guys</a></li>
+            <li><a href="#">Good Gals</a></li>
+            <li><a href="#">Balo & Túi Laptop</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chính sách bán hàng</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Video Clip</a></li>
+        <li><a href="#">Thư viện ảnh</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <div class="voucher">
+      <div class="voucher_l">
+        <h3> <span class="ribbon_voucher"><span class="inner_text_voucer_ribbon">TẶNG NGAY</span> 100,000đ</span> KHI ĐĂNG KÝ NHẬN BẢN TIN</h3>
+      </div>
+      <div class="choose_type">
+        <input type="hidden" name="YII_CSRF_TOKEN" value="c826b8411903b7844538ac5307c56f40871ee72d">
+        <input type="radio" checked="checked" value="female" id="nb-women" name="newsletter[gender]">
+        <label for="nb-women" class="nl_header">Cao Cấp</label>
+        <input type="radio" value="male" id="nb-men" name="newsletter[gender]">
+        <label for="nb-men" class="nl_header">Trung cấp</label>
+        <input type="radio" value="male" id="nb-men" name="newsletter[gender]">
+        <label for="nb-men" class="nl_header">Thông dụng</label>
+      </div>
+      <button onclick="$('#newsletter-submit-btn').trigger('click')" class="btn_submit" type="button">Đăng ký ngay</button>
+      <div style="clear:both" class="clearfix"></div>
+    </div>
+    <!-- #Main -->
+    <div class="main clearfix">
+      <div class="path"><a href="index.html">Trang chủ</a> > <a href="">Chuyên mục</a> > Tên sản phẩm</div>
+      <div id="compare-content">
+        <div class="headline2 clearfix"> <a class="btn-print" title="In trang này" href="javascript:void(0);" onclick="window.print();">In trang này</a>
+          <h2>So sánh sản phẩm: <span class="cat-current">Máy ảnh và máy quay phim</span></h2>
+        </div>
+        <div id="compare-content" class="compare-content">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <td><div><a class="btn-remove" onclick="addSKU('NI787ELABGTUANVN-70722',1); return false;" href="#"></a><a href="68466.html" title="Nikon Coolpix L27 &ndash; 16.1MP / Đen"><span class="title" id="comparisonName1">Nikon Coolpix L27 &ndash; 16.1MP / Đen</span> <span class="img"><img width="240" height="240" src="http://static-03.lazada.vn/p/nikon-8605-8605-66486-6-product.jpg" alt=""></span> <span class="btn"><img width="116" height="42" src="Images/btn_buy.png" alt=""></span></a><img class="loaderComp" alt="" src="http://www.lzada.vn/static/static-page/so-sanh-san-pham/ajax-loader-2.gif" id="img_1"></div></td>
+                <td><div><a class="btn-remove" onclick="addSKU('CA185ELABDL8ANVN-66333',2); return false;" href="#"></a><a href="64268.html" title="Canon PowerShot A2400 IS  - 16MP / Đen"><span class="title" id="comparisonName1">Canon PowerShot A2400 IS  - 16MP / Đen</span> <span class="img"><img width="240" height="240" src="http://static-03.lazada.vn/p/canon-8247-8247-86246-1-product.jpg" alt=""></span> <span class="btn"><img width="116" height="42" src="Images/btn_buy.png" alt=""></span></a><img class="loaderComp" alt="" src="http://www.lzada.vn/static/static-page/so-sanh-san-pham/ajax-loader-2.gif" id="img_2"></div></td>
+                <td valign="top"><div class="box-type">
+                    <input type="text" maxlength="30" autocomplete="off" onblur="hideAuto('3');" placeholder="Nhập tên sản phẩm" id="txtGet_3" onkeyup="viewProduct('3', '4496');" class="inputbox">
+                    <div id="iView_3" style="display:none;" class="dropdown"> </div>
+                  </div>
+                  <p class="add-item"><a style="cursor:default;">+<img class="loaderComp" alt="" src="http://www.lzada.vn/static/static-page/so-sanh-san-pham/ajax-loader-2.gif" id="img_3"></a></p></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Giá</th>
+                <td><strong>989,000 VND</strong></td>
+                <td><strong>2,149,000 VND</strong></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Bộ vi xử lý</th>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Cảm biến</th>
+                <td>CCD</td>
+                <td>CCD</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Tiêu cự</th>
+                <td>4.6-23mm</td>
+                <td>5.0-25.0 mm</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Khẩu độ</th>
+                <td>f/3.2-6.5</td>
+                <td>f/2.8-f/6.9</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Độ phân giải (MP)</th>
+                <td>16.1</td>
+                <td>16.0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Zoom quang học (x)</th>
+                <td>5.0</td>
+                <td>5.0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Công nghệ màn hình</th>
+                <td>LCD</td>
+                <td>LCD</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Kích thước màn hình  (inch)</th>
+                <td>2.7</td>
+                <td>2.7</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Độ phân giải màn hình (dots)</th>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Độ nhạy sáng</th>
+                <td>ISO 80-1600</td>
+                <td>Auto, 100-160</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Chất lượng hình ảnh (pixels)</th>
+                <td>4608 x 3456</td>
+                <td>4608 x 3456</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Định dạng ảnh</th>
+                <td>JPEG</td>
+                <td>JPEG</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Hỗ trợ thẻ nhớ</th>
+                <td>SD, SDHC, SDXC</td>
+                <td>SD, SDHC, SDXC</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Cổng kết nối</th>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Loại pin</th>
+                <td>2 pin tiểu AA</td>
+                <td>Li-ion NB-11L</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Dòng máy</th>
+                <td>Máy ảnh KTS</td>
+                <td>Máy ảnh kỹ thuật số</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Kích thước</th>
+                <td>9.64 x 5.92 x 2.89 cm</td>
+                <td>5.42 x 9.44 x 2.01 cm</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Trọng lượng</th>
+                <td>0.16</td>
+                <td>0.126</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Xem chi tiết</th>
+                <td><a title="Nikon Coolpix L27 &ndash; 16.1MP / Đen" href="http://lazada.vn/68466.html">Xem chi tiết</a></td>
+                <td><a title="Canon PowerShot A2400 IS  - 16MP / Đen" href="http://lazada.vn/64268.html">Xem chi tiết</a></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="4"><em> * Bản so sánh này chỉ so sánh những chức năng chính. Muốn xem chi tiết, vui lòng vào trang chi tiết sản phẩm</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--Tab Products 01-->
+      <!--End Tab Products 01-->
+      <!--Tab Products 02-->
+      <!--End Tab Products 02-->
+      <!--Slide trade-mark-->
+      <!--End slide trade-mark-->
+      <!--Bank-->
+      <!--End Bank-->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Main-->
+    <!--Footer-->
+    <div class="footer">
+      <div class="topmenu_footer">
+        <div class="col_menuFooter cf">
+          <div class="ctentColuMenuFooter"> <img src="Images/logo_footer.png" alt="" /> </div>
+        </div>
+        <div class="col_menuFooter"><span class="f_icon policy"></span>
+          <div class="ctentColuMenuFooter">
+            <h2><a href="">Chính sách bán hàng</a></h2>
+            <div class="listMenuFooter"><a href="">Chính sách bảo mật thông tin</a><a href="">Chính sách vận chuyển</a><a href="">Quy trình giao hàng</a><a href="">Chính sách đổi trả hàng</a></div>
+          </div>
+        </div>
+        <div class="col_menuFooter"><span class="f_icon introduction"></span>
+          <div class="ctentColuMenuFooter">
+            <h2><a href="">Hỗ trợ khách hàng</a></h2>
+            <div class="listMenuFooter"><a href="">Hướng dẫn mua hàng</a><a href="">Hướng dẫn thanh toán</a><a href="">Các hình thức mua hàng</a><a href="">Sơ đồ đường đi</a></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="footer_bottom clearfix">
+        <div class="footer_inner">
+          <div class="facebook"><img src="Images/facebook.png" alt="" /></div>
+          <div class="info_footer">
+            <p><strong>Địa chỉ:</strong> 185/21D Ni Sư Huỳnh Liên, P.10, Quận Tân Bình, TP.HCM</p>
+            <p><strong>Điện thoại:</strong> 0907 288 920</p>
+            <p><strong>Email:</strong> <a href="mailto:votatoan@yahoo.com">votatoan@yahoo.com</a></p>
+          </div>
+          <div class="copyright">
+            <p>Copyright © 2013 by <strong>Ketnoitructuyen.com</strong></p>
+            <p><a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+            <p class="visitors">Đang online: <strong>20</strong> - Tổng truy cập: <strong>90 000</strong></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!--End Footer-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

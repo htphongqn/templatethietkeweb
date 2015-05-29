@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Booking room - Hotel Ngọc Giàu</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Scroll-->
+<link type="text/css" href="Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<!-- the mousewheel plugin -->
+<script type="text/javascript" src="Scripts/jquery.mousewheel.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="Scripts/jquery.jscrollpane.min.js"></script>
+<!-- scripts specific to this demo site -->
+<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<link rel="stylesheet" href="Styles/jquery-ui.css" />
+<script src="Scripts/jquery-ui.js"></script>
+<script>
+$(function() {
+$(".datepicker").datepicker({ dateFormat: "dd-mm-yy" }).val()
+});
+</script>
+</head>
+<body id="bd">
+<div class="page">
+  <!--#begin Header-->
+  <div class="header"><a href="index.html" class="logo"><img src="Images/logo.png" height="97" alt="" /></a></div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+  <script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+  <script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+ 
+
+</script>
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="home"><a href="index.html"><img src="Images/home_icon.png" alt="" /></a></li>
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="list_room.html">Phòng & Giá phòng</a></li>
+      <li><a href="#">Nhà hàng</span></a>
+        <ul class="children">
+          <li><a href="#">Sony Vaio - Laptop</a></li>
+          <li><a href="#">Moderator</a></li>
+          <li><a href="#">Super Mod</a></li>
+          <li><a href="#">Members</a></li>
+        </ul>
+      </li>
+      <li><a href="">Phòng hội nghị</a></li>
+      <li><a href="">Cafe Sân thượng</a></li>
+      <li><a href="list_news.html"><span>Massage</a></li>
+      <li><a href="">Dịch vụ</a></li>
+      <li><a href="image_gallery.html"><span>Thư viện ảnh</a></li>
+      <li><a href="">Tin tức</a></li>
+      <li><a href="">Liên hệ</a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <!-- #Main -->
+  <div class="main clearfix">
+    <!--Left Columnn-->
+    <div class="left_content">
+      <div class="path"><a href="index.html">Trang chủ</a> &raquo; CHI TIẾT ĐẶT PHÒNG ONLINE</div>
+      <div class="scroll-pane">
+        <div class="detail_info">
+          <h2 class="h2Title">CHI TIẾT ĐẶT PHÒNG ONLINE</h2>
+          <p><strong style="color: #F00">PHÒNG VIP ĐƯỢC TRANG BI:</strong><br />
+            -  Điều hòa nhiệt độ 2 chiều<br />
+            -  Bồn tắm xông hơi massage<br />
+            -  Điện thoại quốc tế<br />
+            -  Máy sấy tóc<br />
+            -  Bình đun nước siêu tốc<br />
+            -  Tủ lạnh đa dạng đồ uống<br />
+            -  Tivi LCD với truyền hình cáp đa kênh<br />
+            -  Hệ thống máy tính nối mạng đường truyền cáp quang<br />
+            -  Wifi tốc độ cao<br />
+            Giá phòng:<br />
+            - Giá phòng đêm: <strong style="color: #F00">700.000(VNĐ) ~ 35$</strong> <br />
+            Lưu ý: <br />
+            - Giờ checkin 12h giờ quy định, checkout là 12h trưa hôm sau <br />
+            <strong style="color: #FF0">Khách sạn NGỌC GIÀU</strong> rất hân hạnh được phục vụ quý khách hàng!</p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--End Left Columnn-->
+    <!--Right Columnn-->
+    <div class="right_content">
+      <!--Form Booking Room-->
+      <div class="write_comment">
+        <span class="title_right">ĐẶT PHÒNG</span>
+        <div class="row">
+          <label>Ngày đến:</label>
+          <input type="text" class="choosing datepicker" />
+          <div class="calendar_border"></div>
+        </div>
+        <div class="row">
+          <label>Ngày đi:</label>
+          <input type="text" class="choosing datepicker" />
+          <div class="calendar_border"></div>
+        </div>
+        <div class="row">
+          <div class="col left_col">
+            <label for="formQuantityRoom">Số phòng</label>
+            <select name="formQuantityRoom" class="choosing choose_type">
+              <option value="1 phòng">1 phòng</option>
+              <option value="2 phòng">2 phòng</option>
+              <option value="3 phòng">3 phòng</option>
+              <option value="4 phòng">4 phòng</option>
+            </select>
+          </div>
+          <div class="col right_col">
+            <label for="formQuantityAdult">Người lớn</label>
+            <select name="formQuantityAdult" class="choosing choose_type">
+              <option value="1 người">1 người</option>
+              <option value="2 người">2 người</option>
+              <option value="3 người">3 người</option>
+              <option value="4 người">4 người</option>
+            </select>
+          </div>
+          <div class="col right_col">
+            <label for="formQuantityChildren">Trẻ em</label>
+            <select name="formQuantityChildren" class="choosing choose_type">
+              <option value="1 người">1 người</option>
+              <option value="2 người">2 người</option>
+              <option value="3 người">3 người</option>
+              <option value="4 người">4 người</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <label for="formFullname">Họ và tên</label>
+          <input class="inputbox " type="text" name="formFullname" id="formFullname" value="" />
+        </div>
+        <div class="row">
+          <label for="formEmail">Email:</label>
+          <input class="inputbox " type="text" name="formEmail" id="formEmail" value="" />
+        </div>
+        <div class="row">
+          <label for="formPhonenumber">Điện thoại</label>
+          <input class="inputbox" type="text" name="formPhonenumber" id="formPhonenumber" value="" />
+        </div>
+        <div class="row">
+          <label for="formAddress">Địa chỉ</label>
+          <input class="inputbox" type="text" name="formAddress" id="formAddress" value="" />
+        </div>
+        <div class="row">
+          <label for="formContent">Nội dung yêu cầu cá nhân <em>(nếu có)</em></label>
+          <textarea id="formContent" name="formContent" cols="40" rows="5"></textarea>
+        </div>
+        <div class="row"> <a href="" class="booking_room"><span>Đặt phòng</span></a> <a href="" class="booking_room"><span>Nhập lại</span></a> </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Form Booking Room--->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Right Columnn-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Main-->
+  <div class="footer">
+    <!--Footer Top-->
+    <div class="footer_top">
+      <div class="booking_online"> <img src="Images/booking_icon.png" alt="" /><span class="cate_Title">Đặt phòng Online</span>
+        <ul>
+          <li>
+            <label>Ngày đến:</label>
+            <input type="text" class="choosing datepicker" />
+          </li>
+          <li>
+            <label>Ngày đi:</label>
+            <input type="text" class="choosing datepicker" />
+          </li>
+          <li>
+            <label>Loại phòng:</label>
+            <select name="link_web" class="choosing choose_type">
+              <option value="Phòng Thường">Phòng Thường</option>
+              <option value="Phòng VIP">Phòng VIP</option>
+            </select>
+          </li>
+          <li>
+            <label>Loại giường:</label>
+            <select name="link_web" class="choosing choose_type">
+              <option value="2 giường">2 giường</option>
+              <option value="3 giường">3 giường</option>
+              <option value="4 giường">4 giường</option>
+            </select>
+          </li>
+        </ul>
+        <a href="" class="booking_room"><span>Đặt phòng</span></a> </div>
+      <div class="support"><img src="Images/support_icon.png" alt="" /><span class="cate_Title">Hỗ trợ trực tuyến</span>
+        <ul>
+          <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src="http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=14" width="100" height="77" alt="" /></a><br>
+            Lễ Tân</li>
+          <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src="http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=14" width="100" height="77" alt="" /></a><br>
+            Quản lý</li>
+        </ul>
+        <span class="hotline">Hotline: 0909.090.090 </span> </div>
+      <div class="footer_news"><img src="Images/news_icon.png" alt="" /><span class="cate_Title">Tin tức</span>
+        <div class="scroll-pane">
+          <ul>
+            <li><a class="img_general" href=""><img width="45" height="30" alt="" src="Images/discussion_image.jpg"></a> <a href=""><span class="news_Title">Toạ lạc tại trung tâm khu dân cư yên tĩnh của thành phố</a></li>
+            <li><a class="img_general" href=""><img width="45" height="30" alt="" src="Images/discussion_image.jpg"></a> <a href=""><span class="news_Title">Toạ lạc tại trung tâm khu dân cư yên tĩnh của thành phố</a></li>
+            <li><a class="img_general" href=""><img width="45" height="30" alt="" src="Images/discussion_image.jpg"></a> <a href=""><span class="news_Title">Toạ lạc tại trung tâm khu dân cư yên tĩnh của thành phố</a></li>
+            <li><a class="img_general" href=""><img width="45" height="30" alt="" src="Images/discussion_image.jpg"></a> <a href=""><span class="news_Title">Toạ lạc tại trung tâm khu dân cư yên tĩnh của thành phố</a></li>
+            <li><a class="img_general" href=""><img width="45" height="30" alt="" src="Images/discussion_image.jpg"></a> <a href=""><span class="news_Title">Toạ lạc tại trung tâm khu dân cư yên tĩnh của thành phố</a></li>
+            <li><a class="img_general" href=""><img width="45" height="30" alt="" src="Images/discussion_image.jpg"></a> <a href=""><span class="news_Title">Toạ lạc tại trung tâm khu dân cư yên tĩnh của thành phố</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Footer Top-->
+    <!--Footer Bottom-->
+    <div class="footer_bottom">
+      <div class="contact"><img src="Images/contact_icon.png" alt="" /><span class="cate_Title">Liên hệ</span>
+        <p><span style="font-size: 15px; color: #FFFF00">Khách Sạn <img src="Images/logotext.png" alt="" align="absbottom" /></span></p>
+        <p>D4-26,27,28 Đường 3/2, Phường Vĩnh Lạc, Thành Phố Rạch Giá </p>
+        <p>Điện thoại: 0773.92.12.92 – 0773.92.19.19 - Fax: 0773.92.12.92</p>
+        <p>Web: <a href="http://www.ngocgiauhotel.com">www.ngocgiauhotel.com</a> - E-mail: <a href="mailto:info@ngocgiauhotel.com">info@ngocgiauhotel.com</a></p>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Ngoc Giau Hotel. All Rights Reserved</p>
+        <p>Lượt truy cập: <span class="visitors">123456</span></p>
+        <p>Online: <span class="visitors">10</span></p>
+        <p><a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" style="position: relative; top: 2px;" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </p>
+      </div>
+      <div class="social"><img src="Images/social.png" alt="" /></div>
+    </div>
+    <!--End Footer Bottom-->
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!--End Page-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

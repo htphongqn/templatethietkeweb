@@ -1,0 +1,299 @@
+/*------------------------------------*\
+    Flaunt JS Navigation
+\*------------------------------------*/
+/*Top Menu*/
+#icon_home_mobile {
+	display: none;
+}
+ @media only screen and ( max-width: 60em ) /* 1000 */ {
+ #nav {
+ width: 100%;
+ position: static;
+ margin: 0;
+}
+	/* first level */
+#nav > ul > li > a {
+}
+}
+ @media only screen and ( max-width: 48em ) /* 768 */ {
+ #nav {
+ position: relative;
+ top: auto;
+ left: auto;
+ font-size: 100%;
+ margin-top: 38px;
+}
+ #nav > a {
+ margin-left: 43px;
+ height: 35px;
+ text-align: left;
+ text-transform: uppercase;
+/*text-indent: -9999px;*/					
+ position: relative;
+}
+ #nav > a:before, #nav > a:after {
+ position: absolute;
+ width: 1.5em; /* 50 */
+ border: 2px solid #fff;
+ top: 30%;
+ right: 0;
+ content: '';
+}
+ #nav > a:after {
+ top: 55%;
+}
+#icon_home_mobile {
+float: left;
+display: block;
+height: 43px;
+height: 40px;
+position: relative;
+z-index: 999;
+}
+ #nav:not( :target ) > a:first-of-type, #nav:target > a:last-of-type {
+ display: block;
+}
+
+
+			/* first level */
+
+			#nav > ul {
+ height: auto;
+ display: none;
+ position: absolute;
+ left: 0;
+ right: 0;
+ background: #06659d;
+ border: 1px solid #179cea;
+ max-height: 400px;
+ overflow: auto;
+}
+ #nav:target > ul {
+ display: block;
+}
+ #nav > ul > li {
+ width: 100%;
+ float: none;
+ background: none;
+ padding: 0
+}
+#nav > ul > li:first-child {
+display: none
+}
+ #nav > ul > li:hover {
+}
+ #nav > ul > li > a {
+ height: auto;
+ text-align: left;
+ padding: 0 0.833em; /* 20 (24) */
+}
+ #nav > ul > li:not( :last-child ) > a {
+ border-right: none;
+ border-bottom: 1px solid #179cea;
+}
+
+
+				/* second level */
+				#nav li ul {
+ position: static;
+ display: none;
+ padding-top: 0;
+ left: 0;
+ -moz-box-shadow: none;
+ -webkit-box-shadow: none;
+ box-shadow: none;
+ padding: 0 1em;
+ background: #179cea;
+}
+ #nav li {
+ width: 100% !important;
+ position: relative;
+ height: auto
+}
+ #nav li a {
+ display: block;
+}
+ #nav li a:active {
+ background-color: #c00 !important;
+}
+
+			/*#nav span:after
+			{
+				width: 0;
+				height: 0;
+				border: 0.313em solid transparent; /* 5 
+				border-bottom: none;
+				border-top-color: #efa585;
+				content: '';
+				vertical-align: middle;
+				display: inline-block;
+				position: relative;
+				right: -0.313em; /* 5 
+			}*/
+
+			/* first level 
+					#nav > ul > li > a {
+ padding: 0.3em 0.6em
+}*/
+
+				/* second level */
+
+ #nav li:not( :first-child ):hover ul {
+ left: -1px;
+}
+ #nav li ul li {
+height: auto !important
+}
+ #nav li ul a {
+ font-size: 100% !important; /* 20 */
+ white-space: normal;
+ color: #111111 !important
+}
+ #nav li ul li a:hover, #nav li ul:not( :hover ) li.active a {
+ color: #fdc64b !important
+}
+}
+/*Right Menu*/
+.topnav {
+	position:relative;
+	z-index: 200
+}
+.nav_list {
+	display: block;
+	text-align:left;
+}
+.nav_item {
+	float:left;
+ *display:inline;
+	zoom:1;
+	position:relative;
+	width:100%;
+}
+.nav_item:hover .nav_submenu {
+	display:block;
+}
+/* Navigation submenu */
+.nav_submenu {
+	position:static;
+	width:100%;
+}
+.nav_submenu_item a {
+	display:block;
+	color: #3E3E3E;
+	font-weight: 500;
+}
+.nav_submenu_item a:hover {
+	text-decoration: none
+}
+/* Mobile navigation */
+.nav_mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:-37px;
+	right:10px;
+	background: url(../Images/nav.svg) no-repeat right center;
+	background-size:18px;
+	height:35px;
+	width:40px;
+}
+.topnav .nav_mobile {
+	width:100%;
+	top: -49px
+}
+/* Mobile navigation, clickable area for revealing <ul> */
+.nav_click {
+	position:absolute;
+	top:0;
+	right:0;
+	display:none;
+	height:40px;
+	width:30px;
+	cursor:pointer;
+	text-align: center;
+	z-index: 100
+}
+.nav_click i {
+	display:block;
+	height:20px;
+	width:20px;
+	margin-top: 5px;
+	background: url(../Images/plus.png) no-repeat 0 center;
+	z-index: 100;
+}
+.nav_rotate {
+	/*-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);*/
+	background: url(../Images/subtract.png) no-repeat 0 center !important;
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+body {
+ font-size: 100%
+}
+/*Right Menu*/
+.topnav {
+ background: #F5F5F5;
+}
+.topnav li a {
+font-weight: 500
+}
+.tab_foo_menu {
+display: block
+}
+ .nav_mobile {
+ display:block;
+}
+ .nav {
+ width:100%;
+ padding:50px 0 0;
+}
+ .nav_list {
+ display:none;
+}
+.nav_item a {
+ display:block;
+ padding:3px 18px;
+ font-size:100%;
+ font-weight:normal;
+ border-bottom: 1px solid #CCCCCC;
+ text-transform: capitalize;
+}
+.nav_item > a {
+ padding: 0 10px !important;
+}
+.nav_item:last-child > a {
+ border: none
+}
+.topnav > ul > li.active > a, .topnav > ul > li > a:hover {
+ background: #4e84f1
+}
+.nav_item:hover .nav_submenu {
+ display:block;
+}
+ .nav_click {
+ display:block;
+}
+ .nav_mobile_open {
+ border-radius:5px 5px 0 0;
+ -webkit-border-radius:5px 5px 0 0;
+ -moz-border-radius:5px 5px 0 0;
+}
+ .nav_item:hover .nav_submenu {
+ display:none;
+}
+.nav_submenu {
+ display: none
+}
+.nav_item > a {
+font-size: 100%;
+background: none
+}
+}

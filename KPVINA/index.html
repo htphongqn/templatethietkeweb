@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Khang Phú Vina</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script src="Scripts/jquery-1.7.min.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+<div id="page">
+  <!--#begin Header-->
+  <div class="header"> <a href="index.html" alt="Khang Phú Vina" class="logo"><img src="Images/logo.jpg" width="175" height="50" alt="Khang Phú Vina" border="" /></a>
+    <p class="slogan"><img src="Images/slogan.png" width="356" height="58" /></p>
+    <p class="hotline">Hotline: 083 868 3156</p>
+    <div class="search">
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+      <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="nav_menu">
+  <div class="inner_menu">
+    <ul>
+      <li class="active"><a href="index.html">Trang chủ</a> </li>
+      <li><a href="">Giới thiệu</a> </li>
+      <li><a href="">Sản phẩm</a> </li>
+      <li><a href="">Tin tức</a> </li>
+      <li><a href="">Bảo hành</a> </li>
+      <li><a href="">Đại ký phân phối</a></li>
+      <li><a href="">Liên hệ</a></li>
+    </ul>
+  </div></div>
+  <!--End Main Menu-->
+  <!-- #Main -->
+  <div class="main clearfix">
+    <div class="main_top">
+      <div class="video"> <img src="Images/video.jpg" height="280" alt="" /> </div>
+      <!-- Jquery Products -->
+      <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+      <script type="text/javascript">
+/*$(window).load(function() {
+    $('#slider').nivoSlider({
+        directionNav : false,
+        controlNav   : false,
+        keyboardNav  : true
+        
+    });
+});*/
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_product').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+      <div id="slider_products">
+        <ul id="mycarousel_product" class="jcarousel-skin-tango">
+          <li class="item"><a href=""><img src="Images/banner_slider.jpg" width="355" height="260" alt="" /></a> </li>
+          <li class="item"><a href=""><img src="Images/banner_slider.jpg" width="355" height="260" alt="" /></a> </li>
+          <li class="item"><a href=""><img src="Images/banner_slider.jpg" width="355" height="260" alt="" /></a> </li>
+          <li class="item"><a href=""><img src="Images/banner_slider.jpg" width="355" height="260" alt="" /></a> </li>
+          <li class="item"><a href=""><img src="Images/banner_slider.jpg" width="355" height="260" alt="" /></a> </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Jquery Products-->
+      <div class="clearfix"></div>
+    </div>
+    <div class="content">
+      <div class="categories">
+        <div class="col"><a href="#" class="img_general"><img src="Images/introducing.jpg" width="100" height="200" alt="" /></a>
+          <h3 class="h3title"><a href="" class="link_title">GIỚI THIỆU KPVINA</a></h3>
+          <h4 class="ar11">Công ty TNHH Thương mại - Dịch vụ KPVina là đơn vị  nhập khẩu và phân phối độc quyền máy đo đường huyết nhãn hiệu GlucoDr tại Việt Nam. Được phát triển bởi tập đoàn thiết bị y tế Allmedicus, với hơn 60 cổ đông và 25 chuyên gia nghiên cứu chuyên ngành về hóa học, sinh học, enzymology, điện tử, bán dẫn, khoa học máy tính, cơ khí, vật liệu khoa học, ...</h4>
+          <a href="#" class="view_more ar11">Xem thêm</a></div>
+        <div class="col"><a href="#" class="img_general"><img src="Images/may_do_duong_huyet.jpg" width="100" height="200" alt="" /></a>
+          <h3 class="h3title"><a href="" class="link_title">Giới thiệu máy đo đường huyết GlucoDr Auto</a></h3>
+          <h4 class="ar11">Tự giám sát lượng đường trong máu (SMBG) đóng vai trò quan trọng trong kiểm tra, kiểm soát bệnh tiểu đường của bạn. Một thời gian dài nghiên cứu cho thấy, giữ mức độ đường trong máu bình thường để giảm bớt nguy cơ phức tạp đến hoặc nhiều hơn 60%. <br />
+            <br />
+            Cho đến nay, xu hướng công nghệ SMBG đã được di chuyển từ hệ thống máy phản xạ sinh học đến hệ thống máy cảm biến sinh học. Các hệ thống cảm biến sinh học mất lợi thế nhỏ hơn khối lượng máu cần thiết, nhanh chóng đo lường thời gian, không lau hay không làm sạch các dụng cụ, tiêm máu tự động, ... </h4>
+          <a href="#" class="view_more ar11">Xem thêm</a></div>
+        <div class="divider"></div>
+        <div class="col"><a href="#" class="img_general"><img src="Images/bao_hanh_gluco.jpg" width="100" height="200" alt="" /></a>
+          <h3 class="h3title"><a href="" class="link_title">Thông tin bảo hành sản phẩm GlucoDr</a></h3>
+          <h4 class="ar12">Cùng với đơn vị sản xuất Allmedicus với thương hiệu máy đo đường huyết GlucoDr, công ty Khang Phú Vina là nhà nhập khẩu và phân phối sản phẩm sẽ cung cấp dịch vụ bảo hành sản phẩm.<br />
+            <br />
+            Sản phẩm GlucoDr được bảo hành tại :<br />
+            <strong>Văn phòng đại diện chính cho hãng Allmedicus - GlucoDr tại TP. Hồ Chí Minh</strong><br />
+            Công ty TNHH Thương Mại Dịch Vụ Khang Phú Vina<br />
+            Add: KK11Bis, Nguyễn Giản Thanh, Cư Xá Bắc Hải, P.15, Q.10, Tp.HCM<br />
+            Tel:  08 3868 3156   -   Fax:  08 3868 3155</h4>
+        </div>
+        <div class="col"><a href="#" class="img_general"><img src="Images/vitaminC.jpg" width="100" height="200" alt="" /></a>
+          <h3 class="h3title"><a href="" class="link_title">Bị tiểu đường nên bổ sung vitamin C</a></h3>
+          <h4 class="ar11">Khi điều trị cho bệnh nhân tiểu đường tuýp 1 bằng insulin và vitamin C hay thuốc giảm huyết áp Telmisarten thì các gốc tự do giảm rõ rệt. Điều này cũng đồng nghĩa sẽ giảm thiểu được một số biến chứng của bệnh tiểu đường.<br />
+            <br />
+          </h4>
+          <a href="#" class="view_more ar11">Xem thêm</a></div>
+        <div class="divider"></div>
+        <div class="col">
+          <h3 class="h3title"><a href="" class="link_title">Đại Lý Phân Phối</a></h3>
+          <h4 class="ar12">Đối với khách hàng mua lẻ:<br />
+            Vui lòng liên hệ các cửa hàng, đại lý thuốc tây để mua máy đo đường huyết GlucoDr và được tư vấn sử dụng.<br />
+            Đối với khách hàng mua sỉ:<br />
+            <br />
+            Vui lòng liên hệ trực tiếp với chúng tôi qua địa chỉ:<br />
+            <strong>Văn phòng đại diện chính cho hãng Allmedicus - GlucoDr Auto tại TP. Hồ Chí Minh</strong><br />
+            Công ty TNHH TM DV Khang Phú Vina<br />
+            Add: KK11Bis, Nguyễn Giản Thanh, Cư Xá Bắc Hải, P.15, Q.10, Tp.HCM<br />
+            Tel: 08 3868 3156  - Fax:  08 3868 3155<br />
+            Email: info@kpvina.com.vn - Website: www.kpvina.com.vn </h4>
+        </div>
+        <div class="col"><a href="#" class="img_general"><img src="Images/bac_si.jpg" width="100" height="200" alt="" /></a>
+          <h3 class="h3title"><a href="" class="link_title">Các biến chứng tim mạch do tiểu đường</a></h3>
+          <h4 class="ar11"> Bệnh tiểu đường làm cho quá trình xơ vữa của các động mạch lớn và vừa xuất hiện sớm hơn và tiến triển nhanh hơn ở những người không mắc bệnh này. Người bệnh có thể bị viêm tắc động mạch chi dưới, tai biến mạch máu não...<br />
+            Bệnh tiểu đường là một yếu tố nguy cơ làm tăng sự xuất hiện và mức độ trầm trọng của các biến cố tim mạch (ở cả nam lẫn nữ): Tăng 1,8 lần nguy cơ bệnh mạch vành; 2,4 lần nguy cơ tai biến mạch não; 4,5 lần nguy cơ viêm tắc động mạch chi dưới. Theo thống kê, các biến chứng tim mạch này là nguyên nhân tử vong của 3/4 số bệnh nhân tiểu đường ngoài tuổi bốn mươi.</h4>
+          <a href="#" class="view_more ar11">Xem thêm</a></div>     
+          <div class="clearfix"></div>           
+      </div>
+    </div>
+    <!--End Main-->
+    <div class="partners">
+      <h3 class="title_logo link_title">Đối tác khách hàng</h3>
+      <div class="online">Tư vấn trực tuyến: <a href="ymsgr:sendim?yahoo1"><img src="http://opi.yahoo.com/online?u=nickY!M&m=g&t=1&l" border=0 style="margin: 0 10px 0 5px" align="absmiddle" /></a> <a href=""><img src="Images/skype.png" alt="" align="absmiddle" /></a></div>
+      <script type="text/javascript">
+/*$(window).load(function() {
+    $('#slider').nivoSlider({
+        directionNav : false,
+        controlNav   : false,
+        keyboardNav  : true
+        
+    });
+});*/
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 1,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+      <div id="slider_logo">
+        <ul id="mycarousel" class="jcarousel-skin-tango">
+          <li><a href="#"><img src="Images/logo_Gluco.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_KPVina.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_KPVina.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_Gluco.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_KPVina.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_KPVina.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_Gluco.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_KPVina.jpg" alt="" /></a></a></li>
+          <li><a href="#"><img src="Images/logo_KPVina.jpg" alt="" /></a></a></li>
+        </ul>
+      </div>
+      <!--End Jquery 01-->
+      <div class="clearfix"></div>
+    </div>
+    <!-- Menu Footer -->
+    <div class="footer">
+      <div class="menu_footer ar11"><a href="">Trang chủ</a> | <a href="">Giới thiệu</a> | <a href="">Sản phẩm</a> | <a href="">Tin tức</a> | <a href="">Bảo hành</a> | <a href="">Đại Lý Phân Phối</a> | <a href="">Liên hệ</a>
+        <div class="clear"></div>
+      </div>
+      <div class="info_footer ar11"> <a href="" class="img_general"><img src="Images/logo_footer.jpg" width="103" height="58" alt="" /></a>
+        <p><strong>Văn phòng đại diện chính cho hãng Allmedicus - GlucoDr Auto tại TP. Hồ Chí Minh</strong></p>
+        <p>Công ty TNHH Thương Mại Dịch Vụ Khang Phú Vina</p>
+        <p>Add: KK11Bis, Nguyễn Giản Thanh, Cư Xá Bắc Hải, P.15, Q.10, Tp.HCM</p>
+        <p>Tel: 08 3868 3156  - Fax:  08 3868 3155</p>
+      </div>
+    </div>
+    <!-- End Menu Footer -->
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+
+</body>
+</html>

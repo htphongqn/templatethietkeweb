@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CÔNG TY TNHH CƠ KHÍ XÂY DỰNG TM DỊCH VỤ HẢI TRUNG KIM</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Menu-->
+<link rel="stylesheet" href="Styles/layout.css" />
+<link rel="stylesheet" href="Styles/newheadfooter.css" type="text/css">
+<script type="text/javascript" src="Scripts/jquery.hoverIntent.minified.js" ></script>
+<!--Scripts click Toggle-->
+<script type="text/javascript">
+$(document).ready(function() {         
+var notH = 1,
+    $pop = $('.search_filter').hover(function(){notH^=1;});
+
+$(document).on('mouseup keyup', function( e ){
+  if(notH||e.which==27) $pop.stop().hide();
+});
+/////// CALL POPUP 
+$('#search_advanced').click(function(){
+	jQuery(this).find('.search_filter').slideDown("fast").end().siblings().find('.search_filter').hide('fast');							 
+	event.stopPropagation();  
+});
+			$(".dropdown .cate_selected").click(function() {
+				$(".dropdown ul.menu_hover").toggle();
+            });
+			$(".dropdown ul.menu_hover li").click(function() {
+                var text = $(this).html();
+                $(".dropdown .cate_selected .title_select").html(text);
+                $(".dropdown ul.menu_hover").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });						               	
+});
+</script>
+<!--Slide Products-->
+<link rel="stylesheet" href="Styles/skin_jcarousel.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+        var totalslides = 1;
+
+        function mycarousel_initCallback(carousel) {
+            jQuery('#viewvid').bind('click', function () {
+                carousel.scroll(jQuery.jcarousel.intval(1));
+                pageslide('about');
+                return false;
+            });
+
+            jQuery('.jcarousel-navigation li a').click(function (e) {
+                panel = $(this).parent('li').attr('id');
+                carousel.scroll(jQuery.jcarousel.intval(panel));
+                return false;
+            });
+        };
+
+        function mycarousel_itemFirstInCallback(carousel, item, idx, state) {
+            bubble = calcSlide(idx);
+            $('.jcarousel-navigation li').each(function () {
+                if ($(this).attr('id') == bubble)
+                    $(this).addClass('active');
+                else
+                    $(this).removeClass('active');
+            });
+        };
+
+        function calcSlide(value) {
+            current = value;
+            if (value > totalslides) {
+                current = value - totalslides;
+                calcSlide(current);
+            }
+
+            return current;
+        }
+
+        jQuery(document).ready(function () {
+
+            $('#sl_banner_ads li').each(function () {
+                $('.jcarousel-navigation').append('<li id="' + totalslides + '"><a href="#"></a></li>');
+                totalslides++;
+            });
+            totalslides = totalslides - 1;
+
+            $('#sl_banner_ads').jcarousel({
+                auto: 2,
+                wrap: 'circular',
+                animation: 500,
+                scroll: 1,
+                itemFirstInCallback: mycarousel_itemFirstInCallback,
+                initCallback: mycarousel_initCallback
+            });
+
+            jQuery('#sl_hot_P, #slide_thumbnails').jcarousel({
+                auto: 0,
+                wrap: 'circular',
+                animation: 1000,
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });
+        });
+ 
+    </script>
+<script type="text/javascript" src="Scripts/jquery.carousel.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('body').removeClass('no-js');
+
+            $('#best_selling, #popular_P, #best_price_P, #bathroom_accessories, #kitchen_equipment, #security_system, #lighting_equipment').carousel({
+                itemsPerPage: 5,
+                itemsPerTransition: 5,
+                easing: 'linear',
+                noOfRows: 1
+            });
+			
+			$('#thesame_P, #thesame_PTH').carousel({
+                itemsPerPage: 6,
+                itemsPerTransition: 6,
+                easing: 'linear',
+                noOfRows: 1
+            });
+        });
+    </script>
+<!--Script Updown-->
+<script type="text/javascript">    
+    $(function () {
+        $('#support_order').each(function () {
+            var distance = 10;
+            var time = 100;
+            var hideDelay = 100;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.sp_content', this).css('opacity', 0);
+				
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 50,
+                        right: -40,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate( time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });		
+    });    
+</script>
+<!--Scroll-->
+<link type="text/css" href="Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<!-- the mousewheel plugin -->
+<script type="text/javascript" src="Scripts/jquery.mousewheel.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="Scripts/jquery.jscrollpane.min.js"></script>
+<!-- scripts specific to this demo site -->
+<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').show().jScrollPane();
+			});
+		</script>
+</head>
+<body>
+<!--Top Page-->
+<div id="top_link">
+  <div class="page">
+    <div class="hline"><b>Hotline: 0909 336 818</b></div>
+    <ul>
+      <li class="active"><a href="">Trang chủ</a></li>
+      <li><a href="">Giới thiệu</a></li>
+      <li><a href="list_news.html">Tin tức</a></li>
+      <li><a href="">Hỏi đáp</a></li>
+      <li><a href="">Liên hệ</a></li>
+    </ul>
+  </div>
+</div>
+<!--End Top Page-->
+<div class="page">
+  <!--#begin Header-->
+  <div id="header"> <a class="logo" href="index.html"><img src="Images/logo.png" alt="" /></a>
+    <div id="info_header">
+      <div class="function_web"><a href=""><span class="delivery"></span><b>Giao hàng<br />
+        toàn quốc</b></a></div>
+      <div class="function_web"><a href=""><span class="payment"></span><b>Thanh toán<br />
+        nhận hàng</b></a></div>
+      <div class="function_web"><a href=""><span class="return"></span><b>07 ngày<br />
+        đổi hàng</b></a></div>
+    </div>
+    <!--Account Area-->
+    <div id="account_area" class="fr"><a href="" class="tt_link_account"><b>Đăng nhập</b><br />
+      Tài khoản & Đơn hàng <span class="arr_down_acc"></span></a>
+      <div id="box_account">
+        <ul class="arrow_top">
+          <li id="login"><a class="btn_acc btn_web" title="Đăng Nhập" href="login.html">Đăng Nhập</a></li>
+          <li id="new_account">
+            <div class="user_new_account">Khách hàng mới? <a title="Tạo tài khoản mới" href="register.html">Tạo tài khoản</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Account Area-->
+  </div>
+  <!--#end Header-->
+  <!--Top Main-->
+  <div id="top_main">
+    <!-- Main Menu-->
+    <div class="all_categories fl">
+      <div class="show_menu">
+        <div class="tab_cate"><span>Danh mục sản phẩm</span></div>
+        <!--Main Menu-->
+        <ul class="nav_menu">
+          <script type="text/javascript">
+    $(function () {
+
+        $('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(100, function () {
+
+            });
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(100, function () {
+
+            });
+        });
+
+
+    })
+</script>
+          <li class="m_li"><a class="t_menu" href='list_products.html'>Thiết Bị Vệ Sinh</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/250/giadung.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Đồ gia dụng nhà bếp" href='/chuyen-muc/do-gia-dung-nha-bep.aspx'>Đồ gia dụng
+                    nhà bếp</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/noi-com-dien.aspx'>Nồi cơm điện</a> </li>
+                    <li><a href='/chuyen-muc/noi-ap-suat.aspx'>Nồi áp suất</a> </li>
+                    <li><a href='/chuyen-muc/noi-lau-da-nang.aspx'>Nồi lẩu đa năng</a> </li>
+                    <li><a href='/chuyen-muc/noi-sieu-toc-am-sieu-toc.aspx'>Nồi siêu tốc - Ấm siêu tốc</a> </li>
+                    <li><a href='/chuyen-muc/san-pham-tien-ich-cho-nha-bep.aspx'>Sản phẩm tiện ích cho nhà
+                      bếp</a> </li>
+                    <li><a href='/chuyen-muc/bep-lau-nuong-vi-nuong-dien-chao.aspx'>Bếp Lẩu Nướng - Vỉ Nướng
+                      Điện - Chảo</a> </li>
+                    <li><a href='/chuyen-muc/bep-hong-ngoai-bep-dien-quang.aspx'>Bếp Hồng Ngoại - Bếp Điện
+                      Quang</a> </li>
+                    <li><a href='/chuyen-muc/lo-nuong-lo-vi-song.aspx'>Lò Nướng - Lò Vi Sóng</a> </li>
+                    <li><a href='/chuyen-muc/bep-gas-chinh-hang.aspx'>Bếp Gas Chính Hãng</a> </li>
+                    <li><a href="/chuyen-muc/hop-com-ham-nong.aspx"> Hộp cơm hâm nóng</a></li>
+                    <li><a href="/chuyen-muc/noi-u.aspx"> Nồi ủ</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Chế Biến Thực Phẩm" href='/chuyen-muc/che-bien-thuc-pham.aspx'>Chế Biến Thực
+                    Phẩm</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/may-xay-ep-sinh-to.aspx'>Máy Xay Ép Sinh Tố</a> </li>
+                    <li><a href='/chuyen-muc/may-lam-banh.aspx'>Máy làm bánh</a> </li>
+                    <li><a href='/chuyen-muc/may-lam-sua-chua.aspx'>Máy làm sữa chua</a> </li>
+                    <li><a href='/chuyen-muc/may-danh-trung.aspx'>Máy đánh trứng</a> </li>
+                    <li><a href='/chuyen-muc/may-xay-thit.aspx'>Máy xay thịt</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Chăm sóc nhà cửa" href='/chuyen-muc/cham-soc-nha-cua.aspx'>Chăm sóc nhà cửa</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/bo-lau-nha-thong-minh.aspx'>Bộ lau nhà thông minh</a> </li>
+                    <li><a href='/chuyen-muc/may-xit-rua-hut-bui.aspx'>Máy Xịt Rửa - Hút Bụi</a> </li>
+                    <li><a href='/chuyen-muc/ban-ui-tu-say-quan-ao.aspx'>Bàn ủi - Tủ sấy quần áo</a> </li>
+                    <li><a href='/chuyen-muc/quat-dien.aspx'>Quạt Điện</a> </li>
+                    <li><a href='/chuyen-muc/tu-vai-hop-dung-do.aspx'>Tủ Vải - Hộp Đựng Đồ </a></li>
+                    <li><a href='/chuyen-muc/may-phun-suong.aspx'>Máy Phun Sương</a> </li>
+                    <li><a href="/chuyen-muc/ngan-ke-tu-va-dung-cu-sua-chua.aspx"> Ngăn, kệ, tủ và dụng cụ sữa chữa</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/phu-kien-cong-nghe.aspx'>Đồ Dùng Phòng Tắm</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/271/phu-kien.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Điện Thoại" href='/chuyen-muc/phu-kien-dien-thoai.aspx'>Phụ Kiện
+                    Điện Thoại</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/pin-sac-du-phong.aspx'>Pin Sạc Dự Phòng</a> </li>
+                    <li><a href='/chuyen-muc/the-nho.aspx'>Thẻ Nhớ</a> </li>
+                    <li><a href='/chuyen-muc/vo-bao-da-dien-thoai.aspx'>Vỏ - Bao Da Điện Thoại</a> </li>
+                    <li><a href='/chuyen-muc/pin-dien-thoai.aspx'>Pin Điện Thoại</a> </li>
+                    <li><a href='/chuyen-muc/tai-nghe-danh-cho-dien-thoai.aspx'>Tai Nghe Dành Cho Điện Thoại</a> </li>
+                    <li><a href='/chuyen-muc/cap-sac.aspx'>Cáp sạc</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Máy Tính - Laptop" href='/chuyen-muc/phu-kien-may-tinh-laptop.aspx'> Phụ Kiện Máy Tính - Laptop</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/o-cung-usb-the-nho.aspx'>Ổ Cứng- USB - Thẻ Nhớ</a> </li>
+                    <li><a href='/chuyen-muc/chuot-ban-phim.aspx'>Chuột - Bàn Phím</a> </li>
+                    <li><a href='/chuyen-muc/thiet-bi-am-thanh-tai-nghe.aspx'>Thiết Bị Âm Thanh - Tai Nghe</a> </li>
+                    <li><a href='/chuyen-muc/tan-nhiet-mieng-dan.aspx'>Tản Nhiệt - Miếng Dán</a> </li>
+                    <li><a href='/chuyen-muc/phan-mem-diet-virus.aspx'>Phần Mềm Diệt Virus</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thiết Bị Mạng " href='/chuyen-muc/thiet-bi-mang.aspx'>Thiết Bị Mạng </a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/thu-phat-wifi.aspx'>Thu - Phát Wifi</a> </li>
+                    <li><a href='/chuyen-muc/modem-usb-3g.aspx'>Modem - USB 3G</a> </li>
+                    <li><a href='/chuyen-muc/hub-switch.aspx'>Hub/Switch</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thiết Bị Giải Trí" href='/chuyen-muc/thiet-bi-giai-tri.aspx'>Thiết Bị Giải
+                    Trí</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/cham-soc-suc-khoe-sac-dep.aspx'>Nhà Bếp - Nội Trợ</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/289/healthcare-banner.png" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Chăm Sóc Sức Khỏe" href='/chuyen-muc/cham-soc-suc-khoe.aspx'>Chăm Sóc Sức
+                    Khỏe</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/may-massage.aspx'>Máy/Đai Massage</a> </li>
+                    <li><a href='/chuyen-muc/may-tap-the-duc.aspx'>Máy Tập Thể Dục</a> </li>
+                    <li><a href='/chuyen-muc/may-loc-khong-khi.aspx'>Máy Lọc Không Khí</a> </li>
+                    <li><a href='/chuyen-muc/can-dien-tu.aspx'>Cân Điện Tử</a> </li>
+                    <li><a href='/chuyen-muc/thuc-pham-chuc-nang.aspx'>Thực Phẩm Chức Năng</a> </li>
+                    <li><a href="/chuyen-muc/may-tri-lieu.aspx"> Máy Trị Liệu</a></li>
+                    <li><a href="/chuyen-muc/may-do-huyet-ap.aspx"> Máy đo huyết áp</a></li>
+                    <li><a href="/chuyen-muc/may-do-duong-huyet.aspx"> Máy đo đường huyết</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Yến Sào Cao Cấp" href='/chuyen-muc/yen-sao-cao-cap.aspx'>Yến Sào Cao Cấp</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/to-yen-sao-nguyen-to.aspx'>Tổ Yến Sào Nguyên Tổ</a> </li>
+                    <li><a href='/chuyen-muc/to-yen-sao-tinh-che.aspx'>Tổ Yến Sào Tinh Chế</a> </li>
+                    <li><a href='/chuyen-muc/yen-nuoc-song-hung.aspx'>Yến Nước Song Hưng</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Chăm Sóc Sắc Đẹp" href='/chuyen-muc/cham-soc-sac-dep.aspx'>Chăm Sóc Sắc Đẹp</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/may-say-toc.aspx'>Máy Sấy Tóc</a> </li>
+                    <li><a href='/chuyen-muc/may-kep-uon-duoi.aspx'>Máy Kẹp - Uốn - Duỗi</a> </li>
+                    <li><a href='/chuyen-muc/may-xong-hoi-mat.aspx'>Máy Xông Hơi Mặt</a> </li>
+                    <li><a href='/chuyen-muc/may-lam-san-co-mat.aspx'>Máy Làm Săn Cơ Mặt</a> </li>
+                    <li><a href='/chuyen-muc/may-cao-rau.aspx'>Máy Cạo Râu</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/my-pham-lam-dep.aspx'>Đồ Gia Dụng</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/290/mypham.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Chăm Sóc Da" href='/chuyen-muc/cham-soc-da-Chăm Sóc Da.aspx'>Chăm Sóc Da</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/cac-bo-duong-da.aspx'>Các Bộ Dưỡng Da</a> </li>
+                    <li><a href='/chuyen-muc/suncare-kem-chong-nang.aspx'>Suncare - Kem Chống Nắng</a> </li>
+                    <li><a href='/chuyen-muc/sua-rua-mat.aspx'>Sữa Rửa Mặt</a> </li>
+                    <li><a href='/chuyen-muc/san-pham-tri-mun.aspx'>Sản Phẩm Trị Mụn</a> </li>
+                    <li><a href='/chuyen-muc/nuoc-hoa-hong.aspx'>Nước hoa hồng</a> </li>
+                    <li><a href='/chuyen-muc/mat-na.aspx'>Mặt nạ</a> </li>
+                    <li><a href='/chuyen-muc/tay-te-bao-chet.aspx'>Tẩy tế bào chết</a> </li>
+                    <li><a href='/chuyen-muc/skincare-duong-da.aspx'>Skincare - Dưỡng Da</a> </li>
+                    <li><a href='/chuyen-muc/mist-xit-khoang.aspx'>Mist - Xịt Khoáng</a> </li>
+                    <li><a href="/chuyen-muc/duong-mat.aspx"> Dưỡng Mắt</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Trang Điểm" href='/chuyen-muc/trang-diem.aspx'>Trang Điểm</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/bb-cream-cc-cream.aspx'>BB Cream - CC Cream</a> </li>
+                    <li><a href='/chuyen-muc/phan-phu-|-phan-nen.aspx'>Phấn Phủ | Phấn Nền</a> </li>
+                    <li><a href='/chuyen-muc/che-khuyet-diem.aspx'>Che Khuyết Điểm</a> </li>
+                    <li><a href='/chuyen-muc/phan-mat-phan-ma-hong.aspx'>Phấn Mắt - Phấn Má Hồng</a> </li>
+                    <li><a href='/chuyen-muc/son-moi-duong-moi.aspx'>Son Môi - Dưỡng Môi</a> </li>
+                    <li><a href='/chuyen-muc/masscara-highligt.aspx'>Masscara - Highligt</a> </li>
+                    <li><a href='/chuyen-muc/san-pham-khac.aspx'>Sản phẩm khác</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Dưỡng Thể -  Chăm Sóc Tóc" href='/chuyen-muc/duong-the-cham-soc-toc.aspx'> Dưỡng Thể - Chăm Sóc Tóc</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/body-wash-sua-tam.aspx'>Body Wash / Sữa tắm</a> </li>
+                    <li><a href='/chuyen-muc/duong-the-body-duong-da-tay.aspx'>Dưỡng Thể Body- Dưỡng Da
+                      Tay</a> </li>
+                    <li><a href='/chuyen-muc/dau-goi-dau-xa-u-toc.aspx'>Dầu Gội - Dầu Xả - Ủ Tóc</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/thoi-trang-phu-kien.aspx'>Chiếu Sáng - Trang Trí</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/291/thoitrang.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Qùa Tặng - Lưu Niệm" href='/chuyen-muc/qua-tang-luu-niem.aspx'>Qùa Tặng -
+                    Lưu Niệm</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nam" href='/chuyen-muc/thoi-trang-nam.aspx'>Thời Trang Nam</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nữ" href='/chuyen-muc/thoi-trang-nu.aspx'>Thời Trang Nữ</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Giày - Dép" href='/chuyen-muc/giay-dep.aspx'>Giày - Dép</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Thời Trang" href='/chuyen-muc/phu-kien-thoi-trang.aspx'>Phụ Kiện
+                    Thời Trang</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Sản Phẩm Dành Cho Bé" href='/chuyen-muc/san-pham-danh-cho-be.aspx'>Sản Phẩm
+                    Dành Cho Bé</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/thoi-trang-phu-kien.aspx'>Khóa - Phụ Kiện Cửa</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/291/thoitrang.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Qùa Tặng - Lưu Niệm" href='/chuyen-muc/qua-tang-luu-niem.aspx'>Qùa Tặng -
+                    Lưu Niệm</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nam" href='/chuyen-muc/thoi-trang-nam.aspx'>Thời Trang Nam</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nữ" href='/chuyen-muc/thoi-trang-nu.aspx'>Thời Trang Nữ</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Giày - Dép" href='/chuyen-muc/giay-dep.aspx'>Giày - Dép</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Thời Trang" href='/chuyen-muc/phu-kien-thoi-trang.aspx'>Phụ Kiện
+                    Thời Trang</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Sản Phẩm Dành Cho Bé" href='/chuyen-muc/san-pham-danh-cho-be.aspx'>Sản Phẩm
+                    Dành Cho Bé</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/thoi-trang-phu-kien.aspx'>Điện Dân Dụng</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/291/thoitrang.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Qùa Tặng - Lưu Niệm" href='/chuyen-muc/qua-tang-luu-niem.aspx'>Qùa Tặng -
+                    Lưu Niệm</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nam" href='/chuyen-muc/thoi-trang-nam.aspx'>Thời Trang Nam</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nữ" href='/chuyen-muc/thoi-trang-nu.aspx'>Thời Trang Nữ</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Giày - Dép" href='/chuyen-muc/giay-dep.aspx'>Giày - Dép</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Thời Trang" href='/chuyen-muc/phu-kien-thoi-trang.aspx'>Phụ Kiện
+                    Thời Trang</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Sản Phẩm Dành Cho Bé" href='/chuyen-muc/san-pham-danh-cho-be.aspx'>Sản Phẩm
+                    Dành Cho Bé</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/thoi-trang-phu-kien.aspx'>Nhà Hàng - Khách Sạn</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/291/thoitrang.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Qùa Tặng - Lưu Niệm" href='/chuyen-muc/qua-tang-luu-niem.aspx'>Qùa Tặng -
+                    Lưu Niệm</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nam" href='/chuyen-muc/thoi-trang-nam.aspx'>Thời Trang Nam</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nữ" href='/chuyen-muc/thoi-trang-nu.aspx'>Thời Trang Nữ</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Giày - Dép" href='/chuyen-muc/giay-dep.aspx'>Giày - Dép</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Thời Trang" href='/chuyen-muc/phu-kien-thoi-trang.aspx'>Phụ Kiện
+                    Thời Trang</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Sản Phẩm Dành Cho Bé" href='/chuyen-muc/san-pham-danh-cho-be.aspx'>Sản Phẩm
+                    Dành Cho Bé</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/thoi-trang-phu-kien.aspx'>Điện Tử - Tin Học</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/291/thoitrang.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Qùa Tặng - Lưu Niệm" href='/chuyen-muc/qua-tang-luu-niem.aspx'>Qùa Tặng -
+                    Lưu Niệm</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nam" href='/chuyen-muc/thoi-trang-nam.aspx'>Thời Trang Nam</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nữ" href='/chuyen-muc/thoi-trang-nu.aspx'>Thời Trang Nữ</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Giày - Dép" href='/chuyen-muc/giay-dep.aspx'>Giày - Dép</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Thời Trang" href='/chuyen-muc/phu-kien-thoi-trang.aspx'>Phụ Kiện
+                    Thời Trang</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Sản Phẩm Dành Cho Bé" href='/chuyen-muc/san-pham-danh-cho-be.aspx'>Sản Phẩm
+                    Dành Cho Bé</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--end Main Menu-->
+    <!--Right Top Main-->
+    <div id="right_topmain" class="fr">
+      <div id="topbar">
+        <!--Search Tool-->
+        <div id="search_tool" class="fl">
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa để tìm kiếm..." />
+          <a href="" class="submitSearch"></a> </div>
+        <!--End Search Tool-->
+        <!--Support Special Order-->
+        <div id="support_order"><a class="trigger"><span class="support_order_button"></span></a>
+          <div id="dpop_sp_order" class="sp_content"><span class="icon_point"></span>
+            <p class="optionSupport">HỖ TRỢ ĐƠN HÀNG ĐẶC BIỆT </p>
+            <p>Đối với những đơn hàng lớn từ 30 triệu đồng. Để được báo giá đặc biệt. Hãy gửi cho chúng tôi tại đây</p>
+            <table width="100%" border="0" style="color: #ff8919; margin: 15px 0">
+              <tbody>
+                <tr>
+                  <td align="left"><textarea style="height:70px;" placeholder="Nhập nội dung đơn hàng hoặc đính kèm file" class="input-txt textarea-txt" id="popup2_txtDesc" cols="20" rows="2" name="ctl00$popup2$txtDesc"></textarea></td>
+                </tr>
+                <tr>
+                  <td align="left"><input type="file" id="popup2_FileUpload1" name="ctl00$popup2$FileUpload1"></td>
+                </tr>
+                <tr>
+                  <td align="left"><input type="text" placeholder="Tên bạn" class="input-txt" id="popup2_txtName" name="ctl00$popup2$txtName">
+                    <span style="color:Red;display:none;" id="popup2_rfvHoVaTen">*</span></td>
+                </tr>
+                <tr>
+                  <td align="left"><input type="text" placeholder="Email" class="input-txt" id="popup2_txtEmail" name="ctl00$popup2$txtEmail">
+                    <span style="color:Red;display:none;" id="popup2_RequiredFieldValidator4">*</span></td>
+                </tr>
+                <tr>
+                  <td align="left"><input type="text" placeholder="Số điện thoại" class="input-txt" id="popup2_Txtphone" name="ctl00$popup2$Txtphone">
+                    <span style="color:Red;display:none;" id="popup2_RequiredFieldValidator3">*</span></td>
+                </tr>
+                <tr>
+                  <td align="left"><div style="color:Red;display:none;" id="popup2_ValidationSummary1"> </div>
+                    <span style="color:Red;" id="popup2_lblresult"></span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="sm_button">
+              <input type="submit" name="ctl00$left1$Btsearch" value="Gửi" id="left1_Btsearch" class="btn_web" />
+            </div>
+            <div class="cf"></div>
+          </div>
+        </div>
+        <!--End Support Special Order-->
+        <!--Cart-->
+        <div id="cart_box" class="fr"><a href="cart.html" class="icon_cart">Giỏ hàng<br />
+          <b>0</b> sản phẩm</a></div>
+        <!--end Cart-->
+      </div>
+    </div>
+    <!--end Right Top Main-->
+  </div>
+  <!--End Top Main-->
+  <!-- #Main -->
+  <div id="main" class="cf">
+    <div id="pagenav">
+      <div class="path flt"> <a href="index.html" class="linktext">Trang chủ</a> » <span>Tin tức</span> </div>
+    </div>
+    <!--Box Category-->
+    <div class="box box_category">
+      <div class="vertical_menu subpage_nav">
+        <div class="categoryhead">
+          <h2>Tin tức</h2>
+        </div>
+        <div class="subpage_menu">
+          <ul>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Giới thiệu Amazona.vn</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Điều khoản sử dụng chung</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Hướng dẫn mua hàng</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Điều khoản sử dụng chung</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Phương thức vận chuyển</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Phương thức thanh toán</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Hợp tác với Amazona</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Chính sách bảo hành</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Các tài khoản giao dịch</a></h3>
+            </li>
+            <li>
+              <h3><a href="/danh-muc/nap-ban-cau.aspx">Tin khác</a></h3>
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="homesubcatcontainer" id="dt_news">
+        <div class="detail_info">
+          <h1 class="h1Title">Những thực phẩm nên tránh khi đang uống kháng sinh</span></h1>
+          <p class="date">06/05/2013</p>
+          <p>Khi đang uống kháng sinh điều trị một chứng bệnh nào đó, bạn nên tránh ăn những thực phẩm dưới đây:</p>
+          <p>Sữa và các sản phẩm chế biến từ sữa</p>
+          <p>Sữa và các sản phẩm chế biến từ sữa có thể làm nặng nề thêm cho đường ruột của bạn trong khi bạn đang dùng thuốc kháng sinh. Hầu hết các dược sĩ đều đặc biệt khuyến cáo không uống sữa khi đang uống thuốc kháng sinh ciprofloxacin.</p>
+          <p>Ngoài ra, các sản phẩm chứa nhiều chất béo khác cũng có thể làm trầm trọng thêm các triệu chứng của bệnh tiêu chảy - một tác dụng phụ khi uống thuốc kháng sinh.</p>
+          <p>Thực phẩm chứa nhiều chất xơ</p>
+          <p>Một số loại rau quả có chứa nhiều chất xơ  hoặc các loại đậu cũng có thể gây tiêu chảy nặng thêm khi bạn đang dùng thuốc kháng sinh.</p>
+          <p>Bên cạnh đó, các thực phẩm như ngũ cốc, lúa mì tuy có thể tăng cường chất sắt và calci cho cơ thể nhưng lại cản trở khả năng hấp thụ một số thuốc kháng sinh khi vào cơ thể, đặc biệt là khi bạn đang uống thuốc kháng sinh quinolone, trong đó bao gồm các loại thuốc như ciprofloxacin, acid nalidixic và cinoxacin, sparfloxacin và trovafloxacin.</p>
+          <p>Thực phẩm có tính acid</p>
+          <p>Hàm lượng acid trong một số thực phẩm nhất định có thể làm gián đoạn khả năng hấp thụ thuốc của cơ thể.</p>
+          <p>Nói chung, khi uống thuốc kháng sinh, tuy bạn không luôn luôn phải tránh xa chúng hoàn toàn, nhưng đôi khi việc tiêu thụ thực phẩm chua hoặc đồ uống có chứa nhiều acid như cà chua, nước trái cây, đồ uống có ga cũng có thể hạn chế sự hấp thu của thuốc khi vào cơ thể.</p>
+          <p>Rượu</p>
+          <p>Nhiều dược sĩ đều chỉ ra rằng rượu không can thiệp bất lợi trực tiếp vào việc uống thuốc kháng sinh. Tuy nhiên, thuốc kháng sinh và rượu có thể có tác dụng phụ tương tự nhau. Vì thế, nếu bạn uống cả hai cùng một lúc, chúng có thể gia tăng cơ hội bạn phải chịu trận với những nguy cơ buồn nôn, chóng mặt hoặc buồn ngủ...</p>
+          <p>Những loại thuốc này có thể điểm mặt bao gồm: penicillin G, ampicillin, floxin, oxacillin, gentamycin và ciprofloxacin. Khi uống những loại thuốc này, bạn có thể phải ăn/uống các thực phẩm 3 giờ trước/sau 
+            
+            khi uống thuốc.</p>
+          <p>Lưu ý: Tránh dùng các loại sữa, các sản phẩm chế biến từ sữa, trừ sữa chua, khi bạn đang uống thuốc kháng sinh. Nguyên nhân là do lượng calci có nhiều trong sữa và các sản phẩm từ sữa có thể cản trở sự hấp thu của thuốc kháng sinh. Tuy nhiên, sữa chua thì bạn vẫn có thể ăn bình thường vì nó có chứa nhiều men vi sinh giúp khôi phục lại sự cân bằng cho đường ruột, tránh tiêu chảy khi sử dụng thuốc kháng sinh.</p>
+        </div>
+        <div class="function">
+          <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+          <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+        </div>
+        <!--Other News-->
+        <div class="other_news_sub">
+          <h2 class="other_newsT">Tin bài khác</h2>
+          <ul>
+            <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+          </ul>
+          <a class="view_all" href="">Xem tất cả &raquo;</a>
+          <div class="clearfix"></div>
+        </div>
+        <!--Other News-->
+      </div>
+    </div>
+    <!--End Box Category-->  </div>
+  <!--End Main-->
+  <!--Top menu Footer-->
+  <div id="topmenu_footer">
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>Hướng dẫn</h3>
+        <div class="listMenuFooter"><a href="">Câu hỏi thường gặp</a><a href="">Kiểm tra hàng hóa</a><a href="">Mua hàng</a><a href="">Đổi / Trả hàng</a><a href="">Lợi ích mua online</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>Giao hàng</h3>
+        <div class="listMenuFooter"><a href="">Chính sách giao hàng</a><a href="">Nhận hàng tại Showroom</a><a href="">Giao hàng tận nơi</a><a href="">Chuyển phát nhanh</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>Thanh toán</h3>
+        <div class="listMenuFooter"><a href="">Chính sách thanh toán</a><a href="">Thanh toán khi nhận hàng</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>Dịch vụ</h3>
+        <div class="listMenuFooter"> <a href="">Bảo hành sản phẩm</a><a href="">Dịch vụ lắp đặt</a><a href="">Bảo trì tại nhà</a><a href="">Chuyển phát nhanh</a> </div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h3>Liên hệ</h3>
+        <div class="listMenuFooter"> <a href="">Hotline</a><a href="">Quảng cáo</a> </div>
+      </div>
+    </div>
+    <div class="cf"></div>
+  </div>
+  <!--end Top menu Footer-->
+</div>
+<!--End Page-->
+<!--Footer Bottom-->
+<div id="footer_bottom" class="cf">
+  <div class="page">
+    <!--Footer Left-->
+    <div id="footer_l" class="fl">
+      <!--Social Network-->
+      <div id="social_network"> <a id="1" class="social_icon icon_facebook" href="#" title="Facebook"></a><a id="2" class="social_icon icon_twitter" href="#" title="Twitter"></a><a id="3" class="social_icon icon_rss" href="#" title="RSS"></a><a id="4" class="social_icon icon_glus" href="#" title="Google+"></a><a id="5" class="social_icon icon_youtube" href="#" title="Youtube"></a> </div>
+      <!--end Social Network-->
+      <div id="info_footer" class="cf">
+        <div style="float: left; width: 40%"><a href="index.html"><img src="Images/logo.png" alt="" class="img_general" /></a></div>
+        <div style="float: right; width: 59%">
+          <p><b>CÔNG TY TNHH CƠ KHÍ XÂY DỰNG TM DỊCH VỤ HẢI TRUNG KIM</b></p>
+          <p>Ðịa chỉ: 156/1/12/1 Cộng Hòa phường 12 Q Tân Bình, Thành Phố Hồ Chí Minh.</p>
+          <p>Điện thoại: 0988 204 641</p>
+          <p>Mã sô thuế: 0313009353</p>
+          <p>Website: www.haitrungkimvn.com</p>
+        </div>
+      </div>
+      <div id="paymentarea" class="cf"> <span>CopyRight©2014 haitrungkimvn.com. All Right Reserved</span> <img alt="" src="http://amazona.vn/data/aditems/129/cash-on-delivery.jpg"> <img alt="" src="http://amazona.vn/data/aditems/128/visa-logo.jpg"> <img alt="" src="http://amazona.vn/data/aditems/127/MasterCard_early_1990s_logo.png"> <img alt="" src="http://amazona.vn/data/aditems/126/tech_paypal_logo.jpg"> <img alt="" src="http://amazona.vn/data/aditems/124/Kinds-of-bank-transfer.jpg"> </div>
+    </div>
+    <!--End Footer Left-->
+    <!--Footer Right-->
+    <div id="footer_r" class="fr">
+      <div class="hotline_foo">
+        <label>Hotline</label>
+        <span class="numberphone">0988 204 641</span><br />
+        <a href="mailto:haitrungkimvn@gmail.com">haitrungkimvn@gmail.com</a></div>
+      <div class="working_time"> <b class="fl" style="width: 30%; text-align: right">Mở cửa:</b><span class="fr" style=" width: 68%">Thứ 2 – Thứ 6: 8.00 đến 18.00<br />
+        Thứ 7: 9.00 đến 18.00<br />
+        Chủ nhật:  10.00 đến 16.00</span></div>
+      <div class="cf"></div>
+      <div id="get_email">
+        <input type="text" class="txf" size="40" id="vi7_txtEmail" name="ctl00$vi7$txtEmail" value="Nhập Email nhận thông tin khuyến mãi...">
+        <input type="submit" class="send_btn font2" id="vi7_btnSubmit" value="" name="ctl00$vi7$btnSubmit">
+      </div>
+    </div>
+    <!--End Footer Right-->
+  </div>
+</div>
+<!--End Footer Bottom-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,vietnamese,latin-ext);
+#cssmenu {
+	height: 50px;
+	background: url(../Images/bg_repeat.png) 0 0 repeat-x;
+	margin: 5px 0
+}
+#cssmenu:after, #cssmenu ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+#cssmenu ul, #cssmenu li, #cssmenu span, #cssmenu a {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#cssmenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+#cssmenu > ul {
+	position: relative;
+	display: block;
+	width: 100%;
+	z-index: 500;
+}
+#cssmenu > ul > li {
+	float: left;
+	display:inline-block;
+	padding-left: 2px;
+	background: url(../Images/space_menu.gif) 0 0 repeat-y;
+}
+#cssmenu > ul > li:first-child { padding: 0; background: none }
+#cssmenu > ul > li.active > a, #cssmenu > ul > li:hover > a {
+	color: #FFFFFF
+}
+#cssmenu > ul > li:first-child {
+	border: none
+}
+#cssmenu ul li a {
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+#cssmenu > ul > li > a {
+	color: #ffffff;
+	display: inline-block;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	line-height:47px;
+	padding: 0 12px;
+	text-decoration: none;
+	text-transform: uppercase
+}
+#cssmenu > ul > li.active > a, #cssmenu > ul > li:hover > a {
+	background: #feab51; /* Old browsers */
+	background: -moz-linear-gradient(top, #feab51 0%, #f09839 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #feab51), color-stop(100%, #f09839)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #feab51 0%, #f09839 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #feab51 0%, #f09839 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #feab51 0%, #f09839 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #feab51 0%, #f09839 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feab51', endColorstr='#f09839', GradientType=0 ); /* IE6-9 */
+	color:#000000;
+}
+#cssmenu > ul > li.has-sub > a {
+	padding-right: 25px;
+}
+#cssmenu ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 50px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background:#FFF;
+	-moz-box-shadow: 2px 3px 5px #666;
+	-webkit-box-shadow:  2px 3px 5px #666;
+	box-shadow:  2px 3px 5px #666;
+}
+#cssmenu ul ul ul {
+	top: 40px;
+	-moz-border-radiust:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+#cssmenu ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 200px
+}
+#cssmenu > ul > li:hover > ul {
+	left: auto;
+	top: 47px;
+	opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#cssmenu ul ul li a {
+	background: #FFFFFF;
+	border-bottom: 1px dotted #ec6f73;
+	filter: none;
+	font-size: 12px;
+	display: block;
+	line-height: 120%;
+	padding: 10px;
+	color:#222222;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#cssmenu ul ul li:hover > a {
+	background: #543e91;
+	color: #FFFFFF;
+}
+#cssmenu ul ul li:last-child > a, #cssmenu ul ul li.last > a {
+	border-bottom: 0;
+}
+.submenuArrow {
+	border: 6px solid transparent;
+	width: 0;
+	height: 0;
+	border-bottom-color: #fff;
+	position: absolute;
+	top: -12px;
+}
+#cssmenu ul ul li.has-sub::after {
+ border: 4px solid transparent;
+ border-left-color: #500202;
+ right: 10px;
+ top: 12px;
+ -moz-transition: all .2s ease;
+ -ms-transition: all .2s ease;
+ -o-transition: all .2s ease;
+ transition: all .2s ease;
+ -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+#cssmenu ul ul li.has-sub:hover::after {
+ border-left-color: #fff;
+ right: -5px;
+ -webkit-transform: rotateY(180deg);
+ -ms-transform: rotateY(180deg);
+ -moz-transform: rotateY(180deg);
+ -o-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+#cssmenu > ul > li.active > .mask_menu, #cssmenu > ul > li:hover > .mask_menu {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	height: 60px;
+	width: 100%;
+	background: #a25000;
+	transform: skew(-28deg);
+	-webkit-transform: skew(-28deg);
+	-moz-transform: skew(-28deg);
+	-o-transform: skew(-28deg);
+	-ms-transform: skew(-28deg);
+}
+#cssmenu .has-sub .has-sub:hover > ul {
+	display: block;
+}
+#cssmenu .has-sub .has-sub ul {
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+#cssmenu .has-sub .has-sub ul li a {
+	background: #b00c11;
+	border-bottom: 1px dotted #d06d70;
+}
+#cssmenu .has-sub .has-sub ul li a:hover {
+	background: #80090d;
+}

@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kem trị nám</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/jquery.scrollbox.js"></script>
+<script>
+$(function () {
+  $('#demo2').scrollbox({
+    linear: true,
+    step: 1,
+    delay: 0,
+    speed: 30
+  });  
+  var queueNext = 7;
+  (function () {
+    $('#demo6-queue ul').append('<li><p>'+ queueNext +'</p></li>');
+    queueNext++;
+    setTimeout(arguments.callee, 2000 + parseInt(Math.random() * 3000, 10));
+  }());
+});
+</script>
+<!-- Start Camera Slider Scripts -->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script type="text/javascript">
+		jQuery(function(){			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: false,
+            	height: '365px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	hover: false,
+            	loader: 'none',
+            	playPause: false,
+            	pagination: false
+			});			
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {    
+	jQuery('#mycarousel_products, #mycarousel_new_products, #mycarousel_saleoff_products').jcarousel({
+        vertical: true,
+		auto: 3,
+		animation: 1000,
+        scroll: 1,
+		wrap: 'circular',
+    });	
+	jQuery('#mycarousel_other_products').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+		animation: 1000,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });	
+});
+</script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#fade_brand_cosmetic').cycle({timeout:	   2500, fx: "blindX"});
+	$('#fade_brand_perfume').cycle({timeout:	   3500, fx: "wipe"});	
+	});
+
+</script>
+<!--Main Menu-->
+<script>
+    $(function () {
+
+        $('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(500, function () {
+
+            });
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(500, function () {
+
+            });
+        });
+
+
+    })
+        </script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			$("#tabs_detail").tabs("#tabs_dtcontent .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+<!--Zoomin - Zoomout image products-->
+<link rel="stylesheet" type="text/css" href="Styles/highslide.css"/>
+<script type="text/javascript" src="Scripts/highslide.js"></script>
+<script type="text/javascript" src="Scripts/highslide-with-gallery.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = 'Images/';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'glossy-dark';
+hs.wrapperClassName = 'dark';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+// Add the controlbar
+if (hs.addSlideshow) hs.addSlideshow({
+	//slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: .6,
+		position: 'bottom center',
+		hideOnMouseOut: true
+	}
+});
+
+</script>
+<script src='Scripts/crawler.js' type='text/javascript'></script>
+<!--Main Menu-->
+<link rel="stylesheet" href="Styles/dcaccordion.css" charset="utf-8" />
+<script type='text/javascript' src='Scripts/jquery.dcjqaccordion.2.7.min.js'></script>
+<script type="text/javascript">
+$(document).ready(function($){
+					$('#accordion_menu').dcAccordion({						
+						eventType: 'click',
+						autoClose: false,
+						autoExpand:true,
+						saveState: false,
+						disableLink: true,
+						showCount: false,
+						speed: 'fast'
+					});					
+});
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div class="header"> <a href="index.html" class="logo"><img src="Images/logo.jpg" alt="" /></a>
+      <p class="top_link"> <a href="cart.html"><span class="icon_cart"></span>Giỏ hàng [<b>0</b>]</a> | <a href="" id="login">Đăng Nhập</a>
+        </li>
+        | <a href="" id="register">Đăng ký</a> </p>
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="introduction.html" class="parent">Giới thiệu</a> </li>
+        <li><a href="list_products.html">Mỹ phẩm dưỡng da</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">BÀ NỘI TRỢ SÀNH ĐIỆU</a></li>
+            <li><a href="#">Lookbook xuân hè - 2013</a></li>
+            <li><a href="#">BST Thu - Đông 2012</a></li>
+            <li><a href="#">GLAMOROUS COLOR</a></li>
+            <li><a href="#">Enjoy Day</a></li>
+          </ul>
+        </li>
+        <li><a href="list_products.html">Máy làm đẹp da</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Trang điểm</a></li>
+            <li><a href="#">Nước hoa</a></li>
+            <li><a href="list_news.html">Tin tức</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Trang điểm</a></li>
+        <li><a href="#">Nước hoa</a></li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <div class="path"><a href="index.html">Trang chủ</a> &raquo; <a href="list_products.html">Mỹ phẩm dưỡng da</a></div>
+      <!--Detail Products-->
+      <div id="detail_product">
+        <div class="product_slide">
+          <div class="img_general"><a href="Images/Super-EPA-2000-l-NP4W6QG6KY.jpg" class="highslide" onclick="return hs.expand(this)"><img class="img_product" src="Images/Super-EPA-2000-l-NP4W6QG6KY.jpg" alt="" width="350" title="Click vào để xem ảnh lớn!" /></a>
+            <div class="highslide-caption">Super EPA 2000 </div>
+          </div>
+        </div>
+        <div class="dt_infop">
+          <h1 class="h1Title">DR's Secret C15 Essence - Giúp Ngăn Ngừa Lão Hóa & Làm Trắng Da</h1>
+          <p class="dt_des">Son môi màu đậm rất mạnh và quyến rũ. 4g.</p>
+          <div class="dt_code"><span class="codeLabel">Mã số:</span><span class="code_number">12135</span> </div>
+          <div id="bigcolor">
+            <p><b>Chọn màu</b></p>
+            <img width="40" height="40" src="http://vn.oriflame.com/catalog-images/product/global/26908_c.png" class="custom" alt="" />
+            <div id="color_data">
+              <div><span class="proddetLabel"></span> <span class="new-sku proddetHidden">Màu mới!</span> <span class="proddetColor">Liquid Red</span> </div>
+              <div><span class="proddetLabel"> Mã số:</span><span class="proddetCode">26909</span> <span id="bpLabel" class="proddetLabel proddetHidden">, Bp </span><span class="bp proddetHidden">9</span></div>
+            </div>
+          </div>
+          <ul class="color_thumbnails clearfix">
+            <li><a href="http://vn.oriflame.com/catalog-images/product/global/26908_c.png" class="active"><img width="16" height="16" src="http://vn.oriflame.com/catalog-images/product/global/26908_c.png" alt="" /></a> </li>
+            <li><a href="http://vn.oriflame.com/catalog-images/product/global/26910_c.png"><img width="16" height="16" src="http://vn.oriflame.com/catalog-images/product/global/26910_c.png" alt="" /></a> </li>
+            <li><a href="http://vn.oriflame.com/catalog-images/product/global/26907_c.png"><img width="16" height="16" src="http://vn.oriflame.com/catalog-images/product/global/26907_c.png" alt="" /></a> </li>
+            <li><a href="http://vn.oriflame.com/catalog-images/product/global/26906_c.png"><img width="16" height="16" src="http://vn.oriflame.com/catalog-images/product/global/26906_c.png" alt="" /></a> </li>
+            <li><a href="http://vn.oriflame.com/catalog-images/product/global/26909_c.png"><img width="16" height="16" src="http://vn.oriflame.com/catalog-images/product/global/26909_c.png" alt="" /></a></li>
+          </ul>
+          <script src="Scripts/jquery.simpleGal.js"></script>
+          <script>
+  $(document).ready(function () {
+    $('.color_thumbnails').simpleGal({
+      mainImage: '.custom'
+    });
+  });
+  </script>
+          <div id="priceBox">
+            <div id="priceBox-price"> <span class="proddetPrice price discount"> VND 95.000 </span>
+              <p><span class="proddetOrigPrice"> VND 119.000 </span> </p>
+            </div>
+            <div id="priceBox-addToBasket">
+              <div id="priceBox-quantityBox">
+                <div id="priceBox-addToBasket-quantity">Số lượng: </div>
+                <input type="text" onchange="validateNonZeroInteger(this.value,'Please fill in a number in the field!',this);quantity=this.value;" maxlength="3" value="1" id="quantity">
+              </div>
+              <div id="addToBasketButtonWrapper">
+                <script type="text/javascript" language="JavaScript">
+                                        
+                                                    
+                                                    
+                                                    
+                                                            price24752_vi_VN="VND 95.000 "
+                                                        
+                                                
+                                    </script>
+                <script type="text/javascript">
+		//&lt;![CDATA[
+			_isBPVisible = false;
+		//]]&gt;
+		</script>
+                <a onclick="return(validateNonZeroInteger(quantity,'Please fill in a number in the field!',document.getElementById('quantity')));" class="roundedButton" id="addToBasketButton24752_vi_VN" href="javascript:addToBasket('24752_vi_VN',quantity,'catalog',name24752_vi_VN,'/catalog-images/product/global/24752_5.png',price24752_vi_VN,'6.0');">Thêm vào giỏ hàng</a> </div>
+            </div>
+          </div>
+        </div>
+        <div id="dt_toolbar">
+          <!-- proddet - menu - level 3 -->
+          <div class="share-box"> <span class="share-this-label">Chia sẻ trang này:</span>
+            <div class="share-this-iconbox"> <a href="/utils/page-segments/share-this-box.jhtml?sharedUrl=http%3A//vn.oriflame.com%3A80/products/product-detail.jhtml%3FprodCode%3D12135&amp;thumbnail=http%3A//vn.oriflame.com/catalog-images/product/global/12135_2.png&amp;title=colour+ATTRACTION+-+Kiss+Kiss&amp;description=Son+m%C3%B4i+m%C3%A0u+%C4%91%E1%BA%ADm+r%E1%BA%A5t+m%E1%BA%A1nh+v%C3%A0+quy%E1%BA%BFn+r%C5%A9.+4g." class="share-this-button cboxElement"> <img src="Images/email-icon-grey.jpg"> <img src="Images/blog-icon-grey.jpg"> <img src="Images/facebook-icon-grey.jpg"> <img src="Images/twitter-icon-grey.jpg"> </a> </div>
+          </div>
+          <div class="iconLinksBox">
+            <div id="insideBorder"> <a href="javascript:window.print();" class="print">In ra này</a> </div>
+          </div>
+        </div>
+      </div>
+      <!--Tab Products 01-->
+      <div class="box">
+        <div class="tab_nav">
+          <ul id="tabs_detail">
+            <li><a class="current" href="#" title="Mô tả">Mô tả</a></li>
+            <li><a class="current" href="#" title="Công dụng">Công dụng</a></li>
+            <li><a href="#" title="Hướng sẫn sử dụng">Hướng sẫn sử dụng</a></li>
+          </ul>
+        </div>
+        <div id="tabs_dtcontent">
+          <div class="section">
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ   giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách   nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối.   Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm   cho làn da mượt mà và tươi trẻ.</p>
+            <div class="file_attachments">
+              <h4> File đính kèm</h4>
+              <ul>
+                <li><img width="24px" style="float:left; margin-right:10px;height:19px" src="http://beta.shp.vn/data/ext_files/9/pdf.gif"><a title="BCTC QUÝ 3 - 2013" target="_blank" href="/data/news/1635/BCTC Q3 2013.pdf">Filedinhkem.pdf</a></li>
+                <li><img width="24px" style="float:left; margin-right:10px;height:19px" src="http://beta.shp.vn/data/ext_files/9/pdf.gif"><a title="BCTC QUÝ 3 - 2013" target="_blank" href="/data/news/1635/BCTC Q3 2013.pdf">Filedinhkem.pdf</a></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="section">
+            <ul>
+              <li> Sữa rửa mặt giúp làm sạch bụi bẩn, chất cặn bã, tế bào chết trên da mặt</li>
+              <li> Không chứa chất tẩy mạnh nên không làm khô ráp da</li>
+              <li> Chứa vitamin C và tinh chất nha đam, giúp làm sáng và dưỡng ẩm cho da</li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="section">
+            <div>
+              <div>
+                <ul>
+                  <li> Làm ướt mặt với nước</li>
+                  <li> Cho DR’s Secret Cleanser vào lòng bàn tay ướt (khoảng đường tròn 1.5cm)</li>
+                  <li> Tạo một ít bọt. Thoa đều lên mặt kết hợp chuyển động tròn</li>
+                  <li> Rửa lại bằng nước sạch. Lau khô da bằng khăn giấy mềm</li>
+                </ul>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div id="more_tab">
+            <script type="text/javascript" language="JavaScript">
+				selectedcolorName = "26908"
+				vUrlSC = "/products/catalogue/eshop/stock-status.jhtml?color=";
+				vWindowNameSC = "StockStatus";
+				vWindowFeaturesSC = "width=450,height=200,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,copyhistory=no";
+			</script>
+            <h4>Khuyến mãi</h4>
+            <ul>
+              <li><a href="/products/catalogue-viewer.jhtml">Xem Catolog mới</a></li>
+              <li class="last-li"><a href="/products/best-offers.jhtml?prodCat="> ƯU ĐÃI ĐẶC BIỆT</a></li>
+            </ul>
+            <h4>Công cụ</h4>
+            <ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--End Tab Products 01-->
+      <!-- Jquery The same Products -->
+      <div class="box">
+        <div class="box_Tab_index"><span>Các sản phẩm khác</span></div>
+        <div id="thesame_cate_P">
+          <ul id="mycarousel_other_products" class="jcarousel-skin-tango">
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li class="item">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="pro_detail.html"><img src="Images/best_selling.jpg" width="170" height="170" alt="" /></a></div>
+                <h3 class="product_name"><a href="pro_detail.html" title="Coco Mademoiselle Parfum (Tinh dầu)">Coco Mademoiselle Parfum (Tinh dầu)</a></h3>
+                <div class="f_price">1.250.000 VNĐ</div>
+                <div class="price">1.050.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Jquery The same Products-->
+      <!--End Detail Products-->
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <div id="sticker">
+    <div id="beforefooter-support">
+      <div class="wraper">
+        <div class="transport">Giao hàng trước, thanh toán sau, <span style="font-size: 14px; font-weight: 700"><span style="font-size: 18px">Miễn phí</span> vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước</span></div>
+        <div class="hotline"><span class="hotline_icon"></span>01243456789</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+$(document).ready(function() {
+	var s = $("#sticker");
+	var pos = s.position();	
+	var stickermax = $(document).outerHeight() - $("#footer").outerHeight() - s.outerHeight() - 1000; //40 value is the total of the top and bottom margin
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		//s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+		if (windowpos <= pos.top && windowpos < stickermax) {
+			s.attr("style", ""); //kill absolute positioning
+			s.addClass("stick"); //stick it
+		} else if (windowpos >= stickermax) {
+			s.removeClass(); //un-stick
+			s.css({position: "relative"}); //set sticker right above the footer
+			
+		} else {
+			s.removeClass(); //top of page
+		}
+	});
+	//alert(stickermax); //uncomment to show max sticker postition value on doc.ready
+});
+</script>
+  <!--Footer-->
+  <div class="footer">
+    <div class="menu_footer"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Mỹ phẩm dưỡng da</a><a href="">Máy làm đẹp da</a><a href="">Thực phẩm chức năng</a><a href="">Khuyến mãi</a><a href="">Hỏi đáp</a><a href="">Trang điểm</a><a href="">Nước hoa</a><a href="">Tin tức</a><a href="">Liên hệ</a></div>
+    <!--Menu Footer-->
+    <div class="topmenu_footer">
+      <div class="col_menuFooter" id="social_network">
+        <h3>Hãy tìm chúng tôi trên:</h3>
+        <div class="ctentColuMenuFooter"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a><a href=""> <span class="icon_rss"></span></a> <a href=""><span class="icon_gplus"></span></a> </div>
+      </div>
+      <div class="col_menuFooter" id="access_status">
+        <h3>Thống kê truy cập</h3>
+        <div class="ctentColuMenuFooter">
+          <!--Access Status-->
+          <p>Hôm qua: <b>71</b></p>
+          <p>Đang online: <b>71</b></p>
+          <p>Tổng truy cập: <b>471 000</b></p>
+          <!--End Access Status-->
+        </div>
+      </div>
+      <div class="col_menuFooter" id="link_web">
+        <h3>Liên kết web:</h3>
+        <div class="ctentColuMenuFooter">
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="transport">
+        <div class="ctentColuMenuFooter">
+          <p><img src="Images/Travel-Airplane-icon.png" alt="" class="img_general"  />Giao hàng trước, thanh toán sau, Miễn phí vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--End Menu Footer-->
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Kem trị nám</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/jquery.scrollbox.js"></script>
+<script>
+$(function () {
+  $('#demo2').scrollbox({
+    linear: true,
+    step: 1,
+    delay: 0,
+    speed: 30
+  });  
+  var queueNext = 7;
+  (function () {
+    $('#demo6-queue ul').append('<li><p>'+ queueNext +'</p></li>');
+    queueNext++;
+    setTimeout(arguments.callee, 2000 + parseInt(Math.random() * 3000, 10));
+  }());
+});
+</script>
+<!-- Start Camera Slider Scripts -->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<!--<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>-->
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script type="text/javascript">
+		jQuery(function(){			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: false,
+            	height: '365px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	hover: false,
+            	loader: 'none',
+            	playPause: false,
+            	pagination: false
+			});			
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {    
+	jQuery('#mycarousel_products, #mycarousel_new_products, #mycarousel_saleoff_products').jcarousel({
+        vertical: true,
+		auto: 3,
+		animation: 1000,
+        scroll: 1,
+		wrap: 'circular',
+    });	
+});
+</script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#fade_brand_cosmetic').cycle({timeout:	   2500, fx: "blindX"});
+	$('#fade_brand_perfume').cycle({timeout:	   3500, fx: "wipe"});	
+	});
+
+</script>
+<!--Main Menu-->
+<script>
+    $(function () {
+
+        $('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(500, function () {
+
+            });
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(500, function () {
+
+            });
+        });
+
+
+    })
+        </script>
+<!--Catalogue-->
+<link rel="stylesheet" type="text/css" href="Styles/bookblock.css" />
+<script src="Scripts/modernizr.custom.js"></script>
+<script src="Scripts/jquery.bookblock.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div class="header"> <a href="index.html" class="logo"><img src="http://tympanus.net/Tutorials/MoleskineNotebook/images/logo.jpg" alt="" /></a>
+      <p class="top_link"> <a href="cart.html"><span class="icon_cart"></span>Giỏ hàng [<b>0</b>]</a> | <a href="" id="login">Đăng Nhập</a>
+        </li>
+        | <a href="" id="register">Đăng ký</a> </p>
+      <div class="search">
+        <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="introduction.html" class="parent">Giới thiệu</a> </li>
+        <li><a href="list_products.html">Mỹ phẩm dưỡng da</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">BÀ NỘI TRỢ SÀNH ĐIỆU</a></li>
+            <li><a href="#">Lookbook xuân hè - 2013</a></li>
+            <li><a href="#">BST Thu - Đông 2012</a></li>
+            <li><a href="#">GLAMOROUS COLOR</a></li>
+            <li><a href="#">Enjoy Day</a></li>
+          </ul>
+        </li>
+        <li><a href="list_products.html">Máy làm đẹp da</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Trang điểm</a></li>
+            <li><a href="#">Nước hoa</a></li>
+            <li><a href="list_news.html">Tin tức</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Trang điểm</a></li>
+        <li><a href="#">Nước hoa</a></li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <div class="path"><a href="index.html">Trang chủ</a> &raquo; <a href="catalogue.html">Catalogue</a></div>
+      <!--Cart-->
+      <div class="box">
+        <!-- proddet - menu - level 3 -->
+        <div class="share-box"> <span class="share-this-label">Chia sẻ trang này:</span>
+          <div class="share-this-iconbox"> <a href="/utils/page-segments/share-this-box.jhtml?sharedUrl=http%3A//vn.oriflame.com%3A80/products/product-detail.jhtml%3FprodCode%3D12135&amp;thumbnail=http%3A//vn.oriflame.com/catalog-images/product/global/12135_2.png&amp;title=colour+ATTRACTION+-+Kiss+Kiss&amp;description=Son+m%C3%B4i+m%C3%A0u+%C4%91%E1%BA%ADm+r%E1%BA%A5t+m%E1%BA%A1nh+v%C3%A0+quy%E1%BA%BFn+r%C5%A9.+4g." class="share-this-button cboxElement"> <img src="Images/email-icon-grey.jpg"> <img src="Images/blog-icon-grey.jpg"> <img src="Images/facebook-icon-grey.jpg"> <img src="Images/twitter-icon-grey.jpg"> </a> </div>
+        </div>
+        <!--Catalogue-->
+        <div class="bb-custom-wrapper">
+          <div id="bb-bookblock" class="bb-bookblock">
+            <div class="bb-item"> <a href="http://drbl.in/bKVq"><img src="Images/catalogue1.jpg" alt="image01"/></a> </div>
+            <div class="bb-item"> <a href="http://drbl.in/ciTX"><img src="Images/catalogue2.jpg" alt="image02"/></a> </div>
+            <div class="bb-item"> <a href="http://drbl.in/cLHx"><img src="Images/catalogue3.jpg" alt="image03"/></a> </div>
+            <div class="bb-item"> <a href="http://drbl.in/bAfn"><img src="Images/catalogue4.jpg" alt="image04"/></a> </div>
+            <div class="bb-item"> <a href="http://drbl.in/dcbE"><img src="Images/catalogue5.jpg" alt="image05"/></a> </div>
+            <div class="bb-item"> <a href="http://drbl.in/bAfn"><img src="Images/catalogue6.jpg" alt="image06"/></a> </div>
+            <div class="bb-item"> <a href="http://drbl.in/dcbE"><img src="Images/catalogue7.jpg" alt="image07"/></a> </div>
+          </div>
+          <div class="nav"> <a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a> <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a> <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a> <a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a> </div>
+          <div class="bb-button"> <a id="bb-nav-prev-1" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a> <a id="bb-nav-next-1" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a></div>
+        </div>
+        <style type="text/css">
+#strip-wrapper {
+    position: relative;
+	margin-top: -8px;
+	display: none;
+}
+
+#strip-wrapper #pager-wrapper {
+    height: 16px;
+    margin: 0 auto;
+    overflow: auto;
+    width: 700px;
+}
+#strip-wrapper #pager {
+    float: right;
+    margin-right: 20px;
+}
+
+#strip-wrapper #strip {
+    margin: 0 auto;
+    min-height: 220px;
+    overflow: auto;
+    width: 760px;
+}
+#strip-wrapper #strip #stripMoveBtnL, #strip-wrapper #strip #stripMoveBtnR {
+    cursor: pointer;
+    float: left;
+    height: 100px;
+    width: 30px;
+}
+#strip-wrapper #strip #stripMoveBtnL {
+    background: url("Images//viewerStripBtnL.png") no-repeat scroll 5px 50px rgba(0, 0, 0, 0);
+}
+#strip-wrapper #strip #stripMoveBtnR {
+    background: url("Images//viewerStripBtnR.png") no-repeat scroll 11px 50px rgba(0, 0, 0, 0);
+}
+#strip-wrapper #prodlist-list-wrapper {
+    float: left;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 700px;
+}
+#strip-wrapper ul#prodlist-list {
+    display: inline-block;
+	width: 560px;
+    height: 220px;
+    position: relative;
+}
+
+#strip-wrapper ul#prodlist-list li.prod-item {
+    float: left;
+    height: 220px;
+    margin: 0 10px;
+    overflow: hidden;
+    width: 120px;
+	position: relative;
+}
+
+#strip-wrapper #prodlist-list li.prod-item .img-centered-strip {
+    cursor: pointer;
+    font-size: 8px;
+    height: 120px;
+    line-height: 90px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    width: 120px;
+}
+
+#strip-wrapper #prodlist-list li.prod-item h4 {
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 10px;
+    text-align: center;
+}
+#strip-wrapper #prod-detail-wrapper {
+    bottom: 230px;
+    left: 0;
+	display: none;
+    position: absolute;
+	z-index: 999;
+}
+
+.flippCat #cat-curtain.active {
+    background: url("http://vn.oriflame.com/image/common/transparent-png/white-20.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 520px;
+    left: 0;
+    position: absolute;
+    top: -520px;
+    width: 980px;
+}
+.prod-info-bubble .prod_item_ct, #strip-wrapper .prod_item_ct, #predictorItems .prod_item_ct {
+    background: url("http://vn.oriflame.com/image/prod/viewerProdDetBg_top.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    width: 369px;
+	display: none
+}
+
+.prod-info-bubble .prod-detail-inside, #strip-wrapper .prod-detail-inside, #predictorItems .prod-detail-inside {
+    background: url("http://vn.oriflame.com/image/prod/viewerProdDetBg_bottom.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+    display: inline-block;
+    margin-top: 4px;
+    overflow: auto;
+    padding: 12px 10px 50px;
+    position: relative;
+    width: 349px;
+}
+
+.prod-info-bubble .prod-detail .deleteBtn, #strip-wrapper .prod-detail .deleteBtn, #predictorItems .prod-detail .deleteBtn {
+    background: url("Images//close-ico-bw.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    height: 12px;
+    position: absolute;
+    right: 8px;
+    top: 1px;
+    width: 12px;
+}
+.prod-info-bubble .prod-detail .leftCol, #strip-wrapper .prod-detail .leftCol, #predictorItems .prod-detail .leftCol {
+    float: left;
+}
+
+.prod-info-bubble .prod-detail .leftCol a, #strip-wrapper .prod-detail .leftCol a, #predictorItems .prod-detail .leftCol a {
+    display: inline-block;
+    height: 140px;
+    margin-right: 10px;
+    outline-style: none;
+    outline-width: medium;
+    overflow: hidden;
+    text-decoration: none;
+    width: 140px;
+}
+
+.prod-info-bubble .prod-detail .rightCol, #strip-wrapper .prod-detail .rightCol, #predictorItems .prod-detail .rightCol {
+    float: right;
+    width: 189px;
+}
+
+.prod-info-bubble .prod-detail h5, #strip-wrapper .prod-detail h5, #predictorItems .prod-detail h5 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.prod-info-bubble .prod-detail p.code, #strip-wrapper .prod-detail p.code, #predictorItems .prod-detail p.code {
+    color: #999999;
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+
+.prod-info-bubble .prod-detail p.code span, #strip-wrapper .prod-detail p.code span, #predictorItems .prod-detail p.code span {
+    margin-right: 2px;
+}
+.prod-info-bubble .prod-detail p.description, #strip-wrapper .prod-detail p.description, #predictorItems .prod-detail p.description {
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.prod-info-bubble .prod-detail .p-proddetUnitPrice, #strip-wrapper .prod-detail .p-proddetUnitPrice, #predictorItems .prod-detail .p-proddetUnitPrice {
+    font-size: 11px;
+    padding: 0;
+    text-align: left;
+}
+
+.prod-info-bubble .prod-detail .proddetPrice, #strip-wrapper .prod-detail .proddetPrice, #predictorItems .prod-detail .proddetPrice {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+	color: #CC0033
+}
+.prod-info-bubble .prod-detail .proddetOrigPrice, #strip-wrapper .prod-detail .proddetOrigPrice, #predictorItems .prod-detail .proddetOrigPrice {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0;
+    text-align: left;
+    text-decoration: line-through;
+	color: ##333333
+}
+.prod-info-bubble .prod-detail p.add-to-basket, #strip-wrapper .prod-detail p.add-to-basket, #predictorItems .prod-detail p.add-to-basket {
+    float: right;
+    margin-top: 10px;
+}
+</style>
+        <script>
+$(function(){
+    $('.bb-custom-icon').click(function(){
+        $('#strip-wrapper').css("display","block");
+    });
+	
+    $('#strip-wrapper ul#prodlist-list li.prod-item').each(function(){
+        $(this).click(function(){
+		var l = $(this).position();
+        $('#strip-wrapper #prod-detail-wrapper').css({
+			display: 'block',
+			left: l.left + 100
+		});
+		var rs = $('#strip-wrapper ul#prodlist-list li.prod-item .prod_item_ct').html();
+		$('#strip-wrapper #prod-detail-wrapper').html(rs);
+    	});		
+    });
+	
+	$('#strip-wrapper .prod-detail .deleteBtn').click(function(){
+        $('#strip-wrapper #prod-detail-wrapper').css("display","none");
+    });
+});
+</script>
+        <div id="strip-wrapper">
+          <!-- product-fill-list -->
+          <!-- product-fill-list -->
+          <div id="pager-wrapper">
+            <div id="pager"></div>
+          </div>
+          <div id="strip">
+            <div id="stripMoveBtnL" style="visibility: hidden;"></div>
+            <div id="prodlist-list-wrapper">
+              <ul class="strip" id="prodlist-list" style="width: 560px;">
+                <li id="26644_vi_VN" class="prod-item" style="">
+                  <div class="img-centered-strip"><img align="absmiddle" alt="Optimals White Oxygen Boost Day Cream SPF15" title="Optimals White Oxygen Boost Day Cream SPF15" class="center" src="http://vn.oriflame.com/catalog-images/product/global/26644_4.png"></div>
+                  <h4>Optimals White Oxygen Boost Day Cream SPF15</h4>
+                  <div class="prod_item_ct">
+                    <div class="prod-detail">
+                      <div class="prod-detail-inside">
+                        <div title="Đóng" class="deleteBtn"></div>
+                        <div class="leftCol"> <a class="a-img-prodlist-l" href="/products/product-detail.jhtml?prodCode=26644"> <img align="absmiddle" alt="Optimals White Oxygen Boost Day Cream SPF15" title="Optimals White Oxygen Boost Day Cream SPF15" class="center exclPngFix" src="http://vn.oriflame.com/catalog-images/product/global/26644_3.png"> &nbsp; </a> </div>
+                        <div class="rightCol">
+                          <h5><a target="_top" href="/products/product-detail.jhtml?prodCode=26644"> Optimals White Oxygen Boost Day Cream SPF15 </a></h5>
+                          <p class="code"><span class="label">Mã số:</span><span class="proddetCode">26644</span><span style="display : none;" class="selectedSkuRepId">26644_vi_VN</span> <span class="label"></span><span class="bp"></span> </p>
+                          <p class="description">Kem dưỡng da ban ngày dành cho da thường hoặc da hỗn hợp, giúp tăng cường oxy, cho làn da cảm giác tươi mới đầy sức sống. 50ml</p>
+                          <div class="priceBox">
+                            <p><span class="proddetPrice">VND 199.000 </span></p>
+                            <p><span class="proddetOrigPrice">VND 339.000 </span> </p>
+                          </div>
+                          <p class="add-to-basket"> <a class="roundedButton addToBasketButton" id="addToBasketButton26644_vi_VN" href="javascript:addToBasket('26644_vi_VN',1,'catalog',name26644_vi_VN,'/catalog-images/product/global/26644_5.png',price26644_vi_VN,'12.0');"><span>Thêm vào giỏ hàng</span></a>
+                            <!--a class="roundedButton addToBasketButton" href="javascript:addToBasket(selectedSkuId,1,'catalog',`"name"+request.getParameter("product.skuId")`,'`request.getParameter("product.size5Image")`');">
+				<span><valueof bean="tr.literal.product_list_large_addToBasket" ></valueof></span>
+			</a-->
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li id="26841_vi_VN" class="prod-item">
+                  <div class="img-centered-strip"><img align="absmiddle" alt="Optimals White Oxygen Boost Night Cream" title="Optimals White Oxygen Boost Night Cream" class="center" src="http://vn.oriflame.com/catalog-images/product/global/26841_4.png"></div>
+                  <h4>Optimals White Oxygen Boost Night Cream</h4>
+                  <div class="prod_item_ct">
+                    <div class="prod-detail">
+                      <div class="prod-detail-inside">
+                        <div title="Đóng" class="deleteBtn"></div>
+                        <div class="leftCol"> <a class="a-img-prodlist-l" href="/products/product-detail.jhtml?prodCode=25206"> <img align="absmiddle" alt="Optimals Even Out Day Cream SPF20" title="Optimals Even Out Day Cream SPF20" class="center exclPngFix" src="/catalog-images/product/global/25206_3.png"> &nbsp; </a> </div>
+                        <div class="rightCol">
+                          <h5><a target="_top" href="/products/product-detail.jhtml?prodCode=25206"> Optimals Even Out Day Cream SPF20 </a></h5>
+                          <p class="code"><span class="label">Mã số:</span><span class="proddetCode">25206</span><span style="display : none;" class="selectedSkuRepId">25206_vi_VN</span> <span class="label"></span><span class="bp"></span> </p>
+                          <p class="description">Kem dưỡng ban ngày giúp làm giảm các đốm nám và hạn chế tối đa sự sạm màu da do tác hại của tia UV từ ánh nắng mặt trời. 50ml</p>
+                          <div class="priceBox">
+                            <p><span class="proddetPrice">VND 259.000 </span></p>
+                            <p> <span class="proddetDiscount proddetHidden">true</span> <span class="proddetOrigPrice">VND 439.000 </span> </p>
+                            <p class="p-proddetUnitPrice"> <span class="proddetUnitPriceVisible proddetHidden">false</span> <span class="proddetUnitPrice"> <strong>Giá đơn vị</strong> VND 0  / </span> </p>
+                          </div>
+                          <p class="add-to-basket"> <a class="roundedButton addToBasketButton" id="addToBasketButton25206_vi_VN" href="javascript:addToBasket('25206_vi_VN',1,'catalog',name25206_vi_VN,'/catalog-images/product/global/25206_5.png',price25206_vi_VN,'15.0');"><span>Thêm vào giỏ hàng</span></a>
+                            <!--a class="roundedButton addToBasketButton" href="javascript:addToBasket(selectedSkuId,1,'catalog',`"name"+request.getParameter("product.skuId")`,'`request.getParameter("product.size5Image")`');">
+				<span><valueof bean="tr.literal.product_list_large_addToBasket" ></valueof></span>
+			</a-->
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li id="26650_vi_VN" class="prod-item">
+                  <div class="img-centered-strip"><img align="absmiddle" alt="Optimals White Foaming Gel" title="Optimals White Foaming Gel" class="center" src="/image/prod/img_missing_4.png"></div>
+                  <h4>Optimals White Foaming Gel</h4>
+                  <div class="prod_item_ct"></div>
+                </li>
+                <li id="26651_vi_VN" class="prod-item">
+                  <div class="img-centered-strip"><img align="absmiddle" alt="Optimals White Balancing Toner" title="Optimals White Balancing Toner" class="center" src="/image/prod/img_missing_4.png"></div>
+                  <h4>Optimals White Balancing Toner</h4>
+                  <div class="prod_item_ct"></div>
+                </li>
+              </ul>
+            </div>
+            <div id="stripMoveBtnR" style="visibility: hidden;"></div>
+          </div>
+          <div id="cat-curtain" class="active"></div>
+          <div id="prod-detail-wrapper">
+            <div class="temp"></div>
+          </div>
+        </div>
+        <script>
+			var Page = (function() {
+				
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '#bb-nav-next' ),
+						$navPrev : $( '#bb-nav-prev' ),
+						$navNext1 : $( '#bb-nav-next-1' ),
+						$navPrev1 : $( '#bb-nav-prev-1' ),
+						$navFirst : $( '#bb-nav-first' ),
+						$navLast : $( '#bb-nav-last' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 800,
+							shadowSides : 0.8,
+							shadowFlip : 0.7
+						} );
+						initEvents();
+					},
+					initEvents = function() {
+						
+						var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+						config.$navNext1.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+						config.$navPrev1.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+			})();
+		</script>
+        <script>
+				Page.init();
+		</script>
+        <!--End Catalogue-->
+        <div class="clearfix"></div>
+      </div>
+      <!--End Cart-->
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <div id="sticker">
+    <div id="beforefooter-support">
+      <div class="wraper">
+        <div class="transport">Giao hàng trước, thanh toán sau, <span style="font-size: 14px; font-weight: 700"><span style="font-size: 18px">Miễn phí</span> vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước</span></div>
+        <div class="hotline"><span class="hotline_icon"></span>01243456789</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+$(document).ready(function() {
+	var s = $("#sticker");
+	var pos = s.position();	
+	var stickermax = $(document).outerHeight() - $("#footer").outerHeight() - s.outerHeight() - 1000; //40 value is the total of the top and bottom margin
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		//s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+		if (windowpos <= pos.top && windowpos < stickermax) {
+			s.attr("style", ""); //kill absolute positioning
+			s.addClass("stick"); //stick it
+		} else if (windowpos >= stickermax) {
+			s.removeClass(); //un-stick
+			s.css({position: "relative"}); //set sticker right above the footer
+			
+		} else {
+			s.removeClass(); //top of page
+		}
+	});
+	//alert(stickermax); //uncomment to show max sticker postition value on doc.ready
+});
+</script>
+  <!--Footer-->
+  <div class="footer">
+    <div class="menu_footer"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Mỹ phẩm dưỡng da</a><a href="">Máy làm đẹp da</a><a href="">Thực phẩm chức năng</a><a href="">Khuyến mãi</a><a href="">Hỏi đáp</a><a href="">Trang điểm</a><a href="">Nước hoa</a><a href="">Tin tức</a><a href="">Liên hệ</a></div>
+    <!--Menu Footer-->
+    <div class="topmenu_footer">
+      <div class="col_menuFooter" id="social_network">
+        <h3>Hãy tìm chúng tôi trên:</h3>
+        <div class="ctentColuMenuFooter"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a><a href=""> <span class="icon_rss"></span></a> <a href=""><span class="icon_gplus"></span></a> </div>
+      </div>
+      <div class="col_menuFooter" id="access_status">
+        <h3>Thống kê truy cập</h3>
+        <div class="ctentColuMenuFooter">
+          <!--Access Status-->
+          <p>Hôm qua: <b>71</b></p>
+          <p>Đang online: <b>71</b></p>
+          <p>Tổng truy cập: <b>471 000</b></p>
+          <!--End Access Status-->
+        </div>
+      </div>
+      <div class="col_menuFooter" id="link_web">
+        <h3>Liên kết web:</h3>
+        <div class="ctentColuMenuFooter">
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="transport">
+        <div class="ctentColuMenuFooter">
+          <p><img src="http://tympanus.net/Tutorials/MoleskineNotebook/images/Travel-Airplane-icon.png" alt="" class="img_general"  />Giao hàng trước, thanh toán sau, Miễn phí vận chuyển trong vòng 24h tại TP.HCM và các tỉnh trong cả nước </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--End Menu Footer-->
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

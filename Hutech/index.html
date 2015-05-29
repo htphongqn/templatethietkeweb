@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Hutech</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Start Nivo Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<!-- Start Slider Scripts -->
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+       $('#slider').nivoSlider({
+    		effect: 'fade'         // Triggers when slider has loaded
+		});
+    });
+    </script>
+<!--Slide Partners-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+	jQuery('#mycarousel').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+<!--Text vertical-->
+<script type="text/javascript" src="//use.typekit.net/fgp8fas.js?b=1"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="Scripts/jquery.vticker.js"></script>
+</script>
+<script>
+  $(function() {
+    $('#vTicker').vTicker('init', {mousePause:false});
+  });
+</script>
+<!---Hoz menu-->
+<link type="text/css" href="Styles/menu_hoz.css" rel="stylesheet" />
+<script type="text/javascript" src="Scripts/menu_hoz.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("body div:last").remove();
+});
+</script>
+<!--Scroll-->
+<link type="text/css" href="Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<!-- the mousewheel plugin -->
+<script type="text/javascript" src="Scripts/jquery.mousewheel.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="Scripts/jquery.jscrollpane.min.js"></script>
+<!-- scripts specific to this demo site -->
+<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!--Images gallery-->
+<link rel="stylesheet" href="Styles/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<script src="Scripts/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".image_gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'pp_default',slideshow:3000, autoplay_slideshow: false});
+				$(".image_gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:600px; height:504px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+			</script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_index').children('li');					
+
+			$("#tabs_index").tabs("#tabs_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Support-->
+  <div class="support_head"><span class="title_support"></span>
+    <div class="support_bg tip">
+      <p class="optionSupport">Hỗ trợ trực tuyến </a> </p>
+      <span class="icoMail"></span>
+      <p class="mailSupport">info@phuongnam.com</p>
+      <div class="yahoo"> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a> <a href="ymsgr:sendim?hotro_nhommuahcm2"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=1" style="margin-right:4px"> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> </div>
+    </div>
+  </div>
+  <!--End Support-->
+  <div class="page_inner">
+    <!--Header-->
+    <div class="header"> <a href="index.html" class="logo"><img src="Images/logo.png" alt="" height="120" /></a>
+      <div class="banner_header">
+        <div class="banner_hBg"></div>
+        <img src="Images/slide_h01.jpg" alt="" /> </div>
+      <p class="hotline">
+        <label>Hotline:</label>
+        <span>Hiệp - 0938 144 999<br />
+        Giàu - 0917 367 115</span></p>
+      <div class="search">
+        <input type="text" class="input_Search" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+      <p class="language"><a href="" class="vn_icon"></a><a href="" class="en_icon"></a></p>
+    </div>
+    <!--End Header-->
+    <!--Main Menu-->
+    <div id="menu">
+      <ul class="menu">
+        <li class="home"><a href="index.html" class="parent"><span>Trang chủ</span></a>
+          <div>
+            <ul>
+              <li><a href="#" class="parent"><span>Sub Item 1 </span></a>
+                <div>
+                  <ul>
+                    <li><a href="#" class="parent"><span>Sub Item 1.1 Sub Item 1.1.1</span></a>
+                      <div>
+                        <ul>
+                          <li><a href="#"><span>Sub Item 1.1.1</span></a></li>
+                          <li><a href="#"><span>Sub Item 1.1.2</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><a href="#"><span>Sub Item 1.2</span></a></li>
+                    <li><a href="#"><span>Sub Item 1.3</span></a></li>
+                    <li><a href="#"><span>Sub Item 1.4</span></a></li>
+                    <li><a href="#"><span>Sub Item 1.5</span></a></li>
+                    <li><a href="#"><span>Sub Item 1.6</span></a></li>
+                    <li><a href="#" class="parent"><span>Sub Item 1.7</span></a>
+                      <div>
+                        <ul>
+                          <li><a href="#"><span>Sub Item 1.7.1</span></a></li>
+                          <li><a href="#"><span>Sub Item 1.7.2</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#"><span>Giới thiệu</span></a></li>
+              <li><a href="#"><span>Sub Item 3</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#" class="parent"><span>Giới thiệu</span></a>
+          <div>
+            <ul>
+              <li><a href="#" class="parent"><span>Sub Item 1</span></a>
+                <div>
+                  <ul>
+                    <li><a href="#"><span>Sub Item 1.1</span></a></li>
+                    <li><a href="#"><span>Sub Item 1.2</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#" class="parent"><span>Sub Item 2</span></a>
+                <div>
+                  <ul>
+                    <li><a href="#"><span>Sub Item 2.1</span></a></li>
+                    <li><a href="#"><span>Sub Item 2.2</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#"><span>Sub Item 3</span></a></li>
+              <li><a href="#"><span>Sub Item 4</span></a></li>
+              <li><a href="#"><span>Sub Item 5</span></a></li>
+              <li><a href="#"><span>Sub Item 6</span></a></li>
+              <li><a href="#"><span>Sub Item 7</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="news_detail.html"><span>Dự án</span></a></li>
+        <li><a href="list_news.html"><span>Tin tức</span></a></li>
+        <li><a href="list_projects.html"><span>Thư viện tài liệu</span></a></li>
+        <li><a href="#"><span>Hỏi đáp</span></a></li>
+        <li><a href="#"><span>Tuyển dụng</span></a></li>
+        <li class="last"><a href="#"><span>Liên hệ</span></a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <div class="top_main">
+      <!--Banner-->
+      <div class="slider-wrapper theme-pascal">
+        <div id="slider" class="nivoSlider"> <a href="http://viva-vietnam.blogspot.com"><img src="Images/slide_01.jpg" alt="" title="Một số quy định về đối tượng, điều kiện và thành phần hồ sơ đề nghị thuê, thuê mua nhà ở xã hội thuộc sở hữu nhà nước 1"/></a> <a href="http://shareallworld.info/search/label/Tourist"><img src="Images/slide_02.jpg" alt="" title="Một số quy định về đối tượng, điều kiện và thành phần hồ sơ đề nghị thuê, thuê mua nhà ở xã hội thuộc sở hữu nhà nước 02" /></a> <a href="http://shareallworld.info/search/label/Movies"><img src="Images/slide_03.jpg" alt="" title="Một số quy định về đối tượng, điều kiện và thành phần hồ sơ đề nghị thuê, thuê mua nhà ở xã hội thuộc sở hữu nhà nước 03"/></a> <a href="http://shareallworld.info/search/label/MMO"><img src="Images/slide_04.jpg" alt="" title="Một số quy định về đối tượng, điều kiện và thành phần hồ sơ đề nghị thuê, thuê mua nhà ở xã hội thuộc sở hữu nhà nước04" /></a> </div>
+      </div>
+      <!--End Banner-->
+      <div class="right_top">
+        <!--Tab news-->
+        <div class="nav">
+          <ul id="tabs_index">
+            <li class="nav_f"><a class="current" href="#" title="Tin mới">Tin mới</a></li>
+            <li><a href="#" title="Văn bản Pháp luật">Văn bản Pháp luật</a></li>
+            <li><a href="#" title="Tiêu chuẩn Quy chuẩn">Tiêu chuẩn Quy chuẩn</a></li>
+          </ul>
+        </div>
+        <div id="tabs_content">
+          <div class="section scroll-pane">
+            <ul class="news_index">
+              <li class="item"> <a href="detail_news.html">Đại gia Phương Nam giao hàng chục nghìn m2 đất cho con</a></li>
+              <li class="item"> <a href="detail_news.html">Giá vàng xuống đáy 5 tháng</a></li>
+              <li class="item"> <a href="detail_news.html">Tổ chức Mrs. World nhận lỗi vì ghi sai tên Việt Nam  160</a></li>
+              <li class="item"> <a href="detail_news.html">Rối loạn mỡ máu, bệnh chết người thầm lặng</a></li>
+              <li class="item"> <a href="detail_news.html">Thí sinh Top Model ngã lộn cổ vì bắt chước diễn viên xiếc</a></li>
+              <li class="item"> <a href="detail_news.html">Man City làm nhục Tottenham</a></li>
+              <li class="item"> <a href="detail_news.html">Gần trăm người bị tạm giữ tại quán bar  33</a></li>
+              <li class="item"> <a href="detail_news.html">Pierre Bourdieu với thuyết cấu trúc phát</a></li>
+              <li class="item"> <a href="detail_news.html">Đại gia Phương Nam giao hàng chục nghìn m2 đất cho con</a></li>
+              <li class="item"> <a href="detail_news.html">Giá vàng xuống đáy 5 tháng</a></li>
+              <li class="item"> <a href="detail_news.html">Tổ chức Mrs. World nhận lỗi vì ghi sai tên Việt Nam  160</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="section scroll-pane">
+            <ul class="news_index">
+              <li class="item"> <a href="detail_news.html">Đại gia Phương Nam giao hàng chục nghìn m2 đất cho con</a></li>
+              <li class="item"> <a href="detail_news.html">Giá vàng xuống đáy 5 tháng</a></li>
+              <li class="item"> <a href="detail_news.html">Tổ chức Mrs. World nhận lỗi vì ghi sai tên Việt Nam  160</a></li>
+              <li class="item"> <a href="detail_news.html">Rối loạn mỡ máu, bệnh chết người thầm lặng</a></li>
+              <li class="item"> <a href="detail_news.html">Thí sinh Top Model ngã lộn cổ vì bắt chước diễn viên xiếc</a></li>
+              <li class="item"> <a href="detail_news.html">Man City làm nhục Tottenham</a></li>
+              <li class="item"> <a href="detail_news.html">Gần trăm người bị tạm giữ tại quán bar  33</a></li>
+              <li class="item"> <a href="detail_news.html">Pierre Bourdieu với thuyết cấu trúc phát</a></li>
+              <li class="item"> <a href="detail_news.html">Đại gia Phương Nam giao hàng chục nghìn m2 đất cho con</a></li>
+              <li class="item"> <a href="detail_news.html">Giá vàng xuống đáy 5 tháng</a></li>
+              <li class="item"> <a href="detail_news.html">Tổ chức Mrs. World nhận lỗi vì ghi sai tên Việt Nam  160</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="section scroll-pane">
+            <ul class="news_index">
+              <li class="item"> <a href="detail_news.html">Đại gia Phương Nam giao hàng chục nghìn m2 đất cho con</a></li>
+              <li class="item"> <a href="detail_news.html">Giá vàng xuống đáy 5 tháng</a></li>
+              <li class="item"> <a href="detail_news.html">Tổ chức Mrs. World nhận lỗi vì ghi sai tên Việt Nam  160</a></li>
+              <li class="item"> <a href="detail_news.html">Rối loạn mỡ máu, bệnh chết người thầm lặng</a></li>
+              <li class="item"> <a href="detail_news.html">Thí sinh Top Model ngã lộn cổ vì bắt chước diễn viên xiếc</a></li>
+              <li class="item"> <a href="detail_news.html">Man City làm nhục Tottenham</a></li>
+              <li class="item"> <a href="detail_news.html">Gần trăm người bị tạm giữ tại quán bar  33</a></li>
+              <li class="item"> <a href="detail_news.html">Pierre Bourdieu với thuyết cấu trúc phát</a></li>
+              <li class="item"> <a href="detail_news.html">Đại gia Phương Nam giao hàng chục nghìn m2 đất cho con</a></li>
+              <li class="item"> <a href="detail_news.html">Giá vàng xuống đáy 5 tháng</a></li>
+              <li class="item"> <a href="detail_news.html">Tổ chức Mrs. World nhận lỗi vì ghi sai tên Việt Nam  160</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Tab news-->
+      </div>
+    </div>
+    <!--End top main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!--Activity Field-->
+  <div class="categories_field">
+    <div class="page_inner">
+      <ul class="ulcate">
+        <li class="cate_li"> <a href="">
+          <h2 class="cate_name"><span>Tư vấn</span></h2>
+          </a> <a href="list_projects.html"><img class="img_cate" src="Images/cate_01.jpg" alt="" width="300" height="200" /></a>
+          <ul class="list_news_c">
+            <li><a href="">Phổ biến chế độ - chính sách</a></li>
+            <li><a href="">Phổ biến chế độ - chính sách</a></li>
+            <li><a href="">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</a></li>
+          </ul>
+        </li>
+        <li class="cate_li"> <a href="">
+          <h2 class="cate_name"><span>Công nghệ xây dựng mới</span></h2>
+          </a> <a href="list_projects.html"><img class="img_cate" src="Images/cate_02.jpg" alt="" width="300" height="200" /></a>
+          <ul class="list_news_c">
+            <li><a href="">Phổ biến chế độ - chính sách</a></li>
+            <li><a href="">Phổ biến chế độ - chính sách</a></li>
+            <li><a href="">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</a></li>
+          </ul>
+        </li>
+        <li class="cate_li"> <a href="">
+          <h2 class="cate_name"><span>Sự kiện xây dựng</span></h2>
+          </a> <a href="list_projects.html"><img class="img_cate" src="Images/cate_03.jpg" alt="" width="300" height="200" /></a>
+          <ul class="list_news_c">
+            <li><a href="">Phổ biến chế độ - chính sách</a></li>
+            <li><a href="">Phổ biến chế độ - chính sách</a></li>
+            <li><a href="">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--Activity Field-->
+  <div class="page_inner">
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--News Field-->
+      <div class="news_field">
+        <ul class="ulcate">
+          <li class="cate_li"> <a href="">
+            <h2 class="cate_name"><span>Công nghệ xây dựng mới</span></h2>
+            </a> <a href="list_projects.html"><img class="img_general" src="Images/cate_01.jpg" alt="" width="210" height="140" /></a>
+            <ul class="list_news_c">
+              <li><a href="">Phổ biến chế độ - chính sách</a></li>
+              <li><a href="">Phổ biến chế độ - chính sách</a></li>
+              <li><a href="">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</a></li>
+            </ul>
+          </li>
+          <li class="cate_li"> <a href="">
+            <h2 class="cate_name"><span>Sự kiện xây dựng</span></h2>
+            </a> <a href="list_projects.html"><img class="img_general" src="Images/cate_02.jpg" alt="" width="210" height="140" /></a>
+            <ul class="list_news_c">
+              <li><a href="">Phổ biến chế độ - chính sách</a></li>
+              <li><a href="">Phổ biến chế độ - chính sách</a></li>
+              <li><a href="">Học tập và làm theo tấm gương đạo đức Hồ Chí Minh</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!--News Field-->
+      <!--Support Infomation-->
+      <div id="support_info">
+        <div class="question">
+          <label title="Đây là câu hỏi">Hỏi đáp:</label>
+          <div class="content_ques">
+            <div id="vTicker">
+              <ul>
+                <li><a href="news_detail.html">Để thuận tiện cho việc chuyển thư phản ánh, kiến nghị và giải đáp về chính sách, pháp luật xây dựng của công dân tới Bộ Xây dựng xem xét, giải quyết, đảm bảo thông tin chính xác 1</a></li>
+                <li><a href="">Để thuận tiện cho việc chuyển thư phản ánh, kiến nghị và giải đáp về chính sách, pháp luật xây dựng của công dân tới Bộ Xây dựng xem xét, giải quyết, đảm bảo thông tin chính xác 2</a></li>
+                <li><a href="">Để thuận tiện cho việc chuyển thư phản ánh, kiến nghị và giải đáp về chính sách, pháp luật xây dựng của công dân tới Bộ Xây dựng xem xét, giải quyết, đảm bảo thông tin chính xác 3</a></li>
+                <li><a href="">Để thuận tiện cho việc chuyển thư phản ánh, kiến nghị và giải đáp về chính sách, pháp luật xây dựng của công dân tới Bộ Xây dựng xem xét, giải quyết, đảm bảo thông tin chính xác 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="get_email">
+          <label>Đăng ký nhận mail</label>
+          <input class="txf" value="Nhập Email của bạn" name="email">
+          <input type="submit" value="" class="btn" />
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Support Infomation-->
+      <div id="slide_partners">
+        <ul id="mycarousel" class="jcarousel-skin-tango">
+          <li class="item"><a href=""><img src="Images/logo_partner01.jpg" width="140" height="70" alt="" /></a></li>
+          <li class="item"><a href=""><img src="Images/logo_partner02.jpg" width="140" height="70" alt="" /></a></li>
+          <li class="item"><a href=""><img src="Images/logo_partner03.jpg" width="140" height="70" alt="" /></a></li>
+          <li class="item"><a href=""><img src="Images/logo_partner04.jpg" width="140" height="70" alt="" /></a></li>
+          <li class="item"><a href=""><img src="Images/logo_partner01.jpg" width="140" height="70" alt="" /></a></li>
+          <li class="item"><a href=""><img src="Images/logo_partner02.jpg" width="140" height="70" alt="" /></a></li>
+          <li class="item"><a href=""><img src="Images/logo_partner03.jpg" width="140" height="70" alt="" /></a></li>
+          <li class="item"><a href=""><img src="Images/logo_partner04.jpg" width="140" height="70" alt="" /></a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!--Footer-->
+  <div class="footer">
+    <div class="page_inner">
+      <div class="info_footer">
+        <p><b>Công ty CP ĐT XD Kỹ thuật Công Nghệ Hutech</b></p>
+        <p>60 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 01, Tp.HCM</p>
+        <p>Điện thoại:  (Hiệp) 0938 144 999 - (Giàu) 0917 367 115</p>
+        <p>Website: <a href="http://www.hutechcons.com.vn">www.hutechcons.com.vn</a></p>
+        <p>Email: <a href="mailto:info@hutechcons.com.vn">info@hutechcons.com.vn</a></p>
+      </div>
+      <div class="socilal_network"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a> <a href=""><span class="icon_gplus"></span></a><a href=""><span class="icon_p"></span></a><a href=""> <span class="icon_linkedin"></span></a><a href=""> <span class="icon_youtube"></span></a></div>
+      <div class="access_status">
+        <p>Đang xem:<span>30</span></p>
+        <p>Đã truy câp:<span>1234</span></p>
+      </div>
+      <div class="copyright"> Copyright © 2013 By <strong>Tienthanhvinh</strong>. All Rights Reserved - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>
+<div style="visibility: hidden"><a href="http://apycom.com/">Apycom jQuery Menus</a></div>

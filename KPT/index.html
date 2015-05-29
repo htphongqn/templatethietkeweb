@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>KPT</title>
+    <link rel="stylesheet" href="Styles/template.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet'
+        type='text/css'>
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script language="javascript">
+        function TogglePayment() {
+            document.getElementById('intro').style.height = "auto";
+            document.getElementById('hplPaymentMore').innerHTML = "Thu gọn";
+            document.getElementById('hplPaymentMore').style.background = "#8fc73e url(Images/arr_more.png) 102px -32px no-repeat";
+            var lc = $('#left_col').height();
+            var rc = $('#right_col').height();
+            var h = lc - rc;
+            if (h > 0) {
+                $('#footer').css('margin-top', '-35px');
+            } else {
+                $('#footer').css('margin-top', '0');
+            }
+        }
+        function CollapsePayment() {
+            document.getElementById('intro').style.height = "250px";
+            document.getElementById('hplPaymentMore').innerHTML = "Xem thêm";
+            document.getElementById('hplPaymentMore').style.background = "#8fc73e url(Images/arr_more.png) 102px 13px no-repeat";
+            var lc = $('#left_col').height();
+            var rc = $('#right_col').height();
+            var h = lc - rc;
+            if (h > 0) {
+                $('#footer').css('margin-top', '-35px');
+            } else {
+                $('#footer').css('margin-top', '0');
+            }
+        }
+        function SetPayment() {
+            if (document.getElementById('intro').style.height == "250px")
+                TogglePayment();
+            else
+                CollapsePayment();
+        }
+    </script>
+    <!-- Skitter Styles -->
+    <link href="Styles/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+    <!-- Skitter JS -->
+    <script type="text/javascript" language="javascript" src="Scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" language="javascript" src="Scripts/jquery.skitter.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="Scripts/jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="Styles/jquery.bxslider.css" rel="stylesheet" />
+    <!--Zoomin - Zoomout image products-->
+    <link rel="stylesheet" type="text/css" href="Styles/highslide.css" />
+    <script type="text/javascript" src="Scripts/highslide-full.js"></script>
+    <script type="text/javascript" src="Scripts/KPT.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!--#begin Header-->
+        <div id="header">
+            <a href="index.html" id="logo">
+                <img src="Images/logo.png" alt="CÔNG TY TNHH THƯƠNG MẠI NỘI THẤT LỘC PHÁT" /></a>
+            <div id="header_right">
+                <div class="hotline fl">
+                    0937.314.899</div>
+                <div class="lang fr">
+                    <img src="images/flag_vn.png" alt="Tieng Viet" id="tv" />
+                    <img src="images/flag_en.png" alt="Tieng Anh" id="ta" />
+                </div>
+            </div>
+            <!--Slider banner-->
+            <div class="box_skitter box_skitter_large">
+                <ul>
+                    <li><a href="http://viva-vietnam.blogspot.com">
+                        <img src="Images/slide1.jpg" alt="" /></a></li>
+                    <li><a href="">
+                        <img src="http://cuathudo.com.vn/profiles/cuathudocomvn/uploads/logo/1396926768_111201272737pm-sbbhwqcs.jpg"
+                            alt="" /></a></li>
+                    <li><a href="http://shareallworld.info/search/label/Movies">
+                        <img src="http://www.agroviet.com.vn/hinh-anh/files/slice%206.jpg" alt="" /></a></li>
+                </ul>
+            </div>
+            <!-- End Slider banner -->
+        </div>
+        <!--#end Header-->
+        <!--Main Content-->
+        <div id="main" class="cf">
+            <!--Left Column-->
+            <div id="left_col" class="fl">
+                <div id="left_col_in">
+                    <!--Main Menu-->
+                    <div class="box" id="nav_menu">
+                        <ul>
+                            <li class="active"><a href="index.html">TRANG CHỦ</a> </li>
+                            <li><a href="index.html">GIỚI THIỆU</a> </li>
+                            <li><a href="list_products.html">GIẢI PHÁP PHÒNG SẠCH</a>
+                                <ul>
+                                    <li><a href="#" class="parent">Hệ thống Panel Phòng sạch</a></li>
+                                    <li><a href="#" class="parent">Thiết bị nội thất, Thiết bị cấp khí sạch phòng mổ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="list_products.html">SẢN PHẨM</a>
+                                <ul>
+                                    <li><a href="#" class="parent">Thiết bị phòng sạch</a></li>
+                                    <li><a href="#" class="parent">Lọc Khí</a></li>
+                                    <li><a href="#" class="parent">Hệ thống Panel Phòng sạch</a></li>
+                                    <li><a href="#" class="parent">Thiết bị nội thất, Thiết bị cấp khí sạch phòng mổ</a></li>
+                                    <li><a href="#" class="parent">Thiết bị Inox </a></li>
+                                    <li><a href="#" class="parent">Hệ thống cửa</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="list_products.html">HỖ TRỢ KỸ THUẬT</a></li>
+                            <li><a href="list_news.html">TIN TỨC</a></li>
+                            <li><a href="list_products.html">KHÁCH HÀNG</a></li>
+                            <li><a href="list_products.html">LIÊN HỆ</a></li>
+                        </ul>
+                    </div>
+                    <!--End Main Menu-->
+                    <!--Search Tool-->
+                    <div class="box" id="search_form">
+                        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)"
+                            onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+                        <a href="" class="submitSearch"></a>
+                    </div>
+                    <!--End Search Tool-->
+                </div>
+            </div>
+            <!--end Left Column-->
+            <!--end Left Column-->
+            <!--Right Column-->
+            <div id="right_col" class="fr">
+                <h1 class="name_company">
+                    <img src="Images/name_company.png" alt="" /></h1>
+                <div class="box">
+                    <div class="box_Tab">
+                        <span>GIỚI THIỆU</span></div>
+                    <div class="box_ct" id="intro" style="height: 250px; overflow: hidden">
+                        <p>
+                            Chào mừng Quý khách tới website của Công ty TNHH Quốc Tế Kỹ Thuật Kim Phong<br />
+                            KPT là một công ty chuyên về giải pháp phòng sạch chuyên nghiệp năng động xuất xứ
+                            từ Malaysia, chúng tôi bắt đầu kinh doanh ở Việt Nam tại thành phố Hồ Chí Minh vào
+                            năm 2009.
+                        </p>
+                        <p>
+                            Nhiều năm qua, chúng tôi đã thành công rất nhiều dự án trong phòng sạch các công
+                            ty trong nước và đa quốc gia. Hiện tại chúng tôi đã hoàn thiện bộ máy với bộ phận
+                            kinh doanh tiếp thị sản phẩm, bộ phận dự án, bô phận sản xuất và dịch vụ tại Việt
+                            Nam.</p>
+                        <p>
+                            Với toàn bộ cơ sở vật chất, máy móc và dụng cụ hiện đại chúng tôi tin rằng sẽ mang
+                            đến dịch vụ và giải pháp phòng sạch ở đẳng cấp cao, nơi khách hàng có thể trải nghiệm
+                            dịch vụ tốt nhất và với giá cả cạnh tranh.</p>
+                        <p>
+                            Khách hàng của chúng tôi:</p>
+                        <p>
+                            1) Nhà máy sản xuất Dược Phẩm và Công nghệ Sinh học.</p>
+                        Chúng tôi tập trung vào lĩnh vực này từ ngày đầu tiên có mặt tại Việt Nam. Công
+                        ty chúng tôi đã xây dựng thành công nhiều nhà máy đạt chuẩn EU-GMP, FDA và WHO-GMP.
+                        Với kinh nghiệm và kiến thức trong việc thiết kế và xây dựng nhà máy Dược phẩm chúng
+                        tôi tự hào là tất cả các dự án chúng tôi tham gia đều vượt qua thẩm định của các
+                        tiêu chuẩn trên. Chúng tôi có thể xây dựng các phòng sạch đạt chuẩn từ Class A tới
+                        Class D hoặc tương đương. </p>
+                        <p>
+                            2) Nhà máy sản xuất chế biến Thực Phẩm và Đồ Uống.</p>
+                        KPT cũng đã thực hiện nhiều dự án xây mới hoặc cải tạo – nâng cấp các nhà máy sản
+                        xuất chế biến Thực Phẩm và Đồ Uống. Chúng tôi cung cấp các sản phẩm chuyên dùng
+                        dành cho lĩnh vưc này với giá cả phù hợp và đạt chuẩn yêu cầu. Tất cả các phòng
+                        sạch mà chúng tôi thực hiện đều đạt chuẩn GMP Thực phẩm và HACCP. </p>
+                    </div>
+                    <div class="moreBg">
+                        <a onclick="javascript:SetPayment();" class="view_more_intro" id="hplPaymentMore">Xem
+                            thêm</a>
+                    </div>
+                </div>
+                <!--End Intro-->
+                <!-- Slide Hot Products -->
+                <div class="box" id="popular_P">
+                    <div class="box_Tab">
+                        <span>SẢN PHẨM</span></div>
+                    <script type='text/javascript'>//<![CDATA[
+                        $(window).load(function () {
+                            (function ($) {
+                                // VERTICALLY ALIGN FUNCTION
+                                $.fn.vAlign = function () {
+                                    return this.each(function (i) {
+                                        var ah = $(this).height();
+                                        var ph = $(this).parent().height();
+                                        var mh = Math.ceil((ph - ah) / 2);
+                                        $(this).css('margin-top', mh);
+                                    });
+                                };
+                            })(jQuery);
+                            $(document).ready(function () {
+                                $(".product img").vAlign();
+                            });
+                        });//]]>  
+
+                    </script>
+                    <ul class="bxslider_products">
+                        <li class="item_P">
+                            <!--Start Product-->
+                            <div class="product">
+                                <div class="img_product">
+                                    <a href="detail_products.html" title="Airshower – Buồng tắm khí sạch" class="link_imgP">
+                                        <img class="trans" src="http://www.smashingmagazine.com/wp-content/uploads/2012/05/50-jQuery-Function-Demos.jpg"
+                                            alt="Airshower – Buồng tắm khí sạch" />
+                                    </a><a href="" class="contact_btn"><b>Chi tiết</b></a>
+                                </div>
+                                <h3 class="product_name">
+                                    <a href="">Airshower – Buồng tắm khí sạch</a></h3>
+                            </div>
+                            <!--End Product-->
+                        </li>
+                        <li class="item_P">
+                            <!--Start Product-->
+                            <div class="product">
+                                <div class="img_product">
+                                    <a href="detail_products.html" title="Airshower – Buồng tắm khí sạch" class="link_imgP">
+                                        <img class="trans" src="http://kientruc.bantinnhadat.vn/uploads/articles/2011/11/1320762827-41847.jpg"
+                                            alt="Airshower – Buồng tắm khí sạch" />
+                                    </a><a href="" class="contact_btn"><b>Chi tiết</b></a>
+                                </div>
+                                <h3 class="product_name">
+                                    <a href="">Airshower – Buồng tắm khí sạch</a></h3>
+                            </div>
+                            <!--End Product-->
+                        </li>
+                        <li class="item_P">
+                            <!--Start Product-->
+                            <div class="product">
+                                <div class="img_product">
+                                    <a href="detail_products.html" title="Airshower – Buồng tắm khí sạch" class="link_imgP">
+                                        <img class="trans" src="http://www.phongthuydongphuong.com/wp-content/uploads/2008/11/ptphongtam3.jpg"
+                                            alt="Airshower – Buồng tắm khí sạch" />
+                                    </a><a href="" class="contact_btn"><b>Chi tiết</b></a>
+                                </div>
+                                <h3 class="product_name">
+                                    <a href="">Airshower – Buồng tắm khí sạch</a></h3>
+                            </div>
+                            <!--End Product-->
+                        </li>
+                        <li class="item_P">
+                            <!--Start Product-->
+                            <div class="product">
+                                <div class="img_product">
+                                    <a href="detail_products.html" title="Airshower – Buồng tắm khí sạch" class="link_imgP">
+                                        <img class="trans" src="http://www.smashingmagazine.com/wp-content/uploads/2012/05/50-jQuery-Function-Demos.jpg"
+                                            alt="Airshower – Buồng tắm khí sạch" />
+                                    </a><a href="" class="contact_btn"><b>Chi tiết</b></a>
+                                </div>
+                                <h3 class="product_name">
+                                    <a href="">Airshower – Buồng tắm khí sạch</a></h3>
+                            </div>
+                            <!--End Product-->
+                        </li>
+                        <li class="item_P">
+                            <!--Start Product-->
+                            <div class="product">
+                                <div class="img_product">
+                                    <a href="detail_products.html" title="Airshower – Buồng tắm khí sạch" class="link_imgP">
+                                        <img class="trans" src="http://www.smashingmagazine.com/wp-content/uploads/2012/05/50-jQuery-Function-Demos.jpg"
+                                            alt="Airshower – Buồng tắm khí sạch" />
+                                    </a><a href="" class="contact_btn"><b>Chi tiết</b></a>
+                                </div>
+                                <h3 class="product_name">
+                                    <a href="">Airshower – Buồng tắm khí sạch</a></h3>
+                            </div>
+                            <!--End Product-->
+                        </li>
+                    </ul>
+                </div>
+                <!--End Slide Hot Products-->
+            </div>
+            <!--end Right Column-->
+        </div>
+        <!--End Main Content-->
+        <!-- Begin of footer-->
+        <div id="footer">
+            <div id="copyright" class="fl">
+                2014 Copyright © <strong>Kim Phong Co., LTD</strong>. All rights reserved.</div>
+            <!--Social-->
+            <div id="social_network" class="fr">
+                <a href=""><span class="icon_facebook"></span></a><a href=""><span class="icon_gplus">
+                </span></a><a href=""><span class="icon_youtube"></span></a>
+            </div>
+            <!--End Social-->
+        </div>
+        <!-- End of footer-->
+    </div>
+    <!-- End wrap-->
+    <!-- back to top -->
+    <script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+    <div id="toTop">
+    </div>
+</body>
+</html>

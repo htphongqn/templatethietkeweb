@@ -1,0 +1,273 @@
+/* Drop menu by http://namkna.blogspot.com/ */
+#nav_menu {
+	width: 80%;
+	height: 40px;
+	margin-top: 20px;
+	position: relative
+}
+#menu {
+	z-index:100;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	position: relative;
+	display: block;
+}
+/*Top level list items*/
+#menu > li {
+	display: inline-block;
+	z-index: 999
+}
+/*Top level menu link items style*/
+#menu > li > a {
+	display: block;
+	line-height: 40px;
+	margin: 0;
+	padding: 0 10px;
+	font: normal 18px/40px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #000000;
+}
+#menu > li.active > a, #menu > li:hover > a {
+	color: #0288cf;
+}
+/*1st sub level menu*/
+.sub_menu {
+	position: absolute;
+	display: none; /*collapse all sub menus to begin with*/
+	left: 10%;
+	width: 1000px;
+	text-align: left;
+	z-index: 1000
+}
+#menu > li:hover > .sub_menu {
+	display: block
+}
+/*Sub level menu list items (undo style from Top level List Items)*/
+.sub_menu a {
+	display: inline-block;
+	padding: 0 10px;
+	margin-top: 8px;
+	border-left: 1px solid #FFFFFF;
+	height: 15px;
+	line-height: 15px;
+	position: relative;
+	color: #FFFFFF
+}
+.sub_menu a:first-child {
+	border: none
+}
+.sub_menu a:hover { text-decoration: underline }
+ @media only screen and ( max-width: 48em ) /* 768 */ {
+body {
+ font-size: 100%
+}
+#menu {
+display: none;
+background: #0089cf;
+top: 42px;
+width: 80%;
+float: right
+}
+#nav_menu:not( :target ) > a:first-of-type, #nav_menu:target > a:last-of-type {
+ display: block;
+}
+/* first level */
+#nav_menu:target > ul {
+ display: block;
+}
+#nav_menu > ul > li {
+ width: 100%;
+ float: none;
+ background: none;
+ padding: 0
+}
+#nav_menu > ul > li > a {
+ height: auto;
+ text-align: left;
+ padding: 0 0.833em; /* 20 (24) */
+ color: #FFFFFF;
+ border-top: 1px solid #179cea;
+}
+#menu > li.active, #menu > li:hover > a {
+	background: #818383
+}
+#menu > li.active > a, #menu > li:hover > a {
+	color: #FFFFFF;
+}
+/* second level */
+.sub_menu {
+ position: static;
+ display: none;
+ left: 0;
+ -moz-box-shadow: none;
+ -webkit-box-shadow: none;
+ box-shadow: none;
+ padding: 0;
+ background: #179cea !important;
+}
+#menu > li:hover > .sub_menu {
+ display: none
+}
+#nav_menu li {
+ width: 100% !important;
+ position: relative;
+ height: auto
+}
+#nav_menu li a {
+ display: block;
+}
+/* second level*/
+.sub_menu {
+width: 100%
+}
+.sub_menu a {
+display: block;
+border: none;
+margin: 0;
+padding: 7px 10px 7px 30px;
+background: url(../Images/arrow_on.png) 15px 9px no-repeat
+}
+}
+/*Right Menu*/
+.topnav {
+	position:relative;
+	z-index: 200
+}
+.nav_list {
+	display: block;
+	text-align:left;
+}
+.nav_item {
+	float:left;
+ *display:inline;
+	zoom:1;
+	position:relative;
+	width:100%;
+}
+/* Navigation submenu */
+.nav_submenu {
+	position:static;
+	width:100%;
+}
+.nav_submenu_item a {
+	display:block;
+	color: #3E3E3E;
+	font-weight: 500;
+}
+.nav_submenu_item a:hover {
+	text-decoration: none
+}
+/* Mobile navigation */
+.nav_mobile {
+	position: absolute;
+	right: 0;
+	top: 2px;
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	background: #0089cf url(../Images/nav.svg) no-repeat center center;
+	background-size:18px;
+	height:40px;
+	width:40px;
+}
+.topnav .nav_mobile {
+	width:100%;
+	top: -40px
+}
+/* Mobile navigation, clickable area for revealing <ul> */
+.nav_click {
+	position:absolute;
+	top:0;
+	right:0;
+	display: none;
+	height:40px;
+	width:40px;
+	cursor:pointer;
+	text-align: center;
+	z-index: 100;
+	border-left: 1px solid #179cea
+}
+.nav_click i {
+	display:block;
+	height:98%;
+	margin: 1px 0;
+	width:100%;
+	background: url(../Images/drop.svg) no-repeat scroll center center / 15px auto #0089cf;
+	z-index: 100;
+}
+.topnav li.active .nav_click i, .nav_rotate {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+/*Right Menu*/
+.topnav {
+ background: #179cea;
+}
+.topnav li a {
+font-weight: 500;
+padding: 8px 10px;
+color: #FFFFFF
+}
+.tab_foo_menu {
+display: block
+}
+.nav_mobile {
+ display:block;
+}
+.topnav .nav_mobile {
+ width: 40px
+}
+ .nav {
+ width:100%;
+ padding:50px 0 0;
+}
+ .nav_list {
+ display:none;
+}
+.nav_item a {
+ display:block;
+ padding:3px 18px;
+ font-size:100%;
+ font-weight:normal;
+ border-bottom: 1px solid #CCCCCC;
+ text-transform: capitalize;
+}
+.nav_item:last-child > a {
+ border: none
+}
+ .nav_click {
+ display:block;
+}
+ .nav_mobile_open {
+ border-radius:5px 5px 0 0;
+ -webkit-border-radius:5px 5px 0 0;
+ -moz-border-radius:5px 5px 0 0;
+}
+.nav_submenu {
+ display: none;
+ background: #e2e2e2
+}
+.nav_submenu a {
+color: #333333 !important
+}
+.nav_item > a {
+font-size: 100%;
+}
+.topnav li.active ul {
+display: none
+}
+.topnav li.active .nav_click i {
+ background: url(../Images/plus.png) no-repeat 0 center !important;
+}
+}

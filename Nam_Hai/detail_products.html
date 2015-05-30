@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Nam Hải</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/scroll_ads.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_index').children('li');					
+
+			
+			$("#tabs_index").tabs("#tabs_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			
+			$("#tabs_detail").tabs("#tabs_detail_content .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 400,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+
+		});
+
+	</script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {            
+			jQuery('#mycarousel_dt_img').jcarousel({
+                auto: 0,
+                animation: 1000,                
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });            			
+        });
+    </script>
+</head>
+<body>
+<!--#begin top_page-->
+<div id="top_page">
+  <div class="wrap_page">
+    <div id="hotline"> Hotline: <span class="number_phone">0934&nbsp;017&nbsp;279&nbsp;-&nbsp;0909&nbsp;42&nbsp;29&nbsp;86</span></div>
+    <!--Support-->
+    <div id="support">Hỗ trợ trực tuyến: <a href="ymsgr:sendIM?phuthuynhobep@yahoo.com" title="Bán hàng trực tuyến"> <img width="12" src="http://opi.yahoo.com/online?u=phuthuynhobep@yahoo.com&amp;m=g&amp;t=5" alt="Bán hàng trực tuyến"></a> <a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img height="26" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/mediumicon/thampham1911"></a> </div>
+    <!--End Support-->
+    <!--Social-->
+    <div id="social_network"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_zing"></span></a> <a href=""><img src='Images/like_face.png' alt="" style="vertical-align: baseline" /></a> </div>
+    <!--End Social-->
+    <div class="cf"></div>
+  </div>
+</div>
+<!--#end top_page-->
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Nam Hải" /> </a>
+    <!--Search Header-->
+    <div id="search_form">
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+      <a href="" class="submitSearch"></a> </div>
+    <div class="cf"></div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li><a href="introduction.html"><span class="icon_home"></span></a> </li>
+      <li><a href="introduction.html">Giới thiệu</a> </li>
+      <li><a href="list_products.html">Sản phẩm</a>
+        <ul>
+          <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Trang điểm</a></li>
+          <li><a href="#">Nước hoa</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">PHỤ KIỆN</a></li>
+      <li><a href="#">DỊCH VỤ</a></li>
+      <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+      <li><a href="list_news.html">TIN TỨC</a></li>
+      <li><a href="list_news.html">Liên hệ</a></li>
+    </ul>
+    <div class="cart"><a href="">Giỏ hàng (0)</a><span class="icon_cart"></span></div>
+  </div>
+  <!--End Main Menu-->
+  <!--Main Content-->
+  <div id="main">
+    <!--Search Advanced-->
+    <div id="search_advanced">
+      <div class="search_title"><span>TÌM KIẾM</span></div>
+      <div id="search_filter">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Tên sản phẩm, phụ kiện..." />
+        <div class="dropdown_adv">
+          <select id="price1" name="price1" onchange="document.location.href= baseUrl + '/search/'+this.value">
+            <option value="">Giá từ</option>
+            <option value="1">Dưới 300.000</option>
+            <option value="300000">300.000 - 600.000</option>
+            <option value="600000">600.000 - 900.000</option>
+            <option value="900000">Trên 900.000</option>
+          </select>
+        </div>
+        <div class="dropdown_adv">
+          <select name="price2" id="price2">
+            <option value="">Giá đến</option>
+            <option value="1">Dưới 300.000</option>
+            <option value="300000">300.000 - 600.000</option>
+            <option value="600000">600.000 - 900.000</option>
+            <option value="900000">Trên 900.000</option>
+          </select>
+        </div>
+        <div class="sm_button">
+          <input type="submit" name="ctl00$left1$Btsearch" value="Tìm kiếm" id="left1_Btsearch" class="sub_Search" />
+        </div>
+        <div class="cf"></div>
+      </div>
+    </div>
+    <!--End Search Advanced-->
+    <!--Left Column-->
+    <div id="col_left">
+      <!--Left Menu-->
+      <div class="box">
+        <div class="box_Tab_l">Danh mục Sản Phẩm</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li class="active"><a href="list_products.html">Điện Thoại Samsung</a>
+              <ul class="children">
+                <li><a href="list_products.html">Điện Thoại HTC</a></li>
+                <li><a href="list_products.html">Điện Thoại Sky</a></li>
+                <li><a href="list_products.html">Điện thoại LG</a></li>
+                <li><a href="list_products.html">Điện Thoại Sony</a></li>
+                <li><a href="list_products.html">Điện thoại OPPO</a></li>
+                <li><a href="list_products.html">Điện Thoại Nokia</a></li>
+              </ul>
+            </li>
+            <li><a href="list_products.html">Điện Thoại HTC</a></li>
+            <li><a href="list_products.html">Điện Thoại Sky</a></li>
+            <li><a href="list_products.html">Điện thoại LG</a></li>
+            <li><a href="list_products.html">Điện Thoại Sony</a></li>
+            <li><a href="list_products.html">Điện thoại OPPO</a></li>
+            <li><a href="list_products.html">Điện Thoại Nokia</a></li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Left Menu-->
+      <!--Left Menu-->
+      <div class="box">
+        <div class="box_Tab_l">ĐIỆN THOẠI IPHONE</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li class="active"><a href="list_products.html">IPhone 5</a></li>
+            <li><a href="list_products.html">IPhone 4S</a></li>
+            <li><a href="list_products.html">IPhone 4</a></li>
+            <li><a href="list_products.html">IPhone 3gs</a></li>
+            <li><a href="list_products.html">iPhone 5S</a></li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Left Menu-->
+      <!--Left Menu-->
+      <div class="box">
+        <div class="box_Tab_l">PHỤ KIỆN  DI ĐỘNG</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li class="active"><a href="list_products.html">Bao Da Ốp Lưng Sky - LG</a></li>
+            <li><a href="list_products.html">Bao Da Ốp Lưng Samsung</a></li>
+            <li><a href="list_products.html">Miếng dán màn hình</a></li>
+            <li><a href="list_products.html">Sạc - Cáp - Tai nghe</a></li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Left Menu-->
+      <!--New Products-->
+      <div class="box">
+        <div class="box_Tab_l">SẢN PHẨM MỚI</div>
+        <div class="box_ct">
+          <ul class="list_ul" id="new_P">
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+              <h2>LG L70 Dual</h2>
+              </a>
+              <div class="price">4.490.000 VNĐ</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+              <h2 class="product_name">LG L70 Dual</h2>
+              </a>
+              <div class="price">4.490.000 VNĐ</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+              <h2>LG L70 Dual</h2>
+              </a>
+              <div class="price">4.490.000 VNĐ</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+              <h2>LG L70 Dual</h2>
+              </a>
+              <div class="price">4.490.000 VNĐ</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+              <h2>LG L70 Dual</h2>
+              </a>
+              <div class="price">4.490.000 VNĐ</div>
+              <!--End Product-->
+            </li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End New Products-->
+      <!--News-->
+      <div class="box">
+        <div class="box_Tab_l">TIN TỨC MỚI</div>
+        <div class="box_ct">
+          <ul class="list_ul" id="news_home">
+            <li> <a href="news_detail.html"> <img src="Images/ads2.jpg" alt="" class="img_general" />
+              <h3 class="news_Title">Samsung thấy thất vọng khi iPhone, iPad</h3>
+              </a> </li>
+            <li> <a href="news_detail.html"> <img src="Images/ads2.jpg" alt="" class="img_general" />
+              <h3 class="news_Title">Apple đăng ký bản quyền kéo dài thời lượng pin iPhone</h3>
+              </a> </li>
+            <li> <a href="news_detail.html"> <img src="Images/ads2.jpg" alt="" class="img_general" />
+              <h3 class="news_Title">Những nâng cấp sẽ giúp iOS 7 tỏa sáng tại WWDC 2013</h3>
+              </a> </li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End News-->
+      <!--Status-->
+      <div class="box">
+        <div class="box_Tab_l">LƯỢT TRUY CẬP</div>
+        <div class="box_ct"> <img src="Images/status.jpg" alt="" /></div>
+        <div class="cf"></div>
+      </div>
+      <!--End Status-->
+      <!--Ads Left-->
+      <div class="box">
+        <div class="box_Tab_l">Quảng cáo</div>
+        <div class="box_ct ads"> <a href=""><img src="Images/ads3.jpg" alt="" /></a> <a href=""><img src="Images/ads4.jpg" alt="" /></a> </div>
+        <div class="cf"></div>
+      </div>
+      <!--End Ads Left-->
+    </div>
+    <!--Left Column-->
+    <!--Right Column-->
+    <div id="col_right">
+      <div class="path"><a href="index.html"><img src="Images/icon_home.png" alt="" /></a> » <a href="list_products.html">Tên chuyên mục</a></div>
+      <!--Detail Products-->
+      <div class="box">
+        <div class="box_Tab_r"><span>Chi tiết</span></div>
+        <div class="box_ct">
+          <div class="zoom-section">
+            <div class="zoom-small-image"><a href='http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png' class = 'cloud-zoom' id='zoom1' rel="adjustX: 10, adjustY:-4"><img class="mainImage" src="http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png" alt='' title="HPPhone H103" /></a></div>
+            <div class="zoom-desc">
+              <ul id="mycarousel_dt_img" class="jcarousel-skin-tango">
+                <li class="item"><a href='http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png' class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: 'http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png' "><img class="zoom-tiny-image" src="http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png" alt = "HPPhone H103"/></a></li>
+                <li class="item"><a href='http://www.entertherift.fr/images/379-iphone-4.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' http://www.entertherift.fr/images/379-iphone-4.jpg'"><img src="http://www.entertherift.fr/images/379-iphone-4.jpg" alt = "HPPhone H103" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://www.muycomputer.com/wp-content/uploads/2014/04/el-iPhone-6.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://www.muycomputer.com/wp-content/uploads/2014/04/el-iPhone-6.jpg' "><img src="http://www.muycomputer.com/wp-content/uploads/2014/04/el-iPhone-6.jpg" alt = "HPPhone H103" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png' class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: 'http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png' "><img class="zoom-tiny-image" src="http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT3939/HT3939-iphone_4-front_and_back-001-en.png" alt = "HPPhone H103"/></a></li>
+                <li class="item"><a href='http://www.entertherift.fr/images/379-iphone-4.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' http://www.entertherift.fr/images/379-iphone-4.jpg'"><img src="http://www.entertherift.fr/images/379-iphone-4.jpg" alt = "HPPhone H103" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://www.muycomputer.com/wp-content/uploads/2014/04/el-iPhone-6.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://www.muycomputer.com/wp-content/uploads/2014/04/el-iPhone-6.jpg' "><img src="http://www.muycomputer.com/wp-content/uploads/2014/04/el-iPhone-6.jpg" alt = "HPPhone H103" border="0" class="zoom-tiny-image"/></a></li>
+              </ul>
+            </div>
+          </div>
+          <!--end: #dp-thumb-->
+          <div id="dtp_info">
+            <h1 class="h1Title">iPhone 5S 16GB Gold</h1>
+            <div class="dtp_status"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="dtp_status"><b class="title_status">Bảo hành:</b>12 Tháng</div>
+            <!--end: .dtp_status-->
+            <div class="dtp_status"><b class="title_status">Tình trạng:</b> Còn hàng</div>
+            <!--end: .dtp_status-->
+            <div class="dtp_status" id="short_des"><b class="title_status">Tóm tắt sản phẩm:</b> <br />
+              <p>Chip Apple A7, 64bit, có chip phụ M7,Rom 16GB</p>
+              <p>Cảm biến vân tay Touch ID tiên tiến</p>
+              <p>Camera 8MP, 1.5µm pixel size, Dual flash LED</p>
+              <p>Quay phim 1080p@30fps, 720p@120fps</p>
+              <p>Retina Screen, 1136x640 pixels, 326ppi</p>
+              <p>Hệ điều hành iOS 7 tối ưu cho 64 bit
+            </div>
+            <!--end: .dtp_status-->
+            <div class="price_detail">
+              <div class="dt_f_price">Giá gốc: <span>350.000 VNĐ</span> </div>
+              <div class="dt_price">Giá KM: <span>199.000 VNĐ</span><br />
+                <i>(Giá chưa bao gồm VAT)</i></div>
+              <a class="buy_detail" href="cart.html"></a> </div>
+            <div class="saleoff_info"> <b>Khuyến mãi:</b><br />
+              <p>Dán màn hình</p>
+              <p> Bút cảm ứng</p>
+              <p>Giảm 20% khi mua Phụ kiện</p>
+              <p> Cài đặt phần mềm miễn phí</p>
+            </div>
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail Products-->
+      <div class="box">
+        <!--Tab-->
+        <div id="tabs">
+          <div class="nav">
+            <ul id="tabs_detail">
+              <li><a class="current" href="#" title="Thông tin chi tiết">Thông tin chi tiết</a></li>
+              <li><a href="#" title="Hình ảnh">Hình ảnh</a></li>
+              <li><a href="#" title="Ý kiến phản hồi">Ý kiến phản hồi</a></li>
+            </ul>
+          </div>
+          <div id="tabs_detail_content">
+            <div class="section">
+              <div id="detail_product_technical">
+                <table cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td>Hãng sản xuất</td>
+                      <td><a href="http://www.vatgia.com/s/apple+iphone+5">Apple iPhone 5</a></td>
+                    </tr>
+                    <tr>
+                      <td>Mạng</td>
+                      <td>• GSM 900<br />
+                        • GSM 850<br />
+                        • GSM 1800<br />
+                        • GSM 1900<br />
+                        • HSDPA 2100<br />
+                        • HSDPA 900<br />
+                        • HSDPA 850<br />
+                        • HSDPA 1900</td>
+                    </tr>
+                    <tr>
+                      <td>Kiểu dáng</td>
+                      <td><a href="http://www.vatgia.com/s/ki%E1%BB%83u+th%E1%BA%B3ng">Kiểu thẳng</a></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Màn hình</td>
+                    </tr>
+                    <tr>
+                      <td>Màn hình</td>
+                      <td><a href="http://www.vatgia.com/s/16m+m%C3%A0u-tft+led-backlit+ips+touchscreen+%28c%E1%BA%A3m+%E1%BB%A9ng%29">16M màu-TFT LED-backlit IPS Touchscreen (Cảm ứng)</a></td>
+                    </tr>
+                    <tr>
+                      <td>Kích thước màn hình</td>
+                      <td>4inch</td>
+                    </tr>
+                    <tr>
+                      <td>Độ phân giải màn hình</td>
+                      <td><a href="http://www.vatgia.com/s/640+x+1136pixels">640 x 1136pixels</a></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">CPU</td>
+                    </tr>
+                    <tr>
+                      <td>Số lượng Cores</td>
+                      <td>Dual Core (2 nhân)</td>
+                    </tr>
+                    <tr>
+                      <td>Bộ vi xử lý</td>
+                      <td>1.2 GHz Dual-Core</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">GPU</td>
+                    </tr>
+                    <tr>
+                      <td>Bộ xử lý đồ hoạ</td>
+                      <td>PowerVR SGX543 MP3</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Bộ nhớ</td>
+                    </tr>
+                    <tr>
+                      <td>Bộ nhớ trong</td>
+                      <td>64GB</td>
+                    </tr>
+                    <tr>
+                      <td>RAM</td>
+                      <td>1GB</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">OS</td>
+                    </tr>
+                    <tr>
+                      <td>Hệ điều hành</td>
+                      <td>iOS 6</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Tính năng</td>
+                    </tr>
+                    <tr>
+                      <td>Sổ địa chỉ</td>
+                      <td>Photocall , unlimited entries and fields</td>
+                    </tr>
+                    <tr>
+                      <td>Nhật ký cuộc gọi</td>
+                      <td>Practically unlimited</td>
+                    </tr>
+                    <tr>
+                      <td>Tin nhắn</td>
+                      <td>• Email<br />
+                        • MMS<br />
+                        • SMS<br />
+                        • Push E-Mail<br />
+                        • iMessage</td>
+                    </tr>
+                    <tr>
+                      <td>Kiểu chuông</td>
+                      <td>• Nhạc chuông đa âm sắc<br />
+                        • MP3</td>
+                    </tr>
+                    <tr>
+                      <td>Rung</td>
+                      <td><img title="Có" src="http://static.vatgia.com/css/v3/standard/checked.gif" alt="" /></td>
+                    </tr>
+                    <tr>
+                      <td>Số sim</td>
+                      <td>1 Sim<br />
+                        -</td>
+                    </tr>
+                    <tr>
+                      <td>Loại thẻ nhớ tích hợp</td>
+                      <td>• Không hỗ trợ</td>
+                    </tr>
+                    <tr>
+                      <td>Đồng bộ hóa dữ liệu</td>
+                      <td>• EDGE<br />
+                        • GPRS<br />
+                        • Wifi 802.11b<br />
+                        • Wifi 802.11g<br />
+                        • Wifi 802.11n<br />
+                        • Bluetooth 4.0 with LE+EDR</td>
+                    </tr>
+                    <tr>
+                      <td>Kiểu kết nối</td>
+                      <td>• USB</td>
+                    </tr>
+                    <tr>
+                      <td>Camera</td>
+                      <td>8Megapixel</td>
+                    </tr>
+                    <tr>
+                      <td>Tính năng</td>
+                      <td>• Quay Video 1080p<br />
+                        • 3.5 mm audio output jack<br />
+                        • Kết nối GPS<br />
+                        • Ghi âm<br />
+                        • Kết nối TV<br />
+                        • Loa ngoài<br />
+                        • Chụp ảnh hỗ trợ đèn Flash<br />
+                        • MP4<br />
+                        • Quay Video<br />
+                        • NFC<br />
+                        • Công nghệ 3G<br />
+                        • Video call<br />
+                        • Công nghệ 4G</td>
+                    </tr>
+                    <tr>
+                      <td>Tính năng khác</td>
+                      <td>- nano-SIM card support only <br />
+                        - Active noise cancellation with dedicated dual mics <br />
+                        - Siri natural language commands and dictation <br />
+                        - iCloud cloud service <br />
+                        - Twitter and Facebook integration <br />
+                        - TV-out <br />
+                        - Maps <br />
+                        - iBooks PDF reader <br />
+                        - Audio/video player and editor <br />
+                        - Image editor <br />
+                        - Voice memo/command/dial <br />
+                        - Camera trước 1,2 MP, 720p @ 30fps, videocalling qua Wi-Fi và 3G/4G <br />
+                        - LTE 700 MHz Class 17 / 1700 / 2100 - GSM A1428 or LTE 850 / 1800 / 2100 - GSM A1429</td>
+                    </tr>
+                    <tr>
+                      <td>Màu</td>
+                      <td>• Đen</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Pin</td>
+                    </tr>
+                    <tr>
+                      <td>Pin</td>
+                      <td>Li-Po 1440mAh</td>
+                    </tr>
+                    <tr>
+                      <td>Thời gian đàm thoại</td>
+                      <td>8giờ</td>
+                    </tr>
+                    <tr>
+                      <td>Thời gian chờ</td>
+                      <td>225giờ</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">Khác</td>
+                    </tr>
+                    <tr>
+                      <td>Trọng lượng</td>
+                      <td><a href="http://www.vatgia.com/s/112g">112g</a></td>
+                    </tr>
+                    <tr>
+                      <td>Kích thước</td>
+                      <td>123.8 x 58.5 x 7.6 mm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cf"></div>
+            </div>
+            <div class="section">
+              <div id="detail_product_description">
+                <h2>Thông tin thêm về Apple iPhone 5 64GB Black (Bản quốc tế)</h2>
+                <div>
+                  <p> </p>
+                  <div><strong>Ưu điểm</strong>- Thiết kế đẹp.<br />
+                    - Màn hình rực rỡ.<br />
+                    - Hỗ trợ 4G LTE.<br />
+                    - Thời lượng pin tốt.</div>
+                  <div><strong>Nhược điểm</strong>- Ứng dụng Maps chưa thuyết phục.<br />
+                    - Màn hình lơn hơn do vậy chưa tương thích một vài ứng dụng.<br />
+                    - iOS 6 không có gì mới lạ.</div>
+                  <div><strong>Tổng quan</strong>Không còn nghi ngờ gì nữa,   iPhone 5 là chiếc điện thoại smartphone tốt nhất mà Apple đã từng sản   xuất cũng như trên thị trường điện thoại hiện nay. Đây là sự kết hợp   hoàn hảo giữa thiết kế, kết nối 4G LTE và thời lượng pin tuyệt vời, tuy   rằng vẫn có một vài vấn đề về Map, và vấn đề bao giờ ứng dụng ví điện tử   - Passbook ra mắt thì iPhone 5 vẫn là con quái thú trên thị trường điện   thoại.</div>
+                  <p> </p>
+                  <p>(<a title="Nguồn" href="http://review.vatgia.com/reviews/iphone-5-manh-me-hon-voi-man-hinh-lon-ho-tro-4g-lte-lieu-co-tiep-tuc-thong-tri-thi-truong-r14.html">Theo Review Vatgia.com</a>)</p>
+                  <p><img src="http://cdn3.sbnation.com/entry_photo_images/5679561/iPhone5_main1_large_verge_super_wide.jpg" alt="" height="418" width="630" /></p>
+                  <p>Viết đánh giá về một chiếc iPhone tại thời điểm này khi nó mới   ra mắt là một điều thú vị và cũng khá khó khăn với tôi, thật vui khi nhớ   lại một thời điểm cách đây không lâu, khi một chiếc iPhone không được   coi là &quot;một chiếc điện thoại&quot; đơn thuần nữa, nó gần như đã trở thành một   biểu tượng cho một nét văn hóa. Tại thời điểm đó, những chiếc điện   thoại của Apple là một thứ gì đó tuyệt vời, nó trở thành cơn sốt trên   cộng đồng mạng xã hội lúc bấy giờ.</p>
+                  <p>iPhone giờ đây đã trở nên gần gũi hơn với người dùng, bạn có   thể dễ dàng bắt gặp nó ở bất kỳ nơi nào. Hiện tại iPhone 5 không còn là   một bản thiết kế trong phòng thí nghiệm của Apple ở Cupertino, chiếc   điện thoại này đã trở thành thước đo chuẩn mực cho những điện thoại   smartphone hiện nay.</p>
+                  <p>Sự nâng cấp của Apple luôn mang đến những điều thú vị tuyệt vời   cho người sử dụng : nhanh hơn, thông minh hơn, mỏng hơn và cũng nhẹ   hơn. iPhone 5 được trang bị công nghệ 4G LTE, máy ảnh được cải thiện   cùng với một màn hình lớn với độ phân giải cao hơn và một thiết kế - mặc   dùng không phải là một sự đột phá – nhưng vẫn cực kỳ tuyệt vời. Cũng   như những chiếc điện thoại iPhone trước đây, nó mang trong mình rất   nhiều sự thay đổi, tuy nhiên hệ điều hành mới iOS 6 không phải là một   bước nhảy vọt của Apple, nhưng cũng là một bước tiến lớn, ngoài ra thiết   kế của máy cũng là một sự thay đổi đáng kể so với iPhone 4S trước đây.</p>
+                  <p>Vậy thì chiếc iPhone 5 có thể được coi như là MVP ( Most   Valuable Professional ) trong thế giới smartphone hay chỉ là một sản   phẩm dành cho fan của Apple ? Vậy thì hãy đọc hết bài đánh giá này và   lựa chọn cho tôi một hướng suy nghĩ đúng đắn về chiếc điện thoại này.</p>
+                </div>
+              </div>
+              <div class="cf"></div>
+            </div>
+            <div class="section">
+              <div class="inner-comment">
+                <div class="write-comment">
+                  <p>Viết bình luận sản phẩm:</p>
+                  <span class="spanArea">
+                  <textarea placeholder="Bình luận của bạn" id="txtCommentDeal_20908" class="textareaCM"></textarea>
+                  </span> <a href="" class="btn_send">Viết bình luận</a> </div>
+              </div>
+              <div class="dList-comment" id="dCommentList">
+                <div class="comment-content"><img src="Images/noavatar.png" alt="" class="img_general" />
+                  <p itemprop="description">Sản phẩm này đẹp lắm</p>
+                </div>
+                <div class="comment-content"><img src="Images/noavatar.png" alt="" class="img_general" />
+                  <p itemprop="description">Sản phẩm này đẹp lắm</p>
+                </div>
+                <div class="comment-content"><img src="Images/noavatar.png" alt="" class="img_general" />
+                  <p itemprop="description">Sản phẩm này đẹp lắm</p>
+                </div>
+                <div class="comment-content"><img src="Images/noavatar.png" alt="" class="img_general" />
+                  <p itemprop="description">Sản phẩm này đẹp lắm</p>
+                </div>
+                <div class="comment-content"><img src="Images/noavatar.png" alt="" class="img_general" />
+                  <p itemprop="description">Sản phẩm này đẹp lắm</p>
+                </div>
+              </div>
+              <div class="cf"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Tab-->
+        <!--The same Price-->
+        <div id="thesame_price">
+          <div class="box_Tab"><span>Sản phẩm cùng giá</span></div>
+          <div class="box_ct">
+            <ul class="list_ul">
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+                <h2 class="product_name">LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+              <li>
+                <!--Start Product-->
+                <a href="detail_products.html"> <img src="Images/product01.jpg" alt="" class="img_general" /></a> <a href="detail_products.html" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+                <!--End Product-->
+              </li>
+            </ul>
+            <div class="cf"></div>
+          </div>
+          <div class="cf"></div>
+        </div>
+        <!-- End The same Price-->
+      </div>
+      <!--Ads-->
+      <div class="ads"><a href=""><img src="Images/ads6.jpg" alt="" /></a></div>
+      <!--End Ads-->
+      <!--The same Products-->
+      <div class="box">
+        <div class="box_Tab_r"><span>SẢN PHẨM CÙNG LOẠI</span></div>
+        <div class="box_ct product_row">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product01.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product02.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product02.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product03.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product01.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product01.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product02.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product01.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product02.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="Images/product01.jpg" alt="" /> </a> <a href="" class="product_name">
+                <h2>LG L70 Dual</h2>
+                </a>
+                <div class="price">4.490.000 VNĐ</div>
+              </div>
+              <!--End Product-->
+            </li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+        <div class="cf"></div>
+      </div>
+      <!-- End The same Products-->
+      <!--End Detail Products-->
+    </div>
+    <!--Right Column-->
+    <div class="cf"></div>
+  </div>
+  <!--End Main Content-->
+  <div class="cf"></div>
+</div>
+<!--Footer-->
+<div id="footer">
+  <div class="wrap_page">
+    <div id="info_footer">
+      <p><b>CÔNG TY TNHH TM DỊCH VỤ VIỄN THÔNG NAM HẢI</b></p>
+      <p>57- 59 Hồ Tùng Mậu, F.Bến Nghé, Quận 1, Tp.HCM</p>
+      <p>ĐT : 08 1234567 - Hotline : 012345678</p>
+      <p><a href="http://www.namhaimobile.com">www.namhaimobile.com</a> </p>
+    </div>
+    <!--Get Email-->
+    <div id="get_email"><span>ĐĂNG KÝ NHẬN MAIL</span>
+      <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Nhập  Email của bạn" onfocus="if (this.value=='Nhập  Email của bạn') this.value='';" onblur="if (this.value=='') this.value='Nhập  Email của bạn';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+      <a href="" class="send_button">Gửi đi</a> </div>
+    <!--End Get Email-->
+    <div id="payment_info">
+      <p><img src="Images/payment.jpg" alt="" class="payment" /></p>
+      <p>Giờ mở cửa: Thứ 2~ Chủ nhật (9h-21h)</p>
+      <p>Đang Online: 1 - Tổng truy cập: 33,972</p>
+    </div>
+    <div class="cf"></div>
+    <div id="copyright">
+      <p>Copyright 2014 by namhaimobile.com - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+    </div>
+    <div class="cf"></div>
+  </div>
+</div>
+<!--End Footer-->
+<div id="divAdLeft">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/thuong-hieu/f0-77-0-0-0-0-0-0.html" target="_self" title="left"><img alt="left" title="left" border="0" src="Images/ads.jpg" vspace="1" width="130" /></a></div>
+</div>
+<div id="divAdRight">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/he-thong-cua-hang-18.html" target="_self" title="Banner dọc ngoài "><img alt="Banner dọc ngoài " title="Banner dọc ngoài" border="0" src="Images/ads.jpg" vspace="1" width="130" /></a></div>
+</div>
+<script type="text/javascript">
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 130;RightBannerW = 130;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 30;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

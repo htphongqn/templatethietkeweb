@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Phương Nam</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Account-->
+<script type="text/javascript">    
+    $(function () {
+        $('.bubbleInfo').each(function () {
+            var distance = 10;
+            var time = 50;
+            var hideDelay = 50;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.popup_login', this).css('opacity', 0);
+
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 35,
+                        left: -100,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 0
+                    }, time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });
+    });    
+    </script>
+<!-- Start Nivo Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<!-- Start Slider Scripts -->
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!---Hoz menu-->
+<link type="text/css" href="Styles/menu_hoz.css" rel="stylesheet" />
+<script type="text/javascript" src="Scripts/menu_hoz.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("body div:last").remove();
+});
+</script>
+<!--Vertical Menu-->
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('.topnav ul li').mouseover(function(){
+    //show the box
+    $(this).children('.topnav ul ul','ul.topnav ul ul ul').stop().css("display","block");
+});
+
+$('.topnav ul li').mouseleave(function(){
+    //hide the box	
+    $(this).children('.topnav ul ul','ul.topnav ul ul ul').stop().css("display","none");
+});
+});//]]>  
+</script>
+<!--Slide chay ngang-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    }); 
+});
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Support-->
+  <div class="support_head"><span class="title_support"></span>
+    <div class="support_bg tip">
+      <p class="optionSupport">Hỗ trợ trực tuyến </a> </p>
+      <div class="infoSupport"> <span class="icoSupport"></span>
+        <p class="hotLine"> <span>08 7305 6615</span><br>
+          <span>08 7305 6616</span> </p>
+        <span class="icoMail"></span>
+        <p class="mailSupport">info@phuongnam.com</p>
+        <div class="yahoo"> <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a> <a href="ymsgr:sendim?hotro_nhommuahcm2"> <img width="64" height="16" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=1" style="margin-right:4px"> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="http://mystatus.skype.com/thuctapcungdoanhnghiep2/thuctapcungdoanhnghiep1" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> </div>
+      </div>
+    </div>
+  </div>
+  <!--End Support-->
+  <div class="top_page">
+    <div class="page_inner">
+      <!--#begin Header-->
+      <div class="header page_inner"> <a class="logo" href="index.html"><img src="Images/logo.png" alt="" /></a>
+        <p class="slogan"><img src="Images/banner_header.png" alt="" /></p>
+        <ul class="top_link">
+          <li class="cart"><a href="cart.html"><span class="icon_cart"></span><b>0</b> sản phẩm</a></li>
+          <li class="bubbleInfo"><a title="Đăng nhập" class="trigger" href="">Đăng nhập</a>
+            <div id="dpop" class="popup_login">
+              <div class="input_form">
+                <input type="text" onblur="FormatValidateCharBlur('txtusername')" maxlength="50" name="txtusername" id="txtusername" placeholder="Nhập Email hoặc sđt" class="input identity">
+              </div>
+              <div class="input_form">
+                <input type="password" onblur="ValidatePassword()" placeholder="Nhập mật khẩu" name="txtpassword" id="txtpassword" class="input password">
+              </div>
+              <div class="note_wrapper clearfix">
+                <div class="lost_password"><a class="link_acount" href="">Quên mật khẩu</a></div>
+                <div class="remember_password">
+                  <input type="checkbox" checked="checked" name="lost_password" id="lost_password" class="checkbox lost_password">
+                  <label for="lost_password">Ghi nhớ</label>
+                </div>
+              </div>
+              <div class="input_form">
+                <input type="submit" value="ĐĂNG NHẬP" onclick="ValidateBeforeSubmit(); return false;" name="submit" id="submit" class="button">
+              </div>
+            </div>
+          </li>
+          <li><a href="">Đăng ký</a></li>
+        </ul>
+        <!--Search Tool-->
+        <div class="search_tool">
+          <div class="all_cate">
+            <div class="dropdown">
+              <label>
+                <select class="cate_selected" id="vi7_ddlCatSearch" name="ctl00$vi7$ddlCatSearch">
+                  <option value="0">Tất cả</option>
+                  <option value="1">Nội thất</option>
+                  <option value="2">May mặc</option>
+                  <option value="3">Giày da</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Từ khóa tìm kiếm" onfocus="if (this.value=='Từ khóa tìm kiếm') this.value='';" onblur="if (this.value=='') this.value='Từ khóa tìm kiếm';" class="inputSearch" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword">
+          <a href="javascript:__doPostBack('ctl00$vi7$lbtnSearch','')" class="submitSearch" id="vi7_lbtnSearch"><span class="icon_search"></span></a> </div>
+        <!--Socilal Network-->
+        <div class="socilal_network"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a> <a href=""><span class="icon_gplus"></span></a><a href=""><span class="icon_p"></span></a><a href=""> <span class="icon_linkedin"></span></a><a href=""> <span class="icon_youtube"></span></a></div>
+      </div>
+      <!--#end Header-->
+      <!--Main Menu-->
+      <div id="menu">
+        <ul class="menu">
+          <li class="home"><a href="#"><span>Trang chủ</span></a> </li>
+          <li><a href="list_news.html" class="parent"><span>Giới thiệu</span></a>
+            <div>
+              <ul>
+                <li><a href="#"><span>Giới thiệu tổng quan</span></a> </li>
+                <li><a href="#"><span>Triết lý hoạt động</span></a> </li>
+                <li><a href="#"><span>Cơ cấu tổ chức </span></a></li>
+                <li><a href="#"><span>Đội ngũ lãnh đạo</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="list_products.html"><span>Sản phẩm</span></a>
+            <div>
+              <ul>
+                <li><a href="list_cate.html" class="parent"><span>Nội thất</span></a>
+                  <div>
+                    <ul>
+                      <li><a href="#"><span>Cửa gỗ</span></a> </li>
+                      <li><a href="#"><span>Cầu thang</span></a></li>
+                      <li><a href="#"><span>Kệ bếp</span></a></li>
+                      <li><a href="#"><span>Nội thất phòng ngủ</span></a></li>
+                      <li><a href="#"><span>Khung tranh</span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#"><span>May mặc</span></a></li>
+                <li><a href="#"><span>Giày da</span></a></li>
+                <li><a href="#"><span>Kim khí</span></a></li>
+                <li><a href="#"><span>Sản phẩm khác</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="list_news.html"><span>Dịch vụ</span></a>
+            <div>
+              <ul>
+                <li><a href="#"><span>Chăm sóc khách hàng</span></a> </li>
+                <li><a href="#"><span>Xuất nhập khẩu</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#"><span>Hệ thống cửa hàng</span></a></li>
+          <li><a href="#"><span>Tuyển dụng</span></a></li>
+          <li><a href="#"><span>Liên hệ</span></a></li>
+        </ul>
+      </div>
+      <!--End Main Menu-->
+    </div>
+  </div>
+  <div class="page_inner">
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <div class="box">
+          <div class="box_content_center" style="padding: 0">
+            <div class="box_Tab">Danh mục sản phẩm</div>
+            <ul class="topnav">
+              <li><a href="">Nội thất</a>
+                <ul>
+                  <li><a href="#">Cửa gỗ</a>
+                    <ul>
+                      <li><a href="#">PNC1</a></li>
+                      <li><a href="#">PNC2</a></li>
+                      <li><a href="#">PNC3</a></li>
+                      <li><a href="#">PNC4</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Cầu thang</a></li>
+                  <li><a href="#">Kệ bếp</a></li>
+                  <li><a href="#">Nội thất phòng ngủ</a></li>
+                  <li><a href="#">Khung tranh</a></li>
+                </ul>
+              </li>
+              <li><a href="#">May mặc</a>
+                <ul>
+                  <li><a href="#">May mặc 1</a>
+                    <ul>
+                      <li><a href="#">May mặc 1-01</a></li>
+                      <li><a href="#">May mặc 1-02</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">May mặc 2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Giày da</a>
+                <ul>
+                  <li><a href="#">Giày da 1</a></li>
+                  <li><a href="#">Giày da 2</a></li>
+                  <li><a href="#">Giày da 3</a></li>
+                  <li><a href="#">Giày da 4</a>
+                    <ul>
+                      <li><a href="#">Giày da 4-01</a></li>
+                      <li><a href="#">Giày da 4-02</a></li>
+                      <li><a href="#">Giày da 4-03</a></li>
+                      <li><a href="#">Giày da 4-04</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Kim khí</a></li>
+              <li><a href="#">Sản phẩm khác</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <div class="current_path"><a href="index.html">Trang chủ</a><span class="spSeperator"></span> <a href="list_cate.html">Nội thất</a><span class="spSeperator"></span> <a href="list_products.html">Cửa gỗ</a> </div>
+        <!--List Products-->
+        <div class="box">
+          <div class="box_Tab">Cửa gỗ</div>
+          <div class="product_row">
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1 PNC1 PNC1 PNC1 PNC1 PNC1 NC1 PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="detail_products.html">PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1 PNC1 PNC1 PNC1 PNC1 PNC1 NC1 PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1 PNC1 PNC1 PNC1 PNC1 PNC1 NC1 PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_product"> <a href="detail_products.html"><img src="Images/cate_01.jpg" alt="" width="210" height="140" />
+                  <div class="image_caption">Thông tin mô tả ngắn sản phẩm</div>
+                  </a> </div>
+                <h2 class="product_name"><a href="">PNC1</a></h2>
+                <div class="f_price">630 000 đ</div>
+                <div class="price">399 000 đ</div>
+                <a href="" class="buy_bt">Mua hàng</a> </div>
+            </div>
+            <!--End Product-->
+          </div>
+          <div class="clearfix"></div>
+          <div class="navigation"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+        </div>
+        <!--End List Products-->
+      </div>
+      <!--End Main Column-->
+    </div>
+    <!--End Main-->
+    <!--Other Infomation-->
+    <div id="connect">
+      <div class="get_email">
+        <input class="txf" value="Đăng ký nhận mail" name="email">
+        <input type="submit" value="" class="btn" />
+      </div>
+      <p class="visitors"><b>30 000</b> Lượt truy cập - <b>50</b> Đang truy cập</p>
+      <div class="clearfix"></div>
+    </div>
+    <!--End Other Infomation-->
+    <div class="clearfix"></div>
+    <div class="footer">
+      <div class="info_company">
+        <p><b>CÔNG TY TNHH MTV 19-5  - BỘ CÔNG AN</b></p>
+        <p><strong>CHI NHÁNH PHƯƠNG NAM</strong></p>
+        <p>Địa chỉ: 125 Kha Vạn Cân, Phường Linh Tây, Quận Thủ Đức, Tp, HCM</p>
+        <p>Điện thoại: 08 38 969 179  - Fax: 08 38 967 668</p>
+        <p>Email: <a href="mailto:info@phuongnam.com">info@phuongnam.com</a> - website: <a href="http://www.phuongnam195bca.com">phuongnam195bca.com</a></p>
+        </p>
+      </div>
+      <div class="footer_r">
+        <p class="menu_footer"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Sản phẩm</a><a href="">Dịch vụ</a><a href="">Tuyển dụng</a><a href="">Liên hệ</a></p>
+        <p class="copyright"> Copyright © 2013 <strong>Phuongnam</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </p>
+      </div>
+    </div>
+    <!--End Footer-->
+  </div>
+  <!--End Page-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

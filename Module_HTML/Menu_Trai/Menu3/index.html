@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/left_menu.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+				  		   
+//Mobile menu
+$('li.cat-header ul').each(function(index) {
+ $(this).prev().addClass('idCatSubcat')});
+ $('li.cat-header a').after('<span></span>'); 
+ $('li.cat-header ul').css('display','none');
+ $('li.cat-header ul.active').css('display','block');
+ $('li.cat-header ul').each(function(index) {
+   $(this).prev().addClass('close').click(function() {
+  if (
+   $(this).next().css('display') == 'none') {
+   $(this).next().slideDown(400, function () {
+   $(this).prev().removeClass('collapsed').addClass('expanded');
+    });
+  }else {
+    $(this).next().slideUp(400, function () {
+   $(this).prev().removeClass('expanded').addClass('collapsed');
+   $(this).find('ul').each(function() {
+    $(this).hide().prev().removeClass('expanded').addClass('collapsed');
+   });
+    });
+  }
+  return false;
+   });
+});		  	  
+});
+</script>
+</head>
+<body style="width: 240px; margin: 20px auto; font: normal 75% Tahoma, Geneva, sans-serif">
+<div class="box">
+  <div id="menu_sidebar">
+    <ul>
+      <li class="cat-header active"><a href="/dich-vu-thuong-mai.html">Dịch vụ - Thương mại</a>
+        <ul>
+          <li><a href="/dich-vu-thuong-mai/o-to-3.html">Ô tô </a>
+            <ul>
+              <li id="submenu_second_3" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/o-to/toyota-3.html">Toyota</a> </li>
+              <li id="submenu_second_5" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/ford-5.html">Ford</a> </li>
+              <li id="submenu_second_4" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/hyundai-4.html">Hyundai</a> </li>
+              <li id="submenu_second_13" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/chevrolet-13.html">Chevrolet</a> </li>
+              <li id="submenu_second_6" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/suzuki-6.html">Suzuki </a> </li>
+              <li id="submenu_second_7" class="sub2 sub2-last"> <a href="/dich-vu-thuong-mai/o-to/sym-7.html">SYM</a> </li>
+            </ul>
+          </li>
+          <li><a href="/dich-vu-thuong-mai/xe-gan-may-2.html">Xe gắn máy</a>
+            <ul>
+              <li id="submenu_second_14" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/xe-gan-may/yamaha-14.html">Yamaha</a> </li>
+              <li id="submenu_second_15" class="sub2"> <a href="/dich-vu-thuong-mai/xe-gan-may/suziki-15.html">Suziki</a> </li>
+            </ul>
+          </li>
+          <li><a href="/dich-vu-thuong-mai/taxi-va-dich-vu-khac-1.html">Taxi và dịch vụ khác</a>
+            <ul>
+              <li id="submenu_second_18" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/taxi-va-dich-vu-khac/taxi-18.html">Taxi</a> </li>
+              <li id="submenu_second_19" class="sub2 sub2-last"> <a href="/dich-vu-thuong-mai/chi-tiet/he-thong-cac-dich-vu-khac-cua-cong-ty-24.html">Dịch vụ khác</a> </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="cat-header"><a href="/dich-vu-bat-dong-san.html">Dịch vụ bất động sản</a>
+        <ul>
+          <li><a href="/dich-vu-thuong-mai/o-to-3.html">Ô tô </a>
+            <ul>
+              <li id="submenu_second_3" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/o-to/toyota-3.html">Toyota</a> </li>
+              <li id="submenu_second_5" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/ford-5.html">Ford</a> </li>
+              <li id="submenu_second_4" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/hyundai-4.html">Hyundai</a> </li>
+              <li id="submenu_second_13" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/chevrolet-13.html">Chevrolet</a> </li>
+              <li id="submenu_second_6" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/suzuki-6.html">Suzuki </a> </li>
+              <li id="submenu_second_7" class="sub2 sub2-last"> <a href="/dich-vu-thuong-mai/o-to/sym-7.html">SYM</a> </li>
+            </ul>
+          </li>
+          <li><a href="/dich-vu-thuong-mai/xe-gan-may-2.html">Xe gắn máy</a>
+            <ul>
+              <li id="submenu_second_14" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/xe-gan-may/yamaha-14.html">Yamaha</a> </li>
+              <li id="submenu_second_15" class="sub2"> <a href="/dich-vu-thuong-mai/xe-gan-may/suziki-15.html">Suziki</a> </li>
+            </ul>
+          </li>
+          <li><a href="/dich-vu-thuong-mai/taxi-va-dich-vu-khac-1.html">Taxi và dịch vụ khác</a>
+            <ul>
+              <li id="submenu_second_18" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/taxi-va-dich-vu-khac/taxi-18.html">Taxi</a> </li>
+              <li id="submenu_second_19" class="sub2 sub2-last"> <a href="/dich-vu-thuong-mai/chi-tiet/he-thong-cac-dich-vu-khac-cua-cong-ty-24.html">Dịch vụ khác</a> </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="cat-header"><a href="/dich-vu-tai-chinh.html">Dịch vụ tài chính</a>
+        <ul>
+          <li><a href="/dich-vu-thuong-mai/o-to-3.html">Ô tô </a>
+            <ul>
+              <li id="submenu_second_3" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/o-to/toyota-3.html">Toyota</a> </li>
+              <li id="submenu_second_5" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/ford-5.html">Ford</a> </li>
+              <li id="submenu_second_4" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/hyundai-4.html">Hyundai</a> </li>
+              <li id="submenu_second_13" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/chevrolet-13.html">Chevrolet</a> </li>
+              <li id="submenu_second_6" class="sub2"> <a href="/dich-vu-thuong-mai/o-to/suzuki-6.html">Suzuki </a> </li>
+              <li id="submenu_second_7" class="sub2 sub2-last"> <a href="/dich-vu-thuong-mai/o-to/sym-7.html">SYM</a> </li>
+            </ul>
+          </li>
+          <li><a href="/dich-vu-thuong-mai/xe-gan-may-2.html">Xe gắn máy</a>
+            <ul>
+              <li id="submenu_second_14" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/xe-gan-may/yamaha-14.html">Yamaha</a> </li>
+              <li id="submenu_second_15" class="sub2"> <a href="/dich-vu-thuong-mai/xe-gan-may/suziki-15.html">Suziki</a> </li>
+            </ul>
+          </li>
+          <li><a href="/dich-vu-thuong-mai/taxi-va-dich-vu-khac-1.html">Taxi và dịch vụ khác</a>
+            <ul>
+              <li id="submenu_second_18" class="sub2 sub2-active"> <a href="/dich-vu-thuong-mai/taxi-va-dich-vu-khac/taxi-18.html">Taxi</a> </li>
+              <li id="submenu_second_19" class="sub2 sub2-last"> <a href="/dich-vu-thuong-mai/chi-tiet/he-thong-cac-dich-vu-khac-cua-cong-ty-24.html">Dịch vụ khác</a> </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

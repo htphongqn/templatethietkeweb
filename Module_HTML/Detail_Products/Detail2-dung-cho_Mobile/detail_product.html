@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/detail_product.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--SimpleTabs-->
+<script type="text/javascript" src="Scripts/simpletabs_1.3.js"></script>
+<link rel="stylesheet" href="Styles/simpletabs.css" type="text/css" />
+<!--Carousel Assets -->
+<script type="text/javascript" src="Scripts/jquery.carouFredSel-6.2.0-packed.js"></script>
+<!--Fancybox-->
+<link href="Styles/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.fancybox.js"></script>
+<script type='text/javascript'>//<![CDATA[ 
+$(document).ready(function(){							
+		//carouFredSel						
+		$(".thumb").carouFredSel({
+							circular: true,
+							infinite: true,
+							responsive: true,
+							pagination: false,
+							auto: false,
+							//auto 	: { pauseDuration : 4000, duration: 1000},
+							prev: '#prev',
+							next: '#next',
+							scroll	: {
+								items	: 1								
+							},
+							swipe: { onMouse: true, onTouch: true},
+							items: {
+								height: "variable",
+								visible: { min: 1, max: 4}
+							}
+						});		
+		
+	$(".zoom").fancybox({
+		openEffect: 'elastic',
+        closeEffect: 'elastic',
+		autoPlay: 'true',
+		playSpeed: '5000'
+    });
+
+	function showImage(o) {
+    $('.thumb a').removeClass('current');
+    $(o).addClass('current');
+    var img = $('.inn #' + $(o).attr('for'));
+    if ($('.inn a:visible').length > 0) {
+        $('.inn a:visible').fadeOut('fast', function() {
+            img.fadeIn('fast');
+        });
+    } else {
+        img.fadeIn('fast');
+    }
+    
+    	return false;
+	}
+
+
+    $('.thumb a').click(function() {
+        showImage(this);
+        return false;
+    });
+    $('.thumb a:first-child').click();
+});	
+
+$(window).load(function(){	
+(function ($) {
+        // VERTICALLY ALIGN FUNCTION
+        $.fn.vAlign = function() {
+            return this.each(function(i){
+            var ah = $(this).height();
+            var ph = $(this).parent().height();
+            var mh = Math.ceil((ph-ah) / 2);
+            $(this).css('padding-top', mh);
+            });
+        };
+		
+    })(jQuery);
+$(document).ready(function() {
+    $(".pro_left .thumb img").vAlign();
+});
+});//]]>  
+</script>
+</head>
+<body style="width: 750px; margin: 20px auto; font: normal 75% Arial, Helvetica, sans-serif">
+<!--Detail Products-->
+<div class="box">
+  <div class="box_ct">
+    <div class="pro_left">
+      <div class="main_img boxcenter">
+        <div class="midd">
+          <div class="inn"> <a id="pimg1" href="https://www.apple.com/euro/iphone/home/f/screens/images/ios8_hero.png" title="iPhone 5S 16GB Gold" rel="gallery1" class="img-box zoom" style="display: none;"> <img  src="https://www.apple.com/euro/iphone/home/f/screens/images/ios8_hero.png" alt="Bộ bàn ăn Havana - 1012" /><span class="zoom_icon">Click xem ảnh lớn</span></a> <a id="pimg2" href="http://i.huffpost.com/gen/1709464/thumbs/o-IPHONE-6-facebook.jpg" title="iPhone 5S 16GB Gold" rel="gallery1" class="img-box zoom" style="display: none;"> <img  src="http://i.huffpost.com/gen/1709464/thumbs/o-IPHONE-6-facebook.jpg" alt="Bộ bàn ăn Havana - 1012" /><span class="zoom_icon">Click xem ảnh lớn</span></a> <a id="pimg3" href="http://cdn-static.zdnet.com/i/story/70/00/032792/iphone-6-a-delicate-compromise.png" title="iPhone 5S 16GB Gold" rel="gallery1" class="img-box zoom" style="display: none;"> <img  src="http://cdn-static.zdnet.com/i/story/70/00/032792/iphone-6-a-delicate-compromise.png" alt="Bộ bàn ăn Havana - 1012" /><span class="zoom_icon">Click xem ảnh lớn</span></a> <a id="pimg4" href="https://www.apple.com/euro/iphone/home/f/screens/images/ios8_hero.png" title="iPhone 5S 16GB Gold" rel="gallery1" class="img-box zoom" style="display: none;"> <img  src="https://www.apple.com/euro/iphone/home/f/screens/images/ios8_hero.png" alt="Bộ bàn ăn Havana - 1012" /><span class="zoom_icon">Click xem ảnh lớn</span></a> <a id="pimg5" href="http://i.huffpost.com/gen/1709464/thumbs/o-IPHONE-6-facebook.jpg" title="iPhone 5S 16GB Gold" rel="gallery1" class="img-box zoom" style="display: none;"> <img  src="http://i.huffpost.com/gen/1709464/thumbs/o-IPHONE-6-facebook.jpg" alt="Bộ bàn ăn Havana - 1012" /><span class="zoom_icon">Click xem ảnh lớn</span></a> <a id="pimg6" href="http://cdn-static.zdnet.com/i/story/70/00/032792/iphone-6-a-delicate-compromise.png" title="iPhone 5S 16GB Gold" rel="gallery1" class="img-box zoom" style="display: none;"> <img  src="http://cdn-static.zdnet.com/i/story/70/00/032792/iphone-6-a-delicate-compromise.png" alt="Bộ bàn ăn Havana - 1012" /><span class="zoom_icon">Click xem ảnh lớn</span></a> </div>
+        </div>
+      </div>     
+      <div class="thumbnails">
+        <div class="thumb"><a href="javascript: return false;" for="pimg1"><img src="https://www.apple.com/euro/iphone/home/f/screens/images/ios8_hero.png" alt="" /></a> <a href="javascript: return false;" for="pimg2"><img src="http://i.huffpost.com/gen/1709464/thumbs/o-IPHONE-6-facebook.jpg" alt="" /></a> <a href="javascript: return false;" for="pimg3"><img src="http://cdn-static.zdnet.com/i/story/70/00/032792/iphone-6-a-delicate-compromise.png" alt="" /></a> <a href="javascript: return false;" for="pimg4"><img src="https://www.apple.com/euro/iphone/home/f/screens/images/ios8_hero.png" alt="" /></a> <a href="javascript: return false;" for="pimg5"><img src="http://i.huffpost.com/gen/1709464/thumbs/o-IPHONE-6-facebook.jpg" alt="" /></a> <a href="javascript: return false;" for="pimg6"><img src="http://cdn-static.zdnet.com/i/story/70/00/032792/iphone-6-a-delicate-compromise.png" alt="" /></a> </div>
+      </div>
+      <div class="cf"></div>
+      <a id="prev" class="slide_ctrl prev" href="#">&lt;</a> <a id="next" class="slide_ctrl next" href="#">&gt;</a> </div>
+    <!--end: #dp-thumb-->
+    <div id="dtp_info">
+      <h1 class="h1Title font1">iPhone 5S 16GB Gold</h1>
+      <div class="dtp_status"><img src="Images/social_network1.jpg" alt="" /></div>
+      <div class="dtp_status"><b class="title_status">Bảo hành:</b>12 Tháng</div>
+      <!--end: .dtp_status-->
+      <div class="dtp_status"><b class="title_status">Tình trạng:</b> Còn hàng</div>
+      <!--end: .dtp_status-->
+      <div class="dtp_status" id="short_des_dtp"><b class="title_status">Tóm tắt sản phẩm:</b> <br />
+        <p>Chip Apple A7, 64bit, có chip phụ M7,Rom 16GB</p>
+        <p>Cảm biến vân tay Touch ID tiên tiến</p>
+        <p>Camera 8MP, 1.5µm pixel size, Dual flash LED</p>
+        <p>Quay phim 1080p@30fps, 720p@120fps</p>
+        <p>Retina Screen, 1136x640 pixels, 326ppi</p>
+        <p>Hệ điều hành iOS 7 tối ưu cho 64 bit 
+      </div>
+      <!--end: .dtp_status-->
+      <div class="dtp_status dtp_price"><b class="fl tt_price">Giá bán:</b> <span class="fl">
+        <div class="dt_f_price"><del>350.000 VNĐ</del> </div>
+        <div class="dt_price"><b>199.000 VNĐ</b></div>
+        </span> </div>
+      <div class="dtp_status"><a class="btn_web btn_addtocart font1" href="cart.html">Mua ngay</a> </div>
+    </div>
+    <div class="cf"></div>
+    <!--Text Detail-->
+    <!--Tab Position 1-->
+    <div class="tab_home">
+      <div class="simpleTabs">
+        <ul class="simpleTabsNavigation">
+          <li><a href="#" class="active">Thông tin chi tiết</a></li>
+          <li><a href="#">Thông số kỹ thuật</a></li>
+          <li><a href="#">Ý kiến phản hồi</a></li>
+        </ul>
+        <div class="simpleTabsContent">
+          <div id="info_g">
+            <!--Info Technology-->
+            <h2 align="center">Nokia Lumia 930: Smartphone WP 8.1 nổi bật tính năng sạc không dây</h2>
+            <p>Nokia vừa mới tung ra smartphone Lumia 930 nóng hổi để tiếp nối thành   công của các siêu phẩm Nokia Lumia 1020 và Nokia Lumia 925. Với thiết   kế màu sắc sôi động, màn hình Full HD 5” sáng rực, chip Snapdragon 800   2.2 GHz mạnh mẽ cùng vô số tính năng nổi bật dành riêng cho hệ điều hành   Windows Phone 8.1 mới nhất, Nokia Lumia 930 hứa hẹn sẽ “công phá” phân   khúc cao cấp trong thời gian tới.</p>
+            <p><img title="Nokia Lumia 930" src="http://www.vienthonga.vn/uploads/hinh%20bai%20viet%20sp/Nokia%20Lumia%20930/Nokia-Lumia-930-_-02.jpg" alt="Nokia Lumia 930 có thiết kế nguyên khối đẳng cấp nhưng không kém phần trẻ trung, năng động đặc trưng của dòng Nokia Lumia. " height="550" width="472"></p>
+            <p>Nokia Lumia 930 có thiết kế nguyên khối đẳng cấp nhưng không kém phần trẻ trung, năng động đặc trưng của dòng Nokia Lumia.</p>
+            <h3>Nokia Lumia 930: Thiết kế nguyên khối - Màn hình OLED Full HD 5”</h3>
+            <p>Nokia Lumia 930 ứng dụng công nghệ ClearBlack, OLED vào màn hình 5”,   độ phân giải Full HD 1920 x 1080pixels, số màu màn hình TrueColor   (24-bit/16M), mật độ điểm ảnh 441ppi, tỉ lệ khung hình 16:9.</p>
+            <p><img title="Nokia Lumia 930" src="http://www.vienthonga.vn/uploads/hinh%20bai%20viet%20sp/Nokia%20Lumia%20930/Nokia-Lumia-930-_-07.jpg" alt="Màn hình Full HD 5' của Nokia Lumia 930 sáng rực với giao diện bắt mắt." height="616" width="450"></p>
+            <p>Màn hình Full HD 5" của Nokia Lumia 930 sáng rực với giao diện bắt mắt.</p>
+            <p>Màn hình cảm ứng siêu nhạy của <strong>Nokia Lumia 930</strong> còn   tích hợp các bộ cảm biến: Ambient Light Sensor, Gia tốc kế, Proximity   Sensor, Con quay hồi chuyển (Gyroscope), Từ kế. Tính năng hiển thị thông   minh giúp kiểm soát độ sáng, cảm ứng hướng, click đúp trên màn hình,   tốc độ làm mới 60 Hz, độ sáng cao, góc nhìn rộng…</p>
+            <p><img title="Nokia Lumia 930" src="http://www.vienthonga.vn/uploads/hinh%20bai%20viet%20sp/Nokia%20Lumia%20930/lumia%20930.jpg" alt="Nokia Lumia 930" height="358" width="607"></p>
+            <p>Nokia Lumia 930 có kích thước 137 x 71 x 9.8 mm, trọng lượng 167g.</p>
+            <p>Màn hình Nokia Lumia 930 được bảo vệ bằng   kính Corning® Gorilla® 3 dễ lau chùi, tăng khả năng chống trầy xước và   các tác nhân gây hại.</p>
+            <p><img title="Nokia Lumia 930" src="http://www.vienthonga.vn/uploads/hinh%20bai%20viet%20sp/Nokia%20Lumia%20930/Nokia-Lumia-930-_-03.jpg" alt="Nokia Lumia 930 có nhiều lựa chọn vỏ sau màu sắc nổi bật." height="493" width="600"></p>
+            <p>Nokia Lumia 930 có nhiều lựa chọn vỏ sau màu sắc nổi bật.</p>
+            <p>Máy có thiết kế nguyên khối, với kích thước 137 x 71 x 9.8 mm, trọng lượng 167g.</p>
+            <h3>Nokia Lumia 930: Chip xử lý lõi tứ Snapdragon™ 800 2.2GHz, RAM 2 GB, ROM 32GB</h3>
+            <p>Nokia Lumia 930 có bộ lõi đầy sức mạnh: chip lõi tứ Qualcomm   Snapdragon™ 800 xung nhịp 2.2GHz, RAM 2 GB, bộ nhớ trong 32GB không mở   rộng bằng thẻ nhớ nhưng Nokia “tặng” người dùng Lumia 930 7GB trên đám   mây lưu trữ OneDrive.</p>
+            <p><img title="Nokia Lumia 930" src="http://www.vienthonga.vn/uploads/hinh%20bai%20viet%20sp/Nokia%20Lumia%20930/Nokia-Lumia-930-_-04.jpg" alt="Nokia Lumia 930 dùng chip lõi tứ Snapdragon 800 xung nhịp 2.2GHz." height="484" width="600"></p>
+            <p>Nokia Lumia 930 dùng chip lõi tứ Snapdragon 800 xung nhịp 2.2GHz.</p>
+            <p>Bộ kết nối của Nokia Lumia 930 gồm: Wi-Fi 802.11 a/b/g/n/ac,   dual-band, DLNA, Wi-Fi hotspot, công nghệ ghép kênh Wi-Fi, kết nối không   dây trình chiếu màn hình, GPRS, kết nối 3G hỗ trợ với HSDPA tốc độ 42.2   Mbps; HSUPA tốc độ 5.76 Mbps, Bluetooth v4.0 với A2DP, EDGE, NFC   microUSB v2.0, định vị A-GPS, jack cắm tai nghe 3.5mm jack.</p>
+            <!--End Info Technology-->
+          </div>
+        </div>
+        <div class="simpleTabsContent">
+          <!--Text Detail-->
+          <table border="1" cellpadding="2" cellspacing="1">
+            <tbody>
+              <tr>
+                <td rowspan="2" valign="top"><div>Thông tin chung</div></td>
+                <td id="prop_72">Hệ điều hành</td>
+                <td id="c72_1">Windows Phone 8.1</td>
+              </tr>
+              <tr>
+                <td><div id="prop_75">Ngôn ngữ</div></td>
+                <td id="c75_1">Tiếng Việt, Tiếng Anh</td>
+              </tr>
+              <tr>
+                <td rowspan="6" valign="top"><div>Màn hình</div></td>
+                <td>Loại màn hình</td>
+                <td id="c6459_1">AMOLED</td>
+              </tr>
+              <tr>
+                <td><div>Màu màn hình</div></td>
+                <td id="c6239_1">16 triệu màu</td>
+              </tr>
+              <tr>
+                <td><div id="prop_77">Chuẩn màn hình</div></td>
+                <td id="c77_1">Full HD</td>
+              </tr>
+              <tr>
+                <td><div id="prop_78">Độ phân giải</div></td>
+                <td id="c78_1">1080 x 1920 pixels</td>
+              </tr>
+              <tr>
+                <td><div id="prop_79">Màn hình rộng</div></td>
+                <td id="c79_1">5.0"</td>
+              </tr>
+              <tr>
+                <td><div id="prop_80">Công nghệ cảm ứng</div></td>
+                <td id="c80_1">Cảm ứng điện dung đa điểm</td>
+              </tr>
+              <tr>
+                <td rowspan="6" valign="top"><div>Chụp hình &amp; Quay phim</div></td>
+                <td id="prop_27">Camera sau</td>
+                <td id="c27_1">20 MP</td>
+              </tr>
+              <tr>
+                <td><div id="prop_29">Camera trước</div></td>
+                <td id="c29_1">1.2 MP</td>
+              </tr>
+              <tr>
+                <td><div>Đèn Flash</div></td>
+                <td id="c6460_1">Có</td>
+              </tr>
+              <tr>
+                <td><div id="prop_28">Tính năng camera</div></td>
+                <td id="c28_1">Ống kính Carl Zeiss<br>
+                  Tự động lấy nét, chạm lấy nét<br>
+                  Nhận diện khuôn mặt<br>
+                  Chống rung<br>
+                  Panorama</td>
+              </tr>
+              <tr>
+                <td><div id="prop_31">Quay phim</div></td>
+                <td id="c31_1">Quay phim FullHD 1080p@30fps</td>
+              </tr>
+              <tr>
+                <td><div id="prop_30">Videocall</div></td>
+                <td id="c30_1">Hỗ trợ VideoCall qua Skype</td>
+              </tr>
+              <tr>
+                <td rowspan="5" valign="top"><div>CPU &amp; RAM</div></td>
+                <td id="prop_51">Tốc độ CPU</td>
+                <td id="c51_1">2.2 GHz</td>
+              </tr>
+              <tr>
+                <td><div>Số nhân</div></td>
+                <td id="c6461_1">4 nhân</td>
+              </tr>
+              <tr>
+                <td><div id="prop_6059">Chipset</div></td>
+                <td id="c6059_1">Qualcomm Snapdragon 800</td>
+              </tr>
+              <tr>
+                <td><div>RAM</div></td>
+                <td id="c50_1">2 GB</td>
+              </tr>
+              <tr>
+                <td><div id="prop_6079">Chip đồ họa (GPU)</div></td>
+                <td id="c6079_1">Adreno 330</td>
+              </tr>
+              <tr>
+                <td rowspan="4" valign="top"><div>Bộ nhớ &amp; Lưu trữ</div></td>
+                <td id="prop_54">Danh bạ</td>
+                <td id="c54_1">Không giới hạn</td>
+              </tr>
+              <tr>
+                <td><div id="prop_49">Bộ nhớ trong (ROM)</div></td>
+                <td id="c49_1">32 GB</td>
+              </tr>
+              <tr>
+                <td><div id="prop_52">Thẻ nhớ ngoài</div></td>
+                <td id="c52_1">Không</td>
+              </tr>
+              <tr>
+                <td><div id="prop_53">Hỗ trợ thẻ tối đa</div></td>
+                <td id="c53_1">Không</td>
+              </tr>
+              <tr>
+                <td rowspan="3" valign="top"><div>Thiết kế &amp; Trọng lượng</div></td>
+                <td id="prop_73">Kiểu dáng</td>
+                <td id="c73_1">Thanh + Cảm ứng</td>
+              </tr>
+              <tr>
+                <td><div id="prop_88">Kích thước</div></td>
+                <td id="c88_1">137 x 71 x 9.8 mm</td>
+              </tr>
+              <tr>
+                <td><div id="prop_100">Trọng lượng (g)</div></td>
+                <td id="c100_1">167</td>
+              </tr>
+              <tr>
+                <td rowspan="3" valign="top"><div>Thông tin pin</div></td>
+                <td>Loại pin</td>
+                <td id="c83_1">Pin Nokia BV-5QW</td>
+              </tr>
+              <tr>
+                <td><div id="prop_84">Dung lượng pin</div></td>
+                <td id="c84_1">2420 mAh</td>
+              </tr>
+              <tr>
+                <td><div>Pin có thể tháo rời</div></td>
+                <td id="c6462_1">Không</td>
+              </tr>
+              <tr>
+                <td rowspan="13" valign="top"><div>Kết nối &amp; Cổng giao tiếp</div></td>
+                <td id="prop_65">3G</td>
+                <td id="c65_1">HSDPA, 21 Mbps; HSUPA, 5.76 Mbps</td>
+              </tr>
+              <tr>
+                <td><div>4G</div></td>
+                <td id="c6463_1">Có</td>
+              </tr>
+              <tr>
+                <td><div>Loại Sim</div></td>
+                <td id="c6339_1">Nano SIM</td>
+              </tr>
+              <tr>
+                <td><div id="prop_60">Khe gắn Sim</div></td>
+                <td id="c60_1">1 Sim</td>
+              </tr>
+              <tr>
+                <td><div id="prop_66">Wifi</div></td>
+                <td id="c66_1">Wi-Fi 802.11 a/b/g/n/ac, dual-band, DLNA, Wi-Fi Direct, Wi-Fi hotspot</td>
+              </tr>
+              <tr>
+                <td><div id="prop_68">GPS</div></td>
+                <td id="c68_1">A-GPS và GLONASS</td>
+              </tr>
+              <tr>
+                <td><div id="prop_69">Bluetooth</div></td>
+                <td id="c69_1">V4.0 with A2DP</td>
+              </tr>
+              <tr>
+                <td><div id="prop_61">GPRS/EDGE</div></td>
+                <td id="c61_1">Có</td>
+              </tr>
+              <tr>
+                <td><div id="prop_48">Jack tai nghe</div></td>
+                <td id="c48_1">3.5 mm</td>
+              </tr>
+              <tr>
+                <td><div>NFC</div></td>
+                <td id="c6464_1">Có</td>
+              </tr>
+              <tr>
+                <td><div id="prop_71">Kết nối USB</div></td>
+                <td id="c71_1">Micro USB</td>
+              </tr>
+              <tr>
+                <td><div>Kết nối khác</div></td>
+                <td id="c5199_1">Không</td>
+              </tr>
+              <tr>
+                <td><div>Cổng sạc</div></td>
+                <td id="c85_1">Micro USB</td>
+              </tr>
+              <tr>
+                <td rowspan="6" valign="top"><div>Giải trí &amp; Ứng dụng</div></td>
+                <td id="prop_32">Xem phim</td>
+                <td id="c32_1">MP4, WMV, H.263, H.264(MPEG4-AVC)</td>
+              </tr>
+              <tr>
+                <td><div id="prop_33">Nghe nhạc</div></td>
+                <td id="c33_1">MP3, WAV, WMA, eAAC+</td>
+              </tr>
+              <tr>
+                <td><div id="prop_36">Ghi âm</div></td>
+                <td id="c36_1">Có</td>
+              </tr>
+              <tr>
+                <td><div id="prop_6039">Giới hạn cuộc gọi</div></td>
+                <td id="c6039_1">Không</td>
+              </tr>
+              <tr>
+                <td><div id="prop_34">FM radio</div></td>
+                <td id="c34_1">Có</td>
+              </tr>
+              <tr>
+                <td><div>Chức năng khác</div></td>
+                <td id="c43_1">Mạng xã hội ảo<br>
+                  Youtube, Gmail<br>
+                  Micro chuyên dụng chống ồn</td>
+              </tr>
+            </tbody>
+          </table>
+          <!--End Text Detail-->
+        </div>
+        <div class="simpleTabsContent">
+          <!--Feedback-->
+          <p> Viết bình luận sản phẩm:</p>
+          <span class="spanArea">
+          <div id="fb-root"> </div>
+          <script>                                (function (d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s); js.id = id;
+                                    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=183250451825564";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                } (document, 'script', 'facebook-jssdk'));</script>
+          <span id="ContentPlaceHolder1_ctl00_Lbface">
+          <div class='fb-comments' data-href='http://namhai.com/san-pham/nokia-lumia-930.html' data-numposts='5' data-colorscheme='light' data-width='530'></div>
+          </span> </span>
+          <!--End Feedback-->
+        </div>
+      </div>
+    </div>
+    <!--End Tab Position 1-->
+    <!--End Text Detail-->
+  </div>
+</div>
+<!--End Detail Products-->
+</body>
+</html>

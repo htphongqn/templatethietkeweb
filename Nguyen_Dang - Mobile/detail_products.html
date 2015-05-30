@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Nguyễn Đăng Mobile</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+<script type="text/javascript" src="http://cdn.tgdd.vn/betamobile/Scripts/Base/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="Scripts/jmobile.common.min.js"></script>
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-918185-25']); _gaq.push(['_setDomainName', '.thegioididong.com']); _gaq.push(['_trackPageview']); _gaq.push(['_setAccount', 'UA-918185-30']); _gaq.push(['_trackPageview']); (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script>
+</head>
+<body id="bd">
+<div class="page">
+  <!--#begin Header-->
+  <div class="header">
+    <div class="left"><a href="index.html">
+      <div class="home"></div>
+      </a> </div>
+    <div id="center" class="center"><a href="/">
+      <div class="logo"></div>
+      </a></div>
+    <div class="right">
+      <div onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Mở']);" id="menu_icon" class="menu_icon"></div>
+      <div class="clr"></div>
+      <div id="list_menu">
+        <ul class="category">
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Điện thoại']);" href="list_products.html">
+            <div class="imgmenu"><img alt="Đồ lót nữ" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Đồ lót nữ</div>
+            </a></li>
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Máy tính bảng']);" href="/may-tinh-bang">
+            <div class="imgmenu"><img alt="Bộ quần áo lót" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Bộ quần áo lót</div>
+            </a></li>
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Laptop']);" href="/laptop">
+            <div class="imgmenu"><img alt="Gen nịch bụng" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Gen nịch bụng</div>
+            </a></li>
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Phụ kiện']);" href="/phu-kien-dien-thoai">
+            <div class="imgmenu"><img alt="Quần lót" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Quần lót</div>
+            </a></li>
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Rao vặt, Máy cũ']);" href="/mua-ban">
+            <div class="imgmenu"><img alt="Phụ kiện" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Phụ kiện</div>
+            </a></li>
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Sim số']);" href="/sim-so-dep-dich-vu-mang">
+            <div class="imgmenu"><img alt="Hãng sản xuất" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Hãng sản xuất</div>
+            </a></li>
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Khuyến mãi']);" href="/tin-tuc-dien-dan/khuyen-mai/31">
+            <div class="imgmenu"><img alt="Loại" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Loại</div>
+            </a></li>
+          <li><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Game ứng dụng']);" href="/game-ung-dung">
+            <div class="imgmenu"><img alt="Chất liệu" src="Images/triangle-left-arrow.png"></div>
+            <div class="text">Chất liệu</div>
+            </a></li>
+          <li id="btnclose"><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Đóng']);" href="javascript:void(0);">
+            <div class="imgmenu"><span class="sprite_close"></span></div>
+            <div class="text">Đóng</div>
+            </a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Search-->
+  <div class="search clearfix">
+    <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa" />
+    <input type="submit" value="Tìm" class="submitSearch" onclick="return CheckValue(document.Search.s);">
+  </div>
+  <!--End Search-->
+  <!-- #Main -->
+  <div class="main clearfix">
+    <!-- Jquery Slide Images -->
+    <div id="slider_products">
+      <ul id="mycarousel" class="jcarousel-skin-tango">
+        <li><img src="Images/Sony-Xperia-Tablet-Z-5.jpg" alt="" /></li>
+        <li><img src="Images/product.jpg" alt="" /></li>
+        <li><img src="Images/Sony-Xperia-Tablet-Z-5.jpg" alt="" /></li>
+        <li><img src="Images/product.jpg" alt="" /></li>
+        <li><img src="Images/Sony-Xperia-Tablet-Z-5.jpg" alt="" /></li>
+        <li><img src="Images/product.jpg" alt="" /></li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <!--End Jquery Slide Images-->
+    <div class="cate_title">
+      <div class="title_c">Samsung Galaxy Note 10.1 (16GB) 3G <span class="arrow_right"></span></div>
+      <div class="dt_price">100.000 <sup><u>đ</u></sup> <span class="pricestatus">(Còn hàng) </span></div>
+    </div>
+  </div>
+  <!-- #Main -->
+  <div class="main clearfix">
+    <div id="Product_Searching" class="list_products">
+      <div class="pro_wow">
+        <p class="feature_title">Tính năng nổi bật</p>
+        <table cellspacing="0" cellpadding="0" class="product_technical_table">
+          <tbody>
+            <tr class="color">
+              <td class="left" width="20%">Màn hình</td>
+              <td class="right" width="80%">LED-backlit IPS LCD, 10.1 inch</td>
+            </tr>
+            <tr>
+              <td class="left">Hệ điều hành</td>
+              <td class="right">Android 4.2</td>
+            </tr>
+            <tr class="color">
+              <td class="left">Vi xử lí CPU</td>
+              <td class="right">Qualcomm Snapdragon S4 Pro, 1.5 GHz</td>
+            </tr>
+            <tr>
+              <td class="left">RAM</td>
+              <td class="right">2 GB</td>
+            </tr>
+            <tr class="color">
+              <td class="left">Bộ nhớ trong</td>
+              <td class="right">16 GB</td>
+            </tr>
+            <tr>
+              <td class="left">Camera</td>
+              <td class="right">8.1 MP</td>
+            </tr>
+            <tr class="color">
+              <td class="left">Kết nối</td>
+              <td class="right">HSDPA, 21 Mbps; HSUPA, 5.76 Mbps, 802.11 a/b/g/n</td>
+            </tr>
+            <tr>
+              <td class="left">Ứng dụng</td>
+              <td class="right">Facebook, Game, Lịch, Đồng hồ, Báo thức, Yahoo Messenger, Skype, Chỉnh sửa hình ảnh/video, Youtube, Bản đồ, Mail, Sổ tay</td>
+            </tr>
+            <tr class="color">
+              <td class="left">Dung lượng pin</td>
+              <td class="right">6000mAh</td>
+            </tr>
+            <tr>
+              <td class="left">Trọng lượng</td>
+              <td class="right">495g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="clearfix"></div>
+      <div class="function clearfix">
+        <div class="like_face"><img src="Images/like_button.jpg" alt="" /></div>
+        <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- back to top -->
+    <div id="divtop" class="contentTotop">
+      <div class="contentTextTotop">Về đầu trang</div>
+      <div class="arrow-up"></div>
+    </div>
+  </div>
+  <!--End Main-->
+  <div class="footer">
+    <div class="footer_inner">
+      <p>Liên hệ mua hàng: </p>
+      <p><strong>0838 45 88 69</strong> hoặc <strong>090 334 98 60</strong> gặp TÚ</p>
+      <p><a href="">Hướng dẫn mua hàng</a></p>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!--End Page-->
+</body>
+</html>

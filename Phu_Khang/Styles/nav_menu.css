@@ -1,0 +1,127 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,vietnamese,latin-ext);
+#cssmenu {
+	height: 49px;
+	background: url(../Images/menuBg.gif) 0 0 repeat-x;
+	position: relative;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	z-index: 5;
+}
+#cssmenu ul {
+	list-style: none;
+	margin: 0;
+}
+#cssmenu:after, #cssmenu ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#cssmenu ul, #cssmenu li, #cssmenu a {
+	position: relative;
+}
+#cssmenu > ul {
+	float: left;
+	position: relative;
+	display: block;
+	z-index: 500;
+	padding: 0 10px;
+}
+#cssmenu > ul > li {
+	float: left;
+	display:inline-block;
+}
+#cssmenu ul li a {
+	display: block;
+	text-decoration: none;
+}
+#cssmenu > ul > li > a {
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 500;
+	padding: 0 15px;
+	line-height: 49px;
+	color: #111111;
+	text-transform: uppercase;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	z-index: 50;
+}
+#cssmenu > ul > li.active > a, #cssmenu > ul > li:hover > a {
+	color: #FFFFFF;
+}
+#cssmenu ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 35px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background:#2ea8fb;
+}
+#cssmenu ul ul ul {
+	top: 49px;
+}
+#cssmenu ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 200px
+}
+#cssmenu > ul > li:hover > ul {
+	left: auto;
+	top: 49px;
+	opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#cssmenu ul ul li a {
+	border-bottom: 1px dotted #FFFFFF;
+	filter: none;
+	font: normal 14px Tahoma, Geneva, sans-serif;
+	display: block;
+	line-height: 100%;
+	padding: 10px 5px;
+	color:#FFFFFF;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#cssmenu ul ul li:hover > a {
+	background: #2063be;
+}
+#cssmenu ul ul li:last-child > a, #cssmenu ul ul li.last > a {
+	border-bottom: 0;
+}
+#cssmenu > ul > li > .mask_menu {
+	position: absolute;
+	opacity: 0;
+	left: -80px;
+	top: 8px;
+	z-index: 1;
+	height: 32px;
+	width: 100%;
+	background: url(../Images/menu_hoverBg.gif) 0 0 repeat-x;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+#cssmenu > ul > li.active > .mask_menu, #cssmenu > ul > li:hover > .mask_menu {
+	opacity: 1;
+	visibility: visible;
+	left: 0
+}

@@ -1,0 +1,118 @@
+/*Main Menu*/
+#nav {
+	height: 40px;
+	background: #f11406;
+	border-bottom: 5px solid #231f20;
+}
+#nav:after, #nav ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#nav > ul {
+	position: relative;
+	display: block;
+	z-index: 500;
+}
+#nav li {
+	position: relative
+}
+#nav > ul > li {
+	float: left;
+	display:inline-block;
+}
+#nav > ul > li:first-child {
+	padding-left: 0;
+	background: none
+}
+#nav > ul > li.active > a, #nav > ul > li:hover > a {
+	color: #FFFFFF
+}
+#nav ul li a {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase
+}
+#nav > ul > li > a {
+	display: block;
+	white-space: nowrap;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	padding: 0 20px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-weight: 500;
+}
+#nav ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 60px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background: #231f20
+}
+#nav ul ul ul {
+	top: 42px;
+}
+#nav ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 180px
+}
+#nav > ul > li:hover > ul {
+	left: 0;
+	top: 40px;
+	opacity: 1;
+}
+#nav ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#nav ul ul li a {
+	border-bottom: 1px dotted #9c9c9c;
+	filter: none;
+	font-size: 90%;
+	display: block;
+	line-height: 32px;
+	padding: 0 10px;
+	color:#FFFFFF;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#nav ul ul li:hover a {
+	color: #999999;
+}
+#nav ul ul ul li:hover > a {
+	color: #FFFFFF;
+}
+#nav ul ul li:last-child > a, #nav ul ul li.last > a {
+	border-bottom: 0;
+}
+#nav > ul > li.active:after, #nav > ul > li:hover:after {
+	position: absolute;
+	bottom: 0;
+	left: 45%;
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 7px 7px 7px;
+	border-color: transparent transparent #231f20 transparent;
+}

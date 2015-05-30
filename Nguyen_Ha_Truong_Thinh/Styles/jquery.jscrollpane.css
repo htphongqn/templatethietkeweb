@@ -1,0 +1,99 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+/*jspPane*/
+			/* Styles specific to this particular page */
+.scroll-pane {
+	height: 550px;
+	overflow: auto;
+}
+.horizontal-only {
+	height: auto;
+	max-height: 390px;
+}
+.jspContainer {
+	overflow: hidden;
+	position: relative;
+	width: 100% !important;
+}
+.jspPane {
+	position: absolute;
+	width: 92% !important;
+}
+.jspVerticalBar {
+	position: absolute;
+	top: 0;
+	right: 3px;
+	width: 1px;
+	height: 100%;
+	background: none repeat scroll 0 0 #757474;
+	border-radius: 10px;
+}
+.jspHorizontalBar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	margin: 4px 0;
+	background: #929291;
+}
+.jspVerticalBar *, .jspHorizontalBar * {
+	margin: 0;
+	padding: 0;
+}
+.jspCap {
+	display: none;
+}
+.jspHorizontalBar .jspCap {
+	float: left;
+}
+.jspTrack {
+	position: relative;
+}
+.jspDrag {
+	background: #f4f105;
+	position: relative;
+	top: 0;
+	left: -2px;
+	cursor: pointer;
+	width: 5px;
+	border-radius: 10px;
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+	float: left;
+	height: 8px;
+}
+.jspArrow {
+	background: #071c3f;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+.jspArrow.jspDisabled {
+	cursor: default;
+	background: #80808d;
+}
+.jspVerticalBar .jspArrow {
+	height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+.jspVerticalBar .jspArrow:focus {
+	outline: none;
+}
+.jspCorner {
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner {
+	margin: 0 -3px 0 0;
+}

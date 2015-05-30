@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Skitter Styles -->
+<link href="Styles/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+<!--Slide banner-->
+<link href="Styles/responsiveslides.css" rel="stylesheet" />
+<script src="Scripts/responsiveslides.min.js"></script>
+<script type="text/javascript">
+$( function()
+	{    	
+	
+// Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+		pagination: true,
+        nav: true,
+        speed: 500,
+		timeout: 3000,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+	
+});
+</script>
+</head>
+<body>
+Fullscreen Slider
+  <!-- SLIDE -->
+  <div class="callbacks_container">
+                <ul class="rslides" id="slider4">
+                  <li> <a href="http://thanedeals.in/wp-content/uploads/2014/07/mens-offer-banner.jpg" title="Barracuda đèn rọi biển số "> <img src="http://thanedeals.in/wp-content/uploads/2014/07/mens-offer-banner.jpg" alt="Barracuda đèn rọi biển số " /> </a></li>
+                  <li><a href="http://www.dangcapviet.vn/data/aditems/63/BANNER_ESELL.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.dangcapviet.vn/data/aditems/63/BANNER_ESELL.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+                  <li><a href="http://www.dangcapviet.vn/data/aditems/66/Banner_TKWeb.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.dangcapviet.vn/data/aditems/66/Banner_TKWeb.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+                  <li><a href="http://www.thanglongtravel.vn/FileManager/banner%20thai%20hoi%20cho%20web.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.thanglongtravel.vn/FileManager/banner%20thai%20hoi%20cho%20web.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+                </ul>
+              </div>
+  <!-- END OF SLIDE -->
+</body>
+</html>

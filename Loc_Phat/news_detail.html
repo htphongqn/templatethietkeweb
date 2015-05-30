@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Lộc Phát</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Skitter Styles -->
+<link href="Styles/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+<!-- Skitter JS -->
+<script type="text/javascript" language="javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" language="javascript" src="Scripts/jquery.skitter.min.js"></script>
+<!-- Init Skitter -->
+<script type="text/javascript" language="javascript">
+		$(document).ready(function() {
+			$('.box_skitter_large').skitter({
+				theme: 'clean',
+				numbers_align: 'center',
+				progressbar: false, 
+				dots: true, 
+				preview: false,
+				animation: 'randomSmart',
+				interval: 2000
+			});
+		});
+	</script>
+<!--Main Menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+ 
+
+</script>
+<!-- bxSlider Javascript file -->
+<script src="Scripts/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="Styles/jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript">
+  $(document).ready(function(){
+$('.bxslider_products').bxSlider({
+  mode: 'horizontal',
+  captions: false,
+  auto: false,
+  autoControls: false,
+  pager: false,
+  minSlides: 4,
+  maxSlides: 4,
+  slideWidth: 280,
+  slideMargin: 20
+});
+$('.bxslider_thesame_P').bxSlider({
+  mode: 'horizontal',
+  captions: false,
+  auto: false,
+  autoControls: false,
+  pager: false,
+  minSlides: 3,
+  maxSlides: 4,
+  slideWidth: 280,
+  slideMargin: 20
+});
+  });
+</script>
+<!--Zoomin - Zoomout image products-->
+<link rel="stylesheet" type="text/css" href="Styles/highslide.css"/>
+<script type="text/javascript" src="Scripts/highslide-full.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+    hs.graphicsDir = 'Images/';
+    hs.align = 'center';
+    hs.transitions = ['expand', 'crossfade'];
+    hs.fadeInOut = true;
+    hs.dimmingOpacity = 0.8;
+    hs.outlineType = 'rounded-white';
+    hs.captionEval = 'this.thumb.alt';
+	hs.showCredits = false;
+    hs.marginBottom = 105; // make room for the thumbstrip and the controls
+    //hs.numberPosition = 'caption';
+    // Add the slideshow providing the controlbar and the thumbstrip
+    hs.addSlideshow({
+        //slideshowGroup: 'group1',
+        interval: 3000,
+        repeat: false,
+        useControls: true,
+		fixedControls: 'fit',
+        overlayOptions: {
+            className: 'text-controls',
+            position: 'bottom center',
+            relativeTo: 'viewport',
+            offsetY: -60
+        },
+        thumbstrip: {
+            position: 'bottom center',
+            mode: 'horizontal',
+            relativeTo: 'viewport'
+        }
+    });
+});
+</script>
+<script type="text/javascript">
+function showImage(o) {
+    $('.thumb a').removeClass('current');
+    $(o).addClass('current');
+    var img = $('.inn #' + $(o).attr('for'));
+    if ($('.inn a:visible').length > 0) {
+        $('.inn a:visible').fadeOut('fast', function() {
+            img.fadeIn('fast');
+        });
+    } else {
+        img.fadeIn('fast');
+    }
+    
+    return false;
+}
+
+$(document).ready(function() {
+    $('.thumb a').click(function() {
+        showImage(this);
+        return false;
+    });
+    $('.thumb a:first-child').click();
+    $('.zoom a').click(function() {
+        var o = $('.inn a:visible')[0];
+        return hs.expand(o);
+    });
+});
+</script>
+</head>
+<body>
+<!--Support-->
+<div class="support_head"> <span class="title_support"></span>
+  <div class="support_bg">
+    <ul>
+      <li> Hỗ trợ 1<br />
+        <a href="ymsgr:sendim?sieumuanhanh" title=""> <img src="http://opi.yahoo.com/online?u=sieumuanhanh&amp;m=g&amp;t=14" height="60" border="0"></a></li>
+      <li> Hỗ trợ 1<br />
+        <a href="skype:sieumuanhanh?call" title=""> <img src="http://mystatus.skype.com/balloon/sieumuanhanh" title="" height="60" alt=""></a></li>
+      <li> Hỗ trợ 1<br />
+        <a href="ymsgr:sendim?sieumuanhanh" title=""> <img src="http://opi.yahoo.com/online?u=sieumuanhanh&amp;m=g&amp;t=14" height="60" border="0"></a></li>
+      <li> Hỗ trợ 1<br />
+        <a href="skype:sieumuanhanh?call" title=""> <img src="http://mystatus.skype.com/balloon/sieumuanhanh" title="" height="60" alt=""></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+<!--End Support-->
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="/trang-chu.aspx" id="banner_head"> <img src="Images/banner_header.png" alt="CÔNG TY TNHH THƯƠNG MẠI NỘI THẤT LỘC PHÁT" /></a>
+    <div id="header_right" class="fr">
+      <!--Search Tool-->
+      <div id="search_form" class="fr">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Tìm kiếm theo tên hoặc mã sản phẩm" />
+        <a href="" class="submitSearch"></a> </div>
+      <!--End Search Tool-->
+      <!--Top Menu-->
+      <div id="smoothmenu1" class="ddsmoothmenu">
+        <ul>
+          <li><a href="index.html">SẢN PHẨM</a> </li>
+          <li><a href="list_products.html">DỊCH VỤ</a>
+            <ul>
+              <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+                <ul>
+                  <li><a href="#">Sub Item 1.1</a></li>
+                  <li><a href="#">Sub Item 1.2</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+                <ul>
+                  <li><a href="#">Sub Item 2.1</a></li>
+                  <li><a href="#">Sub Item 2.2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+              <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+              <li><a href="list_news.html">Tin tức</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+          </li>
+          <li><a href="list_products.html">TƯ VẤN THIẾT KẾ</a></li>
+          <li><a href="list_news.html">THI CÔNG</a></li>
+          <li><a href="contact.html">DỰ ÁN</a></li>
+        </ul>
+      </div>
+      <div id="menu_below" class="fr">
+        <ul>
+          <li class="active"><a href="index.html">Trang chủ</a> </li>
+          <li><a href="">Giới thiệu</a> </li>
+          <li><a href="">Phong thủy</a> </li>
+          <li><a href="">Khuyến mãi</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <!--End Top Menu-->
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Content-->
+  <div id="main" class="cf">
+    <!--Left Column-->
+    <div id="left_col" class="fl">
+      <!--Left Menu-->
+      <div class="box">
+        <div class="box_Tab">Danh mục sản phẩm</div>
+        <div class="box_ct" id="topnav">
+          <ul>
+            <li class="active"><a href="">Hàng Hiệu</a></li>
+            <li><a href="">Áo ngực</a></li>
+            <li><a href="">Bộ đồ lót</a></li>
+            <li><a href="">Váy ngủ</a></li>
+            <li><a href="">Nội y nam</a></li>
+            <li><a href="">Quần Gen</a></li>
+            <li><a href="">Phụ kiện</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--End Left Menu-->
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab">HỖ TRỢ TRỰC TUYẾN</div>
+        <div class="box_ct" id="box_support">
+          <ul>
+            <li><b class="title_sp fl">Hỗ trợ</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="114" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Hỗ trợ</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="114" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Link Web-->
+      <div class="box">
+        <div class="box_Tab">Liên kết website</div>
+        <div class="box_ct" id="link_web">
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+        </div>
+      </div>
+      <!--End Link Web-->
+      <!--Ads-->
+      <div class="box ads"> <a href=""><img src="http://thietkepro.vn/UserFiles/Image/nhadep/2011/anh%20vu%20-%20van%20phu/thiet-ke-noi-that-nha-ong-sang-trong3.jpg" alt="" width="100%" /></a> <a href=""><img src="http://www.giaydantuongdep.com.vn/images/noi-that-dep/noi-that-nha-ong2.jpg" alt="" width="100%" /></a> <a href=""><img src="http://thietkepro.vn/UserFiles/Image/nhadep/2011/chi%20thinh%20-%20nghia%20tan/thiet-ke-noi-that-can-ho-nho-c3.jpg" alt="" width="100%" /></a> <a href=""><img src="http://image.dothi.net/thumbnail/490/noi-that-nha-dep-5.jpg?url=Storage/Images/noi-that-nha-dep-5.jpg" alt="" width="100%" /></a> </div>
+      <!--End Ads-->
+    </div>
+    <!--end Left Column-->
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div class="box_ct" id="detail_news">
+          <div id="info_g">
+            <h2 class="h2Title font1">20 cách bài trí kệ bếp siêu tiện dụng</h2>
+            <p class="date">06/05/2013</p>
+            <p>Bất kỳ chị em nội trợ nào cũng mong ước được sở hữu một phòng bếp rộng rãi, có đủ chỗ để tổ chức mọi thứ ngăn nắp và <strong>kệ bếp</strong> mở sẽ giúp bạn hiện thực hóa điều này. Phong cách kệ mở dễ dàng lắp đặt ở nhiều nơi, thậm chí là ở phía sau cánh cửa tủ.</p>
+            <p>Bộ sưu tập 20 bí quyết trang trí và sắp xếp sau đây sẽ chứng minh cho   các bạn thấy rõ sự linh hoạt, hấp dẫn cũng như vô cùng tiện dụng của kệ   bếp mở:</p>
+            <p align="center"><img alt="20 cách bài trí kệ bếp siêu tiện dụng - 1" onclick="return openNewImage(this, '')" src="http://img-eva.24hstatic.com/upload/3-2014/images/2014-07-22/1406002875-1.jpg" /></p>
+            <p>Hệ thống kệ mở thực sự có ích trong căn bếp này. Rất đơn giản nhưng hiệu quả.</p>
+            <p align="center"><img alt="20 cách bài trí kệ bếp siêu tiện dụng - 2" onclick="return openNewImage(this, '')" src="http://img-eva.24hstatic.com/upload/3-2014/images/2014-07-22/1406002875-2.jpg" /></p>
+            <p>Những chiếc kệ bếp mở này phục vụ nhiều mục đích khác nhau như lưu trữ đồ dùng nhà bếp, làm quầy bar và cả bàn làm việc.</p>
+            <p align="center"><img alt="20 cách bài trí kệ bếp siêu tiện dụng - 3" onclick="return openNewImage(this, '')" src="http://img-eva.24hstatic.com/upload/3-2014/images/2014-07-22/1406002875-3.jpg" /></p>
+            <p>Bảng màu pastel giữ cho khu vực kệ mở này sáng sủa và tươi mới.</p>
+            <p align="center"><img alt="20 cách bài trí kệ bếp siêu tiện dụng - 4" onclick="return openNewImage(this, '')" src="http://img-eva.24hstatic.com/upload/3-2014/images/2014-07-22/1406002875-4.jpg" /></p>
+            <p>Cách sắp   đặt các tầng kệ mở trên tường một cách ngẫu hứng chính là yếu tố khác   lạ, tạo sự thu hút cho khu vực quầy bếp. Những chồng đĩa màu trắng cao,   hộp thủy tinh đựng thực phẩm có dán nhãn được bày biện đẹp mắt và trông   rất chắc chắn.</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--end Right Column-->
+  </div>
+  <!--End Main Content-->
+  <!-- Begin of footer-->
+  <div id="footer">
+    <!--Footer Menu-->
+    <div id="footer_menu"> <a href="index.html">Trang chủ</a> <a href="">Giới thiệu</a> <a href="">Phong thủy</a> <a href="">Khuyến mãi</a> <a href="list_news.html">Tin tức</a> <a href="contact.html">Liên hệ</a> <a href="index.html">Trang chủ</a> <a href="">Giới thiệu</a> <a href="">Phong thủy</a> <a href="">Khuyến mãi</a> <a href="list_news.html">Tin tức</a> <a href="contact.html">Liên hệ</a> </div>
+    <!--end Footer Menu-->
+    <div id="info_footer" class="fl">
+      <p><strong>CÔNG TY TNHH THƯƠNG MẠI NỘI THẤT LỘC PHÁT</strong></p>
+      <p>Địa chỉ: 549 Đường Số 6, Bình Hưng Hòa B, Q.Tân Bình, TpHCM</p>
+      <p>Điện thoại : 0932735286     -  MST: 0312819355</p>
+      <p>Email: locphat7968@gmail.com</p>
+      <p>Copyright © 2014 noithatgolpocphat.com</p>
+    </div>
+    <!--Status-->
+    <!--Social-->
+    <div id="social_network" class="fr"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_gplus"></span></a> <a href=""><span class="icon_youtube"></span></a></div>
+    <!--End Social-->
+    <div id="copyright" class="fr"><a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn">Đẳng Cấp Việt</a></div>
+  </div>
+  <!-- End of footer-->
+</div>
+<!-- End wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

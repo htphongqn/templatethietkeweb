@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mỹ phẩm Thanh Nga</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Slide Camera-->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				loader: 'none',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '../Images/',						
+            	height: '410px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	playPause: false,
+			});
+
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu1", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {     
+			jQuery('#mycarousel_same_P, #mycarousel_dt_img').jcarousel({
+                auto: 0,
+                animation: 1000,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });	
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header">
+    <div id="logo"><a href="/trang-chu.aspx"> <img src="Images/text_logo.png" alt="Mỹ phẩm Thanh Nga" /> </a></div>
+    <div id="header_right" class="fr">
+      <div id="hotline" class="fl"><b>0906 798 217</b></div>
+      <!--Search Tool-->
+      <div id="search_form">
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <a href="" class="submitSearch"></a> </div>
+      <!--End Search Tool-->
+      <div id="cart" class="fl"><a href="cart.html"><span class="icon_cart"></span>Giỏ hàng: <b>0</b></a></div>
+      <div id="social_network" class="fl"><img src="Images/social_network.png" alt="" /></div>
+      <!--Main Menu-->
+      <div id="smoothmenu1" class="ddsmoothmenu">
+        <ul>
+          <li class="active"><a href="index.html">TRANG CHỦ</a> </li>
+          <li><a href="introduction.html">CỬA HÀNG</a> </li>
+          <li><a href="list_products.html">DỊCH VỤ</a>
+            <ul>
+              <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+                <ul>
+                  <li><a href="#">Sub Item 1.1</a></li>
+                  <li><a href="#">Sub Item 1.2</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+                <ul>
+                  <li><a href="#">Sub Item 2.1</a></li>
+                  <li><a href="#">Sub Item 2.2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+              <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+              <li><a href="list_news.html">Tin tức</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+          </li>
+          <li><a href="#">SẢN PHẨM</a></li>
+          <li><a href="list_news.html">TIN TỨC & SỰ KIỆN</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <!--End Main Menu-->
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Menu-->
+    <div id="topnav" class="fl">
+      <div class="font3 box_Tab">Danh mục tin tức</div>
+      <ul>
+        <li class="active"><a href="">Giới thiệu công ty</a></li>
+        <li><a href="#">Hướng dẫn mua hàng</a> </li>
+        <li><a href="#">Hướng dẫn thanh toán</a></li>
+        <li><a href="#">Trả hàng</a></li>
+      </ul>
+      <div class="cf"></div>
+    </div>
+    <!--End Left Menu-->
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      <!--List News-->
+      <div class="box">
+        <div class="font3 box_Tab"><span>Tin tức</span></div>
+        <div class="box_ct" id="list_news">
+          <ul>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h3>
+              <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+              </h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+          </ul>
+          <div class="navigation"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+        </div>
+      </div>
+      <!--End List News-->
+    </div>
+    <!--end Right Column-->
+  </div>
+  <!--End Main Content-->
+  <!--Other Infomation-->
+  <div class="box_ct" id="connect">
+    <div id="get_email" class="fl">
+      <label>Đăng ký nhận mail</label>
+      <input class="txf" value="Nhập địa chỉ email..." name="email">
+      <input type="submit" value="Đăng ký" class="btn">
+    </div>
+    <div id="facebook" class="fr">Kết nối với chúng tôi:&nbsp;<img src="Images/facebook.jpg" alt="" align="absmiddle" /></div>
+  </div>
+  <!--End Other Infomation-->
+  <!-- Begin of footer-->
+  <div id="footer">
+    <div id="info_footer" class="fl"> <a href=""><img src="Images/AIHAO_logo.png" alt="" class="img_general" /></a>
+      <p style="font-size: 14px">Công Ty TNHH TM - SX Thanh Nga</p>
+      <p style="font-size: 14px">Số 94 - Đường 64 - P. 10 - Q. 6 - TP.HCM</p>
+      <p style="font-size: 14px">Mail: <a href="mailto:myphamthanhnga@viettel.vn">myphamthanhnga@viettel.vn</a></p>
+      <p style="font-size: 14px">Điện thoại : 08.221.25380 - 08.629.32534</p>
+    </div>
+    <!--Status-->
+    <div id="status" class="fr"><span>Đang truy cập : 10</span> <span>Lượt truy cập : 12450</span></div>
+  </div>
+  <!-- End of footer-->
+</div>
+<!-- End wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

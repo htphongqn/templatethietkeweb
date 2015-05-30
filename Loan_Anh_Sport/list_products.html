@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DSSP - Loan Anh Sport</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Main Menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Nivo Slider-->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!--Slide verticle-->
+<script src="Scripts/jcarousellite_1.0.1c4.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#jcarouse_new_product").jCarouselLite({  // Lấy class của ul và gọi hàm jCarouselLite() trong thư viện
+		vertical: true,				// chạy theo chiều dọc
+		hoverPause:true,			// Hover vào nó sẽ dừng lại
+		visible: 2,					// Số bài viết cần hiện
+		auto:500,					// Tự động scroll
+		speed:1500					// Tốc độ scroll
+	});
+	$("#jcarouse_saleoff_product").jCarouselLite({  // Lấy class của ul và gọi hàm jCarouselLite() trong thư viện
+		vertical: true,				// chạy theo chiều dọc
+		hoverPause:true,			// Hover vào nó sẽ dừng lại
+		visible: 2,					// Số bài viết cần hiện
+		auto:500,					// Tự động scroll
+		speed:1500					// Tốc độ scroll
+	});
+});
+</script>
+<!--Menu Sidebar-->
+<script src="Scripts/drop_menu.js" type="text/javascript"></script>
+<!--Jquery chay ngang-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 4,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+<script type="text/javascript">
+ var totalslides = 1;
+ 
+ function mycarousel_initCallback(carousel) {
+ jQuery('#viewvid').bind('click', function() {
+ carousel.scroll(jQuery.jcarousel.intval(1));
+ pageslide('about');
+ return false;
+ });
+ 
+ jQuery('.jcarousel-navigation li a').click(function(e){
+ panel = $(this).parent('li').attr('id');
+ carousel.scroll(jQuery.jcarousel.intval(panel));
+ return false;
+ });
+ };
+ 
+ function mycarousel_itemFirstInCallback(carousel, item, idx, state) {
+ bubble = calcSlide(idx);
+ $('.jcarousel-navigation li').each(function(){
+ if($(this).attr('id') == bubble)
+ $(this).addClass('active');
+ else
+ $(this).removeClass('active');
+ });
+ };
+ 
+function calcSlide(value){
+ current = value;
+ if(value > totalslides){
+ current = value - totalslides;
+ calcSlide(current);
+ }
+ 
+ return current;
+ }
+ 
+ jQuery(document).ready(function() {
+ 
+ $('#mycarousel li').each(function(){
+ $('.jcarousel-navigation').append('<li id="' + totalslides + '"><a href="#"></a></li>');
+ totalslides++;
+ });
+ totalslides = totalslides - 1;
+ 
+ $('#mycarousel').jcarousel({
+ wrap: 'circular',
+ scroll: 1,
+ itemFirstInCallback: mycarousel_itemFirstInCallback,
+ initCallback: mycarousel_initCallback
+ });
+ 
+});
+ 
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div class="header">
+      <embed width="1000" height="250" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="Images/bmd1370303312.swf" title=""> 
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="home active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="list_products.html">Sản phẩm</a>
+          <ul class="children">
+            <li><a href="#">ÁO BÓNG ĐÁ CLB</a></li>
+            <li><a href="#">ÁO BÓNG ĐÁ TRAINING</a></li>
+            <li><a href="#">ÁO BÓNG ĐÁ ĐỘI TUYỂN</a></li>
+            <li><a href="#">QUẦN ÁO THỂ THAO NAM</a></li>
+          </ul>
+        </li>
+        <li><a href="list_news.html">Dịch vụ</a></li>
+        <li><a href="list_news.html">Liên hệ</a></li>
+      </ul>
+      <div class="cart"><a href="cart.html" class="icon_cart">[ 0 ] sản phẩm</a></div>
+    </div>
+    <!--End Main Menu-->
+    <!--Top Main-->
+    <div class="top_main">
+      <!-- Start Nivo Slide -->
+      <div class="slider-wrapper theme-pascal">
+        <div id="slider" class="nivoSlider"> <a href="http://viva-vietnam.blogspot.com"><img src="Images/slider_01.jpg" alt="" title=""/></a> <a href="http://shareallworld.info/search/label/Tourist"><img src="Images/slider_02.jpg" alt="" title="" /></a> <a href="http://shareallworld.info/search/label/Movies"><img src="Images/slider_03.jpg" alt="" title=""/></a> <a href="http://shareallworld.info/search/label/MMO"><img src="Images/slider_04.jpg" alt="" title="" /></a><a href="http://shareallworld.info/search/label/MMO"><img src="Images/slider_05.jpg" alt="" title="" /></a> </div>
+      </div>
+      <!-- End Nivo Slide -->
+      <!--Right Top Main-->
+      <div class="right_top_main">
+        <div class="search">
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="sản phẩm bạn cần tìm" />
+          <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+        </div>
+        <!-- Start Verticle Slide -->
+        <div class="slide_v_product">
+          <div id="jcarouse_new_product">
+            <ul>
+              <li> <a href=""><img src="Images/slider_v_01.jpg" alt="" width="290" height="135" /></a>
+                <div class="clr"></div>
+              </li>
+              <li> <a href=""><img src="Images/slider_v_02.jpg" alt="" width="290" height="135" /></a>
+                <div class="clr"></div>
+              </li>
+              <li> <a href=""><img src="Images/slider_v_01.jpg" alt="" width="290" height="135" /></a>
+                <div class="clr"></div>
+              </li>
+              <li> <a href=""><img src="Images/slider_v_02.jpg" alt="" width="290" height="135" /></a>
+                <div class="clr"></div>
+              </li>
+              <li> <a href=""><img src="Images/slider_v_02.jpg" alt="" width="290" height="135" /></a>
+                <div class="clr"></div>
+              </li>
+              <li> <a href=""><img src="Images/slider_v_01.jpg" alt="" width="290" height="135" /></a>
+                <div class="clr"></div>
+              </li>
+              <li> <a href=""><img src="Images/slider_v_02.jpg" alt="" width="290" height="135" /></a>
+                <div class="clr"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Verticle Slide -->
+      </div>
+      <!--End Right Top Main-->
+    </div>
+    <!--End Top Main-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <div class="box">
+          <div class="box_content_center">
+            <div class="box_Tab">Danh mục sản phẩm</div>
+            <div id="myslidemenu" class="jqueryslidemenu">
+              <ul>
+                <li class="subfolderstyle"><a href="">ÁO BÓNG ĐÁ CLB</a>
+                  <ul>
+                    <li><a href="list_product.html">Manchester</a></li>
+                    <li><a href="#">iPhone 4S</a></li>
+                    <li><a href="#">iPhone 5</a></li>
+                    <li><a href="#">iPhone 5C</a></li>
+                  </ul>
+                </li>
+                <li><a href="">ÁO BÓNG ĐÁ ĐỘI TUYỂN</a>
+                  <ul>
+                    <li><a href="list_product.html">Pháp</a></li>
+                    <li><a href="#">Mỹ</a></li>
+                    <li><a href="#">Anh</a></li>
+                  </ul>
+                </li>
+                <li><a href="list_product.html">ÁO BÓNG ĐÁ TRAINING</a></li>
+                <li><a href="#">QUẦN ÁO THỦ MÔN</a></li>
+                <li><a href="#">QUẦN ÁO BÓNG RỔ</a></li>
+                <li><a href="list_product.html">QUẦN ÁO THỂ THAO NAM</a></li>
+                <li><a href="#">QUẦN ÁO THỂ THAO NỮ</a></li>
+                <li><a href="list_product.html">QUẦN ÁO TRẺ EM</a></li>
+                <li><a href="#">ÁO KHOÁC</a></li>
+                <li><a href="#">GIÀY ĐÁ BÓNG</a></li>
+                <li><a href="list_product.html">GIÀY THỂ THAO-CHẠY BỘ</a></li>
+                <li><a href="#">DÉP THỂ THAO</a></li>
+                <li><a href="#">NÓN THỂ THAO</a></li>
+                <li><a href="#">TÚI XÁCH - BALO THỂ THAO</a></li>
+                <li><a href="list_product.html">PHỤ KIỆN BÓNG ĐÁ</a></li>
+                <li><a href="#">PHỤ KIỆN THỂ THAO</a></li>
+                <li><a href="#">NƯỚC HOA</a></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box_content_center">
+            <div class="box_Tab">SP KHUYẾN MÃI</div>
+            <!-- Start Verticle Slide -->
+            <div class="slide_v_product">
+              <div id="jcarouse_saleoff_product">
+                <ul>
+                  <li> <a href=""><img src="Images/saleoff_p_01.jpg" alt="" width="190" height="288" /></a>
+                    <div class="clr"></div>
+                  </li>
+                  <li> <a href=""><img src="Images/saleoff_p_02.jpg" alt="" width="190" height="288" /></a>
+                    <div class="clr"></div>
+                  </li>
+                  <li> <a href=""><img src="Images/saleoff_p_01.jpg" alt="" width="190" height="288" /></a>
+                    <div class="clr"></div>
+                  </li>
+                  <li> <a href=""><img src="Images/saleoff_p_02.jpg" alt="" width="190" height="288" /></a>
+                    <div class="clr"></div>
+                  </li>
+                  <li> <a href=""><img src="Images/saleoff_p_01.jpg" alt="" width="190" height="288" /></a>
+                    <div class="clr"></div>
+                  </li>
+                  <li> <a href=""><img src="Images/saleoff_p_02.jpg" alt="" width="190" height="288" /></a>
+                    <div class="clr"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Verticle Slide -->
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box_content_center" id="support">
+            <div class="box_Tab">HỖ TRỢ TRỰC TIẾP</div>
+            <ul class="general">
+              <li class="hotline"><span class="red_color">(08) 3504.6188</span> </li>
+              <li class="mobile"> <span class="red_color">0939.048.148</span> - Loan Anh </li>
+              <li class="email">long.loananhsport@yahoo.com </li>
+              <li class="visitor">301025 lượt truy cập </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box_content_center" id="info_service">
+            <div class="box_Tab">THÔNG TIN DỊCH VỤ</div>
+            <ul class="general">
+              <li> Thanh toán khi nhận hàng. </li>
+              <li> Giao hàng toàn quốc. </li>
+              <li>Giao hàng trong 24h - 36h. </li>
+              <li>Hướng dẫn mua hàng:<br />
+                Hotline: <span class="red_color">0939.048.148</span> </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box_content_center" id="ads">
+            <div class="box_Tab">QUẢNG CÁO</div>
+            <img src="Images/ads_left01.jpg" alt="" width="190" /> <img src="Images/ads_left02.jpg" alt="" width="190" />
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box_content_center" id="news_index">
+            <div class="box_Tab">TIN TỨC</div>
+            <ul class="general">
+              <li>
+                <h2 class="Title_news"><a href="news_detail.html">Áo khoác bóng đá 2013 - 2014</a></h2>
+                <a href="news_detail.html"><img width="40" height="40" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p>Áo khoác bóng đá 2013 - 
+                  2014 của các clb hiện đang 
+                  được bán tại cửa hàng.</p>
+              </li>
+              <li>
+                <h2 class="Title_news"><a href="news_detail.html">Áo khoác bóng đá 2013 - 2014</a></h2>
+                <a href="news_detail.html"><img width="40" height="40" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p>Áo khoác bóng đá 2013 - 
+                  2014 của các clb hiện đang 
+                  được bán tại cửa hàng.</p>
+              </li>
+              <li>
+                <h2 class="Title_news"><a href="news_detail.html">Áo khoác bóng đá 2013 - 2014</a></h2>
+                <a href="news_detail.html"><img width="40" height="40" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p>Áo khoác bóng đá 2013 - 
+                  2014 của các clb hiện đang 
+                  được bán tại cửa hàng.</p>
+              </li>
+              <li>
+                <h2 class="Title_news"><a href="news_detail.html">Áo khoác bóng đá 2013 - 2014</a></h2>
+                <a href="news_detail.html"><img width="40" height="40" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p>Áo khoác bóng đá 2013 - 
+                  2014 của các clb hiện đang 
+                  được bán tại cửa hàng.</p>
+              </li>
+              <li>
+                <h2 class="Title_news"><a href="news_detail.html">Áo khoác bóng đá 2013 - 2014</a></h2>
+                <a href="news_detail.html"><img width="40" height="40" alt="" src="Images/news_01.jpg" class="img_general"></a>
+                <p>Áo khoác bóng đá 2013 - 
+                  2014 của các clb hiện đang 
+                  được bán tại cửa hàng.</p>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box"> <a href=""><img src="Images/face_icon.png" alt="" /></a> </div>
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_products.html">Danh mục SP</a></div>
+        <div class="box">
+          <div class="box_Tab"><span>Danh mục SP</span></div>
+          <div class="product_row">
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"> <a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a><span class="hot_icon"></span>
+                <div class="product_name"><a href="">Áo khoác clb Real Madrid</a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"> <a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a>
+                <div class="product_name"><a href="">Áo khoác clb Real</a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"> <a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a>
+                <div class="product_name"><a href="">Áo khoác clb Real Madrid</a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"><a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a>
+                <div class="product_name"><a href="">Áo khoác clb Real Madrid
+                  13/14 AK16</a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"> <a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a>
+                <div class="product_name"><a href="">Áo khoác clb Real Madrid</a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"> <a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a>
+                <div class="product_name"><a href="">Áo khoác clb Real Madrid
+                  13/14 AK16</a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"> <a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a>
+                <div class="product_name"><a href="">Áo khoác clb Real </a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner"> <a href="detail_products.html"><img class="img_product" src="Images/product_01.jpg" alt="" width="160" height="190" /></a>
+                <div class="product_name"><a href="">Áo khoác clb Real Madrid
+                  13/14 AK16</a></div>
+                <div class="price"><span>300.000</span> VNĐ</div>
+              </div>
+            </div>
+            <!--End Product-->
+          </div>
+          <div class="clearfix"></div>
+          <div class="navigation"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+        </div>
+      </div>
+      <!--End Main Column-->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Main-->
+    <div class="footer">
+      <div class="footer_inner">
+        <div class="info_footer"><img src="Images/medium_logo.png" alt="" class="img_general" />
+          <p>Địa chỉ: 155 Thành Thái, P.14, Q.10, Tp.Hồ Chí Minh</p>
+          <p>Hotline: <span style="color: #FF0000">0939.048.148</span> - <span style="color: #FF0000">08.3504.6188</span></p>
+          <p>Email: <a href="mailto:long.loananhsport@yahoo.com">long.loananhsport@yahoo.com</a> </p>
+        </div>
+        <div class="copyright">
+          <p>Copyright © 2013 By <strong>Loan Anh Sport</strong></p>
+          <p><a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!--End Footer-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

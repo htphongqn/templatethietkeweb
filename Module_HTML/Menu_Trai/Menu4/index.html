@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/left_menu.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+				  		   
+//Mobile menu
+$('li.cat-header ul').each(function(index) {
+ $(this).prev().addClass('idCatSubcat')});
+ $('li.cat-header a').after('<span></span>'); 
+ $('li.cat-header ul').css('display','none');
+ $('li.cat-header ul.active').css('display','block');
+ $('li.cat-header ul').each(function(index) {
+   $(this).prev().addClass('close').click(function() {
+  if (
+   $(this).next().css('display') == 'none') {
+   $(this).next().slideDown(400, function () {
+   $(this).prev().removeClass('collapsed').addClass('expanded');
+    });
+  }else {
+    $(this).next().slideUp(400, function () {
+   $(this).prev().removeClass('expanded').addClass('collapsed');
+   $(this).find('ul').each(function() {
+    $(this).hide().prev().removeClass('expanded').addClass('collapsed');
+   });
+    });
+  }
+  return false;
+   });
+});		  	  
+});
+</script>
+</head>
+<body style="width: 240px; margin: 20px auto; font: normal 75% Arial, Helvetica, sans-serif">
+<div class="box">
+  <div class="box_content" id="menu_sidebar">
+    <ul>
+      <li ><a href='/chuyen-muc/thanh-lap-cong-ty.aspx'> THÀNH LẬP CÔNG TY</a>
+        <ul>
+          <li><a href='/chuyen-muc/thanh-lap-doanh-nghiep.aspx'> THÀNH LẬP DOANH NGHIỆP</a></li>
+          <li><a href='/chuyen-muc/thanh-lap-doanh-nghiep-tu-nhan.aspx'> THÀNH LẬP DOANH NGHIỆP TƯ NHÂN</a></li>
+          <li><a href='/chuyen-muc/thanh-lap-cong-ty-tnhh-mot-thanh-vien.aspx'> THÀNH LẬP CÔNG TY TNHH MỘT THÀNH VIÊN</a></li>
+          <li><a href='/chuyen-muc/thanh-lap-cong-ty-tnhh-hai-thanh-vien.aspx'> THÀNH LẬP CÔNG TY TNHH HAI THÀNH VIÊN</a></li>
+          <li><a href='/chuyen-muc/thanh-lap-cong-ty-co-phan.aspx'> THÀNH LẬP CÔNG TY CỔ PHẦN</a></li>
+          <li><a href='/chuyen-muc/thanh-lap-cong-ty-hop-danh.aspx'> THÀNH LẬP CÔNG TY HỢP DANH</a></li>
+          <li><a href='/chuyen-muc/thanh-lap-chi-nhanh-van-phong-dai-dien.aspx'> THÀNH LẬP CHI NHÁNH, VĂN PHÒNG ĐẠI DIỆN</a></li>
+          <li><a href='/chuyen-muc/thanh-lap-cong-ty-100-von-nuoc-ngoai.aspx'> THÀNH LẬP CÔNG TY 100% VỐN NƯỚC NGOÀI</a></li>
+          <li><a href='/chuyen-muc/thay-doi-noi-dung-dang-ky-kinh-doanh.aspx'> THAY ĐỔI NỘI DUNG ĐĂNG KÝ KINH DOANH</a></li>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/dich-vu-in-an.aspx'> DỊCH VỤ IN ẤN</a>
+        <ul>
+          <li><a href='/chuyen-muc/in-hoa-don.aspx'> In hóa đơn</a></li>
+          <li><a href='/chuyen-muc/in-card.aspx'> In card</a></li>
+          <li><a href='/chuyen-muc/in-to-roi.aspx'> In tờ rơi</a></li>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/chu-ki-so.aspx'> CHỮ KÍ SỐ</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/dich-vu-ke-toan.aspx'> DỊCH VỤ KẾ TOÁN</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/logo.aspx'> LOGO</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/dang-ky-nhan-hieu.aspx'> ĐĂNG KÝ NHÃN HIỆU</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/hoa-tuoi.aspx'> HOA TƯƠI</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/vay-von-dao-han.aspx'> VAY VỐN, ĐÁO HẠN</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/may-phat-dien.aspx'> MÁY PHÁT ĐIỆN</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/cung-cap-nhan-luc-ke-toan.aspx'> CUNG CẤP NHÂN LỰC KẾ TOÁN</a>
+        <ul>
+        </ul>
+      </li>
+      <li ><a href='/chuyen-muc/admin.aspx'> admin</a>
+        <ul>
+          <li><a href='/chuyen-muc/admin-1.aspx'> admin 1</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+</body>
+</html>

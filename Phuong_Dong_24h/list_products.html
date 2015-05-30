@@ -1,0 +1,1325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Phương Đông 24h</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Scripts Slide With thumnails-->
+<link rel="stylesheet" href="Styles/slippry.css">
+<script src="Scripts/slippry.min.js"></script>
+<script type="text/javascript">
+			$(function() {
+				var demo1 = $("#main_slider").slippry({
+					transition: 'fade',
+					useCSS: true,
+					speed: 1000,
+					pause: 3000,
+					auto: true,
+					preload: 'visible'
+				});
+
+				$('.stop').click(function () {
+					demo1.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo1.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo1.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo1.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo1.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo1.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo1 = $("#main_slider").slippry();
+					return false;
+				});
+			});
+		</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_logo').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+		animation: 1000,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });	
+});
+</script>
+<!--Fancybox-->
+<link href="Styles/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.fancybox.js"></script>
+<script type="text/javascript">
+function changeSkinCategory(obj)
+{
+    $(".cate_item").removeClass("actived");
+    $(".skins_by_category").hide();
+
+    var categoryid = $(obj).attr("categoryid");
+    $("#skincategory_" + categoryid).show();
+    $(obj).parent().addClass("actived");
+    return false;
+}
+$(function () {
+    $($(".skins_by_category")[0]).show();
+    $(".zoom").fancybox({
+        openEffect: 'elastic',
+        closeEffect: 'elastic'
+    });
+});
+</script>
+</head>
+<body id="bd">
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" class="logo"><img src="Images/logo.png" alt="Phương Đông 24h" /> </a>
+    <!--<p class="text-logo"><a href=""><img src="Images/name_company.png" alt="Phương Đông 24h" /></a></p>-->
+    <p class="hotline">0913 8080 77</p>
+  </div>
+  <div class="cf"></div>
+</div>
+<!--#end Header-->
+<!--Main Menu-->
+<div id="main_menu">
+  <div class="wrap">
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="introduction.html" class="parent">Giới thiệu</a> </li>
+        <li><a href="list_products.html">THIẾT KẾ WEBSITE</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">HỘP SỐ</a></li>
+            <li><a href="#">GẦM XE</a></li>
+            <li><a href="#">THÂN XE</a></li>
+            <li><a href="#">NỘI THẤT</a></li>
+            <li><a href="#">HỆ THỐNG ĐIỆN</a></li>
+          </ul>
+        </li>
+        <li><a href="#">HOSTING-DOMAIN</a>
+          <ul>
+            <li><a href="#">Sub Item 2.1</a></li>
+            <li><a href="#">Sub Item 2.2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">QUẢNG CÁO GOOGLE</a>
+          <ul>
+            <li><a href="#">Sub Item 2.1</a></li>
+            <li><a href="#">Sub Item 2.2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">HỢP TÁC</a>
+          <ul>
+            <li><a href="#">Sub Item 2.1</a></li>
+            <li><a href="#">Sub Item 2.2</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--Search Tool-->
+    <div class="row_header cf" id="search_form">
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+      <a href="" class="submitSearch"></a> </div>
+    <!--End Search Tool-->
+    <div class="cf"></div>
+  </div>
+</div>
+<!--End Main Menu-->
+<!-- #Main -->
+<div class="wrap">
+  <div class="title_box"><b>Giao diện Website</b></div>
+  <div class="skin_items">
+    <div class="list_cate_item">
+      <div class="cate_item fl actived"><span class="featured_icon"></span><a categoryid="1" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Nổi bật </a> </div>
+      <div class="cate_item fl"><span class="travel_icon"></span><a categoryid="2" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Du lịch </a> </div>
+      <div class="cate_item fl"><span class="motorcycle_icon"></span><a categoryid="3" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Xe máy </a> </div>
+      <div class="cate_item fl"><span class="construction_icon"></span><a categoryid="4" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Xây dựng </a> </div>
+      <div class="cate_item fl"><span class="real_estate_icon"></span><a categoryid="5" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Bất động sản </a> </div>
+      <div class="cate_item fl"><span class="sales_icon"></span><a categoryid="6" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Bán hàng </a> </div>
+      <div class="cate_item fl"><span class="service_icon"></span><a categoryid="7" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Dịch vụ </a> </div>
+      <div class="cate_item fl"><span class="beauty_icon"></span><a categoryid="7" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Làm đẹp </a> </div>
+      <div class="cate_item fl"><span class="other_icon"></span><a categoryid="8" onclick="javascript:changeSkinCategory(this);" href="javascript:;"> Khác </a> </div>
+      <div class="cf"></div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_1" style="display: block;">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 86" src="http://www.bizweb.vn/Upload/Skins/Ecom86.master.jpg"> </div>
+        <div class="control"><span class="new_skin"></span><a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom86.master.jpg"> <img alt="Phuong Dong 86" src="Images/bt_zoom.png"> </a> <a class="skin_button skin_number" title="Mẫu số: 001" href=""> Mẫu số: <b>001</b> </a> <a class="skin_button skin_regis" href="regis.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 88" src="http://www.bizweb.vn/Upload/Skins/Ecom88.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom88.master.jpg"> <img alt="Phuong Dong 88" src="Images/bt_zoom.png"> </a><a class="skin_button skin_number" title="Mẫu số: 001" href=""> Mẫu số: <b>002</b> </a> <a class="skin_button skin_regis" href="regis.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"><img alt="Phuong Dong 87" src="http://www.bizweb.vn/Upload/Skins/Ecom87.master.jpg"> </div>
+        <div class="control"><span class="new_skin"></span><a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom87.master.jpg"> <img alt="Phuong Dong 87" src="Images/bt_zoom.png"> </a><a class="skin_button skin_number" title="Mẫu số: 001" href=""> Mẫu số: <b>002</b> </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom87.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 85" src="http://www.bizweb.vn/Upload/Skins/Ecom85.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom85.master.jpg"> <img alt="Phuong Dong 85" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(105);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom85.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 84" src="http://www.bizweb.vn/Upload/Skins/Ecom84.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom84.master.jpg"> <img alt="Phuong Dong 84" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(104);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom84.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 83" src="http://www.bizweb.vn/Upload/Skins/Ecom83.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom83.master.jpg"> <img alt="Phuong Dong 83" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(103);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom83.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 81" src="http://www.bizweb.vn/Upload/Skins/Ecom81.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom81.master.jpg"> <img alt="Phuong Dong 81" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(101);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom81.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom80" src="http://www.bizweb.vn/Upload/Skins/Ecom80.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom80</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom80.master.jpg"> <img alt="Ecom80" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(99);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom80.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom79" src="http://www.bizweb.vn/Upload/Skins/Ecom79.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom79.master.jpg"> <img alt="Ecom79" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(98);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom79.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"><img alt="Ecom78" src="http://www.bizweb.vn/Upload/Skins/Ecom78.master.jpg"> </div>
+        <div class="control"><span class="new_skin"></span><a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom78.master.jpg"> <img alt="Ecom78" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(97);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom78.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom75" src="http://www.bizweb.vn/Upload/Skins/Ecom75.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom75.master.jpg"> <img alt="Ecom75" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(94);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom75.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom74" src="http://www.bizweb.vn/Upload/Skins/Ecom74.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom74.master.jpg"> <img alt="Ecom74" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(93);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom74.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom73" src="http://www.bizweb.vn/Upload/Skins/Ecom73.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom73.master.jpg"> <img alt="Ecom73" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(92);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom73.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom71" src="http://www.bizweb.vn/Upload/Skins/Ecom71.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom71.master.jpg"> <img alt="Ecom71" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(90);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom71.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom70" src="http://www.bizweb.vn/Upload/Skins/Ecom70.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom70.master.jpg"> <img alt="Ecom70" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(89);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom70.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom69" src="http://www.bizweb.vn/Upload/Skins/Ecom69.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom69.master.jpg"> <img alt="Ecom69" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(88);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom69.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom68" src="http://www.bizweb.vn/Upload/Skins/Ecom68.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom68.master.jpg"> <img alt="Ecom68" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(87);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom68.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom67" src="http://www.bizweb.vn/Upload/Skins/Ecom67.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom67.master.jpg"> <img alt="Ecom67" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(85);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom67.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom62" src="http://www.bizweb.vn/Upload/Skins/Ecom62.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom62.master.jpg"> <img alt="Ecom62" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(80);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom62.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom61" src="http://www.bizweb.vn/Upload/Skins/Ecom61.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom61.master.jpg"> <img alt="Ecom61" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(79);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom61.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom43" src="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom43</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> <img alt="Ecom43" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(58);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom43.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom38" src="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> <img alt="Ecom38" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(53);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom38.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom34" src="http://www.bizweb.vn/Upload/Skins/Ecom34.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom34.master.jpg"> <img alt="Ecom34" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(48);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom34.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom32" src="http://www.bizweb.vn/Upload/Skins/Ecom32.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom32.master.jpg"> <img alt="Ecom32" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(46);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom32.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom29" src="http://www.bizweb.vn/Upload/Skins/Ecom29.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom29.master.jpg"> <img alt="Ecom29" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(43);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom29.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom28" src="http://www.bizweb.vn/Upload/Skins/Ecom28.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom28.master.jpg"> <img alt="Ecom28" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(42);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom28.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom18" src="http://www.bizweb.vn/Upload/Skins/Ecom18.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom18.master.jpg"> <img alt="Ecom18" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(32);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom18.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_2">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 87" src="http://www.bizweb.vn/Upload/Skins/Ecom87.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom87.master.jpg"> <img alt="Phuong Dong 87" src="Images/bt_zoom.png"> </a><a class="skin_button skin_number" title="Mẫu số: 001" href=""> Mẫu số: <b>002</b> </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom87.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom74" src="http://www.bizweb.vn/Upload/Skins/Ecom74.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom74.master.jpg"> <img alt="Ecom74" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(93);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom74.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom48" src="http://www.bizweb.vn/Upload/Skins/Ecom48.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom48.master.jpg"> <img alt="Ecom48" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(65);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom48.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom46" src="http://www.bizweb.vn/Upload/Skins/Ecom46.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom46.master.jpg"> <img alt="Ecom46" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(63);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom46.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom42" src="http://www.bizweb.vn/Upload/Skins/Ecom42.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom42.master.jpg"> <img alt="Ecom42" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(56);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom42.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom40" src="http://www.bizweb.vn/Upload/Skins/Ecom40.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom40.master.jpg"> <img alt="Ecom40" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(55);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom40.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom34" src="http://www.bizweb.vn/Upload/Skins/Ecom34.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom34.master.jpg"> <img alt="Ecom34" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(48);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom34.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom33" src="http://www.bizweb.vn/Upload/Skins/Ecom33.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom33</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom33.master.jpg"> <img alt="Ecom33" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(47);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom33.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom31" src="http://www.bizweb.vn/Upload/Skins/Ecom31.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom31.master.jpg"> <img alt="Ecom31" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(45);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom31.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom27" src="http://www.bizweb.vn/Upload/Skins/Ecom27.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom27</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom27.master.jpg"> <img alt="Ecom27" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(41);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom27.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom19" src="http://www.bizweb.vn/Upload/Skins/Ecom19.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom19.master.jpg"> <img alt="Ecom19" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(33);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom19.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom18" src="http://www.bizweb.vn/Upload/Skins/Ecom18.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom18.master.jpg"> <img alt="Ecom18" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(32);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom18.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom13" src="http://www.bizweb.vn/Upload/Skins/Ecom13.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom13</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom13.master.jpg"> <img alt="Ecom13" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(27);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom13.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom11" src="http://www.bizweb.vn/Upload/Skins/Ecom11.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom11.master.jpg"> <img alt="Ecom11" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(25);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom11.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom10" src="http://www.bizweb.vn/Upload/Skins/Ecom10.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom10.master.jpg"> <img alt="Ecom10" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(24);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom10.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom09" src="http://www.bizweb.vn/Upload/Skins/Ecom09.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom09.master.jpg"> <img alt="Ecom09" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(23);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom09.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom01" src="http://www.bizweb.vn/Upload/Skins/Ecom01.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom01.master.jpg"> <img alt="Ecom01" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(15);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom01.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_3">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 86" src="http://www.bizweb.vn/Upload/Skins/Ecom86.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom86.master.jpg"> <img alt="Phuong Dong 86" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(115);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom86.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 88" src="http://www.bizweb.vn/Upload/Skins/Ecom88.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom88.master.jpg"> <img alt="Phuong Dong 88" src="Images/bt_zoom.png"> </a><a class="skin_button skin_number" title="Mẫu số: 001" href=""> Mẫu số: <b>001</b> </a> <a class="skin_button skin_regis" href="regis.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 82" src="http://www.bizweb.vn/Upload/Skins/Ecom82.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom82.master.jpg"> <img alt="Phuong Dong 82" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(102);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom82.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom78" src="http://www.bizweb.vn/Upload/Skins/Ecom78.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom78.master.jpg"> <img alt="Ecom78" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(97);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom78.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom77" src="http://www.bizweb.vn/Upload/Skins/Ecom77.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom77</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom77.master.jpg"> <img alt="Ecom77" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(96);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom77.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom72" src="http://www.bizweb.vn/Upload/Skins/Ecom72.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom72.master.jpg"> <img alt="Ecom72" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(91);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom72.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom37" src="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> <img alt="Ecom37" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(51);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom37.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom68" src="http://www.bizweb.vn/Upload/Skins/Ecom68.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom68.master.jpg"> <img alt="Ecom68" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(87);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom68.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom66" src="http://www.bizweb.vn/Upload/Skins/Ecom66.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom66.master.jpg"> <img alt="Ecom66" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(84);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom66.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom65" src="http://www.bizweb.vn/Upload/Skins/Ecom65.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom65.master.jpg"> <img alt="Ecom65" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(83);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom65.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom64" src="http://www.bizweb.vn/Upload/Skins/Ecom64.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom64.master.jpg"> <img alt="Ecom64" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(82);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom64.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom63" src="http://www.bizweb.vn/Upload/Skins/Ecom63.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom63.master.jpg"> <img alt="Ecom63" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(81);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom63.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom54" src="http://www.bizweb.vn/Upload/Skins/Ecom54.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom54.master.jpg"> <img alt="Ecom54" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(72);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom54.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom49" src="http://www.bizweb.vn/Upload/Skins/Ecom49.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom49.master.jpg"> <img alt="Ecom49" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(66);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom49.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom45" src="http://www.bizweb.vn/Upload/Skins/Ecom45.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom45.master.jpg"> <img alt="Ecom45" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(62);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom45.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom41" src="http://www.bizweb.vn/Upload/Skins/Ecom41.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom41.master.jpg"> <img alt="Ecom41" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(57);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom41.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom37" src="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> <img alt="Ecom37" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(51);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom37.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom36" src="http://www.bizweb.vn/Upload/Skins/Ecom36.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom36.master.jpg"> <img alt="Ecom36" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(50);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom36.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom30" src="http://www.bizweb.vn/Upload/Skins/Ecom30.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom30.master.jpg"> <img alt="Ecom30" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(44);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom30.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom18" src="http://www.bizweb.vn/Upload/Skins/Ecom18.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom18.master.jpg"> <img alt="Ecom18" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(32);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom18.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom17" src="http://www.bizweb.vn/Upload/Skins/Ecom17.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom17.master.jpg"> <img alt="Ecom17" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(31);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom17.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom12" src="http://www.bizweb.vn/Upload/Skins/Ecom12.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom12</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom12.master.jpg"> <img alt="Ecom12" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(26);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom12.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom08" src="http://www.bizweb.vn/Upload/Skins/Ecom08.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom08.master.jpg"> <img alt="Ecom08" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(22);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom08.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom07" src="http://www.bizweb.vn/Upload/Skins/Ecom07.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom07</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom07.master.jpg"> <img alt="Ecom07" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(21);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom07.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom06" src="http://www.bizweb.vn/Upload/Skins/Ecom06.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom06.master.jpg"> <img alt="Ecom06" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(20);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom06.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_4">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom76" src="http://www.bizweb.vn/Upload/Skins/Ecom76.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom76.master.jpg"> <img alt="Ecom76" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(95);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom76.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom71" src="http://www.bizweb.vn/Upload/Skins/Ecom71.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom71.master.jpg"> <img alt="Ecom71" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(90);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom71.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom67" src="http://www.bizweb.vn/Upload/Skins/Ecom67.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom67.master.jpg"> <img alt="Ecom67" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(85);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom67.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom62" src="http://www.bizweb.vn/Upload/Skins/Ecom62.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom62</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom62.master.jpg"> <img alt="Ecom62" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(80);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom62.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom61" src="http://www.bizweb.vn/Upload/Skins/Ecom61.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom61.master.jpg"> <img alt="Ecom61" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(79);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom61.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom51" src="http://www.bizweb.vn/Upload/Skins/Ecom51.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom51.master.jpg"> <img alt="Ecom51" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(69);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom51.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom50" src="http://www.bizweb.vn/Upload/Skins/Ecom50.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom50.master.jpg"> <img alt="Ecom50" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(67);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom50.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom49" src="http://www.bizweb.vn/Upload/Skins/Ecom49.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom49.master.jpg"> <img alt="Ecom49" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(66);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom49.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom47" src="http://www.bizweb.vn/Upload/Skins/Ecom47.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom47.master.jpg"> <img alt="Ecom47" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(64);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom47.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom45" src="http://www.bizweb.vn/Upload/Skins/Ecom45.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom45.master.jpg"> <img alt="Ecom45" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(62);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom45.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom41" src="http://www.bizweb.vn/Upload/Skins/Ecom41.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom41.master.jpg"> <img alt="Ecom41" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(57);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom41.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom37" src="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> <img alt="Ecom37" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(51);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom37.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom36" src="http://www.bizweb.vn/Upload/Skins/Ecom36.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom36.master.jpg"> <img alt="Ecom36" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(50);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom36.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom35" src="http://www.bizweb.vn/Upload/Skins/Ecom35.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom35.master.jpg"> <img alt="Ecom35" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(49);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom35.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom32" src="http://www.bizweb.vn/Upload/Skins/Ecom32.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom32.master.jpg"> <img alt="Ecom32" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(46);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom32.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom30" src="http://www.bizweb.vn/Upload/Skins/Ecom30.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom30.master.jpg"> <img alt="Ecom30" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(44);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom30.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom26" src="http://www.bizweb.vn/Upload/Skins/Ecom26.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom26.master.jpg"> <img alt="Ecom26" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(40);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom26.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom25" src="http://www.bizweb.vn/Upload/Skins/Ecom25.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom25.master.jpg"> <img alt="Ecom25" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(39);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom25.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom24" src="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> <img alt="Ecom24" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(38);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom24.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom23" src="http://www.bizweb.vn/Upload/Skins/Ecom23.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom23.master.jpg"> <img alt="Ecom23" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(37);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom23.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom22" src="http://www.bizweb.vn/Upload/Skins/Ecom22.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom22.master.jpg"> <img alt="Ecom22" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(36);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom22.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom21" src="http://www.bizweb.vn/Upload/Skins/Ecom21.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom21.master.jpg"> <img alt="Ecom21" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(35);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom21.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom20" src="http://www.bizweb.vn/Upload/Skins/Ecom20.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom20.master.jpg"> <img alt="Ecom20" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(34);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom20.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom17" src="http://www.bizweb.vn/Upload/Skins/Ecom17.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom17.master.jpg"> <img alt="Ecom17" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(31);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom17.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom15" src="http://www.bizweb.vn/Upload/Skins/Ecom15.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom15.master.jpg"> <img alt="Ecom15" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(29);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom15.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom14" src="http://www.bizweb.vn/Upload/Skins/Ecom14.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom14.master.jpg"> <img alt="Ecom14" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(28);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom14.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom12" src="http://www.bizweb.vn/Upload/Skins/Ecom12.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom12.master.jpg"> <img alt="Ecom12" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(26);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom12.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom11" src="http://www.bizweb.vn/Upload/Skins/Ecom11.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom11.master.jpg"> <img alt="Ecom11" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(25);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom11.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom10" src="http://www.bizweb.vn/Upload/Skins/Ecom10.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom10.master.jpg"> <img alt="Ecom10" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(24);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom10.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom05" src="http://www.bizweb.vn/Upload/Skins/Ecom05.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom05.master.jpg"> <img alt="Ecom05" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(19);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom05.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom03" src="http://www.bizweb.vn/Upload/Skins/Ecom03.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom03.master.jpg"> <img alt="Ecom03" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(17);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom03.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom04" src="http://www.bizweb.vn/Upload/Skins/Ecom04.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom04.master.jpg"> <img alt="Ecom04" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(18);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom04.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_5">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom80" src="http://www.bizweb.vn/Upload/Skins/Ecom80.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom80.master.jpg"> <img alt="Ecom80" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(99);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom80.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom60" src="http://www.bizweb.vn/Upload/Skins/Ecom60.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom60.master.jpg"> <img alt="Ecom60" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(78);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom60.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom56" src="http://www.bizweb.vn/Upload/Skins/Ecom56.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom56.master.jpg"> <img alt="Ecom56" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(74);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom56.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom44" src="http://www.bizweb.vn/Upload/Skins/Ecom44.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom44.master.jpg"> <img alt="Ecom44" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(59);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom44.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom43" src="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> <img alt="Ecom43" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(58);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom43.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom39" src="http://www.bizweb.vn/Upload/Skins/Ecom39.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom39.master.jpg"> <img alt="Ecom39" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(54);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom39.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom38" src="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> <img alt="Ecom38" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(53);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom38.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom29" src="http://www.bizweb.vn/Upload/Skins/Ecom29.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom29.master.jpg"> <img alt="Ecom29" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(43);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom29.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom23" src="http://www.bizweb.vn/Upload/Skins/Ecom23.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom23.master.jpg"> <img alt="Ecom23" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(37);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom23.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom22" src="http://www.bizweb.vn/Upload/Skins/Ecom22.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom22.master.jpg"> <img alt="Ecom22" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(36);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom22.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom21" src="http://www.bizweb.vn/Upload/Skins/Ecom21.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom21.master.jpg"> <img alt="Ecom21" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(35);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom21.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom16" src="http://www.bizweb.vn/Upload/Skins/Ecom16.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom16.master.jpg"> <img alt="Ecom16" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(30);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom16.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_6">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 85" src="http://www.bizweb.vn/Upload/Skins/Ecom85.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom85.master.jpg"> <img alt="Phuong Dong 85" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(105);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom85.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 84" src="http://www.bizweb.vn/Upload/Skins/Ecom84.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom84.master.jpg"> <img alt="Phuong Dong 84" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(104);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom84.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 83" src="http://www.bizweb.vn/Upload/Skins/Ecom83.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom83.master.jpg"> <img alt="Phuong Dong 83" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(103);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom83.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom79" src="http://www.bizweb.vn/Upload/Skins/Ecom79.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom79.master.jpg"> <img alt="Ecom79" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(98);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom79.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom75" src="http://www.bizweb.vn/Upload/Skins/Ecom75.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom75.master.jpg"> <img alt="Ecom75" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(94);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom75.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom73" src="http://www.bizweb.vn/Upload/Skins/Ecom73.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom73.master.jpg"> <img alt="Ecom73" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(92);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom73.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom70" src="http://www.bizweb.vn/Upload/Skins/Ecom70.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom70.master.jpg"> <img alt="Ecom70" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(89);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom70.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom69" src="http://www.bizweb.vn/Upload/Skins/Ecom69.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom69.master.jpg"> <img alt="Ecom69" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(88);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom69.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom51" src="http://www.bizweb.vn/Upload/Skins/Ecom51.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom51.master.jpg"> <img alt="Ecom51" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(69);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom51.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom50" src="http://www.bizweb.vn/Upload/Skins/Ecom50.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom50.master.jpg"> <img alt="Ecom50" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(67);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom50.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom43" src="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> <img alt="Ecom43" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(58);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom43.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom39" src="http://www.bizweb.vn/Upload/Skins/Ecom39.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom39.master.jpg"> <img alt="Ecom39" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(54);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom39.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom38" src="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> <img alt="Ecom38" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(53);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom38.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom37" src="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> <img alt="Ecom37" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(51);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom37.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom36" src="http://www.bizweb.vn/Upload/Skins/Ecom36.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom36.master.jpg"> <img alt="Ecom36" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(50);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom36.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom35" src="http://www.bizweb.vn/Upload/Skins/Ecom35.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom35.master.jpg"> <img alt="Ecom35" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(49);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom35.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom33" src="http://www.bizweb.vn/Upload/Skins/Ecom33.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom33.master.jpg"> <img alt="Ecom33" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(47);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom33.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom32" src="http://www.bizweb.vn/Upload/Skins/Ecom32.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom32.master.jpg"> <img alt="Ecom32" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(46);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom32.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom31" src="http://www.bizweb.vn/Upload/Skins/Ecom31.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom31.master.jpg"> <img alt="Ecom31" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(45);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom31.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom26" src="http://www.bizweb.vn/Upload/Skins/Ecom26.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom26.master.jpg"> <img alt="Ecom26" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(40);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom26.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom25" src="http://www.bizweb.vn/Upload/Skins/Ecom25.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom25.master.jpg"> <img alt="Ecom25" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(39);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom25.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom24" src="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> <img alt="Ecom24" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(38);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom24.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom23" src="http://www.bizweb.vn/Upload/Skins/Ecom23.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom23.master.jpg"> <img alt="Ecom23" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(37);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom23.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom22" src="http://www.bizweb.vn/Upload/Skins/Ecom22.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom22.master.jpg"> <img alt="Ecom22" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(36);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom22.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom21" src="http://www.bizweb.vn/Upload/Skins/Ecom21.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom21</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom21.master.jpg"> <img alt="Ecom21" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(35);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom21.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom20" src="http://www.bizweb.vn/Upload/Skins/Ecom20.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom20.master.jpg"> <img alt="Ecom20" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(34);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom20.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom15" src="http://www.bizweb.vn/Upload/Skins/Ecom15.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom15.master.jpg"> <img alt="Ecom15" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(29);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom15.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom14" src="http://www.bizweb.vn/Upload/Skins/Ecom14.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom14.master.jpg"> <img alt="Ecom14" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(28);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom14.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom04" src="http://www.bizweb.vn/Upload/Skins/Ecom04.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom04.master.jpg"> <img alt="Ecom04" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(18);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom04.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_7">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom37" src="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom37.master.jpg"> <img alt="Ecom37" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(51);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom37.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom59" src="http://www.bizweb.vn/Upload/Skins/Ecom59.master.jpg"> </div>
+        <div class="control"> <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom59.master.jpg"> <img alt="Ecom59" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(77);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom59.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom48" src="http://www.bizweb.vn/Upload/Skins/Ecom48.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom48</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom48.master.jpg"> <img alt="Ecom48" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(65);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom48.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom46" src="http://www.bizweb.vn/Upload/Skins/Ecom46.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom46</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom46.master.jpg"> <img alt="Ecom46" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(63);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom46.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom44" src="http://www.bizweb.vn/Upload/Skins/Ecom44.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom44</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom44.master.jpg"> <img alt="Ecom44" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(59);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom44.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom43" src="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom43</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom43.master.jpg"> <img alt="Ecom43" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(58);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom43.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom42" src="http://www.bizweb.vn/Upload/Skins/Ecom42.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom42</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom42.master.jpg"> <img alt="Ecom42" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(56);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom42.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom40" src="http://www.bizweb.vn/Upload/Skins/Ecom40.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom40</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom40.master.jpg"> <img alt="Ecom40" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(55);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom40.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom39" src="http://www.bizweb.vn/Upload/Skins/Ecom39.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom39</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom39.master.jpg"> <img alt="Ecom39" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(54);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom39.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom38" src="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom38</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom38.master.jpg"> <img alt="Ecom38" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(53);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom38.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom34" src="http://www.bizweb.vn/Upload/Skins/Ecom34.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom34</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom34.master.jpg"> <img alt="Ecom34" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(48);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom34.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom33" src="http://www.bizweb.vn/Upload/Skins/Ecom33.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom33</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom33.master.jpg"> <img alt="Ecom33" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(47);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom33.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom31" src="http://www.bizweb.vn/Upload/Skins/Ecom31.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom31</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom31.master.jpg"> <img alt="Ecom31" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(45);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom31.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom27" src="http://www.bizweb.vn/Upload/Skins/Ecom27.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom27</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom27.master.jpg"> <img alt="Ecom27" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(41);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom27.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom24" src="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom24</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> <img alt="Ecom24" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(38);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom24.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom19" src="http://www.bizweb.vn/Upload/Skins/Ecom19.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom19</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom19.master.jpg"> <img alt="Ecom19" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(33);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom19.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom13" src="http://www.bizweb.vn/Upload/Skins/Ecom13.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom13</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom13.master.jpg"> <img alt="Ecom13" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(27);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom13.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom09" src="http://www.bizweb.vn/Upload/Skins/Ecom09.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom09</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom09.master.jpg"> <img alt="Ecom09" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(23);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom09.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+    <div class="skins_by_category hidden" id="skincategory_8">
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 83" src="http://www.bizweb.vn/Upload/Skins/Ecom83.master.jpg"> </div>
+        <div class="control">
+          <h3>Phuong Dong83</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom83.master.jpg"> <img alt="Phuong Dong 83" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(103);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom83.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Phuong Dong 81" src="http://www.bizweb.vn/Upload/Skins/Ecom81.master.jpg"> </div>
+        <div class="control">
+          <h3>Phuong Dong81</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom81.master.jpg"> <img alt="Phuong Dong 81" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(101);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom81.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom68" src="http://www.bizweb.vn/Upload/Skins/Ecom68.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom68</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom68.master.jpg"> <img alt="Ecom68" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(87);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom68.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom65" src="http://www.bizweb.vn/Upload/Skins/Ecom65.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom65</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom65.master.jpg"> <img alt="Ecom65" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(83);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom65.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom64" src="http://www.bizweb.vn/Upload/Skins/Ecom64.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom64</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom64.master.jpg"> <img alt="Ecom64" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(82);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom64.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom62" src="http://www.bizweb.vn/Upload/Skins/Ecom62.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom62</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom62.master.jpg"> <img alt="Ecom62" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(80);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom62.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom58" src="http://www.bizweb.vn/Upload/Skins/Ecom58.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom58</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom58.master.jpg"> <img alt="Ecom58" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(76);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom58.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom57" src="http://www.bizweb.vn/Upload/Skins/Ecom57.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom57</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom57.master.jpg"> <img alt="Ecom57" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(75);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom57.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom56" src="http://www.bizweb.vn/Upload/Skins/Ecom56.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom56</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom56.master.jpg"> <img alt="Ecom56" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(74);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom56.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom55" src="http://www.bizweb.vn/Upload/Skins/Ecom55.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom55</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom55.master.jpg"> <img alt="Ecom55" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(73);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom55.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom54" src="http://www.bizweb.vn/Upload/Skins/Ecom54.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom54</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom54.master.jpg"> <img alt="Ecom54" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(72);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom54.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom53" src="http://www.bizweb.vn/Upload/Skins/Ecom53.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom53</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom53.master.jpg"> <img alt="Ecom53" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(71);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom53.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom52" src="http://www.bizweb.vn/Upload/Skins/Ecom52.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom52</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom52.master.jpg"> <img alt="Ecom52" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(70);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom52.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom51" src="http://www.bizweb.vn/Upload/Skins/Ecom51.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom51</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom51.master.jpg"> <img alt="Ecom51" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(69);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom51.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom50" src="http://www.bizweb.vn/Upload/Skins/Ecom50.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom50</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom50.master.jpg"> <img alt="Ecom50" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(67);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom50.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom49" src="http://www.bizweb.vn/Upload/Skins/Ecom49.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom49</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom49.master.jpg"> <img alt="Ecom49" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(66);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom49.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom47" src="http://www.bizweb.vn/Upload/Skins/Ecom47.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom47</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom47.master.jpg"> <img alt="Ecom47" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(64);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom47.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom28" src="http://www.bizweb.vn/Upload/Skins/Ecom28.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom28</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom28.master.jpg"> <img alt="Ecom28" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(42);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom28.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom26" src="http://www.bizweb.vn/Upload/Skins/Ecom26.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom26</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom26.master.jpg"> <img alt="Ecom26" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(40);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom26.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom25" src="http://www.bizweb.vn/Upload/Skins/Ecom25.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom25</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom25.master.jpg"> <img alt="Ecom25" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(39);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom25.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom24" src="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom24</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom24.master.jpg"> <img alt="Ecom24" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(38);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom24.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom20" src="http://www.bizweb.vn/Upload/Skins/Ecom20.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom20</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom20.master.jpg"> <img alt="Ecom20" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(34);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom20.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom15" src="http://www.bizweb.vn/Upload/Skins/Ecom15.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom15</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom15.master.jpg"> <img alt="Ecom15" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(29);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom15.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom14" src="http://www.bizweb.vn/Upload/Skins/Ecom14.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom14</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom14.master.jpg"> <img alt="Ecom14" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(28);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom14.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom12" src="http://www.bizweb.vn/Upload/Skins/Ecom12.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom12</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom12.master.jpg"> <img alt="Ecom12" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(26);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom12.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom11" src="http://www.bizweb.vn/Upload/Skins/Ecom11.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom11</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom11.master.jpg"> <img alt="Ecom11" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(25);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom11.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom10" src="http://www.bizweb.vn/Upload/Skins/Ecom10.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom10</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom10.master.jpg"> <img alt="Ecom10" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(24);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom10.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom06" src="http://www.bizweb.vn/Upload/Skins/Ecom06.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom06</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom06.master.jpg"> <img alt="Ecom06" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(20);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom06.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom02" src="http://www.bizweb.vn/Upload/Skins/Ecom02.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom02</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom02.master.jpg"> <img alt="Ecom02" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(16);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom02.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+      <div class="skin_item">
+        <div class="thumbnail"> <img alt="Ecom03" src="http://www.bizweb.vn/Upload/Skins/Ecom03.master.jpg"> </div>
+        <div class="control">
+          <h3>Ecom03</h3>
+          <a rel="gallery1" class="zoom" href="http://www.bizweb.vn/Upload/Skins/Ecom03.master.jpg"> <img alt="Ecom03" src="Images/bt_zoom.png"> </a><br>
+          <a class="skin_button skin_number"  onclick="javascript:RegWithSkin(17);" title="Mẫu số: 001" href=""> Mẫu số: 001 </a> <a class="skin_button skin_regis" href="/kho-giao-dien/ecom03.html"><img src="Images/bt_skin_registration.png"></a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="cf"></div>
+</div>
+<!--End Main-->
+<!--Footer-->
+<div id="footer">
+  <div class="wrap" id="topmenu_f">
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <div id="social_network"><a href="" class="facebook">Facebook</a><a href="" class="you_tube">Youtube</a><a href="" class="forum">Diễn đan</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h2>Dịch vụ</h2>
+        <div class="listMenuFooter"><a href="">Thiết kế website</a><a href="">Hosting - Domain</a><a href="">Quảng cáo Google</a><a href="">Tạo Mail công ty</a><a href="">Blog kinh doanh</a><a href="">Dịch vụ đăng tin</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h2>Tin tức và tài khoản</h2>
+        <div class="listMenuFooter"><a href="">Website bán hàng</a><a href="">Website tin tức</a><a href="">Website giới thiệu</a><a href="">Website doanh nghiệp</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter" id="more_info_foo">
+      <div class="ctentColuMenuFooter">
+        <div id="info_footer">
+          <p><strong>CÔNG TY TNHH ĐT TM DV KỸ THUẬT PHƯƠNG ĐÔNG</strong></p>
+          <p>122/11 B, Lạc Long Quân, Phường 3, Quận 11, TP HCM</p>
+          <p>08. 6264 1876 - 094 603 1800 - 091 910 5239</p>
+        </div>
+        <!--End Info Footer-->
+        <div id="get_email"><span class="title_email">Đăng ký nhận bản tin khuyến mại</span>
+          <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Nhập  Email của bạn" onfocus="if (this.value=='Nhập  Email của bạn') this.value='';" onblur="if (this.value=='') this.value='Nhập  Email của bạn';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+          <a href="" class="send_button">Đăng ký</a> </div>
+        <!--End Get Email-->
+      </div>
+    </div>
+    <div class="cf"></div>
+  </div>
+</div>
+<!--End Footer-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

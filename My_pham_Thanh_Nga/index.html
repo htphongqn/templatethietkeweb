@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mỹ phẩm Thanh Nga</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/modernizr.custom.js"></script>
+<!--Slide Camera-->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				loader: 'none',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '../Images/',						
+            	height: '410px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	playPause: false,
+			});
+
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu1", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {     
+			jQuery('#mycarousel_same_P, #mycarousel_dt_img').jcarousel({
+                auto: 0,
+                animation: 1000,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });	
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a id="text_logo" href="/trang-chu.aspx"> <img src="Images/text_logo.png" alt="Mỹ phẩm Thanh Nga" /> </a>
+    <!--Search Tool-->
+    <div id="search_form">
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+      <a href="" class="submitSearch"></a> </div>
+    <!--End Search Tool-->
+  </div>
+  <!--#end Header-->
+  <div id="top_main">
+    <!-- #camera_wrap_3 -->
+    <div class="camera_wrap camera_emboss pattern_1 fl" id="camera_wrap_4">
+      <div class="camera_img"><img src="http://myphamhoangchau.com.vn/img/banner2.jpg" alt=""/></div>
+      <div class="camera_img"><img src="http://chixachtay.webmau.vn/images/gianhang/slider/20130927145729MF5XfCwlSZ.jpg" alt=""/></div>
+      <div class="camera_img"><img src="http://nevi.vn/images/quangcao/mypham4.JPG" alt=""/></div>
+      <div class="camera_img"><img src="http://bộmỹphẩmchămsócsắcđẹp.vn/upload/Colombo/25821/20130825/slide_2144498096banner3.jpg" alt=""/></div>
+    </div>
+    <script type="text/javascript">
+   $('.camera_img').each(function(){
+      $(this).attr('data-thumb', $('img', this).attr('src'));
+	  $(this).attr('data-src', $('img', this).attr('src'));
+   })
+</script>
+    <!-- end #camera_wrap_3 -->
+    <!--Cate-->
+    <div class="fr" id="cate_home_top">
+      <ul>
+        <li>
+          <div class="cate_item">
+            <div class="img_cate"><a href=""><img src="http://lanohui.com/image/cache/data/oh_trangdiem/ohui_phanphu-300x300.png" alt="" /></a></div>
+            <h2><a href="" class="font1 cate_name">Giới thiệu</a></h2>
+          </div>
+        </li>
+        <li>
+          <div class="cate_item">
+            <div class="img_cate"><a href="index.html"><img src="http://0.static.wix.com/media/7f55cd_d1e1d95078c1a4114eac5b58b335af62.png_256" alt="" /></a></div>
+            <h2><a href="list_products.html" class="font1 cate_name">Sản phẩm</a></h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--end Cate-->
+  </div>
+  <!--Main Content-->
+  <div id="main">
+    <!--Cate-->
+    <div class="fl hi-icon-effect" id="cate_home_main">
+      <ul>
+        <li id="cate_main_1">
+          <div class="cate_item">
+            <div class="img_cate"><a href="index.html"><img src="http://congbomypham.vn/wp-content/uploads/2014/05/cong-bo-my-pham-trong-nuoc.png" alt="" /></a></div>
+            <h2><a href="" class="font1 cate_name">Tin tức & sự kiện</a></h2>
+          </div>
+        </li>
+        <li id="cate_main_2">
+          <div class="cate_item">
+            <div class="img_cate"><a href=""><img src="http://www.vatgia.com/pictures_fullsize/urf1365741385.png" alt="" /></a></div>
+            <h2><a href="list_products.html" class="font1 cate_name">Sản phẩm nổi bật</a></h2>
+          </div>
+        </li>
+        <li id="cate_main_3">
+          <div class="cate_item">
+            <div class="img_cate"><a href=""><img src="http://vietnamnay.com/upload/khoedepcenter/product/10.2011/ageLOC%20Transformation%20Premium%20Package.png" alt="" /></a></div>
+            <h2><a href="" class="font1 cate_name">Danh sách cửa hàng chi nhánh</a></h2>
+          </div>
+        </li>
+        <li id="cate_main_4">
+          <div class="cate_item">
+            <div class="img_cate"><a href="index.html"><img src="http://vn.oriflame.com/catalog-images/product/global/24432_2.png" alt="" /></a></div>
+            <h2><a href="list_products.html" class="font1 cate_name">Sản phẩm mới</a></h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--end Cate-->
+    <!--Right Home-->
+    <div class="fr" id="right_home">
+      <!--Support-->
+      <div class="box">
+        <div id="box_support">
+          <div class="top_spBg"></div>
+          <div class="center_spBg">
+            <ul>
+              <li><a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="114" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <b class="font2 title_sp">Tư vấn 1</b></li>
+              <li><a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="114" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <b class="font2 title_sp">Tư vấn 2</b></li>
+              <li><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="114" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <b class="font2 title_sp">Tư vấn 3</b></li>
+              <li><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="114" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <b class="font2 title_sp">Tư vấn 4</b></li>
+            </ul>
+          </div>
+          <div class="bottom_spBg"></div>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Idea-->
+      <div class="box" id="idea_home"> <a href="" class="font2 title_idea">Ý kiến</a>
+        <!--Facebook-->
+        <div class="box" id="likeface_home"> <img src="Images/likeface.gif" alt="" /></div>
+        <!--End Facebook-->
+      </div>
+      <!--End Idea-->
+    </div>
+    <!--end Right Home-->
+  </div>
+  <!--End Main Content-->
+  <!-- Begin of footer-->
+  <div id="footer">
+    <div id="info_footer" class="fl"> <a href=""><img src="Images/AIHAO_logo.png" alt="" class="img_general" /></a>
+      <p style="font-size: 14px">Công Ty TNHH TM - SX Thanh Nga</p>
+      <p style="font-size: 14px">Số 94 - Đường 64 - P. 10 - Q. 6 - TP.HCM</p>
+      <p style="font-size: 14px">Mail: <a href="mailto:myphamthanhnga@viettel.vn">myphamthanhnga@viettel.vn</a></p>
+      <p style="font-size: 14px">Điện thoại : 08.221.25380 - 08.629.32534</p>
+    </div>
+    <!--Status-->
+    <div id="status" class="fr"><span>Đang truy cập : 10</span> <span>Lượt truy cập : 12450</span></div>
+  </div>
+  <!-- End of footer-->
+</div>
+<!-- End wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

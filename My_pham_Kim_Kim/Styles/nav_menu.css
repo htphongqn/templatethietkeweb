@@ -1,0 +1,352 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,vietnamese,latin-ext);
+#nav {
+	height: 36px;
+	background: url(../Images/menuBg.gif) 0 0 repeat-x;
+}
+#nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+#nav:after, #nav ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#nav ul, #nav li, #nav a {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav > ul {
+	float: left;
+	position: relative;
+	display: block;
+	z-index: 500;
+}
+#nav > ul > li {
+	float: left;
+	display:inline-block;
+	margin: 0;
+	padding-left: 1px;
+	border-left: 1px solid #f453a6
+}
+#nav > ul > li:first-child {
+	padding: 0;
+	border: none;
+}
+#nav ul li a {
+	display: block;
+	text-decoration: none;
+}
+#nav > ul > li > a {
+	display: inline-block;
+	font-size: 1.1em;
+	line-height: 32px;
+	color: #FFFFFF;
+	padding: 0 15px;
+	margin: 2px 3px;
+	text-transform: uppercase;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	z-index: 50;
+}
+#nav > ul > li.active > a, #nav > ul > li:hover > a {
+	background-color: #1080ab
+}
+#nav ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 36px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background:#df2387;
+}
+#nav ul ul ul {
+	top: 36px;
+}
+#nav ul ul li {
+	position: relative;	
+	text-align:left;
+	white-space: nowrap;
+	min-width: 177px
+}
+#nav > ul > li:hover > ul {
+	left: auto;
+	top: 36px;
+	opacity: 1;
+}
+#nav ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#nav ul ul li a {
+	border-bottom: 1px dotted #FFFFFF;
+	filter: none;
+	font-size: 100%;
+	display: block;
+	line-height: 100%;
+	padding: 10px;
+	margin:3px;
+	color:#FFFFFF;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#nav ul ul li:hover > a {
+	background: #1080ab;
+	color: #FFFFFF;
+}
+#nav ul ul li:last-child > a, #nav ul ul li.last > a {
+	border-bottom: 0;
+}
+#menu_button, .mobile_menu {
+	display: none
+}
+.close_menu {
+	clear: both;
+	margin-top: 10px;
+	color: #FFFFFF;
+	padding-left: 50px;
+	line-height: 46px;
+	background: #ec2a91 url(../Images/close_icon.png) 10px center no-repeat;
+	cursor: pointer;
+	text-transform: uppercase
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+#nav {
+height: auto
+}
+ #nav > ul {
+margin-right: 40px
+}
+ #nav > ul > li {
+padding: 0;
+background: none
+}
+ #nav > ul > li:first-child {
+display: none
+}
+}
+@media only screen and (max-width: 767px) {
+#nav {
+display: none
+}
+#menu_button, .mobile_menu {
+display: block
+}
+.container.tran_wp {
+ position: fixed;
+ width: 100%;
+ transform: translate3d(300px, 0px, 0px);
+ -webkit-transform: translate3d(300px, 0px, 0px);
+ -moz-transform: translate3d(300px, 0px, 0px);
+ -o-transform: translate3d(300px, 0px, 0px);
+ -ms-transform: translate3d(300px, 0px, 0px);
+ z-index: 100;
+}
+#icon_home_mobile {
+float: left;
+display: block;
+height: 36px;
+height: 40px;
+position: relative;
+top: 3px;
+z-index: 999;
+margin-left: 5px;
+}
+}
+ @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+#menu_button {
+ float: left;
+cursor: pointer;
+color: #FFFFFF;
+ -moz-box-shadow: 0px 0px 1px #888888;
+ -webkit-box-shadow: 0px 0px 1px #888888;
+ box-shadow: 0px 0px 1px #888888;
+ transform: translate3d(0px, 0px, 0px);
+ -webkit-transform: translate3d(0px, 0px, 0px);
+-moz-transform: translate3d(0px, 0px, 0px);
+-o-transform: translate3d(0px, 0px, 0px);
+-ms-transform: translate3d(0px, 0px, 0px);
+}
+.menu_icon {
+float: left;
+display: block;
+width: 55px;
+height: 55px;
+line-height: 55px;
+padding-left: 45px;
+text-transform: uppercase;
+background: #1080ab url(../Images/menu-mobile.png) 10px center no-repeat;
+}
+#cssmenu_menu ul.open #menu_button::after, #cssmenu_menu ul.open #menu_button::before {
+border-color: #fff;
+}
+ .mobile_menu {
+ margin: 0 auto;
+ min-width: 320px;
+ overflow: hidden;
+ width: 100%;
+}
+.mobile_menu .fly_menu.active {
+ display: block;
+ transform: translate3d(300px, 0px, 0px);
+ -webkit-transform: translate3d(300px, 0px, 0px);
+-moz-transform: translate3d(300px, 0px, 0px);
+-o-transform: translate3d(300px, 0px, 0px);
+-ms-transform: translate3d(300px, 0px, 0px);
+ z-index: 20;
+}
+.mobile_menu .fly_menu {
+ background: none repeat scroll 0 0 #3b3b3b;
+ float: none;
+ height: 100%;
+ left: -300px;
+ overflow: auto;
+ position: fixed;
+ top: 0;
+ width: 300px;
+}
+.mobile_menu .fly_menu.active .main_nav {
+width: 100%;
+font-size: 1.2em;
+}
+.mobile_menu .main_nav > ul {
+float: right;
+width: 100%;
+}
+.mobile_menu .main_nav > ul > li {
+float: left;
+width: 100%;
+display: block;
+border-bottom: 1px solid #919191;
+padding-top: 0;
+position: relative
+}
+.mobile_menu .main_nav>ul>li>a {
+display: block;
+padding:0 36px 0 10px;
+height: 40px;
+line-height: 40px;
+font-size: 100%;
+color: #fff;
+}
+.mobile_menu .main_nav>ul>li>a#home_icon {
+width: auto;
+background-position: 10px 8px;
+padding-left: 40px !important
+}
+.mobile_menu .main_nav>ul>li:hover, .mobile_menu .main_nav>ul>li:hover>a, .mobile_menu .main_nav>ul>li>a.active {
+background-color: #5e5e5e;
+color: #fff;
+}
+ .mobile_menu .main_nav > ul > li > a:hover {
+text-decoration: none
+}
+.mobile_menu .main_nav ul ul {
+ display: none;
+ clear: both;
+}
+.mobile_menu .main_nav>ul>li>ul>li>a {
+padding-left: 15px;
+color: #333333;
+}
+.mobile_menu .main_nav ul ul ul a {
+background: url(../Images/arr_cate_child.gif) 38px 22px no-repeat;
+padding-left: 55px !important
+}
+.mobile_menu .main_nav ul > li:hover > ul, .mobile_menu .main_nav ul > li:hover >div {
+}
+ .mobile_menu .main_nav>ul>li.first.active>ul.noli, .mobile_menu .main_nav>ul>li.two.active>div.submenu {
+display: block !important;
+}
+/*Menu Arcordion*/
+#box_category > ul > li > ul {
+ padding-left:0px;
+ display:none;
+ margin-top:0px;
+}
+#box_category > ul > li.active ul {
+ display:block;
+}
+#box_category > ul > li > ul > li {
+ position: relative;
+}
+#box_category > ul > li span:hover {
+ cursor:pointer;
+}
+#box_category > ul > li.active > a, #box_category > ul > li ul > li > a:hover {
+ color:#FFFFFF;
+}
+#box_category > ul > li.active a + ul {
+ display: block;
+}
+#box_category > ul > li ul > li > a {
+ text-decoration: none;
+ display: block;
+ color:#FFFFFF;
+ padding: 9px 46px 9px 30px;
+ border-bottom: 1px solid #f4f4f4
+}
+#box_category > ul > li ul > li.active > a, #box_category > ul > li ul > li.active > a {
+ font-weight:normal;
+ color:#3b2c26;
+}
+#box_category > ul > li > span.close {
+ background:url(../Images/faq.png) 0 0 no-repeat;
+ width:26px;
+ height:25px;
+ float:right;
+ margin-right:13px;
+ margin-top:2px;
+ display:block;
+}
+#box_category > ul > li > span.close.expanded {
+background-position: 0 -86px
+}
+#box_category li li span.close {
+ background:url(../Images/faq.png) 0 16px no-repeat;
+ width:26px;
+ height:36px;
+ float:right;
+ margin-right:13px;
+ margin-top:0;
+ display:block;
+}
+ #box_category li.active > span.close {
+ background-position:0 -88px;
+}
+#box_category li li span.close.collapsed {
+ background-position:0 16px;
+}
+#box_category li span.close.expanded {
+ background-position:0 -72px;
+}
+#box_category > ul > li span.close:hover {
+ cursor:pointer;
+}
+#box_category .close {
+ position:absolute;
+ top:7px;
+ right:0px;
+}
+#box_category ul ul .close {
+ position:absolute;
+ top:0px;
+ right:0px;
+}
+}

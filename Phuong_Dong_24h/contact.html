@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Phương Đông 24h</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Scripts Slide With thumnails-->
+<link rel="stylesheet" href="Styles/slippry.css">
+<script src="Scripts/slippry.min.js"></script>
+<script type="text/javascript">
+			$(function() {
+				var demo1 = $("#main_slider").slippry({
+					transition: 'fade',
+					useCSS: true,
+					speed: 1000,
+					pause: 3000,
+					auto: true,
+					preload: 'visible'
+				});
+
+				$('.stop').click(function () {
+					demo1.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo1.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo1.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo1.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo1.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo1.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo1 = $("#main_slider").slippry();
+					return false;
+				});
+			});
+		</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin_jcarousel.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_logo').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+		animation: 1000,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });	
+});
+</script>
+<!--Fancybox-->
+<link href="Styles/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.fancybox.js"></script>
+<script type="text/javascript">
+function changeSkinCategory(obj)
+{
+    $(".cate_item").removeClass("actived");
+    $(".skins_by_category").hide();
+
+    var categoryid = $(obj).attr("categoryid");
+    $("#skincategory_" + categoryid).show();
+    $(obj).parent().addClass("actived");
+    return false;
+}
+$(function () {
+    $($(".skins_by_category")[0]).show();
+    $(".zoom").fancybox({
+        openEffect: 'elastic',
+        closeEffect: 'elastic'
+    });
+});
+</script>
+</head>
+<body id="bd">
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" class="logo"><img src="Images/logo.png" alt="Phương Đông 24h" /> </a>
+    <!--<p class="text-logo"><a href=""><img src="Images/name_company.png" alt="Phương Đông 24h" /></a></p>-->
+    <p class="hotline">0913 8080 77</p>
+  </div>
+  <div class="cf"></div>
+</div>
+<!--#end Header-->
+<!--Main Menu-->
+<div id="main_menu">
+  <div class="wrap">
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="introduction.html" class="parent">Giới thiệu</a> </li>
+        <li><a href="list_products.html">THIẾT KẾ WEBSITE</a>
+          <ul>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+              <ul>
+                <li><a href="#">Sub Item 1.1</a></li>
+                <li><a href="#">Sub Item 1.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+              <ul>
+                <li><a href="#">Sub Item 2.1</a></li>
+                <li><a href="#">Sub Item 2.2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">HỘP SỐ</a></li>
+            <li><a href="#">GẦM XE</a></li>
+            <li><a href="#">THÂN XE</a></li>
+            <li><a href="#">NỘI THẤT</a></li>
+            <li><a href="#">HỆ THỐNG ĐIỆN</a></li>
+          </ul>
+        </li>
+        <li><a href="#">HOSTING-DOMAIN</a>
+          <ul>
+            <li><a href="#">Sub Item 2.1</a></li>
+            <li><a href="#">Sub Item 2.2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">QUẢNG CÁO GOOGLE</a>
+          <ul>
+            <li><a href="#">Sub Item 2.1</a></li>
+            <li><a href="#">Sub Item 2.2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">HỢP TÁC</a>
+          <ul>
+            <li><a href="#">Sub Item 2.1</a></li>
+            <li><a href="#">Sub Item 2.2</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--Search Tool-->
+    <div class="row_header cf" id="search_form">
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+      <a href="" class="submitSearch"></a> </div>
+    <!--End Search Tool-->
+    <div class="cf"></div>
+  </div>
+</div>
+<!--End Main Menu-->
+<!-- #Main -->
+<div class="wrap">
+  <!--Info Contact-->
+  <div class="contact_info fl">
+    <p><span style="font-size: large;"><strong><span style="font-family: arial, helvetica, sans-serif;">Thông tin liên hệ</span></strong></span></p>
+    <p><span style="font-family: arial, helvetica, sans-serif; font-size: medium;">232/17 Cộng Hòa, P. 12, Q. Tân Bình, Tp. Hồ Chí Minh</span><br>
+      <span style="font-family: arial, helvetica, sans-serif; font-size: medium;">Điện thoại / Fax: (+84 8) 39 483 961&nbsp;</span><br>
+      <span style="font-family: arial, helvetica, sans-serif; font-size: medium;">Hotline: <span style="color: #ff0000;">0908 169 044</span>&nbsp;</span><br>
+      <span style="font-family: arial, helvetica, sans-serif; font-size: medium;">Website: <a href="http://www.dangcapviet.vn">www.dangcapviet.vn<br>
+      </a>E-mail: <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn<br>
+      </a></span></p>
+    <p><span style="font-size: medium;"><strong><span style="font-family: arial, helvetica, sans-serif;">Thời gian làm việc:<br>
+      </span></strong></span><span style="font-family: arial, helvetica, sans-serif; font-size: medium;">8h - 17h30 từ thứ 2 đến thứ 6<br>
+      </span><span style="font-family: arial, helvetica, sans-serif; font-size: medium;">8h - 12h ngày thứ 7</span></p>
+    <p><span style="font-family: arial, helvetica, sans-serif; font-size: medium;">Ngoài thời gian trên, quý khách vui lòng gửi e-mail đến <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a> hoặc liên hệ số <span style="color: #ff0000;">0908 169 044</span> để được tư vấn và hỗ trợ miễn phí !&nbsp;</span></p>
+  </div>
+  <!--End Info Contact-->
+  <!--Contact to register-->
+  <div class="form form_contact fr">
+    <div class="row_contact fl">
+      <label class="left_row" for="formFullname">Họ và tên</label>
+      <input class="inputbox right_row" type="text" name="formFullname" id="formFullname" />
+    </div>
+    <div class="row_contact fl">
+      <label class="left_row" for="formPhone">Điện thoại</label>
+      <input class="inputbox right_row" type="text" name="formPhone" id="formPhone" />
+    </div>
+    <div class="row_contact fl">
+      <label class="left_row" for="formEmail">Email</label>
+      <input class="inputbox right_row" type="text" name="formEmail" id="formEmail" />
+    </div>
+    <div class="row_contact fl">
+      <label class="left_row" for="formMessage">Nội dung</label>
+      <textarea name="message" rows="5" cols="25" class="fl" style="width: 245px"></textarea>
+    </div>
+    <div class="row_contact fl">
+      <label class="left_row" for="formCode">Mã bảo vệ</label>
+      <input name="capcha" type="text" class="inputbox fl" style="width: 120px" />
+      <img src="Images/capcha.gif" alt="" style="float: left; margin-left: 10px" /> </div>
+    <div class="row_contact fr"> <a href="" class="send_cmt" style="margin-left: 0">GỬI</a> <a href="" class="send_cmt reset">Xóa</a></div>
+  </div>
+  <!--End Contact to register-->
+  <div class="cf"></div>
+</div>
+<!--End Main-->
+<!--Footer-->
+<div id="footer">
+  <div class="wrap" id="topmenu_f">
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <div id="social_network"><a href="" class="facebook">Facebook</a><a href="" class="you_tube">Youtube</a><a href="" class="forum">Diễn đan</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h2>Dịch vụ</h2>
+        <div class="listMenuFooter"><a href="">Thiết kế website</a><a href="">Hosting - Domain</a><a href="">Quảng cáo Google</a><a href="">Tạo Mail công ty</a><a href="">Blog kinh doanh</a><a href="">Dịch vụ đăng tin</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter">
+      <div class="ctentColuMenuFooter">
+        <h2>Tin tức và tài khoản</h2>
+        <div class="listMenuFooter"><a href="">Website bán hàng</a><a href="">Website tin tức</a><a href="">Website giới thiệu</a><a href="">Website doanh nghiệp</a></div>
+      </div>
+    </div>
+    <div class="col_menuFooter" id="more_info_foo">
+      <div class="ctentColuMenuFooter">
+        <div id="info_footer">
+          <p><strong>CÔNG TY TNHH ĐT TM DV KỸ THUẬT PHƯƠNG ĐÔNG</strong></p>
+          <p>122/11 B, Lạc Long Quân, Phường 3, Quận 11, TP HCM</p>
+          <p>08. 6264 1876 - 094 603 1800 - 091 910 5239</p>
+        </div>
+        <!--End Info Footer-->
+        <div id="get_email"><span class="title_email">Đăng ký nhận bản tin khuyến mại</span>
+          <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Nhập  Email của bạn" onfocus="if (this.value=='Nhập  Email của bạn') this.value='';" onblur="if (this.value=='') this.value='Nhập  Email của bạn';" class="input_Search" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+          <a href="" class="send_button">Đăng ký</a> </div>
+        <!--End Get Email-->
+      </div>
+    </div>
+    <div class="cf"></div>
+  </div>
+</div>
+<!--End Footer-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

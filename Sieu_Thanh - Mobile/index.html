@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sieu Thanh Mobile</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.tgdd.vn/betamobile/Scripts/Base/jquery.placeholder.min.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#fade').after('<div id="nav" class="nav">').cycle({
+        timeout: 30000,
+        pager:  '#nav'
+    });
+	$('#fade_01').cycle({timeout:	   2000});
+	$('#fade_02').cycle({timeout:	   3000});
+	$('#fade_03').cycle({timeout:	   4000});
+	});
+
+</script>
+<script type="text/javascript" src="Scripts/jmobile.common.min.js"></script>
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-918185-25']); _gaq.push(['_setDomainName', '.thegioididong.com']); _gaq.push(['_trackPageview']); _gaq.push(['_setAccount', 'UA-918185-30']); _gaq.push(['_trackPageview']); (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script>
+</head>
+<body>
+<div class="page">
+  <!--#begin Header-->
+  <div class="header">
+    <div class="left"><a href="index.html">
+      <div class="home"></div>
+      </a> </div>
+    <div id="center" class="center"><a href="index_grey.html">
+      <div class="logo"></div>
+      </a></div>
+    <div class="right">
+      <div onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Mở']);" id="menu_icon" class="menu_icon"></div>
+      <div class="clr"></div>
+      <div id="list_menu" class="index_menu">
+        <div id="btnclose"><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Đóng']);" href="javascript:void(0);">
+          <div class="imgmenu"><span class="sprite_close"></span></div>
+          </a></div>
+        <ul id="ulcatmenu" class="clearfix">
+          <li><a href="list_products.html">Máy photocopy đa năng</a></li>
+          <li><a href="#">Máy FAX</a> </li>
+          <li><a href="#">Máy sao chụp khổ rộng</a></li>
+          <li><a href="#">Máy in siêu tốc</a></li>
+          <li><a href="#">Máy in chuyên dụng</a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Search-->
+  <div class="search clearfix">
+    <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa" />
+    <input type="submit" value="Tìm" class="submitSearch" onclick="return CheckValue(document.Search.s);">
+  </div>
+  <!--End Search-->
+  <!-- #Main -->
+  <div class="main clearfix">
+    <div class="sort_option">
+      <p class="s_cate">
+        <select id="categories" name="categories" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+          <option value="">Danh mục sản phẩm</option>
+          <option value="Máy photocopy đa năng">Máy photocopy đa năng</option>
+          <option value="Máy FAX">Máy FAX</option>
+          <option value="Máy sao chụp khổ rộng">Máy sao chụp khổ rộng</option>
+          <option value="Máy in siêu tốc">Máy in siêu tốc</option>
+          <option value="Máy in chuyên dụng">Máy in chuyên dụng</option>
+        </select>
+      </p>
+      <p class="s_page">
+        <select id="q_page" name="q_page" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+          <option value="">Số trang / tháng</option>
+          <option value="adidas">Adidas</option>
+          <option value="aigner-parfums">Aigner Parfums</option>
+          <option value="anna-sui">Anna Sui</option>
+          <option value="armand-basi">Armand Basi</option>
+          <option value="azzaro">Azzaro</option>
+          <option value="balenciaga">Balenciaga</option>
+          <option value="banana-republic">Banana Republic</option>
+        </select>
+      </p>
+      <p class="s_user">
+        <select id="q_user" name="q_user" onchange="document.location.href= baseUrl + '/search/'+this.value">
+          <option value="">Số người sử dụng</option>
+          <option value="1">Dưới 300.000</option>
+          <option value="300000">300.000 - 600.000</option>
+          <option value="600000">600.000 - 900.000</option>
+          <option value="900000">Trên 900.000</option>
+        </select>
+      </p>
+      <p class="s_layout">
+        <select id="size_p" name="size_p" onchange="document.location.href= baseUrl + '/search/'+this.value">
+          <option value="">Khổ giấy tối đa</option>
+          <option value="1">Dưới 300.000</option>
+          <option value="300000">300.000 - 600.000</option>
+          <option value="600000">600.000 - 900.000</option>
+          <option value="900000">Trên 900.000</option>
+        </select>
+      </p>
+      <p class="other_function">
+        <input type="checkbox" name="function_Fax" />
+        Thêm tính năng FAX</p>
+      <p class="other_function">
+        <input type="checkbox" name="function_Print">
+        Thêm tính năng Print </p>
+      <p class="sm_button">
+        <input type="submit" value="Tìm kiếm" name="filter" />
+      </p>
+    </div>
+    <div class="pro_wow">
+      <!--Popular Products-->
+      <div class="box">
+        <div class="box_Tab_index">Sản phẩm nổi bật</div>
+        <div class="product_row">
+          <ul>
+            <li>
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /><span class="status_p"></span></a></div>
+                <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Sản phẩm Aficio™MP 5002</a></h2>
+                <p class="short_des">Copy speed 50 ppm</p>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /><span class="status_p"></span></a></div>
+                <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                <p class="short_des">Copy speed 50 ppm</p>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <div class="img_product"><a href="#"><img src="Images/product_02.jpg" width="260" height="260" alt="" /><span class="status_p"></span></a></div>
+                <h2 class="name_cate"><a href="" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                <p class="short_des">Copy speed 50 ppm</p>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /><span class="status_p"></span></a></div>
+                <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                <p class="short_des">Copy speed 50 ppm</p>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <div class="img_product"><a href="#"><img src="Images/product_02.jpg" width="260" height="260" alt="" /><span class="status_p"></span></a></div>
+                <h2 class="name_cate"><a href="" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                <p class="short_des">Copy speed 50 ppm</p>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /><span class="status_p"></span></a></div>
+                <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                <p class="short_des">Copy speed 50 ppm</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Popular Products-->
+      <!--Services-->
+      <div class="box">
+        <div class="box_Tab_index">Dịch vụ</div>
+        <ul id="vertical_menu">
+          <li><a href="#">Dịch vụ hậu mãi</a></li>
+          <li><a href="#">Qui trình bảo dưỡng</a></li>
+          <li><a href="#">Tại sao phải bảo dưỡng?</a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Services-->
+      <!--Solution Office-->
+      <div class="box">
+        <div class="box_Tab_index">Tư vấn giải pháp văn phòng</div>
+        <p class="ct_solution"><a href=""><img src="Images/hmh_solution.jpg" alt="" width="415" /></a></p>
+        <div class="clearfix"></div>
+      </div>
+      <!--End Solution Office-->
+    </div>
+    <div class="clearfix"></div>
+    <!-- back to top -->
+    <div id="divtop" class="contentTotop">
+      <div class="contentTextTotop">Về đầu trang</div>
+      <div class="arrow-up"></div>
+    </div>
+  </div>
+  <!--End Main-->
+  <div class="footer">
+    <div class="footer_inner">
+      <p>Liên hệ mua hàng: </p>
+      <p><strong>0838 45 88 69</strong> hoặc <strong>090 334 98 60</strong> gặp TÚ</p>
+      <p><a href="">Hướng dẫn mua hàng</a></p>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!--End Page-->
+</body>
+</html>

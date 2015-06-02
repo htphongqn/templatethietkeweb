@@ -1,0 +1,1176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Siêu Thanh</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#fade_01').cycle({timeout:	   2000});
+	$('#fade_02').cycle({timeout:	   3000});
+	$('#fade_03').cycle({timeout:	   4000});
+	});
+
+</script>
+<!--Main Menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide Carousel-->
+<link rel="stylesheet" type="text/css" href="Styles/skin.css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {    
+	jQuery('#mycarousel_products').jcarousel({
+        vertical: true,
+		auto: 2,
+		animation: 1500,
+        scroll: 1,
+		wrap: 'circular',
+    });
+jQuery('#mycarousel_thesameP').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+		animation: 1500,
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+<!-- Tab -->
+<link rel="stylesheet" type="text/css" href="Styles/tab.css" />
+<!-- javascript -->
+<script type="text/javascript" src="Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	
+		$(function() {
+			
+			var indicator = $('#indicator'),
+					indicatorHalfWidth = indicator.width()/2,
+					lis = $('#tabs_detail').children('li');					
+
+			$("#tabs_detail").tabs("#tabs_dtcontent .section", {
+				effect: 'fade',
+				fadeOutSpeed: 0,
+				fadeInSpeed: 1000,
+				onBeforeClick: function(event, index) {
+					var li = lis.eq(index),
+					    newPos = li.position().left + (li.width()/2) - indicatorHalfWidth;
+					indicator.stop(true).animate({ left: newPos }, 600, 'easeInOutExpo');
+				}
+			});	
+			
+
+		});
+
+	</script>
+<!-- Include the Etalage CSS -->
+<link rel="stylesheet" href="Styles/etalage.css">
+<!-- Include the Etalage plugin: -->
+<script src="Scripts/jquery.etalage.min.js"></script>
+<!-- Invoke the Etalage plugin -->
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 400,
+					thumb_image_height: 335,
+					source_image_width: 750,
+					source_image_height: 586,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});				
+
+				// This is for the dropdown list example:
+				$('.dropdownlist').change(function(){
+					etalage_show( $(this).find('option:selected').attr('class') );
+				});
+
+			});
+		</script>
+</head>
+<body id="bd" style="background: url(Images/grey_Bg.gif) 0 0 repeat">
+<div id="wrapper">
+  <div class="page_inner">
+    <!--#begin Header-->
+    <div class="header"> <a href="index.html"><img src="Images/name_Company.png" alt="" id="name_company" /></a>
+      <p class="language"> <a href="" class="vn_lang"></a> <a href="" class="en_lang"></a></p>
+      <p class="logo_R"><img src="Images/logo_Ricoh.png" alt="" /></p>
+      <div class="clearfix"></div>
+    </div>
+    <!--#end Header-->
+    <!--Main Menu-->
+    <div id="smoothmenu1" class="ddsmoothmenu">
+      <ul>
+        <li class="active"><a href="index.html">Trang chủ</a></li>
+        <li><a href="list_news.html">Giới thiệu</a>
+          <ul>
+            <li><a href="#">Thông điệp</a></li>
+            <li><a href="#">Trách nhiệm xã hội</a></li>
+            <li><a href="#">Thành tựu</a></li>
+            <li><a href="#">Chiến lược</a></li>
+            <li><a href="#">Lịch sử và sự kiện</a></li>
+            <li><a href="#">Văn hóa doanh nghiệp</a></li>
+            <li><a href="#">Tài chính</a></li>
+            <li><a href="#">Nhân sự</a></li>
+            <li><a href="#">Lãnh đạo</a></li>
+            <li><a href="#">Sơ đồ tổ chức</a></li>
+            <li><a href="#">Công ty thành viên</a></li>
+            <li><a href="#">Khách hàng</a></li>
+            <li><a href="#">Đối tác</a></li>
+          </ul>
+        </li>
+        <li><a href="list_news.html">Sitemap</a>
+          <ul>
+            <li><a href="#">Máy Ricoh</a></li>
+            <li><a href="#">Xe Ô tô</a></li>
+          </ul>
+        </li>
+        <li><a href="list_news.html">Tư vấn</a>
+          <ul>
+            <li><a href="#">Tin tức & sự kiện</a></li>
+            <li><a href="#">Thông cáo báo chí</a></li>
+            <li><a href="#">Điểm báo</a></li>
+          </ul>
+        </li>
+        <li><a href="list_news.html">Hỗ trợ khách hàng</a>
+          <ul>
+            <li><a href="#">Tin tức và sự kiện</a></li>
+            <li><a href="#">Thông tin cổ phiếu</a></li>
+            <li><a href="#">Thông tin tài chính</a></li>
+            <li><a href="#">Báo cáo thường niên</a></li>
+            <li><a href="#">Thông tin cho cổ đông</a></li>
+            <li><a href="#">Đại hội đồng cổ đông thường niên</a></li>
+            <li><a href="#">Thông tin doanh nghiệp</a></li>
+            <li><a href="#">Hỏi đáp</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </li>
+        <li><a href="list_news.html">Tuyển dụng</a></li>
+        <li><a href="">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!--End Main Menu-->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left_col-->
+      <div class="left_content">
+        <!--Left Menu-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab_index">Danh mục Sản phẩm</div>
+            <ul id="vertical_menu">
+              <li class="active"><a href="list_products.html">Máy photocopy đa năng</a></li>
+              <li><a href="#">Máy FAX</a> </li>
+              <li><a href="#">Máy sao chụp khổ rộng</a></li>
+              <li><a href="#">Máy in siêu tốc</a></li>
+              <li><a href="#">Máy in chuyên dụng</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Left Menu-->
+        <!-- Search Tool -->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab_index">Tìm kiếm sản phẩm</div>
+            <div id="search_filter">
+              <input type="text" value="Từ khóa" name="keyword" class="inputbox" style="width: 228px; margin: 5px 0" />
+              <div class="dropdown">
+                <select id="categories" name="categories" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+                  <option value="">Danh mục sản phẩm</option>
+                  <option value="Máy photocopy đa năng">Máy photocopy đa năng</option>
+                  <option value="Máy FAX">Máy FAX</option>
+                  <option value="Máy sao chụp khổ rộng">Máy sao chụp khổ rộng</option>
+                  <option value="Máy in siêu tốc">Máy in siêu tốc</option>
+                  <option value="Máy in chuyên dụng">Máy in chuyên dụng</option>
+                </select>
+              </div>
+              <div class="dropdown">
+                <select id="q_page" name="q_page" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+                  <option value="">Số trang / tháng</option>
+                  <option value="adidas">Adidas</option>
+                  <option value="aigner-parfums">Aigner Parfums</option>
+                  <option value="anna-sui">Anna Sui</option>
+                  <option value="armand-basi">Armand Basi</option>
+                  <option value="azzaro">Azzaro</option>
+                  <option value="balenciaga">Balenciaga</option>
+                  <option value="banana-republic">Banana Republic</option>
+                </select>
+              </div>
+              <div class="dropdown">
+                <select id="q_user" name="q_user" onchange="document.location.href= baseUrl + '/search/'+this.value">
+                  <option value="">Số người sử dụng</option>
+                  <option value="1">Dưới 300.000</option>
+                  <option value="300000">300.000 - 600.000</option>
+                  <option value="600000">600.000 - 900.000</option>
+                  <option value="900000">Trên 900.000</option>
+                </select>
+              </div>
+              <div class="dropdown">
+                <select id="size_p" name="size_p" onchange="document.location.href= baseUrl + '/search/'+this.value">
+                  <option value="">Khổ giấy tối đa</option>
+                  <option value="1">Dưới 300.000</option>
+                  <option value="300000">300.000 - 600.000</option>
+                  <option value="600000">600.000 - 900.000</option>
+                  <option value="900000">Trên 900.000</option>
+                </select>
+              </div>
+              <p>
+                <input type="checkbox" name="function_Fax" />
+                Thêm tính năng FAX</p>
+              <p>
+                <input type="checkbox" name="function_Print">
+                Thêm tính năng Print </p>
+              <div class="sm_button">
+                <input type="submit" value="Tìm kiếm" name="filter" />
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- End Search Tool -->
+        <!-- Ads -->
+        <div class="ads"><a href=""><img src="Images/solution.png" alt="" width="270" /></a><a href=""><img src="Images/agents.png" alt="" width="270" /></a> <a href=""><img src="Images/members.png" alt="" width="270" /></a>
+          <div class="clearfix"></div>
+        </div>
+        <!-- End Ads -->
+        <!-- More Info -->
+        <div class="box">
+          <div class="box_content">
+            <p class="more_info" id="get_email">
+              <input type="text" size="40" value="Đăng ký nhận bản tin" id="pass" name="email" class="inputbox" style="width: 228px" />
+              <a href="" class="send_button"></a></p>
+            <p class="more_info" id="link_web">
+              <select name="link_web" class="type_option">
+                <option value="0" selected="selected">Liên kết web</option>
+                <option value="1">Đẳng Cấp Việt</option>
+                <option value="2">Esell.vn</option>
+              </select>
+            </p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- End More Info -->
+        <!-- News Products-->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab_index">Sản phẩm mới</div>
+            <div id="slider_products">
+              <ul id="mycarousel_products" class="jcarousel-skin-tango">
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="248" height="248" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="248" height="248" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="248" height="248" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="248" height="248" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="248" height="248" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="248" height="248" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="248" height="248" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- End News Products -->
+        <div class="clearfix"></div>
+      </div>
+      <!--End Left_col-->
+      <!--Right_col-->
+      <div class="main_content">
+        <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_products.html">Tên danh mục sản phẩm</a></div>
+        <!--Detail Products-->
+        <div class="box">
+          <div class="box_content">
+            <div class="product_slide">
+              <ul id="etalage">
+                <li> <img class="etalage_thumb_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid860_227.jpg" /> <img class="etalage_source_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid860_227.jpg" title="" /></li>
+                <li> <img class="etalage_thumb_image" src="http://www.sieuthanhricoh.com.vn/uploads/MP2001L_221.jpg" /> <img class="etalage_source_image" src="http://www.sieuthanhricoh.com.vn/uploads/MP2001L_221.jpg" title="" /> </li>
+                <li> <img class="etalage_thumb_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid771_222.jpg" /> <img class="etalage_source_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid771_222.jpg" /> </li>
+                <li> <img class="etalage_thumb_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid860_227.jpg" /> <img class="etalage_source_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid860_227.jpg" title="" /></li>
+                <li> <img class="etalage_thumb_image" src="http://www.sieuthanhricoh.com.vn/uploads/MP2001L_221.jpg" /> <img class="etalage_source_image" src="http://www.sieuthanhricoh.com.vn/uploads/MP2001L_221.jpg" title="" /> </li>
+                <li> <img class="etalage_thumb_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid771_222.jpg" /> <img class="etalage_source_image" src="http://www.sieuthanhricoh.com.vn/uploads/pid771_222.jpg" /> </li>
+                <button onclick="etalage_previous()" class="etalage_previous"></button>
+                <button onclick="etalage_next()" class="etalage_next"></button>
+              </ul>
+            </div>
+            <div class="dt_infop">
+              <h1 class="h1Title">Aficio™MP 2001<span class="status_p"></span></h1>
+              <div class="short_des_dt">
+                <p>- Máy photocopy laser trắng đen đã qua sử dụng</p>
+                <p>- Bộ tự động nạp và đảo 2 mặt bản gốc (ARDF)</p>
+                <p>- Bộ tự động đảo mặt bản sao (Duplex)</p>
+                <p>- Khổ giấy sao chụp tối đa : A3</p>
+                <p>- Tốc độ sao chụp : 65 bản/phút</p>
+                <p>- Khay giấy vào : 2 khay x 500 tờ, khay đôi 2 x 1.250 tờ</p>
+                <p>- Khay giấy tay : 100 tờ</p>
+                <p>- Thu Nhỏ / Phóng to : 25% – 400%, tăng giảm từng 1%</p>
+                <p>- Độ phân giải : 2.400 x 600 dpi</p>
+                <p>- Sao chụp liên tục : 9.999 bản</p>
+                <p>- Thời gian khởi động: 130 giây</p>
+                <p>- Dung lượng bộ nhớ : RAM 1 GB + HDD 60 GB</p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--Tab Products 01-->
+        <div class="box">
+          <div class="nav">
+            <ul id="tabs_detail">
+              <li><a class="current" href="#" title="Thông tin chi tiết">Thông tin chi tiết</a></li>
+              <li><a href="#" title="Tải Driver">Tải Driver</a></li>
+              <li><a href="#" title="Hướng dẫn sử dụng">Hướng dẫn sử dụng</a></li>
+            </ul>
+          </div>
+          <div id="tabs_dtcontent">
+            <div class="section">
+              <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td height="30px">&nbsp;&nbsp;&nbsp;</td>
+                    <td class="nt_ct"><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:RelyOnVML />
+<o:AllowPNG />
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0" align="left" class="MsoNormalTable" style="width:100%;border-collapse:collapse;mso-yfti-tbllook:1184;
+    mso-table-lspace:9.0pt;margin-left:6.75pt;mso-table-rspace:9.0pt;margin-right:
+    6.75pt;mso-table-anchor-vertical:page;mso-table-anchor-horizontal:page;
+    mso-table-left:-1.0cm;mso-table-top:1.55pt;mso-padding-alt:0cm 0cm 0cm 0cm">
+                        <tbody>
+                          <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.0pt">
+                            <td width="189" rowspan="20" style="width:5.0cm;background:#99FF99;padding:0cm 0cm 0cm 0cm;
+            height:12.0pt"><p align="center" class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;
+            text-align:center;line-height:normal;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><strong><span style="font-size:12.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">CHỨC NĂNG SAO CHỤP</span></strong></p>
+                              <p align="center" class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;
+            text-align:center;line-height:normal;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><strong><span style="font-size:12.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">MP 3053/ MP 3353</span></strong></p></td>
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Phương thức in</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Quét, tạo ảnh bằng tia laser và in bằng tĩnh điện</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:1;height:25.5pt">
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Tốc độ sao chụp</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">30/33 trang/ phút</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:2;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border-top:solid gray 1.0pt;border-left:
+            none;border-bottom:solid gray 1.0pt;border-right:none;mso-border-top-alt:
+            solid gray .5pt;mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;
+            height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Độ phân giải</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">600 x 600 dpi</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:3;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Sao chụp liên tục</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">999 tờ</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:4;height:25.5pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Thời gian khởi động</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">15 giây</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:5;height:25.5pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Tốc độ chụp bản đầu tiên</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">4.2 giây</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:6;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Mức phóng to/ Thu nhỏ</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">25% - 400% ( Tăng giảm từng 1% )</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:7;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Dung lượng bộ nhớ chuẩn</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><strong><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">512 MB </span></strong></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:8;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Khay giấy vào tiêu chuẩn</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">1 khay x 500 tờ, 1 khay x 550 tờ</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:9;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Khay giấy tay</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">100 tờ</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:10;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Khay giấy ra</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">500 tờ</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:11;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Khổ giấy sao chụp</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">A6, A5, A4, A3</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:12;height:12.75pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Định lượng giấy sao chụp</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p class="MsoNormal" style="mso-element:frame;mso-element-frame-hspace:9.0pt;
+            mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;">52-157   gsm</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:13;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Chức năng đảo mặt bản sao</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Có sẵn</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:14;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Màn hình điều khiển</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Cảm ứng 9 inches</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:15;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Cấp hạn mức sử dụng</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Có sẵn</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:16;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Kích thước máy (Ngang x Sâu x Cao)</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">587 x 675 x 710 mm</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:17;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Trọng lượng máy</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">65kg (không có ARDF)</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:18;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Nguồn điện sử dụng</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="mso-element:frame;mso-element-frame-hspace:9.0pt;
+            mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;">220-240V   50-60Hz 7A</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:19;height:39.5pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:39.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Công suất tiêu thụ điện</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:39.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Tối đa 1.6 kW&nbsp;&nbsp; </span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:20;height:12.0pt">
+                            <td width="189" style="width:5.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:12.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">&nbsp;</span></p></td>
+                            <td width="832" colspan="2" style="width:22.0cm;padding:0cm 0cm 0cm 0cm;
+            height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">&nbsp;</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:21;height:25.5pt">
+                            <td width="189" rowspan="7" style="width:5.0cm;background:#99FF99;padding:0cm 0cm 0cm 0cm;
+            height:25.5pt"><p align="center" class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;
+            text-align:center;line-height:normal;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><strong><span style="font-size:12.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">CHỨC NĂNG IN </span></strong></p>
+                              <p align="center" class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;
+            text-align:center;line-height:normal;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><strong><span style="font-size:12.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">(chọn thêm)</span></strong></p></td>
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Tốc độ in liên tục</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">30/33 trang/ phút</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:22;height:27.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:27.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Ngôn ngữ in/ Trình điều khiển</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:27.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">GDI<br style="mso-special-character:line-break">
+                                <br style="mso-special-character:line-break">
+                                </span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:23;height:12.75pt">
+                            <td width="227" style="width:6.0cm;border-top:solid gray 1.0pt;border-left:
+            none;border-bottom:solid gray 1.0pt;border-right:none;mso-border-top-alt:
+            solid gray .5pt;mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;
+            height:12.75pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Độ phân giải (dpi)</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">600 x 600 dpi</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:24;height:12.0pt">
+                            <td width="227" style="width:6.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">In trực tiếp từ USB / SD Card</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Có</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:25;height:12.75pt">
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Cổng kết nối tiêu chuẩn</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p class="MsoNormal" style="margin-right:193.7pt;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;
+            color:black">Ethernet (1000BASE-T*/100BASE-TX/10BASE-T), <br>
+                                USB2.0 TypeA(2 port on back of the machine, 1 port on operational panel),   TypeB, SD Slot on operational panel</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:26;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Giao thức mạng</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="mso-element:frame;mso-element-frame-hspace:9.0pt;
+            mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;
+            color:black">IEEE1284/ECP<br>
+                                Wireless LAN (IEEE802.11a/b/g/n)<br>
+                                Bluetooth</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:27;height:89.25pt">
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:89.25pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Môi trường hỗ trợ</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:89.25pt"><p class="MsoNormal" style="margin-right:193.7pt;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;
+            color:black">Windows XP/Vista/7/Server 2003/Server 2008/Server2008R2<br>
+                                Netware: 6.5*<br>
+                                Unix: Sun Solaris, HP-UX, SCO OpenServer, Red Hat Linux, IBM AIX<br>
+                                Mac OS X v.10.2 or later<br>
+                                SAP R/3, NDPS Gateway, <br>
+                                IBM iSeries, AS/400-using OS/400 Host Print Transform</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:28;height:12.0pt">
+                            <td width="189" style="width:5.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt">&nbsp;</td>
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">&nbsp;</span></p>
+                              <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">&nbsp;</span></p>
+                              <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">&nbsp;</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:12.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">&nbsp;</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:29;height:25.5pt">
+                            <td width="189" rowspan="12" style="width:5.0cm;background:#99FF99;padding:0cm 0cm 0cm 0cm;
+            height:25.5pt"><p align="center" class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;
+            text-align:center;line-height:normal;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><strong><span style="font-size:12.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">CHỨC NĂNG QUÉT ẢNH (chọn thêm)</span></strong></p></td>
+                            <td width="227" style="width:6.0cm;border:none;border-top:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Tốc độ quét ảnh tối đa</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:25.5pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Bản trắng đen + Bản màu 1 mặt 200dpi: 80 bản/ phút</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:30;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border-top:solid gray 1.0pt;border-left:
+            none;border-bottom:solid gray 1.0pt;border-right:none;mso-border-top-alt:
+            solid gray .5pt;mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;
+            height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Độ phân giải</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">600 dpi </span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:31;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Vùng quét ảnh bản gốc</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Tối đa A3 </span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:32;height:12.0pt">
+                            <td width="227" style="width:6.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Định dạng tập tin quét ảnh</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-right:193.7pt;mso-element:frame;mso-element-frame-hspace:
+            9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;">Single   Page <br>
+                                TIFF/JPEG/PDF/PDF-A/High Compression PDF, encryption PDF,OCR*<br>
+                                Multi Page <br>
+                                TIFF/PDF/PDF-A/High Compression PDF, encryption PDF,OCR*</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:33;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border-top:solid gray 1.0pt;border-left:
+            none;border-bottom:solid gray 1.0pt;border-right:none;mso-border-top-alt:
+            solid gray .5pt;mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;
+            height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Trình điều khiển quét ảnh</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Network TWAIN</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:34;height:12.0pt">
+                            <td width="227" style="width:6.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Quét ảnh trực tiếp</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt">&nbsp;</td>
+                          </tr>
+                          <tr style="mso-yfti-irow:35;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border-top:solid #7F7F7F 1.0pt;border-left:
+            none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;mso-border-top-alt:
+            solid #7F7F7F .5pt;mso-border-bottom-alt:solid #7F7F7F .5pt;padding:0cm 0cm 0cm 0cm;
+            height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Số lượng thư mục nhận mỗi lần gửi</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">50</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:36;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;mso-border-top-alt:solid gray .5pt;
+            padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Quét ảnh gửi Email trực tiếp</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Có sẵn</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:37;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border-top:solid #7F7F7F 1.0pt;border-left:
+            none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;mso-border-top-alt:
+            solid #7F7F7F .5pt;mso-border-bottom-alt:solid #7F7F7F .5pt;padding:0cm 0cm 0cm 0cm;
+            height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Số lượng địa chỉ email 1 lần gửi</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="mso-element:frame;mso-element-frame-hspace:9.0pt;
+            mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+            page;mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;">500   (từ HDD)<br>
+                                100 (nhập trực tiếp)<br>
+                                100 (qua LDAP)</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:38;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid #7F7F7F 1.0pt;
+            mso-border-bottom-alt:solid #7F7F7F .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Số lượng địa chỉ email lưu</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">2000</span></p></td>
+                          </tr>
+                          <tr style="mso-yfti-irow:39;height:12.0pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-top-alt:solid gray .5pt;mso-border-top-alt:solid gray .5pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.0pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Truy cập địa chỉ email ngoài</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.0pt">&nbsp;</td>
+                          </tr>
+                          <tr style="mso-yfti-irow:40;height:12.75pt">
+                            <td width="227" style="width:6.0cm;border:none;border-bottom:solid gray 1.0pt;
+            mso-border-bottom-alt:solid gray .5pt;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">Quét, lưu tập tin nhiều trang</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.75pt">&nbsp;</td>
+                          </tr>
+                          <tr style="mso-yfti-irow:41;height:12.75pt">
+                            <td width="189" style="width:5.0cm;padding:0cm 0cm 0cm 0cm;height:12.75pt">&nbsp;</td>
+                            <td width="227" style="width:6.0cm;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+            normal;mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:
+            around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:page;
+            mso-element-left:-28.3pt;mso-element-top:1.55pt;mso-height-rule:exactly"><span style="font-size:10.0pt;font-family:&quot;Arial, Helvetica, sans-serif&quot;,&quot;serif&quot;;mso-fareast-font-family:
+            &quot;Arial, Helvetica, sans-serif&quot;">&nbsp;</span></p></td>
+                            <td width="400" style="width:16.0cm;padding:0cm 0cm 0cm 0cm;height:12.75pt"><p style="margin-bottom:0cm;margin-bottom:.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td height=">&nbsp;&nbsp;&nbsp;</p></td>                            
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                  <tr>
+                    <td valign="top" colspan="3">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="function">
+                <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+                <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="section">
+              <p><img src="Images/floppy.gif" alt="" style="vertical-align: middle" /> <a href="">Tải Driver</a><br>
+              </p>
+              <div class="clearfix"></div>
+            </div>
+            <div class="section">
+              <p>- Máy photocopy laser trắng đen đã qua sử dụng</p>
+              <p>- Bộ tự động nạp và đảo 2 mặt bản gốc (ARDF)</p>
+              <p>- Bộ tự động đảo mặt bản sao (Duplex)</p>
+              <p>- Khổ giấy sao chụp tối đa : A3</p>
+              <p>- Tốc độ sao chụp : 65 bản/phút</p>
+              <p>- Khay giấy vào : 2 khay x 500 tờ, khay đôi 2 x 1.250 tờ</p>
+              <p>- Khay giấy tay : 100 tờ</p>
+              <p>- Thu Nhỏ / Phóng to : 25% – 400%, tăng giảm từng 1%</p>
+              <p>- Độ phân giải : 2.400 x 600 dpi</p>
+              <p>- Sao chụp liên tục : 9.999 bản</p>
+              <p>- Thời gian khởi động: 130 giây</p>
+              <p>- Dung lượng bộ nhớ : RAM 1 GB + HDD 60 GB</p>
+              <p>- Chức năng chia bộ điện tử</p>
+              <p>- Chức năng tiệt kiệm điện năng</p>
+              <p>- Hệ thống tái sử dụng mực thải</p>
+              <p>- Điều khiển chức năng bằng màn hình cảm ứng màu.</p>
+              <p>- Tự động chọn khổ giấy.</p>
+              <p>- Quản lý 1.000 mật khẩu người sử dụng</p>
+              <p>- Kích thước (W x D x H): 710 x 790 x 1.170 mm</p>
+              <p>- Trọng lượng: 210 Kg</p>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--End Tab Products 01-->
+        <!-- Jquery The same Products -->
+        <div class="box">
+          <div class="box_content">
+            <div class="box_Tab_index">Sản phẩm cùng chuyên mục</div>
+            <div id="slider_thesameP">
+              <ul id="mycarousel_thesameP" class="jcarousel-skin-tango">
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+                <li class="item">
+                  <!--Start Product-->
+                  <div class="product">
+                    <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" width="260" height="260" alt="" /></a></div>
+                    <h2 class="name_cate"><a href="detail_products.html" title="Aficio™MP 5002">Aficio™MP 5002 Aficio™MP 5002 Aficio™MP 5002</a></h2>
+                    <p class="short_des">Copy speed 50 ppm</p>
+                  </div>
+                  <!--End Product-->
+                </li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!--End Jquery The same Products-->
+        <!--End Detail Products-->
+      </div>
+      <!--End Right_col-->
+    </div>
+    <!--End Main-->
+    <div class="footer">
+      <div class="page">
+        <div class="info_footer">
+          <p><span style="color: #2d803a; font-weight: 700">CÔNG TY CỔ PHẦN SIÊU THANH</span></p>
+          <p><span style="color: #2d803a">PHÂN PHỐI CHÍNH THỨC SẢN PHẨM RICOH</span>
+          <p>Địa chỉ: A20 Tân Phong, đường Nguyễn Hữu Thọ Q.7, Tp.HCM</p>
+          <p>Điện thoại : (84).08.6262.8888 - Fax: (84).08.6262.5888</p>
+          <p>Email : <a href="mailto:sieuthanh@sieuthanhricoh.com.vn">sieuthanh@sieuthanhricoh.com.vn</a></p>
+          <p>website: <a href="http://www.sieuthanhricoh.com.vn">www.sieuthanhricoh.com.vn</a> - <a href="http://www.ricoh.com.vn">www.ricoh.com.vn</a></p>
+        </div>
+        <div class="menu_footer"><a href="">Liên hệ</a> | <a href="">Điều khoản bảo mật</a> | <a href="">Quy định pháp lý</a> | <a href="">Sơ đồ site</a></div>
+        <div class="copyright">
+          <p>Copyright © 2013 by <strong>st8.vn</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+        </div>
+        <!--Access Status-->
+        <div class="access_status">
+          <p><span>11 990 471</span>Lượt truy cập</p>
+          <p><span>120</span>Hôm nay</p>
+          <p><span>471 </span>Đang truy cập</p>
+        </div>
+        <!--End Access Status-->
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!--End Footer-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

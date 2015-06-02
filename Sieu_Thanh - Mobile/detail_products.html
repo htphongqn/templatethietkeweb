@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sieu Thanh Mobile</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.tgdd.vn/betamobile/Scripts/Base/jquery.placeholder.min.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#fade').after('<div id="nav" class="nav">').cycle({
+        timeout: 30000,
+        pager:  '#nav'
+    });
+	$('#fade_01').cycle({timeout:	   2000});
+	$('#fade_02').cycle({timeout:	   3000});
+	$('#fade_03').cycle({timeout:	   4000});
+	});
+
+</script>
+<script type="text/javascript" src="Scripts/jmobile.common.min.js"></script>
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-918185-25']); _gaq.push(['_setDomainName', '.thegioididong.com']); _gaq.push(['_trackPageview']); _gaq.push(['_setAccount', 'UA-918185-30']); _gaq.push(['_trackPageview']); (function () { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script>
+</head>
+<body>
+<div class="page">
+  <!--#begin Header-->
+  <div class="header">
+    <div class="left"><a href="index.html">
+      <div class="home"></div>
+      </a> </div>
+    <div id="center" class="center"><a href="/">
+      <div class="logo"></div>
+      </a></div>
+    <div class="right">
+      <div onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Mở']);" id="menu_icon" class="menu_icon"></div>
+      <div class="clr"></div>
+      <div id="list_menu" class="index_menu">
+        <div id="btnclose"><a onclick="_gaq.push(['_trackEvent', 'Menu', 'Click', 'Đóng']);" href="javascript:void(0);">
+          <div class="imgmenu"><span class="sprite_close"></span></div>
+          </a></div>
+        <ul id="ulcatmenu" class="clearfix">
+          <li><a href="list_products.html">Máy photocopy đa năng</a></li>
+          <li><a href="#">Máy FAX</a> </li>
+          <li><a href="#">Máy sao chụp khổ rộng</a></li>
+          <li><a href="#">Máy in siêu tốc</a></li>
+          <li><a href="#">Máy in chuyên dụng</a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Search-->
+  <div class="search clearfix">
+    <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa" />
+    <input type="submit" value="Tìm" class="submitSearch" onclick="return CheckValue(document.Search.s);">
+  </div>
+  <!--End Search-->
+  <!-- #Main -->
+  <div class="main clearfix">
+    <div class="sort_option">
+      <p class="s_cate">
+        <select id="categories" name="categories" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+          <option value="">Danh mục sản phẩm</option>
+          <option value="Máy photocopy đa năng">Máy photocopy đa năng</option>
+          <option value="Máy FAX">Máy FAX</option>
+          <option value="Máy sao chụp khổ rộng">Máy sao chụp khổ rộng</option>
+          <option value="Máy in siêu tốc">Máy in siêu tốc</option>
+          <option value="Máy in chuyên dụng">Máy in chuyên dụng</option>
+        </select>
+      </p>
+      <p class="s_page">
+        <select id="q_page" name="q_page" onchange="document.location.href= baseUrl + '/'+this.value+'.html'">
+          <option value="">Số trang / tháng</option>
+          <option value="adidas">Adidas</option>
+          <option value="aigner-parfums">Aigner Parfums</option>
+          <option value="anna-sui">Anna Sui</option>
+          <option value="armand-basi">Armand Basi</option>
+          <option value="azzaro">Azzaro</option>
+          <option value="balenciaga">Balenciaga</option>
+          <option value="banana-republic">Banana Republic</option>
+        </select>
+      </p>
+      <p class="s_user">
+        <select id="q_user" name="q_user" onchange="document.location.href= baseUrl + '/search/'+this.value">
+          <option value="">Số người sử dụng</option>
+          <option value="1">Dưới 300.000</option>
+          <option value="300000">300.000 - 600.000</option>
+          <option value="600000">600.000 - 900.000</option>
+          <option value="900000">Trên 900.000</option>
+        </select>
+      </p>
+      <p class="s_layout">
+        <select id="size_p" name="size_p" onchange="document.location.href= baseUrl + '/search/'+this.value">
+          <option value="">Khổ giấy tối đa</option>
+          <option value="1">Dưới 300.000</option>
+          <option value="300000">300.000 - 600.000</option>
+          <option value="600000">600.000 - 900.000</option>
+          <option value="900000">Trên 900.000</option>
+        </select>
+      </p>
+      <p class="other_function">
+        <input type="checkbox" name="function_Fax" />
+        Thêm tính năng FAX</p>
+      <p class="other_function">
+        <input type="checkbox" name="function_Print">
+        Thêm tính năng Print </p>
+      <p class="sm_button">
+        <input type="submit" value="Tìm kiếm" name="filter" />
+      </p>
+    </div>
+    <div class="pro_wow">
+      <!--Slider banner-->
+      <div class="top_banner">
+        <div id="fade"><a href=""><img src="Images/slider_01.jpg" alt="" width="336" height="230" /></a><a href=""><img src="Images/slider_02.jpg" alt="" width="336" height="230" /></a><a href=""><img src="Images/slider_03.jpg" alt="" width="336" height="230" /></a><a href=""><img src="Images/slider_04.jpg" alt="" width="336" height="230" /></a></div>
+      </div>
+      <!-- End Slider banner -->
+      <div class="clr"></div>
+      <div class="dt_infop">
+        <h1 class="h1Title">Aficio™MP 2001<span class="status_p"></span></h1>
+        <p><img src="Images/floppy.gif" alt="" style="vertical-align: middle" /> <a href="">Tải Driver</a> </p>
+      </div>
+      <!--Detail Info-->
+      <div class="box">
+        <div class="box_Tab_index">Thông tin chi tiết</div>
+        <div class="box_content">
+          <p> Tốc độ sao chụp 45 tờ/phút.</p>
+          <p>• Khổ sao chụp: A3-A6.</p>
+          <p>• Bộ tự động nạp và đảo bản gốc (ARDF).</p>
+          <p>• Bộ tự động đảo 2 mặt (Duplexing).</p>
+          <p>• Thu nhỏ - phóng to: 32% - 400%.</p>
+          <p>• Màn hình tinh thể lỏng ( LCD ).</p>
+          <p>• Chức năng chia bộ tài liệu điện tử.</p>
+          <p>• Chức năng tự động xoay ảnh 90 độ.</p>
+          <p>• Tự động chọn khổ giấy.</p>
+          <p>• Tự động điều chỉnh lượng mực.</p>
+          <p>• Hệ thống tái sử dụng mực thải.</p>
+          • Chức năng tiết kiệm điện năng..
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Detail Info-->
+      <div class="box">
+        <div class="box_Tab_index">Hướng dẫn sử dụng</div>
+        <div class="box_content">
+          <p>- Máy photocopy laser trắng đen đã qua sử dụng</p>
+          <p>- Bộ tự động nạp và đảo 2 mặt bản gốc (ARDF)</p>
+          <p>- Bộ tự động đảo mặt bản sao (Duplex)</p>
+          <p>- Khổ giấy sao chụp tối đa : A3</p>
+          <p>- Tốc độ sao chụp : 65 bản/phút</p>
+          <p>- Khay giấy vào : 2 khay x 500 tờ, khay đôi 2 x 1.250 tờ</p>
+          <p>- Khay giấy tay : 100 tờ</p>
+          <p>- Thu Nhỏ / Phóng to : 25% – 400%, tăng giảm từng 1%</p>
+          <p>- Độ phân giải : 2.400 x 600 dpi</p>
+          <p>- Sao chụp liên tục : 9.999 bản</p>
+          <p>- Thời gian khởi động: 130 giây</p>
+          <p>- Dung lượng bộ nhớ : RAM 1 GB + HDD 60 GB</p>
+          <p>- Chức năng chia bộ điện tử</p>
+          <p>- Chức năng tiệt kiệm điện năng</p>
+          <p>- Hệ thống tái sử dụng mực thải</p>
+          <p>- Điều khiển chức năng bằng màn hình cảm ứng màu.</p>
+          <p>- Tự động chọn khổ giấy.</p>
+          <p>- Quản lý 1.000 mật khẩu người sử dụng</p>
+          <p>- Kích thước (W x D x H): 710 x 790 x 1.170 mm</p>
+          <p>- Trọng lượng: 210 Kg</p>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- back to top -->
+    <div id="divtop" class="contentTotop">
+      <div class="contentTextTotop">Về đầu trang</div>
+      <div class="arrow-up"></div>
+    </div>
+  </div>
+  <!--End Main-->
+  <div class="footer">
+    <div class="footer_inner">
+      <p>Liên hệ mua hàng: </p>
+      <p><strong>0838 45 88 69</strong> hoặc <strong>090 334 98 60</strong> gặp TÚ</p>
+      <p><a href="">Hướng dẫn mua hàng</a></p>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!--End Page-->
+</body>
+</html>

@@ -1,0 +1,150 @@
+/*------------------------------------*\
+    Flaunt JS Navigation
+\*------------------------------------*/
+
+#topnav {
+	position:relative;
+	padding: 5px 0;
+	
+
+ 
+
+
+}
+.nav_list {
+	display: block;
+	text-align:left;
+}
+.nav_item {
+	float:left;
+ *display:inline;
+	zoom:1;
+	position:relative;
+	width: 100%;
+}
+.nav_item a {
+	display:block;
+	color:#3e3e3e;
+	padding:8px 18px;
+	font-size:100%;
+	font-weight:500;
+	border-bottom: 1px solid #b7b7b7
+}
+.nav_item > a { font-weight: 700; color: #1b64a9 }
+.nav_item:last-child > a {
+	border: none
+}
+.nav_item:hover .nav_submenu {
+	display:block;
+}
+/* Navigation submenu */
+.nav_submenu {
+	position:static;
+	width:100%;
+}
+.nav_submenu_item a {
+	display:block;
+	padding-left: 30px;
+	
+}
+.nav_submenu_lv3 .nav_submenu_item a {
+	display:block;
+	padding-left: 50px;
+
+	color: #777777;
+	
+}
+/* Mobile navigation */
+.nav_mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:-42px;
+	right:10px;
+	background: url(../Images/nav.svg) no-repeat right center;
+	background-size:18px;
+	height:40px;
+	width:100%;
+}
+/* Mobile navigation, clickable area for revealing <ul> */
+.nav_click {
+	float: right;
+	display:block;
+	height:30px;
+	width:30px;
+	cursor:pointer;
+	text-align: center
+}
+.nav_click i {
+	display:block;
+	height:20px;
+	width:20px;
+	margin-top: 5px;
+	background: url(../Images/plus.png) no-repeat 0 center;
+	z-index: 100;
+}
+.nav_rotate {
+	/*-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);*/
+	background: url(../Images/subtract.png) no-repeat 0 center !important;
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+#topnav {
+border: none
+}
+ .nav_mobile {
+ display:block;
+}
+ .nav {
+ width:100%;
+ padding:50px 0 0;
+}
+ .nav_item {
+ width:100%;
+ float:none;
+}
+ .nav_mobile_open {
+ border-radius:5px 5px 0 0;
+ -webkit-border-radius:5px 5px 0 0;
+ -moz-border-radius:5px 5px 0 0;
+}
+ .nav_item:hover .nav_submenu {
+ display:none;
+ background: #f2f3f2
+}
+.nav_submenu {
+ display: none;
+}
+.menu_deal {
+	background: #00346a url(../Images/icon.png) 66% 0 no-repeat;
+	color: #FFFFFF;
+	text-transform: uppercase
+}
+.sbm-bge {
+	display: inline;
+	margin-left: 0.3em;
+	margin-top: -5px;
+	background: #ffdad5;
+}
+.sbm-bge > span {
+	background: linear-gradient(to bottom, #E53D2C 0px, #BB0000 100%) repeat scroll 0 0 transparent;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px 2px 2px 2px;
+	color: #FFFFFF;
+	display: inline;
+	font-size: 0.8em;
+	font-weight: bold;
+	line-height: 100%;
+	margin: 0 5px;
+	padding: 3px;
+	position: absolute;
+	text-transform: uppercase;
+}
+.nav_submenu_lv3 { display: none }

@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CTSP - Rexinh.vn</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--#begin Header-->
+  <div class="header">
+    <div class="header_inner">
+      <div class="logo"><a href="index.html"><img src="Images/logo.png" alt="" width="200" /></a> <span class="arrow_right"></span></div>
+      <div class="header_right">
+        <div class="location">
+          <div class="title_location">TP. Hồ Chí Minh</div>
+          <span class="arrow_down"></span>
+          <ul class="list_city">
+            <li> <a href="/ho-chi-minh">Hồ Chí Minh</a> </li>
+            <li> <a href="/ha-noi">Hà Nội</a> </li>
+            <li> <a href="/ba-ria-vung-tau"><span>Bà Rịa - Vũng Tàu</a> </li>
+            <li> <a href="/binh-duong"><span>Bình Dương</a> </li>
+            <li> <a href="/can-tho"><span>Cần Thơ</a> </li>
+            <li> <a href="/da-nang"><span>Đà Nẵng</a> </li>
+            <li> <a href="/bien-hoa"><span>Biên Hòa</a> </li>
+            <li> <a href="/nha-trang"><span>Nha Trang</a> </li>
+          </ul>
+        </div>
+        <div class="search_tool">
+          <div class="all_cate">Tất cả<span class="arrow_down1"></span>
+            <ul class="menu_hover">
+              <li class=""><a href="/thoi-trang-quan-ao-gia-re_c56.html">Thời trang</a></li>
+              <li class=""><a href="/phu-kien-thoi-trang_c69.html">Phụ kiện thời trang</a></li>
+              <li class=""><a href="/nha-hang-quan-an-gia-re_c53.html">Nhà hàng - Ẩm thực</a></li>
+              <li class=""><a href="/lam-dep-da_c54.html">Sức khỏe - Làm đẹp</a></li>
+              <li class=""><a href="/du-lich-khach-san-resort-gia-re_c52.html">Du lịch - Khách sạn</a></li>
+              <li class=""><a href="/giai-tri-dao-tao_c55.html">Giải trí - Đào tạo</a></li>
+              <li class=""><a href="/gia-dung-noi-that_c57.html">Gia dụng - Nội thất</a></li>
+              <li class=""><a href="/dien-tu-cong-nghe_c59.html">Điện tử - Công nghệ</a></li>
+              <li class="end"><a href="/cham-soc-me-va-be_c68.html">Mẹ và Bé</a></li>
+            </ul>
+          </div>
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+          <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+        </div>
+        <a href="">
+        <div class="cart"><span>2</span></div>
+        </a>
+        <script type="text/javascript">    
+    $(function () {
+        $('.bubbleInfo').each(function () {
+            var distance = 10;
+            var time = 50;
+            var hideDelay = 50;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.popup_login', this).css('opacity', 0);
+
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 45,
+                        left: 100,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 0
+                    }, time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });
+    });    
+    </script>
+        <div class="bubbleInfo"> <a title="Đăng nhập" class="trigger login" href="">Đăng nhập</a> <a title="Đăng ký" href="" class="register">Đăng ký</a>
+          <div id="dpop" class="popup_login">
+            <div class="input_form">
+              <input type="text" onblur="FormatValidateCharBlur('txtusername')" maxlength="50" name="txtusername" id="txtusername" placeholder="Nhập Email hoặc sđt" class="input identity">
+            </div>
+            <div class="input_form">
+              <input type="password" onblur="ValidatePassword()" placeholder="Nhập mật khẩu" name="txtpassword" id="txtpassword" class="input password">
+            </div>
+            <div class="note_wrapper clearfix">
+              <div class="lost_password"><a class="link_acount" href="">Quên mật khẩu</a></div>
+              <div class="remember_password">
+                <input type="checkbox" checked="checked" name="lost_password" id="lost_password" class="checkbox lost_password">
+                <label for="lost_password">Ghi nhớ</label>
+              </div>
+            </div>
+            <div class="input_form">
+              <input type="submit" value="ĐĂNG NHẬP" onclick="ValidateBeforeSubmit(); return false;" name="submit" id="submit" class="button">
+            </div>
+            <div class="note_wrapper">Nếu bạn chưa có tài khoản: <a rel="nofollow" onclick="SetLinkRegister();" href="" class="link_acount">Đăng ký ngay</a></div>
+            <div class="note_wrapper menu_account">
+              <ul>
+                <li><a href="">Hồ sơ cá nhân</a></li>
+                <li><a href="">Thông tin đơn hàng</a></li>
+                <li><a href="">Đăng xuất</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Header Right-->
+    </div>
+  </div>
+  <!--#end Header-->
+  <div class="page">
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <div class="ads"><img src="Images/ads_01.jpg" alt="" /></div>
+        <!--Main Menu-->
+        <div class="box">
+          <div class="show_menu">
+            <div class="list_cate"><span class="title_cate">Ngành hàng</span><span class="arrow_down"></span></div>
+            <ul class="ulcatmenu clearfix">
+              <li class="fashion"><a href="" rel="THỜI TRANG" class="active">THỜI TRANG</a></li>
+              <li class="accessories"><a href="" rel="PHỤ KIỆN">PHỤ KIỆN</a></li>
+              <li class="restaurant"><a href="" rel="NHÀ HÀNG">NHÀ HÀNG</a></li>
+              <li class="beauty"><a href="" rel="LÀM ĐẸP">LÀM ĐẸP</a></li>
+              <li class="hotel"><a href="" rel="KHÁCH SẠN">KHÁCH SẠN</a></li>
+              <li class="education"><a href="" rel="ĐÀO TẠO">ĐÀO TẠO</a></li>
+              <li class="utensils"><a href="" rel="GIA DỤNG">GIA DỤNG</a></li>
+              <li class="technology"><a href="" rel="CÔNG NGHỆ">CÔNG NGHỆ</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--End Main Menu-->
+        <div class="box">
+          <div class="box_Tab">Sản phẩm mới</div>
+          <div class="box_content_center">
+            <div class="new_products">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail.html"><img src="Images/product_00.jpg" alt="" width="230" height="285" /></a></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail.html">Áo ngực dây lưng trong...</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span></div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail.html"><img src="Images/product_00.jpg" alt="" width="230" height="285" /></a></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail.html">Áo đầm</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span></div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail.html"><img src="Images/product_00.jpg" alt="" width="230" height="285" /></a></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail.html">Áo đầm</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span></div>
+                </div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <div class="path"><a href="index.html">Trang chủ</a> > <a href="">Chuyên mục</a> > Tên sản phẩm</div>
+        <!--Slide images & short info product-->
+        <div class="box">
+          <!-- Include the Etalage CSS -->
+          <link rel="stylesheet" href="Styles/etalage.css">
+          <!-- Include the Etalage plugin: -->
+          <script src="Scripts/jquery.etalage.min.js"></script>
+          <!-- Invoke the Etalage plugin -->
+          <script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 340,
+					thumb_image_height: 340,
+					source_image_width: 900,
+					source_image_height: 1200,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});				
+
+				// This is for the dropdown list example:
+				$('.dropdownlist').change(function(){
+					etalage_show( $(this).find('option:selected').attr('class') );
+				});
+
+			});
+		</script>
+          <div class="product_slide">
+            <ul id="etalage">
+              <li> <img class="etalage_thumb_image" src="http://friquemag.net/demos/etalage/demo_files/images/image1_thumb.jpg" /> <img class="etalage_source_image" src="http://friquemag.net/demos/etalage/demo_files/images/image1_large.jpg" title="" /></li>
+              <li> <img class="etalage_thumb_image" src="http://friquemag.net/demos/etalage/demo_files/images/image2_thumb.jpg" /> <img class="etalage_source_image" src="http://friquemag.net/demos/etalage/demo_files/images/image2_large.jpg" title="" /> </li>
+              <li> <img class="etalage_thumb_image" src="http://friquemag.net/demos/etalage/demo_files/images/image3_thumb.jpg" /> <img class="etalage_source_image" src="http://friquemag.net/demos/etalage/demo_files/images/image3_large.jpg" /> </li>
+              <li> <img class="etalage_thumb_image" src="http://friquemag.net/demos/etalage/demo_files/images/image4_thumb.jpg" /><img class="etalage_source_image" src="http://friquemag.net/demos/etalage/demo_files/images/image4_large.jpg" /></li>
+              <div onclick="etalage_previous()" class="etalage_previous"></div>
+              <div onclick="etalage_next()" class="etalage_next"></div>
+            </ul>
+          </div>
+          <div class="info_detail">
+            <div class="deal_detail_Co">
+              <div class="detail_price c1"> <span class="detail_trueprice">260.000đ</span> <br>
+                <span class="detail_price"> <span id="price">169.000đ</span>
+                <meta content="VND" itemprop="priceCurrency">
+                </span> </div>
+              <div class="likeface c2"><img src="Images/facebook.jpg" alt="" /></div>
+              <div class="clearfix"></div>
+              <div class="panel_info">
+                <p class="panel1"> TIẾT KIỆM <br>
+                  <span id="percent" class="percent">35%</span> </p>
+                <p class="panel2"> SỐ NGƯỜI CÙNG MUA <br>
+                  <span>585</span> </p>
+                <p style="display:none; " class="panel3"> THỜI GIAN CÒN LẠI <br>
+                  <span id="countdown"> không giới hạn </span> </p>
+              </div>
+              <span class="text_note">Chọn kích cỡ</span>
+              <p>
+                <input type="radio" name="size" value="S">
+                S
+                <input type="radio" name="size" value="M">
+                M
+                <input type="radio" name="size" value="L">
+                L
+                <input type="radio" name="size" value="XM">
+                XM
+                <input type="radio" name="size" value="XL">
+                XL
+                <input type="radio" name="size" value="XX">
+                XX</p>
+              <span class="text_note">Chọn số lượng</span>
+              <table cellspacing="0" cellpadding="0" border="0" class="shopping_cart_detail">
+                <tbody>
+                  <tr class="active">
+                    <td width="51" valign="top" align="right" class="left_col"><a href="javascript:void(0);" onclick="ChangeSKU(this, '0635156327334166216.jpg|1635156327335414218.jpg|2635156327336506220.jpg|3635156327337910223.jpg|4635156327339158225.jpg|5635156327340562227.jpg|6635156327342122230.jpg|0635156336271265913.jpg|1635156336272513915.jpg',260000, 169000)"><img width="45" height="45" src="http://resources.cungmua.com/SKU/Small/31235.jpg" alt=""></a></td>
+                    <td width="195" valign="top" class="name_book"><a href="javascript:void(0);" onclick="ChangeSKU(this, '0635156327334166216.jpg|1635156327335414218.jpg|2635156327336506220.jpg|3635156327337910223.jpg|4635156327339158225.jpg|5635156327340562227.jpg|6635156327342122230.jpg|0635156336271265913.jpg|1635156336272513915.jpg',260000, 169000)">Combo đồ cho mẹ và bé màu đen</a></td>
+                    <td width="86" valign="top" align="right" class="bg_price"><span class="book_true_price">260.000đ</span><br>
+                      <span class="book_price">169.000đ</span></td>
+                    <td width="48" valign="top" align="right"><select onchange="OnSKUQuantityChange('28020_quantity','28020','260000','169000')" class="select_number" id="28020_quantity">
+                        <option value="0" selected="selected">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td width="51" valign="top" align="right" class="left_col"><span class="arrow_right1"></span><a href="javascript:void(0);" onclick="ChangeSKU(this, '0635156327334166216.jpg|1635156327335414218.jpg|2635156327336506220.jpg|3635156327337910223.jpg|4635156327339158225.jpg|5635156327340562227.jpg|6635156327342122230.jpg|0635156336271265913.jpg|1635156336272513915.jpg',260000, 169000)"><img width="45" height="45" src="http://resources.cungmua.com/SKU/Small/31233.jpg" alt=""></a></td>
+                    <td width="195" valign="top" class="name_book"><a href="javascript:void(0);" onclick="ChangeSKU(this, '0635156327334166216.jpg|1635156327335414218.jpg|2635156327336506220.jpg|3635156327337910223.jpg|4635156327339158225.jpg|5635156327340562227.jpg|6635156327342122230.jpg|0635156336271265913.jpg|1635156336272513915.jpg',260000, 169000)">Combo đồ cho mẹ và bé màu trắng</a></td>
+                    <td width="86" valign="top" align="right" class="bg_price"><span class="book_true_price">260.000đ</span><br>
+                      <span class="book_price">169.000đ</span></td>
+                    <td width="48" valign="top" align="right"><select onchange="OnSKUQuantityChange('28020_quantity','28020','260000','169000')" class="select_number" id="28020_quantity">
+                        <option value="0" selected="selected">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td width="51" valign="top" align="right" class="left_col"><span class="arrow_right1"></span><a href="javascript:void(0);" onclick="ChangeSKU(this, '0635156327334166216.jpg|1635156327335414218.jpg|2635156327336506220.jpg|3635156327337910223.jpg|4635156327339158225.jpg|5635156327340562227.jpg|6635156327342122230.jpg|0635156336271265913.jpg|1635156336272513915.jpg',260000, 169000)"><img width="45" height="45" src="http://resources.cungmua.com/SKU/Small/31234.jpg" alt=""></a></td>
+                    <td width="195" valign="top" class="name_book"><a href="javascript:void(0);" onclick="ChangeSKU(this, '0635156327334166216.jpg|1635156327335414218.jpg|2635156327336506220.jpg|3635156327337910223.jpg|4635156327339158225.jpg|5635156327340562227.jpg|6635156327342122230.jpg|0635156336271265913.jpg|1635156336272513915.jpg',260000, 169000)">Combo đồ cho mẹ và bé màu xanh</a></td>
+                    <td width="86" valign="top" align="right" class="bg_price"><span class="book_true_price">260.000đ</span><br>
+                      <span class="book_price">169.000đ</span><br />
+                      <span class="sold_out">Cháy hàng</span></td>
+                    <td width="48" valign="top" align="right"><select onchange="OnSKUQuantityChange('28020_quantity','28020','260000','169000')" class="select_number" id="28020_quantity">
+                        <option value="0" selected="selected">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="detail_sum">
+                <div class="detail_sum_L">
+                  <p>Hỗ trợ đặt hàng</p>
+                  <p class="hotline"> 1900 6637</p>
+                  <p class="code_p">Mã SP: 14418</p>
+                </div>
+                <div class="detail_sum_R">
+                  <p><span class="sum_L">Thành tiền:</span><span class="sum_R" id="cartPriceByQuantity">169.000đ</span></p>
+                  <p><span class="sum_L"><strong>Cần thanh toán</strong>:</span><span class="sum_R book_price" id="cartTotalPrice">507.000đ</span></p>
+                </div>
+                <p class="detail_btn">
+                  <input type="submit" value="" class="btn_buy">
+                </p>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!--End Slide-->
+        <div class="box" id="detail_col_text">
+          <div class="col_text c1">
+            <h3 class="detail_col_tille"> Đặc điểm nổi bật </h3>
+            <div class="detail_col_content"> Thiết kế sang trọng với đầm cúp ngực và chân váy xòe tiểu thư quyến rũ.<br>
+              Chất liệu voan mềm mại và 2 lớp lót phối hợp giữa tím và hồng tạo nét độc đáo và phá cách cho trang phục.<br>
+              Phần ngực được lót tinh tế tạo form cân đối và đầy quyến rũ.<br>
+              Trang phục được thêm phần duyên dáng với nơ ngang eo xinh xắn, thời trang.<br>
+              Chân váy xòe rộng đem lại sự thoải mái dễ chịu và cho body  thêm cân đối, trẻ trung.<br>
+              Sau lưng với phần thun co giãn ôm sát body và thích hợp với mọi vóc dáng.<br>
+              Màu: hồng tím.<br>
+              Dài: 73 cm, ngực: 80-88cm, eo: 60-74cm, mông: 85-95cm, thích hợp cho bạn nữ từ 60kg trở xuống. </div>
+          </div>
+          <div class="col_text c2">
+            <h3 class="detail_col_tille"> Điều kiện sử dụng </h3>
+            <div class="detail_col_content"> - Khách hàng có thể xem và nhận sản phẩm tại Văn Phòng Rẻ mỗi ngày &ndash; 824/28 A-B Sư Vạn Hạnh, P.12. Q.10.HCM<br>
+              - Số điện Thoại: 1900 8675 &ndash; 08.66.835.228<br>
+              <b> - Khách hàng đến nhận hàng trực tiếp vui lòng gọi điện đặt hàng trước ( trong giờ hành chính) để đảm bảo nhận được sản phẩm còn hàng. </b><br>
+              - Áp dụng cho sản phẩm Đầm dạ tiệc Ashley<br>
+              - KH vui lòng kiểm tra kĩ sản phẩm trước khi nhận (RMN không chịu trách nhiệm khi bất cứ sai sót nào khi đã giao SP)<br>
+              - Một khách hàng mua được nhiều sản phẩm.<br>
+              - Khách hàng mua sỉ vui lòng liên hệ: 091.238.9138. </div>
+          </div>
+        </div>
+        <!--Tab-->
+        <link rel="stylesheet" href="Styles/jquery-ui.css" />
+        <script src="Scripts/jquery-ui.js"></script>
+        <script>
+$(function() {
+$( "#tabs_detail ul" ).tabs({ fxFade: true, fxSpeed: 'fast' });
+});
+</script>
+        <div id="tabs_detail" class="box">
+          <ul>
+            <li class="ui-tabs-selected"><a href="#tabs-1" title="Thông tin giới thiệu">Thông tin giới thiệu</a></li>
+            <li><a href="#tabs-2" title="Địa chỉ áp dụng">Địa chỉ áp dụng</a></li>
+            <li><a href="#tabs-3" title="Bình Luận">Bình Luận</a></li>
+          </ul>
+          <div id="tabs-1" class="ui-tabs-container">
+            <p>Là phái đẹp ai cũng muốn mình luôn rạng rỡ và nổi bật đầy cá tính trước   đám đông, đặc biệt là khi dự tiêc. Đầm Ashley sẽ cho bạn sự dịu dàng nữ   tính và hết sức sang trọng với thiết kế đầm cúp ngực và chân váy xòe   tiểu thư quyến rũ.<br />
+              <br />
+              <img src="http://www.remoingay.com//uploads/news/T2f9KEXkJXXXXXXXXX_85356923_20131002091034_39717.jpg" title="Đầm dạ tiệc Ashley" alt="Đầm dạ tiệc Ashley" border="0" /><br />
+              <br />
+              Chất liệu voan mềm mại và 2 lớp lót phối hợp giữa tím và hồng tạo nét độc đáo và phá cách cho trang phục.<br />
+              <br />
+              <img src="http://www.remoingay.com//uploads/news/T1wi9_20131002091045_10533.jpg" title="Đầm dạ tiệc Ashley" alt="Đầm dạ tiệc Ashley" border="0" /><br />
+              <br />
+              Phần ngực được lót tinh tế tạo form cân đối và đầy quyến rũ. Trang phục   được thêm phần duyên dáng với nơ ngang eo xinh xắn, thời trang.<br />
+              <br />
+              <img src="http://www.remoingay.com//uploads/news/T23SyEXopXXXXXXXXX_85356923_20131002091057_56994.jpg" title="Đầm dạ tiệc Ashley" alt="Đầm dạ tiệc Ashley" border="0" /><br />
+              <br />
+              Chân váy xòe rộng đem lại sự thoải mái dễ chịu và cho body  thêm cân   đối, trẻ trung. Sau lưng với phần thun co giãn ôm sát body và thích hợp   với mọi vóc dáng.<br />
+              <br />
+              <img src="http://www.remoingay.com//uploads/news/T2WmmEXctaXXXXXXXX_85356923_20131002091010_31185.jpg" title="Đầm dạ tiệc Ashley" alt="Đầm dạ tiệc Ashley" border="0" /></p>
+            <div class="clearfix"></div>
+          </div>
+          <div id="tabs-2" class="ui-tabs-container">
+            <div>Công ty Rẻ Mỗi Ngày</div>
+            <div><strong>Địa chỉ:</strong> 824/28A-B Sư Vạn Hạnh, Phường 12, Quận 10, Tp.Hồ Chí Minh</div>
+            <div><strong>Điện thoại:</strong> 08.66.837.137 - 08.66.835.228 </div>
+            <div> </div>
+            <div class="clearfix"></div>
+          </div>
+          <div id="tabs-3" class="ui-tabs-container">
+            <div class="comment_part">
+              <h4>Nhận xét về sản phẩm</h4>
+              <div class="nhanxet">
+                <div id="star_pro" class="star" rel="0" style="cursor: default; width: 200px;" title="not rated yet"> <img title="not rated yet" alt="1" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="2" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="3" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="4" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="5" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="6" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="7" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="8" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="9" src="images/star-off.png">&nbsp;<img title="not rated yet" alt="10" src="images/star-off.png">
+                  <input type="hidden" name="score" readonly="readonly">
+                </div>
+                <span class="points">0/10</span>
+                <div class="clear"> </div>
+                <div id="vote"> </div>
+                <div class="quantity_post"> Có 0 nhận xét về sản phẩm này </div>
+              </div>
+              <div class="postcomment">
+                <div class="pcm">
+                  <div class="image-user"> <img src="images/noavatar.png"> </div>
+                  <div class="inputcomment">
+                    <input type="hidden" value="184" name="productId" id="productId" data-val-required="The productId field is required." data-val-number="The field productId must be a number." data-val="true">
+                    <input type="hidden" value="0" name="VoteCount" id="VoteCount" data-val-required="The VoteCount field is required." data-val-number="The field VoteCount must be a number." data-val="true">
+                    <input type="text" value="Nhập tên của bạn" onfocus="if ( this.value == this.defaultValue ) this.value = ''" onblur="if ( this.value == '' ) this.value = this.defaultValue" name="FullName" id="FullName" data-val-required="Vui l&amp;#242;ng nhập họ t&amp;#234;n !" data-val="true" class="nhapten">
+                    <span data-valmsg-replace="true" data-valmsg-for="FullName" class="field-validation-valid"></span>
+                    <input type="text" value="Địa chỉ của bạn" onfocus="if ( this.value == this.defaultValue ) this.value = ''" onblur="if ( this.value == '' ) this.value = this.defaultValue" name="Email" id="Email" data-val-required="Nhập email của bạn !" data-val="true" class="diachi">
+                  </div>
+                  <div class="rating">
+                    <p>Bình chọn</p>
+                    <link rel="stylesheet" href="Styles/jRating.jquery.css" type="text/css" />
+                    <script type="text/javascript" src="Scripts/jRating.jquery.js"></script>
+                    <script type="text/javascript">
+		$(document).ready(function(){
+			$('.basic').jRating();			
+		});
+	</script>
+                    <div class="basic" data-average="12" data-id="1"></div>
+                    <div class="datasSent">
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="clear"> </div>
+                </div>
+                <div class="pcmnd">
+                  <textarea rows="2" onfocus="if ( this.value == this.defaultValue ) this.value = ''" onblur="if ( this.value == '' ) this.value = this.defaultValue" name="Content" id="Content" data-val-required="Nhập nhận x&amp;#233;t của bạn." data-val="true" cols="20">Nhận xét về sản phẩm</textarea>
+                </div>
+                <div class="send_comment">
+                  <input type="button" value="Gửi nhận xét" class="buttoncm" id="btn_post_comment">
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!---End Tab-->
+      </div>
+      <!--End Main Column-->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!--Footer-->
+  <div class="footer">
+    <div class="topmenu_footer">
+      <div class="col_menuFooter" id="copyright">
+        <div class="ctentColuMenuFooter">
+          <p><img src="Images/small_logo.png" alt="" /></p>
+          <p>Copyright © 2013 By <strong>rexinh.vn</strong></p>
+          <p>123 Sư Vạn Hạnh, Phường 12, Quận 10, Tp.HCM.</p>
+          <p>Giấy phép Kinh doanh số: 0312345678</p>
+          <p><a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"><img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2 class="menu_f_title"><a href="">Giới thiệu Rexinh.vn</a></h2>
+          <div class="listMenuFooter"><a href="">Về chúng tôi</a><a href="">Quy chế</a><a href="">Hợp tác kinh doanh</a><a href="">Liên hệ</a><a href="">Tuyển Dụng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2 class="menu_f_title"><a href="">Hướng dẫn sử dụng</a></h2>
+          <div class="listMenuFooter"><a href="">Hướng dẫn mua hàng</a><a href="">Giao nhận hàng</a><a href="">Khuyến Mãi</a><a href="">Hình thức thanh toán</a><a href="">Tài khoản & đơn hàng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="support">
+        <div class="ctentColuMenuFooter">
+          <h2 class="menu_f_title"><a href="">Hotline Hỗ trợ</a></h2>
+          <div class="listMenuFooter">
+            <p><span class="hotline">19000000</span></p>
+            <p><span class="hotline">08.12.345.678</span></p>
+            <p>Từ thứ 2 - thứ 6: 8h00 - 21h30</p>
+            <p>(Nghỉ trưa 12h-13h30)</p>
+            <p>Thứ 7: 8h00 - 21h30</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

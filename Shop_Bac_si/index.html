@@ -1,0 +1,1770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Shop Bác Sĩ</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600&subset=latin,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,400italic,700&subset=latin,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Main Slide-->
+<link rel='stylesheet' type='text/css' href='Styles/slide.css' />
+<!--Main Menu-->
+<link href="Styles/newheadfooter.css" rel="stylesheet" type="text/css" />
+<link href="Styles/nav_menu.css" rel="stylesheet" type="text/css" />
+<!--Slide banner-->
+<link href="Styles/responsiveslides.css" rel="stylesheet" />
+<script src="Scripts/responsiveslides.min.js"></script>
+<!--SimpleTabs-->
+<script type="text/javascript" src="Scripts/simpletabs_1.3.js"></script>
+<link rel="stylesheet" href="Styles/simpletabs.css" type="text/css" />
+<!--Slide Products-->
+<link rel="stylesheet" href="Styles/skin_jcarousel.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+</script>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function (e) {
+        popupBottomPage()
+    });
+    function popupBottomPage() {
+        var open = false;
+        jQuery('#footerSlideButton').click(function () {
+            if (open === false) {
+                jQuery('#footerSlideContent').animate({ height: '150px' });
+                jQuery(this).css('backgroundPosition', 'bottom left');
+                open = true;
+            } else {
+                jQuery('#footerSlideContent').animate({ height: '0px' });
+                jQuery(this).css('backgroundPosition', 'top left');
+                open = false;
+            }
+        });
+    }
+</script>
+<div id="footerSlideContainer">
+  <div id="footerSlideButton" style="background-position: 0% 0%;"></div>
+  <div id="footerSlideContent" style="height: 0px;">
+    <div id="footerSlideText" style="display: block;">
+      <ul class="list-support">
+        <li> <a class="iframe topopup yahoo" data-fancybox-type="iframe" href="/Module/Yahoo.aspx">Hỗ Trợ Yahoo</a> </li>
+        <li> <a class="iframe topopup skype" data-fancybox-type="iframe" href="/Module/Skype.aspx">Hỗ Trợ Skype</a> </li>
+      </ul>
+      <span class="clear"></span>
+      <div class="BigHotLine"><strong>CALL CENTER: <span style="font-size: 25px">1900 1213</span></strong> </div>
+    </div>
+  </div>
+</div>
+<div id="toppage">
+  <div class="wrap">
+    <div id="hotline" class="fl"> Hotline: <b>Bs. Tuấn: 0932 010 126 - Bs. Bình: 0122 945 9898</b></div>
+    <!--Social-->
+    <div id="social_network" class="fr"><a href="" title="Facebook"><span class="icon_facebook"></span></a><a href="" title="Google+"><span class="icon_gplus"></span></a><a href="" title="Youtube"><span class="icon_youtube"></span></a></div>
+  </div>
+</div>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="index.html" id="logo" class="fl"> <img src="Images/logo.png" alt="Shop Bác Sĩ" /></a>
+    <div id="header_right" class="fr">
+      <!--Search Tool-->
+      <div id="search_form" class="fl">
+        <div class="dropdown">
+          <label>
+            <select name="ctl00$vi14$drCat" id="vi14_drCat" class="dr_search">
+              <option value="110">Tất cả</option>
+              <option value="558">Đặc sản mới</option>
+              <option value="559">Khuyến mãi</option>
+              <option value="560">Nông sản</option>
+              <option value="561">Thủy & Hải sản</option>
+              <option value="562">Mũi Khoan Gỗ - Granit - kiếng</option>
+              <option value="563">Bánh Mứt</option>
+            </select>
+          </label>
+        </div>
+        <input name="ctl00$vi14$txtsearch" type="text" id="vi14_txtsearch" alt="Search" class="inputSearch" value="Nhập từ khóa để tìm kiếm..." onclick="this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;) this.value=&#39;Nhập từ khóa để tìm kiếm...&#39;;" onfocus="if(this.value==&#39;Nhập từ khóa để tìm kiếm...&#39;) this.value=&#39;&#39;;" onkeypress="searchKeyPress();" />
+        <a href="javascript:void(0)" onclick="timkiem();" class="btn_search" id="btnSearch">Tìm</a></div>
+      <!--End Search Tool-->
+      <!--end Cart-->
+      <div id="cart" class="fr"><a href="cart.html"><i class="cart_icon"></i><b>0</b><span>Giỏ hàng</span></a></div>
+      <!--Account Area-->
+      <div id="account_area" class="fr"><a href="" class="tt_link_account"><b>Đăng nhập</b><br />
+        Tài khoản & Đơn hàng <span class="arr_down_acc"></span></a>
+        <div id="box_account">
+          <ul class="arrow_top">
+            <li id="login"><a class="btn_acc btn_blue" title="Đăng Nhập" href="/customer/account/">Đăng Nhập</a></li>
+            <li id="new_account"><a class="btn_acc btn_fb" title="Đăng nhập bằng Facebook" onclick="openPopup('facebook')" href="javascript:void(0)">Đăng nhập bằng Facebook</a>
+              <div class="user_new_account">Khách hàng mới? <a title="Tạo tài khoản mới" href="register.html">Tạo tài khoản</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--#end Header-->
+  <!--Top Main-->
+  <div id="top_main">
+    <!-- Main Menu-->
+    <div class="all_categories fl">
+      <div class="show_menu">
+        <div class="tab_cate"><span>Danh mục</span></div>
+        <!--Main Menu-->
+        <ul class="nav_menu" style="display: block; min-height: 400px">
+          <script type="text/javascript">
+    $(function () {
+
+        $('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(500, function () {
+
+            });
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(500, function () {
+
+            });
+        });
+
+
+    })
+</script>
+          <li class="m_li"><a class="t_menu" href='list_products.html'>Mỹ phẩm</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/250/giadung.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Đồ gia dụng nhà bếp" href='/chuyen-muc/do-gia-dung-nha-bep.aspx'>Đồ gia dụng
+                    nhà bếp</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/noi-com-dien.aspx'>Nồi cơm điện</a> </li>
+                    <li><a href='/chuyen-muc/noi-ap-suat.aspx'>Nồi áp suất</a> </li>
+                    <li><a href='/chuyen-muc/noi-lau-da-nang.aspx'>Nồi lẩu đa năng</a> </li>
+                    <li><a href='/chuyen-muc/noi-sieu-toc-am-sieu-toc.aspx'>Nồi siêu tốc - Ấm siêu tốc</a> </li>
+                    <li><a href='/chuyen-muc/san-pham-tien-ich-cho-nha-bep.aspx'>Sản phẩm tiện ích cho nhà
+                      bếp</a> </li>
+                    <li><a href='/chuyen-muc/bep-lau-nuong-vi-nuong-dien-chao.aspx'>Bếp Lẩu Nướng - Vỉ Nướng
+                      Điện - Chảo</a> </li>
+                    <li><a href='/chuyen-muc/bep-hong-ngoai-bep-dien-quang.aspx'>Bếp Hồng Ngoại - Bếp Điện
+                      Quang</a> </li>
+                    <li><a href='/chuyen-muc/lo-nuong-lo-vi-song.aspx'>Lò Nướng - Lò Vi Sóng</a> </li>
+                    <li><a href='/chuyen-muc/bep-gas-chinh-hang.aspx'>Bếp Gas Chính Hãng</a> </li>
+                    <li><a href="/chuyen-muc/hop-com-ham-nong.aspx"> Hộp cơm hâm nóng</a></li>
+                    <li><a href="/chuyen-muc/noi-u.aspx"> Nồi ủ</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Chế Biến Thực Phẩm" href='/chuyen-muc/che-bien-thuc-pham.aspx'>Chế Biến Thực
+                    Phẩm</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/may-xay-ep-sinh-to.aspx'>Máy Xay Ép Sinh Tố</a> </li>
+                    <li><a href='/chuyen-muc/may-lam-banh.aspx'>Máy làm bánh</a> </li>
+                    <li><a href='/chuyen-muc/may-lam-sua-chua.aspx'>Máy làm sữa chua</a> </li>
+                    <li><a href='/chuyen-muc/may-danh-trung.aspx'>Máy đánh trứng</a> </li>
+                    <li><a href='/chuyen-muc/may-xay-thit.aspx'>Máy xay thịt</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Chăm sóc nhà cửa" href='/chuyen-muc/cham-soc-nha-cua.aspx'>Chăm sóc nhà cửa</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/bo-lau-nha-thong-minh.aspx'>Bộ lau nhà thông minh</a> </li>
+                    <li><a href='/chuyen-muc/may-xit-rua-hut-bui.aspx'>Máy Xịt Rửa - Hút Bụi</a> </li>
+                    <li><a href='/chuyen-muc/ban-ui-tu-say-quan-ao.aspx'>Bàn ủi - Tủ sấy quần áo</a> </li>
+                    <li><a href='/chuyen-muc/quat-dien.aspx'>Quạt Điện</a> </li>
+                    <li><a href='/chuyen-muc/tu-vai-hop-dung-do.aspx'>Tủ Vải - Hộp Đựng Đồ </a></li>
+                    <li><a href='/chuyen-muc/may-phun-suong.aspx'>Máy Phun Sương</a> </li>
+                    <li><a href="/chuyen-muc/ngan-ke-tu-va-dung-cu-sua-chua.aspx"> Ngăn, kệ, tủ và dụng cụ sữa chữa</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/phu-kien-cong-nghe.aspx'>Men health</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/271/phu-kien.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Điện Thoại" href='/chuyen-muc/phu-kien-dien-thoai.aspx'>Phụ Kiện
+                    Điện Thoại</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/pin-sac-du-phong.aspx'>Pin Sạc Dự Phòng</a> </li>
+                    <li><a href='/chuyen-muc/the-nho.aspx'>Thẻ Nhớ</a> </li>
+                    <li><a href='/chuyen-muc/vo-bao-da-dien-thoai.aspx'>Vỏ - Bao Da Điện Thoại</a> </li>
+                    <li><a href='/chuyen-muc/pin-dien-thoai.aspx'>Pin Điện Thoại</a> </li>
+                    <li><a href='/chuyen-muc/tai-nghe-danh-cho-dien-thoai.aspx'>Tai Nghe Dành Cho Điện Thoại</a> </li>
+                    <li><a href='/chuyen-muc/cap-sac.aspx'>Cáp sạc</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Máy Tính - Laptop" href='/chuyen-muc/phu-kien-may-tinh-laptop.aspx'> Phụ Kiện Máy Tính - Laptop</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/o-cung-usb-the-nho.aspx'>Ổ Cứng- USB - Thẻ Nhớ</a> </li>
+                    <li><a href='/chuyen-muc/chuot-ban-phim.aspx'>Chuột - Bàn Phím</a> </li>
+                    <li><a href='/chuyen-muc/thiet-bi-am-thanh-tai-nghe.aspx'>Thiết Bị Âm Thanh - Tai Nghe</a> </li>
+                    <li><a href='/chuyen-muc/tan-nhiet-mieng-dan.aspx'>Tản Nhiệt - Miếng Dán</a> </li>
+                    <li><a href='/chuyen-muc/phan-mem-diet-virus.aspx'>Phần Mềm Diệt Virus</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thiết Bị Mạng " href='/chuyen-muc/thiet-bi-mang.aspx'>Thiết Bị Mạng </a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/thu-phat-wifi.aspx'>Thu - Phát Wifi</a> </li>
+                    <li><a href='/chuyen-muc/modem-usb-3g.aspx'>Modem - USB 3G</a> </li>
+                    <li><a href='/chuyen-muc/hub-switch.aspx'>Hub/Switch</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thiết Bị Giải Trí" href='/chuyen-muc/thiet-bi-giai-tri.aspx'>Thiết Bị Giải
+                    Trí</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/cham-soc-suc-khoe-sac-dep.aspx'>Thực phẩm chức năng</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/289/healthcare-banner.png" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Chăm Sóc Sức Khỏe" href='/chuyen-muc/cham-soc-suc-khoe.aspx'>Chăm Sóc Sức
+                    Khỏe</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/may-massage.aspx'>Máy/Đai Massage</a> </li>
+                    <li><a href='/chuyen-muc/may-tap-the-duc.aspx'>Máy Tập Thể Dục</a> </li>
+                    <li><a href='/chuyen-muc/may-loc-khong-khi.aspx'>Máy Lọc Không Khí</a> </li>
+                    <li><a href='/chuyen-muc/can-dien-tu.aspx'>Cân Điện Tử</a> </li>
+                    <li><a href='/chuyen-muc/thuc-pham-chuc-nang.aspx'>Thực Phẩm Chức Năng</a> </li>
+                    <li><a href="/chuyen-muc/may-tri-lieu.aspx"> Máy Trị Liệu</a></li>
+                    <li><a href="/chuyen-muc/may-do-huyet-ap.aspx"> Máy đo huyết áp</a></li>
+                    <li><a href="/chuyen-muc/may-do-duong-huyet.aspx"> Máy đo đường huyết</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Yến Sào Cao Cấp" href='/chuyen-muc/yen-sao-cao-cap.aspx'>Yến Sào Cao Cấp</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/to-yen-sao-nguyen-to.aspx'>Tổ Yến Sào Nguyên Tổ</a> </li>
+                    <li><a href='/chuyen-muc/to-yen-sao-tinh-che.aspx'>Tổ Yến Sào Tinh Chế</a> </li>
+                    <li><a href='/chuyen-muc/yen-nuoc-song-hung.aspx'>Yến Nước Song Hưng</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Chăm Sóc Sắc Đẹp" href='/chuyen-muc/cham-soc-sac-dep.aspx'>Chăm Sóc Sắc Đẹp</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/may-say-toc.aspx'>Máy Sấy Tóc</a> </li>
+                    <li><a href='/chuyen-muc/may-kep-uon-duoi.aspx'>Máy Kẹp - Uốn - Duỗi</a> </li>
+                    <li><a href='/chuyen-muc/may-xong-hoi-mat.aspx'>Máy Xông Hơi Mặt</a> </li>
+                    <li><a href='/chuyen-muc/may-lam-san-co-mat.aspx'>Máy Làm Săn Cơ Mặt</a> </li>
+                    <li><a href='/chuyen-muc/may-cao-rau.aspx'>Máy Cạo Râu</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/my-pham-lam-dep.aspx'>Kiến thức y khoa</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/290/mypham.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Chăm Sóc Da" href='/chuyen-muc/cham-soc-da-Chăm Sóc Da.aspx'>Chăm Sóc Da</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/cac-bo-duong-da.aspx'>Các Bộ Dưỡng Da</a> </li>
+                    <li><a href='/chuyen-muc/suncare-kem-chong-nang.aspx'>Suncare - Kem Chống Nắng</a> </li>
+                    <li><a href='/chuyen-muc/sua-rua-mat.aspx'>Sữa Rửa Mặt</a> </li>
+                    <li><a href='/chuyen-muc/san-pham-tri-mun.aspx'>Sản Phẩm Trị Mụn</a> </li>
+                    <li><a href='/chuyen-muc/nuoc-hoa-hong.aspx'>Nước hoa hồng</a> </li>
+                    <li><a href='/chuyen-muc/mat-na.aspx'>Mặt nạ</a> </li>
+                    <li><a href='/chuyen-muc/tay-te-bao-chet.aspx'>Tẩy tế bào chết</a> </li>
+                    <li><a href='/chuyen-muc/skincare-duong-da.aspx'>Skincare - Dưỡng Da</a> </li>
+                    <li><a href='/chuyen-muc/mist-xit-khoang.aspx'>Mist - Xịt Khoáng</a> </li>
+                    <li><a href="/chuyen-muc/duong-mat.aspx"> Dưỡng Mắt</a></li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Trang Điểm" href='/chuyen-muc/trang-diem.aspx'>Trang Điểm</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/bb-cream-cc-cream.aspx'>BB Cream - CC Cream</a> </li>
+                    <li><a href='/chuyen-muc/phan-phu-|-phan-nen.aspx'>Phấn Phủ | Phấn Nền</a> </li>
+                    <li><a href='/chuyen-muc/che-khuyet-diem.aspx'>Che Khuyết Điểm</a> </li>
+                    <li><a href='/chuyen-muc/phan-mat-phan-ma-hong.aspx'>Phấn Mắt - Phấn Má Hồng</a> </li>
+                    <li><a href='/chuyen-muc/son-moi-duong-moi.aspx'>Son Môi - Dưỡng Môi</a> </li>
+                    <li><a href='/chuyen-muc/masscara-highligt.aspx'>Masscara - Highligt</a> </li>
+                    <li><a href='/chuyen-muc/san-pham-khac.aspx'>Sản phẩm khác</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Dưỡng Thể -  Chăm Sóc Tóc" href='/chuyen-muc/duong-the-cham-soc-toc.aspx'> Dưỡng Thể - Chăm Sóc Tóc</a> </p>
+                  <ul>
+                    <li><a href='/chuyen-muc/body-wash-sua-tam.aspx'>Body Wash / Sữa tắm</a> </li>
+                    <li><a href='/chuyen-muc/duong-the-body-duong-da-tay.aspx'>Dưỡng Thể Body- Dưỡng Da
+                      Tay</a> </li>
+                    <li><a href='/chuyen-muc/dau-goi-dau-xa-u-toc.aspx'>Dầu Gội - Dầu Xả - Ủ Tóc</a> </li>
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li"><a class="t_menu" href='/chuyen-muc/thoi-trang-phu-kien.aspx'>Bác sĩ tư vấn 24/7</a>
+            <div class="list_categories" style="left: 0px; display: none;"> <span class="backgroundMenu"> <img src="http://sieumuanhanh.com/data/categories/291/thoitrang.jpg" alt='' title="" width="100%" /> </span>
+              <div class="subcatwrapper">
+                <div class="pc_menu">
+                  <p> <a title=" Qùa Tặng - Lưu Niệm" href='/chuyen-muc/qua-tang-luu-niem.aspx'>Qùa Tặng -
+                    Lưu Niệm</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nam" href='/chuyen-muc/thoi-trang-nam.aspx'>Thời Trang Nam</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Thời Trang Nữ" href='/chuyen-muc/thoi-trang-nu.aspx'>Thời Trang Nữ</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Giày - Dép" href='/chuyen-muc/giay-dep.aspx'>Giày - Dép</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Phụ Kiện Thời Trang" href='/chuyen-muc/phu-kien-thoi-trang.aspx'>Phụ Kiện
+                    Thời Trang</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+                <div class="pc_menu">
+                  <p> <a title=" Sản Phẩm Dành Cho Bé" href='/chuyen-muc/san-pham-danh-cho-be.aspx'>Sản Phẩm
+                    Dành Cho Bé</a> </p>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m_li" style="margin-top: 10px; text-align: center; border: none"><a href="/chuyen-muc/cham-soc-nha-cua.aspx" title="Chăm sóc nhà cửa"><img src="http://sieumuanhanh.com/data/aditems/54/VOI-XIT-NUOC-SAN-VUON.jpg" alt="" height="150" /></a></li>
+        </ul>
+      </div>
+    </div>
+    <!--end Main Menu-->
+    <!--Right Top Main-->
+    <div id="right_top_main" class="fr">
+      <!--Horizontal menu-->
+      <div id="nav">
+        <ul>
+          <li class="active"><a href="index.html" class="home_icon"></a> </li>
+          <li><a href="">Bác sĩ tư vấn 24/7</a>
+            <ul>
+              <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+                <ul>
+                  <li><a href="#">Sub Item 1.1</a></li>
+                  <li><a href="#">Sub Item 1.2</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+                <ul>
+                  <li><a href="#">Sub Item 2.1</a></li>
+                  <li><a href="#">Sub Item 2.2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Khuyến mãi</a></li>
+              <li><a href="#">Trang điểm</a></li>
+              <li><a href="#">Nước hoa</a></li>
+              <li><a href="list_news.html">Tin tức</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Kiến thức y khoa</a></li>
+          <li><a href="#">Phòng khám liên kết</a></li>
+          <li><a href="#">Video</a></li>
+          <li><a href="contactus.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <!--Horizontal menu-->
+      <!--Top Banner -->
+      <div class="homebanners bannerSingle cf">
+        <!-- Slide Banner -->
+        <link rel="stylesheet" type="text/css" href="Styles/style_slide.css" />
+        <script language="javascript" type="text/javascript" src="Scripts/jquery.easing.js"></script>
+        <script language="javascript" type="text/javascript" src="Scripts/init_script.js"></script>
+        <script type="text/javascript">
+ $(document).ready( function(){	
+		$('#lofslidecontent45').lofJSidernews( { interval:5000,
+											 	easing:'easeInOutQuad',
+												duration:500,
+												auto:true } );						
+	});
+
+</script>
+        <div id="lofslidecontent45" class="lof-slidecontent">
+          <div class="preload">
+            <div></div>
+          </div>
+          <!-- MAIN CONTENT -->
+          <div class="lof-main-outer">
+            <ul class="lof-main-wapper">
+              <li><a title="Mua Canon 600D" href="http://tiki.vn/may-anh-canon-600d-va-lens-18-55-is-p114511.html?src=home_top_bannerv3" target="_blank"><img src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/File-1415937002.jpg" alt="Mua Canon 600D" title="Newsflash 2" width="948" height="400" /></a></li>
+              <li><a title="Mua Canon 600D" href="http://tiki.vn/may-anh-canon-600d-va-lens-18-55-is-p114511.html?src=home_top_bannerv3" target="_blank"><img src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/File-1415933513.jpg" alt="Mua Canon 600D" title="Newsflash 2" width="948" height="400" /></a></li>
+              <li><a title="Mua Canon 600D" href="http://tiki.vn/may-anh-canon-600d-va-lens-18-55-is-p114511.html?src=home_top_bannerv3" target="_blank"><img src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/File-1415344620.jpg" alt="Mua Canon 600D" title="Newsflash 2" width="948" height="400" /></a></li>
+              <li><a title="Mua Canon 600D" href="http://tiki.vn/may-anh-canon-600d-va-lens-18-55-is-p114511.html?src=home_top_bannerv3" target="_blank"><img src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/File-1409558885.jpg" alt="Mua Canon 600D" title="Newsflash 2" width="948" height="400" /></a></li>
+              <li><a title="Mua Canon 600D" href="http://tiki.vn/may-anh-canon-600d-va-lens-18-55-is-p114511.html?src=home_top_bannerv3" target="_blank"><img src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/File-1414991065.jpg" alt="Mua Canon 600D" title="Newsflash 2" width="948" height="400" /></a></li>
+              <li><a title="Mua Canon 600D" href="http://tiki.vn/may-anh-canon-600d-va-lens-18-55-is-p114511.html?src=home_top_bannerv3" target="_blank"><img src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/File-1415871318.jpg" alt="Mua Canon 600D" title="Newsflash 2" width="948" height="400" /></a></li>
+            </ul>
+          </div>
+          <!-- END MAIN CONTENT -->
+          <!-- NAVIGATOR -->
+          <div class="lof-navigator-outer">
+            <ul class="lof-navigator">
+              <li><div class="slide_content"><img alt="Mua Canon 600D" src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/Thumbnail-1415937002.jpg" class="img_general">
+                <div class="home_banner_info"><a title="Mua Canon 600D" href="http://tiki.vn/may-anh-canon-600d-va-lens-18-55-is-p114511.html?src=home_top_bannerv3" class="slide_link" target="_blank">Mua Canon 600D</a><span class="des_link">Rinh Ổ cứng WD</span></div></div>
+              </li>
+              <li><div class="slide_content"><img alt="Điện thoại chính hãng" src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/Thumbnail-1415931825.jpg" class="img_general">
+                <div class="home_banner_info"><a title="Điện thoại chính hãng" href="http://tiki.vn/dien-thoai-may-tinh-bang/dien-thoai-di-dong/tuyen-tap-dien-thoai/cam-ket-gia-re.html?dir=desc&amp;limit=45&amp;order=price&amp;src=home_top_bannerv3" class="slide_link" target="_blank">Điện thoại chính hãng</a><span class="des_link">Cam kết giá rẻ nhất</span></div></div>
+              </li>
+              <li><div class="slide_content"><img alt="New arrivals-Etude" src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/Thumbnail-1415344620.jpg" class="img_general">
+                <div class="home_banner_info"><a title="New arrivals-Etude" href="http://tiki.vn/thuong-hieu/etude-house.html?src=home_top_bannerv3" class="slide_link" target="_blank">New arrivals-Etude</a><span class="des_link">Giảm đến 35%</span></div></div>
+              </li>
+              <li><div class="slide_content"><img alt="Máy May Gia Đình Singer -33%" src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/Thumbnail-1409558885.jpg" class="img_general">
+                <div class="home_banner_info"><a title="Máy May Gia Đình Singer -33%" href="http://tiki.vn/thuong-hieu/singer.html?dir=asc&amp;order=price&amp;src=home_top_bannerv3" class="slide_link" target="_blank">Máy May Gia Đình Singer -33%</a><span class="des_link">+ Hộp quà trị giá ...</span></div></div>
+              </li>
+              <li><div class="slide_content"><img alt="Bếp hồng ngoại Sanko" src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/Thumbnail-1414991065.jpg" class="img_general">
+                <div class="home_banner_info"><a title="Bếp hồng ngoại Sanko" href="http://tiki.vn/bep-hong-ngoai-sanko-dup-p62901.html?src=home_top_bannerv3" class="slide_link" target="_blank">Bếp hồng ngoại Sanko</a><span class="des_link">Giảm đến 53%</span></div></div>
+              </li>
+              <li><div class="slide_content"><img alt="Tã quần Ultra Pants -10%" src="http://tikicdn.com/media/custom/banners/resize/home_top_bannerv3/Thumbnail-1414991065.jpg" class="img_general">
+                <div class="home_banner_info"><a title="Tã quần Ultra Pants -10%" href="http://tiki.vn/catalogsearch/result/?q=ultra+pants&amp;cat=&amp;src=home_top_bannerv3" class="slide_link" target="_blank">Tã quần Ultra Pants -10%</a><span class="des_link">Nhận balo xinh cho bé</span></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--End Slide Banner -->
+      </div>
+    </div>
+    <!--End Right Top Main-->
+  </div>
+  <!--End Top Main -->
+  <!-- #Main -->
+  <div id="main">
+    <!--Category Home-->
+    <div class="box">
+      <div class="box_Tab"> <a href="" title="Mỹ phẩm" class="main_cate">
+        <h2 class="cate_name">Mỹ phẩm</h2>
+        <span class="r_Tab"></span></a>
+        <ul class="sub_cate_home fr">
+          <li><a href="">Phấn mắt/Sáp mắt</a></li>
+          <li><a href="">Nước hoa hồng</a></li>
+          <li><a href="">Sửa rửa mặt</a></li>
+          <li><a href="">Dưỡng môi</a></li>
+          <li><a href="">Kem chống nắng</a></li>
+          <li><a href="">Son môi</a></li>
+          <li><a href="" class="view_all">Xem tất cả <span class="arr_down"></span></a></li>
+        </ul>
+      </div>
+      <div class="box_ct_home">
+        <div class="box_home_left fl">
+          <script type="text/javascript">
+$( function()
+	{
+  // Slideshow 1
+      $("#slider1").responsiveSlides({
+        auto: true,
+        pager: true,
+		pagination: true,
+        nav: false,
+        speed: 500,
+		timeout: 3000,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+	});
+</script>
+          <div class="callbacks_container">
+            <ul class="rslides" id="slider1">
+              <li> <a href="http://www.vipcard24h.vn/vnt_upload/File/vipcard_banner.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.vipcard24h.vn/vnt_upload/File/vipcard_banner.jpg" alt="Barracuda đèn rọi biển số " /> </a></li>
+              <li><a href="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" title="Barracuda đèn rọi biển số "> <img src="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+              <li><a href="http://www.quangcao24gio.net/upload/images/users/2013116152108_banner%201.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.quangcao24gio.net/upload/images/users/2013116152108_banner%201.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+              <li><a href="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" title="Barracuda đèn rọi biển số "> <img src="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+            </ul>
+          </div>
+          <!--Tab Position 1-->
+          <script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#mycarousel01, #mycarousel02, #mycarousel03').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 5,
+		speed: 2000,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+          <div class="tab_home">
+            <div class="simpleTabs">
+              <ul class="simpleTabsNavigation">
+                <li><a href="#" class="active">SẢN PHẨM MỚI</a></li>
+                <li><a href="#">SẢN PHẨM BÁN CHẠY</a></li>
+                <li><a href="#">SẢN PHẨM KHUYẾN MÃI</a></li>
+              </ul>
+              <a href="" class="view_all_tab fr">Xem tất cả</a>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel01" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx" class="img_product"><img alt="Kem trang điểm BB Cream The Face Shop SPF37 20ml" src="http://sieumuanhanh.com/data/news/1602/bb-cream-the-face-shop-spf3.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx"> Kem trang điểm BB Cream The Face Shop SP..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">225.000 VNĐ</span> </div>
+                      <div class="reduce">-36%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx" class="img_product"><img alt="Black Pomegranate Voluming Serum" src="http://sieumuanhanh.com/data/news/2060/black-pomegranate-voluming-serum.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx"> Black Pomegranate Voluming Serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>550.000 đ</del></span> <span class="main_price">490.000 VNĐ</span> </div>
+                      <div class="reduce">-11%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2060" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx" class="img_product"><img alt="Black Pomegranate Emulsion- Sữa dưỡng chiết xuất từ lựu" src="http://sieumuanhanh.com/data/news/2059/black-pomegranate-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx"> Black Pomegranate Emulsion- Sữa dưỡng ch..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2059" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx" class="img_product"><img alt="Black Pomegranate Toner &ndash; Nước hoa hồng chiết xuất từ quả lựu" src="http://sieumuanhanh.com/data/news/2058/black-pomegranate-toner.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx"> Black Pomegranate Toner &ndash; Nước hoa hồng ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2058" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel02" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx" class="img_product"><img alt="Sữa dưỡng da collagen 3w clinic Collagen Regeneration Emulsion" src="http://sieumuanhanh.com/data/news/1660/collagen-3w-clinic-3w-clinic-collagen-regeneration-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx"> Sữa dưỡng da collagen 3w clinic Collagen..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-46%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1660" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx" class="img_product"><img alt="Sữa rửa mặt White Tree Snow Exfoliating Foam Cleanser The face shop" src="http://sieumuanhanh.com/data/news/1611/white-tree-snow-exfoliating-foam-cleanser.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx"> Sữa rửa mặt White Tree Snow Exfoliating ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>190.000 đ</del></span> <span class="main_price">175.000 VNĐ</span> </div>
+                      <div class="reduce">-08%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1611" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx" class="img_product"><img alt="Kem trang điểm thông minh CC Cream Smart Capsule Color Control" src="http://sieumuanhanh.com/data/news/1257/cc-cream.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx"> Kem trang điểm thông minh CC Cream Smart..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>520.000 đ</del></span> <span class="main_price">405.000 VNĐ</span> </div>
+                      <div class="reduce">-22%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1257" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx" class="img_product"><img alt="Sữa rửa mặt tinh chất lô hội 3W Clinic Pure Clean Aloe" src="http://sieumuanhanh.com/data/news/2066/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx"> Sữa rửa mặt tinh chất lô hội 3W Clinic P..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>200.000 đ</del></span> <span class="main_price">140.000 VNĐ</span> </div>
+                      <div class="reduce">-30%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2066" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx" class="img_product"><img alt="Tinh chất dưỡng da Black egg pore serum" src="http://sieumuanhanh.com/data/news/2064/tinh-chat-duong-da-black-egg-pore-serum.jpg.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx"> Tinh chất dưỡng da Black egg pore serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>240.000 đ</del></span> <span class="main_price">192.000 VNĐ</span> </div>
+                      <div class="reduce">-20%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2064" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx" class="img_product"><img alt="Black Pomegranate Toner &ndash; Nước hoa hồng chiết xuất từ quả lựu" src="http://sieumuanhanh.com/data/news/2058/black-pomegranate-toner.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx"> Black Pomegranate Toner &ndash; Nước hoa hồng ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2058" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel03" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx" class="img_product"><img alt="Kem trang điểm BB Cream The Face Shop SPF37 20ml" src="http://sieumuanhanh.com/data/news/1602/bb-cream-the-face-shop-spf3.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx"> Kem trang điểm BB Cream The Face Shop SP..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">225.000 VNĐ</span> </div>
+                      <div class="reduce">-36%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx" class="img_product"><img alt="Sữa dưỡng da collagen 3w clinic Collagen Regeneration Emulsion" src="http://sieumuanhanh.com/data/news/1660/collagen-3w-clinic-3w-clinic-collagen-regeneration-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx"> Sữa dưỡng da collagen 3w clinic Collagen..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-46%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1660" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx" class="img_product"><img alt="Sữa rửa mặt White Tree Snow Exfoliating Foam Cleanser The face shop" src="http://sieumuanhanh.com/data/news/1611/white-tree-snow-exfoliating-foam-cleanser.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx"> Sữa rửa mặt White Tree Snow Exfoliating ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>190.000 đ</del></span> <span class="main_price">175.000 VNĐ</span> </div>
+                      <div class="reduce">-08%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1611" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx" class="img_product"><img alt="Kem trang điểm thông minh CC Cream Smart Capsule Color Control" src="http://sieumuanhanh.com/data/news/1257/cc-cream.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx"> Kem trang điểm thông minh CC Cream Smart..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>520.000 đ</del></span> <span class="main_price">405.000 VNĐ</span> </div>
+                      <div class="reduce">-22%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1257" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx" class="img_product"><img alt="Sữa rửa mặt tinh chất lô hội 3W Clinic Pure Clean Aloe" src="http://sieumuanhanh.com/data/news/2066/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx"> Sữa rửa mặt tinh chất lô hội 3W Clinic P..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>200.000 đ</del></span> <span class="main_price">140.000 VNĐ</span> </div>
+                      <div class="reduce">-30%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2066" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx" class="img_product"><img alt="Tinh chất dưỡng da Black egg pore serum" src="http://sieumuanhanh.com/data/news/2064/tinh-chat-duong-da-black-egg-pore-serum.jpg.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx"> Tinh chất dưỡng da Black egg pore serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>240.000 đ</del></span> <span class="main_price">192.000 VNĐ</span> </div>
+                      <div class="reduce">-20%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2064" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--End Tab Position 1-->
+        </div>
+        <!--Ads Cate-->
+        <div class="ads_cate fr"> <a href=""><img src="http://media.hangtot.com/Thumbnail/Large/Upload/2014/8/21/2b6a69bca197dc1345172c7bac6af975.jpg" alt="" width="100%" /></a> <a href=""><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTPtAzgfIzucapJtL1k-DM4MINJWjGxU3Vkfh9amlu_02-m0to8zQ" alt="" width="100%" /></a> </div>
+        <!--end Ads Cate-->
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <script type="text/javascript">
+$( function()
+	{
+  // Slideshow 1
+      $("#slider2").responsiveSlides({
+        auto: true,
+        pager: true,
+		pagination: true,
+        nav: false,
+        speed: 500,
+		timeout: 3000,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+	});
+</script>
+    <div class="box">
+      <div class="box_Tab"> <a href="" title="Men Headth" class="main_cate">
+        <h2 class="cate_name">Men health</h2>
+        <span class="r_Tab"></span></a>
+        <ul class="sub_cate_home fr">
+          <li><a href="">Phấn mắt/Sáp mắt</a></li>
+          <li><a href="">Nước hoa hồng</a></li>
+          <li><a href="">Sửa rửa mặt</a></li>
+          <li><a href="">Dưỡng môi</a></li>
+          <li><a href="">Kem chống nắng</a></li>
+          <li><a href="">Son môi</a></li>
+          <li><a href="" class="view_all">Xem tất cả <span class="arr_down"></span></a></li>
+        </ul>
+      </div>
+      <div class="box_ct_home">
+        <div class="box_home_left fl">
+          <div class="callbacks_container">
+            <ul class="rslides" id="slider2">
+              <li> <a href="http://www.vipcard24h.vn/vnt_upload/File/vipcard_banner.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.vipcard24h.vn/vnt_upload/File/vipcard_banner.jpg" alt="Barracuda đèn rọi biển số " /> </a></li>
+              <li><a href="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" title="Barracuda đèn rọi biển số "> <img src="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+              <li><a href="http://www.quangcao24gio.net/upload/images/users/2013116152108_banner%201.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.quangcao24gio.net/upload/images/users/2013116152108_banner%201.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+              <li><a href="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" title="Barracuda đèn rọi biển số "> <img src="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+            </ul>
+          </div>
+          <!--Tab Position 2-->
+          <script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#mycarousel04, #mycarousel05, #mycarousel06').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 5,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+          <div class="tab_home">
+            <div class="simpleTabs">
+              <ul class="simpleTabsNavigation">
+                <li><a href="#" class="active">SẢN PHẨM MỚI</a></li>
+                <li><a href="#">SẢN PHẨM BÁN CHẠY</a></li>
+                <li><a href="#">SẢN PHẨM KHUYẾN MÃI</a></li>
+              </ul>
+              <a href="" class="view_all_tab fr">Xem tất cả</a>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel04" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx" class="img_product"><img alt="Kem trang điểm BB Cream The Face Shop SPF37 20ml" src="http://sieumuanhanh.com/data/news/1602/bb-cream-the-face-shop-spf3.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx"> Kem trang điểm BB Cream The Face Shop SP..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">225.000 VNĐ</span> </div>
+                      <div class="reduce">-36 %</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx" class="img_product"><img alt="Black Pomegranate Voluming Serum" src="http://sieumuanhanh.com/data/news/2060/black-pomegranate-voluming-serum.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx"> Black Pomegranate Voluming Serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>550.000 đ</del></span> <span class="main_price">490.000 VNĐ</span> </div>
+                      <div class="reduce">-11%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2060" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx" class="img_product"><img alt="Black Pomegranate Emulsion- Sữa dưỡng chiết xuất từ lựu" src="http://sieumuanhanh.com/data/news/2059/black-pomegranate-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx"> Black Pomegranate Emulsion- Sữa dưỡng ch..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2059" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx" class="img_product"><img alt="Black Pomegranate Toner &ndash; Nước hoa hồng chiết xuất từ quả lựu" src="http://sieumuanhanh.com/data/news/2058/black-pomegranate-toner.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx"> Black Pomegranate Toner &ndash; Nước hoa hồng ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2058" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel05" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx" class="img_product"><img alt="Sữa dưỡng da collagen 3w clinic Collagen Regeneration Emulsion" src="http://sieumuanhanh.com/data/news/1660/collagen-3w-clinic-3w-clinic-collagen-regeneration-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx"> Sữa dưỡng da collagen 3w clinic Collagen..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-46%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1660" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx" class="img_product"><img alt="Sữa rửa mặt White Tree Snow Exfoliating Foam Cleanser The face shop" src="http://sieumuanhanh.com/data/news/1611/white-tree-snow-exfoliating-foam-cleanser.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx"> Sữa rửa mặt White Tree Snow Exfoliating ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>190.000 đ</del></span> <span class="main_price">175.000 VNĐ</span> </div>
+                      <div class="reduce">-08%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1611" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx" class="img_product"><img alt="Kem trang điểm thông minh CC Cream Smart Capsule Color Control" src="http://sieumuanhanh.com/data/news/1257/cc-cream.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx"> Kem trang điểm thông minh CC Cream Smart..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>520.000 đ</del></span> <span class="main_price">405.000 VNĐ</span> </div>
+                      <div class="reduce">-22%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1257" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx" class="img_product"><img alt="Sữa rửa mặt tinh chất lô hội 3W Clinic Pure Clean Aloe" src="http://sieumuanhanh.com/data/news/2066/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx"> Sữa rửa mặt tinh chất lô hội 3W Clinic P..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>200.000 đ</del></span> <span class="main_price">140.000 VNĐ</span> </div>
+                      <div class="reduce">-30%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2066" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx" class="img_product"><img alt="Tinh chất dưỡng da Black egg pore serum" src="http://sieumuanhanh.com/data/news/2064/tinh-chat-duong-da-black-egg-pore-serum.jpg.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx"> Tinh chất dưỡng da Black egg pore serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>240.000 đ</del></span> <span class="main_price">192.000 VNĐ</span> </div>
+                      <div class="reduce">-20%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2064" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx" class="img_product"><img alt="Black Pomegranate Voluming Serum" src="http://sieumuanhanh.com/data/news/2060/black-pomegranate-voluming-serum.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx"> Black Pomegranate Voluming Serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>550.000 đ</del></span> <span class="main_price">490.000 VNĐ</span> </div>
+                      <div class="reduce">-11%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2060" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx" class="img_product"><img alt="Black Pomegranate Emulsion- Sữa dưỡng chiết xuất từ lựu" src="http://sieumuanhanh.com/data/news/2059/black-pomegranate-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx"> Black Pomegranate Emulsion- Sữa dưỡng ch..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2059" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel06" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx" class="img_product"><img alt="Kem trang điểm BB Cream The Face Shop SPF37 20ml" src="http://sieumuanhanh.com/data/news/1602/bb-cream-the-face-shop-spf3.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx"> Kem trang điểm BB Cream The Face Shop SP..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">225.000 VNĐ</span> </div>
+                      <div class="reduce">-36%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx" class="img_product"><img alt="Sữa dưỡng da collagen 3w clinic Collagen Regeneration Emulsion" src="http://sieumuanhanh.com/data/news/1660/collagen-3w-clinic-3w-clinic-collagen-regeneration-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx"> Sữa dưỡng da collagen 3w clinic Collagen..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-46%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1660" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx" class="img_product"><img alt="Sữa rửa mặt White Tree Snow Exfoliating Foam Cleanser The face shop" src="http://sieumuanhanh.com/data/news/1611/white-tree-snow-exfoliating-foam-cleanser.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx"> Sữa rửa mặt White Tree Snow Exfoliating ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>190.000 đ</del></span> <span class="main_price">175.000 VNĐ</span> </div>
+                      <div class="reduce">-08%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1611" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx" class="img_product"><img alt="Kem trang điểm thông minh CC Cream Smart Capsule Color Control" src="http://sieumuanhanh.com/data/news/1257/cc-cream.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx"> Kem trang điểm thông minh CC Cream Smart..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>520.000 đ</del></span> <span class="main_price">405.000 VNĐ</span> </div>
+                      <div class="reduce">-22%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1257" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx" class="img_product"><img alt="Sữa rửa mặt tinh chất lô hội 3W Clinic Pure Clean Aloe" src="http://sieumuanhanh.com/data/news/2066/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx"> Sữa rửa mặt tinh chất lô hội 3W Clinic P..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>200.000 đ</del></span> <span class="main_price">140.000 VNĐ</span> </div>
+                      <div class="reduce">-30%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2066" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx" class="img_product"><img alt="Tinh chất dưỡng da Black egg pore serum" src="http://sieumuanhanh.com/data/news/2064/tinh-chat-duong-da-black-egg-pore-serum.jpg.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx"> Tinh chất dưỡng da Black egg pore serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>240.000 đ</del></span> <span class="main_price">192.000 VNĐ</span> </div>
+                      <div class="reduce">-20%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2064" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx" class="img_product"><img alt="Black Pomegranate Voluming Serum" src="http://sieumuanhanh.com/data/news/2060/black-pomegranate-voluming-serum.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx"> Black Pomegranate Voluming Serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>550.000 đ</del></span> <span class="main_price">490.000 VNĐ</span> </div>
+                      <div class="reduce">-11%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2060" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx" class="img_product"><img alt="Black Pomegranate Emulsion- Sữa dưỡng chiết xuất từ lựu" src="http://sieumuanhanh.com/data/news/2059/black-pomegranate-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx"> Black Pomegranate Emulsion- Sữa dưỡng ch..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2059" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx" class="img_product"><img alt="Black Pomegranate Toner &ndash; Nước hoa hồng chiết xuất từ quả lựu" src="http://sieumuanhanh.com/data/news/2058/black-pomegranate-toner.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx"> Black Pomegranate Toner &ndash; Nước hoa hồng ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2058" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--End Tab Position 2-->
+        </div>
+        <!--Ads Cate-->
+        <div class="ads_cate fr"> <a href=""><img src="http://media.hangtot.com/Thumbnail/Large/Upload/2014/8/21/2b6a69bca197dc1345172c7bac6af975.jpg" alt="" width="100%" /></a> <a href=""><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTPtAzgfIzucapJtL1k-DM4MINJWjGxU3Vkfh9amlu_02-m0to8zQ" alt="" width="100%" /></a> </div>
+        <!--end Ads Cate-->
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <script type="text/javascript">
+$( function()
+	{
+  // Slideshow 1
+      $("#slider3").responsiveSlides({
+        auto: true,
+        pager: true,
+		pagination: true,
+        nav: false,
+        speed: 500,
+		timeout: 3000,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+	});
+</script>
+    <div class="box">
+      <div class="box_Tab"> <a href="" title="Thực phẩm chức năng" class="main_cate">
+        <h2 class="cate_name">Thực phẩm chức năng</h2>
+        <span class="r_Tab"></span></a>
+        <ul class="sub_cate_home fr">
+          <li><a href="">Phấn mắt/Sáp mắt</a></li>
+          <li><a href="">Nước hoa hồng</a></li>
+          <li><a href="">Sửa rửa mặt</a></li>
+          <li><a href="">Dưỡng môi</a></li>
+          <li><a href="">Kem chống nắng</a></li>
+          <li><a href="">Son môi</a></li>
+          <li><a href="" class="view_all">Xem tất cả <span class="arr_down"></span></a></li>
+        </ul>
+      </div>
+      <div class="box_ct_home">
+        <div class="box_home_left fl">
+          <div class="callbacks_container">
+            <ul class="rslides" id="slider3">
+              <li> <a href="http://www.vipcard24h.vn/vnt_upload/File/vipcard_banner.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.vipcard24h.vn/vnt_upload/File/vipcard_banner.jpg" alt="Barracuda đèn rọi biển số " /> </a></li>
+              <li><a href="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" title="Barracuda đèn rọi biển số "> <img src="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+              <li><a href="http://www.quangcao24gio.net/upload/images/users/2013116152108_banner%201.jpg" title="Barracuda đèn rọi biển số "> <img src="http://www.quangcao24gio.net/upload/images/users/2013116152108_banner%201.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+              <li><a href="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" title="Barracuda đèn rọi biển số "> <img src="https://chuyentien.vietinbank.vn/sites/export/sites/chuyentien/vi/adv/home/images/Vietin-TET2104-Banner-web-980x250.jpg_868388839.jpg" alt="Barracuda đèn rọi biển số " /> </a> </li>
+            </ul>
+          </div>
+          <!--Tab Position 3-->
+          <script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#mycarousel07, #mycarousel08, #mycarousel09').jcarousel({
+
+        auto: 0,
+        wrap: 'circular',
+        scroll: 5,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+          <div class="tab_home">
+            <div class="simpleTabs">
+              <ul class="simpleTabsNavigation">
+                <li><a href="#" class="active">SẢN PHẨM MỚI</a></li>
+                <li><a href="#">SẢN PHẨM BÁN CHẠY</a></li>
+                <li><a href="#">SẢN PHẨM KHUYẾN MÃI</a></li>
+              </ul>
+              <a href="" class="view_all_tab fr">Xem tất cả</a>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel07" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx" class="img_product"><img alt="Kem trang điểm BB Cream The Face Shop SPF37 20ml" src="http://sieumuanhanh.com/data/news/1602/bb-cream-the-face-shop-spf3.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx"> Kem trang điểm BB Cream The Face Shop SP..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">225.000 VNĐ</span> </div>
+                      <div class="reduce">-36%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx" class="img_product"><img alt="Black Pomegranate Voluming Serum" src="http://sieumuanhanh.com/data/news/2060/black-pomegranate-voluming-serum.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx"> Black Pomegranate Voluming Serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>550.000 đ</del></span> <span class="main_price">490.000 VNĐ</span> </div>
+                      <div class="reduce">-11%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2060" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx" class="img_product"><img alt="Black Pomegranate Emulsion- Sữa dưỡng chiết xuất từ lựu" src="http://sieumuanhanh.com/data/news/2059/black-pomegranate-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx"> Black Pomegranate Emulsion- Sữa dưỡng ch..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2059" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx" class="img_product"><img alt="Black Pomegranate Toner &ndash; Nước hoa hồng chiết xuất từ quả lựu" src="http://sieumuanhanh.com/data/news/2058/black-pomegranate-toner.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx"> Black Pomegranate Toner &ndash; Nước hoa hồng ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2058" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel08" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx" class="img_product"><img alt="Sữa dưỡng da collagen 3w clinic Collagen Regeneration Emulsion" src="http://sieumuanhanh.com/data/news/1660/collagen-3w-clinic-3w-clinic-collagen-regeneration-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx"> Sữa dưỡng da collagen 3w clinic Collagen..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-46%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1660" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx" class="img_product"><img alt="Sữa rửa mặt White Tree Snow Exfoliating Foam Cleanser The face shop" src="http://sieumuanhanh.com/data/news/1611/white-tree-snow-exfoliating-foam-cleanser.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx"> Sữa rửa mặt White Tree Snow Exfoliating ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>190.000 đ</del></span> <span class="main_price">175.000 VNĐ</span> </div>
+                      <div class="reduce">-08%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1611" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx" class="img_product"><img alt="Kem trang điểm thông minh CC Cream Smart Capsule Color Control" src="http://sieumuanhanh.com/data/news/1257/cc-cream.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx"> Kem trang điểm thông minh CC Cream Smart..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>520.000 đ</del></span> <span class="main_price">405.000 VNĐ</span> </div>
+                      <div class="reduce">-22%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1257" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx" class="img_product"><img alt="Sữa rửa mặt tinh chất lô hội 3W Clinic Pure Clean Aloe" src="http://sieumuanhanh.com/data/news/2066/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx"> Sữa rửa mặt tinh chất lô hội 3W Clinic P..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>200.000 đ</del></span> <span class="main_price">140.000 VNĐ</span> </div>
+                      <div class="reduce">-30%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2066" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx" class="img_product"><img alt="Tinh chất dưỡng da Black egg pore serum" src="http://sieumuanhanh.com/data/news/2064/tinh-chat-duong-da-black-egg-pore-serum.jpg.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx"> Tinh chất dưỡng da Black egg pore serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>240.000 đ</del></span> <span class="main_price">192.000 VNĐ</span> </div>
+                      <div class="reduce">-20%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2064" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx" class="img_product"><img alt="Black Pomegranate Voluming Serum" src="http://sieumuanhanh.com/data/news/2060/black-pomegranate-voluming-serum.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx"> Black Pomegranate Voluming Serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>550.000 đ</del></span> <span class="main_price">490.000 VNĐ</span> </div>
+                      <div class="reduce">-11%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2060" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx" class="img_product"><img alt="Black Pomegranate Emulsion- Sữa dưỡng chiết xuất từ lựu" src="http://sieumuanhanh.com/data/news/2059/black-pomegranate-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx"> Black Pomegranate Emulsion- Sữa dưỡng ch..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2059" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx" class="img_product"><img alt="Black Pomegranate Toner &ndash; Nước hoa hồng chiết xuất từ quả lựu" src="http://sieumuanhanh.com/data/news/2058/black-pomegranate-toner.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx"> Black Pomegranate Toner &ndash; Nước hoa hồng ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2058" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+              <div class="simpleTabsContent">
+                <ul id="mycarousel09" class="jcarousel-skin-tango">
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx" class="img_product"><img alt="Kem trang điểm BB Cream The Face Shop SPF37 20ml" src="http://sieumuanhanh.com/data/news/1602/bb-cream-the-face-shop-spf3.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-cream-the-face-shop-spf37-20ml.aspx"> Kem trang điểm BB Cream The Face Shop SP..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">225.000 VNĐ</span> </div>
+                      <div class="reduce">-36%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx" class="img_product"><img alt="Kem trang điểm BB The Face Shop Face it Waterproof BB SPF50" src="http://sieumuanhanh.com/data/news/1649/bb-face-it-waterproof-bb-spf50-pa-the-face-shop.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-bb-the-face-shop-face-it-waterproof-bb-spf50.aspx"> Kem trang điểm BB The Face Shop Face it ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>360.000 đ</del></span> <span class="main_price">255.000 VNĐ</span> </div>
+                      <div class="reduce">-29%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx" class="img_product"><img alt="Sữa dưỡng da collagen 3w clinic Collagen Regeneration Emulsion" src="http://sieumuanhanh.com/data/news/1660/collagen-3w-clinic-3w-clinic-collagen-regeneration-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-duong-da-collagen-3w-clinic-collagen-regeneration-emulsion.aspx"> Sữa dưỡng da collagen 3w clinic Collagen..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>350.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-46%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1660" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx" class="img_product"><img alt="Sữa rửa mặt White Tree Snow Exfoliating Foam Cleanser The face shop" src="http://sieumuanhanh.com/data/news/1611/white-tree-snow-exfoliating-foam-cleanser.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-white-tree-snow-exfoliating-foam-cleanser-the-face-shop.aspx"> Sữa rửa mặt White Tree Snow Exfoliating ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>190.000 đ</del></span> <span class="main_price">175.000 VNĐ</span> </div>
+                      <div class="reduce">-08%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1611" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx" class="img_product"><img alt="Kem trang điểm thông minh CC Cream Smart Capsule Color Control" src="http://sieumuanhanh.com/data/news/1257/cc-cream.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/kem-trang-diem-thong-minh-cc-cream-smart-capsule-color-control.aspx"> Kem trang điểm thông minh CC Cream Smart..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>520.000 đ</del></span> <span class="main_price">405.000 VNĐ</span> </div>
+                      <div class="reduce">-22%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1257" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx" class="img_product"><img alt="Sữa rửa mặt tinh chất lô hội 3W Clinic Pure Clean Aloe" src="http://sieumuanhanh.com/data/news/2066/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tinh-chat-lo-hoi-3w-clinic-pure-clean-aloe.aspx"> Sữa rửa mặt tinh chất lô hội 3W Clinic P..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>200.000 đ</del></span> <span class="main_price">140.000 VNĐ</span> </div>
+                      <div class="reduce">-30%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2066" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx" class="img_product"><img alt="Tinh chất dưỡng da Black egg pore serum" src="http://sieumuanhanh.com/data/news/2064/tinh-chat-duong-da-black-egg-pore-serum.jpg.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/tinh-chat-duong-da-black-egg-pore-serum.aspx"> Tinh chất dưỡng da Black egg pore serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>240.000 đ</del></span> <span class="main_price">192.000 VNĐ</span> </div>
+                      <div class="reduce">-20%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2064" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx" class="img_product"><img alt="Sữa rửa mặt Trà xanh 3W Clinic Green Tea" src="http://sieumuanhanh.com/data/news/2063/sua-rua-mat-tra-xanh-3w-clinic-green-tea.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/sua-rua-mat-tra-xanh-3w-clinic-green-tea.aspx"> Sữa rửa mặt Trà xanh 3W Clinic Green Tea</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>100.000 đ</del></span> <span class="main_price">60.000 VNĐ</span> </div>
+                      <div class="reduce">-40%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2063" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx" class="img_product"><img alt="Facial Water Vita-C ( Mist) - Nước xịt khoáng Vita-C" src="http://sieumuanhanh.com/data/news/2062/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/facial-water-vita-c-mist-nuoc-xit-khoang-vita-c.aspx"> Facial Water Vita-C ( Mist) - Nước xịt k..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>250.000 đ</del></span> <span class="main_price">190.000 VNĐ</span> </div>
+                      <div class="reduce">-24%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2062" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx" class="img_product"><img alt="Black Pomegranate Voluming Serum" src="http://sieumuanhanh.com/data/news/2060/black-pomegranate-voluming-serum.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-voluming-serum.aspx"> Black Pomegranate Voluming Serum</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>550.000 đ</del></span> <span class="main_price">490.000 VNĐ</span> </div>
+                      <div class="reduce">-11%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2060" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx" class="img_product"><img alt="Black Pomegranate Emulsion- Sữa dưỡng chiết xuất từ lựu" src="http://sieumuanhanh.com/data/news/2059/black-pomegranate-emulsion.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-emulsion-sua-duong-chiet-xuat-tu-luu.aspx"> Black Pomegranate Emulsion- Sữa dưỡng ch..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2059" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                  <li class="item_P">
+                    <!--Start Product-->
+                    <div class="product"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx" class="img_product"><img alt="Black Pomegranate Toner &ndash; Nước hoa hồng chiết xuất từ quả lựu" src="http://sieumuanhanh.com/data/news/2058/black-pomegranate-toner.jpg"></a>
+                      <h3 class="product_name"> <a href="/san-pham/black-pomegranate-toner-nuoc-hoa-hong-chiet-xuat-tu-qua-luu.aspx"> Black Pomegranate Toner &ndash; Nước hoa hồng ..</a></h3>
+                      <div class="info_price"> <span class="f_price"><del>450.000 đ</del></span> <span class="main_price">410.000 VNĐ</span> </div>
+                      <div class="reduce">-09%</div>
+                      <div class="btn_P"> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=2058" class="view_detail">Chi tiết</a> <a href="http://sieumuanhanh.com/vi-vn/addtocart.aspx?id=1602" class="addtocart">Mua hàng</a></div>
+                    </div>
+                    <!--End Product-->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--End Tab Position 3-->
+        </div>
+        <!--Ads Cate-->
+        <div class="ads_cate fr"> <a href=""><img src="http://media.hangtot.com/Thumbnail/Large/Upload/2014/8/21/2b6a69bca197dc1345172c7bac6af975.jpg" alt="" width="100%" /></a> <a href=""><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTPtAzgfIzucapJtL1k-DM4MINJWjGxU3Vkfh9amlu_02-m0to8zQ" alt="" width="100%" /></a> </div>
+        <!--end Ads Cate-->
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Categories News Home-->
+    <div class="box">
+      <div class="box_Tab"> <a href="" title="Thực phẩm chức năng" class="main_cate">
+        <h2 class="cate_name">Kiến thức y khoa</h2>
+        <span class="r_Tab"></span></a>
+        <ul class="sub_cate_home fr">
+          <li><a href="">Bệnh học da liễu</a></li>
+          <li><a href="">Nam khoa</a></li>
+          <li><a href="">Phụ khoa</a></li>
+          <li><a href="">Dinh dưỡng</a></li>
+          <li><a href="">Thực phẩm chức năng</a></li>
+          <li><a href="" class="view_all">Xem tất cả <span class="arr_down"></span></a></li>
+        </ul>
+      </div>
+      <div class="box_home_left fl">
+        <div id="box_ct_news">
+          <!--Row News Home-->
+          <div class="row_news_home">
+            <div class="hot_news_cate fl"> <a title="Xem nhiều TV trên cùng 1 đầu thu K+ để tiết kiệm chi phí hơn" href="/bien-dao/hai-dang-phu-quy-mat-bien-dem-giua-dao-tien-tieu.html"> <img class="fullsize480 img_general" alt="Xem nhiều TV trên cùng 1 đầu thu K+ để tiết kiệm chi phí hơn" title="Xem nhiều TV trên cùng 1 đầu thu K+ để tiết kiệm chi phí hơn" src="http://media.tinmoi.vn/2013/11/05/funny-bong-da_09-53-24.png"></a>
+              <h3><a class="title_hotnews_cate" href="" target="_parent" title="Mẹo trị chứng viêm họng hiệu quả">Mẹo trị chứng viêm họng hiệu quả</a></h3>
+              <span class="date_news">26/03/2014 | 0 Bình luận</span>
+              <p class="short_des"> Khi bị viêm họng bạn thường có cảm giác ngứa rát cổ họng, đau khi nuốt. Một số mẹo hay dưới đây sẽ giúp bạn nhanh chóng giảm cảm giác khó chịu:<br />
+                Chữa viêm họng bằng đồ uống<br />
+                - Trà nóng là một loại thức uống có lợi cho sức khỏe, đặc biệt còn có công dụng bất ngờ trong việc trị chứng đau rát cổ họng.<br />
+                Nếu bị viêm họng thì uống trà nóng sẽ giúp cổ họng của bạn dịu đi rất nhiều.<br />
+                Bạn có thể pha thêm vài giọt mật ong nhỏ vào ly trà nóng thì hương vị càng ngon, tác dụng trị viêm càng tốt, bởi trong mật ong chứa nhiều vitamin giúp tăng sức đề kháng cho cơ thể. <a href="" class="view_more_news">Đọc tiếp &raquo;</a></p>
+            </div>
+            <div class="list_news_cate fr">
+              <div class="tab_news">Tin mới nhất</div>
+              <ul>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">Cách nhận biết và phòng ngừa bệnh sởi</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">5 điều quan trọng nhất phải làm để phòng bệnh sởi cho trẻ</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">Cách nhận biết và phòng ngừa bệnh sởi</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">5 điều quan trọng nhất phải làm để phòng bệnh sởi cho trẻ</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">Cách nhận biết và phòng ngừa bệnh sởi</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--end Row News Home-->
+          <!--Row News Home-->
+          <div class="row_news_home">
+            <div class="hot_news_cate fl"> <a title="Xem nhiều TV trên cùng 1 đầu thu K+ để tiết kiệm chi phí hơn" href="/bien-dao/hai-dang-phu-quy-mat-bien-dem-giua-dao-tien-tieu.html"> <img class="fullsize480 img_general" alt="Xem nhiều TV trên cùng 1 đầu thu K+ để tiết kiệm chi phí hơn" title="Xem nhiều TV trên cùng 1 đầu thu K+ để tiết kiệm chi phí hơn" src="http://media.tinmoi.vn/2013/11/05/funny-bong-da_09-53-24.png"></a>
+              <h3><a class="title_hotnews_cate" href="" target="_parent" title="Mẹo trị chứng viêm họng hiệu quả">Mẹo trị chứng viêm họng hiệu quả</a></h3>
+              <span class="date_news">26/03/2014 | 0 Bình luận</span>
+              <p class="short_des"> Khi bị viêm họng bạn thường có cảm giác ngứa rát cổ họng, đau khi nuốt. Một số mẹo hay dưới đây sẽ giúp bạn nhanh chóng giảm cảm giác khó chịu:<br />
+                Chữa viêm họng bằng đồ uống<br />
+                - Trà nóng là một loại thức uống có lợi cho sức khỏe, đặc biệt còn có công dụng bất ngờ trong việc trị chứng đau rát cổ họng.<br />
+                Nếu bị viêm họng thì uống trà nóng sẽ giúp cổ họng của bạn dịu đi rất nhiều.<br />
+                Bạn có thể pha thêm vài giọt mật ong nhỏ vào ly trà nóng thì hương vị càng ngon, tác dụng trị viêm càng tốt, bởi trong mật ong chứa nhiều vitamin giúp tăng sức đề kháng cho cơ thể. <a href="" class="view_more_news">Đọc tiếp &raquo;</a></p>
+            </div>
+            <div class="list_news_cate fr">
+              <div class="tab_news">Tin xem nhiều nhất</div>
+              <ul>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">Cách nhận biết và phòng ngừa bệnh sởi</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">5 điều quan trọng nhất phải làm để phòng bệnh sởi cho trẻ</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">Cách nhận biết và phòng ngừa bệnh sởi</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">5 điều quan trọng nhất phải làm để phòng bệnh sởi cho trẻ</a></div>
+                </li>
+                <li>
+                  <div class="date_news fl">04/18</div>
+                  <div class="tt_news_home fl"><a href="/bien-dao/them-nhieu-bang-chung-khang-dinh-hoang-sa-truong-sa-cua-viet-nam.html" target="_parent" title="Cách nhận biết và phòng ngừa bệnh sởi">Cách nhận biết và phòng ngừa bệnh sởi</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--end Row News Home-->
+        </div>
+      </div>
+      <!--Ads Cate-->
+      <div class="ads_cate fr"> <a href=""><img src="http://media.hangtot.com/Thumbnail/Large/Upload/2014/8/21/2b6a69bca197dc1345172c7bac6af975.jpg" alt="" width="100%" /></a> <a href=""><img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTPtAzgfIzucapJtL1k-DM4MINJWjGxU3Vkfh9amlu_02-m0to8zQ" alt="" width="100%" /></a> </div>
+      <!--end Ads Cate-->
+      <div class="cf"> </div>
+    </div>
+    <!--end Categories News Home-->
+    <div class="box" id="SEO_content">
+      <h1>Shopbacsi.com - Trang mua sắm mỹ phẩm chất lượng tại Việt Nam.</h1>
+      <img src="Images/small_logo.gif" alt="" width="89" class="img_general" />
+      <p>Một trong những phương thức cơ bản nhằm tạo niềm tin cho người tiêu dùng khi mua hàng online là nâng cao chất lượng hoạt động, thực thi cam kết, chính sách của các website thương mại điện tử.. shopbacsi.com xây dựng trên tinh thần trách nhiệm nhằm bảo vệ lợi ích tối đa cho người tiêu dùng và hướng tới sự phát triển lành mạnh của thương mại điện tử.. 
+        Chúng tôi đi tiên phong trong việc quan tâm đến mọi nhu cầu vật dụng, nội thất, hàng công nghệ,... trong ngôi nhà thân yêu của bạn. 
+        Chú trọng vào chất lượng cũng như xuất sứ sản phẩm...</p>
+    </div>
+  </div>
+  <!--end Main-->
+  <!--Ads Bottom-->
+  <div class="box" id="ads_bottom">
+    <div class="tab_ads_bottom font1">Quảng Cáo</div>
+    <script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_ads_bottom').jcarousel({
+        auto: 4,
+        wrap: 'circular',
+        scroll: 3,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+    <ul id="mycarousel_ads_bottom" class="jcarousel-skin-tango">
+      <li><a href="" class="ads_item"><img src="http://obsmedia.com.vn/wp-content/uploads/banner-design1.png" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+      <li><a href="" class="ads_item"><img src="http://ad.vtmgroup.com.vn/admin/webroot/upload/image/images/banner-hoc-thu-021.jpg" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+      <li><a href="" class="ads_item"><img src="http://obsmedia.com.vn/wp-content/uploads/banner-design1.png" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+      <li><a href="" class="ads_item"><img src="http://obsmedia.com.vn/wp-content/uploads/banner-design1.png" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+      <li><a href="" class="ads_item"><img src="http://www.idviet.com/upload/sanpham/www.idvietnam.net-177-3.jpg" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+      <li><a href="" class="ads_item"><img src="http://obsmedia.com.vn/wp-content/uploads/banner-design1.png" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+      <li><a href="" class="ads_item"><img src="http://moore.vn/Uploads/Images/1/915/19154c0956047bf6c2dd7e3568c72969.jpg" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+      <li><a href="" class="ads_item"><img src="http://ecm.vietiso.com/images//content/152260eb690c803ba3df9cd6bc17bb06.jpg" alt="Tên Sản Phẩm" title="Tên Sản Phẩm" /></a> </li>
+    </ul>
+  </div>
+  <!--end Ads Bottom-->
+  <!--Connect-->
+  <div class="box" id="connect">
+    <div id="get_email" class="fl font2">
+      <label class="fl">Đăng ký nhận khuyến mãi:</label>
+      <div class="fl">
+        <input type="text" class="txf" size="40" id="vi7_txtEmail" name="ctl00$vi7$txtEmail" value="Nhập Email...">
+        <input type="submit" style="margin-bottom: 0px;
+                cursor: pointer;" class="send_btn font2" id="vi7_btnSubmit" value="Đăng ký" name="ctl00$vi7$btnSubmit">
+      </div>
+    </div>
+    <div id="access_status" class="fr"> <span>Đang Online: <b> 1</b></span> <span>Tổng truy cập: <b> 646</b></span> </div>
+  </div>
+  <!--end Connect-->
+  <!--Footer-->
+  <div id="footer">
+    <!--Footer Top-->
+    <ul id="list_col_footer">
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font2">Giới thiệu</div>
+        <div class="col_F_ct">
+          <ul class="list_menu_footer">
+            <li><a href="list_news.html">Giới thiệu</a></li>
+            <li><a href="">Tuyển dụng</a></li>
+            <li><a href="">Tin tức</a></li>
+            <li><a href="">Video</a></li>
+            <li><a href="contactus.html">Liên hệ</a></li>
+          </ul>
+        </div>
+      </li>
+      <!--end Column Footer-->
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font2">Hỗ trợ khách hàng</div>
+        <div class="col_F_ct">
+          <ul class="list_menu_footer">
+            <li><a href="">Cách thức thanh toán</a></li>
+            <li><a href="">Hướng dẫn đặt hàng</a></li>
+            <li><a href="">Chính sách bảo mật</a></li>
+            <li><a href="">Điều khoản giao dịch chung</a></li>
+            <li><a href="">Hướng dẫn mua hàng</a></li>
+          </ul>
+        </div>
+      </li>
+      <!--end Column Footer-->
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font2">Danh mục sản phẩm</div>
+        <div class="col_F_ct">
+          <ul class="list_menu_footer">
+            <li><a href="">Mỹ phẩm</a></li>
+            <li><a href="">Men health</a></li>
+            <li><a href="">Thực phẩm chức năng</a></li>
+            <li><a href=""> Kiến thức y khoa</a></li>
+            <li><a href="">Bác sĩ tư vấn 24/7</a></li>
+          </ul>
+        </div>
+      </li>
+      <!--end Column Footer-->
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font2">Shop bác sĩ</div>
+        <div class="col_F_ct" id="info_footer">
+          <p>Ðịa chỉ: 90/8A Bông Sao, Phường 5, Quận 8, Tp. Hồ Chí Minh</p>
+          <p>Điện thoại: 0932010126</p>
+          <p>Website: shopbacsi.com</p>
+        </div>
+        <div id="method_payment" class=""> <i>Hình thức thanh toán:</i> <a href=""><img src="Images/cash_icon.png" alt="" width="64" height="28" /></a> <a href=""><img src="Images/banking_icon.png" alt="" width="79" height="28" /></a> </div>
+      </li>
+      <!--end Column Footer-->
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="col_F_ct"> <img src="Images/likebox.gif" alt="" width="100%" height="235" /> </div>
+      </li>
+      <!--end Column Footer-->
+    </ul>
+    <!--end Footer Top-->
+    <div id="copyright" class="cf">© 2014 shopbacsi.com. All Rights Reserved.  <a href="http://www.dangcapviet.vn" target="_blank">Designed by Dang Cap Viet</a>.</div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

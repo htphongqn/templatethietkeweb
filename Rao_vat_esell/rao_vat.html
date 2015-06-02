@@ -1,0 +1,1360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Rao vặt Esell</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link rel="stylesheet" href="Styles/block.css" type="text/css" />
+<link rel="stylesheet" href="Styles/shopping.css" type="text/css" />
+<link rel="stylesheet" href="Styles/scroll.css" type="text/css" />
+<!-- Slider -->
+<link rel="stylesheet" href="Styles/slider.css" type="text/css" />
+<script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+<!-- Menu sidebar -->
+<script type="text/javascript">
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div id="page">
+    <!--#begin Header-->
+    <div id="header">
+      <div id="header-inner">
+        <div id="logo"> <a href="rao_vat.html" alt="Esell"><img src="Images/logo_raovat.png" alt="" border="" /></a></div>
+        <div id="header-right">
+          <div class="topmenu">
+            <ul class="menu">
+              <li><a href="list_product.html">Sản phẩm</a></li>
+              <li><a href="list_shop.html">Cửa hàng</a></li>
+              <li><a href="company_index.html">Doanh nghiệp</a></li>
+              <li><a href="human_index.html">Doanh nhân</a></li>
+              <li class="dealmenu"><a href="deal_index.html">Deal hôm nay</a></li>
+              <li><a href="#">Esell của tôi</a></li>
+              <li class="last"><a href="seller/law_seller.html#seller1">Hỗ trợ khách hàng</a></li>
+            </ul>
+          </div>
+          <!--#Đăng nhập-->
+          <div id="login">
+            <ul class="menu">
+              <li><a href="login.html">Đăng nhập</a></li>
+              <li class="last"><a href="register.html">Đăng ký</a></li>
+            </ul>
+          </div>
+          <div id="local">Khu vực:
+            <select name="khuvuc" class="type-option">
+              <option value="0">Toàn quốc</option>
+              <option value="1">Miền Bắc</option>
+              <option value="2">Miền Trung</option>
+              <option value="3">Miền Nam</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="header-bottom">
+        <div id="search">
+          <table width="100%" cellspacing="0" cellpadding="1" border="0">
+            <tbody>
+              <tr>
+                <td class="search"><input name="ctl00$ContentPlaceHolder1$vi3$txtSearch" type="text" id="ContentPlaceHolder1_vi3_txtSearch" class="inputbox" style="width: 450px; margin-right: 3px;" value="Tìm kiếm..." onblur="if (this.value==&#39;&#39;) this.value=&#39;Tìm kiếm...&#39;;" onfocus="if (this.value==&#39;Tìm kiếm...&#39;) this.value=&#39;&#39;;" /></td>
+                <td valign="top"><select name="ctl00$ContentPlaceHolder1$vi3$ddl_ListSearh" id="ContentPlaceHolder1_vi3_ddl_ListSearh" class="type-option ddllistsearch">
+                    <option value="1">Tất cả rao vặt</option>
+                    <option value="2">Nhà đất</option>
+                    <option value="2">Ô tô - xe máy</option>
+                  </select></td>
+                <td valign="top" align="left"><input type="submit" name="ctl00$ContentPlaceHolder1$vi3$btn_SearchKeyword" value="" id="ContentPlaceHolder1_vi3_btn_SearchKeyword" class="bt-search" /></td>
+                <td valign="top" align="left">
+                <td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--#end Header-->
+    <!-- #Main -->
+    <div id="main" class="clearfix">
+      <div class="path_0"> <a href="/">Trang chủ</a>&nbsp;&raquo; Rao vặt</div>
+      <script type="text/javascript" src="http://static.vatgia.com/js/helpsearchcontent.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/functions_main.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/windowPrompt/windowPrompt.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/functions_raovat.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.lazyload.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.hoverIntent.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.tooltip.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.autocomplete.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.ajaxQueue.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.easing.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.cookie.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.timeago.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/colorbox/colorbox.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/avim.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/jquery.min.js"></script>
+      <script type="text/javascript" src="http://static.vatgia.com/js/AC_RunActiveContent.js"></script>
+      <script type="text/javascript">
+$(function(){
+$(".list_home_category_raovat a[iData]").click(function(){
+var iCat = $(this).attr("iData");
+
+if($("#sub_category_raovat_"+iCat).html() == ""){
+
+$("#sub_category_raovat_"+iCat).load("/ajax_v2/load_category_raovat.php?iCat="+iCat, function(){
+$("#sub_category_raovat_"+iCat).toggle("slow");
+$("#sub_category_raovat_"+iCat).parent().children("a.show_child").removeClass("show_child").addClass("hide_child");
+});
+
+}else{
+$("#sub_category_raovat_"+iCat).toggle("slow", function(){
+if($(this).is(':hidden') == true){
+$(this).parent().children("a:first").removeClass("hide_child").addClass("show_child");
+}else{
+$(this).parent().children("a:first").removeClass("show_child").addClass("hide_child");
+}
+});
+}
+});
+
+$(".list_home_category_raovat li.level_1").hover(
+function(){
+//An tat ca nhung icon post dang hien thi
+$(".list_home_category_raovat a.post").hide();
+
+//Show icon post cua category hien tai
+$(this).children("a.post").show();
+},
+function(){
+//An tat ca nhung icon post dang hien thi
+$(".list_home_category_raovat a.post").hide();
+}
+);
+});
+
+function show_hide_more_category_raovat(iCat){
+$("#list_category_raovat_"+iCat+" .hidden").toggle("normal", function(){
+var count = $("#list_category_raovat_"+iCat).find("li.level_1:hidden").length;
+if(count > 0){
+$("#list_category_raovat_"+iCat+" .more a").html("Xem thêm").fadeIn("slow");
+$("#list_category_raovat_"+iCat+" .more a").removeClass("show").addClass("hide");
+}else{
+$("#list_category_raovat_"+iCat+" .more a").html("Thu lại");
+$("#list_category_raovat_"+iCat+" .more a").removeClass("hide").addClass("show");
+}
+});
+}
+</script>
+      <div class="content">
+        <div class="list_home_category_raovat">
+          <div class="fl">
+            <ul id="list_category_raovat_2588">
+              <li class="level_0"><a href="/raovat/2588/bat-dong-san.html">Bất động sản</a></li>
+              <li iCat="2589" class="level_1 "><a title="Mua, bán nhà" class="name arrow_right" href="/raovat/2589/mua-ban-nha.html">Mua, bán nhà</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI1ODk='));" title="Đăng rao vặt vào mục Mua, bán nhà">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+              </li>
+              <li iCat="2590" class="level_1 "><a title="Mua, bán đất" class="name arrow_right" href="/raovat/2590/mua-ban-dat.html">Mua, bán đất</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI1OTA='));" title="Đăng rao vặt vào mục Mua, bán đất">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+              </li>
+              <li iCat="3518" class="level_1 "><a title="Cho thuê kho, xưởng" class="name arrow_right" href="/raovat/3518/cho-thue-kho-xuong.html">Cho thuê kho, xưởng</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1MTg='));" title="Đăng rao vặt vào mục Cho thuê kho, xưởng">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+              </li>
+              <li iCat="2593" class="level_1 "><a title="Cho thuê nhà" class="name arrow_right" href="/raovat/2593/cho-thue-nha.html">Cho thuê nhà</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI1OTM='));" title="Đăng rao vặt vào mục Cho thuê nhà">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+              </li>
+              <li iCat="3611" class="level_1 "><a title="Cho thuê văn phòng" class="name arrow_right" href="/raovat/3611/cho-thue-van-phong.html">Cho thuê văn phòng</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2MTE='));" title="Đăng rao vặt vào mục Cho thuê văn phòng">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+              </li>
+              <li iCat="2594" class="level_1 hidden"><a title="Cho thuê đất" class="name arrow_right" href="/raovat/2594/cho-thue-dat.html">Cho thuê đất</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI1OTQ='));" title="Đăng rao vặt vào mục Cho thuê đất">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+              </li>
+              <li iCat="4318" class="level_1 hidden"><a title="Dịch vụ nhà đất" class="name arrow_right" href="/raovat/4318/dich-vu-nha-dat.html">Dịch vụ nhà đất</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMTg='));" title="Đăng rao vặt vào mục Dịch vụ nhà đất">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+              </li>
+              <li iCat="3588" class="level_1 hidden"><a class="child show_child" iData="3588" href="javascript:;" title="Xem thêm danh mục rao vặt cấp con">&nbsp; &nbsp;</a> <a title="Cần thuê" class="name" href="/raovat/3588/can-thue.html">Cần thuê</a><a class="post" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1ODg='));" title="Đăng tin rao vặt vào mục Cần thuê">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                <div class="clear"></div>
+                <ul id="sub_category_raovat_3588" class="list_sub_category_raovat">
+                </ul>
+              </li>
+              <li class="more"><a href="javascript:show_hide_more_category_raovat();" class="hide">Xem thêm</a></li>
+            </ul>
+          </div>
+          <div class="break_content_line"></div>
+          <div class="break_content_line"></div>
+        </div>
+      </div>
+      <div class="list_category_ads">
+        <div class="col">
+          <ul>
+            <li class="level_0"><a href="danh_sach_raovat.html">Bất động sản</a></li>
+            <li class="level_1"><a href="/raovat/2589/mua-ban-nha.html" class="arrow_level_01" title="Mua, bán nhà">Mua, bán nhà</a><a title="Đăng rao vặt vào mục Mua, bán nhà" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI1ODk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/2590/mua-ban-dat.html" class="arrow_level_01" title="Mua, bán đất">Mua, bán đất</a><a title="Đăng rao vặt vào mục Mua, bán đất" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI1OTA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/3518/cho-thue-kho-xuong.html" class="arrow_level_01" title="Cho thuê kho, xưởng">Cho thuê kho, xưởng</a><a title="Đăng rao vặt vào mục Cho thuê kho, xưởng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1MTg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/2593/cho-thue-nha.html" class="arrow_level_01" title="Cho thuê nhà">Cho thuê nhà</a><a title="Đăng rao vặt vào mục Cho thuê nhà" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI1OTM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden"><a href="/raovat/3611/cho-thue-van-phong.html" class="arrow_level_01" title="Cho thuê văn phòng">Cho thuê văn phòng</a><a title="Đăng rao vặt vào mục Cho thuê văn phòng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2MTE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden"><a href="/raovat/3611/cho-thue-van-phong.html" class="arrow_level_01" title="Cho thuê văn phòng">Cho thuê văn phòng</a><a title="Đăng rao vặt vào mục Cho thuê văn phòng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2MTE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden"><a href="/raovat/3611/cho-thue-van-phong.html" class="arrow_level_01" title="Cho thuê văn phòng">Cho thuê văn phòng</a><a title="Đăng rao vặt vào mục Cho thuê văn phòng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2MTE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden"><a href="/raovat/3611/cho-thue-van-phong.html" class="arrow_level_01" title="Cho thuê văn phòng">Cho thuê văn phòng</a><a title="Đăng rao vặt vào mục Cho thuê văn phòng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2MTE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="more"><a href="javascript:show_hide_more_category_raovat(2588);" class="hide">Xem thêm</a> </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_2603">
+            <li class="level_0"><a href="/raovat/2603/viec-lam-tuyen-dung.html">Việc làm, tuyển dụng</a></li>
+            <li class="level_1" icat="2604"><a href="/raovat/2604/nguoi-tim-viec.html" class="arrow_level_01" title="Người tìm việc">Người tìm việc</a><a title="Đăng rao vặt vào mục Người tìm việc" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="2605"><a href="/raovat/2605/viec-tim-nguoi.html" class="arrow_level_01" title="Việc tìm người">Việc tìm người</a><a title="Đăng rao vặt vào mục Việc tìm người" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/3971/dich-vu-viec-lam.html" id="slidedown" class="arrow_level_01 open" title="Dịch vụ việc làm">Dịch vụ việc làm</a>
+              <div class="clearfix"></div>
+              <ul id="slideup" class="list_sub_category_raovat">
+                <li class="level_2" icat="4307"> <a href="/raovat/4307/can-thue-nguoi-giup-viec.html" class="arrow_level_02" title="Cần thuê người giúp việc">Cần thuê người giúp...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3824"> <a href="/raovat/3824/cho-thue-nhan-vien-quang-cao.html" class="arrow_level_02" title="Cho thuê nhân viên quảng cáo">Cho thuê nhân viên...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3539"> <a href="/raovat/3539/dich-vu-viec-lam.html" class="arrow_level_02" title="Dịch vụ việc làm">Dịch vụ việc làm</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1Mzk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3822"> <a href="/raovat/3822/thong-tin-nguoi-giup-viec.html" class="arrow_level_02" title="Thông tin người giúp việc">Thông tin người...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_2603">
+            <li class="level_0"><a href="/raovat/2603/viec-lam-tuyen-dung.html">Việc làm, tuyển dụng</a></li>
+            <li class="level_1" icat="2604"><a href="/raovat/2604/nguoi-tim-viec.html" class="arrow_level_01" title="Người tìm việc">Người tìm việc</a><a title="Đăng rao vặt vào mục Người tìm việc" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="2605"><a href="/raovat/2605/viec-tim-nguoi.html" class="arrow_level_01" title="Việc tìm người">Việc tìm người</a><a title="Đăng rao vặt vào mục Việc tìm người" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/3971/dich-vu-viec-lam.html" class="arrow_level_01" title="Dịch vụ việc làm">Dịch vụ việc làm</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat">
+                <li class="level_2" icat="4307"> <a href="/raovat/4307/can-thue-nguoi-giup-viec.html" class="arrow_level_02" title="Cần thuê người giúp việc">Cần thuê người giúp...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3824"> <a href="/raovat/3824/cho-thue-nhan-vien-quang-cao.html" class="arrow_level_02" title="Cho thuê nhân viên quảng cáo">Cho thuê nhân viên...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3539"> <a href="/raovat/3539/dich-vu-viec-lam.html" class="arrow_level_02" title="Dịch vụ việc làm">Dịch vụ việc làm</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1Mzk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3822"> <a href="/raovat/3822/thong-tin-nguoi-giup-viec.html" class="arrow_level_02" title="Thông tin người giúp việc">Thông tin người...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_2603">
+            <li class="level_0"><a href="/raovat/2603/viec-lam-tuyen-dung.html">Việc làm, tuyển dụng</a></li>
+            <li class="level_1" icat="2604"><a href="/raovat/2604/nguoi-tim-viec.html" class="arrow_level_01" title="Người tìm việc">Người tìm việc</a><a title="Đăng rao vặt vào mục Người tìm việc" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="2605"><a href="/raovat/2605/viec-tim-nguoi.html" class="arrow_level_01" title="Việc tìm người">Việc tìm người</a><a title="Đăng rao vặt vào mục Việc tìm người" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/3971/dich-vu-viec-lam.html" class="arrow_level_01" title="Dịch vụ việc làm">Dịch vụ việc làm</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat">
+                <li class="level_2" icat="4307"> <a href="/raovat/4307/can-thue-nguoi-giup-viec.html" class="arrow_level_02" title="Cần thuê người giúp việc">Cần thuê người giúp...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3824"> <a href="/raovat/3824/cho-thue-nhan-vien-quang-cao.html" class="arrow_level_02" title="Cho thuê nhân viên quảng cáo">Cho thuê nhân viên...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3539"> <a href="/raovat/3539/dich-vu-viec-lam.html" class="arrow_level_02" title="Dịch vụ việc làm">Dịch vụ việc làm</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1Mzk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3822"> <a href="/raovat/3822/thong-tin-nguoi-giup-viec.html" class="arrow_level_02" title="Thông tin người giúp việc">Thông tin người...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col fr">
+          <ul id="list_category_ads_2603">
+            <li class="level_0"><a href="/raovat/2603/viec-lam-tuyen-dung.html">Việc làm, tuyển dụng</a></li>
+            <li class="level_1" icat="2604"><a href="/raovat/2604/nguoi-tim-viec.html" class="arrow_level_01" title="Người tìm việc">Người tìm việc</a><a title="Đăng rao vặt vào mục Người tìm việc" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="2605"><a href="/raovat/2605/viec-tim-nguoi.html" class="arrow_level_01" title="Việc tìm người">Việc tìm người</a><a title="Đăng rao vặt vào mục Việc tìm người" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/3971/dich-vu-viec-lam.html" class="arrow_level_01" title="Dịch vụ việc làm">Dịch vụ việc làm</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat">
+                <li class="level_2" icat="4307"> <a href="/raovat/4307/can-thue-nguoi-giup-viec.html" class="arrow_level_02" title="Cần thuê người giúp việc">Cần thuê người giúp...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3824"> <a href="/raovat/3824/cho-thue-nhan-vien-quang-cao.html" class="arrow_level_02" title="Cho thuê nhân viên quảng cáo">Cho thuê nhân viên...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3539"> <a href="/raovat/3539/dich-vu-viec-lam.html" class="arrow_level_02" title="Dịch vụ việc làm">Dịch vụ việc làm</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1Mzk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3822"> <a href="/raovat/3822/thong-tin-nguoi-giup-viec.html" class="arrow_level_02" title="Thông tin người giúp việc">Thông tin người...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="break_content_line"></div>
+        <div class="col">
+          <ul>
+            <li class="level_0"><a href="/raovat/1528/oto-xe-may.html">Ôtô, xe máy</a></li>
+            <li class="level_1" icat="1535"><a href="/raovat/1535/mua-ban-oto.html" class="arrow_level_01" title="Mua bán ôtô">Mua bán ôtô</a><a title="Đăng rao vặt vào mục Mua bán ôtô" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1MzU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="1536"><a href="/raovat/1536/mua-ban-xe-may.html" class="arrow_level_01" title="Mua bán xe máy">Mua bán xe máy</a><a title="Đăng rao vặt vào mục Mua bán xe máy" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1MzY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="10342"><a href="/raovat/10342/phu-tung-xe-dap.html" class="arrow_level_01" title="Phụ tùng xe đạp">Phụ tùng xe đạp</a><a title="Đăng rao vặt vào mục Phụ tùng xe đạp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTEwMzQy'));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="6209"><a href="/raovat/6209/xe-tai.html" class="arrow_level_01" title="Xe tải">Xe tải</a><a title="Đăng rao vặt vào mục Xe tải" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTYyMDk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="1537"><a href="/raovat/1537/xe-dap-xe-dap-dien.html" class="arrow_level_01" title="Xe đạp, xe đạp điện">Xe đạp, xe đạp điện</a><a title="Đăng rao vặt vào mục Xe đạp, xe đạp điện" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1Mzc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7683"><a href="/raovat/7683/cho-thue-xe-dap.html" class="arrow_level_01" title="Cho thuê xe đạp">Cho thuê xe đạp</a><a title="Đăng rao vặt vào mục Cho thuê xe đạp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2ODM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="8459"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8459" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8459/co-khi-o-to.html" class="arrow_level_01" title="Cơ khí ô tô">Cơ khí ô tô</a><a title="Đăng tin rao vặt vào mục Cơ khí ô tô" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg0NTk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8459">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3808"><a href="/raovat/3808/sua-chua-oto-xe-may.html" class="arrow_level_01" title="Sửa chữa ôtô, xe máy">Sửa chữa ôtô, xe máy</a><a title="Đăng rao vặt vào mục Sửa chữa ôtô, xe máy" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MDg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7677"><a href="/raovat/7677/cho-thue-xe-may.html" class="arrow_level_01" title="Cho thuê xe máy">Cho thuê xe máy</a><a title="Đăng rao vặt vào mục Cho thuê xe máy" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2Nzc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="3529"><a href="/raovat/3529/can-thue-xe-oto.html" class="arrow_level_01" title="Cần thuê xe ôtô">Cần thuê xe ôtô</a><a title="Đăng rao vặt vào mục Cần thuê xe ôtô" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1Mjk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="3530"><a href="/raovat/3530/cho-thue-xe-oto.html" class="arrow_level_01" title="Cho thuê xe ôtô">Cho thuê xe ôtô</a><a title="Đăng rao vặt vào mục Cho thuê xe ôtô" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1MzA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7678"><a href="/raovat/7678/cho-thue-xe-oto-tap-lai.html" class="arrow_level_01" title="Cho thuê xe ôtô tập lái">Cho thuê xe ôtô tập...</a><a title="Đăng rao vặt vào mục Cho thuê xe ôtô tập lái" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2Nzg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="1699"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1699" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1699/phu-tung-xe-may.html" class="arrow_level_01" title="Phụ tùng xe máy">Phụ tùng xe máy</a><a title="Đăng tin rao vặt vào mục Phụ tùng xe máy" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2OTk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1699">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3596"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3596" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3596/phu-tung-do-choi-oto.html" class="arrow_level_01" title="Phụ tùng, đồ chơi ôtô">Phụ tùng, đồ chơi ôtô</a><a title="Đăng tin rao vặt vào mục Phụ tùng, đồ chơi ôtô" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1OTY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3596">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(1528);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_7184">
+            <li class="level_0"><a href="/raovat/7184/do-gia-dung.html">Đồ gia dụng</a></li>
+            <li class="level_1" icat="1624"><a href="/raovat/1624/may-giat.html" class="arrow_level_01" title="Máy giặt">Máy giặt</a><a title="Đăng rao vặt vào mục Máy giặt" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2MjQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="1645"><a href="/raovat/1645/may-hut-am-loc-khong-khi.html" class="arrow_level_01" title="Máy hút ẩm, lọc không khí">Máy hút ẩm, lọc không...</a><a title="Đăng rao vặt vào mục Máy hút ẩm, lọc không khí" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2NDU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="1628"><a href="/raovat/1628/may-hut-bui.html" class="arrow_level_01" title="Máy hút bụi">Máy hút bụi</a><a title="Đăng rao vặt vào mục Máy hút bụi" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2Mjg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="10312"><a href="/raovat/10312/tu-la-quan-ao.html" class="arrow_level_01" title="Tủ là quần áo">Tủ là quần áo</a><a title="Đăng rao vặt vào mục Tủ là quần áo" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTEwMzEy'));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="1615"><a href="/raovat/1615/tu-lanh.html" class="arrow_level_01" title="Tủ lạnh">Tủ lạnh</a><a title="Đăng rao vặt vào mục Tủ lạnh" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2MTU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7679"><a href="/raovat/7679/tu-dong.html" class="arrow_level_01" title="Tủ đông">Tủ đông</a><a title="Đăng rao vặt vào mục Tủ đông" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2Nzk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="1640"><a href="/raovat/1640/dieu-hoa.html" class="arrow_level_01" title="Điều hoà">Điều hoà</a><a title="Đăng rao vặt vào mục Điều hoà" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2NDA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="1587"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1587" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1587/thiet-bi-nha-bep.html" class="arrow_level_01" title="Thiết bị nhà bếp">Thiết bị nhà bếp</a><a title="Đăng tin rao vặt vào mục Thiết bị nhà bếp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1ODc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1587">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="1589"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1589" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1589/thiet-bi-suc-khoe.html" class="arrow_level_01" title="Thiết bị sức khoẻ">Thiết bị sức khoẻ</a><a title="Đăng tin rao vặt vào mục Thiết bị sức khoẻ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1ODk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1589">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="5202"><a href="/raovat/5202/may-lam-nong-lanh-nuoc-uong.html" class="arrow_level_01" title="Máy làm nóng lạnh nước uống">Máy làm nóng lạnh nước...</a><a title="Đăng rao vặt vào mục Máy làm nóng lạnh nước uống" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTUyMDI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="1641"><a href="/raovat/1641/quat-dien.html" class="arrow_level_01" title="Quạt điện">Quạt điện</a><a title="Đăng rao vặt vào mục Quạt điện" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2NDE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="1588"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1588" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1588/dien-tu-gia-dung-khac.html" class="arrow_level_01" title="Điện tử gia dụng khác">Điện tử gia dụng khác</a><a title="Đăng tin rao vặt vào mục Điện tử gia dụng khác" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1ODg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1588">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(7184);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_1753">
+            <li class="level_0"><a href="/raovat/1753/thoi-trang.html">Thời trang</a></li>
+            <li class="level_1" icat="1768"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1768" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1768/thoi-trang-nu.html" class="arrow_level_01" title="Thời trang nữ">Thời trang nữ</a><a title="Đăng tin rao vặt vào mục Thời trang nữ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3Njg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1768">
+              </ul>
+            </li>
+            <li class="level_1" icat="1767"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1767" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1767/thoi-trang-nam.html" class="arrow_level_01" title="Thời trang nam">Thời trang nam</a><a title="Đăng tin rao vặt vào mục Thời trang nam" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3Njc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1767">
+              </ul>
+            </li>
+            <li class="level_1" icat="7571"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7571" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7571/thoi-trang-teen.html" class="arrow_level_01" title="Thời trang Teen">Thời trang Teen</a><a title="Đăng tin rao vặt vào mục Thời trang Teen" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc1NzE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7571">
+              </ul>
+            </li>
+            <li class="level_1" icat="7590"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7590" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7590/thoi-trang-toc.html" class="arrow_level_01" title="Thời trang tóc">Thời trang tóc</a><a title="Đăng tin rao vặt vào mục Thời trang tóc" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc1OTA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7590">
+              </ul>
+            </li>
+            <li class="level_1" icat="7577"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7577" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7577/trang-phuc-hoa-trang.html" class="arrow_level_01" title="Trang phục hóa trang ">Trang phục hóa trang </a><a title="Đăng tin rao vặt vào mục Trang phục hóa trang " href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc1Nzc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7577">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="7582"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7582" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7582/tui-xach-cap-dung-vi-bop.html" class="arrow_level_01" title="Túi xách, cặp đựng, ví (bóp)">Túi xách, cặp đựng, ví...</a><a title="Đăng tin rao vặt vào mục Túi xách, cặp đựng, ví (bóp)" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc1ODI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7582">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="7614"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7614" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7614/do-doi.html" class="arrow_level_01" title="Đồ đôi">Đồ đôi</a><a title="Đăng tin rao vặt vào mục Đồ đôi" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2MTQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7614">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="7629"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7629" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7629/phu-kien-thoi-trang.html" class="arrow_level_01" title="Phụ kiện thời trang">Phụ kiện thời trang</a><a title="Đăng tin rao vặt vào mục Phụ kiện thời trang" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2Mjk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7629">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="1769"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1769" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1769/thoi-trang-tre-em.html" class="arrow_level_01" title="Thời trang Trẻ em">Thời trang Trẻ em</a><a title="Đăng tin rao vặt vào mục Thời trang Trẻ em" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3Njk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1769">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="2938"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="2938" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/2938/do-trang-suc.html" class="arrow_level_01" title="Đồ trang sức">Đồ trang sức</a><a title="Đăng tin rao vặt vào mục Đồ trang sức" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI5Mzg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_2938">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="1766"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1766" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1766/giay-dep.html" class="arrow_level_01" title="Giầy, dép">Giầy, dép</a><a title="Đăng tin rao vặt vào mục Giầy, dép" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NjY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1766">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="2933"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="2933" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/2933/quan-ao-dong-phuc.html" class="arrow_level_01" title="Quần áo đồng phục">Quần áo đồng phục</a><a title="Đăng tin rao vặt vào mục Quần áo đồng phục" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI5MzM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_2933">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="4300"><a href="/raovat/4300/hang-thanh-ly-giam-gia.html" class="arrow_level_01" title="Hàng thanh lý, giảm giá">Hàng thanh lý, giảm...</a><a title="Đăng rao vặt vào mục Hàng thanh lý, giảm giá" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="4301"><a href="/raovat/4301/hang-thoi-trang-khac.html" class="arrow_level_01" title="Hàng thời trang khác">Hàng thời trang khác</a><a title="Đăng rao vặt vào mục Hàng thời trang khác" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(1753);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_7182">
+            <li class="level_0"><a href="/raovat/7182/am-thanh-hinh-anh.html">Âm thanh, hình ảnh</a></li>
+            <li class="level_1" icat="1532"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1532" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1532/may-anh-may-quay.html" class="arrow_level_01" title="Máy ảnh, máy quay">Máy ảnh, máy quay</a><a title="Đăng tin rao vặt vào mục Máy ảnh, máy quay" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1MzI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1532">
+              </ul>
+            </li>
+            <li class="level_1" icat="1661"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1661" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1661/thiet-bi-cho-may-anh.html" class="arrow_level_01" title="Thiết bị cho máy ảnh">Thiết bị cho máy ảnh</a><a title="Đăng tin rao vặt vào mục Thiết bị cho máy ảnh" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE2NjE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1661">
+              </ul>
+            </li>
+            <li class="level_1" icat="7493"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7493" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7493/dich-vu-chup-rua-anh.html" class="arrow_level_01" title="Dịch vụ chụp, rửa ảnh">Dịch vụ chụp, rửa ảnh</a><a title="Đăng tin rao vặt vào mục Dịch vụ chụp, rửa ảnh" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc0OTM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7493">
+              </ul>
+            </li>
+            <li class="level_1" icat="1586"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1586" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1586/thiet-bi-am-thanh.html" class="arrow_level_01" title="Thiết bị âm thanh">Thiết bị âm thanh</a><a title="Đăng tin rao vặt vào mục Thiết bị âm thanh" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1ODY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1586">
+              </ul>
+            </li>
+            <li class="level_1" icat="1585"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1585" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1585/thiet-bi-hinh-anh.html" class="arrow_level_01" title="Thiết bị hình ảnh">Thiết bị hình ảnh</a><a title="Đăng tin rao vặt vào mục Thiết bị hình ảnh" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE1ODU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1585">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="7666"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7666" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7666/thiet-bi-an-ninh.html" class="arrow_level_01" title="Thiết bị an ninh">Thiết bị an ninh</a><a title="Đăng tin rao vặt vào mục Thiết bị an ninh" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2NjY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7666">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="7741"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7741" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7741/thiet-bi-truyen-hinh.html" class="arrow_level_01" title="Thiết bị truyền hình">Thiết bị truyền hình</a><a title="Đăng tin rao vặt vào mục Thiết bị truyền hình" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NDE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7741">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(7182);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col fr">
+          <ul id="list_category_ads_1765">
+            <li class="level_0"><a href="/raovat/1765/hang-hieu.html">Hàng hiệu</a></li>
+            <li class="level_1" icat="7165"><a href="/raovat/7165/quan-ao.html" class="arrow_level_01" title="Quần áo">Quần áo</a><a title="Đăng rao vặt vào mục Quần áo" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTcxNjU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="7756"><a href="/raovat/7756/trang-suc.html" class="arrow_level_01" title="Trang sức">Trang sức</a><a title="Đăng rao vặt vào mục Trang sức" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NTY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="7748"><a href="/raovat/7748/tui-xach.html" class="arrow_level_01" title="Túi xách">Túi xách</a><a title="Đăng rao vặt vào mục Túi xách" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NDg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="7758"><a href="/raovat/7758/vi-bop.html" class="arrow_level_01" title="Ví, bóp">Ví, bóp</a><a title="Đăng rao vặt vào mục Ví, bóp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NTg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="7751"><a href="/raovat/7751/dong-ho.html" class="arrow_level_01" title="Đồng hồ">Đồng hồ</a><a title="Đăng rao vặt vào mục Đồng hồ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NTE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7761"><a href="/raovat/7761/my-pham.html" class="arrow_level_01" title="Mỹ phẩm">Mỹ phẩm</a><a title="Đăng rao vặt vào mục Mỹ phẩm" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NjE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7760"><a href="/raovat/7760/kinh-mat.html" class="arrow_level_01" title="Kính mắt">Kính mắt</a><a title="Đăng rao vặt vào mục Kính mắt" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NjA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7755"><a href="/raovat/7755/dep-sandal.html" class="arrow_level_01" title="Dép , Sandal">Dép , Sandal</a><a title="Đăng rao vặt vào mục Dép , Sandal" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NTU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7166"><a href="/raovat/7166/giay-hieu.html" class="arrow_level_01" title="Giày hiệu">Giày hiệu</a><a title="Đăng rao vặt vào mục Giày hiệu" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTcxNjY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="7753"><a href="/raovat/7753/day-lung-that-lung.html" class="arrow_level_01" title="Dây lưng (thắt lưng)">Dây lưng (thắt lưng)</a><a title="Đăng rao vặt vào mục Dây lưng (thắt lưng)" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc3NTM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="1915"><a href="/raovat/1915/caravat-ca-vat-tie.html" class="arrow_level_01" title="Caravat ( cà vạt, tie)">Caravat ( cà vạt, tie)</a><a title="Đăng rao vặt vào mục Caravat ( cà vạt, tie)" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE5MTU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(1765);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_2603">
+            <li class="level_0"><a href="/raovat/2603/viec-lam-tuyen-dung.html">Việc làm, tuyển dụng</a></li>
+            <li class="level_1" icat="2604"><a href="/raovat/2604/nguoi-tim-viec.html" class="arrow_level_01" title="Người tìm việc">Người tìm việc</a><a title="Đăng rao vặt vào mục Người tìm việc" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="2605"><a href="/raovat/2605/viec-tim-nguoi.html" class="arrow_level_01" title="Việc tìm người">Việc tìm người</a><a title="Đăng rao vặt vào mục Việc tìm người" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MDU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1"><a href="/raovat/3971/dich-vu-viec-lam.html" class="arrow_level_01" title="Dịch vụ việc làm">Dịch vụ việc làm</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat">
+                <li class="level_2" icat="4307"> <a href="/raovat/4307/can-thue-nguoi-giup-viec.html" class="arrow_level_02" title="Cần thuê người giúp việc">Cần thuê người giúp...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3824"> <a href="/raovat/3824/cho-thue-nhan-vien-quang-cao.html" class="arrow_level_02" title="Cho thuê nhân viên quảng cáo">Cho thuê nhân viên...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3539"> <a href="/raovat/3539/dich-vu-viec-lam.html" class="arrow_level_02" title="Dịch vụ việc làm">Dịch vụ việc làm</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1Mzk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <li class="level_2" icat="3822"> <a href="/raovat/3822/thong-tin-nguoi-giup-viec.html" class="arrow_level_02" title="Thông tin người giúp việc">Thông tin người...</a> <a title="Đăng tin vào mục này" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MjI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                  <div class="clearfix"></div>
+                </li>
+                <script type="text/javascript">
+// An, hien thi icon post cua cap con
+$(function(){	
+	$(".list_category_ads .level_2 .name").hover(
+		function(){
+			//An tat ca nhung icon post dang hien thi
+			$(".list_category_ads .post").hide();
+			
+			//Show icon post cua category hien tai
+			$(this).parent().children(".post").show();
+		},
+		function(){}
+	);
+});
+</script>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_2748">
+            <li class="level_0"><a href="/raovat/2748/cong-nghiep-xay-dung.html">Công nghiệp, xây dựng</a></li>
+            <li class="level_1" icat="7647"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7647" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7647/co-khi-che-tao.html" class="arrow_level_01" title="Cơ khí chế tạo">Cơ khí chế tạo</a><a title="Đăng tin rao vặt vào mục Cơ khí chế tạo" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc2NDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7647">
+              </ul>
+            </li>
+            <li class="level_1" icat="9081"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9081" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9081/hoa-chat-khi-cong-nghiep.html" class="arrow_level_01" title="Hóa chất, khí công nghiệp">Hóa chất, khí công...</a><a title="Đăng tin rao vặt vào mục Hóa chất, khí công nghiệp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkwODE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9081">
+              </ul>
+            </li>
+            <li class="level_1" icat="9082"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9082" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9082/san-xuat-cong-nghiep.html" class="arrow_level_01" title="Sản xuất công nghiệp">Sản xuất công nghiệp</a><a title="Đăng tin rao vặt vào mục Sản xuất công nghiệp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkwODI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9082">
+              </ul>
+            </li>
+            <li class="level_1" icat="9358"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9358" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9358/van-tai-bien.html" class="arrow_level_01" title="Vận tải biển">Vận tải biển</a><a title="Đăng tin rao vặt vào mục Vận tải biển" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkzNTg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9358">
+              </ul>
+            </li>
+            <li class="level_1" icat="8490"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8490" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8490/xay-dung.html" class="arrow_level_01" title="Xây dựng">Xây dựng</a><a title="Đăng tin rao vặt vào mục Xây dựng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg0OTA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8490">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="6222"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="6222" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/6222/thie%CC%81t-bi%CC%A3-die%CC%A3n-nuo%CC%81c.html" class="arrow_level_01" title="Thiết bị điện, nước">Thiết bị điện,...</a><a title="Đăng tin rao vặt vào mục Thiết bị điện, nước" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTYyMjI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_6222">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="6223"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="6223" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/6223/va%CC%A3t-tu-thiet-bi-cong-nghie%CC%A3p.html" class="arrow_level_01" title="Vật tư, thiết bị công nghiệp">Vật tư, thiết bị công...</a><a title="Đăng tin rao vặt vào mục Vật tư, thiết bị công nghiệp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTYyMjM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_6223">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="8300"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8300" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8300/san-pham-cong-nghiep.html" class="arrow_level_01" title="Sản phẩm công nghiệp">Sản phẩm công nghiệp</a><a title="Đăng tin rao vặt vào mục Sản phẩm công nghiệp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTgzMDA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8300">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="9015"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9015" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9015/dich-vu-cong-nghiep-xay-dung.html" class="arrow_level_01" title="Dịch vụ công nghiệp, xây dựng">Dịch vụ công nghiệp,...</a><a title="Đăng tin rao vặt vào mục Dịch vụ công nghiệp, xây dựng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkwMTU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9015">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="9042"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9042" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9042/ve-sinh-cong-nghiep.html" class="arrow_level_01" title="Vệ sinh công nghiệp">Vệ sinh công nghiệp</a><a title="Đăng tin rao vặt vào mục Vệ sinh công nghiệp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkwNDI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9042">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="9273"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9273" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9273/nong-lam-ngu-nghiep.html" class="arrow_level_01" title="Nông, lâm, ngư nghiệp">Nông, lâm, ngư nghiệp</a><a title="Đăng tin rao vặt vào mục Nông, lâm, ngư nghiệp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkyNzM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9273">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(2748);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_3205">
+            <li class="level_0"><a href="/raovat/3205/noi-ngoai-that.html">Nội, ngoại thất</a></li>
+            <li class="level_1" icat="8371"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8371" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8371/noi-that-cong-cong.html" class="arrow_level_01" title="Nội thất công cộng">Nội thất công cộng</a><a title="Đăng tin rao vặt vào mục Nội thất công cộng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTgzNzE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8371">
+              </ul>
+            </li>
+            <li class="level_1" icat="2816"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="2816" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/2816/noi-that-khong-gian-tong-hop.html" class="arrow_level_01" title="Nội thất không gian, tổng hợp">Nội thất không gian,...</a><a title="Đăng tin rao vặt vào mục Nội thất không gian, tổng hợp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI4MTY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_2816">
+              </ul>
+            </li>
+            <li class="level_1" icat="3212"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3212" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3212/noi-that-nha-hang.html" class="arrow_level_01" title="Nội thất nhà hàng">Nội thất nhà hàng</a><a title="Đăng tin rao vặt vào mục Nội thất nhà hàng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTMyMTI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3212">
+              </ul>
+            </li>
+            <li class="level_1" icat="1780"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1780" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1780/noi-that-phong-an-nha-bep.html" class="arrow_level_01" title="Nội thất phòng ăn, nhà bếp">Nội thất phòng ăn, nhà...</a><a title="Đăng tin rao vặt vào mục Nội thất phòng ăn, nhà bếp" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3ODA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1780">
+              </ul>
+            </li>
+            <li class="level_1" icat="3206"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3206" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3206/noi-that-phong-khach.html" class="arrow_level_01" title="Nội thất phòng khách">Nội thất phòng khách</a><a title="Đăng tin rao vặt vào mục Nội thất phòng khách" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTMyMDY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3206">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3207"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3207" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3207/noi-that-phong-ngu.html" class="arrow_level_01" title="Nội thất phòng ngủ">Nội thất phòng ngủ</a><a title="Đăng tin rao vặt vào mục Nội thất phòng ngủ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTMyMDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3207">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3209"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3209" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3209/noi-that-phong-tam.html" class="arrow_level_01" title="Nội thất phòng tắm">Nội thất phòng tắm</a><a title="Đăng tin rao vặt vào mục Nội thất phòng tắm" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTMyMDk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3209">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="8509"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8509" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8509/noi-that-tre-em.html" class="arrow_level_01" title="Nội thất trẻ em">Nội thất trẻ em</a><a title="Đăng tin rao vặt vào mục Nội thất trẻ em" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg1MDk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8509">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="8519"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8519" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8519/noi-that-do-tho-cung.html" class="arrow_level_01" title="Nội thất đồ thờ cúng">Nội thất đồ thờ cúng</a><a title="Đăng tin rao vặt vào mục Nội thất đồ thờ cúng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg1MTk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8519">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="8523"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8523" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8523/den-trang-tri-chieu-sang.html" class="arrow_level_01" title="Đèn trang trí, chiếu sáng">Đèn trang trí, chiếu...</a><a title="Đăng tin rao vặt vào mục Đèn trang trí, chiếu sáng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg1MjM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8523">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3214"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3214" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3214/den-do-dien-gia-dinh.html" class="arrow_level_01" title="Đèn, đồ điện gia đình">Đèn, đồ điện gia đình</a><a title="Đăng tin rao vặt vào mục Đèn, đồ điện gia đình" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTMyMTQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3214">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3210"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3210" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3210/noi-that-tong-hop-khac.html" class="arrow_level_01" title="Nội thất tổng hợp khác">Nội thất tổng hợp khác</a><a title="Đăng tin rao vặt vào mục Nội thất tổng hợp khác" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTMyMTA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3210">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3211"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3211" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3211/noi-that-van-phong.html" class="arrow_level_01" title="Nội thất văn phòng">Nội thất văn phòng</a><a title="Đăng tin rao vặt vào mục Nội thất văn phòng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTMyMTE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3211">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3972"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3972" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3972/ngoai-that-san-vuon.html" class="arrow_level_01" title="Ngoại thất, sân vườn">Ngoại thất, sân vườn</a><a title="Đăng tin rao vặt vào mục Ngoại thất, sân vườn" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM5NzI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3972">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(3205);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_1982">
+            <li class="level_0"><a href="/raovat/1982/du-lich.html">Du lịch</a></li>
+            <li class="level_1" icat="4299"><a href="/raovat/4299/cac-dich-vu-khac.html" class="arrow_level_01" title="Các dịch vụ khác">Các dịch vụ khác</a><a title="Đăng rao vặt vào mục Các dịch vụ khác" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQyOTk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="3938"><a href="/raovat/3938/cong-ty-du-lich.html" class="arrow_level_01" title="Công ty du lịch">Công ty du lịch</a><a title="Đăng rao vặt vào mục Công ty du lịch" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM5Mzg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="3494"><a href="/raovat/3494/ho-chieu-visa.html" class="arrow_level_01" title="Hộ chiếu, VISA">Hộ chiếu, VISA</a><a title="Đăng rao vặt vào mục Hộ chiếu, VISA" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM0OTQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="9520"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9520" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9520/khu-nghi-duong-resort.html" class="arrow_level_01" title="Khu nghỉ dưỡng (Resort)">Khu nghỉ dưỡng...</a><a title="Đăng tin rao vặt vào mục Khu nghỉ dưỡng (Resort)" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTk1MjA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9520">
+              </ul>
+            </li>
+            <li class="level_1" icat="8857"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8857" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8857/khach-san-nha-nghi.html" class="arrow_level_01" title="Khách sạn, nhà nghỉ">Khách sạn, nhà nghỉ</a><a title="Đăng tin rao vặt vào mục Khách sạn, nhà nghỉ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg4NTc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8857">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="8860"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8860" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8860/tour-du-lich.html" class="arrow_level_01" title="Tour du lịch">Tour du lịch</a><a title="Đăng tin rao vặt vào mục Tour du lịch" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg4NjA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8860">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="8859"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8859" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8859/ve-may-bay.html" class="arrow_level_01" title="Vé máy bay">Vé máy bay</a><a title="Đăng tin rao vặt vào mục Vé máy bay" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg4NTk='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8859">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="8858"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8858" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8858/ve-tau-xe.html" class="arrow_level_01" title="Vé tàu xe">Vé tàu xe</a><a title="Đăng tin rao vặt vào mục Vé tàu xe" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTg4NTg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8858">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(1982);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col fr">
+          <ul id="list_category_ads_3247">
+            <li class="level_0"><a href="/raovat/3247/mua-sam.html">Mua sắm</a></li>
+            <li class="level_1" icat="3651"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3651" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3651/sach-do-van-phong.html" class="arrow_level_01" title="Sách, đồ văn phòng">Sách, đồ văn phòng</a><a title="Đăng tin rao vặt vào mục Sách, đồ văn phòng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2NTE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3651">
+              </ul>
+            </li>
+            <li class="level_1" icat="8218"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="8218" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/8218/nhac-cu.html" class="arrow_level_01" title="Nhạc cụ">Nhạc cụ</a><a title="Đăng tin rao vặt vào mục Nhạc cụ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTgyMTg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_8218">
+              </ul>
+            </li>
+            <li class="level_1" icat="1764"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1764" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1764/do-choi.html" class="arrow_level_01" title="Đồ chơi">Đồ chơi</a><a title="Đăng tin rao vặt vào mục Đồ chơi" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NjQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1764">
+              </ul>
+            </li>
+            <li class="level_1" icat="2612"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="2612" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/2612/do-co-antiques.html" class="arrow_level_01" title="Đồ cổ - Antiques">Đồ cổ - Antiques</a><a title="Đăng tin rao vặt vào mục Đồ cổ - Antiques" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTI2MTI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_2612">
+              </ul>
+            </li>
+            <li class="level_1" icat="7840"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7840" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7840/do-dung-sinh-hoat.html" class="arrow_level_01" title="Đồ dùng sinh hoạt">Đồ dùng sinh hoạt</a><a title="Đăng tin rao vặt vào mục Đồ dùng sinh hoạt" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc4NDA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7840">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="2000"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="2000" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/2000/thuc-pham-do-uong.html" class="arrow_level_01" title="Thực phẩm, đồ uống">Thực phẩm, đồ uống</a><a title="Đăng tin rao vặt vào mục Thực phẩm, đồ uống" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTIwMDA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_2000">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="1990"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1990" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1990/do-the-thao.html" class="arrow_level_01" title="Đồ thể thao">Đồ thể thao</a><a title="Đăng tin rao vặt vào mục Đồ thể thao" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE5OTA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1990">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="7967"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7967" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7967/y-te-suc-khoe.html" class="arrow_level_01" title="Y tế, sức khỏe">Y tế, sức khỏe</a><a title="Đăng tin rao vặt vào mục Y tế, sức khỏe" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc5Njc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7967">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(3247);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="break_content_line"></div>
+        <div class="col">
+          <ul id="list_category_ads_1754">
+            <li class="level_0"><a href="/raovat/1754/me-be.html">Mẹ &amp; Bé</a></li>
+            <li class="level_1" icat="1770"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1770" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1770/bim-cho-be.html" class="arrow_level_01" title="Bỉm cho bé">Bỉm cho bé</a><a title="Đăng tin rao vặt vào mục Bỉm cho bé" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NzA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1770">
+              </ul>
+            </li>
+            <li class="level_1" icat="1914"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1914" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1914/dung-cu-an-uong.html" class="arrow_level_01" title="Dụng cụ ăn uống">Dụng cụ ăn uống</a><a title="Đăng tin rao vặt vào mục Dụng cụ ăn uống" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE5MTQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1914">
+              </ul>
+            </li>
+            <li class="level_1" icat="1772"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1772" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1772/quan-ao.html" class="arrow_level_01" title="Quần áo">Quần áo</a><a title="Đăng tin rao vặt vào mục Quần áo" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NzI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1772">
+              </ul>
+            </li>
+            <li class="level_1" icat="1773"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1773" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1773/tam-goi-ve-sinh-an-toan.html" class="arrow_level_01" title="Tắm gội, vệ sinh an toàn">Tắm gội, vệ sinh an...</a><a title="Đăng tin rao vặt vào mục Tắm gội, vệ sinh an toàn" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NzM='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1773">
+              </ul>
+            </li>
+            <li class="level_1" icat="1774"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1774" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1774/do-cho-be-khi-ra-ngoai.html" class="arrow_level_01" title="Đồ cho bé khi ra ngoài">Đồ cho bé khi ra ngoài</a><a title="Đăng tin rao vặt vào mục Đồ cho bé khi ra ngoài" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NzQ='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1774">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="1775"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1775" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1775/do-cho-me.html" class="arrow_level_01" title="Đồ cho mẹ">Đồ cho mẹ</a><a title="Đăng tin rao vặt vào mục Đồ cho mẹ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NzU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1775">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="1776"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1776" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1776/do-dung-cho-tre.html" class="arrow_level_01" title="Đồ dùng cho trẻ">Đồ dùng cho trẻ</a><a title="Đăng tin rao vặt vào mục Đồ dùng cho trẻ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NzY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1776">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="9035"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="9035" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/9035/dich-vu-cham-soc-me-va-be.html" class="arrow_level_01" title="Dịch vụ chăm sóc mẹ và bé">Dịch vụ chăm sóc mẹ và...</a><a title="Đăng tin rao vặt vào mục Dịch vụ chăm sóc mẹ và bé" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkwMzU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_9035">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3637"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3637" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3637/do-an-cho-me-be.html" class="arrow_level_01" title="Đồ ăn cho mẹ &amp; bé">Đồ ăn cho mẹ &amp; bé</a><a title="Đăng tin rao vặt vào mục Đồ ăn cho mẹ &amp; bé" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2Mzc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3637">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(1754);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_7185">
+            <li class="level_0"><a href="/raovat/7185/giao-duc-dao-tao.html">Giáo dục, đào tạo</a></li>
+            <li class="level_1" icat="3800"><a href="/raovat/3800/luyen-thi-dai-hoc.html" class="arrow_level_01" title="Luyện thi đại học">Luyện thi đại học</a><a title="Đăng rao vặt vào mục Luyện thi đại học" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM4MDA='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="7507"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7507" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7507/dao-tao-ky-nang.html" class="arrow_level_01" title="Đào tạo kỹ năng">Đào tạo kỹ năng</a><a title="Đăng tin rao vặt vào mục Đào tạo kỹ năng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc1MDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7507">
+              </ul>
+            </li>
+            <li class="level_1" icat="7518"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7518" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7518/dao-tao-lai-xe.html" class="arrow_level_01" title="Đào tạo lái xe ">Đào tạo lái xe </a><a title="Đăng tin rao vặt vào mục Đào tạo lái xe " href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc1MTg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7518">
+              </ul>
+            </li>
+            <li class="level_1" icat="9247"><a href="/raovat/9247/bai-giang.html" class="arrow_level_01" title="Bài giảng">Bài giảng</a><a title="Đăng rao vặt vào mục Bài giảng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTkyNDc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="3606"><a href="/raovat/3606/hoc-nghe.html" class="arrow_level_01" title="Học nghề">Học nghề</a><a title="Đăng rao vặt vào mục Học nghề" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM2MDY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="3527"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3527" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3527/ngoai-ngu.html" class="arrow_level_01" title="Ngoại ngữ">Ngoại ngữ</a><a title="Đăng tin rao vặt vào mục Ngoại ngữ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1Mjc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3527">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3526"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3526" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3526/tuyen-sinh.html" class="arrow_level_01" title="Tuyển sinh">Tuyển sinh</a><a title="Đăng tin rao vặt vào mục Tuyển sinh" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1MjY='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3526">
+              </ul>
+            </li>
+            <li class="level_1 hidden" icat="3525"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="3525" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/3525/dao-tao-day-nghe.html" class="arrow_level_01" title="Đào tạo, Dạy nghề">Đào tạo, Dạy nghề</a><a title="Đăng tin rao vặt vào mục Đào tạo, Dạy nghề" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTM1MjU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_3525">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(7185);">Xem thêm</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul id="list_category_ads_1763">
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li class="level_1" icat="7958"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7958" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7958/qua-tang.html" class="arrow_level_01" title="Quà tặng">Quà tặng</a><a title="Đăng tin rao vặt vào mục Quà tặng" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc5NTg='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7958">
+              </ul>
+            </li>
+            <li class="level_1" icat="7927"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7927" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7927/cay-gia-hoa-gia.html" class="arrow_level_01" title="Cây giả, hoa giả">Cây giả, hoa giả</a><a title="Đăng tin rao vặt vào mục Cây giả, hoa giả" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc5Mjc='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7927">
+              </ul>
+            </li>
+            <li class="level_1" icat="7952"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="7952" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/7952/ngay-tet.html" class="arrow_level_01" title="Ngày Tết">Ngày Tết</a><a title="Đăng tin rao vặt vào mục Ngày Tết" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTc5NTI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_7952">
+              </ul>
+            </li>
+            <li class="level_1" icat="4305"><a href="/raovat/4305/thu-cong-my-nghe.html" class="arrow_level_01" title="Thủ công mỹ nghệ">Thủ công mỹ nghệ</a><a title="Đăng rao vặt vào mục Thủ công mỹ nghệ" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTQzMDU='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1" icat="1912"><a href="/raovat/1912/do-dung-cho-suc-khoe.html" class="arrow_level_01" title="Đồ dùng cho sức khỏe">Đồ dùng cho sức khỏe</a><a title="Đăng rao vặt vào mục Đồ dùng cho sức khỏe" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE5MTI='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+            </li>
+            <li class="level_1 hidden" icat="1761"><a title="Xem thêm danh mục rao vặt cấp con" href="javascript:;" idata="1761" class="child show_child">&nbsp; &nbsp;</a> <a href="/raovat/1761/hoa.html" class="arrow_level_01" title="Hoa">Hoa</a><a title="Đăng tin rao vặt vào mục Hoa" href="javascript:windowPrompt('Đăng nhập', generateFormLogin('L3Jhb3ZhdC9wb3N0LnBocD9pQ2F0PTE3NjE='));" class="post" style="display: none;">&nbsp; &nbsp; &nbsp; &nbsp;</a>
+              <div class="clearfix"></div>
+              <ul class="list_sub_category_raovat" id="sub_category_raovat_1761">
+              </ul>
+            </li>
+            <li class="more"><a class="hide" href="javascript:show_hide_more_category_raovat(1763);">Xem thêm</a></li>
+          </ul>
+        </div>
+      </div>
+      <img src="Images/ads.jpg" alt="" style="float: left; margin-bottom: 5px;" />
+      <!--News hot categories-->
+      <div class="list_category_ads">
+        <div class="col news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col fr news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="break_content_line"></div>
+        <div class="col news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col fr news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="break_content_line"></div>
+        <div class="col news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col fr news_hot">
+          <ul>
+            <li class="level_0"><a href="/raovat/1763/hoa-qua-tang-my-nghe.html">Hoa, quà tặng, mỹ nghệ</a></li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+            <li><a href="" class="img"><img src="Images/logo_raovat.png" width="70" height="70" alt="" /></a>
+              <h3 class="title_ads"><a href="">Chính chủ cho thuê CHCC Indochina Plaza Hanoi (0 0)</a></h3>
+              <span class="date_ads">3 phút trước</span>
+              <div class="clearfix"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="break_content_line"></div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #End Main -->
+<!-- footer -->
+<div id="footer">
+  <div id="footer_inner">
+    <div id="footer_top">
+      <div class="list">
+        <div class="row clearfix">
+          <div class="cate">
+            <div class="block">
+              <h2>Giới thiệu</h2>
+              <ul class="block_footer">
+                <li><a href="introduction.html">Giới thiệu về esell</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="law.html">Quy chế hoạt động</a></li>
+                <li><a href="property.html">Quyền sở hữu trí tuệ</a></li>
+                <li><a href="job.html">Tuyển dụng</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người bán</h2>
+              <ul class="block_footer">
+                <li><a href="seller/law_seller.html#seller1">Quyền lợi người bán</a></li>
+                <li><a href="seller/law_seller.html#seller2">Quy định dành cho người bán</a></li>
+                <li><a href="seller/how_create_shop.html">Hướng dẫn cách tạo cửa hàng</a></li>
+                <li><a href="seller/penalty.html">Hình thức xử lý vi phạm</a></li>
+                <!--<li><a href="#">Đăng bán sản phẩm, dịch vụ</a></li>
+                <li><a href="#">Giải pháp nâng cao doanh thu</a></li>
+                <li class="last"><a href="#">Xem thêm</a></li>-->
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Dành cho người mua</h2>
+              <ul class="block_footer">
+                <li><a href="buyer/law_buyer.html#buyer1">Quyền lợi người mua</a></li>
+                <li><a href="buyer/law_buyer.html#buyer2">Quy định dành cho người mua</a></li>
+                <li><a href="buyer/how_register.html">Đăng ký thành viên</a></li>
+                <li><a href="buyer/how_order.html">Hướng dẫn đặt mua</a></li>
+                <li class="last"><a href="buyer/law_buyer.html">Xem thêm</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="cate">
+            <div class="block">
+              <h2>Liên kết hợp tác</h2>
+              <ul class="block_footer">
+                <li><a href="http://www.vacd.vn" target="_blank">Hội các nhà quản trị doanh nghiệp</a></li>
+                <li><a href="http://www.saigonbank.com.vn/" target="_blank">Ngân hàng Saigon Bank</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div id="footer_bottom">
+      <div class="copyright">
+        <p>©
+          <script src="Scripts/copyright.js" language="JavaScript" type="text/javascript"></script>
+          Bản quyền thuộc CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG ĐẲNG CẤP VIỆT</p>
+        <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh - MST: 0311632562</p>
+        <p>Điện thoại: (848) 3948 3961 - Fax: (848) 3811.6791 - Hotline: 0908.169.044</p>
+        <p>Email: <a href="mailto:info@dangcapviet.vn">info@dangcapviet.vn</a> - Website: <a href="www.dangcapviet.vn">www.dangcapviet.vn</a></p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- #footer -->
+</body>
+</html>

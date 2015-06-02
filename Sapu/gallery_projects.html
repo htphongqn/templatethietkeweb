@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Sapu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="Styles/style.css" rel="stylesheet" type="text/css" />
+<!-- jQuery Library -->
+<script src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/responsiveslides.css">
+<script src="Scripts/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      
+      // Slideshow 4
+      $("#slider_res").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+		timeout: 3500,
+		random: true,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+<!--Scripts click Toggle-->
+<script type="text/javascript">
+$(document).ready(function() {         
+var notH = 1,
+    $pop = $('.search_box').hover(function(){notH^=1;});
+
+$(document).on('mouseup keyup', function( e ){
+  if(notH||e.which==27) $pop.stop().hide();
+});
+/////// CALL POPUP 
+$('.search_icon').click(function(){
+	$('.search_box').slideDown("fast");							 	
+});	
+$('.icon_point').click(function(){
+	$('.search_box').slideUp("fast");							 	
+});	
+});
+</script>
+<!---Hoz menu-->
+<link type="text/css" href="Styles/menu_hoz.css" rel="stylesheet" />
+<script type="text/javascript" src="Scripts/menu_hoz.js"></script>
+<script type="text/javascript">
+	document.write('<div style="display:none;"><a href="http://apycom.com/">jQuery Menu by Apycom</a></div>');
+</script>
+<script src="Scripts/jquery.nicescroll.min.js"></script>
+<script>
+  $(document).ready(function() {  
+	var nice = $("html").niceScroll();  // The document page (body)		                
+  });
+</script>
+<!--Carousel-->
+<link type="text/css" href="Styles/skin_jcarousel.css" rel="stylesheet" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    //carousel.buttonNext.bind('click', function() {
+        //carousel.startAuto(0);
+    //});
+
+    //carousel.buttonPrev.bind('click', function() {
+        //carousel.startAuto(0);
+    //});
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    //carousel.clip.hover(function() {
+        //carousel.stopAuto();
+    //}, function() {
+        //carousel.startAuto();
+    //});
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel-cus').jcarousel({
+        auto: 2,
+		animation: 1000,
+        scroll: 1,
+        wrap: 'circular',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<!--TopMenu_Fixed-->
+<script type="text/javascript" src="Scripts/jquery.autofix_anything.js"></script>
+<link type="text/css" href="Styles/autofix_anything.css" rel="stylesheet" />
+<script>
+	  $(document).ready( function() {
+	     $("#menu_sidebar").autofix_anything();  	   
+	  });
+		
+	</script>
+<!--Detail_img-->
+<link rel="stylesheet" type="text/css" href="Styles/jquery.ad-gallery.css">
+<script type="text/javascript" src="Scripts/jquery.ad-gallery.js?rand=390"></script>
+<script type="text/javascript" src="Scripts/Galary.js"></script>
+</head>
+<body>
+<div id="wrap-top-header">
+  <div class="page-inner"> <a href="index.html" class="logo"><img src="images/logo.png" alt="Sapu" /> </a>
+    <p class="text-logo"><a href=""><img src="images/name_company.png" alt="Sapu" /></a></p>
+    <!--Search Tool-->
+    <div id="search_form"><a class="trigger"><span class="search_icon"></span></a>
+      <div id="dpop" class="search_box"><span class="icon_point"></span>
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <a href="" class="submitSearch"><span class="icon_search"></span></a>
+        <div class="cf"></div>
+      </div>
+    </div>
+    <!--End Search Tool-->
+    <div class="lang"> <img src="images/flag_vn.jpg" alt="Tieng Viet" id="tv"/> <img src="images/flag_en.jpg" alt="Tieng Anh" id="ta"/> </div>
+    <!--Hotline-->
+    <div id="hotline">(08) 38116704</div>
+    <!-- BEGIN NAV -->
+    <div id="menu">
+      <ul class="menu">
+        <li><a href="#"><span>Trang chủ</span></a> </li>
+        <li><a href="list_news.html"><span>Giới thiệu</span></a> </li>
+        <li><a href="projects.html"><span>Công trình</span></a>
+          <div>
+            <ul>
+              <li><a href="list_cate.html" class="parent">Công trình 1</a>
+                <div>
+                  <ul>
+                    <li><a href="list_cate.html">Công trình 1-1</a></li>
+                    <li><a href="list_cate.html">Công trình 1-2</a></li>
+                    <li><a href="list_cate.html">Công trình 1-3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="list_cate.html">Công trình 2</a></li>
+              <li><a href="list_cate.html">Công trình 3</a></li>
+              <li><a href="list_cate.html">Công trình 4</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="projects.html"><span>Sản phẩm</span></a>
+          <div>
+            <ul>
+              <li><a href="list_cate.html" class="parent">Sản phẩm 1</a>
+                <div>
+                  <ul>
+                    <li><a href="list_cate.html" class="parent">Sản phẩm 1-1</a></li>
+                    <li><a href="list_cate.html" class="parent">Sản phẩm 1-2</a></li>
+                    <li><a href="list_cate.html" class="parent">Sản phẩm 1-3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="list_cate.html">Sản phẩm 2</a></li>
+              <li><a href="list_cate.html">Sản phẩm 3</a></li>
+              <li><a href="list_cate.html">Sản phẩm 4</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="list_news.html"><span>Sản xuất</span></a></li>
+        <li><a href="list_news.html"><span>Khách hàng</span></a></li>
+        <li><a href="list_news.html"><span>Tin tức & sự kiện</span></a></li>
+        <li><a href="contact.html"><span>Liên hệ</span></a></li>
+      </ul>
+    </div>
+    <!-- END NAV -->
+  </div>
+  <!-- End of top-header-->
+  <div class="cf"></div>
+</div>
+<div id="wrap-container" style="background: fixed url(Images/hinh-anh-noi-that-am-cung-1280x800.jpg) center 0 no-repeat; background-size: 100% 100%">
+  <div id="sub-page" class="main cf">
+    <div class="page-inner">
+      <div class="current_path"><a href="index.html">Trang chủ</a><span class="spSeperator"></span> <a href="projects.html">Công trình</a></div>
+      <div class="box_Tab main_Tab"><span>Công trình</span></div>
+      <!-- start Basic Jquery Slider -->
+      <div id="gallery" class="ad-gallery">
+        <div class="ad-image-wrapper"> </div>
+        <div class="ad-nav">
+          <div class="ad-thumbs">
+            <ul class="ad-thumb-list">
+              <li> <a href="Images/slide01.jpg"> <img src="Images/slide01.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide02.jpg"> <img src="Images/slide02.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide03.jpg"> <img src="Images/slide03.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide04.jpg"> <img src="Images/slide04.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide04.jpg"> <img src="Images/slide04.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide01.jpg"> <img src="Images/slide01.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide02.jpg"> <img src="Images/slide02.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide03.jpg"> <img src="Images/slide03.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide04.jpg"> <img src="Images/slide04.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide04.jpg"> <img src="Images/slide04.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide01.jpg"> <img src="Images/slide01.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide02.jpg"> <img src="Images/slide02.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide03.jpg"> <img src="Images/slide03.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide04.jpg"> <img src="Images/slide04.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+              <li> <a href="Images/slide04.jpg"> <img src="Images/slide04.jpg" title="" alt="" width="75" height="50" /> </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end Basic jQuery Slider -->
+      <div class="cf"></div>
+      <div class="dt_project_content">Website của cơ sở sản xuất bánh ngọt Hỷ Lâm Môn đã khai trương chính thức vào ngày 10/01/2013 tại <a href="http://www.hylammon-bakery.com.vn" target="_blank" rel="nofollow">http://www.hylammon-bakery.com.vn</a><br>
+        <br>
+        <strong>Đôi nét về Hỷ Lâm Môn:</strong><br>
+        <br>
+        <div style="text-align: justify;">Cơ sở Sản xuất Bánh ngọt Hỷ Lâm Môn được thành lập vào tháng 10 năm 1984. Hiện nay, cơ sở đã có 6 cửa hàng tập trung tại các khu dân cư đông đúc của Thành phố Hồ Chí Minh. Hàng năm, Hỷ Lâm Môn sản xuất khoảng 50 loại bánh mặn, trên 70 loại bánh ngọt&nbsp; cùng các loại bánh kem và bánh trung thu khác nhau. Hỷ Lâm Môn là một trong những thương hiệu bánh được người tiêu dùng bình chọn là hàng Việt Nam chất lượng cao.<br>
+        </div>
+        igh Quality Vietnamese products.</div>
+    </div>
+    <!--Jquey Carousel-->
+    <div id="customers">
+      <div id="customers-caro"><span class="title-cus">Khách hàng</span>
+        <ul id="mycarousel-cus" class="jcarousel-skin-tango">
+          <li><a href=""><img src="Images/cus01.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus02.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus03.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus04.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus01.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus02.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus03.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus04.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus01.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus02.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus03.jpg" alt="" /></a> </li>
+          <li><a href=""><img src="Images/cus04.jpg" alt="" /></a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Jquery Carousel-->
+  </div>
+  <!-- Begin of footer-->
+  <div id="footer">
+    <div class="page-inner">
+      <div class="topmenu_footer">
+        <div class="col_menuFooter">
+          <div class="ctentColuMenuFooter">
+            <h2>Giới thiệu</h2>
+            <div class="listMenuFooter"><a href="">Về Sapu</a><a href="">Nhận xét của khách hàng</a><a href="">Tin tức công ty</a><a href="">Tuyển dụng</a></div>
+          </div>
+        </div>
+        <div class="col_menuFooter">
+          <div class="ctentColuMenuFooter">
+            <h2>Hỗ trợ khách hàng</h2>
+            <div class="listMenuFooter"><a href="">Yêu cầu báo giá</a><a href="">Yêu cầu tư vấn</a><a href="">Chính sách bảo mật</a><a href="">Hỏi – Đáp</a></div>
+          </div>
+        </div>
+        <div class="col_menuFooter" id="info_footer">
+          <div class="ctentColuMenuFooter">
+            <div class="info_company">
+              <p><strong>CTY TNHH TƯ VẤN THƯƠNG MẠI KHÁNH LINH</strong></p>
+              <p>MST : 0307 633 556</p>
+              <p>ĐC: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. Hồ Chí Minh</p>
+              <p>ĐT: (08) 38116704 - (08) 38116723 - Fax: (08) 38116791</p>
+            </div>
+            <!--Access Status-->
+            <div class="access_status">
+              <p>Đang xem: <b>30</b> - Đã truy câp: <b>1234</b></p>
+            </div>
+            <!--End Access Status-->
+            <div class="social_network"><a href=""><span class="icon_facebook"></span></a> <a href=""><span class="icon_twitter"></span></a> <a href=""><span class="icon_gplus"></span></a><a href=""><span class="icon_p"></span></a><a href=""> <span class="icon_linkedin"></span></a><a href=""> <span class="icon_youtube"></span></a></div>
+          </div>
+        </div>
+        <div class="cf"></div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2014 by Sapu. All rights reserved</p>
+      </div>
+      <div class="cf"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+function hide_float_left() {
+    var content = document.getElementById('float_content_left');
+    var hide = document.getElementById('hide_float_left');
+    if (content.style.display == "block")
+    {content.style.display = "none"; hide.innerHTML = '<a href="javascript:hide_float_left()" title="Click vào đây để chat online với chúng tôi">Hỗ trợ trực tuyến <img src="Images/arrow-top.png" alt="" style="margin-left: 5px" /></a>'; }
+        else { content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Tắt [X]</a>';
+    }
+    }
+</script>
+  <div class="float-ck">
+    <div id="hide_float_left"><a href="javascript:hide_float_left()" title="Click vào đây để chat online với chúng tôi">Hỗ trợ trực tuyến <img src="Images/arrow-top.png" alt="" style="margin-left: 5px" /></a></div>
+    <div id="float_content_left">
+      <!-- Start chat online-->
+      <div class="yahoo"><a href="ymsgr:sendim?hotro_nhommuahcm"><img width="12" alt="" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=5">Tư vấn kinh doanh</a> <a href="ymsgr:sendim?hotro_nhommuahcm2"><img width="12" alt="" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=5">Tư vấn kỹ thuật</a><a href="ymsgr:sendim?hotro_nhommuahcm2"><img width="12" alt="" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=5">Tư vấn kinh doanh</a>
+        <div class="cf"></div>
+      </div>
+    </div>
+    <!-- End chat online -->
+  </div>
+</div>
+<!-- End of footer-->
+</div>
+<!-- End of wrap container -->
+</body>
+</html>

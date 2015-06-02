@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>SHP</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="http://wmh.github.io/jquery-scrollbox/jquery.scrollbox.js"></script>
+<script src="Scripts/jquery.scrollbox.js"></script>
+<script>
+$(function () {
+  $('#demo2').scrollbox({
+    linear: true,
+    step: 1,
+    delay: 0,
+    speed: 30
+  });  
+  var queueNext = 7;
+  (function () {
+    $('#demo6-queue ul').append('<li><p>'+ queueNext +'</p></li>');
+    queueNext++;
+    setTimeout(arguments.callee, 2000 + parseInt(Math.random() * 2000, 10));
+  }());
+});
+</script>
+<!-- Start Nivo Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!-- Menu Horizontal -->
+<script type="text/javascript" src="Scripts/infinis.js"></script>
+<!--Scroll-->
+<link type="text/css" href="Styles/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+<!-- the mousewheel plugin -->
+<script type="text/javascript" src="Scripts/jquery.mousewheel.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="Scripts/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="Scripts/demo.js"></script>
+<!-- scripts specific to this demo site -->
+<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!--Effect Button-->
+<script src="Scripts/plugins.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <div class="page">
+    <!--#begin Header-->
+    <div id="header" class="clearfix">
+      <div class="head_inner">
+        <p class="langButs"> <a id="vn" class="vn_icon" title="English" href=""></a> <a id="en" class="en_icon" title="Vietnam" href=""></a> </p>
+        <a href="index.html" class="home"></a>
+        <label for="q" class="title_s">Tìm kiếm</label>
+        <div class="search">
+          <input type="text" class="input_Search" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+          <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+        </div>
+      </div>
+    </div>
+    <!--End #header-->
+    <!-- indexer::stop -->
+    <div class="mod_navigation block" id="nav">
+      <ul class="level_1">
+        <li class="submenu sibling first"><a href="list_news.html" title="About us" class="submenu sibling first" onClick="this.blur();">Giới thiệu</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/about-us/the-infinis-group/" title="The Infinis group" class="first" onClick="this.blur();">The Infinis group</a></li>
+              <li><a href="http://www.infinis.com/about-us/our-objectives/" title="Our objectives" onClick="this.blur();">Our objectives</a></li>
+              <li><a href="http://www.infinis.com/about-us/corporate-overview/history.466/" title="Corporate overview" onClick="this.blur();">Corporate overview</a></li>
+              <li class="last"><a href="http://www.infinis.com/about-us/corporate-governance/leadership/" title="Corporate governance" class="last" onClick="this.blur();">Corporate governance</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="submenu sibling"><a href="http://www.infinis.com/Our-business/what-we-do/" title="Our business" class="submenu sibling" onClick="this.blur();">Tin tức</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/core-business/what-we-do/overview/" title="What we do" class="first" onClick="this.blur();">What we do</a></li>
+              <li><a href="http://www.infinis.com/our-business/biogas/" title="Biogas" onClick="this.blur();">Biogas</a></li>
+              <li><a href="http://www.infinis.com/our-business/onshore-wind/" title="Onshore wind" onClick="this.blur();">Onshore wind</a></li>
+              <li class="last"><a href="http://www.infinis.com/our-business/hydro/" title="Hydro" class="last" onClick="this.blur();">Hydro</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="submenu sibling"><a href="http://www.infinis.com/our-approach/overview/" title="Our approach" class="submenu sibling" onClick="this.blur();">Nhà máy</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/our-approach/overview/" title="Overview" class="first" onClick="this.blur();">Overview</a></li>
+              <li><a href="http://www.infinis.com/our-approach/operational-excellence/" title="Operational excellence" onClick="this.blur();">Operational excellence</a></li>
+              <li><a href="http://www.infinis.com/our-approach/commercial-expertise/" title="Commercial expertise" onClick="this.blur();">Commercial expertise</a></li>
+              <li><a href="http://www.infinis.com/our-approach/company-culture/" title="Company culture" onClick="this.blur();">Company culture</a></li>
+              <li class="last"><a href="http://www.infinis.com/our-approach/development-capabilities/" title="Development capabilities" class="last" onClick="this.blur();">Development capabilities</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="submenu sibling"><a href="http://www.infinis.com/our-responsibility/environment/" title="Our responsibility" class="submenu sibling" onClick="this.blur();">Quan hệ cổ đông</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/our-responsibility/environment/" title="Environment" class="first" onClick="this.blur();">Environment</a></li>
+              <li><a href="http://www.infinis.com/our-responsibility/health-and-safety/" title="Health and safety" onClick="this.blur();">Health and safety</a></li>
+              <li><a href="http://www.infinis.com/our-responsibility/positive-carbon-footprint/" title="Positive carbon footprint" onClick="this.blur();">Positive carbon footprint</a></li>
+              <li><a href="http://www.infinis.com/our-responsibility/certification-standards/" title="Certification standards" onClick="this.blur();">Certification standards</a></li>
+              <li><a href="http://www.infinis.com/our-responsibility/community-engagement/" title="Community engagement" onClick="this.blur();">Community engagement</a></li>
+              <li><a href="http://www.infinis.com/our-responsibility/corporate-responsibility/" title="Corporate responsibility" onClick="this.blur();">Corporate responsibility</a></li>
+              <li class="last"><a href="http://www.infinis.com/our-responsibility/anti-corruption-and-anti-bribery-statement/" title="Anti-corruption and anti-bribery statement" class="last" onClick="this.blur();">Anti-corruption and anti-bribery statement</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="submenu sibling"><a href="http://www.infinis.com/our-people/our-values/" title="Our people" class="submenu sibling" onClick="this.blur();">Khoa học & Công nghệ</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/our-people/our-values/" title="Our values" class="first" onClick="this.blur();">Our values</a></li>
+              <li><a href="http://www.infinis.com/our-people/opportunities/" title="Opportunities" onClick="this.blur();">Opportunities</a></li>
+              <li><a href="http://www.infinis.com/our-people/current-vacancies/" title="Current vacancies" onClick="this.blur();">Current vacancies</a></li>
+              <li><a href="http://www.infinis.com/our-people/benefits/" title="Benefits" onClick="this.blur();">Benefits</a></li>
+              <li><a href="http://www.infinis.com/our-people/recruitment-agency-policy/" title="Recruitment agencies" onClick="this.blur();">Recruitment agencies</a></li>
+              <li class="last"><a href="http://www.infinis.com/our-people/smallsteps/" title="Infinis Smallsteps" class="last" onClick="this.blur();">Smallsteps</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="submenu sibling"><a href="http://www.infinis.com/investors/overview/" title="Investors" class="submenu sibling" onClick="this.blur();">Thư viện hình ảnh</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/investors/overview/" title="Overview" class="first" onClick="this.blur();">Overview</a></li>
+              <li><a href="http://www.infinis.com/investors/reports/list/?year=2013" title="Reports" onClick="this.blur();">Reports</a></li>
+              <li><a href="http://www.infinis.com/investors/results-presentations/" title="Result and presentations" onClick="this.blur();">Results &amp; presentations</a></li>
+              <li><a href="http://www.infinis.com/investors/shareholder-information/" title="Shareholder information" onClick="this.blur();">Shareholder information</a></li>
+              <li><a href="http://www.infinis.com/investors/senior-notes-information/list/?year=2013" title="Senior notes" onClick="this.blur();">Senior notes information</a></li>
+              <li class="last"><a href="http://www.infinis.com/investors/contacts/" title="Contacts" class="last" onClick="this.blur();">Contacts</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="submenu sibling"><a href="http://www.infinis.com/media-centre/press-releases/" title="Media centre" class="submenu sibling" onClick="this.blur();">Thông tin tuyển dụng</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/media-centre/press-releases/id-2013/" title="Press releases" class="first" onClick="this.blur();">Press releases</a></li>
+              <li class="last"><a href="http://www.infinis.com/media-centre/useful-links/" title="Useful links" class="last" onClick="this.blur();">Useful links</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="submenu sibling last"><a href="http://www.infinis.com/contact-us/main-contacts/" title="Contact us" class="submenu sibling last" onClick="this.blur();">Liên hệ</a>
+          <div>
+            <ul class="level_2">
+              <li class="first"><a href="http://www.infinis.com/contact-us/main-contacts/" title="Contact us" class="first" onClick="this.blur();">Main contacts</a></li>
+              <li class="last"><a href="http://www.infinis.com/contact-us/other-contacts/" title="Contact us" class="last" onClick="this.blur();">Other contacts</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- indexer::continue -->
+    <div class="flash"><img src="Images/img_flash.jpg" alt="" width="1000" height="400" /></div>
+  </div>
+</div>
+<!--End Wrapper-->
+<div class="page">
+  <div class="main clearfix">
+    <!--Left Column-->
+    <div class="left_content">
+      <div class="buttons"> <a href="http://www.infinis.com/our-business/biogas/" class="bio button clearfix" id="bio">
+        <div class="icon"> <img src="Images/wind0000.png" width="55" height="55" alt="Bio Gas"> </div>
+        <!--/.icon-->
+        <h3>Nhà máy </h3>
+        <p>Đa Siat</p>
+        </a> <a href="http://www.infinis.com/our-business/onshore-wind/" class="wind button clearfix" id="wind">
+        <div class="icon"> <img src="Images/wind0000.png" width="55" height="55" alt="Wind Power"> </div>
+        <!--/.icon-->
+        <h3>Nhà máy</h3>
+        <p>Đa Dâng 2</p>
+        </a> <a href="http://www.infinis.com/our-business/hydro/" class="hydro button clearfix" id="hydro">
+        <div class="icon"> <img src="Images/hydro0000.png" width="55" height="55" alt="Hydro Power"> </div>
+        <!--/.icon-->
+        <h3>Nhà máy</h3>
+        <p>Đa M’bri</p>
+        </a> </div>
+      <!--Capacity years-->
+      <div class="box white_Bg">
+        <div class="box_Tab">Sản lượng các năm</div>
+        <div class="box_content scroll-pane">
+          <table width="300" border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">
+            <tr>
+              <td rowspan="2" bgcolor="#FFFFFF">Năm</td>
+              <td colspan="3" bgcolor="#FFFFFF" align="center">Nhà máy </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">Nhà máy Đa Siat (kWh) </td>
+              <td bgcolor="#FFFFFF">Nhà máy Đa Dâng 2 </td>
+              <td bgcolor="#FFFFFF">Nhà máy Đa M’bri </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">2110</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">2111</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">2112</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">2113</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF">2114</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+              <td bgcolor="#FFFFFF">39.965.121</td>
+            </tr>
+          </table>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Capacity years-->
+      <!--Album-->
+      <div class="box white_Bg">
+        <div class="box_Tab">Album ảnh</div>
+        <div class="box_content">
+          <div class="slider theme-pascal">
+            <div id="slider" class="nivoSlider"> <a href=""><img src="Images/albumn_01.jpg" alt="" title=""/></a> <a href=""><img src="Images/albumn_02.jpg" alt="" title="" /></a> <a href=""><img src="Images/albumn_03.jpg" alt="" title=""/></a> <a href=""><img src="Images/albumn_04.jpg" alt="" title="" /></a> </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Album-->
+      <!--Video clip-->
+      <div class="box white_Bg">
+        <div class="box_Tab">Video clip</div>
+        <div class="box_content"> <img src="Images/video.jpg" alt="" width="220" />
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Video clip-->
+      <!--Access Status-->
+      <div class="box white_Bg">
+        <div class="box_Tab">Thống kê truy cập</div>
+        <div class="box_content" id="access_status">
+          <p><span>11 990 471</span>Lượt truy cập</p>
+          <p><span>120</span>Hôm nay</p>
+          <p><span>471 </span>Đang truy cập</p>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Access Status-->
+    </div>
+    <!--End Left Column-->
+    <!--Main Column-->
+    <div class="main_content">
+      <!--News Category-->
+      <div class="box">
+        <div class="box_content category">
+          <div class="box_Tab"><span class="cate_name">Tin tức</span> <span class="icon_split"></span>
+            <ul class="sub_cates">
+              <li class="sub_cate_f"><a href="#">Điểm báo</a></li>
+              <li><a href="#">Tin SHP</a></li>
+              <li><a href="#">Tin ngành điện</a></li>
+              <li><a href="#">Thông tin tài chính - chứng khoán</a></li>
+            </ul>
+          </div>
+          <a href="list_projects.html"><img class="img_general" src="Images/news01.jpg" alt="" width="150" height="100" /></a> <a href="">
+          <h2 class="title_news">Bỉ xây dựng đảo nhân tạo để tích trữ năng lượng điện gió</h2>
+          </a>
+          <p>Do dự định từ bỏ hoàn toàn năng lượng hạt nhân trong tương lai gần, Bỉ lập kế hoạch xây dựng một đảo nhân tạo trên biển Bắc để tích trữ năng lượng gió...</p>
+          <ul class="list_news_c">
+            <li><a href="">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+            <li><a href="">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+            <li><a href="">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End News Category-->
+      <!--Factory Category-->
+      <div class="box">
+        <div class="box_content category">
+          <div class="box_Tab"><span class="cate_name">NHÀ MÁY</span> <span class="icon_split"></span>
+            <ul class="sub_cates">
+              <li class="sub_cate_f"><a href="#">Đa Siat</a></li>
+              <li><a href="#">Đa Dâng 2</a></li>
+              <li><a href="#">Đa M’bri</a></li>
+            </ul>
+          </div>
+          <a href="list_projects.html"><img class="img_general" src="Images/news01.jpg" alt="" width="150" height="100" /></a> <a href="">
+          <h2 class="title_news">Bỉ xây dựng đảo nhân tạo để tích trữ năng lượng điện gió</h2>
+          </a>
+          <p>Do dự định từ bỏ hoàn toàn năng lượng hạt nhân trong tương lai gần, Bỉ lập kế hoạch xây dựng một đảo nhân tạo trên biển Bắc để tích trữ năng lượng gió...</p>
+          <ul class="list_news_c">
+            <li><a href="">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+            <li><a href="">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+            <li><a href="">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Factory Category-->
+      <!--Shareholder Relationship Category-->
+      <div class="box">
+        <div class="box_content category">
+          <div class="box_Tab"><span class="cate_name">QUAN HỆ CỔ ĐÔNG</span> <span class="icon_split"></span>
+            <ul class="sub_cates">
+              <li class="sub_cate_f"><a href="#">Thông tin cổ đông</a></li>
+              <li><a href="#">Bản cáo bạch</a></li>
+              <li><a href="#">Đại hội Cổ đông</a></li>
+              <li><a href="#">Báo cáo thường niên</a></li>
+              <li><a href="#">Báo cáo tài chính</a></li>
+            </ul>
+          </div>
+          <a href="list_projects.html"><img class="img_general" src="Images/news01.jpg" alt="" width="150" height="100" /></a> <a href="">
+          <h2 class="title_news">Bỉ xây dựng đảo nhân tạo để tích trữ năng lượng điện gió</h2>
+          </a>
+          <p>Do dự định từ bỏ hoàn toàn năng lượng hạt nhân trong tương lai gần, Bỉ lập kế hoạch xây dựng một đảo nhân tạo trên biển Bắc để tích trữ năng lượng gió...</p>
+          <ul class="list_news_c">
+            <li><a href="">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+            <li><a href="">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+            <li><a href="">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Shareholder Relationship Category-->
+      <!--Technology Category-->
+      <div class="box">
+        <div class="box_content category">
+          <div class="box_Tab"><span class="cate_name">KHOA HỌC - CÔNG NGHỆ</span> <span class="icon_split"></span>
+            <ul class="sub_cates">
+              <li class="sub_cate_f"><a href="#">Thủy điện</a></li>
+              <li><a href="#">Kỹ thuật điện</a></li>
+              <li><a href="#">Công nghệ năng lượng</a></li>
+            </ul>
+          </div>
+          <a href="list_projects.html"><img class="img_general" src="Images/news01.jpg" alt="" width="150" height="100" /></a> <a href="">
+          <h2 class="title_news">Bỉ xây dựng đảo nhân tạo để tích trữ năng lượng điện gió</h2>
+          </a>
+          <p>Do dự định từ bỏ hoàn toàn năng lượng hạt nhân trong tương lai gần, Bỉ lập kế hoạch xây dựng một đảo nhân tạo trên biển Bắc để tích trữ năng lượng gió...</p>
+          <ul class="list_news_c">
+            <li><a href="">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+            <li><a href="">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+            <li><a href="">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Technology Category-->
+      <!--Relax Category-->
+      <div class="box">
+        <div class="box_content category">
+          <div class="box_Tab"><span class="cate_name">GIẢI TRÍ THƯ GIÃN</span> <span class="icon_split"></span>
+            <ul class="sub_cates">
+              <li class="sub_cate_f"><a href="#">Giải trí</a></li>
+              <li><a href="#">Thư Giản</a></li>
+            </ul>
+          </div>
+          <a href="list_projects.html"><img class="img_general" src="Images/news01.jpg" alt="" width="150" height="100" /></a> <a href="">
+          <h2 class="title_news">Bỉ xây dựng đảo nhân tạo để tích trữ năng lượng điện gió</h2>
+          </a>
+          <p>Do dự định từ bỏ hoàn toàn năng lượng hạt nhân trong tương lai gần, Bỉ lập kế hoạch xây dựng một đảo nhân tạo trên biển Bắc để tích trữ năng lượng gió...</p>
+          <ul class="list_news_c">
+            <li><a href="">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+            <li><a href="">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+            <li><a href="">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Relax Category-->
+    </div>
+    <!--End Main Column-->
+    <!--Right Column-->
+    <div class="right_content">
+      <!--Popular News-->
+      <div class="box green_Bg">
+        <div class="box_Tab">Tin Nổi bật</div>
+        <div class="box_content">
+          <ul class="news_index">
+            <li> <a href="detail_news.html" class="link_title">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+            <li> <a href="detail_news.html" class="link_title">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+            <li> <a href="detail_news.html" class="link_title">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+            <li> <a href="detail_news.html" class="link_title">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+            <li> <a href="detail_news.html" class="link_title">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+            <li> <a href="detail_news.html" class="link_title">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Popular News-->
+      <!--Hot News-->
+      <div class="box green_Bg">
+        <div class="box_Tab">Tin mới nhất</div>
+        <div class="box_content">
+          <div id="demo2" class="scroll-text">
+            <ul>
+              <li> <a href="detail_news.html" class="link_title">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+              <li> <a href="detail_news.html" class="link_title">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+              <li> <a href="detail_news.html" class="link_title">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+              <li> <a href="detail_news.html" class="link_title">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+              <li> <a href="detail_news.html" class="link_title">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+              <li> <a href="detail_news.html" class="link_title">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+              <li> <a href="detail_news.html" class="link_title">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+              <li> <a href="detail_news.html" class="link_title">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+              <li> <a href="detail_news.html" class="link_title">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+              <li> <a href="detail_news.html" class="link_title">Hầu hết pin mặt trời trên thế giới lắp đặt sai hướng</a></li>
+              <li> <a href="detail_news.html" class="link_title">IEA coi trọng nguồn năng lượng truyền thống</a></li>
+              <li> <a href="detail_news.html" class="link_title">Nhật khai thác thử nghiệm thành công năng lượng từ 'băng cháy'</a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Hot News-->
+      <!--Link Web-->
+      <div class="box white_Bg">
+        <div class="box_Tab">Liên kết website</div>
+        <div id="link_web">
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Link Web-->
+      <!--Capacity-->
+      <div class="box">
+        <div id="capacity">
+          <label>Tổng sản lượng tháng 01 / 2014</label>
+          <div class="ce_text dashboard orange wide block">
+            <p class="value">621<span>kWh</span></p>
+            <p><img width="160" height="160" alt="" src="Images/capacity.png" title=""></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Link Web-->
+    </div>
+    <!--End Right Column-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Main-->
+  <!--Footer-->
+  <div class="footer">
+    <div class="footer_inner">
+      <div class="sitemap">
+        <label>Shp.vn</label>
+        <div class="listMenuFooter"><a href="">Sitemap</a> <a href="">Email</a> <a href="">In trang</a></div>
+      </div>
+      <div class="info_footer">
+        <p><strong>Công Ty Cổ Phần Thuỷ Điện Miền Nam </strong></p>
+        <p>www.thuydienmiennam.vn - www.shp.vn - www.shp.com.vn</p>
+        <p>Địa chỉ: 93B Nguyễn Văn Thủ, P. Đa Kao, Quân 1, Tp. Hồ Chí Minh</p>
+        <p>Điện thoại: (+84) 08 3911 0098 - Fax: (+84) 08 3910 0445 - Email: <a href="mailto:thuydienmiennam@shp.vn">thuydienmiennam@shp.vn</a></p>
+        <p>Giấy phép số: 100/GP-BC của Cục Báo Chí, Bộ Văn Hoá Thông Tin cấp ngày 15/03/2007</p>
+        <p>Copyright © 2008 - 2013 Bản quyền thuộc về Công Ty Cổ Phần Thuỷ Điện Miền Nam</p>
+        </p>
+      </div>
+      <div class="brand">
+        <label>Chi nhánh công ty</label>
+        <p>
+        <p><strong>Nhà máy ĐA SIAT</strong></p>
+        Địa chỉ: 93B Nguyễn Văn Thủ, P. Đa Kao, Quân 1, Tp. Hồ Chí Minh
+        </p>
+        <p><strong>Nhà máy ĐA DÂNG 2</strong></p>
+        <p>Địa chỉ: 93B Nguyễn Văn Thủ, P. Đa Kao, Quân 1, Tp. Hồ Chí Minh</p>
+        <p><strong>Nhà máy ĐA M’BRI</strong></p>
+        Địa chỉ: 93B Nguyễn Văn Thủ, P. Đa Kao, Quân 1, Tp. Hồ Chí Minh
+        </p>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--End Footer-->
+  <div class="clearfix"></div>
+</div>
+<!--End Page-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

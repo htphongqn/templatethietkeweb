@@ -1,0 +1,212 @@
+/**
+ *********************************************
+ * Prototype of styles for horizontal CSS-menu
+ * @data 25.01.2010
+ *********************************************
+ * (X)HTML-scheme:
+ *  <div id="menu">
+ *      <ul class="menu">
+ *          <li><a href="#" class="parent"><span>level 1</span></a>
+ *              <div><ul>
+ *                  <li><a href="#" class="parent"><span>level 2</span></a>
+ *                      <div><ul><li><a href="#"><span>level 3</span></a></li></ul></div>
+ *                  </li>
+ *              </ul></div>
+ *          </li>
+ *          <li class="last"><a href="#"><span>level 1</span></a></li>
+ *      </ul>
+ *  </div>
+ *********************************************
+ */
+
+/* menu::base */
+#menu {
+	position:relative;
+	z-index:100;
+	height:40px;
+	float: right;
+	width: 70%;
+}
+#menu .menu {
+	float: right;
+	margin: 0 auto;
+	height: 40px;
+	background: url(../Images/nav_Bg.jpg) 0 0 repeat-x;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#menu * {
+	list-style:none;
+	border:0;
+	padding:0;
+	margin:0;
+}
+#menu a {
+	display:block;
+	padding:11px 12px;
+	font-size: 14px;
+	font-weight: 500;
+}
+#menu li {
+	float:left;
+	background: url(../Images/space.jpg) 0 0 no-repeat;
+	padding-left: 2px;
+}
+#menu li.home {
+	background: url(../Images/menu_hover.jpg) 0 0 repeat-x;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+#menu li.last.current, #menu li.last:hover {
+	background: url(../Images/menu_hover.jpg) 0 0 repeat-x;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+#menu li:hover {
+	background: #a90000 url(../Images/space.jpg) 0 0 no-repeat;
+	padding-left: 2px;
+}
+#menu li li {
+	float:none;
+	padding: 0;
+	background: none;
+	_border:1px solid #bb3e3e; /** fix for ie6 */
+	position: relative;
+	background: none;
+}
+#menu li li:hover {
+	background: none;
+	padding-left: 0;
+}
+#menu div {
+	visibility:hidden;
+	position:absolute;
+	background:url(images/pix.gif);
+}
+#menu div div {
+	margin:-40px 0 0 0;
+	left:100%;
+}
+#menu li:hover>div {
+	visibility:visible;
+}
+/* menu::special styles */
+/* menu::level 1 */
+#menu a {
+	text-decoration:none;
+	color:#FFFFFF;
+	position:relative;
+	z-index:77;
+}
+#menu a:hover {
+	background: url(../Images/menu_hover.jpg) 0 0 repeat-x;
+	color:#FFFFFF;
+}
+#menu a:hover span {
+	color:#FFFFFF;
+}
+#menu>ul>li:hover>a {
+	background:url(images/back.png);
+	color:#333333;
+}
+#menu>ul>li:hover>a span {
+	color:#FFFFFF;
+}
+#menu span {
+	font-weight: 700;
+	color: #FFFFFF;
+}
+/* menu::level >= 2 */
+#menu li li a {
+	padding:0;
+	position:static;
+	border-bottom: 1px solid #ff6868;
+	height: 30px;
+}
+#menu li li a:hover {
+	background: #d12020;
+	color: #FFFF00;
+}
+#menu li li a span {
+	color:#FFFFFF;
+	font-size: 13px;
+	padding-left: 10px;
+}
+#menu li li a:hover span {
+	color:#FFFFFF;
+}
+#menu li li a.parent span {
+	background:  url(../Images/arrow_left.png) no-repeat 185px -13px;
+	_background-position: right 13px;
+}
+*+html #menu li li a.parent span {
+	background: url(../Images/arrow_left.png) no-repeat 185px -13px;
+}
+#menu li li a.parent:hover span {
+	background: url(../Images/arrow_left.png) no-repeat 185px -13px;
+}
+*+html #menu li li a.parent:hover span {
+	background-position:right -48px;
+}
+#menu li li span {
+	display:block;
+	text-transform:none;
+	line-height:30px;
+	padding:0 10px;
+}
+#menu li div {
+	background: #a90000;
+	width: 200px;
+	position: absolute;
+	top: 39px;
+	z-index: 99999;
+}
+#menu li ul {
+	border: 1px solid #ff6868;
+	border-top: none;
+}
+/** <fix for ie6> */
+#menu div div {
+	_margin-top:-25px;
+	_background:#bb3e3e;
+}
+#menu li li li {
+	_border:1px solid #bb3e3e;
+}
+#menu div div div {
+	_background:#bb3e3e;
+}
+#menu li li li li {
+	_border:1px solid #bb3e3e;
+}
+/** </fix for ie6> */
+
+/* lava lamp */
+div#menu li.back {
+	width:10px;
+	height:40px;
+	z-index:8;
+	position:absolute;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+div#menu li.back .left {
+	width:auto;
+	height:40px;
+	float:none;
+	position:relative;
+	top:0;
+	left:0;
+	visibility:visible;
+	background: none;
+}

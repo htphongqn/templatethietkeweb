@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Rexinh.vn</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--#begin Header-->
+  <div class="header">
+    <div class="header_inner">
+      <div class="logo"><a href="index.html"><img src="Images/logo.png" alt="" width="200" /></a> <span class="arrow_right"></span></div>
+      <div class="header_right">
+        <div class="location">
+          <div class="title_location">TP. Hồ Chí Minh<span class="arrow_down"></span></div>
+          <ul class="list_city">
+            <li> <a href="/ho-chi-minh">Hồ Chí Minh</a> </li>
+            <li> <a href="/ha-noi">Hà Nội</a> </li>
+            <li> <a href="/ba-ria-vung-tau"><span>Bà Rịa - Vũng Tàu</a> </li>
+            <li> <a href="/binh-duong"><span>Bình Dương</a> </li>
+            <li> <a href="/can-tho"><span>Cần Thơ</a> </li>
+            <li> <a href="/da-nang"><span>Đà Nẵng</a> </li>
+            <li> <a href="/bien-hoa"><span>Biên Hòa</a> </li>
+            <li> <a href="/nha-trang"><span>Nha Trang</a> </li>
+          </ul>
+        </div>
+        <div class="search_tool">
+          <div class="all_cate">Tất cả<span class="arrow_down1"></span>
+            <ul class="menu_hover">
+              <li class=""><a href="/thoi-trang-quan-ao-gia-re_c56.html">Thời trang</a></li>
+              <li class=""><a href="/phu-kien-thoi-trang_c69.html">Phụ kiện thời trang</a></li>
+              <li class=""><a href="/nha-hang-quan-an-gia-re_c53.html">Nhà hàng - Ẩm thực</a></li>
+              <li class=""><a href="/lam-dep-da_c54.html">Sức khỏe - Làm đẹp</a></li>
+              <li class=""><a href="/du-lich-khach-san-resort-gia-re_c52.html">Du lịch - Khách sạn</a></li>
+              <li class=""><a href="/giai-tri-dao-tao_c55.html">Giải trí - Đào tạo</a></li>
+              <li class=""><a href="/gia-dung-noi-that_c57.html">Gia dụng - Nội thất</a></li>
+              <li class=""><a href="/dien-tu-cong-nghe_c59.html">Điện tử - Công nghệ</a></li>
+              <li class="end"><a href="/cham-soc-me-va-be_c68.html">Mẹ và Bé</a></li>
+            </ul>
+          </div>
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+          <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="" />
+        </div>
+        <a href="">
+        <div class="cart"><span>2</span></div>
+        </a>
+        <script type="text/javascript">    
+    $(function () {
+        $('.bubbleInfo').each(function () {
+            var distance = 10;
+            var time = 50;
+            var hideDelay = 50;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.popup_login', this).css('opacity', 0);
+
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 45,
+                        left: 100,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 0
+                    }, time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });
+    });    
+    </script>
+        <div class="bubbleInfo"> <a title="Đăng nhập" class="trigger login" href="">Đăng nhập</a> <a title="Đăng ký" href="" class="register">Đăng ký</a>
+          <div id="dpop" class="popup_login">
+            <div class="input_form">
+              <input type="text" onblur="FormatValidateCharBlur('txtusername')" maxlength="50" name="txtusername" id="txtusername" placeholder="Nhập Email hoặc sđt" class="input identity">
+            </div>
+            <div class="input_form">
+              <input type="password" onblur="ValidatePassword()" placeholder="Nhập mật khẩu" name="txtpassword" id="txtpassword" class="input password">
+            </div>
+            <div class="note_wrapper clearfix">
+              <div class="lost_password"><a class="link_acount" href="">Quên mật khẩu</a></div>
+              <div class="remember_password">
+                <input type="checkbox" checked="checked" name="lost_password" id="lost_password" class="checkbox lost_password">
+                <label for="lost_password">Ghi nhớ</label>
+              </div>
+            </div>
+            <div class="input_form">
+              <input type="submit" value="ĐĂNG NHẬP" onclick="ValidateBeforeSubmit(); return false;" name="submit" id="submit" class="button">
+            </div>
+            <div class="note_wrapper">Nếu bạn chưa có tài khoản: <a rel="nofollow" onclick="SetLinkRegister();" href="" class="link_acount">Đăng ký ngay</a></div>
+            <div class="note_wrapper menu_account">
+              <ul>
+                <li><a href="">Hồ sơ cá nhân</a></li>
+                <li><a href="">Thông tin đơn hàng</a></li>
+                <li><a href="">Đăng xuất</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Header Right-->
+    </div>
+  </div>
+  <!--#end Header-->
+  <div class="page">
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <div class="ads"><img src="Images/ads_01.jpg" alt="" /></div>
+        <!--Main Menu-->
+        <div class="box">
+          <div class="list_cate"><span class="title_cate">Ngành hàng</span></div>
+          <aside id="sidebar" class="sidebar product-sidebar left-sidebar">
+            <nav class="navigation clearfix">
+              <ul id="ulcatmenu" class="clearfix">
+                <li class="fashion"><a href="" rel="THỜI TRANG" class="active">THỜI TRANG</a></li>
+                <li class="accessories"><a href="" rel="PHỤ KIỆN">PHỤ KIỆN</a></li>
+                <li class="restaurant"><a href="" rel="NHÀ HÀNG">NHÀ HÀNG</a></li>
+                <li class="beauty"><a href="" rel="LÀM ĐẸP">LÀM ĐẸP</a></li>
+                <li class="hotel"><a href="" rel="KHÁCH SẠN">KHÁCH SẠN</a></li>
+                <li class="education"><a href="" rel="ĐÀO TẠO">ĐÀO TẠO</a></li>
+                <li class="utensils"><a href="" rel="GIA DỤNG">GIA DỤNG</a></li>
+                <li class="technology"><a href="" rel="CÔNG NGHỆ">CÔNG NGHỆ</a></li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+        <!--End Main Menu-->
+        <div class="box">
+          <div class="box_Tab">Sản phẩm mới</div>
+          <div class="box_content_center">
+            <div class="new_products">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_00.jpg" alt="" width="230" height="285" /></a></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong...</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span></div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_00.jpg" alt="" width="230" height="285" /></a></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo đầm</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span></div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_00.jpg" alt="" width="230" height="285" /></a></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo đầm</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span></div>
+                </div>
+              </div>
+              <!--End Product-->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <!--Nivo Slider-->
+        <div class="top_main">
+          <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+          <!-- Start Slider Scripts -->
+          <script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+          <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+          <div class="slider-wrapper theme-pascal">
+            <div id="slider" class="nivoSlider"> <a href="http://viva-vietnam.blogspot.com"><img src="Images/slider_01.jpg" alt="" title=""/></a> <a href="http://shareallworld.info/search/label/Tourist"><img src="Images/slider_02.jpg" alt="" title="" /></a> <a href="http://shareallworld.info/search/label/Movies"><img src="Images/slider_03.jpg" alt="" title=""/></a> <a href="http://shareallworld.info/search/label/MMO"><img src="Images/slider_04.jpg" alt="" title="" /></a> </div>
+          </div>
+        </div>
+        <!--End Nivo Slider-->
+        <div class="box">
+          <div class="box_Tab">Khuyến mãi mới nhất</div>
+          <div class="box_content_center">
+            <div class="product_row">
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt cho ban cam giac thoai mai</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt cho ban cam giac thoai mai</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt cho ban cam giac thoai mai</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <!--Start Product-->
+              <div class="product">
+                <div class="img_product"><a href="detail_products.html"><img src="Images/product_01.jpg" alt="" width="245" height="245" /></a> <a href=""><span class="caption full_caption">Thích</span></a> <span class="caption simple_caption">Giao sản phẩm miễn phí</span></div>
+                <div class="info_product">
+                  <div class="product_name"><a href="detail_products.html">Áo ngực dây lưng trong suốt</a></div>
+                  <div class="info_price"><span class="price">975.000đ</span> <span class="f_price">1.050.000đ</span> <span class="reduce">Giảm 50%</span></div>
+                  <div class="quantity">Có <span>1460</span> người đã mua</div>
+                </div>
+              </div>
+              <!--End Product-->
+              <div class="clearfix"></div>
+            </div>
+            
+            <div class="btn">
+    <input type="button" value="" class="btn_next_all" id="loadMore">
+</div>
+            
+          </div>
+        </div>
+      </div>
+      <!--End Main Column-->
+      <div class="clearfix"></div>
+    </div>
+    <!--End Main-->
+    <div class="clearfix"></div>
+  </div>
+  <!--End Page-->
+  <!--Footer-->
+  <div class="footer">
+    <div class="topmenu_footer">
+      <div class="col_menuFooter" id="copyright">
+        <div class="ctentColuMenuFooter">
+          <p><img src="Images/small_logo.png" alt="" /></p>
+          <p>Copyright © 2013 By <strong>rexinh.vn</strong></p>
+          <p>123 Sư Vạn Hạnh, Phường 12, Quận 10, Tp.HCM.</p>
+          <p>Giấy phép Kinh doanh số: 0312345678</p>
+          <p><a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"><img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a></p>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2 class="menu_f_title"><a href="">Giới thiệu Rexinh.vn</a></h2>
+          <div class="listMenuFooter"><a href="">Về chúng tôi</a><a href="">Quy chế</a><a href="">Hợp tác kinh doanh</a><a href="">Liên hệ</a><a href="">Tuyển Dụng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter">
+        <div class="ctentColuMenuFooter">
+          <h2 class="menu_f_title"><a href="">Hướng dẫn sử dụng</a></h2>
+          <div class="listMenuFooter"><a href="">Hướng dẫn mua hàng</a><a href="">Giao nhận hàng</a><a href="">Khuyến Mãi</a><a href="">Hình thức thanh toán</a><a href="">Tài khoản & đơn hàng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="support">
+        <div class="ctentColuMenuFooter">
+          <h2 class="menu_f_title"><a href="">Hotline Hỗ trợ</a></h2>
+          <div class="listMenuFooter">
+            <p><span class="hotline">19000000</span></p>
+            <p><span class="hotline">08.12.345.678</span></p>
+            <p>Từ thứ 2 - thứ 6: 8h00 - 21h30</p>
+            <p>(Nghỉ trưa 12h-13h30)</p>
+            <p>Thứ 7: 8h00 - 21h30</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

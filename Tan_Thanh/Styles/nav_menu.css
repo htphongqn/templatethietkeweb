@@ -1,0 +1,140 @@
+#nav_menu {
+	height: 40px;
+	background: url(../Images/menuBg.gif) 0 0 repeat-x;
+	margin: 0 35px;
+}
+#menu_r {
+	background: url(../Images/l_menuBg.png) bottom left no-repeat;
+	height: 40px;
+	margin: 0 15px;
+}
+#menu_l {
+	background: url(../Images/r_menuBg.png) bottom right no-repeat;
+	height: 40px;
+}
+#nav_menu ul {
+	list-style: none;
+	margin: 0;
+}
+#nav_menu:after, #nav_menu ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#nav_menu ul, #nav_menu li, #nav_menu a {
+	position: relative;
+}
+#nav_menu > ul {
+	float: left;
+	position: relative;
+	display: block;
+	z-index: 500;
+	padding: 0 10px;
+}
+#nav_menu > ul > li {
+	float: left;
+	display:inline-block;
+	padding-left: 2px;
+	background: url(../Images/space_menu.gif) 0 0 repeat-y
+}
+#nav_menu > ul > li:first-child {
+	background: none;
+	padding: 0
+}
+#nav_menu ul li a {
+	display: block;
+	text-decoration: none;
+}
+#nav_menu > ul > li > a {
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 9px 15px;
+	color: #111111;
+	text-transform: uppercase;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	z-index: 50;
+}
+#nav_menu > ul > li.active > a, #nav_menu > ul > li:hover > a {
+	background: #FFFFFF;
+	color: #111111;
+}
+#nav_menu ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 42px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background: rgba(255, 255, 255, 0.9);
+	border: 1px solid #dbdbdc;
+	border-top: none
+}
+#nav_menu ul ul ul {
+	top: 42px;
+}
+#nav_menu ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 200px
+}
+#nav_menu > ul > li:hover > ul {
+	left: 0;
+	top: 42px;
+	opacity: 1;
+}
+#nav_menu ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#nav_menu ul ul li a {
+	border-bottom: 1px dotted #FFFFFF;
+	filter: none;
+	font: normal 14px Tahoma, Geneva, sans-serif;
+	display: block;
+	line-height: 100%;
+	padding: 10px 5px;
+	color: #0047b3;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#nav_menu ul ul li:hover > a {
+	background: #2063be;
+	color: #FFFFFF
+}
+#nav_menu ul ul li:last-child > a, #nav_menu ul ul li.last > a {
+	border-bottom: 0;
+}
+#nav_menu > ul > li > .mask_menu {
+	position: absolute;
+	opacity: 0;
+	left: -80px;
+	top: 6px;
+	z-index: 1;
+	height: 28px;
+	width: 100%;
+	background: url(../Images/menu_hoverBg.gif) 0 0 repeat-x;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+#nav_menu > ul > li.active > .mask_menu, #nav_menu > ul > li:hover > .mask_menu {
+	opacity: 1;
+	visibility: visible;
+	left: 0;
+}

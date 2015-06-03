@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Máy lạnh 5</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu1", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+<!---Toggle Cate-->
+<script type='text/javascript'>
+        $(document).ready(function () {
+            var notH = 1,
+    $pop = $('ul.hidden').hover(function () { notH ^= 1; });
+
+            $(document).on('mouseup keyup', function (e) {
+                if (notH || e.which == 27) $pop.stop().hide();
+            });
+            /////// CALL POPUP 
+            $('.sub_cate_hide').click(function () {
+                jQuery(this).find('ul.hidden').slideDown("fast").end().siblings().find('ul.hidden').hide('fast');
+                event.stopPropagation();
+            });
+        });
+    </script>
+<script language="javascript">
+        function TogglePayment() {
+            document.getElementById('dvPament').style.height = "auto";
+            document.getElementById('hplPaymentMore').style.background = "#e9e9e9 url('Images/double_arr_up.png') center center no-repeat";
+        }
+        function CollapsePayment() {
+            document.getElementById('dvPament').style.height = "360px";
+            document.getElementById('hplPaymentMore').style.background = "#e9e9e9 url('Images/double_arr_down.png') center center no-repeat";
+        }
+        function SetPayment() {
+            if (document.getElementById('dvPament').style.height == "360px")
+                TogglePayment();
+            else
+                CollapsePayment();
+        }
+    </script>
+<!--Menu-->
+<script src="Scripts/masonry.js"></script>
+<script type="text/javascript">
+        $(function () {
+            var columns = 4,
+	setColumns = function () { columns = $(window).width() > 750 ? 4 : $(window).width() > 500 ? 3 : $(window).width() > 250 ? 2 : 1; };
+            setColumns();
+            $(window).resize(setColumns);
+            $('.m_li').bind('mouseenter', function () {
+
+                $(this).find('.list_categories').stop(true, true).show('fast');
+                var columns = 3,
+				setColumns = function () { columns = $(window).width() > 750 ? 3 : $(window).width() > 500 ? 2 : $(window).width() > 250 ? 2 : 1; };
+                setColumns();
+                $(window).resize(setColumns);
+                $('.sub_list_cate').masonry(
+	    		{
+	    		    itemSelector: '.pc_menu',
+	    		    columnWidth: function (containerWidth) { return containerWidth / columns; }
+	    		});
+            }).bind('mouseleave', function () {
+
+                $(this).find('.list_categories').stop(true, true).hide('fast', function () {
+
+                });
+            });
+        })	
+    </script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--TopMenu_Fixed-->
+<script type="text/javascript" src="Scripts/jquery.autofix_anything.js"></script>
+<link type="text/css" href="Styles/autofix_anything.css" rel="stylesheet" />
+<script>
+	  $(document).ready( function() {
+	     $(".sitenav").autofix_anything();  	   
+	  });
+		
+	</script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+        function mycarousel_initCallback(carousel) {
+            // Disable autoscrolling if the user clicks the prev or next button.
+            /* carousel.buttonNext.bind('click', function() {
+            carousel.startAuto(0);
+            });
+
+            carousel.buttonPrev.bind('click', function() {
+            carousel.startAuto(0);
+            });*/
+
+            // Pause autoscrolling if the user moves with the cursor over the clip.
+            carousel.clip.hover(function () {
+                carousel.stopAuto();
+            }, function () {
+                carousel.startAuto();
+            });
+        };
+
+        jQuery(document).ready(function () {
+            jQuery('#mycarousel_dt_img').jcarousel({
+                auto: 0,
+                animation: 1000,
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });
+        });
+    </script>
+<meta name="Description" content="-" />
+<meta name="Keywords" content="-" />
+<meta property="og:image" content=" http://maynganhcongnghiep.com//data/news/1146/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg" />
+<meta name="Description" />
+<meta name="Keywords" content="Máy lạnh 5" />
+</head>
+<body>
+<form method="post" action="/may-lanh-cong-nghiep/may-lanh-5.html" id="form1">
+  <div class="aspNetHidden">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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Z2hpZXAuaHRtbCc+TcOheSBs4bqhbmggY8O0bmcgbmdoaeG7h3A8L2E+IGQCBw8WAh8BAgEWAmYPZBYCZg8VAjgvZGF0YS9uZXdzLzExNDYvbWF5LWxhbmgtdHUtZHVuZy1hbGFza2EtYWMtMjRmLTIuNWhwLmpwZzgvZGF0YS9uZXdzLzExNDYvbWF5LWxhbmgtdHUtZHVuZy1hbGFza2EtYWMtMjRmLTIuNWhwLmpwZ2QCCQ8WAh8BAgEWAmYPZBYCZg8VAzgvZGF0YS9uZXdzLzExNDYvbWF5LWxhbmgtdHUtZHVuZy1hbGFza2EtYWMtMjRmLTIuNWhwLmpwZzgvZGF0YS9uZXdzLzExNDYvbWF5LWxhbmgtdHUtZHVuZy1hbGFza2EtYWMtMjRmLTIuNWhwLmpwZzgvZGF0YS9uZXdzLzExNDYvbWF5LWxhbmgtdHUtZHVuZy1hbGFza2EtYWMtMjRmLTIuNWhwLmpwZ2QCCw8WAh8BAgEWAmYPZBYCZg8VBw1Nw6F5IGzhuqFuaCA1JS9tYXktbGFuaC1jb25nLW5naGllcC9tYXktbGFuaC01Lmh0bWwAGk3DoXkgbOG6oW5oIGPDtG5nIG5naGnhu4dwCkxpw6puIGjhu4cEMTE0NgEwZAINDxYCHwdlZAIPDxYCHwECBBYIZg9kFgJmDxUKJS9tYXktbGFuaC1jb25nLW5naGllcC9tYXktbGFuaC0xLmh0bWwLbcOheSBsYW5oIDE4L2RhdGEvbmV3cy8xMTMwL21heS1sYW5oLXR1LWR1bmctYWxhc2thLWFjLTI0Zi0yLjVocC5qcGclL21heS1sYW5oLWNvbmctbmdoaWVwL21heS1sYW5oLTEuaHRtbAttw6F5IGxhbmggMQttw6F5IGxhbmggMQpMacOqbiBo4buHACUvbWF5LWxhbmgtY29uZy1uZ2hpZXAvbWF5LWxhbmgtMS5odG1sAGQCAQ9kFgJmDxUKJS9tYXktbGFuaC1jb25nLW5naGllcC9tYXktbGFuaC0yLmh0bWwLbcOheSBsYW5oIDI4L2RhdGEvbmV3cy8xMTMxL21heS1sYW5oLXR1LWR1bmctYWxhc2thLWFjLTI0Zi0yLjVocC5qcGclL21heS1sYW5oLWNvbmctbmdoaWVwL21heS1sYW5oLTIuaHRtbAttw6F5IGxhbmggMgttw6F5IGxhbmggMgpMacOqbiBo4buHACUvbWF5LWxhbmgtY29uZy1uZ2hpZXAvbWF5LWxhbmgtMi5odG1sAGQCAg9kFgJmDxUKJS9tYXktbGFuaC1jb25nLW5naGllcC9tYXktbGFuaC0zLmh0bWwLbcOheSBsYW5oIDM4L2RhdGEvbmV3cy8xMTMyL21heS1sYW5oLXR1LWR1bmctYWxhc2thLWFjLTI0Zi0yLjVocC5qcGclL21heS1sYW5oLWNvbmctbmdoaWVwL21heS1sYW5oLTMuaHRtbAttw6F5IGxhbmggMwttw6F5IGxhbmggMwpMacOqbiBo4buHACUvbWF5LWxhbmgtY29uZy1uZ2hpZXAvbWF5LWxhbmgtMy5odG1sAGQCAw9kFgJmDxUKJS9tYXktbGFuaC1jb25nLW5naGllcC9tYXktbGFuaC00Lmh0bWwLbcOheSBsYW5oIDQ4L2RhdGEvbmV3cy8xMTMzL21heS1sYW5oLXR1LWR1bmctYWxhc2thLWFjLTI0Zi0yLjVocC5qcGclL21heS1sYW5oLWNvbmctbmdoaWVwL21heS1sYW5oLTQuaHRtbAttw6F5IGxhbmggNAttw6F5IGxhbmggNApMacOqbiBo4buHACUvbWF5LWxhbmgtY29uZy1uZ2hpZXAvbWF5LWxhbmgtNC5odG1sAGQCEQ9kFgICAQ9kFgQCAQ8WAh8BAgMWBmYPZBYCZg8VATk8bGk+PHNwYW4gY2xhc3M9J251bWJlcl9waG9uZSc+MDkwOcKgNjMzwqA1NTE8L3NwYW4+PC9saT5kAgEPZBYCZg8VAYMBPGxpPjxhIGhyZWY9J3NreXBlOnNreXBlP2NhbGwnIHRpdGxlPSdza3lwZSc+PGltZyBzcmM9J2h0dHA6Ly9teXN0YXR1cy5za3lwZS5jb20vc21hbGxjbGFzc2ljL3NreXBlJyB0aXRsZT1za3lwZSAgYWx0PScnID48L2E+PC9saT5kAgIPZBYCZg8VAX88bGk+PGEgaHJlZj0neW1zZ3I6c2VuZGltP3lhaG9vJyB0aXRsZT0neWFob28nPjxpbWcgc3JjPSdodHRwOi8vb3BpLnlhaG9vLmNvbS9vbmxpbmU/dT15YWhvbyZtPWcmdD0yJyAgIGJvcmRlcj0nMCcgIC8+PC9h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LmpwZycgYWx0PScnIC8+PC9hPmQCBQ9kFgJmDxUBVDxhIGhyZWY9JycgdGFyZ2V0PSdfcGFyZW50Jz48aW1nIHNyYz0nL2RhdGEvYWRpdGVtcy8xMzIvTG9nb19GdWppLmpwZycgYWx0PScnIC8+PC9hPmQCBg9kFgJmDxUBWDxhIGhyZWY9JycgdGFyZ2V0PSdfcGFyZW50Jz48aW1nIHNyYz0nL2RhdGEvYWRpdGVtcy8xMzMvbG9nby1mdWppZmlsbS5qcGcnIGFsdD0nJyAvPjwvYT5kAgcPZBYCZg8VAWM8YSBocmVmPScnIHRhcmdldD0nX3BhcmVudCc+PGltZyBzcmM9Jy9kYXRhL2FkaXRlbXMvMTM0L0ZVSkkgRFJJVkVfTG9nbyBGdWppIE5ldy5qcGcnIGFsdD0nJyAvPjwvYT5kAggPZBYCZg8VAU88YSBocmVmPScnIHRhcmdldD0nX3BhcmVudCc+PGltZyBzcmM9Jy9kYXRhL2FkaXRlbXMvMTM1L0Z1amkuanBnJyBhbHQ9JycgLz48L2E+ZAIJD2QWAmYPFQFUPGEgaHJlZj0nJyB0YXJnZXQ9J19wYXJlbnQnPjxpbWcgc3JjPScvZGF0YS9hZGl0ZW1zLzEzNi9GdWppLUxvZ28uanBnJyBhbHQ9JycgLz48L2E+ZAIFDxYCHwcFwAM8cD48c3Ryb25nPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IG1lZGl1bTsgZm9udC1mYW1pbHk6IGFyaWFsLCBoZWx2ZXRpY2EsIHNhbnMtc2VyaWY7Ij5DJk9jaXJjO05HIFRZIFROSEggWE5LIFRI4bucSSDEkOG6oEkgTeG7mkk8L3NwYW4+PC9zdHJvbmc+PC9wPg0KPHA+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogbWVkaXVtOyBmb250LWZhbWlseTogYXJpYWwsIGhlbHZldGljYSwgc2Fucy1zZXJpZjsiPsSQ4buLYSBjaOG7iTogNjYyLzI3IFBoYW4gVsSDbiBUcuG7iywgUC4gMTAsIFEuIEcmb2dyYXZlOyBW4bqlcCwgVFAuSENNPC9zcGFuPjwvcD4NCjxwPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IG1lZGl1bTsgZm9udC1mYW1pbHk6IGFyaWFsLCBoZWx2ZXRpY2EsIHNhbnMtc2VyaWY7Ij7EkGnhu4duIHRob+G6oWk6IDA5MDkgNjMzIDU1MTwvc3Bhbj48L3A+DQo8cD4mbmJzcDs8L3A+ZAIJDxYCHwECBxYOZg9kFgJmDxUCDy90cmFuZy1jaHUuaHRtbAtUcmFuZyBjaOG7p2QCAQ9kFgJmDxUCEC9naW9pLXRoaWV1Lmh0bWwOR2nhu5tpIHRoaeG7h3VkAgIPZBYCZg8VAg0vZGljaC12dS5odG1sC0Thu4tjaCB24bulZAIDD2QWAmYPFQIYL2h1b25nLWRhbi1tdWEtaGFuZy5odG1sGEjGsOG7m25nIGThuqtuIG11YSBow6BuZ2QCBA9kFgJmDxUCFC90dS12YW4taG9pLWRhcC5odG1sFVTGsCB24bqlbiBo4buPaSDEkcOhcGQCBQ9kFgJmDxUCDS90aW4tdHVjLmh0bWwJVGluIHThu6ljZAIGD2QWAmYPFQINL2xpZW4taGUuaHRtbApMacOqbiBo4buHZGQavwUotUfqRpDyEiTeASYxFqoLAzAWg6sQAoavTTqLcQ==" />
+  </div>
+  <div class="aspNetHidden">
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA6kgPERSVnj8PS2EH0Mxo3ea4/Wqw4RmtlV2RlNJO++K15IHC8fK5Wlkw3X72tS1KjczJSYz7IfAMYOZuaYHMrYT17OmK3J10Ni5vkSUdGiNa6bjfwjgz+dIKAGs/LSJfuI7ZGG23/IITCz0NUb478HXBI7mD3TNiO31k5wEEJzmfAOyCy2UGlGPW5yzoXW3fnH3VI0M+uihYRLVknzuUMCAfBxN8QmtMuD8H/b8yY7Xe47onr84iItBK0jDIcZRkkjsNgol5yAK54EwRyyiTijEgJ7hW/uYmXiR0YaMQKhPljXPf5iZ9VLe5UTX5GLvj+jv2LdO3liF/wF8f1JPRCI" />
+  </div>
+  <div>
+    <div class="wrap">
+      <!--#begin Header-->
+      <div id="header"> <a href='/trang-chu.html' id='logo'><img src='/data/configs/22/logo.png' alt='' /></a>
+        <p id='text_logo'><a href='/trang-chu.html' id='banner_head'><img src='/data/configs/23/banner_head.png' alt='' /></a></p>
+        <div id="hotline"> <span class="number_phone"> 0909 633 551<br />
+          </span> </div>
+      </div>
+      <!--#end Header-->
+      <!--Main Menu-->
+      <div id="smoothmenu1" class="ddsmoothmenu">
+        <ul>
+          <li class=""><a href="/trang-chu.html"> Trang chủ</a> </li>
+          <li class=""><a href="/gioi-thieu.html"> Giới thiệu</a> </li>
+          <li class=""><a href="/dich-vu.html"> Dịch vụ</a> </li>
+          <li class=""><a href="/huong-dan-mua-hang.html"> Hướng dẫn mua hàng</a> </li>
+          <li class=""><a href="/tu-van-hoi-dap.html"> Tư vấn hỏi đáp</a> </li>
+          <li class=""><a href="/tin-tuc.html"> Tin tức</a> </li>
+          <li class=""><a href="/lien-he.html"> Liên hệ</a> </li>
+        </ul>
+        <div id="cart" class="fr"> <a href="/gio-hang.html"><span class="icon_cart"></span></a> </div>
+      </div>
+      <!--End Main Menu-->
+      <!--Main Content-->
+      <div id="main">
+        <!--Category Home-->
+        <div id="left_col" class="fl">
+          <!--Menu Sidebar-->
+          <div class="sitenav fl">
+            <ul>
+              <li class="homecatalog"><span class="homecataloglabel">Danh mục sản phẩm</span>
+                <!--Main Menu-->
+                <ul  class="nav_menu" id="dvPament">
+                  <li class="m_li"><a href="/thiet-bi-do.html" class="t_menu"> Thiết bị đo</a> </li>
+                  <li class="m_li"><a href="/thiet-bi-bep-cn.html" class="t_menu"> Thiết bị bếp CN</a> </li>
+                  <li class="m_li"><a href="/may-dong-goi.html" class="t_menu"> Máy đóng gói</a> </li>
+                  <li class="m_li"><a href="/thiet-bi-xu-li-moi-truong.html" class="t_menu"> Thiết bị xử lí môi trường</a> </li>
+                  <li class="m_li"><a href="/may-han.html" class="t_menu"> Máy hàn</a> </li>
+                  <li class="m_li"><a href="/may-nen-khi.html" class="t_menu"> Máy nén khí</a> </li>
+                  <li class="m_li"><a href="/may-bom.html" class="t_menu"> Máy bơm</a> </li>
+                  <li class="m_li"><a href="/may-trac-dia.html" class="t_menu"> Máy trắc địa</a> </li>
+                  <li class="m_li"><a href="/may-khoan.html" class="t_menu"> Máy khoan</a> </li>
+                  <li class="m_li"><a href="/may-may.html" class="t_menu"> Máy may</a> </li>
+                  <li class="m_li"><a href="/thiet-bi-nganh-det-may.html" class="t_menu"> Thiết bị ngành dệt may</a> </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!--end Menu Sidebar-->
+          <!--Left Column 2-->
+          <div id="left_col2" class="fr">
+            <div id="top_main">
+              <!--Search Tool-->
+              <div class="search_tool" style="width: 753px">
+                <div class="search">
+                  <div class="dropdown">
+                    <label>
+                      <select name="ctl00$ContentPlaceHolder1$ctl00$topmain1$Drsearchdanhmuc" id="ContentPlaceHolder1_ctl00_topmain1_Drsearchdanhmuc" class="dr_search">
+                        <option selected="selected" value="0">--- Chọn sản phẩm ---</option>
+                        <option value="391">Thiết bị đo</option>
+                        <option value="392">Thiết bị bếp CN</option>
+                        <option value="393">M&#225;y đ&#243;ng g&#243;i</option>
+                        <option value="394">Thiết bị xử l&#237; m&#244;i trường</option>
+                        <option value="395">M&#225;y h&#224;n</option>
+                        <option value="396">M&#225;y n&#233;n kh&#237;</option>
+                        <option value="397">M&#225;y bơm</option>
+                        <option value="398">M&#225;y trắc địa</option>
+                        <option value="399">M&#225;y khoan</option>
+                        <option value="400">M&#225;y may</option>
+                        <option value="406">M&#225;y lạnh treo tường</option>
+                      </select>
+                    </label>
+                  </div>
+                  <input name="ctl00$ContentPlaceHolder1$ctl00$topmain1$txtsearch" type="text" id="ContentPlaceHolder1_ctl00_topmain1_txtsearch" alt="Search" class="inputSearch" value="Từ khóa tìm kiếm sản phẩm" onclick="this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;) this.value=&#39;Từ khóa tìm kiếm sản phẩm&#39;;" onfocus="if(this.value==&#39;Từ khóa tìm kiếm sản phẩm&#39;) this.value=&#39;&#39;;" onkeypress="return clickButton(event,&#39;ContentPlaceHolder1_ctl00_topmain1_btnSearch&#39;)" />
+                  <a href="javascript:void(0)" id="ContentPlaceHolder1_ctl00_topmain1_btnSearch" onclick="search_result();" class="btn_search"></a> </div>
+              </div>
+              <!--end Search Tool-->
+            </div>
+            <div class="current_path"> <a href="/trang-chu.html">Trang chủ</a> <span class='spSeperator'></span> <a href='/may-lanh-cong-nghiep.html'>Máy lạnh công nghiệp</a> </div>
+            <script src="../vi-vn/Ajax/Addtocart.js" type="text/javascript"></script>
+            <!--Detail Products-->
+            <div class="box">
+              <div class="box_Tab_top"> Chi tiết</div>
+              <div class="box_ct box_ct_main">
+                <div id="dtp_thumb">
+                  <div class="zoom-section">
+                    <div class="zoom-small-image"> <a href='/data/news/1146/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg' class='cloud-zoom zoom'
+                                        id='zoom1' rel="adjustX: 10, adjustY:-4"> <img class="mainImage" src="/data/news/1146/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg"
+                                            alt='' title="" /></a> </div>
+                    <div class="zoom-desc">
+                      <ul id="mycarousel_dt_img" class="jcarousel-skin-tango">
+                        <li class="item"><a href='/data/news/1146/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg'
+                                            class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: '/data/news/1146/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg' "> <img class="zoom-tiny-image" src="/data/news/1146/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg"
+                                                alt="" /></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!--end: #dp-thumb-->
+                <div id="dtp_info">
+                  <div class="dtp_status">
+                    <h2 class="h2Title"> Máy lạnh 5</h2>
+                  </div>
+                  <div class="dtp_status" id="like_face">
+                    <div class="dtp_status">
+                      <div id="fb-root"> </div>
+                      <script>                                        (function (d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0];
+                                            if (d.getElementById(id)) return;
+                                            js = d.createElement(s); js.id = id;
+                                            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=183250451825564";
+                                            fjs.parentNode.insertBefore(js, fjs);
+                                        } (document, 'script', 'facebook-jssdk'));</script>
+                      <div class="fb-like" data-href="/may-lanh-cong-nghiep/may-lanh-5.html"
+                                        data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"
+                                        style="float: left"> </div>
+                      <br />
+                    </div>
+                  </div>
+                  <div id="model" class="dtp_status"> <span class="title_status">Mô tả sản phẩm:</span><b> </b></div>
+                  <!--end: .dtp_status-->
+                  <div class="dtp_status"> <span class="title_status">Loại:</span> <b> Máy lạnh công nghiệp</b></div>
+                  <!--end: .dtp_status-->
+                  <div class="dtp_status"> <span class="title_status">Giá:</span> <b> Liên hệ</b></div>
+                  <div class="dtp_status"> <a href="javascript:void(0)" onclick="addtocart(1146,0)"> <img src="../vi-vn/Images/addtocart.png" /></a> </div>
+                </div>
+                <div class="cf"> </div>
+                <div class="info_P_title"> Thông tin sản phẩm</div>
+                <div id="info_g"> </div>
+              </div>
+            </div>
+            <!--End Detail Products-->
+            <!-- The same Products -->
+            <div class="box">
+              <div class="box_Tab_top"> Sản phẩm tương tự</div>
+              <div class="box_ct_home">
+                <div class="product_row" id="list_products">
+                  <ul>
+                    <li>
+                      <!--Start Product-->
+                      <div class="product"> <a href="/may-lanh-cong-nghiep/may-lanh-1.html"
+                                            class="img_product" title="máy lanh 1"> <img src="/data/news/1130/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg" alt="" /> </a>
+                        <h2> <a href="/may-lanh-cong-nghiep/may-lanh-1.html"
+                                                class="product_name" title="máy lanh 1"> máy lanh 1</a> </h2>
+                        <div class="info_price fl"> <span class="sale_price"> Liên hệ</span> <span class="f_price"> </span></div>
+                        <a href="/may-lanh-cong-nghiep/may-lanh-1.html"
+                                            class="view_more fr"></a> </div>
+                      <!--End Product-->
+                    </li>
+                    <li>
+                      <!--Start Product-->
+                      <div class="product"> <a href="/may-lanh-cong-nghiep/may-lanh-2.html"
+                                            class="img_product" title="máy lanh 2"> <img src="/data/news/1131/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg" alt="" /> </a>
+                        <h2> <a href="/may-lanh-cong-nghiep/may-lanh-2.html"
+                                                class="product_name" title="máy lanh 2"> máy lanh 2</a> </h2>
+                        <div class="info_price fl"> <span class="sale_price"> Liên hệ</span> <span class="f_price"> </span></div>
+                        <a href="/may-lanh-cong-nghiep/may-lanh-2.html"
+                                            class="view_more fr"></a> </div>
+                      <!--End Product-->
+                    </li>
+                    <li>
+                      <!--Start Product-->
+                      <div class="product"> <a href="/may-lanh-cong-nghiep/may-lanh-3.html"
+                                            class="img_product" title="máy lanh 3"> <img src="/data/news/1132/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg" alt="" /> </a>
+                        <h2> <a href="/may-lanh-cong-nghiep/may-lanh-3.html"
+                                                class="product_name" title="máy lanh 3"> máy lanh 3</a> </h2>
+                        <div class="info_price fl"> <span class="sale_price"> Liên hệ</span> <span class="f_price"> </span></div>
+                        <a href="/may-lanh-cong-nghiep/may-lanh-3.html"
+                                            class="view_more fr"></a> </div>
+                      <!--End Product-->
+                    </li>
+                    <li>
+                      <!--Start Product-->
+                      <div class="product"> <a href="/may-lanh-cong-nghiep/may-lanh-4.html"
+                                            class="img_product" title="máy lanh 4"> <img src="/data/news/1133/may-lanh-tu-dung-alaska-ac-24f-2.5hp.jpg" alt="" /> </a>
+                        <h2> <a href="/may-lanh-cong-nghiep/may-lanh-4.html"
+                                                class="product_name" title="máy lanh 4"> máy lanh 4</a> </h2>
+                        <div class="info_price fl"> <span class="sale_price"> Liên hệ</span> <span class="f_price"> </span></div>
+                        <a href="/may-lanh-cong-nghiep/may-lanh-4.html"
+                                            class="view_more fr"></a> </div>
+                      <!--End Product-->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--End The same Products-->
+            <!--End Detail Products-->
+          </div>
+          <!--Left Column 2-->
+        </div>
+        <!--Right Column-->
+        <div id="right_col" class="fr">
+          <!--Support-->
+          <div class="box">
+            <div class="box_Tab_top"> HỖ TRỢ TRỰC TUYẾN</div>
+            <div class="box_ct" id="box_support">
+              <ul>
+                <li><span class='number_phone'>0909 633 551</span></li>
+                <li><a href='skype:skype?call' title='skype'><img src='http://mystatus.skype.com/smallclassic/skype' title=skype  alt='' ></a></li>
+                <li><a href='ymsgr:sendim?yahoo' title='yahoo'><img src='http://opi.yahoo.com/online?u=yahoo&m=g&t=2'   border='0'  /></a></li>
+              </ul>
+            </div>
+          </div>
+          <!--End Support-->
+          <!--Ads Top Right-->
+          <div id="ads_top" class="ads"> <a href='' target='_parent'><img src='/data/aditems/137/k34xlf9a__uks1363011391.jpg' alt='' /></a> </div>
+          <!--End Ads Top Right-->
+        </div>
+        <!--end Right Column-->
+        <!--End Category Home-->
+      </div>
+      <!--End Main Content-->
+      <!--Footer-->
+      <div id="footer">
+        <div id="topmenu_f">
+          <div class="col_menuFooter" id="news_home">
+            <div class="ctentColuMenuFooter">
+              <h3> <span>SỰ KIỆN</span></h3>
+              <div class="col_footer_ct">
+                <ul>
+                  <li><a href="/tin-tuc/anh-nong-dan-che-tao-may-cay-toi-tiet-kiem-hang-ty-dong-cho-nguoi-dan-5.html"> Anh nông dân chế tạo máy cày tời tiết kiệm hàng tỷ đồng cho người dân 5</a></li>
+                  <li><a href="/tin-tuc/anh-nong-dan-che-tao-may-cay-toi-tiet-kiem-hang-ty-dong-cho-nguoi-dan-4.html"> Anh nông dân chế tạo máy cày tời tiết kiệm hàng tỷ đồng cho người dân 4</a></li>
+                  <li><a href="/tin-tuc/anh-nong-dan-che-tao-may-cay-toi-tiet-kiem-hang-ty-dong-cho-nguoi-dan-3.html"> Anh nông dân chế tạo máy cày tời tiết kiệm hàng tỷ đồng cho người dân 3</a></li>
+                  <li><a href="/tin-tuc/anh-nong-dan-che-tao-may-cay-toi-tiet-kiem-hang-ty-dong-cho-nguoi-dan-2.html"> Anh nông dân chế tạo máy cày tời tiết kiệm hàng tỷ đồng cho người dân 2</a></li>
+                  <li><a href="/tin-tuc/anh-nong-dan-che-tao-may-cay-toi-tiet-kiem-hang-ty-dong-cho-nguoi-dan-1.html"> Anh nông dân chế tạo máy cày tời tiết kiệm hàng tỷ đồng cho người dân 1</a></li>
+                  <li><a href="/tin-tuc/anh-nong-dan-che-tao-may-cay-toi-tiet-kiem-hang-ty-dong-cho-nguoi-dan.html"> Anh nông dân chế tạo máy cày tời tiết kiệm hàng tỷ đồng cho người dân</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col_menuFooter" id="partners">
+            <div class="ctentColuMenuFooter">
+              <h3> <span>ĐỐI TÁC</span></h3>
+              <div class="col_footer_ct"> <a href='' target='_parent'><img src='/data/aditems/127/7122011195220FUJI-logo.jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/128/Fuji_Logo (1).jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/129/Fuji_logo (2).jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/130/Fuji_logo.jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/131/fuji-camera-logo.jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/132/Logo_Fuji.jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/133/logo-fujifilm.jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/134/FUJI DRIVE_Logo Fuji New.jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/135/Fuji.jpg' alt='' /></a> <a href='' target='_parent'><img src='/data/aditems/136/Fuji-Logo.jpg' alt='' /></a> </div>
+            </div>
+          </div>
+          <div class="col_menuFooter" id="contact_us">
+            <div class="ctentColuMenuFooter">
+              <h3> <span>LIÊN HỆ</span></h3>
+              <div class="col_footer_ct">
+                <p><strong><span style="font-size: medium; font-family: arial, helvetica, sans-serif;">C&Ocirc;NG TY TNHH XNK THỜI ĐẠI MỚI</span></strong></p>
+                <p><span style="font-size: medium; font-family: arial, helvetica, sans-serif;">Địa chỉ: 662/27 Phan Văn Trị, P. 10, Q. G&ograve; Vấp, TP.HCM</span></p>
+                <p><span style="font-size: medium; font-family: arial, helvetica, sans-serif;">Điện thoại: 0909 633 551</span></p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+          </div>
+          <div class="col_menuFooter" id="facebook_box">
+            <div class="ctentColuMenuFooter">
+              <h3> <span>Kết nối</span></h3>
+              <div class="col_footer_ct"> <img src="../vi-vn/Images/facebook_box.jpg" alt="" width="100%" height="220" />
+                <!--Social-->
+                <div id="social_network"> </div>
+                <!--End Social-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Footer Bottom-->
+        <div id="foo_bot_menu" class="fr">
+          <p class="footer_menu"> <a href="/trang-chu.html"> Trang chủ</a> <a href="/gioi-thieu.html"> Giới thiệu</a> <a href="/dich-vu.html"> Dịch vụ</a> <a href="/huong-dan-mua-hang.html"> Hướng dẫn mua hàng</a> <a href="/tu-van-hoi-dap.html"> Tư vấn hỏi đáp</a> <a href="/tin-tuc.html"> Tin tức</a> <a href="/lien-he.html"> Liên hệ</a> </p>
+          <p class="copyright"> Copyright © 2014 By <strong>Thời Đại Mới</strong> - <a target="_blank" href="http://www.dangcapviet.vn"> Thiết kế website</a> bởi <a target="_blank" title="Website đẳng cấp việt" href="http://dangcapviet.vn"> Đẳng Cấp Việt</a> </p>
+        </div>
+      </div>
+      <!--End Footer-->
+    </div>
+    <!--End Wrap-->
+    <!-- back to top -->
+    <script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+    <div id="toTop"> </div>
+  </div>
+</form>
+</body>
+</html>

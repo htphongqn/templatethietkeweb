@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Trung Việt</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Slide Camera-->
+<link rel='stylesheet' id='camera-css'  href='Styles/camera.css' type='text/css' media='all'>
+<script type='text/javascript' src='Scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='Scripts/camera.min.js'></script>
+<script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_4').camera({
+				loader: 'none',
+				pagination: false,
+				thumbnails: false,
+				hover: false,
+				opacityOnGrid: false,
+				imagePath: '../Images/',						
+            	height: '300px',
+            	fx: 'random',
+            	navigation: true,
+            	navigationHover: true,
+            	playPause: false,
+			});
+
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Customer Idea-->
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+var state = false;
+
+$("#toggle-slide-button").click(function () {
+    if (!state) {
+        $('#map-legend').animate({width: "toggle"}, 500);
+        $('#toggle-slide-button img').attr('src', 'Images/icon-support.png');
+
+          state = true;
+        }
+    else {
+          $('#map-legend').animate({width: "toggle"}, 300);
+          $('#toggle-slide-button img').attr('src', 'Images/icon-support.png');
+
+          state = false;
+        }
+});
+});//]]>  
+
+</script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_hot_projects').jcarousel({
+        auto: 2,
+		animation: 1000,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });  
+	jQuery('#mycarousel_gallery, #mycarousel_parners, #mycarousel_thesame_P').jcarousel({
+        auto: 0,
+		animation: 1000,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });  
+});
+</script>
+<!-- Include the Etalage CSS -->
+<link rel="stylesheet" href="Styles/etalage.css">
+<!-- Include the Etalage plugin: -->
+<script src="Scripts/jquery.etalage.min.js"></script>
+<!-- Invoke the Etalage plugin -->
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 300,
+					thumb_image_height: 300,
+					source_image_width: 600,
+					source_image_height: 600,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});				
+
+				// This is for the dropdown list example:
+				$('.dropdownlist').change(function(){
+					etalage_show( $(this).find('option:selected').attr('class') );
+				});
+
+			});
+		</script>
+</head>
+<body>
+<!--Customer Idea-->
+<div id="sp_head">
+  <div id="map-legend">
+    <table width="100%" border="0" style="color: #ff8919">
+      <tbody>
+        <tr>
+          <td width="251"><input type="text" class="inputbox" id="popup2_txtName" name="ctl00$popup2$txtName" value="Họ tên" />
+            <span style="color:Red;display:none;" id="popup2_rfvHoVaTen">*</span></td>
+        </tr>
+        <tr>
+          <td width="251"><input type="text" class="inputbox" id="popup2_txtEmail" name="ctl00$popup2$txtEmail" value="Email" />
+            <span style="color:Red;display:none;" id="popup2_RequiredFieldValidator4">*</span></td>
+        </tr>
+        <tr>
+          <td width="251"><input type="text" class="inputbox" id="popup2_Txtphone" name="ctl00$popup2$Txtphone" value="Số điện thoại" />
+            <span style="color:Red;display:none;" id="popup2_RequiredFieldValidator3">*</span></td>
+        </tr>
+        <tr>
+          <td width="251"><textarea style="height:70px;" placeholder="Nhập nội dung" class="inputbox" id="popup2_txtDesc" cols="20" rows="6" name="ctl00$popup2$txtDesc"></textarea></td>
+        </tr>
+        <tr>
+          <td width="251" align="center"><input type="submit" class="send_btn" value="Gởi ý kiến" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$popup2$IbtnFinish&quot;, &quot;&quot;, true, &quot;G1&quot;, &quot;&quot;, false, false))" id="popup2_IbtnFinish" name="ctl00$popup2$IbtnFinish"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="map-legend-control"> <a href="#" id="toggle-slide-button"><img src="Images/icon-support.png" width="50" height="244" /></a> </div>
+</div>
+<!--End Customer Idea-->
+<div class="social_network"><a href=""><span class="icon_facebook"></span></a><a href=""><span class="icon_mail"></span></a></div>
+<!--#begin Header-->
+<div class="wrap" id="header"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Trung Việt" /> </a>
+  <p id="slogan"><a href=""><img src="images/slogan.png" alt="Trung Việt" /></a></p>
+  <div id="header_right">
+    <div class="row_header cf" id="support">
+      <ul>
+        <li><a href="login.html" title="Đăng nhập">Đăng nhập</a> | <a href="login.html" title="Đăng ký">Đăng ký</a></li>
+        <li><a rel="nofollow" href="cart.html" title="giỏ hàng" class="bs-item"><img align="absmiddle" title="giỏ hàng" alt="giỏ hàng" src="Images/icon_cart.png">&nbsp;Giỏ hàng</a></li>
+      </ul>
+    </div>
+    <div class="row_header cf" id="search_form">
+      <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+      <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="Tìm kiếm" />
+    </div>
+    <!--end: #search-form-->
+    <div class="row_header cf" id="hotline"> Hotline: 0979 410 703 </div>
+    <!--end: #search-form-->
+    <div class="cf"></div>
+  </div>
+</div>
+<!--#end Header-->
+<!--Main Menu-->
+<div id="smoothmenu1" class="ddsmoothmenu">
+  <ul>
+    <li class="active"><a href="index.html">Trang chủ</a></li>
+    <li><a href="introduction.html" class="parent">CÔNG TY</a> </li>
+    <li><a href="list_products.html">LĨNH VỰC HOẠT ĐỘNG</a>
+      <ul>
+        <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+          <ul>
+            <li><a href="#">Sub Item 1.1</a></li>
+            <li><a href="#">Sub Item 1.2</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+          <ul>
+            <li><a href="#">Sub Item 2.1</a></li>
+            <li><a href="#">Sub Item 2.2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Trang điểm</a></li>
+        <li><a href="#">Nước hoa</a></li>
+        <li><a href="list_news.html">Tin tức</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </li>
+    <li><a href="#">DỰ ÁN</a></li>
+    <li><a href="#">SẢN PHẨM</a></li>
+    <li><a href="#">TIN TỨC & SỰ KIỆN</a></li>
+    <li><a href="list_news.html">TUYỂN DỤNG</a></li> <li><a href="list_gallery.html">THƯ VIỆN ẢNH</a></li>
+    <li><a href="list_news.html">LIÊN HỆ</a></li>
+  </ul>
+</div>
+<!--End Main Menu-->
+<div class="wrap fluid_container">
+  <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+    <div class="camera_img"><img src="Images/slide01.jpg" alt=""/></div>
+    <div class="camera_img"><img src="Images/slide02.jpg" alt=""/></div>
+    <div class="camera_img"><img src="Images/slide03.jpg" alt=""/></div>
+    <div class="camera_img"><img src="Images/slide04.jpg" alt=""/></div>
+  </div>
+  <script type="text/javascript">
+   $('.camera_img').each(function(){
+      $(this).attr('data-thumb', $('img', this).attr('src'));
+	  $(this).attr('data-src', $('img', this).attr('src'));
+   })
+</script>
+  <!-- #camera_wrap_3 -->
+  <!-- Jquery Top Slide Projects -->
+  <div class="box" id="hot_projects">
+    <div class="box_Tab_index"><span class="tab_straight">DỰ ÁN  TIÊU BIỂU</span></div>
+    <ul id="mycarousel_hot_projects" class="jcarousel-skin-tango">
+      <li class="item"><a href=""><img src="Images/logo.png" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/slide02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/slide03.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/slide04.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/slide01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/slide02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/slide03.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/slide04.jpg" alt="" /></a></li>
+    </ul>
+  </div>
+  <!--End Jquery Top Slide Projects-->
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Column-->
+    <div class="col">
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab_index"><span class="tab_straight">HỖ TRỢ TRỰC TUYẾN</span></div>
+        <div class="box_ct" id="box_support">
+          <ul>
+            <li class="hotline">Phone: <span class="number_phone">0123456789</span></li>
+            <li>Hỗ trợ 1&nbsp;<a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="125" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a></li>
+            <li>Hỗ trợ 2&nbsp;<a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="125" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/balloon/thampham1911"></a></li>
+            <li>Hỗ trợ 3&nbsp;<a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="125" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a></li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Left Menu-->
+      <div class="box">
+        <div class="box_Tab_index"><span class="tab_straight">DỊCH VỤ</span></div>
+        <div class="box_ct" id="topnav">
+          <ul>
+            <li class="active"><a href="list_products.html">Bê tông màu trang trí</a></li>
+            <li><a href="#">Tư vấn thiết kế kiến trúc</a> </li>
+            <li><a href="#">Xử lý chống thấm</a>
+              <ul class="children">
+                <li><a href="#">Ngoại Thất</a>
+                  <ul class="children">
+                    <li><a href="#">Vận Hành & Công Nghệ</a></li>
+                    <li><a href="#">Tiện Nghi</a></li>
+                    <li><a href="#">An Toàn</a></li>
+                    <li><a href="#">Kiểu Dáng</a></li>
+                    <li><a href="#">Tiêu Chi thiết Kế</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Xử lý nứt</a></li>
+            <li><a href="#">Trang trí nội- ngoại thất</a></li>
+            <li><a href="#">Sơn sàn Expoxy</a></li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Left Menu-->
+      <!--Get Email-->
+      <div class="box">
+        <div class="box_Tab_index"><span class="tab_straight">Đăng ký nhận Email</span></div>
+        <div class="box_ct" id="get_email">
+          <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; " value="Nhập  Email của bạn" onfocus="if (this.value=='Nhập  Email của bạn') this.value='';" onblur="if (this.value=='') this.value='Nhập  Email của bạn';" class="txf" id="vi7_txtKeyword" name="ctl00$vi7$txtKeyword" />
+          <input type="submit" value="Gởi" class="send_button" />
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End -Get Email-->
+      <!--Ads Left-->
+      <div class="ads"><img src="Images/ads.png" alt="" width="280" /></div>
+      <!--End Ads Left-->
+    </div>
+    <!--Left Column-->
+    <!--Middle Column-->
+    <div class="col" id="col_middle_sub">
+      <div class="path"><a href="index.html"><img src="Images/icon_home.png" alt="" /></a> » <a href="list_products.html">Bê tông màu trang trí</a></div>
+      <!--Detail Products-->
+      <div class="box">
+        <div class="box_Tab_index"><span class="tab_crossed"><b>Chi tiết</b></span></div>
+        <div class="box_ct">
+          <ul id="etalage">
+            <li> <img class="etalage_thumb_image" src="http://myphamroh.com/product_images/uploaded_images/1.jpg" /> <img class="etalage_source_image" src="http://myphamroh.com/product_images/uploaded_images/1.jpg" title="" /></li>
+            <li> <img class="etalage_thumb_image" src="http://4.bp.blogspot.com/-5SUdxUfPi3w/UAvejOyo0wI/AAAAAAAABDE/Nset4kxlw-4/s1600/a.jpg" /> <img class="etalage_source_image" src="http://4.bp.blogspot.com/-5SUdxUfPi3w/UAvejOyo0wI/AAAAAAAABDE/Nset4kxlw-4/s1600/a.jpg" title="" /> </li>
+            <li> <img class="etalage_thumb_image" src="http://skinfoodvn.com/pic/prods/634858236467173750.jpg" /> <img class="etalage_source_image" src="http://skinfoodvn.com/pic/prods/634858236467173750.jpg" /> </li>
+            <li> <img class="etalage_thumb_image" src="http://www.koreadepart.com/data/cheditor4/1203/bb6b8fbab35a3532c1b93cd03ed2faf3_XCAfS9Gqq.jpg" /> <img class="etalage_source_image" src="http://www.koreadepart.com/data/cheditor4/1203/bb6b8fbab35a3532c1b93cd03ed2faf3_XCAfS9Gqq.jpg" /> </li>
+            <button onclick="etalage_previous()" class="etalage_previous"></button>
+            <button onclick="etalage_next()" class="etalage_next"></button>
+          </ul>
+          <!--end: #dp-thumb-->
+          <div id="dtp_info">
+            <h1 class="h1Title">SikaTop Seal 107</h1>
+            <div class="dtp_status" id="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div id="model" class="dtp_status"><span class="title_status">Mã sản phẩm:</span><b>S0012</b></div>
+            <!--end: .dtp_status-->
+            <div class="dtp_status"><span class="title_status">Giá:</span> <span class="dtp_price">3.260.000 VNĐ</span></div>
+            <!--end: .dtp_status-->
+            <div class="cf"></div>
+            <a onclick="addToShoppingCart('2676','2934000')" href="cart.html" class="buy_bt"></a>
+            <!--end: .dtp_addcart-->
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail Products-->
+      <div class="box">
+        <div class="box_Tab_index"><span class="tab_crossed"><b>Thông tin sản phẩm</b></span></div>
+        <div class="box_ct" id="info_g">Ứng dụng Sikatop Seal 107<br>
+          Sikatop Seal 107 được dùng để chống thấm bên trong và bên ngoài nhà, trong công tác sửa chữa và bảo vệ chống sương giá và các tác nhân khử băng. Lĩnh vực thi công:<br>
+          Chống thấm bể nước uống<br>
+          Chống thấm tầng hầm<br>
+          Chống thấm Sân thượng và ban công<br>
+          Cầu<br>
+          Tường chắn<br>
+          Trám các vết nứt chân chim, không phải là các vết nứt đang phát triển.<br>
+          Ưu điểm Sikatop Seal 107<br>
+          Sikatop Seal 107 là sản phẩm giá thành rẻ nhưng cung cấp nhiều ưu điểm:<br>
+          Các thành phần(A/B) được chế tạo sẵn<br>
+          Dễ hòa trộn và dễ thi công<br>
+          Có độ sệt như hồ dầu<br>
+          Kết dính tốt với các bề mặt đặc chắc.<br>
+          Không thấm nước<br>
+          Là lớp cản hiệu quả chống lại quá trình cacbonat hóa<br>
+          Không độc hại<br>
+          Không ăn mòn<br>
+          Có tính đàn hồi nhẹ<br>
+          Có thể thi công bằng cách phun<br>
+          Sản phẩm Sikatop Seal 107<br>
+          Dạng/Màu: Thành phần A: Chất lỏng/trắng<br>
+          Thành phần B: Bột / Xám<br>
+          Đóng gói:    25 kg/bộ (A+B)<br>
+          Thành phần A : 5 kg/ thùng<br>
+          Thành phần B : 20 kg/ bao<br>
+          Lưu trữ:         Nơi khô mát có bóng râm<br>
+          Thời hạn sử dụng: Tối thiểu 6 tháng nếu lưu trữ đúng cách trong bao bì nguyên chưa mở.<br>
+          Thông số kỹ thuật Sikatop Seal 107<br>
+          Khối lượng thể tích: Thành phần A: ~1.02 kg/lít<br>
+          Thành phần B: ~1.40 kg/lít (khối lượng thể tích đổ đống)<br>
+          Vữa mới trộn:      ~2.10 kg/lít<br>
+          Tỷ lệ trộn Độ sệt như hồ dầu:<br>
+          Thành phần A : B = 1 : 4.0 (theo khối lượng)<br>
+          Thành phần A : B = 1 : 2.9 (theo thể tích)<br>
+          Mật độ tiêu thụ:<br>
+          Chống thấm phòng tắm, sân thượng, ban công: 1.5 kg/m2/lớp<br>
+          Chống thấm cho những nơi có áp lực nước lên đến 1m: 1.5 kg/m2/lớp<br>
+          Chống thấm cho những nơi có áp lực nước trên 1m hoặc chống sương giá: 2.0 kg/m2/lớp<br>
+          Luôn luôn thi công hai lớp.<br>
+          Lưu ý: có thể cần thi công 3 lớp cho những nơi bị thấm nước trầm trọng.<br>
+          Thời gian cho phép thi công: ~ 30 phút (ở nhiệt độ 27oC/ độ ẩm môi trường 65%).<br>
+          Cường độ uốn: ≥ 10 N/mm2 (28 ngày), ASTM C-348<br>
+          Cường độ kết dính: ≥ 1.5 N/mm2 (nền bê tông đã được chuẩn bị và làm ẩm)<br>
+          Độ dày của mỗi lớp: Tối đa 2 mm<br>
+          Nhiệt độ thi công: Tối thiểu 8oC   Tối đa 40oC</div>
+        <div class="cf"></div>
+      </div>
+      <!-- Jquery The same Products -->
+      <div class="box" id="the_same_P">
+        <div class="box_Tab_index"><span class="tab_crossed"><b>Sản phẩm cùng loại</b></span></div>
+        <div class="box_ct slide_gr" id="product_row_sub">
+          <ul id="mycarousel_thesame_P" class="jcarousel-skin-tango">
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <a href="detail_products.html"> <img width="140" height="140" src="Images/product01.jpg" alt="" /> </a> <a href="/san-pham/bep-dien-tu-electrolux-etd32d.aspx">
+              <h2 class="product_name">Sản phẩm chống thấm</h2>
+              </a>
+              <p class="code_P">Mã: 001</p>
+              <p class="price_P">Giá: <span class="red">2.191.200 VNĐ</span></p>
+              <a class="buy_bt" href="../vi-vn/addtocart.aspx?id=2106"></a>
+              <!--End Product-->
+            </li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Jquery The same Products-->
+      <!--End Detail Products-->
+    </div>
+    <!--Middle Column-->
+    <div class="cf"></div>
+  </div>
+  <!--End Main Content-->
+  <!-- Jquery Gallery Images -->
+  <div class="box" id="gallery_images">
+    <div class="box_Tab_index"><span class="tab_crossed"><b>Thư viện ảnh</b></span></div>
+    <div class="box_ct">
+      <ul id="mycarousel_gallery" class="jcarousel-skin-tango">
+        <li class="item"><a href=""><img src="Images/logo.png" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/slide02.jpg" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/slide03.jpg" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/slide04.jpg" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/slide01.jpg" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/slide02.jpg" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/slide03.jpg" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/slide04.jpg" alt="" /></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--End Jquery Gallery Images-->
+</div>
+<!-- .fluid_container -->
+<!-- Footer -->
+<div id="footer">
+  <div class="wrap">
+    <div id="footer_ct">
+      <p><strong>CÔNG TY CỔ PHẦN THIẾT KẾ XÂY DỰNG THƯƠNG MẠI DỊCH VỤ TRUNG VIỆT</strong></p>
+      <p>Trung Viet Service Trading Construction Design Corporation</p>
+      <p>Địa chỉ : 21/9A Đường 35, KP 7, P. Hiệp Bình Chánh, Thủ Đức, Hồ Chí Minh</p>
+      <p>VPĐD: 1/59 Đường 49, KP6, Phường Hiệp Bình Chánh, Quận Thủ Đức, Thành Phố Hồ Chí Minh</p>
+      <p>Tel: 083 7267 106 - Fax: 083 7267 107</p>
+      <p>Website : <a href="http://www.trungvietco.com.vn">trungvietco.com.vn</a> - Email : <a href="mailto:trungvietconstruction@gmail.com">trungvietconstruction@gmail.com</a></p>
+    </div>
+    <div id="access_status">
+      <p><b>42,557</b> Lượt truy cập</p>
+      <p><b>10</b> Hôm nay</p>
+      <p><b>5</b> Đang truy cập</p>
+    </div>
+    <div id="copyright">Copyright ©2014 Trung Viet all rights reserved.</div>
+  </div>
+</div>
+<!-- End Footer -->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

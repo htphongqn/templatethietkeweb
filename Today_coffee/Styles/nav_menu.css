@@ -1,0 +1,116 @@
+#nav {
+	width: 100%;
+	height: 118px;
+	position: absolute;
+	bottom: 12%;
+	left: 0;
+	z-index: 5;
+	background: url(../../Today_coffee/Images/menuBg.png) 0 0 repeat-x;
+}
+#nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+#nav:after, #nav ul:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+#nav ul, #nav li, #nav a {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav > ul {
+	float: left;
+	position: relative;
+	display: block;
+	z-index: 500;
+}
+#nav > ul > li {
+	float: left;
+	display:inline-block;
+	margin: 0 15px 0 10px;
+}
+#nav ul li a {
+	display: block;
+	text-decoration: none;
+}
+#nav > ul > li > a {
+	display: inline-block;
+	font-size: 1.15em;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 0 15px 0 15px;
+	line-height: 118px;
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-ms-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	z-index: 50;
+	background: url(../Images/yellowdot_shadow.png) 0 58px no-repeat
+}
+#nav > ul > li:nth-child(4) {
+margin-left: 230px
+}
+#nav > ul > li.active > a, #nav > ul > li:hover > a {
+	color: #e040f6
+}
+#nav ul ul {
+	position: absolute;
+	left: -9999px;
+	top: 118px;
+	opacity: 0;
+ -webkit-transition: opacity .3s ease, top .25s ease;
+ -moz-transition: opacity .3s ease, top .25s ease;
+ -ms-transition: opacity .3s ease, top .25s ease;
+ -o-transition: opacity .3s ease, top .25s ease;
+ transition: opacity .3s ease, top .25s ease;
+	z-index: 9999;
+	background: #b84ac7;
+}
+#nav ul ul ul {
+	top: 118px;
+}
+#nav ul ul li {
+	position: relative;
+	margin:0;
+	text-align:left;
+	white-space: nowrap;
+	min-width: 200px
+}
+#nav > ul > li:hover > ul {
+	left: auto;
+	top: 118px;
+	opacity: 1;
+}
+#nav ul ul li:hover > ul {
+	left: 100%;
+	top: 0;
+	opacity: 1;
+}
+#nav ul ul li a {
+	border-bottom: 1px dotted #FFFFFF;
+	filter: none;
+	font: bold 13px Arial, Helvetica, sans-serif;
+	display: block;
+	line-height: 100%;
+	padding: 10px;
+	color:#FFFFFF;
+ -webkit-transition: all .35s ease;
+ -moz-transition: all .35s ease;
+ -ms-transition: all .35s ease;
+ -o-transition: all .35s ease;
+ transition: all .35s ease;
+}
+#nav ul ul li:hover > a {
+	background: #45003d;
+	color: #FFFFFF;
+}
+#nav ul ul li:last-child > a, #nav ul ul li.last > a {
+	border-bottom: 0;
+}

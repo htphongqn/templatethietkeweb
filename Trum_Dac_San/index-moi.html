@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>trumdacsan.com</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="Scripts/scroll_ads.js"></script>
+<!--Main Slide-->
+<link rel='stylesheet' type='text/css' href='Styles/slide.css' />
+<!--Main Menu-->
+<link href="Styles/nav_menu.css" rel="stylesheet" type="text/css" />
+<!-- Include Cloud Zoom JavaScript -->
+<script type="text/javascript" src="Scripts/cloudzoom.js"></script>
+<!-- Include Thumbelina JavaScript -->
+<script type="text/javascript" src="Scripts/thumbelina.js"></script>
+<!-- Include Cloud Zoom CSS -->
+<link href="Styles/cloudzoom.css" type="text/css" rel="stylesheet" />
+<!-- Include Thumbelina CSS -->
+<link href="Styles/thumbelina.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="Scripts/all_scripts.js"></script>
+</head>
+<body>
+<div id="toplink">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="background: url(Images/l_toplink.gif) 0 0 repeat-x"></td>
+      <td width="1000" headers="202" style="background: url(Images/l_toplink.gif) 0 0 repeat-x"><div id="tt_link" class="fr"><a href="">Ý kiến khách hàng</a><a href="">Tuyển dụng</a></div></td>
+      <td style="background: #069508"></td>
+    </tr>
+  </table>
+</div>
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" id="logo" class="fl"> <img src="Images/logo.png" alt="trumdacsan.com" /></a>
+    <div id="header_right" class="fr">
+      <!--Search Tool-->
+      <div id="search_form" class="fl">
+        <div class="dropdown">
+          <label>
+            <select name="ctl00$vi14$drCat" id="vi14_drCat" class="dr_search">
+              <option value="110">Tất cả</option>
+              <option value="558">Đặc sản mới</option>
+              <option value="559">Khuyến mãi</option>
+              <option value="560">Nông sản</option>
+              <option value="561">Thủy & Hải sản</option>
+              <option value="562">Mũi Khoan Gỗ - Granit - kiếng</option>
+              <option value="563">Bánh Mứt</option>
+            </select>
+          </label>
+        </div>
+        <input name="ctl00$vi14$txtsearch" type="text" id="vi14_txtsearch" alt="Search" class="inputSearch" value="Nhập từ khóa để tìm kiếm..." onclick="this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;) this.value=&#39;Nhập từ khóa để tìm kiếm...&#39;;" onfocus="if(this.value==&#39;Nhập từ khóa để tìm kiếm...&#39;) this.value=&#39;&#39;;" onkeypress="searchKeyPress();" />
+        <a href="javascript:void(0)" onclick="timkiem();" class="btn_search" id="btnSearch"></a></div>
+      <!--End Search Tool-->
+      <div id="hotline" class="fl font1"><b>0905 521 251</b></div>
+      <div id="cart" class="fr"><a href="cart.html"><img src="Images/cart_icon.png" alt="" />Giỏ hàng (<b>0</b>)</a></div>
+      <div id="account" class="fr"><a href="">Đăng nhập</a> | <a href="">Đăng ký</a></div>
+    </div>
+  </div>
+</div>
+<!--#end Header-->
+<!--Main Menu-->
+<div id="nav_menu_wrap">
+  <div id="nav" class="wrap">
+    <ul class="font1">
+      <li class='active'><a href="index.html" class="home_icon"></a></li>
+      <li><a href='list_products.html'>Đặc sản mới</a></li>
+      <li><a href='list_products.html'>Khuyến mãi<span class="icon_new_deal"></span></a></li>
+      <li><a href='list_products.html'>Nông sản</a>
+        <ul>
+          <li><a href='product.html'>Yến Tổ Thô Hồng</a></li>
+          <li><a href='product.html'>Yến Tổ Sợi Trắng</a></li>
+          <li><a href='product.html'>Yến Tổ Sợi Trắng</a></li>
+        </ul>
+      </li>
+      <li><a href='product.html'>Thủy & Hải sản</a> </li>
+      <li><a href='list_news.html'>Bánh Mứt</a> </li>
+      <li><a href='gallery.html'>Nem & Chả</a></li>
+      <li><a href='contact.html'>Mắm & Nước mắm</a></li>
+      <li><a href='gallery.html'>Khô</a></li>
+      <li><a href='contact.html'>Rượu</a></li>
+      <li><a href='contact.html'>Du lịch</a></li>
+    </ul>
+  </div>
+</div>
+<!--End Main Menu-->
+<!-- SLIDE -->
+<!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+<!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+<!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        //var _SlideshowTransitions = [
+        //    //{ $Duration: 500, $SlideOut: false, $FlyDirection: 1, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $ScaleHorizontal: 0.3, $Opacity: 2 }
+        //    { $Duration: 1000, $Delay: 30, $Cols: 8, $Rows: 4, $Opacity: 2 }
+        //    //{ $Duration: 800, $Delay: 30, $Cols: 8, $Rows: 4, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Opacity: 2 }
+        //];
+        //var options = {
+        //    $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+        //    $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+        //    $AutoPlayInterval: 2000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+        //    $PauseOnHover: 3,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 3
+
+        //    $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+        //    $SlideDuration: 700,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+        //    $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+        //    //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+        //    //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+        //    $SlideSpacing: 5, 					                //[Optional] Space between each slide in pixels, default value is 0
+        //    $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+        //    $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+        //    $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, direction navigator container, thumbnail navigator container etc).
+        //    $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
+        //    $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+        //    $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+        //        $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+        //        $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+        //        $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+        //        $ShowLink: false                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+        //    },
+
+        //    $ThumbnailNavigatorOptions: {
+        //        $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+        //        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+        //        $ActionMode: 2,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both
+
+        //        $AutoCenter: 0,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+        //        $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+        //        $SpacingX: 0,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+        //        $SpacingY: 0,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+        //        $DisplayPieces: 6,                              //[Optional] Number of pieces to display, default value is 1
+        //        $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+        //        $Orientation: 2,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+        //        $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+        //    }
+        //};
+        //try {
+        //    var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        //} catch (e) { }
+
+        var rollingView = new RollingHotDealView(new HotDealView('.slideBanner', 1));
+        rollingView.start(4000);
+    });
+
+</script>
+<div class="banner_big_div">
+  <div class="slideBanner">
+    <ul>
+      <li> <em> <a href="http://www.nhommua.com/4-nam-hanh-trinh/tang-toc-muot-ma" target="_blank" title="Small Slide 4"> <img src="http://resources.nhommua.com/CMBanner/635464220962290657.jpg" alt="Small Slide 4" title="Small Slide 4"> </a> <span>&nbsp;</span> </em> <strong> <a href="http://www.nhommua.com/4-nam-hanh-trinh/tang-toc-muot-ma" target="_blank" title="Big Slide 4"> <img src="http://resources.nhommua.com/CMBanner/635464220677122156.jpg" style="width: 779px; height: 354px" alt="Big Slide 4"> </a> </strong> </li>
+      <li> <em> <a href="http://www.nhommua.com/bn-nm-hcm070714-cham-soc-rang-mieng.html" target="_blank" title="Small Slide 3"> <img src="http://resources.nhommua.com/CMBanner/635473483763121029.jpg" alt="Small Slide 3" title="Small Slide 3"> </a> <span>&nbsp;</span> </em> <strong> <a href="http://www.nhommua.com/bn-nm-hcm070714-cham-soc-rang-mieng.html" target="_blank" title="Big Slide 3"> <img src="http://resources.nhommua.com/CMBanner/635473483657196843.jpg" style="width: 779px; height: 354px" alt="Big Slide 3"> </a> </strong> </li>
+      <li> <em> <a href="http://www.nhommua.com/ho-chi-minh/thoi-trang/phu-kien/flash-sale-trang-suc-opal-dep-long-lanh-giam-gia-den-82_pp34724.html" target="_blank" title="Small Slide 2"> <img src="http://resources.nhommua.com/CMBanner/635472444950276450.jpg" alt="Small Slide 2" title="Small Slide 2"> </a> <span>&nbsp;</span> </em> <strong> <a href="http://www.nhommua.com/ho-chi-minh/thoi-trang/phu-kien/flash-sale-trang-suc-opal-dep-long-lanh-giam-gia-den-82_pp34724.html" target="_blank" title="Big Slide 2"> <img src="http://resources.nhommua.com/CMBanner/635472444841544259.jpg" style="width: 779px; height: 354px" alt="Big Slide 2"> </a> </strong> </li>
+      <li> <em> <a href="http://www.nhommua.com/spa-tot-nhat-sale.html" target="_blank" title="Small Slide 1"> <img src="http://resources.nhommua.com/CMBanner/635470623429769119.jpg" alt="Small Slide 1" title="Small Slide 1"> </a> <span>&nbsp;</span> </em> <strong> <a href="http://www.nhommua.com/spa-tot-nhat-sale.html" target="_blank" title="Big Slide 1"> <img src="http://resources.nhommua.com/CMBanner/635470623362221000.jpg" style="width: 779px; height: 354px" alt="Big Slide 1"> </a> </strong> </li>
+      <li> <em> <a href="http://www.nhommua.com/bn-nm-hcm190914-du-lich-tra-gop.html" target="_blank" title="Small Slide 6"> <img src="http://resources.nhommua.com/CMBanner/635468028611535561.jpg" alt="Small Slide 6" title="Small Slide 6"> </a> <span>&nbsp;</span> </em> <strong> <a href="http://www.nhommua.com/bn-nm-hcm190914-du-lich-tra-gop.html" target="_blank" title="Big Slide 6"> <img src="http://resources.nhommua.com/CMBanner/635468028387987169.jpg" style="width: 779px; height: 354px" alt="Big Slide 6"> </a> </strong> </li>
+      <li> <em> <a href="http://www.nhommua.com/bn-nm-hcm150914-my-pham.html" target="_blank" title="Small Slide 5"> <img src="http://resources.nhommua.com/CMBanner/635463753936002369.jpg" alt="Small Slide 5" title="Small Slide 5"> </a> <span>&nbsp;</span> </em> <strong> <a href="http://www.nhommua.com/bn-nm-hcm150914-my-pham.html" target="_blank" title="Big Slide 5"> <img src="http://resources.nhommua.com/CMBanner/635463753714949981.jpg" style="width: 779px; height: 354px" alt="Big Slide 5"> </a> </strong> </li>
+    </ul>
+  </div>
+</div>
+<!-- END OF SLIDE -->
+<div class="wrap">
+  <!-- #Main -->
+  <div id="main">
+    <!--Category Home-->
+    <div class="box font1">
+      <div class="box_Tab"><span>Đặc sản nổi bật</span> <a href="" class="view_all"><i>&raquo; Xem tất cả</i></a></div>
+      <div class="product_row">
+        <ul>
+          <li>
+            <!--Start Product-->
+            <div class="product"><a href="detail_product.html" class="img_product trans" title="Buffet tối hải sản Tôm Cua"> <img src="http://resources.nhommua.com/Product/nm_34906.jpg" alt="Buffet tối hải sản Tôm Cua" />
+              <div class="info_img"><span class="saleoff_percent font1">-40%</span>
+                <div class="time_div"> <span class="f_bold cl_black_4 time_auto hasCountdown"><span>04</span> : <span>14</span> : <span>04</span> : <span>33</span></span> <span class=" cl_black_4 time_title"><span>ngày</span><span>giờ</span><span>phút</span><span>giây</span></span></div>
+              </div>
+              </a>
+              <h3 class="product_name"><a href="detail_product.html" title="Buffet tối hải sản Tôm Cua">Buffet nướng không khói trưa/tối - Lẩu Nướng Không Khói Lita</a></h3>
+              <div class="info_price"><span class="f_price">299.000 VNĐ</span><span class="main_price">499.000 VNĐ</span></div>
+            </div>
+            <!--End Product-->
+          </li>
+          <li>
+            <!--Start Product-->
+            <div class="product"><a href="detail_product.html" class="img_product trans" title="Buffet tối hải sản Tôm Cua"> <img src="http://resources.nhommua.com/Product/nm_31532.jpg" alt="Buffet tối hải sản Tôm Cua" />
+              <div class="info_img"><span class="saleoff_percent font1">-40%</span>
+                <div class="time_div"> <span class="f_bold cl_black_4 time_auto hasCountdown"><span>04</span> : <span>14</span> : <span>04</span> : <span>33</span></span> <span class=" cl_black_4 time_title"><span>ngày</span><span>giờ</span><span>phút</span><span>giây</span></span></div>
+              </div>
+              </a>
+              <h3 class="product_name"><a href="detail_product.html" title="Buffet tối hải sản Tôm Cua">Buffet tối hải sản Tôm Cua</a></h3>
+              <div class="info_price"><span class="f_price">299.000 VNĐ</span><span class="main_price">499.000 VNĐ</span></div>
+            </div>
+            <!--End Product-->
+          </li>
+          <li>
+            <!--Start Product-->
+            <div class="product"><a href="detail_product.html" class="img_product trans" title="Buffet tối hải sản Tôm Cua"> <img src="http://resources.nhommua.com/Product/nm_33730.jpg" alt="Buffet tối hải sản Tôm Cua" />
+              <div class="info_img"><span class="saleoff_percent font1">-40%</span>
+                <div class="time_div"> <span class="f_bold cl_black_4 time_auto hasCountdown"><span>04</span> : <span>14</span> : <span>04</span> : <span>33</span></span> <span class=" cl_black_4 time_title"><span>ngày</span><span>giờ</span><span>phút</span><span>giây</span></span></div>
+              </div>
+              </a>
+              <h3 class="product_name"><a href="detail_product.html" title="Buffet tối hải sản Tôm Cua">Buffet nướng không khói trưa/tối - Lẩu Nướng Không Khói Lita</a></h3>
+              <div class="info_price"><span class="f_price">299.000 VNĐ</span><span class="main_price">499.000 VNĐ</span></div>
+            </div>
+            <!--End Product-->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <div class="box font1">
+      <div class="box_Tab"><span>Đặc sản bán chạy</span> <a href="" class="view_all"><i>&raquo; Xem tất cả</i></a></div>
+      <div class="product_row">
+        <ul>
+          <li>
+            <!--Start Product-->
+            <div class="product"><a href="detail_product.html" class="img_product trans" title="Buffet tối hải sản Tôm Cua"> <img src="http://resources.nhommua.com/Product/nm_34906.jpg" alt="Buffet tối hải sản Tôm Cua" />
+              <div class="info_img"><span class="saleoff_percent font1">-40%</span>
+                <div class="time_div"> <span class="f_bold cl_black_4 time_auto hasCountdown"><span>04</span> : <span>14</span> : <span>04</span> : <span>33</span></span> <span class=" cl_black_4 time_title"><span>ngày</span><span>giờ</span><span>phút</span><span>giây</span></span></div>
+              </div>
+              </a>
+              <h3 class="product_name"><a href="detail_product.html" title="Buffet tối hải sản Tôm Cua">Buffet tối hải sản Tôm Cua</a></h3>
+              <div class="info_price"><span class="f_price">299.000 VNĐ</span><span class="main_price">499.000 VNĐ</span></div>
+            </div>
+            <!--End Product-->
+          </li>
+          <li>
+            <!--Start Product-->
+            <div class="product"><a href="detail_product.html" class="img_product trans" title="Buffet tối hải sản Tôm Cua"> <img src="http://resources.nhommua.com/Product/nm_31532.jpg" alt="Buffet tối hải sản Tôm Cua" />
+              <div class="info_img"><span class="saleoff_percent font1">-40%</span>
+                <div class="time_div"> <span class="f_bold cl_black_4 time_auto hasCountdown"><span>04</span> : <span>14</span> : <span>04</span> : <span>33</span></span> <span class=" cl_black_4 time_title"><span>ngày</span><span>giờ</span><span>phút</span><span>giây</span></span></div>
+              </div>
+              </a>
+              <h3 class="product_name"><a href="detail_product.html" title="Buffet tối hải sản Tôm Cua">Buffet nướng không khói trưa/tối - Lẩu Nướng Không Khói Lita</a></h3>
+              <div class="info_price"><span class="f_price">299.000 VNĐ</span><span class="main_price">499.000 VNĐ</span></div>
+            </div>
+            <!--End Product-->
+          </li>
+          <li>
+            <!--Start Product-->
+            <div class="product"><a href="detail_product.html" class="img_product trans" title="Buffet tối hải sản Tôm Cua"> <img src="http://resources.nhommua.com/Product/nm_33730.jpg" alt="Buffet tối hải sản Tôm Cua" />
+              <div class="info_img"><span class="saleoff_percent font1">-40%</span>
+                <div class="time_div"> <span class="f_bold cl_black_4 time_auto hasCountdown"><span>04</span> : <span>14</span> : <span>04</span> : <span>33</span></span> <span class=" cl_black_4 time_title"><span>ngày</span><span>giờ</span><span>phút</span><span>giây</span></span></div>
+              </div>
+              </a>
+              <h3 class="product_name"><a href="detail_product.html" title="Buffet tối hải sản Tôm Cua">Buffet tối hải sản Tôm Cua</a></h3>
+              <div class="info_price"><span class="f_price">299.000 VNĐ</span><span class="main_price">499.000 VNĐ</span></div>
+            </div>
+            <!--End Product-->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--End Category Home-->
+    <div class="line"></div>
+    <!--Category Home-->
+    <div class="box">
+      <!--Box News-->
+      <div id="news_home" class="box_ct fl">
+        <div class="title_box font1">Ẩm thực & Du lịch<a href="/tin-tuc.html"
+                            class="view_all"><i>&raquo; Xem tất cả</i></a> </div>
+        <div class="hot_news fl"> <a href="/tin-tuc/ngay-hoi-gioi-thieu-dac-san-thanh-tra-xu-hue.html"
+                                    class="img_news"> <img class='' alt='' src='http://beta.trumdacsan.net/data/news/1459/15.jpg'/></a>
+          <div class="view_area cf"> <span class="views"> <img src="../vi-vn/Images/views_icon.png" alt="" />11 lượt xem</span> <span class="authors"> <img src="../vi-vn/Images/authors_icon.png" alt="" />Viết bởi: admin</span> <span class="date_pting"> <img src="../vi-vn/Images/date_icon.png" alt="" />Ngày: 06/10/2014</span> </div>
+          <h2> <a href="/tin-tuc/ngay-hoi-gioi-thieu-dac-san-thanh-tra-xu-hue.html"> Ngày hội giới thiệu đặc sản thanh trà xứ Huế</a></h2>
+          <p> Trong hai ngày 25 và 26-8, tại phường Thủy Biều, TP Huế, Sở Nông nghiệp và PTNT tỉnh Thừa Thiên-Huế đã tổ chức “Ngày hội giới thiệu sản phẩm thanh trà Huế 2012″.</p>
+        </div>
+        <div class="list_news_home fr">
+          <div class="top_linknews"> <a href="/tin-tuc/8-dac-san-qua-tang-viet-nam-dat-chuan-chau-a.html"
+                                            class="img_news fr"> <img class='img_general' alt='' src='http://beta.trumdacsan.net/data/news/1458/14.jpg'/></a>
+            <h3><a href=""> 8 đặc sản quà tặng Việt Nam đạt chuẩn châu Á</a> </h3>
+            <p> Tổ chức kỷ lục Việt Nam ngày 3-12 đã công bố Tốp 50 đặc sản quà tặng Việt Nam lần 1 (năm 2013), trong đó có 8 đặc sản được Văn phòng Tổ chức kỷ lục châu Á tại Ấn Độ gửi thư xác nhận đạt chuẩn quà tặng châu Á.</p>
+            <div class="view_area"> <span class="views"> <img src="../vi-vn/Images/views_icon.png" alt="" />3 lượt xem tin</span> <span class="authors"> <img src="../vi-vn/Images/authors_icon.png" alt="" />Viết bởi: admin</span> <span class="date_pting"> <img src="../vi-vn/Images/date_icon.png" alt="" />Ngày:06/10/2014</span></div>
+          </div>
+          <ul>
+            <li><a href="/tin-tuc/nhung-quan-an-chay-ngon-tai-ha-noi.html"
+                                    class="link_title"> Những quán ăn chay ngon tại Hà Nội.</a>
+              <p> Bạn có thể dễ dàng tìm thấy những quán ăn chay ngon tại Hà Nội. Và thật sự hương vị các món ăn chay tại đây sẽ khiến bạn rất hài lòng đấy.</p>
+            </li>
+            <li><a href="/tin-tuc/hinh-anh-trung-bay-hang-hoa-tai-sieu-thi.html"
+                                    class="link_title"> Hình ảnh trưng bày hàng hoá tại siêu thị</a>
+              <p> Công ty TNHH kinh doanh XNK Tường Loan là Nhà phân phối hàng đầu về lĩnh vực nông sản, thực phẩm chế biến trên toàn quốc.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--end Box News-->
+    </div>
+    <!--End Category Home-->
+    <!--Register to get email-->
+    <div id="get_email">
+      <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi7_lbtnSearch').click();return false;}} else {return true}; "
+                    value="Nhập Email để nhận thông tin khuyến mãi" onfocus="if (this.value=='Nhập Email để nhận thông tin khuyến mãi') this.value='';"
+                    onblur="if (this.value=='') this.value='Nhập Email để nhận thông tin khuyến mãi';" class="input_email"
+                    id="Txtemail" />
+      <a href="javascript:void(0)" onclick="regis_mail()" class="send_button">Đăng ký</a>
+      <div id="regis_mail_success" style="color: rgb(233, 107, 37); text-align: center;
+                    line-height: 150%; font-size: 15px; font-weight: bold"> </div>
+    </div>
+    <!--end Register to get email-->
+  </div>
+  <!--end Main-->
+</div>
+<!--End wrap-->
+<!--Footer-->
+<div id="footer">
+  <div class="wrap">
+    <!--Footer Top-->
+    <ul id="list_col_footer">
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font1">Giới thiệu</div>
+        <div class="col_F_ct">
+          <ul class="list_menu_footer">
+            <li><a href="">Rao vặt là gì?</a></li>
+            <li><a href="">Dự án đầu tư</a></li>
+            <li><a href="">Các chiến lược phát triển</a></li>
+            <li><a href="">Thông tin tuyển dụng</a></li>
+            <li><a href="">Trách nhieenmj của rao vặt</a></li>
+            <li><a href="">Liên hệ</a></li>
+          </ul>
+        </div>
+      </li>
+      <!--end Column Footer-->
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font1">TRỢ GIÚP</div>
+        <div class="col_F_ct">
+          <ul class="list_menu_footer">
+            <li><a href="">Tôi muốn bán sản phẩm</a></li>
+            <li><a href="">Gian hàng đảm bảo</a></li>
+            <li><a href="">Gian hàng chuyên nghiệp</a></li>
+            <li><a href="">Giải pháp nâng cao doanh thu</a></li>
+            <li><a href="">Hướng dẫn sử dụng gian hàng</a></li>
+            <li><a href="">Xem tất cả</a></li>
+          </ul>
+        </div>
+      </li>
+      <!--end Column Footer-->
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font1">HỢP TÁC</div>
+        <div class="col_F_ct">
+          <ul class="list_menu_footer">
+            <li><a href="">Đăng ký thành viên</a></li>
+            <li><a href="">Cách tìm sản phẩm</a></li>
+            <li><a href="">Hướng dẫn mua hàng</a></li>
+            <li><a href="">Thanh toán an toàn</a></li>
+            <li><a href="">Mua hàng không cần tài khoản</a></li>
+            <li><a href="">Liên hệ hỗ trợ sản phẩm</a></li>
+          </ul>
+        </div>
+      </li>
+      <!--end Column Footer-->
+      <!--Column Footer-->
+      <li class="col_foo">
+        <div class="title_col_footer font1">CHĂM SÓC KHÁCH HÀNG</div>
+        <div class="col_F_ct" id="info_footer">
+          <p>76/4 Quang Trung, P. 10, Q. Gò Vấp, TP. HCM</p>
+          <p>Hotline: 096.238.6804</p>
+          <p>Email: trumdacsan@gmail.com</p>
+          <div style="float: left; width: 45%; margin-right: 20px">Thứ 2 - 6<br />
+            Sáng: 08:00 - 12.00<br />
+            Chiều: 13:00 - 17:00</div>
+          <div style="float: right; width: 45%">Thứ 7<br />
+            Sáng: 08:00 - 12.00<br />
+            Nghỉ Chủ nhật, Lễ, Tết</div>
+        </div>
+      </li>
+      <!--end Column Footer-->
+    </ul>
+    <!--end Footer Top-->
+    <!--Footer Bottom-->
+  </div>
+</div>
+<!--End Footer-->
+<div id="copyright">Copyright @ trumdacsan.com. All rights reserved.</div>
+<div id="divAdLeft">
+  <div style="padding: 2px 0px"> <a href='/san-pham/tui-xach-2.aspx' target='_parent'><img src='http://www.nhommua.com/Content/Images/promotion/banner_right.gif' vspace='1' width='130' alt='' /></a> </div>
+</div>
+<div id="divAdRight">
+  <div style="padding: 2px 0px"> <a href='/san-pham/tui-xach-2.aspx' target='_parent'><img src='http://www.nhommua.com/Content/Images/promotion/banner_right.gif' vspace='1' width='130' alt='' /></a> </div>
+</div>
+<script type="text/javascript">
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 130;RightBannerW = 130;LeftAdjust = 7;RightAdjust = 7;TopAdjust = 145;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

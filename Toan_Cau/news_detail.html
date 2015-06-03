@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>Toàn Cầu</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Main Menu-->
+<script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('ul.navigation a').on('click', function(event) { 
+    var el = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $(el.attr('href')).offset().top  - 45
+    }, 1000);
+    event.preventDefault();
+});
+
+});//]]>  
+
+</script>
+<!--Effect Hover-->
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('.support_element').mouseover(function(){
+    //show the box
+    $(this).children('.sp_bg').stop().fadeIn('300');
+});
+
+$('.support_element').mouseleave(function(){
+    //hide the box
+    $(this).children('.sp_bg').stop().fadeOut('200');
+});
+});//]]>  
+</script>
+<!--Main Menu-->
+<script src="Scripts/jqueryEasing.js"></script>
+<!--Slide chay ngang-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" type="text/css" href="Styles/jquery.ad-gallery.css">
+<script type="text/javascript" src="Scripts/jquery.ad-gallery.js?rand=390"></script>
+<script type="text/javascript" src="Scripts/Common.js"></script>
+<script type="text/javascript" src="Scripts/Galary.js"></script>
+<!-- Custom scrollbars CSS -->
+<link href="Styles/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/jquery-ui-1.8.min.js"></script>
+<!-- mousewheel plugin -->
+<script src="Scripts/jquery.mousewheel.min.js"></script>
+<!-- custom scrollbars plugin -->
+<script src="Scripts/jquery.mCustomScrollbar.js"></script>
+<script>
+		(function($){
+			$(window).load(function(){
+				/* custom scrollbar fn call */
+				$(".content_page").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					}
+				});		
+				$(".content_5").mCustomScrollbar({
+					horizontalScroll:true,
+					scrollButtons:{
+						enable:true
+					}
+				});
+			});
+		})(jQuery);
+	</script>
+</head>
+<body id="bd">
+<!--Support-->
+<div class="support_head">
+  <!--Social Network-->
+  <div class="support_element social_network"><span class="title_social"></span>
+    <div class="sp_bg social_info tip"><img src="Images/verticle_network.png" alt="" /> </div>
+  </div>
+  <!--End Social Network-->
+  <!--Yahoo-->
+  <div class="support_element nick_chat"><span class="title_chat"></span>
+    <div class="sp_bg chat_info tip">
+      <label>Hỗ trợ trực tuyến</label>
+      <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a> <a href="ymsgr:sendim?hotro_nhommuahcm2"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=1" style="margin-right:4px"> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="Images/skype_icon.png" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="Images/skype_icon.png" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a>
+      <p class="hotline">Hotline: <span>08 3978 2030<br />
+        0976 276 804</span></p>
+    </div>
+  </div>
+  <!--End Yahoo-->
+  <!--Get Email-->
+  <div class="support_element get_email"><span class="title_email"></span>
+    <div class="sp_bg email_info tip">
+      <label>Nhận bản tin</label>
+      <span class="icon_email"></span>
+      <p>Hãy nhập Email của bạn và nhấn nút "Đăng ký", bạn sẽ nhận được các thông tin mới nhất của TOÀN CẦU qua email.</p>
+      <ul>
+        <li>
+          <input type="text" onblur="if(this.value=='') this.value='Email' " onclick="if(this.value=='Email') this.value='' " value="Email" class="inputbox" style="width:220px; margin: 5px 0" name="email">
+        </li>
+        <li style="margin-bottom: 10px">
+          <input type="checkbox" style=" float:left; margin:5px 0 0 0;" value="Bike" name="vehicle">
+          <input type="hidden" value="registeremail" name="op">
+          <span style=" float:left; margin:4px 0 0 5px;">Receive HTML?</span> </li>
+        <li><a href="javascript:$('.formsearch').submit();" class="button">Đăng ký</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--End Get Email-->
+  <!--Link Web-->
+  <div class="support_element link_web"><span class="title_web"></span>
+    <div class="sp_bg link_web_info tip">
+      <label>Liên kết web</label>
+      <select name="link_web" class="option">
+        <option value="0">Đẳng Cấp Việt</option>
+        <option value="1">Esell.vn</option>
+      </select>
+    </div>
+  </div>
+  <!--End Link Web-->
+  <!--Get Gift-->
+  <div class="support_element get_gift"><span class="title_gift"></span>
+    <div class="sp_bg gift_info tip">
+      <p style="margin-left: 0.5in; text-align: center;"> <strong>THÔNG BÁO CHƯƠNG TRÌNH KHUYẾN MÃI</strong></p>
+      <p align="center"> <strong><em>"<em>Mua thiết bị Inmarsat&ndash; FleetBroadBand nhận ngay thẻ Sim và Laptop </em></em></strong>"</p>
+      <p align="center">&nbsp; </p>
+      <p align="center"> <strong><em>Kính gửi:</em></strong> Quý Khách hàng</p>
+      <p> Công ty TNHH MTV Thông tin Điện tử Hàng hải Việt Nam (VISHIPEL) xin chân thành cảm ơn sự quan tâm của Quý Công ty đến thiết bị, dịch vụ viễn thông hàng hải thuộc lĩnh vực chuyên doanh của Công ty chúng tôi.</p>
+      <p> Chúng tôi xin gửi đến Quý Khách hàng chương trình khuyến mãi: “<strong>Mua thiết bị Inmarsat &ndash; FleetBroadBand nhận ngay thẻ Sim và Laptop</strong>” như sau:</p>
+      <p style="margin-left:.5in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nội dung khuyến mãi: khi Khách hàng mua thiết bị FBB 250 và cam kết sử dụng dịch vụ của VISHIPEL tối thiểu 1 năm sẽ nhận ngay:</p>
+      <p style="margin-left:.5in;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + <strong>01 Sim FBB với tài khoản 30.000.000 VNĐ /thiết bị FBB 250</strong> (không bao gồm phí thuê bao, hạn sử dụng tài khoản khuyến mãi trong 2 tháng đầu tiên kể từ khi kích hoạt dịch vụ);</p>
+      <p style="margin-left:.5in;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + <strong>01</strong> <strong>máy tính laptop trị giá 8.000.000VNĐ (</strong>số lượng máy tính nằm trong chương trình khuyến mãi: <strong>10 chiếc)</strong>.</p>
+      <p style="margin-left:.5in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Đối tượng áp dụng: Tất cả các khách hàng hoạt động trong lĩnh vực hàng hải, dầu khí;</p>
+      <p style="margin-left:.5in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thời gian áp dụng: Từ 15/6/2013 đến 31/7/2013.</p>
+      <p> Thông tin chi tiết xin vui lòng liên hệ với các Điểm dịch vụ khách hàng của VISHIPEL:</p>
+      <p style="margin-left:.75in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Điểm dịch vụ khách hàng tại Hải Phòng</strong>:</p>
+      <p style="margin-left:.75in;"> Đc: Số 2 Nguyễn Thượng Hiền, Hồng Bàng, Hải Phòng</p>
+      <p style="margin-left:.75in;"> Tel/Fax: +84.31.3842073.</p>
+      <p style="margin-left:.75in;"> Email: <a href="mailto:customercare@vishipel.com.vn">customercare@vishipel.com.vn</a></p>
+      <p style="margin-left:.75in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Điểm dịch vụ khách hàng tại Hà Nội</strong>:</p>
+      <p style="margin-left:.75in;"> Tel/Fax: +84.4.37950935</p>
+      <p style="margin-left:.75in;"> Email: <a href="mailto:customercare@vishipel.com.vn">customercare@vishipel.com.vn</a></p>
+      <p style="margin-left:.75in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Điểm dịch vụ khách hàng Hồ Chí Minh</strong>:</p>
+      <p style="margin-left:.75in;"> Đc: 432 Nguyễn Tất Thành, Quận 4, Tp. HCM</p>
+      <p style="margin-left:.75in;"> Tel: +84.8.39413415</p>
+      <p style="margin-left:.75in;"> Fax:+84.8.39402071</p>
+      <p style="margin-left:.75in;"> Email: <a href="mailto:customercare@vishipel.com.vn">customercare@vishipel.com.vn</a></p>
+      <p> Công ty TNHH MTV Thông tin Điện tử Hàng hải Việt Nam rất mong nhận được sự ủng hộ của Quý Khách hàng.</p>
+      <p> Xin trân trọng cảm ơn!</p>
+    </div>
+  </div>
+  <!--End Get Gift-->
+  <!--Visitors-->
+  <div class="support_element visistors"><span class="title_visistors"></span>
+    <div class="sp_bg visistors_info tip"><img src="Images/visitors_image.jpg" alt="" /> </div>
+  </div>
+  <!--End Visitors-->
+</div>
+<!--End Support-->
+<!--Main Menu-->
+<div class="menu">
+  <div class="page_inner">
+    <ul class="navigation">
+      <li class="home on"><a href="index.html#home">TRANG CHỦ</a></li>
+      <li><a href="index.html#intro">GIỚI THIỆU</a></li>
+      <li><a href="index.html#product">SẢN PHẨM</a></li>
+      <li><a href="index.html#video">VIDEO</a></li>
+      <li><a href="index.html#advisory">TƯ VẤN</a></li>
+      <li><a href="index.html#news">TIN TỨC</a></li>
+      <li><a href="index.html#agent">HỆ THỐNG PHÂN PHỐI</a></li>
+      <li><a href="index.html#recruitment">TUYỂN DỤNG</a></li>
+      <li class="lang"><a href="#"><img src="Images/us_icon.jpg" alt="" /></a></li>
+    </ul>
+  </div>
+  <div class="menu_shadow"></div>
+</div>
+<!--End Main Menu-->
+<div id="wrapper">
+  <div class="section">
+    <div class="page">
+      <div class="content_page content">
+        <div class="path"><a href="index.html">Trang chủ</a> &raquo; Tin tức</div>
+        <h2 class="title_page">Chi tiết tin tức</h2>
+        <div class="detail_info">
+          <h1 class="h1Title">Những thực phẩm nên tránh khi đang uống kháng sinh</span></h1>
+          <p class="date">06/05/2013</p>
+          <p>Khi đang uống kháng sinh điều trị một chứng bệnh nào đó, bạn nên tránh ăn những thực phẩm dưới đây:</p>
+          <p>Sữa và các sản phẩm chế biến từ sữa</p>
+          <p>Sữa và các sản phẩm chế biến từ sữa có thể làm nặng nề thêm cho đường ruột của bạn trong khi bạn đang dùng thuốc kháng sinh. Hầu hết các dược sĩ đều đặc biệt khuyến cáo không uống sữa khi đang uống thuốc kháng sinh ciprofloxacin.</p>
+          <p>Ngoài ra, các sản phẩm chứa nhiều chất béo khác cũng có thể làm trầm trọng thêm các triệu chứng của bệnh tiêu chảy - một tác dụng phụ khi uống thuốc kháng sinh.</p>
+          <p>Thực phẩm chứa nhiều chất xơ</p>
+          <p>Một số loại rau quả có chứa nhiều chất xơ  hoặc các loại đậu cũng có thể gây tiêu chảy nặng thêm khi bạn đang dùng thuốc kháng sinh.</p>
+          <p>Bên cạnh đó, các thực phẩm như ngũ cốc, lúa mì tuy có thể tăng cường chất sắt và calci cho cơ thể nhưng lại cản trở khả năng hấp thụ một số thuốc kháng sinh khi vào cơ thể, đặc biệt là khi bạn đang uống thuốc kháng sinh quinolone, trong đó bao gồm các loại thuốc như ciprofloxacin, acid nalidixic và cinoxacin, sparfloxacin và trovafloxacin.</p>
+          <p>Thực phẩm có tính acid</p>
+          <p>Hàm lượng acid trong một số thực phẩm nhất định có thể làm gián đoạn khả năng hấp thụ thuốc của cơ thể.</p>
+          <p>Nói chung, khi uống thuốc kháng sinh, tuy bạn không luôn luôn phải tránh xa chúng hoàn toàn, nhưng đôi khi việc tiêu thụ thực phẩm chua hoặc đồ uống có chứa nhiều acid như cà chua, nước trái cây, đồ uống có ga cũng có thể hạn chế sự hấp thu của thuốc khi vào cơ thể.</p>
+          <p>Rượu</p>
+          <p>Nhiều dược sĩ đều chỉ ra rằng rượu không can thiệp bất lợi trực tiếp vào việc uống thuốc kháng sinh. Tuy nhiên, thuốc kháng sinh và rượu có thể có tác dụng phụ tương tự nhau. Vì thế, nếu bạn uống cả hai cùng một lúc, chúng có thể gia tăng cơ hội bạn phải chịu trận với những nguy cơ buồn nôn, chóng mặt hoặc buồn ngủ...</p>
+          <p>Những loại thuốc này có thể điểm mặt bao gồm: penicillin G, ampicillin, floxin, oxacillin, gentamycin và ciprofloxacin. Khi uống những loại thuốc này, bạn có thể phải ăn/uống các thực phẩm 3 giờ trước/sau 
+            
+            khi uống thuốc.</p>
+          <p>Lưu ý: Tránh dùng các loại sữa, các sản phẩm chế biến từ sữa, trừ sữa chua, khi bạn đang uống thuốc kháng sinh. Nguyên nhân là do lượng calci có nhiều trong sữa và các sản phẩm từ sữa có thể cản trở sự hấp thu của thuốc kháng sinh. Tuy nhiên, sữa chua thì bạn vẫn có thể ăn bình thường vì nó có chứa nhiều men vi sinh giúp khôi phục lại sự cân bằng cho đường ruột, tránh tiêu chảy khi sử dụng thuốc kháng sinh.</p>
+        </div>
+        <div class="function">
+          <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+          <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+        </div>
+        <!--Other News-->
+        <div class="other_news_sub">
+          <h2 class="other_newsT">Tin bài khác</h2>
+          <ul>
+            <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+          </ul>
+          <a class="view_all" href="">Xem tất cả &raquo;</a>
+          <div class="clearfix"></div>
+        </div>
+        <!--Other News-->
+      </div>
+    </div>
+  </div>
+  <!--End Wrapper-->
+</div>
+<!-- Jquery Top Agents -->
+<div class="footer">
+  <div class="page_inner">
+    <!--Footer Menu-->
+    <div class="footer_menu"><a href="">Liên hệ</a> | <a href="">Điều khoản sử dụng</a> | <a href="">Chính sách bảo mật</a> | <a href="">Thông tin thanh toán</a></div>
+    <!--End Footer Menu-->
+    <div id="slider_partners"> <span class="title_partner">ĐỐI TÁC</span>
+      <ul id="mycarousel" class="jcarousel-skin-tango">
+        <li class="item"><a href=""><img src="Images/logo_partner01.jpg" width="90" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_partner02.jpg" width="196" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_partner03.jpg" width="110" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_partner04.jpg" width="110" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_partner01.jpg" width="90" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_partner02.jpg" width="196" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_partner03.jpg" width="110" height="70" alt="" /></a></li>
+        <li class="item"><a href=""><img src="Images/logo_partner04.jpg" width="110" height="70" alt="" /></a></li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!--End Jquery Agents-->
+<script src="jquery.mousewheel.min.js"></script>
+<script>
+		$(document).ready(function() {
+
+			$('html, body, *').mousewheel(function(e, delta) {
+				this.scrollTop -= (delta * 40);
+				e.preventDefault();
+			});
+
+		});
+	</script>
+<!-- Enable HTML5 for old browsers -->
+<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</body>
+</html>

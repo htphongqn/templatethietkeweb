@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DSTT - Thiết bị vệ sinh</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Jquery quang cao truot 2 ben-->
+<script src="Scripts/scroll_ads.js"></script>
+<!--Jquery Support -->
+<script type="text/javascript">    
+    $(function () {
+        $('.support').each(function () {
+            var distance = 10;
+            var time = 50;
+            var hideDelay = 50;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.popup_support', this).css('opacity', 0);
+				
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 40,
+                        left: 0,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 0
+                    }, time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });
+		$('.register_news').each(function () {
+            var distance = 10;
+            var time = 50;
+            var hideDelay = 50;
+
+            var hideDelayTimer = null;
+
+            var beingShown = false;
+            var shown = false;
+            var trigger = $('.trigger', this);
+            var info = $('.popup_register_news', this).css('opacity', 0);
+				
+
+            $([trigger.get(0), info.get(0)]).mouseover(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                if (beingShown || shown) {
+                    // don't trigger the animation again
+                    return;
+                } else {
+                    // reset position of info box
+                    beingShown = true;
+
+                    info.css({
+                        top: 40,
+                        left: 0,
+                        display: 'block'
+                    }).animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 1
+                    }, time, 'swing', function() {
+                        beingShown = false;
+                        shown = true;
+                    });
+                }
+
+                return false;
+            }).mouseout(function () {
+                if (hideDelayTimer) clearTimeout(hideDelayTimer);
+                hideDelayTimer = setTimeout(function () {
+                    hideDelayTimer = null;
+                    info.animate({
+                        top: '-=' + distance + 'px',
+                        opacity: 0
+                    }, time, 'swing', function () {
+                        shown = false;
+                        info.css('display', 'none');
+                    });
+
+                }, hideDelay);
+
+                return false;
+            });
+        });
+    });    
+    </script>
+<!--Jquery Top banner-->
+<link rel="stylesheet" type="text/css" href="Styles/lofslide.css" />
+<script language="javascript" type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script language="javascript" type="text/javascript" src="Scripts/script.js"></script>
+<script type="text/javascript">
+ $(document).ready( function(){	
+		var buttons = { previous:$('#lofslidecontent45 .lof-previous') ,
+						next:$('#lofslidecontent45 .lof-next') };
+						
+		$obj = $('#lofslidecontent45').lofJSidernews( { interval : 4000,
+												direction		: 'opacity',	
+											 	easing			: 'easeInOutQuad',
+												duration		: 1200,
+												auto		 	: true,
+												mainWidth		: 1000,
+												buttons			: buttons} );	
+	});
+</script>
+<!--Menu Sidebar-->
+<script type="text/javascript" src="Scripts/scriptbreaker-multiple-accordion-1.js"></script>
+<script language="JavaScript">
+
+$(document).ready(function() {
+	$(".topnav").accordion({
+		accordion:false,
+		speed: 500,
+		closedSign: '+',
+		openedSign: '-'
+	});
+});
+
+</script>
+<!--Slide Products-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_products_viewed').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 4,
+        initCallback: mycarousel_initCallback
+    });
+    jQuery('#mycarousel_products_liked').jcarousel({
+        auto: 0,
+        wrap: 'circular',
+        scroll: 4,
+        initCallback: mycarousel_initCallback
+    });	
+	jQuery('#mycarousel_logo').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+        scroll: 4,
+        initCallback: mycarousel_initCallback
+    });
+});
+</script>
+</head>
+<body id="bd">
+<div id="wrapper">
+  <!--Ads truot-->
+  <div id="divAdLeft" class="banner_scroll"> <a href=""><img src="Images/ads_left.jpg" width="150" height="520" /></a> </div>
+  <div id="divAdRight" class="banner_scroll"> <a href=""><img src="Images/ads_right.jpg" width="150" height="520" /></a> </div>
+  <script>       
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 150;RightBannerW = 150;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 0;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");      
+</script>
+  <!--End Ads truot-->
+  <!--Top Page-->
+  <div class="top_page">
+    <div class="top_link">
+      <div class="page_inner">
+        <div class="hline">Hotline: <span>0909 336 818</span></div>
+        <ul>
+          <li class="home active"><a href="">Trang chủ</a></li>
+          <li><a href="">Giới thiệu</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="">Hỏi đáp</a></li>
+          <li><a href="">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="page_inner">
+      <!--#begin Header-->
+      <div class="header"> <a class="logo" href="index.html"><img src="Images/logo.png" alt="" /></a>
+        <div class="info_header">
+          <div class="function_web"><span class="delivery"></span><strong>Miễn phí giao hàng</strong><br />
+            Nhanh chóng - Đúng hẹn </div>
+          <div class="function_web"><span class="return"></span><strong>Thanh toán thuận tiện</strong><br />
+            An toàn - Bảo mật </div>
+          <div class="function_web"><span class="payment"></span><strong>07 ngày đổi hàng</strong><br />
+            Miễn phí đổi hàng</div>
+        </div>
+      </div>
+      <!--#end Header-->
+    </div>
+  </div>
+  <!--End Top Page-->
+  <!--Top Main-->
+  <div class="top_main">
+    <div class="page_inner">
+      <div class="search">
+        <input type="text" class="input_Search" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+      </div>
+      <div class="cart"><a href="cart.html" class="icon_cart"><span>0</span> sản phẩm</a></div>
+      <div class="support"><a title="Hỗ trợ trực tuyến" class="trigger trig_support" href="">Hỗ trợ trực tuyến<span class="arrow_down"></span></a>
+        <div id="dpop" class="popup_hover popup_support">
+          <ul>
+            <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=1' alt="" width="64" class="img_general" /></a>Kinh doanh 01</span></li>
+            <li><a href="ymsgr:sendIM?NICK_CUA_BAN"><img src='http://opi.yahoo.com/online?u=NICK_CUA_BAN&m=g&t=1' alt="" width="64" class="img_general" /></a>Kinh doanh 02</span></li>
+            <li><a href=""><img src='Images/skype_icon.png' alt="" width="64" class="img_general" /></a>Kinh doanh 03</span></li>
+            <li><a href=""><img src='Images/skype_icon.png' alt="" width="64" class="img_general" /></a>Kinh doanh 04</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Top Main-->
+  <div class="page">
+    <!-- Jquery Top Banner -->
+    <!------------------------------------- THE CONTENT ------------------------------------------------->
+    <div id="lofslidecontent45" class="lof-slidecontent">
+      <div class="preload">
+        <div></div>
+      </div>
+      <!-- MAIN CONTENT -->
+      <div class="lof-main-outer" style="width:1000px; height:400px;">
+        <div onclick="return false" href="" class="lof-previous">Previous</div>
+        <ul class="lof-main-wapper">
+          <li> <img src="Images/slider_01.jpg" title="" >
+            <div class="lof-main-item-desc">
+              <h2>HỆ THỐNG GIAO NHẬN HÀNG TRẢI RỘNG TOÀN QUỐC 1</h2>
+              <p>Cung cấp dịch vụ kịp thời và có chất lượng tốt cho các đơn vị của LD Vietsovpetro để đảm bảo các loại hình sản xuất trên biển. Đảm bảo khai thác hợp lý và có hiệu quả đội tàu biển...</p>
+            </div>
+          </li>
+          <li> <img src="Images/slider_02.jpg" title="" >
+            <div class="lof-main-item-desc">
+              <h2>HỆ THỐNG GIAO NHẬN HÀNG TRẢI RỘNG TOÀN QUỐC 2</h2>
+              <p>Cung cấp dịch vụ kịp thời và có chất lượng tốt cho các đơn vị của LD Vietsovpetro để đảm bảo các loại hình sản xuất trên biển. Đảm bảo khai thác hợp lý và có hiệu quả đội tàu biển...</p>
+            </div>
+          </li>
+          <li> <img src="Images/slider_03.jpg" title="" >
+            <div class="lof-main-item-desc">
+              <h2>HỆ THỐNG GIAO NHẬN HÀNG TRẢI RỘNG TOÀN QUỐC 3</h2>
+              <p>Cung cấp dịch vụ kịp thời và có chất lượng tốt cho các đơn vị của LD Vietsovpetro để đảm bảo các loại hình sản xuất trên biển. Đảm bảo khai thác hợp lý và có hiệu quả đội tàu biển...</p>
+            </div>
+          </li>
+          <li> <img src="Images/slider_04.jpg" title="Newsflash 5" >
+            <div class="lof-main-item-desc">
+              <h2>HỆ THỐNG GIAO NHẬN HÀNG TRẢI RỘNG TOÀN QUỐC 4</h2>
+              <p>Cung cấp dịch vụ kịp thời và có chất lượng tốt cho các đơn vị của LD Vietsovpetro để đảm bảo các loại hình sản xuất trên biển. Đảm bảo khai thác hợp lý và có hiệu quả đội tàu biển...</p>
+            </div>
+          </li>
+          <li> <img src="Images/slider_05.jpg" title="" >
+            <div class="lof-main-item-desc">
+              <h2>HỆ THỐNG GIAO NHẬN HÀNG TRẢI RỘNG TOÀN QUỐC 5</h2>
+              <p>Cung cấp dịch vụ kịp thời và có chất lượng tốt cho các đơn vị của LD Vietsovpetro để đảm bảo các loại hình sản xuất trên biển. Đảm bảo khai thác hợp lý và có hiệu quả đội tàu biển...</p>
+            </div>
+          </li>
+        </ul>
+        <div onclick="return false" href="" class="lof-next">Next</div>
+      </div>
+      <!-- END MAIN CONTENT -->
+      <!-- NAVIGATOR -->
+      <!----------------- --------------------->
+    </div>
+    <!------------------------------------- END OF THE CONTENT ------------------------------------------------->
+    <!--End Jquery Top Banner -->
+    <!-- #Main -->
+    <div class="main clearfix">
+      <!--Left Column-->
+      <div class="left_content">
+        <div class="box">
+          <div class="box_content_center" style="padding: 0">
+            <div class="box_Tab">Danh mục sản phẩm</div>
+            <ul class="topnav">
+              <li><a href="">Bồn nước</a>
+                <ul>
+                  <li class="active"><a href="#">Thiết bị ToTo</a>
+                    <ul>
+                      <li><a href="list_products.html">Bồn đứng</a></li>
+                      <li><a href="#">Bồn ngang</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Thiết bị Inax</a>
+                    <ul>
+                      <li><a href="#">Bồn đứng</a></li>
+                      <li><a href="#">Bồn ngang</a></li>
+                    </ul>
+                  </li>
+                  <li class="target"><a href="#">Thiết bị Caesar</a></li>
+                  <li class="target"><a href="#">Thiết bị American</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Vòi Sen</a>
+                <ul>
+                  <li class="target"><a href="#">HTML</a></li>
+                  <li class="target"><a href="#">CSS</a></li>
+                  <li class="target"><a href="#">JavaScript</a></li>
+                  <li><a href="#">Java</a>
+                    <ul>
+                      <li><a href="#">JSP</a></li>
+                      <li><a href="#">JSF</a></li>
+                      <li><a href="#">JPA</a></li>
+                      <li><a href="http://www.scriptbreaker.com/contact/" target="_blank">Contact</a></li>
+                    </ul>
+                  </li>
+                  <li class="target"><a href="#">Tabs</a></li>
+                </ul>
+              </li>
+              <li class="no_arcordion"><a href="#">Máy nước nóng</a></li>
+              <li class="no_arcordion"><a href="#">Chậu rửa chén</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box_content_center">
+            <div class="box_Tab">Tìm kiếm nâng cao</div>
+            <div class="search_box">
+              <select name="choose_typeP" class="type_option">
+                <option value="0">Loại sản phẩm</option>
+                <option value="1">Camera</option>
+                <option value="1">Khóa</option>
+              </select>
+              <select name="choose_manufacture" class="type_option">
+                <option value="0">Hãng (Thương hiệu)</option>
+                <option value="1">HSX1</option>
+                <option value="1">HSX2</option>
+              </select>
+              <select name="choose_price" class="type_option">
+                <option value="0">Chọn giá</option>
+                <option value="1">1.000.000</option>
+                <option value="1">10.000.000</option>
+                <option value="1">100.000.000</option>
+              </select>
+              <div class="search_button">
+                <input type="submit" onclick="return CheckValue(document.Search.s);" class="submitSearch" value="Tìm kiếm" />
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="box">
+          <!--Jquery Support-->
+          <div class="register_news"><a title="Đăng ký nhận bản tin" class="trigger trig_news" href="">Đăng ký nhận bản tin<span class="arrow_down1"></span></a>
+            <div id="dpop_news" class="popup_hover popup_register_news">
+              <div class="subscribe-form"> Bạn ghét spam? Chúng tôi cũng vậy :)
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody>
+                    <tr>
+                      <td width="30%">Họ tên</td>
+                      <td><input type="text" name="txtFullName"></td>
+                    </tr>
+                    <tr>
+                      <td>E-mail</td>
+                      <td><input type="text" name="txtEmail"></td>
+                    </tr>
+                    <tr>
+                      <td>Giới tính</td>
+                      <td><input type="radio" checked="checked" value="0" name="rdGender">
+                        Nam
+                        <input type="radio" value="1" name="rdGender">
+                        Nữ </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"><input type="button" onclick="SubmitFooterSubscribe()" value="Đăng ký" class="submitSearch"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="box">
+          <div class="box_content_center">
+            <div class="box_Tab">Liên kết Web</div>
+            <div id="link_web">
+              <select name="link_web" class="type_option">
+                <option value="0">Đẳng Cấp Việt</option>
+                <option value="1">Esell.vn</option>
+              </select>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div id="ads"> <img src="Images/ads_left01.jpg" alt="" width="235" /> <img src="Images/ads_left01.jpg" alt="" width="235" /> </div>
+      </div>
+      <!--End Left Column-->
+      <!--Main Column-->
+      <div class="main_content">
+        <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tin tức</a></div>
+        <div class="box">
+          <div class="box_Tab"><span class="name_Tab">Tin tức<span class="arrow_down"></span></span></div>
+          <div class="detail_general" id="list_news">
+            <ul>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" /></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" ></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" ></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" ></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" ></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" ></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" ></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+              <li><a target="_parent" href="news_detail.html"><img class="img_general" width="120" height="100" alt="" src="Images/logo.png" ></a>
+                <h2 class="h2Title"><a target="_parent" href="news_detail.html" class="link_title">Honda Việt Nam tuyên dương các HEAD xuất sắc nhất trong hoạt động Lái xe ...</a></h2>
+                <p>Đại diện các nhà sản xuất và quản lý của ngành điện hạt nhân Pháp sẽ đến Việt Nam tham gia sự kiện Triển lãm quốc tế Điện hạt nhân Lần thứ V tổ chức tại Hà Nội Nhân dịp này, ông Bernard Bigot, Chủ tịch Ủy ban Quốc gia về Năng lượng nguyên tử và Năng lượn</p>
+                <a href="news_detail.html" class="view_more">Chi tiết...</a> </li>
+            </ul>
+            <div class="navigation"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <!--End Main Column-->
+      <!--Slide trade-mark-->
+      <div class="box_content_center" id="slider_hoz">
+        <ul id="mycarousel_logo" class="jcarousel-skin-tango">
+          <li class="item"><a href=""><img src="Images/trade_mark01.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark02.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark03.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark04.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark05.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark01.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark02.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark03.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark04.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark05.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark01.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark02.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark03.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark04.jpg" alt="" width="160" height="80" /></a></li>
+          <li class="item"><a href=""><img src="Images/trade_mark05.jpg" alt="" width="160" height="80" /></a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!--End slide trade-mark-->
+      <div id="sticker">
+        <div class="phone"> <span>08.6288.3080</span> - <span>092.855.6060</span> - <span>092.855.6262</span> </div>
+      </div>
+      <script type="text/javascript">
+$(document).ready(function() {
+    var s = $("#sticker");
+    var pos = s.position();                   
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+       	//s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+        if (windowpos >= pos.top) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick");
+        }
+    });
+});
+</script>
+    </div>
+    <!--End Main-->
+    <div class="footer">
+    <div class="topmenu_footer">
+      <div class="col_menuFooter" id="social_network">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Follow us</a></h2>
+          <div class="listMenuFooter"><a href=""><span class="facebook"></span>Faceboook</a><a href=""><span class="tumblr"></span>Tumblr</a><a href=""><span class="google_plus"></span>Google +</a><a href=""><span class="you_tube"></span>You Tube</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="introduction">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Hỗ trợ khách hàng</a></h2>
+          <div class="listMenuFooter"><a href="">Điều khoản sử dụng</a><a href="">Hướng dẫn mua hàng</a><a href="">Phương thức thanh toán</a><a href="">Phương thức vận chuyển</a><a href="">Chính sách bảo mật</a><a href="">Chính sách đổi trả hàng</a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="visitors">
+        <div class="ctentColuMenuFooter">
+          <h2><a href="">Thống kê truy cập</a></h2>
+          <div class="listMenuFooter">
+            <p>Tổng truy cập: <strong>100 000</strong></p>
+            <p>Hôm qua: <strong>2000</strong></p>
+            <p>Đang truy cập: <strong>400</strong></p>
+            <div class="hotline">Hotline: <span>0909 336 818</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="info_F_general">
+        <div class="ctentColuMenuFooter">
+          <div class="footer_menu"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Sản Phẩm</a><a href="">Tin tức</a><a href="">Hỏi đáp</a><a href="">Liên hệ</a><a href="">Sitemap</a></div>
+          <div class="info_footer">
+            <p><strong>CÔNG TY TNHH THƯƠNG MẠI AMAZONA</strong></p>
+            <p>Địa chỉ: 153 Lê Văn Lương, P.Tân Kiểng, Q.7, Tp. HCM</p>
+            <p>Email: <a href="mailto:info@amazona.vn">info@amazona.vn</a></p>
+            <p>Tel: 0909 336 818</p>
+          </div>
+          <div class="copyright"> Copyright © 2013 By <strong>amazona.vn</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrapper-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

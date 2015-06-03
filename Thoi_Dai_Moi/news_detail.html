@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Thời Đại Mới</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/scroll_ads.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!---Toggle Cate-->
+<script type='text/javascript'>
+$(document).ready(function () {
+            var notH = 1,
+    $pop = $('.contentEGP').hover(function () { notH ^= 1; });
+
+            $(document).on('mouseup keyup', function (e) {
+                if (notH || e.which == 27) $pop.stop().hide();
+            });
+            /////// CALL POPUP 
+	 $('.sub_cate_hide').click(function () {
+                jQuery(this).find('ul.hidden').slideDown("fast").end().siblings().find('ul.hidden').hide('fast');
+                event.stopPropagation();
+            });						   						     
+});
+</script>
+<!--Menu-->
+<script src="Scripts/masonry.js"></script>
+<script type="text/javascript">
+        $(function () {
+            var columns = 4,
+	setColumns = function () { columns = $(window).width() > 750 ? 4 : $(window).width() > 500 ? 3 : $(window).width() > 250 ? 2 : 1; };
+            setColumns();
+            $(window).resize(setColumns);
+            $('.m_li').bind('mouseenter', function () {
+
+                $(this).find('.list_categories').stop(true, true).show('fast');
+                var columns = 3,
+				setColumns = function () { columns = $(window).width() > 750 ? 3 : $(window).width() > 500 ? 2 : $(window).width() > 250 ? 2 : 1; };
+                setColumns();
+                $(window).resize(setColumns);
+                $('.sub_list_cate').masonry(
+	    		{
+	    		    itemSelector: '.pc_menu',
+	    		    columnWidth: function (containerWidth) { return containerWidth / columns; }
+	    		});
+            }).bind('mouseleave', function () {
+
+                $(this).find('.list_categories').stop(true, true).hide('fast', function () {
+
+                });
+            });
+        })	
+    </script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {            
+			jQuery('#mycarousel_dt_img').jcarousel({
+                auto: 0,
+                animation: 1000,                
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });            			
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Thời Đại Mới" /> </a>
+    <p id="text_logo"><img src="Images/banner_head.png" alt="" />
+    <div id="hotline"><span class="number_phone">0909 663 551<br />
+      0909 663 552</span> </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="introduction.html">TRANG CHỦ</a> </li>
+      <li><a href="introduction.html">Giới thiệu</a> </li>
+      <li><a href="list_products.html">DỊCH VỤ</a>
+        <ul>
+          <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+          <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+      <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+      <li><a href="list_news.html">Tin tức</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+    <div id="cart" class="fr"><a href="cart.html"><span class="icon_cart"></span></a></div>
+  </div>
+  <!--End Main Menu-->
+  <!--End Top main-->
+  <!--Main Content-->
+  <div id="main">
+    <div id="left_col" class="fl">
+      <div id="top_main">
+        <!--Menu Sidebar-->
+        <div class="sitenav fl">
+          <ul>
+            <li class="homecatalog"><span class="homecataloglabel">Danh mục sản phẩm</span>
+              <!--Main Menu-->
+              <ul class="nav_menu">
+                <li class="m_li"><a href="/chuyen-muc/quan-nu.aspx"
+                                    class="t_menu"> Quần nữ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;">
+                      <div class="pc_menu masonry-brick" style="position: absolute; left: 0px;">
+                        <p> <a href="/chuyen-muc/asdasdasdasdsa.aspx" title="asdasdasdasdsa"> asdasdasdasdsa</a></p>
+                        <div class="cf"> </div>
+                      </div>
+                    </div>
+                    <div class="image_cate"> <img alt="" src="/data/categories/269/news.jpg"></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/phu-kien-nu.aspx"
+                                    class="t_menu"> Phụ kiện nữ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/dam-vay.aspx"
+                                    class="t_menu"> Đầm, váy</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/son-moi.aspx"
+                                    class="t_menu"> Son môi</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/nuoc-hoa.aspx"
+                                    class="t_menu"> Nước hoa</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/trang-diem.aspx"
+                                    class="t_menu"> Trang điểm</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/vong-tay-vong-co.aspx"
+                                    class="t_menu"> Vòng tay - Vòng cổ</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+                <li class="m_li"><a href="/chuyen-muc/that-lung.aspx"
+                                    class="t_menu"> Thắt lưng</a>
+                  <div style="right: 0px;" class="list_categories">
+                    <div class="sub_list_cate masonry" style="position: relative;"> </div>
+                    <div class="image_cate"> <img alt="" src=""></div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--end Menu Sidebar-->
+        <!--Search Tool-->
+        <div class="search_tool">
+          <div class="search">
+            <div class="dropdown">
+              <label>
+                <select name="ctl00$vi14$drCat" id="vi14_drCat" class="dr_search">
+                  <option value="110">Sản phẩm</option>
+                  <option value="558">Mũi Khoan Beton Đu&#244;i Tr&#242;n</option>
+                  <option value="559">Mũi Khoan Beton Đu&#244;i G&#224;i SDS</option>
+                  <option value="560">Mũi Khoan Beton Cốt Th&#233;p Booster Đu&#244;i G&#224;i</option>
+                  <option value="561">Lưỡi cắt Beton Tr&#242;n</option>
+                  <option value="562">Mũi Khoan Gỗ - Granit - kiếng</option>
+                  <option value="563">Mũi Khoan Sắt Th&#233;p Inox</option>
+                  <option value="564">Lưỡi Cưa Sắt - Th&#233;p - Gỗ</option>
+                  <option value="565">Đầu Khoan 10ly và 13ly</option>
+                  <option value="566">Tắc K&#234; nhựa Polyester</option>
+                  <option value="567">Tắc K&#234; Beton bằng h&#243;a chất Polyester</option>
+                </select>
+              </label>
+            </div>
+            <input name="ctl00$vi14$txtsearch" type="text" id="vi14_txtsearch" alt="Search" class="inputSearch" value="Từ khóa tìm kiếm sản phẩm" onclick="this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;) this.value=&#39;Từ khóa tìm kiếm sản phẩm&#39;;" onfocus="if(this.value==&#39;Từ khóa tìm kiếm sản phẩm&#39;) this.value=&#39;&#39;;" onkeypress="searchKeyPress();" />
+            <a href="javascript:void(0)" onclick="timkiem();" class="btn_search" id="btnSearch"></a> </div>
+        </div>
+        <!--end Search Tool-->
+      </div>
+      <!--Left Column 1-->
+      <div id="left_col1" class="fl">
+        <!--Left Menu-->
+        <div class="box">
+          <div class="box_Tab_l">Danh mục Tin tức</div>
+          <div id="topnav">
+            <ul>
+              <li class="active"><a href="list_products.html">Giới thiệu</a> </li>
+              <li><a href="list_products.html">Hướng dẫn mua hàng</a></li>
+              <li><a href="list_products.html">Hướng dẫn mua hàng</a></li>
+              <li><a href="list_products.html">Hướng dẫn mua hàng</a></li>
+            </ul>
+            <div class="cf"></div>
+          </div>
+        </div>
+        <!--End Left Menu-->
+      </div>
+      <!--Left Column 1-->
+      <!--Left Column 2-->
+      <div id="left_col2" class="fr">
+        <div class="current_path"><a href="index.html">Trang chủ</a><span class="spSeperator"></span><a href="list_news.html">Tin tức</a></div>
+        <!--Detail news-->
+        <div class="box">
+          <div class="box_ct" id="detail_news">
+            <div id="info_g">
+              <h2 class="h2Title">Xuất khẩu gạo khởi sắc</h2>
+              <p class="date">06/05/2013</p>
+              <div> Những ngày đầu quý III-2014, <a href="http://www.tintucnongnghiep.com/">xuất khẩu gạo</a> Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và   Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến   độ xuất khẩu để tránh bị ép giá.</div>
+              <div> <br />
+              </div>
+              <div> <a href="http://4.bp.blogspot.com/-qJtUPFk2Nzg/U7uXiqdz_mI/AAAAAAABN8w/JTdqY8smeyo/s1600/xuat+khau+gao.jpg" imageanchor="1"><img src="http://4.bp.blogspot.com/-qJtUPFk2Nzg/U7uXiqdz_mI/AAAAAAABN8w/JTdqY8smeyo/s1600/xuat+khau+gao.jpg" alt="" width="320" height="209" border="0" /></a></div>
+              <div> <em>XK gạo đang “thiên thời, địa lợi”. Ảnh: S.T</em></div>
+              <a name="more" id="more"></a><br />
+              <div> <strong>Kì vọng thị trường mới</strong></div>
+              <div> <br />
+              </div>
+              <div> Theo Hiệp hội Lương thực Việt Nam (VFA), lũy kế từ đầu năm đến ngày 26-6-2014, các DN đã XK được 2,848 triệu tấn gạo với trị giá FOB là 1,23 tỷ USD. Hiện giá lúa khô tại kho khu vực Đồng bằng sông Cửu Long đã tăng nhẹ từ 50-100 đồng/kg so với thời điểm giữa tháng 6 với mức giá lúa khô loại thường dao động từ 5.200 - 5.300 đồng/kg. Còn theo Bộ Công Thương, đến hết tháng 6-2014, các DN trong nước đã ký hợp đồng XK được 4,7 triệu tấn gạo và giao hàng được khoảng 3,3 triệu tấn, giá gạo XK cũng đã tăng nhẹ từ 10-15 USD/tấn.</div>
+              <div> <br />
+              </div>
+              <div> Ông Huỳnh Thế Năng, Tổng   giám đốc Tổng công ty Lương thực miền Nam (Vinafood 2) xác nhận phía   Malaysia đã chính thức quyết định mua của Việt Nam 200.000 tấn gạo 5% tấm thông qua Vinafood 2 với giá FOB giao tại cảng Sài Gòn là 410 USD/tấn. Mới đây nhất, một số báo trong nước cho biết ngoài hợp đồng mua 800.000 tấn đã kí vào tháng 4-2014 thì Philippines vừa quyết định mua thêm 200.000 tấn gạo nữa.</div>
+              <div> <br />
+              </div>
+              <div> Theo nhận định của một số DN gạo, XK gạo quí III-2014   của Việt Nam sẽ thuận lợi hơn nhờ XK tiểu ngạch sang Trung Quốc vẫn ổn   định và sự gia tăng khối lượng ở các hợp đồng tập trung. Cụ thể, theo   ông Lâm Anh Tuấn - Giám đốc Công ty TNHH Thịnh Phát (Bến Tre), một DN   hội viên VFA thì nếu năm 2013 hợp đồng tập trung đạt chỉ khoảng 700.000 tấn, thì tới thời điểm này Việt Nam đã có trong tay hợp đồng tập trung khoảng 1,2 triệu tấn. Đó là chưa tính đến dự kiến Philippines mua thêm 200.000 tấn   và Indonesia, Sri Lanca, Bangladesh cũng đang có ý định mua. Như vậy,   chắc chắn một điều là hợp đồng tập trung năm nay sẽ không dưới 1,5 triệu tấn.</div>
+              <div> <br />
+              </div>
+              <div> <strong>Cơ hội cho xuất khẩu</strong></div>
+              <div> <br />
+              </div>
+              <div> Trong bài phân tích về tình hình XK gạo trong các tháng cuối năm 2014,   ông Nguyễn Đình Bích- chuyên gia lúa gạo nhận định hiện tại không chỉ   riêng Việt Nam mà nhiều quốc gia XK gạo khác cũng đang tiếp tục đối mặt   với khó khăn do lượng cung vượt cầu khiến giá gạo XK có chiều hướng   giảm. Để tránh bị ép giá, cả hai cường quốc XK gạo số 1 và số 2 thế giới là Ấn Độ và Thái Lan trong tuần qua đều đã “phát tín hiệu” giãn tiến độ XK.</div>
+              <div> <br />
+              </div>
+              <div> Cụ thể, trong “rổ gạo XK” được Bộ Nông nghiệp Hoa Kỳ dự báo là 40,7 triệu tấn của thế giới năm 2014, Ấn Độ được dự báo sẽ vẫn giữ vững vị trí cường quốc số 1 với 10 triệu tấn, thậm chí Hiệp hội XK gạo nước này còn đưa ra con số kỷ lục 11 triệu tấn. Tuy nhiên trong tuần qua, Chính phủ Ấn Độ đã quyết định phát hành khẩn cấp 5 triệu tấn gạo dự trữ ra thị trường mở, một quyết định chưa từng có từ năm 2008 trở lại đây. Nguyên nhân được cho là <a href="http://www.tintucnongnghiep.com/">giá lúa gạo</a> của Ấn độ đã tăng mạnh từ tháng 5-2014 đến nay, khiến lạm phát trở nên gay gắt.</div>
+              <div> <br />
+              </div>
+              <div> Ngoài ra, hiện tượng   biến đổi khí hậu toàn cầu El’ Nino đã được cơ quan thời tiết của Ấn Độ   xác nhận và El’ Nino cũng đã bắt đầu xuất hiện tại Ấn Độ. Sức ép của El’   Nino đang nhanh chóng bao trùm đất nước có diện tích lúa lớn nhất thế   giới, nhưng hệ thống thuỷ lợi lại rất bất cập ở đất nước này. Các thông   tin từ Ấn Độ cho biết, lượng mưa đầu mùa ở nước này đã bắt đầu thiếu hụt   và diện tích gieo trồng lúa đã giảm sút mạnh. Lịch sử cho thấy, El’   Nino chính là “khắc tinh” của nền nông nghiệp lúa nước Ấn độ. Tất cả   những điều nói trên có nghĩa là El’ Nino sẽ đẩy giá lúa gạo trong nước   của Ấn Độ tăng mạnh, nên cũng sẽ đẩy giá gạo XK vốn đã cao của nước này   tăng thêm,</div>
+              <div> <br />
+              </div>
+              <div> Những diễn biến gần đây   tại Thái Lan cũng cộng hưởng với xu thế đó. Sở dĩ như vậy là sau khi nắm   quyền, giới quân sự Thái Lan đã hoàn tất việc trả khoản nợ khổng lồ gần   3 tỷ USD mà 800.000 hộ nông dân nước này đã chờ đợi kể từ tháng 10-2013.   Điều này đồng nghĩa với việc chính quyền hiện nay đã có thể chấm dứt   việc bán gạo dự trữ với bất cứ giá nào của Chính phủ tạm quyền như đã   tuyên bố.</div>
+              <div> <br />
+              </div>
+              <div> Tiếp theo, trước cáo buộc về việc có tới gần 3 triệu tấn gạo dự trữ của Chính phủ Thái Lan “mất tích”, hầu như ngay lập tức lệnh ngừng XK đã được ban bố và hơn 100 đội liên ngành được thành lập để kiểm tra tình hình dự trữ gạo thực tế tại hơn 1.800   kho rải khắp đất nước. Theo đánh giá của Hiệp hội các nhà XK gạo Thái   Lan, các yếu tố nói trên sẽ đẩy giá gạo XK của nước này tăng 20 USD/tấn trong vòng hai tháng.</div>
+              <div> <br />
+              </div>
+              <div> “Sự cộng hưởng của những   diễn biến cùng chiều nói trên ở Ấn Độ và Thái Lan chắc chắn sẽ là nguồn   động lực thúc đẩy các quốc gia có nhu cầu nhanh chóng tăng NK trước khi   giá gạo tăng thêm và đây chính là cơ hội để XK gạo Việt Nam gặp thuận   lợi trong ngắn hạn ”, ông Nguyễn Đình Bích nhận định.</div>
+              <div> <br />
+              </div>
+              <div> <strong>Quang Duy/ Báo Hải Quan</strong></div>
+              <p>&nbsp;</p>
+            </div>
+            <div class="function">
+              <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+              <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+            </div>
+            <!--Other News-->
+            <div class="other_news_sub">
+              <div class="other_newsT">Tin bài khác</div>
+              <ul>
+                <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+                <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+                <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+                <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+              </ul>
+              <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+            <!--Other News-->
+            <div class="cf"></div>
+          </div>
+        </div>
+        <!--End Detail news-->
+      </div>
+      <!--Left Column 2-->
+    </div>
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab_top">HỖ TRỢ TRỰC TUYẾN</div>
+        <div class="box_ct" id="box_support">
+          <ul>
+            <li><b class="title_sp fl">Mr. A</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="120" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Mr. B</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="120" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Ads Top Right-->
+      <div id="ads_top" class="ads"> <a href=""><img src="http://www.enbien.com/club/image/product1/PU-781Z.jpg" alt="" /></a> <a href=""><img src="http://www.enbien.com/club/image/product1/PU-781Z.jpg" alt="" /></a> <a href=""><img src="http://www.enbien.com/club/image/product1/PU-781Z.jpg" alt="" /></a></div>
+      <!--End Ads Top Right-->
+    </div>
+    <!--end Right Column-->
+  </div>
+  <!--End Main Content-->
+  <!--Footer-->
+  <div id="footer">
+    <div id="topmenu_f">
+      <div class="col_menuFooter" id="news_home">
+        <div class="ctentColuMenuFooter">
+          <h3><span>SỰ KIỆN</span></h3>
+          <div class="col_footer_ct">
+            <ul>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">Một nông dân phát minh ra máy bóc lạc</a></li>
+              <li><a href="">Xuất khẩu máy nông nghiệp “lên ngôi”</a></li>
+              <li><a href="">Những điều cần biết về máy trộn bê tông</a></li>
+              <li><a href="">Lựa chọn máy phát điện như thế nào?</a></li>
+              <li><a href="">Anh nông dân nghèo với phát minh máy thái đa năng</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="partners">
+        <div class="ctentColuMenuFooter">
+          <h3><span>ĐỐI TÁC</span></h3>
+          <div class="col_footer_ct"><a href=""><img src="http://taeseungvina.com/upload/hinhanh/081728132178197.gif" alt="" /></a> <a href=""><img src="http://www.toolspecial.com/assets/images/gereedschap/mitutoyo/Mitutoyo-logo.jpg" alt="" /></a> <a href=""><img src="http://www.masterfershop.com/immagini/Brand/Metabo.jpg" alt="" /></a> <a href=""><img src="http://www.naradieshop.sk/katalog/makita_logo.jpg" alt="" /></a> <a href=""><img src="http://logonoid.com/images/maktec-logo.png" alt="" /></a> <a href=""><img src="http://taeseungvina.com/upload/hinhanh/081728132178197.gif" alt="" /></a> <a href=""><img src="http://www.toolspecial.com/assets/images/gereedschap/mitutoyo/Mitutoyo-logo.jpg" alt="" /></a> <a href=""><img src="http://www.masterfershop.com/immagini/Brand/Metabo.jpg" alt="" /></a> <a href=""><img src="http://www.naradieshop.sk/katalog/makita_logo.jpg" alt="" /></a> <a href=""><img src="http://logonoid.com/images/maktec-logo.png" alt="" /></a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="contact_us">
+        <div class="ctentColuMenuFooter">
+          <h3><span>LIÊN HỆ</span></h3>
+          <div class="col_footer_ct">
+            <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td width="30" bgcolor="#FFFFFF"><img src="Images/home_icon.gif" alt="" /></td>
+                <td bgcolor="#FFFFFF">662/27 Phan Văn Trị, F. 10, Q.Gò Vấp,  Tp.HCM</td>
+              </tr>
+              <tr>
+                <td bgcolor="#FFFFFF"><img src="Images/phone_icon.gif" alt="" /></td>
+                <td bgcolor="#FFFFFF">0909.663.551 - Email: <a href="mailto:info@trangvang.vn">info@trangvang.vn</a></td>
+              </tr>
+              <tr>
+                <td bgcolor="#FFFFFF"><img src="Images/face_icon.gif" alt="" /></td>
+                <td bgcolor="#FFFFFF">www.facebook.com/trangvang.vn</td>
+              </tr>
+            </table>
+            <p class="map" style="margin-top: 10px"><img src="Images/map.gif" alt="" /></p>
+          </div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="facebook_box">
+        <div class="ctentColuMenuFooter">
+          <h3><span>Follow Us</span></h3>
+          <div class="col_footer_ct"> <img src="Images/facebook_box.jpg" alt="" width="100%" height="220" />
+            <!--Social-->
+            <div id="social_network"><a href="" title="Facebook"><span class="icon_facebook"></span></a> <a href="" title="Google+"><span class="icon_gplus"></span></a><a href="" title="Youtube"><span class="icon_youtube"></span></a><a href="" title="Twitter"><span class="icon_twitter"></span></a><a href="" title="Zing me"><span class="icon_zing"></span></a></div>
+            <!--End Social-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer Bottom-->
+    <div id="foo_bot_menu" class="fr">
+      <p class="footer_menu"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Dịch vụ</a><a href="">Hướng dẫn mua hàng</a><a href="">Tư vấn hỏi đáp</a><a href="">Tin tức</a><a href="">Liên hệ</a></p>
+      <p class="copyright"> Copyright © 2014 By <strong>Thời Đại Mới</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </p>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

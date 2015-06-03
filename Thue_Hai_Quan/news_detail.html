@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Thời Đại Mới</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/scroll_ads.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!--Scripts click Toggle-->
+<script type="text/javascript">
+$(document).ready(function() {         
+var notH = 1,
+    $pop = $('.search_box').hover(function(){notH^=1;});
+
+$(document).on('mouseup keyup', function( e ){
+  if(notH||e.which==27) $pop.stop().hide();
+});
+/////// CALL POPUP 
+$('.search_icon').click(function(){
+	$('.search_box').slideDown("fast");							 	
+});	
+$('.icon_close').click(function(){
+	$('.search_box').slideUp("fast");							 	
+});	
+});
+</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {
+            jQuery('#mycarousel_ads').jcarousel({
+                auto: 2,
+                animation: 1000,               
+				 wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            }); 			     			
+        });
+    </script>
+</head>
+<body>
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Thời Đại Mới" /> </a>
+    <p id="text_logo"><img src="Images/name_company.png" alt="" />
+    <div id="hotline"><span class="title_hotline">Ms. Chi</span><span class="number_phone">0909 663 551<br />
+      0909 663 552<br />
+      (08) 3948396</span> </div>
+  </div>
+</div>
+<!--#end Header-->
+<!--Main Menu-->
+<div id="nav">
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="introduction.html">TRANG CHỦ</a> </li>
+      <li><a href="introduction.html">Giới thiệu</a> </li>
+      <li><a href="list_products.html">DỊCH VỤ</a>
+        <ul>
+          <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+          <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">XUẤT NHẬP KHẨU</a></li>
+      <li><a href="#">LỊCH - ĐỊA ĐIỂM HỌC</a></li>
+      <li><a href="list_news.html">TÀI LIỆU</a></li>
+      <li><a href="list_news.html">TIN TỨC</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+    <!--Search Tool-->
+    <div id="search_form"><a class="trigger"><span class="search_icon"></span></a>
+      <div id="dpop" class="search_box">
+      <span class="icon_close"></span>
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <a href="" class="submitSearch">Tìm kiếm</a> </div>
+    </div>
+    <!--End Search Tool-->
+  </div>
+</div>
+<!--End Main Menu-->
+<div class="wrap">
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Column-->
+    <div class="sidebar fl" id="side_left">
+      <!--List Categories-->
+      <div class="box">
+        <div class="box_Tab">DỊCH VỤ HẢI QUAN</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li><a href="list_products.html">Dịch vụ hải quan</a></li>
+            <li><a href="list_products.html">Dịch vụ hải quan</a></li>
+            <li><a href="list_products.html">Dịch vụ hải quan</a></li>
+            <li><a href="list_products.html">Dịch vụ hải quan</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--End List Categories-->
+      <!--List Categories-->
+      <div class="box">
+        <div class="box_Tab">VẬN TẢI HÀNG HÓA</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li class="active"><a href="list_products.html">Vận tải hàng hóa</a></li>
+            <li><a href="list_products.html">Vận tải hàng hóa</a></li>
+            <li><a href="list_products.html">Vận tải hàng hóa</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--End List Categories-->
+      <!--List Categories-->
+      <div class="box">
+        <div class="box_Tab">DỊCH VỤ CHO THUÊ CẨU</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--End List Categories-->
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab">THỦ TỤC HẢI QUAN NHANH</div>
+        <div class="box_ct ads"> <a href=""><img src="http://www.webketoan.vn/wp-content/uploads/2012/12/dn685.jpg" alt="" width="100%" /></a> </div>
+      </div>
+      <!--End Support-->
+      <!--Ads Left-->
+      <div class="ads"> <a href=""><img src="http://1.bp.blogspot.com/_svfda-7mo7I/S8WskgfLhVI/AAAAAAAADe4/TK7Xxhv6nfA/s1600/_Freightliner_+008.jpg" alt="" width="100%" /></a> <a href=""><img src="http://shuttlecargo.com.vn/shs/wp-content/uploads/2013/05/Chuyen-phat-nhanh-hoa-toc.jpg" alt="" width="100%" /></a> </div>
+      <!--End Ads Left-->
+    </div>
+    <!--Left Column-->
+    <!--Main Column-->
+    <div id="col_middle" class="fl">
+      <div class="current_path"><a href="index.html">Trang chủ</a><span class="spSeperator"></span><a href="list_news.html">Tin tức</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div class="box_ct" id="detail_news">
+          <div id="info_g">
+            <h2 class="h2Title">Những mẫu thiết kế nội thất phòng khách đẹp</h2>
+            <p class="date">06/05/2013</p>
+            <p>Khi đang uống kháng sinh điều trị một chứng bệnh nào đó, bạn nên tránh ăn những thực phẩm dưới đây:</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa có thể làm nặng nề thêm cho đường ruột của bạn trong khi bạn đang dùng thuốc kháng sinh. Hầu hết các dược sĩ đều đặc biệt khuyến cáo không uống sữa khi đang uống thuốc kháng sinh ciprofloxacin.</p>
+            <p>Ngoài ra, các sản phẩm chứa nhiều chất béo khác cũng có thể làm trầm trọng thêm các triệu chứng của bệnh tiêu chảy - một tác dụng phụ khi uống thuốc kháng sinh.</p>
+            <p>Thực phẩm chứa nhiều chất xơ</p>
+            <p>Một số loại rau quả có chứa nhiều chất xơ  hoặc các loại đậu cũng có thể gây tiêu chảy nặng thêm khi bạn đang dùng thuốc kháng sinh.</p>
+            <p>Bên cạnh đó, các thực phẩm như ngũ cốc, lúa mì tuy có thể tăng cường chất sắt và calci cho cơ thể nhưng lại cản trở khả năng hấp thụ một số thuốc kháng sinh khi vào cơ thể, đặc biệt là khi bạn đang uống thuốc kháng sinh quinolone, trong đó bao gồm các loại thuốc như ciprofloxacin, acid nalidixic và cinoxacin, sparfloxacin và trovafloxacin.</p>
+            <p>Thực phẩm có tính acid</p>
+            <p>Hàm lượng acid trong một số thực phẩm nhất định có thể làm gián đoạn khả năng hấp thụ thuốc của cơ thể.</p>
+            <p>Nói chung, khi uống thuốc kháng sinh, tuy bạn không luôn luôn phải tránh xa chúng hoàn toàn, nhưng đôi khi việc tiêu thụ thực phẩm chua hoặc đồ uống có chứa nhiều acid như cà chua, nước trái cây, đồ uống có ga cũng có thể hạn chế sự hấp thu của thuốc khi vào cơ thể.</p>
+            <p>Rượu</p>
+            <p>Nhiều dược sĩ đều chỉ ra rằng rượu không can thiệp bất lợi trực tiếp vào việc uống thuốc kháng sinh. Tuy nhiên, thuốc kháng sinh và rượu có thể có tác dụng phụ tương tự nhau. Vì thế, nếu bạn uống cả hai cùng một lúc, chúng có thể gia tăng cơ hội bạn phải chịu trận với những nguy cơ buồn nôn, chóng mặt hoặc buồn ngủ...</p>
+            <p>Những loại thuốc này có thể điểm mặt bao gồm: penicillin G, ampicillin, floxin, oxacillin, gentamycin và ciprofloxacin. Khi uống những loại thuốc này, bạn có thể phải ăn/uống các thực phẩm 3 giờ trước/sau 
+              
+              khi uống thuốc.</p>
+            <p>Lưu ý: Tránh dùng các loại sữa, các sản phẩm chế biến từ sữa, trừ sữa chua, khi bạn đang uống thuốc kháng sinh. Nguyên nhân là do lượng calci có nhiều trong sữa và các sản phẩm từ sữa có thể cản trở sự hấp thu của thuốc kháng sinh. Tuy nhiên, sữa chua thì bạn vẫn có thể ăn bình thường vì nó có chứa nhiều men vi sinh giúp khôi phục lại sự cân bằng cho đường ruột, tránh tiêu chảy khi sử dụng thuốc kháng sinh.</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--Main Column-->
+    <!--Right Column-->
+    <div class="sidebar fr" id="side_right">
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab">HỖ TRỢ TRỰC TUYẾN</div>
+        <div class="box_ct" id="box_support">
+          <ul>
+            <li><b class="title_sp fl">Mr. A</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="120" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Mr. B</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="120" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Ads Right-->
+      <div class="box">
+        <div class="box_Tab">QUẢNG CÁO</div>
+        <div class="box_ct ads"> <a href=""><img src="http://1.bp.blogspot.com/_svfda-7mo7I/S8WskgfLhVI/AAAAAAAADe4/TK7Xxhv6nfA/s1600/_Freightliner_+008.jpg" alt="" width="100%" /></a> <a href=""><img src="http://shuttlecargo.com.vn/shs/wp-content/uploads/2013/05/Chuyen-phat-nhanh-hoa-toc.jpg" alt="" width="100%" /></a> <a href=""><img src="http://dddn.vcmedia.vn/LF6tz33VxjHf1M3q2wAGVkArG1Pd/Image/2012/10/chuluctrongvantai8a1-2216b.jpg" alt="" width="100%" /></a> <a href=""><img src="http://pic.trangvangvietnam.com/395678589/bien.jpg" alt="" width="100%" /></a> </div>
+      </div>
+      <!--End Ads Right-->
+    </div>
+    <!--Right Column-->
+  </div>
+  <!--End Main Content-->
+  <!-- Jquery Ads Bottom -->
+  <div id="ads_bottom">
+    <ul id="mycarousel_ads" class="jcarousel-skin-tango">
+      <li class="item"><a href=""><img src="http://www.phunhuan.hochiminhcity.gov.vn/image/image_gallery?uuid=717d5b9e-286a-429d-b971-e9dea7c1dae2&groupId=83&t=1309329837896" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/3/nguyenhung/giaoluu2tructuyen21-3-2014.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/6/nguyenhung/logobhq.png" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://support.pavietnam.vn/multidata/24831541345778977Amazon.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.phunhuan.hochiminhcity.gov.vn/image/image_gallery?uuid=717d5b9e-286a-429d-b971-e9dea7c1dae2&groupId=83&t=1309329837896" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/3/nguyenhung/giaoluu2tructuyen21-3-2014.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/6/nguyenhung/logobhq.png" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://support.pavietnam.vn/multidata/24831541345778977Amazon.jpg" alt="" /></a></li>
+    </ul>
+  </div>
+  <!--End Jquery Ads Bottom-->
+  <!--Footer-->
+  <div id="footer">
+    <div id="info_footer">
+      <p>Copyright © 2014 By <strong>Thời Đại Mới</strong></p>
+      <p>Địa chỉ: 50/6 Phan Văn Trị , Phường 10, Quận Gò Vấp, TP. HCM - Điện thoại: 0909 663 551 - Email: <a href="mailto:webmaster@gmail.vn">webmaster@gmail.vn</a></p>
+      <p>Website : <a href="http://www.khaithuehaiquannhanh.com">khaithuehaiquannhanh.com</a></p>
+    </div>
+    <p>Số lượt truy cập: 32.131.338</p>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrap-->
+<div id="divAdLeft">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/thuong-hieu/f0-77-0-0-0-0-0-0.html" target="_self" title="Banner truợt trái"><img alt="Banner truợt trái" title="Banner truợt trái" border="0" src="Images/ads_l.jpg" vspace="1" width="130" /></a></div>
+</div>
+<div id="divAdRight">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/he-thong-cua-hang-18.html" target="_self" title="Banner truợt phải"><img alt="Banner truợt phải" title="Banner truợt phải" border="0" src="Images/ads_r.jpg" vspace="1" width="130" /></a></div>
+</div>
+<script type="text/javascript">
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 130;RightBannerW = 130;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 245;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

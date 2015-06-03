@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Tiên Phong</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/scroll_ads.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!--Horizontal Menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Menu-->
+<link rel="stylesheet" href="Styles/layout.css" />
+<link rel="stylesheet" href="Styles/newheadfooter.css" type="text/css">
+<script type="text/javascript" src="Scripts/jquery.hoverIntent.minified.js" ></script>
+<!--Left Menu-->
+<script src="Scripts/masonry.js"></script>
+<script type="text/javascript">	
+	$(function () {
+	var columns    = 4,
+	setColumns = function() { columns = $( window ).width() > 750 ? 4 : $( window ).width() > 500 ? 3 : $( window ).width() > 250 ? 2 : 1; };
+	setColumns();
+	    $( window ).resize( setColumns );	
+		$('.sitenav .cataloglist li').bind('mouseenter', function () {
+
+            $(this).find('.cataloglistexpand').stop(true, true).fadeIn(200);
+				var columns    = 4,
+				setColumns = function() { columns = $( window ).width() > 750 ? 4 : $( window ).width() > 500 ? 3 : $( window ).width() > 250 ? 2 : 1; };
+				setColumns();
+	   				$( window ).resize( setColumns );	
+        		$( '.subcatwrapper' ).masonry(
+	    		{
+	        	itemSelector: '.col',
+	        	columnWidth:  function( containerWidth ) { return containerWidth / columns; }
+	    	});
+        }).bind('mouseleave', function () {
+
+            $(this).find('.cataloglistexpand').stop(true, true).fadeOut(200, function () {
+
+            });
+        });		        
+    })	
+</script>
+<!---Toggle Cate-->
+<script type='text/javascript'>
+$(document).ready(function () {
+            var notH = 1,
+    $pop = $('ul.hidden').hover(function () { notH ^= 1; });
+
+            $(document).on('mouseup keyup', function (e) {
+                if (notH || e.which == 27) $pop.stop().hide();
+            });
+            /////// CALL POPUP 
+	 $('#head_support').click(function () {
+                jQuery(this).find('ul.hidden').slideDown("fast").end().siblings().find('ul.hidden').hide('fast');
+                event.stopPropagation();
+            });						   						     
+});
+</script>
+<!--Jquery Simplyscroll-->
+<script type="text/javascript" src="Scripts/jquery.simplyscroll.js"></script>
+<link rel="stylesheet" href="Styles/jquery.simplyscroll.css" media="all" type="text/css" />
+<script type="text/javascript">
+    (function ($) {
+        $(function () {
+            $("#scroller").simplyScroll();
+        });
+    })(jQuery);
+</script>
+<!-- bxSlider Javascript file -->
+<script src="Scripts/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="Styles/jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript">
+  $(document).ready(function(){
+  
+$('.bxslider_products').bxSlider({
+  mode: 'horizontal',
+  captions: false,
+  auto: true,
+  autoControls: false,
+  pager: false,
+  minSlides: 4,
+  maxSlides: 4,
+  slideWidth: 196,
+  slideMargin: 15
+});
+$('.bxslider_dt_P').bxSlider({
+  mode: 'horizontal',
+  captions: false,
+  auto: false,
+  autoControls: false,
+  pager: false,
+  minSlides: 4,
+  maxSlides: 4,
+  slideWidth: 120,
+  slideMargin: 10
+});
+  });
+</script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--TopMenu_Fixed-->
+<script type="text/javascript" src="Scripts/jquery.autofix_anything.js"></script>
+<link type="text/css" href="Styles/autofix_anything.css" rel="stylesheet" />
+<script>
+	  $(document).ready( function() {
+	     $(".sitenav").autofix_anything();  	   
+	  });
+		
+	</script>
+</head>
+<body>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header">
+    <div id="top_linkright" class="fr">
+      <div id="top_linkleft">
+        <div id="top_linkmiddle"> <a href=""><img src="Images/home_icon.gif" alt="Trang chủ" />Trang chủ</a> <a href=""><img src="Images/intro_icon.gif" alt="Giới thiệu" />Giới thiệu</a> <a href=""><img src="Images/email_icon.gif" alt="Liên hệ" />Liên hệ</a> <a href=""><img src="Images/recument.gif" alt="Tuyển Dụng" />Tuyển Dụng</a></div>
+      </div>
+    </div>
+    <a href="index.html" id="logo"><img src="images/logo.png" alt="Công Ty TNHH Bán Dẫn Tiên Phong" /> </a>
+    <p id="text_logo"><img src="Images/name_company.png" alt="Công Ty TNHH Bán Dẫn Tiên Phong" />
+    <div id="lang"> <img src="Images/vn_icon.gif" alt="Tieng Viet" id="tv"/> <img src="Images/en_icon.gif" alt="Tieng Anh" id="ta"/> </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Content-->
+  <div id="main">
+    <!--menuLeft-->
+    <div class="sitenav">
+      <ul>
+        <li class="homecatalog"> <span class="homecataloglabel">Danh mục sản phẩm</span>
+          <ul class="cataloglist">
+            <li class="maincat"><a href="http://shopping.indiatimes.com/clothes-shoes-jewellery/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/clothes-shoes-jewellery/',0,true]);">Microcontroller</a>
+              <div class="cataloglistexpand">
+                <div class="flt subcatwrapper">
+                  <div class="col">
+                    <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Bàn Cầu / Bệt Toilet</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/ban-cau-mot-khoi.aspx">Bàn Cầu Một Khối</a></li>
+                      <li><a href="/danh-muc/ban-cau-dien-tu.aspx">Bàn Cầu Điện Tử</a></li>
+                      <li><a href="/danh-muc/ban-cau-hai-khoi.aspx">Bàn Cầu Hai Khối</a></li>
+                      <li><a href="/danh-muc/ban-cau-treo-tuong.aspx">Bàn Cầu Treo Tường</a></li>
+                      <li><a href="/danh-muc/ket-nuoc-am-tuong.aspx">Két Nước Ấm Tường</a></li>
+                      <li><a href="/danh-muc/nap-day-nut-nhan-xa.aspx">Nắp Đậy Nút Nhấn Xả</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Chậu Lavabo</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/chau-dat-ban.aspx">Chậu Đặt Bàn</a></li>
+                      <li><a href="/danh-muc/chau-dat-am-ban.aspx">Chậu Đặt Âm Bàn</a></li>
+                      <li><a href="/danh-muc/chau-duong-vanh.aspx">Chậu Dương Vành</a></li>
+                      <li><a href="/danh-muc/chau-chan-dai.aspx">Chậu Chân Dài</a></li>
+                      <li><a href="/danh-muc/chau-chan-lung.aspx">Chậu Chân Lửng</a></li>
+                      <li><a href="/danh-muc/chau-treo-tuong.aspx">Chậu Treo Tường</a></li>
+                      <li><a href="/danh-muc/chau-lavabo-kieng.aspx">Chậu Lavabo Kiếng</a></li>
+                      <li><a href="/danh-muc/bo-gia-do-lavabo.aspx">Bộ Giá Đở Lavabo</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Vòi Chậu - Vòi Bồn</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/voi-chau-nong-lanh.aspx">Vòi Chậu Nóng Lạnh</a></li>
+                      <li><a href="/danh-muc/voi-chau-nuoc-lanh.aspx">Vòi Chậu Nước Lạnh</a></li>
+                      <li><a href="/danh-muc/voi-chau-cam-ung.aspx">Vòi Chậu Cảm Ứng</a></li>
+                      <li><a href="/danh-muc/voi-xa-bon-tam.aspx">Vòi Xả Bồn Tắm</a></li>
+                      <li><a href="/danh-muc/voi-xa-nuoc-lanh.aspx">Vòi Xả Nước Lạnh</a></li>
+                      <li><a href="/danh-muc/voi-ban-tu-dong.aspx">Vòi Bán Tự Động</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Sen Tắm</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/sen-cay-nong-lanh.aspx">Sen Cây Nóng Lạnh</a></li>
+                      <li><a href="/danh-muc/sen-day-nong-lanh.aspx">Sen Dây Nóng Lạnh</a></li>
+                      <li><a href="/danh-muc/sen-tam-am-tuong.aspx">Sen Tắm Âm Tường</a></li>
+                      <li><a href="/danh-muc/sen-tam-nhiet-do.aspx">Sen Tắm Nhiệt Độ</a></li>
+                      <li><a href="/danh-muc/bang-sen-sen-thuyen.aspx">Bảng Sen - Sen Thuyền</a></li>
+                      <li><a href="/danh-muc/tay-sen-cu-sen-voi-xa-bon.aspx">Tay Sen - Củ Sen - Vòi Xả Bồn</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tắm</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/bon-tam-dat-san.aspx">Bồn Tắm Đặt Sàn</a></li>
+                      <li><a href="/danh-muc/bon-tam-xay-am.aspx">Bồn Tắm Xây Âm</a></li>
+                      <li><a href="/danh-muc/bon-tam-massage.aspx">Bồn Tắm Massage</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bồn Tiểu</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/bon-tieu-nam.aspx">Bồn Tiểu Nam</a></li>
+                      <li><a href="/danh-muc/bon-tieu-nu.aspx">Bồn Tiểu Nữ</a></li>
+                      <li><a href="/danh-muc/vach-ngan-tieu.aspx">Vách Ngăn Tiểu</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Van Xả Tiểu</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/van-xa-tieu-nhan-gat.aspx">Van Xả Tiểu Nhấn - Gạt</a></li>
+                      <li><a href="/danh-muc/van-xa-tieu-cam-ung.aspx">Van Xả Tiểu Cảm Ứng</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Phòng Tắm Đứng</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/khung-tam-dung.aspx">Khung Tắm Đứng</a></li>
+                      <li><a href="/danh-muc/phong-dung-massage.aspx">Phòng Đứng Massage</a></li>
+                      <li><a href="/danh-muc/khay-phong-tam.aspx">Khay Phòng Tắm</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Nắp Bàn Cầu</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/nap-rua-co.aspx">Nắp Rửa Cơ</a></li>
+                      <li><a href="/danh-muc/nap-rua-dien-tu.aspx">Nắp Rửa Điện Tử</a></li>
+                      <li><a href="/danh-muc/nap-dong-em.aspx">Nắp Đóng Êm</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Sấy Tay</a></h3>
+                  </div>
+                </div>
+                <span class="submenubg"><img src="Images/cate_boncau.jpg" alt="" /></span> </div>
+            </li>
+            <li class="maincat"><a href="http://shopping.indiatimes.com/computers/" onclick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/computers/',0,true]);">Wireless Connectivity</a>
+              <div class="cataloglistexpand">
+              <div class="flt subcatwrapper">
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Gương Phòng Tắm</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Ga Thoát Nước Sàn</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Ống Thải Chữ P</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Dây Xịt Nước</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Tủ & Hộp Đựng Giấy</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/tu-dung-giay.aspx">Tủ Đựng Giấy</a></li>
+                    <li><a href="/danh-muc/hop-giay-cam-úng.aspx">Hộp Giấy Cảm Ứng</a></li>
+                    <li><a href="/danh-muc/hop-dung-giay-inox.aspx">Hộp Đựng Giấy Inox</a></li>
+                    <li><a href="/danh-muc/hop-dung-giay-nhua.aspx">Hộp Đựng Giấy Nhựa</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Hộp Xịt Xà Phòng</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/hop-xit-xa-phong-nhan.aspx">Hộp Xịt Xà Phòng Nhấn</a></li>
+                    <li><a href="/danh-muc/hop-xit-xa-phong-cam-ung.aspx">Hộp Xịt Xà Phòng Cảm Ứng</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Người Già & Khuyết Tật</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/thanh-tay-vin.aspx">Thanh Tay Vịn</a></li>
+                    <li><a href="/danh-muc/ghe-chuyen-biet.aspx">Ghế Chuyên Biệt</a></li>
+                    <li><a href="/danh-muc/phu-kien-chuyen-biet-khac.aspx">Phụ Kiện Chuyên Biệt Khác</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Thùng Rác Toilet</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Phụ Kiện 6 Món</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/lo-dung-xa-phong.aspx">Lô Đựng Xà Phòng</a></li>
+                    <li><a href="/danh-muc/lo-dung-giay-ve-sinh.aspx">Lô Đựng Giấy Vệ Sinh</a></li>
+                    <li><a href="/danh-muc/lo-dung-ban-chai.aspx">Lô Đựng Bàn Chải</a></li>
+                    <li><a href="/danh-muc/ke-kinh-ke-su.aspx">Kệ Kính - Kệ Sứ</a></li>
+                    <li><a href="/danh-muc/thanh-vat-khan.aspx">Thanh Vắt Khăn</a></li>
+                    <li><a href="/danh-muc/vong-treo-khan.aspx">Vòng Treo Khăn</a></li>
+                    <li><a href="/danh-muc/moc-ao.aspx">Móc Áo</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="maincat"><a href="http://shopping.indiatimes.com/electronics-appliances/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/electronics-appliances/',0,true]);">IC nguồn</a>
+              <div class="cataloglistexpand">
+                <div class="flt subcatwrapper">
+                  <div class="col">
+                    <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Vòi Bếp / Vòi Rửa Chén</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/voi-bep-nong-lanh.aspx">Vòi Bếp Nóng Lạnh</a></li>
+                      <li><a href="/danh-muc/voi-bep-nuoc-lanh.aspx">Vòi Bếp Nước Lạnh</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Máy Hút Khói</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/may-hut-dang-truyen-thong.aspx">Máy Hút Dạng Truyền Thống</a></li>
+                      <li><a href="/danh-muc/may-hut-dang-treo-doc-lap.aspx">Máy Hút Dạng Treo Độc Lập</a></li>
+                      <li><a href="/danh-muc/may-hut-dieu-khien-cam-ung.aspx">Máy Hút Điều Khiển Cảm Ứng</a></li>
+                      <li><a href="/danh-muc/may-hut-cam-bien-nhiet.aspx">Máy Hút Cảm Biến Nhiệt</a></li>
+                      <li><a href="/danh-muc/may-hut-dang-pull-out.aspx">Máy Hút Dạng Pull-out</a></li>
+                      <li><a href="/danh-muc/may-hut-dang-gan-ap-tuong.aspx">Máy Hút Dạng Gắn Áp Tường</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bếp Gas - Điện - Tử</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/bep-am-ket-hop.aspx">Bếp Âm Kết Hợp</a></li>
+                      <li><a href="/danh-muc/bep-dien-am.aspx">Bếp Điện Âm</a></li>
+                      <li><a href="/danh-muc/bep-tu-am.aspx">Bếp Từ Âm</a></li>
+                      <li><a href="/danh-muc/bep-gas-am.aspx">Bếp Gas Âm</a></li>
+                      <li><a href="/danh-muc/bep-dien-dat-ban.aspx">Bếp Điện Đặt Bàn</a></li>
+                      <li><a href="/danh-muc/bep-gas-dat-ban.aspx">Bếp Gas Đặt Bàn</a></li>
+                      <li><a href="/danh-muc/bep-dung-ket-hop.aspx">Bếp Đứng Kết Hợp</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Lò Nướng - Hấp - Vi Sóng</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/lo-nuong-dien-am.aspx">Lò Nướng Điện Âm</a></li>
+                      <li><a href="/danh-muc/lo-hap-lap-am.aspx">Lò Hấp Lấp Âm</a></li>
+                      <li><a href="/danh-muc/lo-vi-song-lap-am.aspx">Lò Vi Sóng Lấp Âm</a></li>
+                      <li><a href="/danh-muc/vi-nuong-dat-ban.aspx">Vĩ Nướng Đặt Bàn</a></li>
+                      <li><a href="/danh-muc/lo-nuong-dat-ban.aspx">Lò Nướng Đặt Bàn</a></li>
+                      <li><a href="/danh-muc/lo-vi-song-dat-ban.aspx">Lò Vi Sóng Đặt Bàn</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Nồi - Niêu - Xoong - Chảo</a></h3>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Tủ Rượu Vang</a></h3>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Hủy Thực Phẩm Thừa</a></h3>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Chậu Bếp / Chậu Rửa Chén</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/chau-bep-mat-da-cao-cap.aspx">Chậu Bếp Mặt Đá Cao Cấp</a></li>
+                      <li><a href="/danh-muc/chau-bep-kim-loai.aspx">Chậu Bếp Kim Loại</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Rửa Chén / Sấy Chén</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/may-rua-chen.aspx">Máy Rửa Chén</a></li>
+                      <li><a href="/danh-muc/may-say-chen.aspx">Máy Sấy Chén</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <span class="submenubg"><img src="Images/cate_nhabep.jpg" alt="" /></span> </div>
+            </li>
+            <li class="maincat"><a href="http://shopping.indiatimes.com/cameras/" onclick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/cameras/',0,true]);">Thiết Bị Gia Dụng</a>
+              <div class="cataloglistexpand">
+              <div class="flt subcatwrapper">
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Máy Tắm Nước Nóng</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/may-nuoc-nong-truc-tiep.aspx">Máy Nước Nóng Trực Tiếp</a></li>
+                    <li><a href="/danh-muc/may-nuoc-nong-gian-tiep.aspx">Máy Nước Nóng Gián Tiếp </a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Tủ Lạnh</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Giặt / Máy Sấy Quần Áo</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Máy Pha Cà Phê</a></h3>
+                </div>
+              </div>
+            </li>
+            <li class="maincat"><a href="http://shopping.indiatimes.com/mobiles/" onclick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/mobiles/',0,true]);">Microcontroller</a>
+              <div class="cataloglistexpand">
+                <div class="flt subcatwrapper">
+                  <div class="col">
+                    <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Đèn Trang Trí</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/den-chum.aspx">Đèn Chùm</a></li>
+                      <li><a href="/danh-muc/den-tuong.aspx">Đèn Tường</a></li>
+                      <li><a href="/danh-muc/den-tha.aspx">Đèn Thả</a></li>
+                      <li><a href="/danh-muc/den-dat-tu-do.aspx">Đèn Đặt Tự Do</a></li>
+                      <li><a href="/danh-muc/den-op-tran.aspx">Đèn Ốp Trần</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Đèn Phòng Tắm</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/den-phong-tam-op-tran.aspx">Đèn Phòng Tắm Ốp Trần</a></li>
+                      <li><a href="/danh-muc/den-phong-tam-gan-tuong.aspx">Đèn Phòng Tắm Gắn Tường</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Đèn Bàn</a></h3>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Đèn Trần Chiếu Điểm</a></h3>
+                    <ul>
+                      <li><a href="/danh-muc/den-chieu-diem-bong-eco.aspx">Đèn Chiếu Điểm (Bóng ECO)</a></li>
+                      <li><a href="/danh-muc/den-chieu-diem-led.aspx">Đèn Chiếu Điểm (LED)</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Đèn Ngoài Sân Vườn</a></h3>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Bóng Chiếu Sáng Tiết Kiệm</a></h3>
+                  </div>
+                  <div class="col">
+                    <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Chóa Đèn</a></h3>
+                  </div>
+                </div>
+                <span class="submenubg"><img src="Images/cate_den.jpg" alt="" /></span> </div>
+            </li>
+            <li class="maincat"><a href="http://shopping.indiatimes.com/watches-bags-accessories/" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/watches-bags-accessories/',0,true]);">Hệ Thống Hóa Căn Hộ</a>
+              <div class="cataloglistexpand">
+              <div class="flt subcatwrapper">
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Khóa & Tay Nắm</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/khoa-dien-tu.aspx">Khóa Điện Tử</a></li>
+                    <li><a href="/danh-muc/khoa-dai-sanh.aspx">Khóa Đại Sảnh</a></li>
+                    <li><a href="/danh-muc/khoa-tay-nam-tron.aspx">Khóa Tay Nắm Tròn</a></li>
+                    <li><a href="/danh-muc/khoa-coc.aspx">Khóa Cóc</a></li>
+                    <li><a href="/danh-muc/khoa-vali.aspx">Khóa Vali</a></li>
+                    <li><a href="/danh-muc/khoa-bam.aspx">Khóa Bấm</a></li>
+                    <li><a href="/danh-muc/tay-nam-gat.aspx">Tay Nắm Gạt</a></li>
+                    <li><a href="/danh-muc/than-ruot-khoa-cua.aspx">Thân &amp; Ruột Khóa Cửa</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Phụ Kiện Cửa</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/ban-le-san.aspx">Bản Lề Sàn</a></li>
+                    <li><a href="/danh-muc/kep-kinh.aspx">Kẹp Kính</a></li>
+                    <li><a href="/danh-muc/chan-cua.aspx">Chặn Cửa</a></li>
+                    <li><a href="/danh-muc/khuy-dong-cua-tu-dong.aspx">Khủy Đóng Cửa Tự  Động</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Két Sắt</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/ket-sat-co-ban.aspx">Két Sắt Cơ Bản</a></li>
+                    <li><a href="/danh-muc/ket-sat-cao-cap.aspx">Két Sắt Cao Cấp</a></li>
+                    <li><a href="/danh-muc/ket-sat-cao-cap-chong-chay.aspx">Két Sắt Cao Cấp Chống Cháy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="maincat"><a href="http://shopping.indiatimes.com/health-beauty/" onclick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/health-beauty/',0,true]);">Hệ Thống An Ninh Căn Hộ</a>
+              <div class="cataloglistexpand">
+              <div class="flt subcatwrapper">
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Camera An Ninh (ANALOG)</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/camera-avtech.aspx">Camera Avtech</a></li>
+                    <li><a href="/danh-muc/camera-questek.aspx">Camera Questek</a></li>
+                    <li><a href="/danh-muc/camera-panasonic.aspx">Camera Panasonic</a></li>
+                    <li><a href="/danh-muc/camera-sony.aspx">Camera Sony</a></li>
+                    <li><a href="/danh-muc/camera-samsum.aspx">Camera Samsum </a></li>
+                    <li><a href="/danh-muc/camera-vantech.aspx">Camera Vantech</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Camera An Ninh (IP)</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/camera-ip-avtech.aspx">Camera IP Avtech</a></li>
+                    <li><a href="/danh-muc/camera-ip-questek.aspx">Camera IP Questek</a></li>
+                    <li><a href="/danh-muc/camera-ip-panasonic.aspx">Camera IP Panasonic</a></li>
+                    <li><a href="/danh-muc/camera-ip-sony.aspx">Camera IP Sony</a></li>
+                    <li><a href="/danh-muc/camera-ip-samsum.aspx">Camera IP Samsum </a></li>
+                    <li><a href="/danh-muc/camera-ip-vantech.aspx">Camera IP Vantech</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Đầu Ghi Kỹ Thuật Số</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/dau-ghi-hinh-avtech.aspx">Đầu Ghi Hình Avtech</a></li>
+                    <li><a href="/danh-muc/dau-ghi-hinh-questek.aspx">Đầu Ghi Hình Questek</a></li>
+                    <li><a href="/danh-muc/dau-ghi-hinh-panasonic.aspx">Đầu Ghi Hình Panasonic</a></li>
+                    <li><a href="/danh-muc/dau-ghi-hinh-vantech.aspx">Đầu Ghi Hình Vantech</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Phụ Kiện Camera</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Hệ Thống Báo Trộm</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/bao-trom-khong-day-co-day.aspx">Báo Trộm Không Dây &amp; Có Dây</a></li>
+                    <li><a href="/danh-muc/phu-kien-bao-trom.aspx">Phụ Kiện Báo Trộm</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Hệ Thống Báo Cháy</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/bao-chay-networx.aspx">Báo Cháy Networx</a></li>
+                    <li><a href="/danh-muc/bao-chay-hochiky.aspx">Báo Cháy Hochiky</a></li>
+                    <li><a href="/danh-muc/bao-chay-horing.aspx">Báo Cháy Horing </a></li>
+                    <li><a href="/danh-muc/bao-chay-gst.aspx">Báo Cháy GST</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Chuông Cửa Màn Hình</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/commax.aspx">COMMAX</a></li>
+                    <li><a href="/danh-muc/samsung.aspx">SAMSUNG</a></li>
+                    <li><a href="/danh-muc/panasonic.aspx">PANASONIC</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Hệ Thống Tổng Đài Điện Thoại</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/tong-dai-panasonic.aspx">Tổng Đài Panasonic</a></li>
+                    <li><a href="/danh-muc/tong-dai-adsun.aspx">Tổng Đài ADSUN</a></li>
+                    <li><a href="/danh-muc/tong-dai-ike.aspx">Tổng Đài IKE</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Hệ Thống Máy Chấm Công</a></h3>
+                  <ul>
+                    <li><a href="/danh-muc/may-cham-cong-bang-tay.aspx">Máy Chấm Công Bằng Tay</a></li>
+                    <li><a href="/danh-muc/may-cham-cong-bang-the.aspx">Máy Chấm Công Bằng Thẻ</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="maincat navnoborder"><a href="http://shopping.indiatimes.com/lifestyle/" onclick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/lifestyle/',0,true]);">Sơn Nội & Ngoại Thất</a>
+              <div class="cataloglistexpand">
+              <div class="flt subcatwrapper">
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Sơn Lót Nội & Ngoại Thất</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a href="http://shopping.indiatimes.com/fashion/fashion-clothing/" title="Clothing "  onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/fashion/fashion-clothing/',0,true]);">Sơn Phủ Nội Thất</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Sơn Phủ Ngoại Thất</a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Sơn Kim Loại & Gỗ </a></h3>
+                </div>
+                <div class="col">
+                  <h3><a title="Jewellery" href="http://shopping.indiatimes.com/jewellery-coins" onClick="_gaq.push(['_trackEvent','Horizontal_Bar','Category', '/jewellery-coins',0,true]);">Trét Tường & Chống Thấm</a></h3>
+                </div>
+              </div>
+            </li>
+            <li class="maincat navnoborder"><a href="http://shopping.indiatimes.com/lifestyle/" onclick="_gaq.push(['_trackEvent','Horizontal_Bar','Catalog', '/lifestyle/',0,true]);">Các Gói Khuyến Mãi</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--end menuLeft-->
+    <!--Top Main-->
+    <div id="top_page">
+      <!--Top Bar-->
+      <div id="topbar">
+        <!--Main Menu-->
+        <div id="smoothmenu1" class="ddsmoothmenu">
+          <ul>
+            <li class="active"><a href="index.html"><span>Trang chủ</span></a> </li>
+            <li><a href=""><span>Nhân lực</span></a></li>
+            <li><a href="list_products.html"><span>Sống trẻ</span></a>
+              <ul>
+                <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+                  <ul>
+                    <li><a href="#">Sub Item 1.1</a></li>
+                    <li><a href="#">Sub Item 1.2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+                  <ul>
+                    <li><a href="#">Sub Item 2.1</a></li>
+                    <li><a href="#">Sub Item 2.2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Khuyến mãi</a></li>
+                <li><a href="#">Trang điểm</a></li>
+                <li><a href="#">Nước hoa</a></li>
+                <li><a href="list_news.html">Tin tức</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span>Kỹ năng</span></a></li>
+            <li><a href="#"><span>Tâm lý quản trị</span></a></li>
+            <li><a href="#"><span>Hướng nghiệp</span></a></li>
+            <li><a href="list_news.html"><span>Liên hệ</span></a></li>
+          </ul>
+        </div>
+        <!--Horizontal menu-->
+        <!--Search Tool-->
+        <div id="search_tool">
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+          <a href="" class="submitSearch"></a> </div>
+        <!--End Search Tool-->
+        <!--Support-->
+        <div id="head_support" class="fl"> <span class="icon_head_spp"></span>
+          <ul class="hidden">
+            <li><span class="title_spp fl">Mr. Hung</span> <b class="numberphone fl">0123456789</b> </li>
+            <li><span class="title_spp fl">Phòng kỹ thuật</span> <b class="numberphone fl">0123456789</b> </li>
+            <li><span class="title_spp fl">Mr. Hung</span> <b class="numberphone fl">0123456789</b> </li>
+            <li><span class="title_spp fl">Phòng kinh doanh</span> <b class="numberphone fl">0123456789</b> </li>
+          </ul>
+        </div>
+        <!--End Support-->
+        <!--Cart-->
+        <div id="cart" class="fr">Giỏ hàng: <a href="cart.html"><b>0</b> sản phẩm</a> </div>
+        <!--end Cart-->
+      </div>
+      <!--end Top Bar-->
+    </div>
+    <!--End Top Main-->
+    <!--Left Column-->
+    <div id="left_col" class="fl">
+      <div class="current_path"><a href="index.html">Trang chủ</a><span class="spSeperator"></span><a href="list_news.html">Tin tức</a></div>
+      <div class="lineBg"></div>
+      <!--List News-->
+      <div class="box">
+        <div class="box_Tab"><span>Tin tức</span></div>
+        <div class="box_ct" id="list_news">
+          <ul>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+            <li>
+              <h3><a href="news_detail.html" class="h3Title">Xuất khẩu gạo khởi sắc</a></h3>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="http://vov.vn/Uploaded/xuanthan/2013_08_30/tindungnongthon.jpg" /></a>
+              <p>Những ngày đầu quý III-2014, xuất khẩu gạo Việt Nam đón nhận tín hiệu khởi sắc nhờ hợp đồng mới từ Malaysia và Philippines, giá gạo tăng và các “đối thủ” như Thái Lan, Ấn Độ giãn tiến độ xuất khẩu để tránh bị ép giá.</p>
+            </li>
+          </ul>
+          <div class="pagination"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+        </div>
+      </div>
+      <!--End List News-->
+    </div>
+    <!--end Left Column-->
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <!--Support-->
+      <div class="box">
+        <div class="title_topmain">HỖ TRỢ TRỰC TUYẾN</div>
+        <div class="box_ct" id="box_support">
+          <ul>
+            <li> <span class="title_sp">Hung.Pham</span> <b class="number_phone">0987.654.321</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="64" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=1" style="vertical-align: baseline" /> </a></li>
+            <li> <span class="title_sp">Hung.Pham</span> <b class="number_phone">0987.654.321</b> <a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="64" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911" style="vertical-align: baseline" /></a></li>
+            <li> <span class="title_sp">Hung.Pham</span> <b class="number_phone">0987.654.321</b> <a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="64" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911" style="vertical-align: baseline" /></a> </li>
+          </ul>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Link Web-->
+      <div class="box">
+        <div class="title_topmain">Liên kết website</div>
+        <div class="box_ct" id="link_web">
+          <select name="link_web" class="type_option">
+            <option value="0">Đẳng Cấp Việt</option>
+            <option value="1">Esell.vn</option>
+          </select>
+        </div>
+      </div>
+      <!--End Link Web-->
+      <!--Ads Top-->
+      <div class="box ads"> <a href=""><img src="http://xspace.talaweb.com/tungdangftu/home/xenanghang.jpg" alt="Xe nâng" /></a> <a href=""><img src="http://xspace.talaweb.com/tungdangftu/home/xenanghang.jpg" alt="Xe nâng" /></a> <a href=""><img src="http://xspace.talaweb.com/tungdangftu/home/xenanghang.jpg" alt="Xe nâng" /></a> <a href=""><img src="http://xspace.talaweb.com/tungdangftu/home/xenanghang.jpg" alt="Xe nâng" /></a> </div>
+      <!--End Ads Top-->
+    </div>
+    <!--end Right Column-->
+    <div class="lineBg"></div>
+    <!--Partners-->
+    <div class="box">
+      <div class="box_Tab"><span class="title_partners"><b>ĐỐI TÁC CỦA CHÚNG TÔI</b></span></div>
+      <ul id="scroller">
+        <li><a href="hangsanxuat.aspx?MaNSX=11"><img src="http://www.tanhoanggiacopiers.com.vn/Images/canon.jpg" alt="Firehouse" /></a></li>
+        <li><a href="hangsanxuat.aspx?MaNSX=30"><img src="http://www.tanhoanggiacopiers.com.vn/Images/epson.jpg" alt="Firehouse" /></a></li>
+        <li><a href="hangsanxuat.aspx?MaNSX=12"><img src="http://www.tanhoanggiacopiers.com.vn/Images/hp.jpg" alt="Firehouse" /></a></li>
+        <li><a href="hangsanxuat.aspx?MaNSX=10"><img src="http://www.tanhoanggiacopiers.com.vn/Images/brother.jpg" alt="Firehouse" /></a></li>
+        <li><a href="hangsanxuat.aspx?MaNSX=31"><img src="http://www.tanhoanggiacopiers.com.vn/Images/dell.jpg" alt="Firehouse" /></a></li>
+        <li><a href="hangsanxuat.aspx?MaNSX=13"><img src="http://www.tanhoanggiacopiers.com.vn/Images/xerox.jpg" alt="Firehouse" /></a></li>
+        <li><a href="hangsanxuat.aspx?MaNSX=9"><img src="http://www.tanhoanggiacopiers.com.vn/Images/samsung.jpg" alt="Firehouse" /></a></li>
+      </ul>
+    </div>
+    <!--end Partners-->
+  </div>
+  <!--End Main Content-->
+  <!--Footer-->
+  <div id="footer">
+    <div id="footer_menu"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Dịch vụ</a><a href="">Hướng dẫn mua hàng</a><a href="">Tư vấn hỏi đáp</a><a href="">Tin tức</a><a href="">Liên hệ</a></div>
+    <div id="info_footer" class="fl">
+      <p><b>Công Ty TNHH Bán Dẫn Tiên Phong</b></p>
+      <p>Tien Phong Semi-conductor Co., Ltd</p>
+      <p>281/43/3 Lê Văn Sỹ, Phường 1, Quận Tân Bình, TP. HCM</p>
+      <p>Sales Representative: Sơn Phạm</p>
+      <p>Tel: (+84) (8) 3603 1654</p>
+      <p>HP: (+84) 904 198 638</p>
+    </div>
+    <!--Access Static-->
+    <div id="access_static" class="fr"> <span>Đang online: <b>120</b></span> <span>Tổng truy cập: <b>5000</b></span> </div>
+    <!--Access Static-->
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

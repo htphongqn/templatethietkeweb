@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Thời Đại Mới</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/scroll_ads.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!--Scripts click Toggle-->
+<script type="text/javascript">
+$(document).ready(function() {         
+var notH = 1,
+    $pop = $('.search_box').hover(function(){notH^=1;});
+
+$(document).on('mouseup keyup', function( e ){
+  if(notH||e.which==27) $pop.stop().hide();
+});
+/////// CALL POPUP 
+$('.search_icon').click(function(){
+	$('.search_box').slideDown("fast");							 	
+});	
+$('.icon_close').click(function(){
+	$('.search_box').slideUp("fast");							 	
+});	
+});
+</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {
+            jQuery('#mycarousel_ads').jcarousel({
+                auto: 2,
+                animation: 1000,               
+				 wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            }); 			     			
+        });
+    </script>
+</head>
+<body>
+<!--#begin Header-->
+<div id="header">
+  <div class="wrap"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Thời Đại Mới" /> </a>
+    <p id="text_logo"><img src="Images/name_company.png" alt="" />
+    <div id="hotline"><span class="title_hotline">Ms. Chi</span><span class="number_phone">0909 663 551<br />
+      0909 663 552<br />
+      (08) 3948396</span> </div>
+  </div>
+</div>
+<!--#end Header-->
+<!--Main Menu-->
+<div id="nav">
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="introduction.html">TRANG CHỦ</a> </li>
+      <li><a href="introduction.html">Giới thiệu</a> </li>
+      <li><a href="list_products.html">DỊCH VỤ</a>
+        <ul>
+          <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+          <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+          <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+          <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">XUẤT NHẬP KHẨU</a></li>
+      <li><a href="#">LỊCH - ĐỊA ĐIỂM HỌC</a></li>
+      <li><a href="list_news.html">TÀI LIỆU</a></li>
+      <li><a href="list_news.html">TIN TỨC</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+    <!--Search Tool-->
+    <div id="search_form"><a class="trigger"><span class="search_icon"></span></a>
+      <div id="dpop" class="search_box">
+      <span class="icon_close"></span>
+        <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+        <a href="" class="submitSearch">Tìm kiếm</a> </div>
+    </div>
+    <!--End Search Tool-->
+  </div>
+</div>
+<!--End Main Menu-->
+<div class="wrap">
+  <!-- Jquery Top Banner -->
+  <div class="slider-wrapper theme-pascal">
+    <div id="slider" class="nivoSlider"> <a href='' target='_parent'><img src="http://sbit.vn/resources/upload/van-tai-duong-bien-khai-bao-hai-quan-giao-nhan-van-tai-sbi.jpg" alt='' /></a> <a href='' target='_parent'><img src="http://vt24h.com/upload/van-tai-duong-hang-khong.jpg" alt='' /></a> <a href='' target='_parent'><img src="http://vantaidvn.com/Users/Portal/1/UsersFile/image/072013/van%20tai/van%20tai%20duong%20bo.jpg" alt='' /></a> </div>
+  </div>
+  <!--End Jquery Top Banner -->
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Column-->
+    <div class="sidebar fl" id="side_left">
+      <!--List Categories-->
+      <div class="box">
+        <div class="box_Tab">DỊCH VỤ HẢI QUAN</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li class="active"><a href="list_products.html">Dịch vụ hải quan</a></li>
+            <li><a href="list_products.html">Dịch vụ hải quan</a></li>
+            <li><a href="list_products.html">Dịch vụ hải quan</a></li>
+            <li><a href="list_products.html">Dịch vụ hải quan</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--End List Categories-->
+      <!--List Categories-->
+      <div class="box">
+        <div class="box_Tab">VẬN TẢI HÀNG HÓA</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li><a href="list_products.html">Vận tải hàng hóa</a></li>
+            <li><a href="list_products.html">Vận tải hàng hóa</a></li>
+            <li><a href="list_products.html">Vận tải hàng hóa</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--End List Categories-->
+      <!--List Categories-->
+      <div class="box">
+        <div class="box_Tab">DỊCH VỤ CHO THUÊ CẨU</div>
+        <div class="box_ct topnav">
+          <ul>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+            <li><a href="list_products.html">Dịch vụ cho thuê cầu</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--End List Categories-->
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab">THỦ TỤC HẢI QUAN NHANH</div>
+        <div class="box_ct ads"> <a href=""><img src="http://www.webketoan.vn/wp-content/uploads/2012/12/dn685.jpg" alt="" width="100%" /></a> </div>
+      </div>
+      <!--End Support-->
+      <!--Ads Left-->
+      <div class="ads"> <a href=""><img src="http://1.bp.blogspot.com/_svfda-7mo7I/S8WskgfLhVI/AAAAAAAADe4/TK7Xxhv6nfA/s1600/_Freightliner_+008.jpg" alt="" width="100%" /></a> <a href=""><img src="http://shuttlecargo.com.vn/shs/wp-content/uploads/2013/05/Chuyen-phat-nhanh-hoa-toc.jpg" alt="" width="100%" /></a> </div>
+      <!--End Ads Left-->
+    </div>
+    <!--Left Column-->
+    <!--Main Column-->
+    <div id="col_middle" class="fl">
+      <!--List Services-->
+      <div class="box">
+        <div class="box_Tab_main"><span class="tab_crossed"><b>ĐÀO TẠO XUẤT NHẬP KHẨU</b></span></div>
+        <div class="box_ct list_services">
+          <ul>
+            <li>
+              <!--Start Services-->
+              <div class="service_item">
+                <h2><a href="" class="service_name"> Dịch vụ xuất nhập khẩu </a></h2>
+                <a href="detail_products.html" class="service_img"> <img alt="ĐÀO TẠO XUẤT NHẬP KHẨU" title="ĐÀO TẠO XUẤT NHẬP KHẨU" src="http://dddn.vcmedia.vn/P5inccccccccccccloy2lsBqhjffc/Image/2013/07/Quyen-xuat-nhap-khau-phan-phoi-doi-voi-DN-FDI-8b3cc.jpg"> </a> <a href="" class="view_more">Chi tiết</a> </div>
+              <!--End Services-->
+            </li>
+            <li>
+              <!--Start Services-->
+              <div class="service_item">
+                <h2><a href="" class="service_name"> Dịch vụ xuất nhập khẩu </a></h2>
+                <a href="detail_products.html" class="service_img"> <img alt="ĐÀO TẠO XUẤT NHẬP KHẨU" title="ĐÀO TẠO XUẤT NHẬP KHẨU" src="http://dddn.vcmedia.vn/P5inccccccccccccloy2lsBqhjffc/Image/2013/07/Quyen-xuat-nhap-khau-phan-phoi-doi-voi-DN-FDI-8b3cc.jpg"> </a> <a href="" class="view_more">Chi tiết</a> </div>
+              <!--End Services-->
+            </li>
+            <li>
+              <!--Start Services-->
+              <div class="service_item">
+                <h2><a href="" class="service_name"> Dịch vụ xuất nhập khẩu </a></h2>
+                <a href="detail_products.html" class="service_img"> <img alt="ĐÀO TẠO XUẤT NHẬP KHẨU" title="ĐÀO TẠO XUẤT NHẬP KHẨU" src="http://dddn.vcmedia.vn/P5inccccccccccccloy2lsBqhjffc/Image/2013/07/Quyen-xuat-nhap-khau-phan-phoi-doi-voi-DN-FDI-8b3cc.jpg"> </a> <a href="" class="view_more">Chi tiết</a> </div>
+              <!--End Services-->
+            </li>
+            <li>
+              <!--Start Services-->
+              <div class="service_item">
+                <h2><a href="" class="service_name"> Dịch vụ xuất nhập khẩu </a></h2>
+                <a href="detail_products.html" class="service_img"> <img alt="ĐÀO TẠO XUẤT NHẬP KHẨU" title="ĐÀO TẠO XUẤT NHẬP KHẨU" src="http://dddn.vcmedia.vn/P5inccccccccccccloy2lsBqhjffc/Image/2013/07/Quyen-xuat-nhap-khau-phan-phoi-doi-voi-DN-FDI-8b3cc.jpg"> </a> <a href="" class="view_more">Chi tiết</a> </div>
+              <!--End Services-->
+            </li>
+          </ul>
+          <a href="" class="view_all_services"><i>>> Xem tất cả</i></a> </div>
+      </div>
+      <!--End List Services-->
+      <!--List News-->
+      <div class="box">
+        <div class="box_Tab_main"><span class="tab_crossed"><b>TIN TỨC</b></span></div>
+        <div class="box_ct" id="list_news_home">
+          <ul>
+            <li><a href="news_detail.html"><img class="img_general" alt="" src="http://vantaidvn.com/Users/Portal/1/Articles/11%281%29.jpg" /></a>
+              <h3><a href="news_detail.html" class="news_title">Giá thép Trung Quốc bất ngờ giảm lần đầu trong 8 tuần</a></h3>
+              <p>Giá thép thanh giao kỳ hạn tháng 1 giảm hơn 0,5% xuống 3.665 
+                nhân dân tệ/tấn tương đương 598 USD/tấn. Tính chung trong tuần 
+                này, giá thép giảm 0,5%, tuần giảm đầu tiên kể từ tháng 5.</p>
+            </li>
+            <li><a href="news_detail.html"><img class="img_general" alt="" src="http://vantaidvn.com/Users/Portal/1/Articles/11%281%29.jpg" /></a>
+              <h3><a href="news_detail.html" class="news_title">Giá thép Trung Quốc bất ngờ giảm lần đầu trong 8 tuần</a></h3>
+              <p>Giá thép thanh giao kỳ hạn tháng 1 giảm hơn 0,5% xuống 3.665 
+                nhân dân tệ/tấn tương đương 598 USD/tấn. Tính chung trong tuần 
+                này, giá thép giảm 0,5%, tuần giảm đầu tiên kể từ tháng 5.</p>
+            </li>
+            <li><a href="news_detail.html"><img class="img_general" alt="" src="http://vantaidvn.com/Users/Portal/1/Articles/11%281%29.jpg" /></a>
+              <h3><a href="news_detail.html" class="news_title">Giá thép Trung Quốc bất ngờ giảm lần đầu trong 8 tuần</a></h3>
+              <p>Giá thép thanh giao kỳ hạn tháng 1 giảm hơn 0,5% xuống 3.665 
+                nhân dân tệ/tấn tương đương 598 USD/tấn. Tính chung trong tuần 
+                này, giá thép giảm 0,5%, tuần giảm đầu tiên kể từ tháng 5.</p>
+            </li>
+          </ul>
+          <a href="" class="view_all_services"><i>>> Xem tất cả</i></a> </div>
+      </div>
+      <!--End List News-->
+    </div>
+    <!--Main Column-->
+    <!--Right Column-->
+    <div class="sidebar fr" id="side_right">
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab">HỖ TRỢ TRỰC TUYẾN</div>
+        <div class="box_ct" id="box_support">
+          <ul>
+            <li><b class="title_sp fl">Mr. A</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="120" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Mr. B</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="120" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Ads Right-->
+      <div class="box">
+        <div class="box_Tab">QUẢNG CÁO</div>
+        <div class="box_ct ads"> <a href=""><img src="http://1.bp.blogspot.com/_svfda-7mo7I/S8WskgfLhVI/AAAAAAAADe4/TK7Xxhv6nfA/s1600/_Freightliner_+008.jpg" alt="" width="100%" /></a> <a href=""><img src="http://shuttlecargo.com.vn/shs/wp-content/uploads/2013/05/Chuyen-phat-nhanh-hoa-toc.jpg" alt="" width="100%" /></a> <a href=""><img src="http://dddn.vcmedia.vn/LF6tz33VxjHf1M3q2wAGVkArG1Pd/Image/2012/10/chuluctrongvantai8a1-2216b.jpg" alt="" width="100%" /></a> <a href=""><img src="http://pic.trangvangvietnam.com/395678589/bien.jpg" alt="" width="100%" /></a> </div>
+      </div>
+      <!--End Ads Right-->
+    </div>
+    <!--Right Column-->
+  </div>
+  <!--End Main Content-->
+  <!-- Jquery Ads Bottom -->
+  <div id="ads_bottom">
+    <ul id="mycarousel_ads" class="jcarousel-skin-tango">
+      <li class="item"><a href=""><img src="http://www.phunhuan.hochiminhcity.gov.vn/image/image_gallery?uuid=717d5b9e-286a-429d-b971-e9dea7c1dae2&groupId=83&t=1309329837896" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/3/nguyenhung/giaoluu2tructuyen21-3-2014.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/6/nguyenhung/logobhq.png" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://support.pavietnam.vn/multidata/24831541345778977Amazon.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.phunhuan.hochiminhcity.gov.vn/image/image_gallery?uuid=717d5b9e-286a-429d-b971-e9dea7c1dae2&groupId=83&t=1309329837896" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/3/nguyenhung/giaoluu2tructuyen21-3-2014.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://www.baohaiquan.vn/images/2014/6/nguyenhung/logobhq.png" alt="" /></a></li>
+      <li class="item"><a href=""><img src="http://support.pavietnam.vn/multidata/24831541345778977Amazon.jpg" alt="" /></a></li>
+    </ul>
+  </div>
+  <!--End Jquery Ads Bottom-->
+  <!--Footer-->
+  <div id="footer">
+    <div id="info_footer">
+      <p>Copyright © 2014 By <strong>Thời Đại Mới</strong></p>
+      <p>Địa chỉ: 50/6 Phan Văn Trị , Phường 10, Quận Gò Vấp, TP. HCM - Điện thoại: 0909 663 551 - Email: <a href="mailto:webmaster@gmail.vn">webmaster@gmail.vn</a></p>
+      <p>Website : <a href="http://www.khaithuehaiquannhanh.com">khaithuehaiquannhanh.com</a></p>
+    </div>
+    <p>Số lượt truy cập: 32.131.338</p>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrap-->
+<div id="divAdLeft">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/thuong-hieu/f0-77-0-0-0-0-0-0.html" target="_self" title="Banner truợt trái"><img alt="Banner truợt trái" title="Banner truợt trái" border="0" src="Images/ads_l.jpg" vspace="1" width="130" /></a></div>
+</div>
+<div id="divAdRight">
+  <div style="padding:2px 0px"><a href="http://www.gallewatch.com/he-thong-cua-hang-18.html" target="_self" title="Banner truợt phải"><img alt="Banner truợt phải" title="Banner truợt phải" border="0" src="Images/ads_r.jpg" vspace="1" width="130" /></a></div>
+</div>
+<script type="text/javascript">
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1000;LeftBannerW = 130;RightBannerW = 130;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 245;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

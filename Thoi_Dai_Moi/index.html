@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Thời Đại Mới</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<script src="Scripts/scroll_ads.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!---Toggle Cate-->
+<script type='text/javascript'>
+$(document).ready(function () {
+            var notH = 1,
+    $pop = $('ul.hidden').hover(function () { notH ^= 1; });
+
+            $(document).on('mouseup keyup', function (e) {
+                if (notH || e.which == 27) $pop.stop().hide();
+            });
+            /////// CALL POPUP 
+	 $('.sub_cate_hide').click(function () {
+                jQuery(this).find('ul.hidden').slideDown("fast").end().siblings().find('ul.hidden').hide('fast');
+                event.stopPropagation();
+            });						   						     
+});
+</script>
+<script language="javascript">
+    function TogglePayment() {
+        document.getElementById('dvPament').style.height = "auto";
+        document.getElementById('hplPaymentMore').style.background = "#e9e9e9 url('Images/double_arr_up.png') center center no-repeat";
+    }
+    function CollapsePayment() {
+        document.getElementById('dvPament').style.height = "360px";
+        document.getElementById('hplPaymentMore').style.background = "#e9e9e9 url('Images/double_arr_down.png') center center no-repeat";
+    }
+    function SetPayment() {
+        if (document.getElementById('dvPament').style.height == "360px")
+            TogglePayment();
+        else
+            CollapsePayment();
+    }
+</script>
+<!--Menu-->
+<script src="Scripts/masonry.js"></script>
+<script type="text/javascript">
+        $(function () {
+            var columns = 4,
+	setColumns = function () { columns = $(window).width() > 750 ? 4 : $(window).width() > 500 ? 3 : $(window).width() > 250 ? 2 : 1; };
+            setColumns();
+            $(window).resize(setColumns);
+            $('.m_li').bind('mouseenter', function () {
+
+                $(this).find('.list_categories').stop(true, true).show('fast');
+                var columns = 3,
+				setColumns = function () { columns = $(window).width() > 750 ? 3 : $(window).width() > 500 ? 2 : $(window).width() > 250 ? 2 : 1; };
+                setColumns();
+                $(window).resize(setColumns);
+                $('.sub_list_cate').masonry(
+	    		{
+	    		    itemSelector: '.pc_menu',
+	    		    columnWidth: function (containerWidth) { return containerWidth / columns; }
+	    		});
+            }).bind('mouseleave', function () {
+
+                $(this).find('.list_categories').stop(true, true).hide('fast', function () {
+
+                });
+            });
+        })	
+    </script>
+<!--Zoom-->
+<link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {            
+			jQuery('#mycarousel_dt_img').jcarousel({
+                auto: 0,
+                animation: 1000,                
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });            			
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Thời Đại Mới" /> </a>
+    <p id="text_logo"><img src="Images/banner_head.png" alt="" />
+    <div id="hotline"><span class="number_phone">0909 663 551<br />
+      0909 663 552</span> </div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="introduction.html">TRANG CHỦ</a> </li>
+      <li><a href="introduction.html">Giới thiệu</a> </li>
+      <li><a href="list_products.html">DỊCH VỤ</a>
+        <ul>
+          <li><a href="#" class="parent">Máy cho gỗ ván nhân tạo</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+          <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+      <li><a href="#">TƯ VẤN HỎI ĐÁP</a></li>
+      <li><a href="list_news.html">Tin tức</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+    <div id="cart" class="fr"><a href="cart.html"><span class="icon_cart"></span></a></div>
+  </div>
+  <!--End Main Menu-->
+  <div id="top_main">
+    <!--Menu Sidebar-->
+    <div class="sitenav fl">
+      <ul>
+        <li class="homecatalog"><span class="homecataloglabel">Danh mục sản phẩm</span>
+          <!--Main Menu-->
+          <ul style='display: block' class="nav_menu" id="dvPament">
+            <li class="m_li"><a href="/chuyen-muc/quan-nu.aspx"
+                                    class="t_menu"> Quần nữ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;">
+                  <div class="pc_menu masonry-brick" style="position: absolute; left: 0px;">
+                    <p> <a href="/chuyen-muc/asdasdasdasdsa.aspx" title="asdasdasdasdsa"> asdasdasdasdsa</a></p>
+                    <div class="cf"> </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/ao-nu.aspx"
+                                    class="t_menu"> Áo nữ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/phu-kien-nu.aspx"
+                                    class="t_menu"> Phụ kiện nữ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/dam-vay.aspx"
+                                    class="t_menu"> Đầm, váy</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/son-moi.aspx"
+                                    class="t_menu"> Son môi</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/nuoc-hoa.aspx"
+                                    class="t_menu"> Nước hoa</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/trang-diem.aspx"
+                                    class="t_menu"> Trang điểm</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/vong-tay-vong-co.aspx"
+                                    class="t_menu"> Vòng tay - Vòng cổ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/trang-diem.aspx"
+                                    class="t_menu"> Trang điểm</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/vong-tay-vong-co.aspx"
+                                    class="t_menu"> Vòng tay - Vòng cổ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/trang-diem.aspx"
+                                    class="t_menu"> Trang điểm</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li class="m_li"><a href="/chuyen-muc/vong-tay-vong-co.aspx"
+                                    class="t_menu"> Vòng tay - Vòng cổ</a>
+              <div class="list_categories">
+                <div class="sub_list_cate masonry" style="position: relative;"> </div>
+              </div>
+            </li>
+            <li><a onclick="javascript:SetPayment();" class="nav_hidden" id="hplPaymentMore"></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--end Menu Sidebar-->
+    <!--Search Tool-->
+    <div class="search_tool">
+      <div class="search">
+        <div class="dropdown">
+          <label>
+            <select name="ctl00$vi14$drCat" id="vi14_drCat" class="dr_search">
+              <option value="110">Sản phẩm</option>
+              <option value="558">Mũi Khoan Beton Đu&#244;i Tr&#242;n</option>
+              <option value="559">Mũi Khoan Beton Đu&#244;i G&#224;i SDS</option>
+              <option value="560">Mũi Khoan Beton Cốt Th&#233;p Booster Đu&#244;i G&#224;i</option>
+              <option value="561">Lưỡi cắt Beton Tr&#242;n</option>
+              <option value="562">Mũi Khoan Gỗ - Granit - kiếng</option>
+              <option value="563">Mũi Khoan Sắt Th&#233;p Inox</option>
+              <option value="564">Lưỡi Cưa Sắt - Th&#233;p - Gỗ</option>
+              <option value="565">Đầu Khoan 10ly và 13ly</option>
+              <option value="566">Tắc K&#234; nhựa Polyester</option>
+              <option value="567">Tắc K&#234; Beton bằng h&#243;a chất Polyester</option>
+            </select>
+          </label>
+        </div>
+        <input name="ctl00$vi14$txtsearch" type="text" id="vi14_txtsearch" alt="Search" class="inputSearch" value="Từ khóa tìm kiếm sản phẩm" onclick="this.value=&#39;&#39;" onblur="if(this.value==&#39;&#39;) this.value=&#39;Từ khóa tìm kiếm sản phẩm&#39;;" onfocus="if(this.value==&#39;Từ khóa tìm kiếm sản phẩm&#39;) this.value=&#39;&#39;;" onkeypress="searchKeyPress();" />
+        <a href="javascript:void(0)" onclick="timkiem();" class="btn_search" id="btnSearch"></a> </div>
+    </div>
+    <!--end Search Tool-->
+    <div id="right_topmain" class="fr">
+      <!--Support-->
+      <div class="box">
+        <div class="box_Tab_top">HỖ TRỢ TRỰC TUYẾN</div>
+        <div class="box_ct" id="box_support">
+          <ul>
+            <li><b class="title_sp fl">Mr. A</b> <a title="Bán hàng trực tuyến" href="ymsgr:sendIM?ha.tran87"><img width="120" alt="Bán hàng trực tuyến" src="http://opi.yahoo.com/online?u=ha.tran87&amp;m=g&amp;t=2"></a> <span class="number_phone">0987.654.321</span></li>
+            <li><b class="title_sp fl">Mr. B</b><a title="Chăm sóc khách hàng" href="skype:thampham1911?chat"><img width="120" title="Chăm sóc khách hàng" alt="Chăm sóc khách hàng" src="http://mystatus.skype.com/smallclassic/thampham1911"></a> <span class="number_phone">0987.654.321</span></li>
+          </ul>
+        </div>
+      </div>
+      <!--End Support-->
+      <!--Ads Top Right-->
+      <div id="ads_top" class="ads"> <a href=""><img src="http://www.enbien.com/club/image/product1/PU-781Z.jpg" alt="" /></a></div>
+      <!--End Ads Top Right-->
+    </div>
+  </div>
+  <!--End Top main-->
+  <div class="homebanners bannerSingle fl">
+    <!-- Jquery Top Banner -->
+    <div class="slider-wrapper theme-pascal">
+      <div id="slider" class="nivoSlider"> <a href='' target='_parent'><img src="Images/slide1.jpg" alt='' /></a> <a href='' target='_parent'><img src="http://2.bp.blogspot.com/-M5knQZtMDj8/UleqJgIj0TI/AAAAAAAAAOE/JY39tve4UwA/w836-h591-no/1350893727_khu_bep_inox_vip.jpg" alt='' /></a> <a href='' target='_parent'><img src="http://kientaoviet.vn/wp-content/uploads/2012/06/Phong-bep.jpg" alt='' /></a> </div>
+    </div>
+    <!--End Jquery Top Banner -->
+  </div>
+  <!--Main Content-->
+  <div id="main">
+    <!--Category Home-->
+    <div class="box">
+      <div class="box_Tab"><span>MÁY MAY CÔNG NGHIỆP</span>
+        <div class="sub_cate_Tab fl">
+          <ul class="sub_cate_home fl">
+            <li><a href="">Máy sang chỉ</a></li>
+            <li><a href="">Máy cắt chỉ thừa</a></li>
+            <li><a href="">Máy kiểm vải</a></li>
+            <li><a href="">Máy lập trình</a></li>
+          </ul>
+          <div class="sub_cate_hide">
+            <ul class="hidden">
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box_ct_home">
+        <div class="ads ads_left_cate fl"><a href=""><img src="Images/ads1.jpg" alt="" /></a></div>
+        <div class="product_row fr">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.tanhoaphat.com/upload/product/13113585211261793989CD50.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <div class="box">
+      <div class="box_Tab"><span>MÁY MAY CÔNG NGHIỆP</span>
+        <div class="sub_cate_Tab fl">
+          <ul class="sub_cate_home fl">
+            <li><a href="">Máy sang chỉ</a></li>
+            <li><a href="">Máy cắt chỉ thừa</a></li>
+            <li><a href="">Máy kiểm vải</a></li>
+            <li><a href="">Máy lập trình</a></li>
+          </ul>
+          <div class="sub_cate_hide">
+            <ul class="hidden">
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box_ct_home">
+        <div class="ads ads_left_cate fl"><a href=""><img src="Images/ads2.jpg" alt="" /></a></div>
+        <div class="product_row fr">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.tanhoaphat.com/upload/product/13113585211261793989CD50.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <div class="box">
+      <div class="box_Tab"><span>MÁY GIẶT CÔNG NGHIỆP</span>
+        <div class="sub_cate_Tab fl">
+          <ul class="sub_cate_home fl">
+            <li><a href="">Máy sang chỉ</a></li>
+            <li><a href="">Máy cắt chỉ thừa</a></li>
+            <li><a href="">Máy kiểm vải</a></li>
+            <li><a href="">Máy lập trình</a></li>
+          </ul>
+          <div class="sub_cate_hide">
+            <ul class="hidden">
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box_ct_home">
+        <div class="ads ads_left_cate fl"><a href=""><img src="Images/ads3.jpg" alt="" /></a></div>
+        <div class="product_row fr">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.tanhoaphat.com/upload/product/13113585211261793989CD50.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <div class="box">
+      <div class="box_Tab"><span>MÁY KHOAN</span>
+        <div class="sub_cate_Tab fl">
+          <ul class="sub_cate_home fl">
+            <li><a href="">Máy sang chỉ</a></li>
+            <li><a href="">Máy cắt chỉ thừa</a></li>
+            <li><a href="">Máy kiểm vải</a></li>
+            <li><a href="">Máy lập trình</a></li>
+          </ul>
+          <div class="sub_cate_hide">
+            <ul class="hidden">
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box_ct_home">
+        <div class="ads ads_left_cate fl"><a href=""><img src="Images/ads4.jpg" alt="" /></a></div>
+        <div class="product_row fr">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.tanhoaphat.com/upload/product/13113585211261793989CD50.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <div class="box">
+      <div class="box_Tab"><span>MÁY HÀN</span>
+        <div class="sub_cate_Tab fl">
+          <ul class="sub_cate_home fl">
+            <li><a href="">Máy sang chỉ</a></li>
+            <li><a href="">Máy cắt chỉ thừa</a></li>
+            <li><a href="">Máy kiểm vải</a></li>
+            <li><a href="">Máy lập trình</a></li>
+          </ul>
+          <div class="sub_cate_hide">
+            <ul class="hidden">
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box_ct_home">
+        <div class="ads ads_left_cate fl"><a href=""><img src="Images/ads5.jpg" alt="" /></a></div>
+        <div class="product_row fr">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.tanhoaphat.com/upload/product/13113585211261793989CD50.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Category Home-->
+    <!--Category Home-->
+    <div class="box">
+      <div class="box_Tab"><span>THIẾT BỊ Y TẾ</span>
+        <div class="sub_cate_Tab fl">
+          <ul class="sub_cate_home fl">
+            <li><a href="">Máy sang chỉ</a></li>
+            <li><a href="">Máy cắt chỉ thừa</a></li>
+            <li><a href="">Máy kiểm vải</a></li>
+            <li><a href="">Máy lập trình</a></li>
+          </ul>
+          <div class="sub_cate_hide">
+            <ul class="hidden">
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+              <li><a href="">Máy sang chỉ</a></li>
+              <li><a href="">Máy cắt chỉ thừa</a></li>
+              <li><a href="">Máy kiểm vải</a></li>
+              <li><a href="">Máy lập trình</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="box_ct_home">
+        <div class="ads ads_left_cate fl"><a href=""><img src="Images/ads6.jpg" alt="" /></a></div>
+        <div class="product_row fr">
+          <ul>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.meta.vn/Data/image/product_images/Nam2012/Congcudungcu/05/23/maykhoanGBM-13-RE.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://www.tanhoaphat.com/upload/product/13113585211261793989CD50.jpg" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <div class="saleoff_percent">Giảm 49%</div>
+              <!--End Product-->
+            </li>
+            <li>
+              <!--Start Product-->
+              <div class="product"> <a href="detail_products.html" class="img_product"> <img src="http://maymaytinson.com/Uploads/Product/S7000DD-1sua.JPG" alt="" /> </a>
+                <h2><a href="" class="product_name"> Máy 1 kim điện tử
+                  S-7000DD </a></h2>
+                <div class="info_price fl"><span class="sale_price">210.000 đ</span> <span class="f_price">400.000 đ</span></div>
+                <a href="" class="view_more fr"></a> </div>
+              <!--End Product-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--End Category Home-->
+  </div>
+  <!--End Main Content-->
+  <!--Footer-->
+  <div id="footer">
+    <div id="topmenu_f">
+      <div class="col_menuFooter" id="news_home">
+        <div class="ctentColuMenuFooter">
+          <h3><span>SỰ KIỆN</span></h3>
+          <div class="col_footer_ct">
+            <ul>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">Một nông dân phát minh ra máy bóc lạc</a></li>
+              <li><a href="">Xuất khẩu máy nông nghiệp “lên ngôi”</a></li>
+              <li><a href="">Những điều cần biết về máy trộn bê tông</a></li>
+              <li><a href="">Lựa chọn máy phát điện như thế nào?</a></li>
+              <li><a href="">Anh nông dân nghèo với phát minh máy thái đa năng</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+              <li><a href="">“Trâu sắt” về buôn</a></li>
+              <li><a href="">Anh nông dân phát minh máy quạt lúa</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="partners">
+        <div class="ctentColuMenuFooter">
+          <h3><span>ĐỐI TÁC</span></h3>
+          <div class="col_footer_ct"><a href=""><img src="http://taeseungvina.com/upload/hinhanh/081728132178197.gif" alt="" /></a> <a href=""><img src="http://www.toolspecial.com/assets/images/gereedschap/mitutoyo/Mitutoyo-logo.jpg" alt="" /></a> <a href=""><img src="http://www.masterfershop.com/immagini/Brand/Metabo.jpg" alt="" /></a> <a href=""><img src="http://www.naradieshop.sk/katalog/makita_logo.jpg" alt="" /></a> <a href=""><img src="http://logonoid.com/images/maktec-logo.png" alt="" /></a> <a href=""><img src="http://taeseungvina.com/upload/hinhanh/081728132178197.gif" alt="" /></a> <a href=""><img src="http://www.toolspecial.com/assets/images/gereedschap/mitutoyo/Mitutoyo-logo.jpg" alt="" /></a> <a href=""><img src="http://www.masterfershop.com/immagini/Brand/Metabo.jpg" alt="" /></a> <a href=""><img src="http://www.naradieshop.sk/katalog/makita_logo.jpg" alt="" /></a> <a href=""><img src="http://logonoid.com/images/maktec-logo.png" alt="" /></a></div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="contact_us">
+        <div class="ctentColuMenuFooter">
+          <h3><span>LIÊN HỆ</span></h3>
+          <div class="col_footer_ct">
+            <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td width="30" bgcolor="#FFFFFF"><img src="Images/home_icon.gif" alt="" /></td>
+                <td bgcolor="#FFFFFF">662/27 Phan Văn Trị, F. 10, Q.Gò Vấp,  Tp.HCM</td>
+              </tr>
+              <tr>
+                <td bgcolor="#FFFFFF"><img src="Images/phone_icon.gif" alt="" /></td>
+                <td bgcolor="#FFFFFF">0909.663.551 - Email: <a href="mailto:info@trangvang.vn">info@trangvang.vn</a></td>
+              </tr>
+              <tr>
+                <td bgcolor="#FFFFFF"><img src="Images/face_icon.gif" alt="" /></td>
+                <td bgcolor="#FFFFFF">www.facebook.com/trangvang.vn</td>
+              </tr>
+            </table>
+            <p class="map" style="margin-top: 10px"><img src="Images/map.gif" alt="" /></p>
+          </div>
+        </div>
+      </div>
+      <div class="col_menuFooter" id="facebook_box">
+        <div class="ctentColuMenuFooter">
+          <h3><span>Follow Us</span></h3>
+          <div class="col_footer_ct"> <img src="Images/facebook_box.jpg" alt="" width="100%" height="220" />
+            <!--Social-->
+            <div id="social_network"><a href="" title="Facebook"><span class="icon_facebook"></span></a> <a href="" title="Google+"><span class="icon_gplus"></span></a><a href="" title="Youtube"><span class="icon_youtube"></span></a><a href="" title="Twitter"><span class="icon_twitter"></span></a><a href="" title="Zing me"><span class="icon_zing"></span></a></div>
+            <!--End Social-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer Bottom-->
+    <div id="foo_bot_menu" class="fr">
+      <p class="footer_menu"><a href="">Trang chủ</a><a href="">Giới thiệu</a><a href="">Dịch vụ</a><a href="">Hướng dẫn mua hàng</a><a href="">Tư vấn hỏi đáp</a><a href="">Tin tức</a><a href="">Liên hệ</a></p>
+      <p class="copyright"> Copyright © 2014 By <strong>Thời Đại Mới</strong> - <a target="_blank" href="http://www.dangcapviet.vn">Thiết kế website</a> bởi <a target="_blank" title="Website Thương mại điện tử e-sell" href="http://www.esell.vn"> <img border="0" src="http://www.esell.vn/logo-esell.png" alt="logo e-sell"></a> </p>
+    </div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

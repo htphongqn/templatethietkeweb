@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>TEREXA_MIENTRUNG</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Vertical slide-->
+<script type='text/javascript' src="Scripts/jquery.vticker.min.js"></script>
+<script>
+	    $(function () {
+	        $('#quote').vTicker({showItems: 5});
+	    });
+	</script>
+<script src="Scripts/jquery.nicescroll.min.js"></script>
+<script>
+  $(document).ready(function() {      
+    $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#8b1a1a",boxzoom:true}); // First scrollable DIV
+  });
+</script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel_news').jcarousel({
+        auto: 2,
+		animation: 1000,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });  	
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header"> <a href="index.html" id="banner_head"><img src="images/banner_header.jpg" alt="TEREXA_MIENTRUNG" /> </a> </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="index.html">Trang chủ</a></li>
+      <li><a href="introduction.html" class="parent">LƯỢC SỬ</a> </li>
+      <li><a href="list_news.html">THỦ BẢN</a>
+        <ul>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Trang điểm</a></li>
+          <li><a href="#">Nước hoa</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">SUY NIỆM VỀ CHÚA</a></li>
+      <li><a href="#">ĐỜI SỐNG HỘI VIÊN</a></li>
+      <li><a href="#">HỎI ĐÁP</a></li>
+      <li><a href="list_news.html">WEBLINKS</a></li>
+      <li><a href="list_gallery.html">ĐĂNG KÝ</a></li>
+      <li><a href="list_news.html">LIÊN HỆ</a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Column-->
+    <div class="col">
+      <!--Phan Hoi-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Phân Hội</span></div>
+          <div class="box_ct" id="topnav">
+            <ul>
+              <li class="active"><a href="list_news.html">Phân hội Terexa Kẻ Dừa</a></li>
+              <li><a href="#">Phân hội Terexa Đồng Tháp</a> </li>
+              <li><a href="#">Phân hội Terexa Cửa Lò</a>
+                <ul class="children">
+                  <li><a href="#">Ngoại Thất</a></li>
+                  <li><a href="#">Ngoại Thất</a></li>
+                  <li><a href="#">Ngoại Thất</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Phân hội Terexa MT Nghệ An</a></li>
+              <li><a href="#">Phân hội Terexa Hà Tĩnh</a></li>
+              <li><a href="#">Phân hội Terexa Quảng Bình</a></li>
+            </ul>
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Phan Hoi-->
+      <!--Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Văn Kiện Giáo Hội</span></div>
+          <div class="box_ct" id="news_home">
+            <ul>
+              <li class="hot_news"> <a href="">
+                <h3 class="link_title">Sứ điệp Phục Sinh Urbi et Orbi 2014 của Đức Thánh Cha Phanxicô</h3>
+                </a> <a href=""><img src="Images/van_kien.jpg" alt="" /></a> </li>
+              <li> <a href="">
+                <h3 class="title_news">Tông thư – Tự sắc Fidelis et dispensator prudens về việc quản lý tài sản kinh tế của Toà Thánh</h3>
+                </a> </li>
+              <li> <a href="">
+                <h3 class="title_news">Sứ điệp Phục Sinh Urbi et Orbi 2014 của Đức Thánh Cha Phanxicô</h3>
+                </a> </li>
+              <li> <a href="">
+                <h3 class="title_news">Tông thư – Tự sắc Fidelis et dispensator prudens về việc quản lý tài sản kinh tế của Toà Thánh</h3>
+                </a> </li>
+            </ul>
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Lịch Phụng vụ GP Vinh</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/news02.jpg" alt="" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Giờ lễ tại các nhà thờ</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/gio_le.jpg" alt="" class="img_illustration" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Giấy tờ - Chứng chỉ</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/mau_don.jpg" alt="" class="img_illustration" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Phim Công giáo online</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/video.jpg" alt="" class="img_illustration" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Gia đình Web Giáo phận</span></div>
+          <div class="box_ct">
+            <ul>
+              <li> <a href="">
+                <h3 class="title_news">Lam Hồng (Đức tin & VH)</h3>
+                </a> </li>
+              <li> <a href="">
+                <h3 class="title_news">Lam Hồng (Đức tin & VH)</h3>
+                </a> </li>
+              <li> <a href="">
+                <h3 class="title_news">Lam Hồng (Đức tin & VH)</h3>
+                </a> </li>
+              <li> <a href="">
+                <h3 class="title_news">Lam Hồng (Đức tin & VH)</h3>
+                </a> </li>
+              <li> <a href="">
+                <h3 class="title_news">Lam Hồng (Đức tin & VH)</h3>
+                </a> </li>
+            </ul>
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Access Status-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Thống kê truy cập</span></div>
+          <div class="box_ct" id="access_status">
+            <p><span class="icon_status online"></span>Đang truy cập: <b>3</b></p>
+            <p><span class="icon_status s_today"></span>Hôm nay: <b>10</b></p>
+            <p><span class="icon_status s_yesterday"></span>Hôm qua: <b>10</b></p>
+            <p><span class="icon_status s_month"></span>Tháng này: <b>10000</b></p>
+            <p><span class="icon_status visited"></span>Tổng truy cập: <b>50000</b></p>
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Access Status-->
+    </div>
+    <!--Left Column-->
+    <!--Middle Column-->
+    <div class="col" id="col_middle">
+      <div class="path"><a href="index.html"><img src="Images/icon_home.png" alt="" /></a> » <a href="list_news.html">Tin tức</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div id="detail_news">
+          <div id="info_g">
+            <h1 class="h1Title">Những thực phẩm nên tránh khi đang uống kháng sinh</span></h1>
+            <p class="date">06/05/2013</p>
+            <p>Khi đang uống kháng sinh điều trị một chứng bệnh nào đó, bạn nên tránh ăn những thực phẩm dưới đây:</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa có thể làm nặng nề thêm cho đường ruột của bạn trong khi bạn đang dùng thuốc kháng sinh. Hầu hết các dược sĩ đều đặc biệt khuyến cáo không uống sữa khi đang uống thuốc kháng sinh ciprofloxacin.</p>
+            <p>Ngoài ra, các sản phẩm chứa nhiều chất béo khác cũng có thể làm trầm trọng thêm các triệu chứng của bệnh tiêu chảy - một tác dụng phụ khi uống thuốc kháng sinh.</p>
+            <p>Thực phẩm chứa nhiều chất xơ</p>
+            <p>Một số loại rau quả có chứa nhiều chất xơ  hoặc các loại đậu cũng có thể gây tiêu chảy nặng thêm khi bạn đang dùng thuốc kháng sinh.</p>
+            <p>Bên cạnh đó, các thực phẩm như ngũ cốc, lúa mì tuy có thể tăng cường chất sắt và calci cho cơ thể nhưng lại cản trở khả năng hấp thụ một số thuốc kháng sinh khi vào cơ thể, đặc biệt là khi bạn đang uống thuốc kháng sinh quinolone, trong đó bao gồm các loại thuốc như ciprofloxacin, acid nalidixic và cinoxacin, sparfloxacin và trovafloxacin.</p>
+            <p>Thực phẩm có tính acid</p>
+            <p>Hàm lượng acid trong một số thực phẩm nhất định có thể làm gián đoạn khả năng hấp thụ thuốc của cơ thể.</p>
+            <p>Nói chung, khi uống thuốc kháng sinh, tuy bạn không luôn luôn phải tránh xa chúng hoàn toàn, nhưng đôi khi việc tiêu thụ thực phẩm chua hoặc đồ uống có chứa nhiều acid như cà chua, nước trái cây, đồ uống có ga cũng có thể hạn chế sự hấp thu của thuốc khi vào cơ thể.</p>
+            <p>Rượu</p>
+            <p>Nhiều dược sĩ đều chỉ ra rằng rượu không can thiệp bất lợi trực tiếp vào việc uống thuốc kháng sinh. Tuy nhiên, thuốc kháng sinh và rượu có thể có tác dụng phụ tương tự nhau. Vì thế, nếu bạn uống cả hai cùng một lúc, chúng có thể gia tăng cơ hội bạn phải chịu trận với những nguy cơ buồn nôn, chóng mặt hoặc buồn ngủ...</p>
+            <p>Những loại thuốc này có thể điểm mặt bao gồm: penicillin G, ampicillin, floxin, oxacillin, gentamycin và ciprofloxacin. Khi uống những loại thuốc này, bạn có thể phải ăn/uống các thực phẩm 3 giờ trước/sau 
+              
+              khi uống thuốc.</p>
+            <p>Lưu ý: Tránh dùng các loại sữa, các sản phẩm chế biến từ sữa, trừ sữa chua, khi bạn đang uống thuốc kháng sinh. Nguyên nhân là do lượng calci có nhiều trong sữa và các sản phẩm từ sữa có thể cản trở sự hấp thu của thuốc kháng sinh. Tuy nhiên, sữa chua thì bạn vẫn có thể ăn bình thường vì nó có chứa nhiều men vi sinh giúp khôi phục lại sự cân bằng cho đường ruột, tránh tiêu chảy khi sử dụng thuốc kháng sinh.</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--Middle Column-->
+    <!--Right Column-->
+    <div class="col">
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Đức GM Giáo Phận</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/person.jpg" alt="" class="img_illustration" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Nghe Lời Chúa</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/cd.jpg" alt="" class="img_illustration" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>5 Phút Suy Niệm</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/suy_niem1.jpg" alt="" class="img_illustration" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Các Giờ Kinh Phục Vụ</span></div>
+          <div class="box_ct"> <a href=""><img src="Images/suy_niem.jpg" alt="" class="img_illustration" /></a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+      <!-- Category Home-->
+      <div class="box">
+        <div class="box_in">
+          <div class="box_Tab_lr"><span>Hình Ảnh</span></div>
+          <div class="box_ct" id="quote">        
+            <ul>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNFudtVMcPhbmqSU9P_7Z-nmlbZaK8CmI6mV-7Efoicg11GO69"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNFudtVMcPhbmqSU9P_7Z-nmlbZaK8CmI6mV-7Efoicg11GO69" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTyBP186T0FcwP2uW8c2cdvAgoN0BUAKlycVhabkLkPBKMU8xv3gg"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTyBP186T0FcwP2uW8c2cdvAgoN0BUAKlycVhabkLkPBKMU8xv3gg" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4SlC1JlD0gMm5Yq2Fqf7gfOiuTnYiIeWk_EWiAdpKUn0GkWrg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4SlC1JlD0gMm5Yq2Fqf7gfOiuTnYiIeWk_EWiAdpKUn0GkWrg" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMMrRyyVLUZim1CWJlKrmLY1hGUzXFIanFwqeNLM8AcFNgapV"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMMrRyyVLUZim1CWJlKrmLY1hGUzXFIanFwqeNLM8AcFNgapV" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1eI2LdWZpno6vkI5o9QL-0AztSt01R5ZidnTWk9bSskv_t05L"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1eI2LdWZpno6vkI5o9QL-0AztSt01R5ZidnTWk9bSskv_t05L" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQKA0ZNLUQzyb5i9N8HAGFQLnmZup8HL04zCMhry4DAXWGUEMtr"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQKA0ZNLUQzyb5i9N8HAGFQLnmZup8HL04zCMhry4DAXWGUEMtr" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNFudtVMcPhbmqSU9P_7Z-nmlbZaK8CmI6mV-7Efoicg11GO69"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNFudtVMcPhbmqSU9P_7Z-nmlbZaK8CmI6mV-7Efoicg11GO69" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTyBP186T0FcwP2uW8c2cdvAgoN0BUAKlycVhabkLkPBKMU8xv3gg"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTyBP186T0FcwP2uW8c2cdvAgoN0BUAKlycVhabkLkPBKMU8xv3gg" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4SlC1JlD0gMm5Yq2Fqf7gfOiuTnYiIeWk_EWiAdpKUn0GkWrg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4SlC1JlD0gMm5Yq2Fqf7gfOiuTnYiIeWk_EWiAdpKUn0GkWrg" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMMrRyyVLUZim1CWJlKrmLY1hGUzXFIanFwqeNLM8AcFNgapV"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMMrRyyVLUZim1CWJlKrmLY1hGUzXFIanFwqeNLM8AcFNgapV" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1eI2LdWZpno6vkI5o9QL-0AztSt01R5ZidnTWk9bSskv_t05L"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1eI2LdWZpno6vkI5o9QL-0AztSt01R5ZidnTWk9bSskv_t05L" alt="" /></a></li>
+              <li><a href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQKA0ZNLUQzyb5i9N8HAGFQLnmZup8HL04zCMhry4DAXWGUEMtr"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQKA0ZNLUQzyb5i9N8HAGFQLnmZup8HL04zCMhry4DAXWGUEMtr" alt="" /></a></li>
+            </ul>
+          </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Category Home-->
+    </div>
+    <!--End Right Column-->
+  </div>
+  <!--End Main Content-->
+  <!-- Footer -->
+  <div id="copyright" class="cf">Copyright © 2014 terexamientrung :: All rights reserved.</div>
+  <!-- End Footer -->
+  <div class="cf"></div>
+</div>
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

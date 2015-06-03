@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>Toàn Cầu</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Effect Hover-->
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$('.support_element').mouseover(function(){
+    //show the box
+    $(this).children('.sp_bg').stop().fadeIn('300');
+});
+
+$('.support_element').mouseleave(function(){
+    //hide the box
+    $(this).children('.sp_bg').stop().fadeOut('200');
+});
+});//]]>  
+</script>
+<!--Main Menu-->
+<script src="Scripts/jqueryEasing.js"></script>
+<!--Slide chay ngang-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 3,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });
+    //$('#slider_logo').show();
+});
+</script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" type="text/css" href="Styles/jquery.ad-gallery.css">
+<script type="text/javascript" src="Scripts/jquery.ad-gallery.js?rand=390"></script>
+<script type="text/javascript" src="Scripts/Common.js"></script>
+<script type="text/javascript" src="Scripts/Galary.js"></script>
+<!-- Custom scrollbars CSS -->
+<link href="Styles/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/jquery-ui-1.8.min.js"></script>
+<!-- mousewheel plugin -->
+<script src="Scripts/jquery.mousewheel.min.js"></script>
+<!-- custom scrollbars plugin -->
+<script src="Scripts/jquery.mCustomScrollbar.js"></script>
+<script>
+		(function($){
+			$(window).load(function(){
+				/* custom scrollbar fn call */
+				$(".content_page").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					}
+				});		
+				$(".content_5").mCustomScrollbar({
+					horizontalScroll:true,
+					scrollButtons:{
+						enable:true
+					}
+				});
+			});
+		})(jQuery);
+	</script>
+</head>
+<body id="bd">
+<!--Support-->
+<div class="support_head">
+  <!--Social Network-->
+  <div class="support_element social_network"><span class="title_social"></span>
+    <div class="sp_bg social_info tip"><img src="Images/verticle_network.png" alt="" /> </div>
+  </div>
+  <!--End Social Network-->
+  <!--Yahoo-->
+  <div class="support_element nick_chat"><span class="title_chat"></span>
+    <div class="sp_bg chat_info tip">
+      <label>Hỗ trợ trực tuyến</label>
+      <a href="ymsgr:sendim?hotro_nhommuahcm"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm&amp;t=1"> </a> <a href="ymsgr:sendim?hotro_nhommuahcm2"> <img width="64" alt="nhómMua" src="http://opi.yahoo.com/online?u=hotro_nhommuahcm2&amp;t=1" style="margin-right:4px"> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="Images/skype_icon.png" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> <a href="Skype:thuctapcungdoanhnghiep1?chat"> <img src="Images/skype_icon.png" title="thuctapcungdoanhnghiep3" width="64" height="30" alt=""> </a> 
+      <p class="hotline">Hotline: <span>08 3978 2030<br />0976 276 804</span></p></div>      
+  </div>
+  <!--End Yahoo-->
+  <!--Get Email-->
+  <div class="support_element get_email"><span class="title_email"></span>
+    <div class="sp_bg email_info tip">
+      <label>Nhận bản tin</label>
+      <span class="icon_email"></span>
+      <p>Hãy nhập Email của bạn và nhấn nút "Đăng ký", bạn sẽ nhận được các thông tin mới nhất của TOÀN CẦU qua email.</p>
+      <ul>
+        <li>
+          <input type="text" onblur="if(this.value=='') this.value='Email' " onclick="if(this.value=='Email') this.value='' " value="Email" class="inputbox" style="width:220px; margin: 5px 0" name="email">
+        </li>
+        <li style="margin-bottom: 10px">
+          <input type="checkbox" style=" float:left; margin:5px 0 0 0;" value="Bike" name="vehicle">
+          <input type="hidden" value="registeremail" name="op">
+          <span style=" float:left; margin:4px 0 0 5px;">Receive HTML?</span> </li>
+        <li><a href="javascript:$('.formsearch').submit();" class="button">Đăng ký</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--End Get Email-->
+  <!--Link Web-->
+  <div class="support_element link_web"><span class="title_web"></span>
+    <div class="sp_bg link_web_info tip">
+      <label>Liên kết web</label>
+      <select name="link_web" class="option">
+        <option value="0">Đẳng Cấp Việt</option>
+        <option value="1">Esell.vn</option>
+      </select>
+    </div>
+  </div>
+  <!--End Link Web-->
+  <!--Get Gift-->
+  <div class="support_element get_gift"><span class="title_gift"></span>
+    <div class="sp_bg gift_info tip">
+      <p style="margin-left: 0.5in; text-align: center;"> <strong>THÔNG BÁO CHƯƠNG TRÌNH KHUYẾN MÃI</strong></p>
+      <p align="center"> <strong><em>"<em>Mua thiết bị Inmarsat&ndash; FleetBroadBand nhận ngay thẻ Sim và Laptop </em></em></strong>"</p>
+      <p align="center">&nbsp; </p>
+      <p align="center"> <strong><em>Kính gửi:</em></strong> Quý Khách hàng</p>
+      <p> Công ty TNHH MTV Thông tin Điện tử Hàng hải Việt Nam (VISHIPEL) xin chân thành cảm ơn sự quan tâm của Quý Công ty đến thiết bị, dịch vụ viễn thông hàng hải thuộc lĩnh vực chuyên doanh của Công ty chúng tôi.</p>
+      <p> Chúng tôi xin gửi đến Quý Khách hàng chương trình khuyến mãi: “<strong>Mua thiết bị Inmarsat &ndash; FleetBroadBand nhận ngay thẻ Sim và Laptop</strong>” như sau:</p>
+      <p style="margin-left:.5in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nội dung khuyến mãi: khi Khách hàng mua thiết bị FBB 250 và cam kết sử dụng dịch vụ của VISHIPEL tối thiểu 1 năm sẽ nhận ngay:</p>
+      <p style="margin-left:.5in;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + <strong>01 Sim FBB với tài khoản 30.000.000 VNĐ /thiết bị FBB 250</strong> (không bao gồm phí thuê bao, hạn sử dụng tài khoản khuyến mãi trong 2 tháng đầu tiên kể từ khi kích hoạt dịch vụ);</p>
+      <p style="margin-left:.5in;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + <strong>01</strong> <strong>máy tính laptop trị giá 8.000.000VNĐ (</strong>số lượng máy tính nằm trong chương trình khuyến mãi: <strong>10 chiếc)</strong>.</p>
+      <p style="margin-left:.5in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Đối tượng áp dụng: Tất cả các khách hàng hoạt động trong lĩnh vực hàng hải, dầu khí;</p>
+      <p style="margin-left:.5in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thời gian áp dụng: Từ 15/6/2013 đến 31/7/2013.</p>
+      <p> Thông tin chi tiết xin vui lòng liên hệ với các Điểm dịch vụ khách hàng của VISHIPEL:</p>
+      <p style="margin-left:.75in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Điểm dịch vụ khách hàng tại Hải Phòng</strong>:</p>
+      <p style="margin-left:.75in;"> Đc: Số 2 Nguyễn Thượng Hiền, Hồng Bàng, Hải Phòng</p>
+      <p style="margin-left:.75in;"> Tel/Fax: +84.31.3842073.</p>
+      <p style="margin-left:.75in;"> Email: <a href="mailto:customercare@vishipel.com.vn">customercare@vishipel.com.vn</a></p>
+      <p style="margin-left:.75in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Điểm dịch vụ khách hàng tại Hà Nội</strong>:</p>
+      <p style="margin-left:.75in;"> Tel/Fax: +84.4.37950935</p>
+      <p style="margin-left:.75in;"> Email: <a href="mailto:customercare@vishipel.com.vn">customercare@vishipel.com.vn</a></p>
+      <p style="margin-left:.75in;"> -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Điểm dịch vụ khách hàng Hồ Chí Minh</strong>:</p>
+      <p style="margin-left:.75in;"> Đc: 432 Nguyễn Tất Thành, Quận 4, Tp. HCM</p>
+      <p style="margin-left:.75in;"> Tel: +84.8.39413415</p>
+      <p style="margin-left:.75in;"> Fax:+84.8.39402071</p>
+      <p style="margin-left:.75in;"> Email: <a href="mailto:customercare@vishipel.com.vn">customercare@vishipel.com.vn</a></p>
+      <p> Công ty TNHH MTV Thông tin Điện tử Hàng hải Việt Nam rất mong nhận được sự ủng hộ của Quý Khách hàng.</p>
+      <p> Xin trân trọng cảm ơn!</p>
+    </div>
+  </div>
+  <!--End Get Gift-->
+  <!--Visitors-->
+  <div class="support_element visistors"><span class="title_visistors"></span>
+    <div class="sp_bg visistors_info tip"><img src="Images/visitors_image.jpg" alt="" /> </div>
+  </div>
+  <!--End Visitors-->
+</div>
+<!--End Support-->
+<!--Main Menu-->
+<div class="menu">
+  <div class="page_inner">
+    <ul class="navigation">
+      <li class="home on"><a href="#home">TRANG CHỦ</a></li>
+      <li><a href="#intro">GIỚI THIỆU</a></li>
+      <li><a href="#product">SẢN PHẨM</a></li>
+      <li><a href="#video">VIDEO</a></li>
+      <li><a href="#advisory">TƯ VẤN</a></li>
+      <li><a href="#news">TIN TỨC</a></li>
+      <li><a href="#agent">HỆ THỐNG PHÂN PHỐI</a></li>
+      <li><a href="#recruitment">TUYỂN DỤNG</a></li>
+      <li class="lang"><a href="#"><img src="Images/us_icon.jpg" alt="" /></a></li>
+    </ul>
+  </div>
+  <div class="menu_shadow"></div>
+</div>
+<div id="wrapper" class="content_wrap">
+  <script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
+  <script type="text/javascript">
+            $(function() {
+                $('ul.navigation a').bind('click',function(event){
+                    var $anchor = $(this);
+                    /*
+                    if you want to use one of the easing effects:
+                    $('html, body').stop().animate({
+                        scrollLeft: $($anchor.attr('href')).offset().left
+                    }, 1500,'easeInOutExpo');
+                     */
+                    $('html, body').stop().animate({
+                        scrollLeft: $($anchor.attr('href')).offset().left - 175
+                    }, 1000);
+                    event.preventDefault();
+                });
+            });
+        </script>
+  <!--End Main Menu-->
+  <div class="section">
+    <div class="page" id="home">
+      <!--#begin Header-->
+      <div class="header page_inner">
+        <div class="slogan"><img src="Images/slogan.png" alt="" /></div>
+        <div class="search">
+          <input type="text" class="input_Search" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+          <input type="submit" onclick="return CheckValue(document.Search.s);" class="search_btn" value="" />
+        </div>
+      </div>
+      <!--#end Header-->
+      <!--Gallery-->
+      <div id="gallery" class="ad-gallery">
+        <div class="ad-image-wrapper"> </div>
+        <div class="ad-nav">
+          <div class="ad-thumbs">
+            <ul class="ad-thumb-list">
+              <li> <a href="Images/slide_01.jpg"> <img src="Images/slide_01.jpg" title="" alt="" width="80" height="42" /> </a> </li>
+              <li> <a href="Images/slide_02.jpg"> <img src="Images/slide_02.jpg" title="" alt="" width="80" height="42" /> </a> </li>
+              <li> <a href="Images/slide_03.jpg"> <img src="Images/slide_03.jpg" title="" alt="" width="80" height="42" /> </a> </li>
+              <li> <a href="Images/slide_01.jpg"> <img src="Images/slide_01.jpg" title="" alt="" width="80" height="42" /> </a> </li>
+              <li> <a href="Images/slide_02.jpg"> <img src="Images/slide_02.jpg" title="" alt="" width="80" height="42" /> </a> </li>
+              <li> <a href="Images/slide_03.jpg"> <img src="Images/slide_03.jpg" title="" alt="" width="80" height="42" /> </a> </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!--End Gallery-->
+    </div>
+  </div>
+  <!--end home-->
+  <div class="section">
+    <div class="page" id="intro">
+      <div class="content_page content">
+        <h2 class="title_page">Giới thiệu</h2>
+        <h1>Default scrollbar with scroll buttons</h1>
+        <p>Lorem ipsum dolor sit amet. Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit.</p>
+        <p>Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit. Nullam felis tellus, tristique nec egestas in, luctus sed diam. Suspendisse potenti. </p>
+        <p>Consectetur adipiscing elit. Nulla consectetur libero consectetur quam consequat nec tincidunt massa feugiat. Donec egestas mi turpis. Fusce adipiscing dui eu metus gravida vel facilisis ligula iaculis. Cras a rhoncus massa. Donec sed purus eget nunc placerat consequat.</p>
+        <p><img src="demo_files/mcsImg1.jpg" /></p>
+        <p>Cras venenatis condimentum nibh a mollis. Duis id sapien nibh. Vivamus porttitor, felis quis blandit tincidunt, erat magna scelerisque urna, a faucibus erat nisl eget nisl. Aliquam consequat turpis id velit egestas a posuere orci semper. Mauris suscipit erat quis urna adipiscing ultricies. In hac habitasse platea dictumst. Nulla scelerisque lorem quis dui sagittis egestas.</p>
+        <p>Etiam sed massa felis, aliquam pellentesque est.</p>
+        <p><img src="demo_files/mcsImg2.jpg" /></p>
+        <p>Nam eu arcu at purus tincidunt pharetra ultrices at ipsum. Mauris urna nunc, vulputate quis gravida in, pharetra id mauris. Ut sit amet mi dictum nulla lobortis adipiscing quis a nulla. Etiam diam ante, imperdiet vel scelerisque eget, venenatis non eros. Praesent ipsum sem, eleifend ut gravida eget, tristique id orci. Nam adipiscing, sem in mattis vulputate, risus libero adipiscing risus, eu molestie mi justo eget nulla.</p>
+        <p>Cras venenatis metus et urna egestas non laoreet orci rutrum. Pellentesque ullamcorper dictum nisl a tincidunt. Quisque et lacus quam, sed hendrerit mi. Mauris pretium, sapien et malesuada pulvinar, lorem leo viverra leo, et egestas mi nisl quis odio. </p>
+        <p>Aliquam erat volutpat. Sed urna arcu, tempus eu vulputate adipiscing, consectetur et orci. Vivamus congue, nunc vitae fringilla convallis, libero massa lacinia lorem, id convallis mauris elit ut leo. Nulla vel odio sem. Duis lorem urna, congue vitae rutrum sed, tincidunt vel tortor. In hac habitasse platea dictumst. Nunc vitae enim ante, vitae facilisis massa. Etiam sagittis sapien at nibh fermentum consectetur convallis lacus blandit.</p>
+        <p>Lorem ipsum dolor sit amet. Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit.</p>
+        <p>Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit. Nullam felis tellus, tristique nec egestas in, luctus sed diam. Suspendisse potenti. </p>
+        <p>Consectetur adipiscing elit. Nulla consectetur libero consectetur quam consequat nec tincidunt massa feugiat. Donec egestas mi turpis. Fusce adipiscing dui eu metus gravida vel facilisis ligula iaculis. Cras a rhoncus massa. Donec sed purus eget nunc placerat consequat.</p>
+        <p><img src="demo_files/mcsImg1.jpg" /></p>
+        <p>Cras venenatis condimentum nibh a mollis. Duis id sapien nibh. Vivamus porttitor, felis quis blandit tincidunt, erat magna scelerisque urna, a faucibus erat nisl eget nisl. Aliquam consequat turpis id velit egestas a posuere orci semper. Mauris suscipit erat quis urna adipiscing ultricies. In hac habitasse platea dictumst. Nulla scelerisque lorem quis dui sagittis egestas.</p>
+        <p>Etiam sed massa felis, aliquam pellentesque est.</p>
+        <p><img src="demo_files/mcsImg2.jpg" /></p>
+        <p>Nam eu arcu at purus tincidunt pharetra ultrices at ipsum. Mauris urna nunc, vulputate quis gravida in, pharetra id mauris. Ut sit amet mi dictum nulla lobortis adipiscing quis a nulla. Etiam diam ante, imperdiet vel scelerisque eget, venenatis non eros. Praesent ipsum sem, eleifend ut gravida eget, tristique id orci. Nam adipiscing, sem in mattis vulputate, risus libero adipiscing risus, eu molestie mi justo eget nulla.</p>
+        <p>Cras venenatis metus et urna egestas non laoreet orci rutrum. Pellentesque ullamcorper dictum nisl a tincidunt. Quisque et lacus quam, sed hendrerit mi. Mauris pretium, sapien et malesuada pulvinar, lorem leo viverra leo, et egestas mi nisl quis odio. </p>
+        <p>Aliquam erat volutpat. Sed urna arcu, tempus eu vulputate adipiscing, consectetur et orci. Vivamus congue, nunc vitae fringilla convallis, libero massa lacinia lorem, id convallis mauris elit ut leo. Nulla vel odio sem. Duis lorem urna, congue vitae rutrum sed, tincidunt vel tortor. In hac habitasse platea dictumst. Nunc vitae enim ante, vitae facilisis massa. Etiam sagittis sapien at nibh fermentum consectetur convallis lacus blandit.</p>
+        <p>Lorem ipsum dolor sit amet. Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit.</p>
+        <p>Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit. Nullam felis tellus, tristique nec egestas in, luctus sed diam. Suspendisse potenti. </p>
+        <p>Consectetur adipiscing elit. Nulla consectetur libero consectetur quam consequat nec tincidunt massa feugiat. Donec egestas mi turpis. Fusce adipiscing dui eu metus gravida vel facilisis ligula iaculis. Cras a rhoncus massa. Donec sed purus eget nunc placerat consequat.</p>
+        <p><img src="demo_files/mcsImg1.jpg" /></p>
+        <p>Cras venenatis condimentum nibh a mollis. Duis id sapien nibh. Vivamus porttitor, felis quis blandit tincidunt, erat magna scelerisque urna, a faucibus erat nisl eget nisl. Aliquam consequat turpis id velit egestas a posuere orci semper. Mauris suscipit erat quis urna adipiscing ultricies. In hac habitasse platea dictumst. Nulla scelerisque lorem quis dui sagittis egestas.</p>
+        <p>Etiam sed massa felis, aliquam pellentesque est.</p>
+        <p><img src="demo_files/mcsImg2.jpg" /></p>
+        <p>Nam eu arcu at purus tincidunt pharetra ultrices at ipsum. Mauris urna nunc, vulputate quis gravida in, pharetra id mauris. Ut sit amet mi dictum nulla lobortis adipiscing quis a nulla. Etiam diam ante, imperdiet vel scelerisque eget, venenatis non eros. Praesent ipsum sem, eleifend ut gravida eget, tristique id orci. Nam adipiscing, sem in mattis vulputate, risus libero adipiscing risus, eu molestie mi justo eget nulla.</p>
+        <p>Cras venenatis metus et urna egestas non laoreet orci rutrum. Pellentesque ullamcorper dictum nisl a tincidunt. Quisque et lacus quam, sed hendrerit mi. Mauris pretium, sapien et malesuada pulvinar, lorem leo viverra leo, et egestas mi nisl quis odio. </p>
+        <p>Aliquam erat volutpat. Sed urna arcu, tempus eu vulputate adipiscing, consectetur et orci. Vivamus congue, nunc vitae fringilla convallis, libero massa lacinia lorem, id convallis mauris elit ut leo. Nulla vel odio sem. Duis lorem urna, congue vitae rutrum sed, tincidunt vel tortor. In hac habitasse platea dictumst. Nunc vitae enim ante, vitae facilisis massa. Etiam sagittis sapien at nibh fermentum consectetur convallis lacus blandit.</p>
+        <p>Lorem ipsum dolor sit amet. Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit.</p>
+        <p>Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit. Nullam felis tellus, tristique nec egestas in, luctus sed diam. Suspendisse potenti. </p>
+        <p>Consectetur adipiscing elit. Nulla consectetur libero consectetur quam consequat nec tincidunt massa feugiat. Donec egestas mi turpis. Fusce adipiscing dui eu metus gravida vel facilisis ligula iaculis. Cras a rhoncus massa. Donec sed purus eget nunc placerat consequat.</p>
+        <p><img src="demo_files/mcsImg1.jpg" /></p>
+        <p>Cras venenatis condimentum nibh a mollis. Duis id sapien nibh. Vivamus porttitor, felis quis blandit tincidunt, erat magna scelerisque urna, a faucibus erat nisl eget nisl. Aliquam consequat turpis id velit egestas a posuere orci semper. Mauris suscipit erat quis urna adipiscing ultricies. In hac habitasse platea dictumst. Nulla scelerisque lorem quis dui sagittis egestas.</p>
+        <p>Etiam sed massa felis, aliquam pellentesque est.</p>
+        <p><img src="demo_files/mcsImg2.jpg" /></p>
+        <p>Nam eu arcu at purus tincidunt pharetra ultrices at ipsum. Mauris urna nunc, vulputate quis gravida in, pharetra id mauris. Ut sit amet mi dictum nulla lobortis adipiscing quis a nulla. Etiam diam ante, imperdiet vel scelerisque eget, venenatis non eros. Praesent ipsum sem, eleifend ut gravida eget, tristique id orci. Nam adipiscing, sem in mattis vulputate, risus libero adipiscing risus, eu molestie mi justo eget nulla.</p>
+        <p>Cras venenatis metus et urna egestas non laoreet orci rutrum. Pellentesque ullamcorper dictum nisl a tincidunt. Quisque et lacus quam, sed hendrerit mi. Mauris pretium, sapien et malesuada pulvinar, lorem leo viverra leo, et egestas mi nisl quis odio. </p>
+        <p>Aliquam erat volutpat. Sed urna arcu, tempus eu vulputate adipiscing, consectetur et orci. Vivamus congue, nunc vitae fringilla convallis, libero massa lacinia lorem, id convallis mauris elit ut leo. Nulla vel odio sem. Duis lorem urna, congue vitae rutrum sed, tincidunt vel tortor. In hac habitasse platea dictumst. Nunc vitae enim ante, vitae facilisis massa. Etiam sagittis sapien at nibh fermentum consectetur convallis lacus blandit.</p>
+        <p>Lorem ipsum dolor sit amet. Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit.</p>
+        <p>Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit. Nullam felis tellus, tristique nec egestas in, luctus sed diam. Suspendisse potenti. </p>
+        <p>Consectetur adipiscing elit. Nulla consectetur libero consectetur quam consequat nec tincidunt massa feugiat. Donec egestas mi turpis. Fusce adipiscing dui eu metus gravida vel facilisis ligula iaculis. Cras a rhoncus massa. Donec sed purus eget nunc placerat consequat.</p>
+        <p><img src="demo_files/mcsImg1.jpg" /></p>
+        <p>Cras venenatis condimentum nibh a mollis. Duis id sapien nibh. Vivamus porttitor, felis quis blandit tincidunt, erat magna scelerisque urna, a faucibus erat nisl eget nisl. Aliquam consequat turpis id velit egestas a posuere orci semper. Mauris suscipit erat quis urna adipiscing ultricies. In hac habitasse platea dictumst. Nulla scelerisque lorem quis dui sagittis egestas.</p>
+        <p>Etiam sed massa felis, aliquam pellentesque est.</p>
+        <p><img src="demo_files/mcsImg2.jpg" /></p>
+        <p>Nam eu arcu at purus tincidunt pharetra ultrices at ipsum. Mauris urna nunc, vulputate quis gravida in, pharetra id mauris. Ut sit amet mi dictum nulla lobortis adipiscing quis a nulla. Etiam diam ante, imperdiet vel scelerisque eget, venenatis non eros. Praesent ipsum sem, eleifend ut gravida eget, tristique id orci. Nam adipiscing, sem in mattis vulputate, risus libero adipiscing risus, eu molestie mi justo eget nulla.</p>
+        <p>Cras venenatis metus et urna egestas non laoreet orci rutrum. Pellentesque ullamcorper dictum nisl a tincidunt. Quisque et lacus quam, sed hendrerit mi. Mauris pretium, sapien et malesuada pulvinar, lorem leo viverra leo, et egestas mi nisl quis odio. </p>
+        <p>Aliquam erat volutpat. Sed urna arcu, tempus eu vulputate adipiscing, consectetur et orci. Vivamus congue, nunc vitae fringilla convallis, libero massa lacinia lorem, id convallis mauris elit ut leo. Nulla vel odio sem. Duis lorem urna, congue vitae rutrum sed, tincidunt vel tortor. In hac habitasse platea dictumst. Nunc vitae enim ante, vitae facilisis massa. Etiam sagittis sapien at nibh fermentum consectetur convallis lacus blandit.</p>
+      </div>
+    </div>
+  </div>
+  <!--end intro-->
+  <div class="section">
+    <div class="page" id="product">
+      <div class="content_page content">
+        <h2 class="title_page">Danh mục sản phẩm</h2>
+        <div class="categories_index">
+          <ul>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">May mặc</a></div>
+            </li>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Phòng cháy chữa cháy</a></div>
+            </li>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Bảo hộ lao động</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end product-->
+  <div class="section">
+    <div class="page" id="video">
+      <div class="content_page content">
+        <h2 class="title_page">Video</h2>
+        <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+          <tbody>
+            <tr>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=http://hoangkha.com/Data/video/MOV06684&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=http://hoangkha.com/Data/video/MOV06684&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer1">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06685&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06685&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --&gt;&lt;div&gt;&lt;h4&gt;Content on this page requires a newer version of Adobe Flash Player.&lt;/h4&gt;&lt;p&gt;&lt;a href=\&quot;http://www.adobe.com/go/getflashplayer\&quot;&gt;&lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+            </tr>
+            <tr>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer1">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06686&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06686&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --&gt;&lt;div&gt;&lt;h4&gt;Content on this page requires a newer version of Adobe Flash Player.&lt;/h4&gt;&lt;p&gt;&lt;a href=\&quot;http://www.adobe.com/go/getflashplayer\&quot;&gt;&lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer1">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06687&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06687&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --&gt;&lt;div&gt;&lt;h4&gt;Content on this page requires a newer version of Adobe Flash Player.&lt;/h4&gt;&lt;p&gt;&lt;a href=\&quot;http://www.adobe.com/go/getflashplayer\&quot;&gt;&lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+            </tr>
+            <tr>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer1">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06688&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06688&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --&gt;&lt;div&gt;&lt;h4&gt;Content on this page requires a newer version of Adobe Flash Player.&lt;/h4&gt;&lt;p&gt;&lt;a href=\&quot;http://www.adobe.com/go/getflashplayer\&quot;&gt;&lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer1">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06698&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06698&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --&gt;&lt;div&gt;&lt;h4&gt;Content on this page requires a newer version of Adobe Flash Player.&lt;/h4&gt;&lt;p&gt;&lt;a href=\&quot;http://www.adobe.com/go/getflashplayer\&quot;&gt;&lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+            </tr>
+            <tr>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer1">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06699&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=MOV06699&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --&gt;&lt;div&gt;&lt;h4&gt;Content on this page requires a newer version of Adobe Flash Player.&lt;/h4&gt;&lt;p&gt;&lt;a href=\&quot;http://www.adobe.com/go/getflashplayer\&quot;&gt;&lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+              <td width="50%" align="center" style="padding: 10px 0;"><object width="473" height="389" type="application/x-shockwave-flash" data="../../Data/video/FLVPlayer_Progressive.swf" id="FLVPlayer1">
+                  <param value="high" name="quality">
+                  <param value="opaque" name="wmode">
+                  <param value="noscale" name="scale">
+                  <param value="lt" name="salign">
+                  <param value="&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=Xe_cao_boc&amp;autoPlay=false&amp;autoRewind=false" name="FlashVars">
+                  <param value="8,0,0,0" name="swfversion">
+                  <param value="Scripts/expressInstall.swf" name="expressinstall">
+                  <param value="../../Data/video/FLVPlayer_Progressive.swf" name="src">
+                  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                  <!--[if !IE]>-->
+                  <img width="473" height="389" alt="" data-mce-json="{'video':{},'params':{'quality':'high','wmode':'opaque','scale':'noscale','salign':'lt','FlashVars':'&amp;MM_ComponentVersion=1&amp;skinName=http://hoangkha.com/Data/video/Halo_Skin_3&amp;streamName=Xe_cao_boc&amp;autoPlay=false&amp;autoRewind=false','swfversion':'8,0,0,0','expressinstall':'Scripts/expressInstall.swf','src':'../../Data/video/FLVPlayer_Progressive.swf'},'name':null,'object_html':' &lt;!--&lt;![endif]--&gt;&lt;!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --&gt;&lt;div&gt;&lt;h4&gt;Content on this page requires a newer version of Adobe Flash Player.&lt;/h4&gt;&lt;p&gt;&lt;a href=\&quot;http://www.adobe.com/go/getflashplayer\&quot;&gt;&lt;img src=\&quot;http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif\&quot; alt=\&quot;Get Adobe Flash player\&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;!--[if !IE]&gt;--&gt; ','hspace':null,'vspace':null,'align':null,'bgcolor':null}" class="mceItemMedia mceItemFlash" src="http://hoangkha.com/cpanel/tiny_mce/themes/advanced/img/trans.gif">
+                  <!--<![endif]-->
+                </object></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!--end video-->
+  <div class="section">
+    <div class="page" id="advisory">
+      <div class="content_page content">
+        <h2 class="title_page">Tư vấn</h2>
+        <div class="categories_index">
+          <ul>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1 Chuyên mục sản phẩm 1 Chuyên mục sản phẩm 1 Chuyên mục sản phẩm 1 Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="list_products.html"><img src="Images/product_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end advisory-->
+  <div class="section">
+    <div class="page" id="news">
+      <div class="content_page content">
+        <h2 class="title_page">Tin tức - sự kiện</h2>
+        <div class="categories_index">
+          <ul>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chương Trình Ưu Đãi " Tích Điểm Nhận Niềm Vui "</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Bỏ rơi tính mạng người lao động</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chương trình KM "VINH DANH NGƯỜI LAO ĐỘNG VIỆT"</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+          </ul>
+        </div>
+        <div class="pagination"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+      </div>
+    </div>
+  </div>
+  <!--end news-->
+  <div class="section">
+    <div class="page" id="agent">
+      <div class="content_page content">
+        <h2 class="title_page">Hệ thống phân phối</h2>
+        <div class="categories_index">
+          <ul>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="420" height="280" /></a>
+              <div class="product_name"><a href="news_detail.html">Chi nhánh</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="420" height="280" /></a>
+              <div class="product_name"><a href="news_detail.html">Khách hàng</a></div>
+            </li>
+          </ul>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <!--end agent-->
+  <div class="section">
+    <div class="page" id="recruitment">
+      <div class="content_page content">
+        <h2 class="title_page">Tuyển dụng</h2>
+        <div class="categories_index">
+          <ul>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chương Trình Ưu Đãi " Tích Điểm Nhận Niềm Vui "</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Bỏ rơi tính mạng người lao động</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chương trình KM "VINH DANH NGƯỜI LAO ĐỘNG VIỆT"</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+            <li> <a href="news_detail.html"><img src="Images/news_01.jpg" alt="" width="300" height="200" /></a>
+              <div class="product_name"><a href="list_products.html">Chuyên mục sản phẩm 1</a></div>
+            </li>
+          </ul>
+        </div>
+        <div class="pagination"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+      </div>
+    </div>
+  </div>
+  <!--end recruitment-->
+  <!--End Wrapper-->
+</div>
+<!-- Jquery Top Agents -->
+<div class="box" id="slider_partners">
+  <div class="page_inner"> <span class="title_partner">ĐỐI TÁC</span>
+    <ul id="mycarousel" class="jcarousel-skin-tango">
+      <li class="item"><a href=""><img src="Images/logo_partner01.jpg" width="90" height="70" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/logo_partner02.jpg" width="196" height="70" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/logo_partner03.jpg" width="110" height="70" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/logo_partner04.jpg" width="110" height="70" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/logo_partner01.jpg" width="90" height="70" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/logo_partner02.jpg" width="196" height="70" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/logo_partner03.jpg" width="110" height="70" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/logo_partner04.jpg" width="110" height="70" alt="" /></a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!--End Jquery Agents-->
+
+<script src="jquery.mousewheel.min.js"></script>
+<script>
+		$(document).ready(function() {
+
+			$('html, body, *').mousewheel(function(e, delta) {
+				this.scrollLeft -= (delta * 40);
+				e.preventDefault();
+			});
+
+		});
+	</script>
+<!-- Enable HTML5 for old browsers -->
+<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>
+<script src="jquery.mousewheel.min.js"></script>
+<script>
+		$(document).ready(function() {
+
+			$('html, body, *').mousewheel(function(e, delta) {
+				this.scrollLeft -= (delta * 40);
+				e.preventDefault();
+			});
+
+		});
+	</script>
+<!-- Enable HTML5 for old browsers -->
+<!--[if lte IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

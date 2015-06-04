@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Wood Lucky</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#ads_top').cycle({timeout:	   3000, fx: "scrollUp"});
+	});
+</script>
+<!-- Jquery Top Banner -->
+<link rel="stylesheet" href="Styles/coin-slider-styles.css" type="text/css" />
+<script type="text/javascript" src="Scripts/coin-slider.js"></script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {
+            jQuery('#mycarousel_ads').jcarousel({
+                auto: 2,
+				wrap: 'circular',
+				animation: 1000,
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            }); 			    				
+        });
+    </script>
+<!--Left Menu-->    
+<script type="text/javascript">
+$(document).ready(function() {
+		$("#topnav li a").not("#topnav li.active a").hover(
+		function() {
+            $(this).stop().animate({paddingLeft: "10px"}, 150);
+        }, 
+		function() {
+			$(this).animate({paddingLeft: 0}, 150);
+ 	});
+});
+</script>    
+</head>
+<body>
+<!--#begin Wrap-->
+<div class="wrap">
+  <!--#begin Header-->
+  <div id="header">
+    <div id="hotline">083-851-1278</div>
+    <a href="index.html" id="logo"><img src="images/logo.png" alt="Wood Lucky" /> </a>
+    <p class="text-logo"><a href=""><img src="images/name_company.png" alt="Wood Lucky" /></a></p>
+    <div class="cf"></div>
+  </div>
+  <!--#end Header-->
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li class="active"><a href="index.html">Trang chủ</a></li>
+      <li><a href="introduction.html" class="parent">Giới thiệu</a> </li>
+      <li><a href="list_news.html">Sản phẩm</a>
+        <ul>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Kho bãi</a></li>
+          <li><a href="#">THƯ VIỆN ẢNH</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Kho bãi</a></li>
+      <li><a href="gallery.html">THƯ VIỆN ẢNH</a></li>
+      <li><a href="list_news.html">Liên hệ</a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Menu-->
+    <div class="box_ct_index" id="topnav">
+      <ul>
+        <li class="active"><a href="">Giới thiệu công ty</a></li>
+        <li><a href="#">Hướng dẫn mua hàng</a> </li>
+        <li><a href="#">Hướng dẫn thanh toán</a></li>
+        <li><a href="#">Trả hàng</a></li>
+      </ul>
+      <div class="cf"></div>
+    </div>
+    <!--End Left Menu-->
+    <!--List News-->
+    <div id="right_col">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      <div class="box_Tab">Tên chuyên mục</div>
+      <div class="box_ct" id="list_news">
+        <ul>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+          <li> <a href="news_detail.html"><img class="img_general" width="150" alt="" src="http://www.thompsonhardwoods.com/skins/userfiles/images/CYPRESS-thumbnail.jpg" /></a>
+            <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+            <p class="date">24-01-2014 10:27</p>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+        </ul>
+        <div class="cf"></div>
+        <div class="navigation"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+      </div>
+    </div>
+    <!--End List News-->
+    <div class="cf"></div>
+  </div>
+  <!--End Main Content-->
+</div>
+<!-- .fluid_container -->
+<!-- Jquery Ads -->
+<div class="box" id="slide_ads">
+  <div class="wrap">
+    <ul id="mycarousel_ads" class="jcarousel-skin-tango">
+      <li class="item"><a href=""><img src="Images/product01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product03.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product03.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/product03.jpg" alt="" /></a></li>
+    </ul>
+  </div>
+</div>
+<!--End Jquery Ads-->
+<!-- Begin of footer-->
+<div id="footer">
+  <div class="wrap">
+    <div id="info_company">
+      <p><strong>CÔNG TY TNHH MTV GỖ MAY MẮN</strong></p>
+      <p>Địa chỉ : 184 Dương Bá Trạc, Phường 2, Quận 8, TP.HCM</p>
+      <p>Tel: 083-851-1278&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax: 083-851-1279</p>
+      <p>Email: <a href="mailto:thu@luckywoodcorp.com">thu@luckywoodcorp.com</a>&nbsp;&nbsp;&nbsp;&nbsp;Skype: thu-luckywood</p>
+      <p>Website: <a href="http://www.luckywoodcorp.com">www.luckywoodcorp.com</a></p>
+    </div>
+    <div id="access_status"><img src="Images/status_access.jpg" alt="" /></div>
+    <div class="cf"></div>
+    <div id="copyright">
+      <p>Copyright © 2014 <strong>Luckywood Company</strong>, Inc. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+<!-- End of footer-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+<script src="Scripts/jquery.lazyload.js?v=1.9.1"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        $("#main img").lazyload({
+            placeholder: "Images/grey.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>

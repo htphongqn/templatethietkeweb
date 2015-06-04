@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Việt Thành</title>
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Start Slider Scripts -->
+<link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="Scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!--Slide chay ngang-->
+<link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+   /* carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });*/
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() { 
+	jQuery('#mycarousel_P, #mycarousel_partners').jcarousel({
+        auto: 3,
+		animation: 1000,
+        wrap: 'circular',
+        scroll: 1,
+        initCallback: mycarousel_initCallback
+    });  
+});
+</script>
+</head>
+<body>
+<!--#begin Header-->
+<div class="wrap">
+  <div id="header"> <a href="index.html" id="logo"><img src="images/logo.png" alt="Việt Thành" /> </a>
+    <p class="text-logo"><a href=""><img src="images/slogan.png" alt="Việt Thành" /></a></p>
+    <div id="header_right">
+      <div id="lang"> <img src="Images/vn_icon.png" alt="Tieng Viet" id="tv"/> <img src="Images/en_icon.png" alt="Tieng Anh" id="ta"/> </div>
+      <!--Search Tool-->
+      <div id="search_form"><a class="trigger"><span class="search_icon"></span></a>
+        <div id="dpop" class="search_box"><span class="icon_point"></span>
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Từ khóa tìm kiếm" />
+          <a href="" class="submitSearch"><span class="icon_search"></span></a> </div>
+        <!--End Search Tool-->
+      </div>
+    </div>
+    <!--#end Header-->
+    <div class="cf"></div>
+  </div>
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li><a href="introduction.html">TRANG CHỦ</a> </li>
+      <li><a href="introduction.html">GIỚI THIỆU</a> </li>
+      <li><a href="list_products.html">SẢN PHẨM</a>
+        <ul>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Trang điểm</a></li>
+          <li><a href="#">Nước hoa</a></li>
+          <li><a href="list_news.html">Tin tức</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">DỊCH VỤ</a></li>
+      <li><a href="#">HỖ TRỢ KHÁCH HÀNG</a></li>
+      <li><a href="#">TIN TỨC</a></li>
+      <li><a href="list_news.html">LIÊN HỆ</a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <!--Main Content-->
+  <div id="main">
+    <!--Left Column-->
+    <div class="col_left">
+      <!--Left Menu-->
+      <div class="box">
+        <div class="box_Tab_l"><span class="center_tab"><b>DANH MỤC SẢN PHẨM</b></span></div>
+        <div class="box_ct" id="topnav">
+          <ul>
+            <li class="active"><a href="list_products.html">CÀ PHÊ</a>
+              <ul class="children">
+                <li><a href="#">Cà Phê Giảm Cân</a></li>
+                <li><a href="#">Cà Phê Hạt</a></li>
+                <li><a href="#">Cà Phê Hòa Tan</a></li>
+                <li><a href="#">Cà Phê Lon</a></li>
+                <li><a href="#">Cà Phê Phin</a></li>
+                <li><a href="#">Cà Phê Trung Nguyên</a></li>
+                <li><a href="#">Cà Phê Lak</a></li>
+                <li><a href="#">Cà Phê Nestle</a></li>
+              </ul>
+            </li>
+            <li><a href="list_products.html">RAU CỦ QUẢ</a></li>
+            <li><a href="list_products.html">THỰC PHẨM TƯƠI SỐNG</a></li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Left Menu-->
+      <!--Video-->
+      <div class="box">
+        <div class="box_Tab_l"><span class="center_tab"><b>VIDEO</b></span></div>
+        <div class="box_ct" id="video"> <img src="Images/video.jpg" alt="" width="214" />
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Video-->
+      <!--Status-->
+      <div class="box">
+        <div class="box_Tab_l"><span class="center_tab"><b>THỐNG KÊ TRUY CẬP</b></span></div>
+        <div class="box_ct" id="access_status">
+          <p><span class="icon_status online"></span>Đang truy cập: <b>3</b></p>
+          <p><span class="icon_status s_today"></span>Hôm nay: <b>10</b></p>
+          <p><span class="icon_status s_month"></span>Tháng này: <b>10000</b></p>
+          <p><span class="icon_status visited"></span>Tổng lượt truy cập: <b>50000</b></p>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Status-->
+      <!--News Home-->
+      <div class="box">
+        <div class="box_Tab_l"><span class="center_tab"><b>TIN TỨC</b></span></div>
+        <div class="box_ct" id="news_home">
+          <ul>
+            <li><img src="Images/product03.jpg" alt="" width="50" class="img_general" /><a title="" href="" class="news_title">Những thực phẩm tươi sống đe dọa tính mạng</a></li>
+            <li><img src="Images/product03.jpg" alt="" width="50" class="img_general" /><a title="" href="" class="news_title">Những thực phẩm tươi sống đe dọa tính mạng</a></li>
+            <li><img src="Images/product03.jpg" alt="" width="50" class="img_general" /><a title="" href="" class="news_title">Những thực phẩm tươi sống đe dọa tính mạng</a></li>
+            <li><img src="Images/product03.jpg" alt="" width="50" class="img_general" /><a title="" href="" class="news_title">Những thực phẩm tươi sống đe dọa tính mạng</a></li>
+            <li><img src="Images/product03.jpg" alt="" width="50" class="img_general" /><a title="" href="" class="news_title">Những thực phẩm tươi sống đe dọa tính mạng</a></li>
+          </ul>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End News Home-->
+      <!--Ads-->
+      <div class="ads"> <img src="Images/ads.jpg" alt="" /> </div>
+      <!--End Ads-->
+    </div>
+    <!--Left Column-->
+    <!--Right Column-->
+    <div class="col_right">
+      <div class="path"><a href="index.html"><img src="Images/icon_home.png" alt="" /></a> » <a href="list_news.html">Tin tức</a></div>
+      <!--List News-->
+      <div class="box">
+        <div class="box_Tab_r"><span class="tab_straight">Tin tức</span></div>
+        <div class="box_ct box_ct_main" id="list_news">
+          <ul>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+            <li>
+              <h2 class="h2Title"><a href="news_detail.html">Sữa rửa mặt làm sạch nhẹ nhàng</a></h2>
+              <p class="date">24-01-2014 10:27</p>
+              <a href="news_detail.html"><img class="img_general" alt="" src="Images/product01.jpg" /></a>
+              <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+            </li>
+          </ul>
+          <div class="navigation"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End List News-->
+    </div>
+    <!--Right Column-->
+    <div class="cf"></div>
+  </div>
+  <!--End Main Content-->
+  <!-- Jquery Gallery Popular Products -->
+  <div id="partners"> <span class="title_partners">ĐỐI TÁC</span>
+    <ul id="mycarousel_partners" class="jcarousel-skin-tango">
+      <li class="item"><a href=""><img src="Images/partner01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner03.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner03.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner03.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner01.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner02.jpg" alt="" /></a></li>
+      <li class="item"><a href=""><img src="Images/partner03.jpg" alt="" /></a></li>
+    </ul>
+  </div>
+  <!--End Jquery Gallery Popular Products-->
+</div>
+<div class="cf"></div>
+<!--Footer-->
+<div id="footer">
+  <div class="wrap">
+    <div id="info_footer">
+      <p><strong>CÔNG TY TNHH BAO BÌ GIẤY Việt Thành</strong></p>
+      <p>Địa chỉ: 178 – 182 Đường số 55 Khu phố 9, P.Tân Tạo, Q. Bình Tân, Tp.HCM</p>
+      <p>Điện thoại: 08. 3754.5308  -  Fax: 08. 3754.5309 </p>
+    </div>
+    <div id="social_network"><a href="" title="Facebook"><span class="facebook"></span></a><a href="" title="Twitter"><span class="twitter"></span></a><a href=""title="Google+"><span class="g_plus"></span></a><a href=""title="Pinterest"><span class="pinterest"></span></a><a href=""title="LinkedIn"><span class="linkedin"></span></a><a href=""title="Youtube"><span class="you_tube"></span></a></div>
+    <div id="copyright">
+      <p>Copyright ©2014 vt-foods.com</p>
+    </div>
+    <div class="cf"></div>
+  </div>
+</div>
+<!--End Footer-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

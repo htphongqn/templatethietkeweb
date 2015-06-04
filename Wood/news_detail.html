@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Wood</title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/template.css" type="text/css" />
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!--Slideshow Fade-->
+<script type="text/javascript" src="Scripts/cycle-plugin.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
+    $(pager).find('a').removeClass('activeLI') 
+        .filter('a:eq('+currSlideIndex+')').addClass('activeLI'); 
+}; 
+
+$('#slide_news').cycle({
+	fx: 'scrollHorz',
+	speed: 1000,
+	timeout:  0,
+	next:   '#next1', 
+    prev:   '#prev1',
+    after: function(currSlideElement, nextSlideElement, options, forwardFlag) {
+    $('#counter').text((options.currSlide + 1) + '/' + (options.slideCount));
+ }
+});
+	$('#fade_ads_right').cycle({
+		fx: 'all',
+        timeout: 0,
+		next:   '#next2', 
+    	prev:   '#prev2'
+    });
+	});
+</script>
+<!-- Skitter Styles -->
+<link href="Styles/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+<!-- Skitter JS -->
+<script type="text/javascript" language="javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" language="javascript" src="Scripts/jquery.skitter.min.js"></script>
+<!-- Init Skitter -->
+<script type="text/javascript" language="javascript">
+		$(document).ready(function() {
+			$('.box_skitter_large').skitter({
+				theme: 'clean',
+				numbers_align: 'center',
+				progressbar: false, 
+				dots: true, 
+				preview: true,
+				animation: 'randomSmart',
+				interval: 2000
+			});
+		});
+	</script>
+<!---Hoz menu-->
+<link href="Styles/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/ddsmoothmenu.js" type='text/javascript'></script>
+<script type='text/javascript'>
+ 
+ddsmoothmenu.init({
+mainmenuid: "smoothmenu1", //menu DIV id
+orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+classname: 'ddsmoothmenu', //class added to menu's outer DIV
+//customtheme: ["#1c5a80", "#18374a"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<!-- Owl Carousel Assets -->
+<link href="Styles/owl.carousel.css" rel="stylesheet">
+<link href="Styles/owl.theme.css" rel="stylesheet">
+<script src="Scripts/owl.carousel.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	<!-- Owl Carousel Assets -->    
+      $("#owl-demo").owlCarousel({
+        navigation : true
+      });
+	  $("#owl-demo1").owlCarousel({
+		items : 5,
+		itemsDesktop : [1024, 5],
+		itemsDesktopSmall : [979, 5],
+        navigation : true
+      });	  
+});	
+</script>
+</head>
+<body id="bd">
+<div class="wrap">
+  <!--Main Menu-->
+  <div id="smoothmenu1" class="ddsmoothmenu">
+    <ul>
+      <li><a href="index.html" class="active">Trang chủ</a></li>
+      <li><a href="introduction.html" class="parent">Giới thiệu</a> </li>
+      <li><a href="list_products.html">Sản phẩm</a>
+        <ul>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 7 - 2013</a>
+            <ul>
+              <li><a href="#">Sub Item 1.1</a></li>
+              <li><a href="#">Sub Item 1.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="parent">LOOKBOOK THÁNG 6-2013</a>
+            <ul>
+              <li><a href="#">Sub Item 2.1</a></li>
+              <li><a href="#">Sub Item 2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">HỘP SỐ</a></li>
+          <li><a href="#">GẦM XE</a></li>
+          <li><a href="#">THÂN XE</a></li>
+          <li><a href="#">NỘI THẤT</a></li>
+          <li><a href="#">HỆ THỐNG ĐIỆN</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Gia công</a>
+        <ul>
+          <li><a href="#">Sub Item 2.1</a></li>
+          <li><a href="#">Sub Item 2.2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Dịch vụ tư vấn</a>
+        <ul>
+          <li><a href="#">Sub Item 2.1</a></li>
+          <li><a href="#">Sub Item 2.2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Công trình</a>
+        <ul>
+          <li><a href="#">Sub Item 2.1</a></li>
+          <li><a href="#">Sub Item 2.2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Đối tác</a></li>
+      <li><a href="list_news.html">Tin tức</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+  </div>
+  <!--End Main Menu-->
+  <!--Slider banner-->
+  <div class="box_skitter box_skitter_large">
+    <ul>
+      <li><a href="http://viva-vietnam.blogspot.com"><img src="Images/slide1.jpg" alt="" title=""/></a></li>
+      <li><a href="http://shareallworld.info/search/label/Tourist"><img src="http://sonytune.vn/wp-content/uploads/2014/05/1.jpg" alt="" title="" /></a></li>
+      <li><a href="http://shareallworld.info/search/label/Movies"><img src="http://xdbjsc.com/portal/Sites/141/Uploads/slide-1.gif" alt="" title=""/></a></li>
+      <li><a href="http://shareallworld.info/search/label/MMO"><img src="http://xdbjsc.com/portal/Sites/141/Uploads/slide.png" alt="" title="" /></a></li>
+    </ul>
+  </div>
+  <!-- End Slider banner -->
+  <!-- #Main -->
+  <div id="main">
+    <!--Left Menu-->
+    <div id="topnav" class="fl">
+      <ul>
+        <li class="active"><a href="">Giới thiệu công ty</a></li>
+        <li><a href="#">Hướng dẫn mua hàng</a> </li>
+        <li><a href="#">Hướng dẫn thanh toán</a></li>
+        <li><a href="#">Trả hàng</a></li>
+      </ul>
+      <div class="cf"></div>
+    </div>
+    <!--End Left Menu-->
+    <!--Right Column-->
+    <div id="right_col" class="fr">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div class="box_ct" id="detail_news">
+          <div id="info_g">
+            <h2 class="h2Title">Thuốc diệt côn trùng Crack Down</h2>
+            <p class="date">06/05/2013</p>
+            <div><strong>Thuốc diệt   côn trùng Crack Down là chế phẩm sinh học chuyên dùng để diệt các loại   côn trùng như: ruồi, muỗi, kiến, gián, mọt... của hãng Bayer (Đức).</strong></div>
+            <div>
+              <p> Sau   khi phun xịt thuốc sẽ lưu giữ lại rất lâu trên bề mặt nên có hiệu quả   lâu dài. Đặc biệt, thuốc diệt côn trùng Crack Down 10 SC (Bayer, Đức)   hầu như vô hại cho con người theo tiêu chuẩn Châu Âu.</p>
+              <p> <img alt="" src="http://bayervietnam.com/uploads/images/Crac%20Down_1.jpg" /></p>
+              <p> <em><strong>Sản phẩm do <a href="http://www.bayervietnam.com">www.bayervietnam.com</a> phân phối sỉ và lẻ trên toàn quốc.</strong></em></p>
+              <p> <strong>* Thành phần: </strong>Deltamethrin 1% w/v</p>
+              <p> <strong>* Công dụng: </strong></p>
+              <p> -   Là loại thuốc chuyên dùng để diệt ruồi, muỗi, gián, kiến. Thuốc có tác   dụng tồn lưu lâu trên bề mặt sau khi xử lý, không làm hoen ố mặt xử lý.</p>
+              <p> - Phân hủy dễ dàng theo hướng sinh học: không tích tụ trong môi trường và hầu như vô hại khi sử dụng.</p>
+              <p> - Hoạt tính tồn lưu mạnh mẽ và lâu dài trên các bề mặt với liều lượng sử dụng thấp. Có tính phổ rộng.</p>
+              <p> -   Dùng để phun tồn lưu lên tường, vách, kho vựa hoặc bao bì chứa các loại   hạt nông sản để phòng trừ các loại côn trùng phá hoại nông sản tồn trữ   như: mọt đục hạ, đục hạt bắp, mọt, mọt thuốc lá.</p>
+              <p> <strong>* Hướng dẫn sử dụng:</strong></p>
+              <p> - Diệt côn trùng bò trong nhà (gián, rệp, bọ chét): pha 150ml thuôc với 5 lít nước sạch.</p>
+              <p> - Diệt côn trùng trong kho vựa: pha 150ml thuốc với 5 lít nước sạch.</p>
+              <p> - Diệt côn trùng bay (ruồi, muỗi, ong, bướm đêm): pha 75ml thuốc với 5 lít nước.</p>
+              <p> - Tỷ lệ phun: cứ 5 lít dung dịch thuốc diệt côn trùng Crack Down 10 SC đã pha phun cho 100 - 150 m2.</p>
+              <p> <strong>* Đóng chai: </strong>thuốc diệt côn trùng Crack Downđược vô chai 1 lít</p>
+              <p> <strong>* Chú ý về an toàn: </strong></p>
+              <p> - Thuốc diệt côn trùng Crackdown 10 SC có thể gây ngứa da, mắt và niêm mạc mũi tạm thời.</p>
+              <p> -   Tránh làm việc trong hơi sương thuốc, nếu không phải mặc quần áo bảo   hộ, mang găng tay, khẩu trang, kính bảo vệ mắt khi sử dụng thuốc.</p>
+              <p> - Không ăn uống, không hút thuốc khi sử dụng hóa chất.</p>
+              <p> - Sau khi sử dụng thuốc xong phải thay ngay quần áo và tắm giặt kỹ.</p>
+              <p> - Nguy hiểm cho cá, không đổ hóa chất làm ô nhiễm ao hồ, kênh mương.</p>
+              <p> <strong>* Bảo quản: </strong></p>
+              <p> - Cất giữ thuốc trong chai lọ gốc, đậy chặt nắp, để ở nơi nhiệt độ không quá 35oC.</p>
+              <p> - Để xa tầm với của trẻ em.</p>
+              <p> - Không giữ hóa chất đã pha sẵn, khi cần dùng mới pha thuốc.</p>
+              <p> <strong>* Biện pháp sơ cấp cứu: </strong></p>
+              <p> - Rửa ngay thuốc văng vào mắt, da với nhiều nước.</p>
+              <p> - Nếu nuốt phải thuốc: uống thật nhiều nước và đưa ngay đến cơ quan y tế.</p>
+              <p> - Thuốc giải độc: Atropine, Diazepam, điều trị theo triệu chứng.</p>
+            </div>
+            <p>&nbsp;</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+    </div>
+    <!--end Right Column-->
+  </div>
+  <!--End Main-->
+  <!--Footer-->
+  <div id="footer">
+    <div id="copyright">Developed by wood @gmail.com</div>
+  </div>
+  <!--End Footer-->
+</div>
+<!--End Wrap-->
+<!-- back to top -->
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

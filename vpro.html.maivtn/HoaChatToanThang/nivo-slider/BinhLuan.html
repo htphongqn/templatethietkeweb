@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<title>Binh luan</title>
+<style>
+:after, :before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+}
+.commentPost {
+	width: 100%;
+	float: left
+}
+.itemFeedback {
+	float: left;
+	width: 600px;
+}
+.postActor {
+	width: 10%;
+	float: left
+}
+.postActor img {
+	max-width: 98%
+}
+.postBody {
+	width: 90%;
+	float: left;
+	position: relative;
+}
+.postContainer {
+	width: 100%;
+	float: left
+}
+.innerPostContainer {
+	padding: 10px;
+	padding-top: 0;
+}
+.nameActor b {
+	color: #3B7DC5;
+}
+.nameActor span {
+	color: #aaa
+}
+.contentP {
+	color: #000
+}
+.toolPost a, .toolPost span {
+	margin-left: 5px;
+	text-decoration: none
+}
+.toolPost a, .likeP {
+	color: #3B7DC5;
+}
+.iconLike {
+	background: url(images/likebtn.png) no-repeat;
+	/*	width: 12px;
+	height: 12px;*/
+	overflow: hidden;
+	padding: 2px 10px;
+	padding-bottom: 0;
+}
+.postDateTime {
+	color: #aaa
+}
+.postReplies {
+	width: 100%;
+	float: left
+}
+.innerReplies {
+	padding: 10px;
+}
+.itemReplies {
+	width: 100%;
+	float: left;
+}
+.actorAdd:before {
+	content: "·  ";
+	color: #666;
+}
+.toolPost a+a:before, .toolPost a+span:before, .toolPost span+span:before {
+	content: " · ";
+	color: #666;
+}
+/*commentForm*/
+.commentForm {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.innerCommentForm {
+	padding: 10px;
+}
+.photoActor {
+	width: 10%;
+	float: left
+}
+.inputNameAdd {
+	float: left;
+	width: 90%
+}
+.inputGroup {
+	width: 50%;
+	float: left
+}
+.inputAdd, .inputName {
+	border: solid 1px #ccc;
+	text-indent: 10px;
+	height: 25px;
+	width: 90%;
+}
+.inputName {
+}
+.inputAdd {
+}
+.inputMess {
+	width: 100%;
+	float: left
+}
+.innerMess {
+	padding: 10px 0;
+}
+.txtMess {
+	float: right;
+	min-height: 50px;
+	border: solid 1px #ccc;
+	resize: vertical;
+	width: 99%;
+	margin-bottom: 10px;
+}
+.btnComment {
+	padding: 5px 15px;
+	background: #999;
+	color: #000;
+	float: right;
+}
+.repliesForm {
+	width: 100%;
+	float: left
+}
+.txtR{ padding-bottom:10px; color:#666;}
+.repliesBox{ position:relative;}
+.popupRepliesBox {
+	border-collapse: collapse;
+	display: none;
+	font-weight: bold;
+	line-height: 20px;
+	position:absolute;
+	width: 95%;
+	padding:1%;
+	left: 0px;
+	top:40px;
+	z-index: 999999;
+	background:#FFF;
+	overflow:hidden;
+	border:solid 1px #ccc;
+}
+.closeBtn {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: #333;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	line-height: 20px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+</style>
+</head>
+
+<body style="width:700px; height:1000px">
+<div class="commentForm">
+  <div class="innerCommentForm">
+    <div class="photoActor"><img src="images/userImgDefault.jpg" /></div>
+    <div class="inputNameAdd">
+      <div class="inputGroup"> Họ tên:
+        <input class="inputName" name="" type="text" placeholder="Nhập họ tên của bạn"/>
+      </div>
+      <div class="inputGroup"> Địa chỉ:
+        <input class="inputAdd" name="" type="text" placeholder="Nhập địa chỉ của bạn" />
+      </div>
+    </div>
+    <div class="inputMess">
+      <div class="innerMess">
+        <textarea class="txtMess" name="" cols="" rows="" placeholder="Nhập bình luận của bạn">
+
+</textarea>
+      </div>
+      <div class="btnGroup"> <a class="btnComment">Gửi bình luận</a> </div>
+    </div>
+  </div>
+</div>
+<div class="commentPost">
+  <div class="itemFeedback"> 
+    <!--Hinh dai dien nguoi binh luan-->
+    <div class="postActor"><img src="images/userImgDefault.jpg" /></div>
+    <!--End hinh dai dien nguoi binh luan--> 
+    <!--Noi dung binh luan-->
+    <div class="postBody">
+      <div class="postContainer">
+        <div class="innerPostContainer">
+          <div class="nameActor"> <b>Nhung Đào</b> <span class="actorAdd">Làm việc tại Thành phố Hồ Chí Minh</span> </div>
+          <div class="contentP"> Nắm bắt thêm kiến thức mới........ vì mình mới tập tành làm SEO </div>
+          <div class="toolPost"> <a href="#" class="trigger">Trả lời</a> <a href="#">Thích</a> <span ="likeP"><i class="iconLike"></i> 2</span> <span class="postDateTime">24 Tháng 6 2014 lúc 20:34</span></div>
+          <div class="popupRepliesBox"> <span class="closeBtn">x</span>
+          <div class="txtR">Trả lời binh luận</div>
+            <div class="dropdown dropdown-items dropdown-right">
+              <div class="repliesForm">
+                <div class="innerRepliesForm">
+                  <div class="photoActor"><img src="images/userImgDefault.jpg" /></div>
+                  <div class="inputNameAdd">
+                    <div class="inputGroup"> Họ tên:
+                      <input class="inputName" name="" type="text" placeholder="Nhập họ tên"/>
+                    </div>
+                    <div class="inputGroup"> Địa chỉ:
+                      <input class="inputAdd" name="" type="text" placeholder="Nhập địa chỉ" />
+                    </div>
+                  </div>
+                  <div class="inputMess">
+                    <div class="innerMess">
+                      <textarea class="txtMess" name="" cols="" rows="" placeholder="Nhập bình luận"></textarea>
+                    </div>
+                    <div class="btnGroup"> <a class="btnComment">Gửi bình luận</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="postReplies">
+            <div class="innerReplies">
+              <div class="itemReplies">
+                <div class="postActor"><img src="images/userImgDefault.jpg" /></div>
+                <div class="postBody">
+                  <div class="postContainer">
+                    <div class="innerPostContainer">
+                      <div class="nameActor"><b>Con Cung</b> <span class="actorAdd">BK TPHCM</span></div>
+                      <div class="contentP">chị ơi em làm web bên chị SEO luôn cho bên em đk k chị</div>
+                      <div class="toolPost"> <a href="#">Thích</a> <span><i class="iconLike"></i> 2</span> <span class="postDateTime">24 Tháng 6 2014 lúc 20:37</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="itemReplies">
+                <div class="postActor"><img src="images/userImgDefault.jpg" /></div>
+                <div class="postBody">
+                  <div class="postContainer">
+                    <div class="innerPostContainer">
+                      <div class="nameActor"><b>Nhung Đào</b> <span class="actorAdd">BK TPHCM</span></div>
+                      <div class="contentP">Đúng là seo nội dung là quan trọng nhất</div>
+                      <div class="toolPost"><a href="#">Thích</a> <span><i class="iconLike"></i> 2</span> <span class="postDateTime">25 Tháng 6 2014 lúc 5:22</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End noi dung binh luan-->
+  <div class="itemFeedback"> 
+    <!--Hinh dai dien nguoi binh luan-->
+    <div class="postActor"><img src="images/userImgDefault.jpg" /></div>
+    <!--End hinh dai dien nguoi binh luan--> 
+    <!--Noi dung binh luan-->
+    <div class="postBody">
+      <div class="postContainer">
+        <div class="innerPostContainer">
+          <div class="nameActor"><b>Thanh Nguyen</b> <span class="actorAdd"></span></div>
+          <div class="contentP">bài viết quá hay.... web chuẩn seo</div>
+          <div class="toolPost"> <a href="#" class="trigger">Trả lời</a> <a href="#">Thích</a> <span><i class="iconLike"></i> 2</span> <span class="postDateTime">25 Tháng 6 2014 lúc 5:22</span> </div>
+          <div class="popupRepliesBox"> <span class="closeBtn">x</span>
+            <div class="dropdown dropdown-items dropdown-right">
+              <div class="repliesForm">
+                <div class="innerRepliesForm">
+                  <div class="photoActor"><img src="images/userImgDefault.jpg" /></div>
+                  <div class="inputNameAdd">
+                    <div class="inputGroup"> Họ tên:
+                      <input class="inputName" name="" type="text" placeholder="Nhập họ tên"/>
+                    </div>
+                    <div class="inputGroup"> Địa chỉ:
+                      <input class="inputAdd" name="" type="text" placeholder="Nhập địa chỉ" />
+                    </div>
+                  </div>
+                  <div class="inputMess">
+                    <div class="innerMess">
+                      <textarea class="txtMess" name="" cols="" rows="" placeholder="Nhập bình luận"></textarea>
+                    </div>
+                    <div class="btnGroup"> <a class="btnComment">Gửi bình luận</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Noi dung binh luan--> 
+  </div>
+  <div class="itemFeedback"> 
+    <!--Hinh dai dien nguoi binh luan-->
+    <div class="postActor"><img src="images/userImgDefault.jpg" /></div>
+    <!--End hinh dai dien nguoi binh luan--> 
+    <!--Noi dung binh luan-->
+    <div class="postBody">
+      <div class="postContainer">
+        <div class="innerPostContainer">
+          <div class="nameActor"><b>Đồng Hồ Atlantic</b> <span class="actorAdd"></span></div>
+          <div class="contentP">Admin cho hoi khi nao khai giang khoa hoc seo</div>
+          <div class="toolPost"> <a href="#" class="trigger">Trả lời</a> <a href="#">Thích</a> <span><i class="iconLike"></i> 2</span> <span class="postDateTime">25 Tháng 6 2014 lúc 5:22</span> </div>
+          <div class="popupRepliesBox"> <span class="closeBtn">x</span>
+            <div class="dropdown dropdown-items dropdown-right">
+              <div class="repliesForm">
+                <div class="innerRepliesForm">
+                  <div class="photoActor"><img src="images/userImgDefault.jpg" /></div>
+                  <div class="inputNameAdd">
+                    <div class="inputGroup"> Họ tên:
+                      <input class="inputName" name="" type="text" placeholder="Nhập họ tên"/>
+                    </div>
+                    <div class="inputGroup"> Địa chỉ:
+                      <input class="inputAdd" name="" type="text" placeholder="Nhập địa chỉ" />
+                    </div>
+                  </div>
+                  <div class="inputMess">
+                    <div class="innerMess">
+                      <textarea class="txtMess" name="" cols="" rows="" placeholder="Nhập bình luận"></textarea>
+                    </div>
+                    <div class="btnGroup"> <a class="btnComment">Gửi bình luận</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Noi dung binh luan--> 
+  </div>
+</div>
+ 
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupRepliesBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.trigger').click(function () {
+	  $(this).parent('.toolPost').next('.popupRepliesBox').slideToggle();
+	 // $(this).parent('.toolPost').next('.postReplies').find('.popupRepliesBox').slideToggle();
+	  
+  });
+  $('.closeBtn').click(function () {
+	  $('.popupRepliesBox').slideUp('fast');
+  });
+}); 
+</script>
+ 
+</body>
+</html>

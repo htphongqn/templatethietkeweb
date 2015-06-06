@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/detailPro.css"/>
+<link rel="stylesheet" type="text/css" href="styles/detailNews.css"/>
+</head>
+<body>
+
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Hỗ trợ trực tuyến</div>
+    <div class="boxInnerHT">
+      <div class="row hotline"> <b>0937.221.671</b> <br />
+        Mr.Hiền <span class='nick_chat'><a href='skype:trandinhmy.com?call' title='Mr. Mỹ'><img src='http://mystatus.skype.com/smallclassic/trandinhmy.com' title=Mr. Mỹ  alt='' ></a></span> <span class='nick_chat'><a href='ymsgr:sendim?trandinhmy4323' title='Mr. Mỹ'><img src='http://opi.yahoo.com/online?u=trandinhmy4323&m=g&t=2' width='114px' height='20px'   /></a></span> </div>
+      <div class="row"> </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+<!--ho tro-->
+
+<div class="wrap wgHeader">
+  <div class="container">
+    <div class="rowmn headerBox">
+      <div class="innerHeaderBox">
+        <div class="fleft clsLogo "> <a href="index.html"><img src="data/logo.png" /></a> </div>
+        <div class="fleft bannerHeader"> </div>
+        <div class="hotlineBox"> <i class="glyphicon glyphicon-earphone"></i> <b> 0937 911 678</b> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wNavx">
+  <div class="container">
+    <div class="rowmn menuBox">
+      <div class="navx">
+        <ul>
+          <li class="active"><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="products.html">Sản phẩm</a>
+            <ul>
+              <li><a href="#">Sub menu level 3</a></li>
+              <li><a href="#">Sub 3</a></li>
+              <li><a href="#">Sub 3s</a></li>
+            </ul>
+          </li>
+          <li><a href="#">DP-Thương hiệu</a></li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Tư vấn sản phẩm</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <div class=" container">
+    <div class="rowmn">
+      <div class=" col12 slideBox">
+        <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script> 
+        <script>
+				//slider nivo
+					 $(window).load(function() {
+						$('#slider').nivoSlider();
+					});
+				</script>
+        <div class="slider_main">
+          <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider"> <a href=""> <img src="data/slide1.png" /></a> <a href=""><img src="data/slide2.png" /></a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wMain">
+  <div class="container">
+    <div class="rowmn">
+      <div class="col3 sidebar sideLeft">
+        <div class="box">
+          <div class="headingBox"> <span>Danh mục sản phẩm</span> </div>
+          <div class="innerBox">
+            <div class="navy">
+              <ul>
+                <li><a>Nhóm sản phẩm</a></li>
+                <li><a>Tư vấn sản phẩm</a></li>
+                <li><a>Thương hiệu</a></li>
+                <li><a>Nhóm sản phẩm</a></li>
+                <li><a>Sản phẩm mới</a></li>
+                <li><a>Sản phẩm bán chạy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headingBox"> <span>Tìm kiếm</span> </div>
+          <div class="innerBox">
+            <div class="searchBox">
+              <input class="inputS" id="txtSearch" placeholder="Nhập từ khoá.." />
+              <a class=" btn btn-warning">Tìm kiếm</a> </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headingBox"> <span>Hỗ trợ trực tuyến</span> </div>
+          <div class="innerBox">
+            <div class="htttBox">
+              <p>Hotline: <b class="hlNumber">0912 888 444</b></p>
+              <p>Tư vấn KH: <b class="hlNumber">0927 888 999</b> </p>
+              <p>Đặt hàng: <b class="hlNumber">0211 3888 999</b></p>
+              <p>Bảo hành: <b class="hlNumber">0912 888 442</b></p>
+              <span class="imghttt"><img src="images/yahoo_onl.png" /> </span> <span class="imghttt"><img src="images/skype.png" /></span> <span class="imghttt"><img src="images/yahoo_onl.png" /> </span> <span class="imghttt"><img src="images/skype.png" /></span> </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+		$(document).ready(function(){
+		  $('.slider4').bxSlider({
+			 mode: 'vertical',
+			slideWidth: 400,
+			minSlides: 2,
+			moveSlides: 1,
+			maxSlides: 4,
+			slideMargin: 5,
+			auto: true,
+			speed: 1000,
+			controls: true,
+			pause: 4000,
+		  });
+		});
+		</script>
+        <div class="box">
+          <div class="headingBox"> <span>Tin nổi bật</span> </div>
+          <div class="innerBox">
+            <div class="slideMediaNB">
+              <div class="inner_slideMedia">
+                <div class="slider4">
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--end box--> 
+        <script type="text/javascript">
+		$(document).ready(function(){
+		  $('.slider5').bxSlider({
+			 mode: 'vertical',
+			slideWidth: 400,
+			minSlides: 3,
+			moveSlides: 1,
+			maxSlides: 4,
+			slideMargin: 5,
+			auto: true,
+			speed: 3000,
+			controls: false,
+			pause: 0,
+		  });
+		});
+		</script>
+        <div class="box">
+          <div class="headingBox"> <span>Đối tác</span> </div>
+          <div class="innerBox">
+            <div class="slidePartner">
+              <div class="slider5">
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--end box-->
+        <div class="box">
+          <div class="headingBox"> <span>Thống kê truy cập</span> </div>
+          <div class="innerBox">
+            <div class="vsBox">
+              <div class="innerVsBox">
+                <p>Số người online :<b>1</b></p>
+                <p>Số người truy cập :<b>10000</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End sidebar -->
+      
+      <div class="col9 mainContent">
+        <div class="hidden">Company name</div>
+        <div class="box boxMain">
+          <div class="innerBoxMain"> 
+            <!--================= .::noi dung::. =================-->
+            <div class="breadcrumbBox">
+              <ul class="breadcrumb">
+                <li><a href="index.html">Trang chu</a></li>
+                <li class="active"><a>Chuyen muc</a></li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="headingBox headingBoxMain txtleft"> <span>Tin tức</span> </div>
+              <!--Danh sach tin tuc-->
+              <div class="listMedia">
+                <div class="innerListMedia">
+                  <div class="mediaItem">
+                    <div class="media">
+                      <div class="innerMedia">
+                        <div class="mediaLeft">
+                          <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                        </div>
+                        <div class="mediaBody">
+                          <h2><a href="">Nulla vel metus scelerisques</a></h2>
+                          <div class="dateTime">Posted on 13/03/2015</div>
+                          <div class="shortView"> Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. 
+                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
+                          <div class="detailView"><a href="" class="btn btn-warning">View detail</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End media-->
+                  <div class="mediaItem">
+                    <div class="media">
+                      <div class="innerMedia">
+                        <div class="mediaLeft">
+                          <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                        </div>
+                        <div class="mediaBody">
+                          <h2><a href="">Nulla vel metus scelerisques</a></h2>
+                          <div class="dateTime">Posted on 13/03/2015</div>
+                          <div class="shortView"> Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. 
+                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
+                          <div class="detailView"><a href=""  class="btn btn-warning">View detail</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End media-->
+                  <div class="mediaItem">
+                    <div class="media">
+                      <div class="innerMedia">
+                        <div class="mediaLeft">
+                          <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                        </div>
+                        <div class="mediaBody">
+                          <h2><a href="">Nulla vel metus scelerisques</a></h2>
+                          <div class="dateTime">Posted on 13/03/2015</div>
+                          <div class="shortView"> Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. 
+                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
+                          <div class="detailView"><a href=""  class="btn btn-warning">View detail</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End media-->
+                  <div class="mediaItem">
+                    <div class="media">
+                      <div class="innerMedia">
+                        <div class="mediaLeft">
+                          <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                        </div>
+                        <div class="mediaBody">
+                          <h2><a href="">Nulla vel metus scelerisques</a></h2>
+                          <div class="dateTime">Posted on 13/03/2015</div>
+                          <div class="shortView"> Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. 
+                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
+                          <div class="detailView"><a href=""  class="btn btn-warning">View detail</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End media-->
+                  <div class="mediaItem">
+                    <div class="media">
+                      <div class="innerMedia">
+                        <div class="mediaLeft">
+                          <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                        </div>
+                        <div class="mediaBody">
+                          <h2><a href="">Nulla vel metus scelerisques</a></h2>
+                          <div class="dateTime">Posted on 13/03/2015</div>
+                          <div class="shortView"> Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. 
+                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
+                          <div class="detailView"><a href=""  class="btn btn-warning">View detail</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End media-->
+                  <div class="mediaItem">
+                    <div class="media">
+                      <div class="innerMedia">
+                        <div class="mediaLeft">
+                          <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                        </div>
+                        <div class="mediaBody">
+                          <h2><a href="">Nulla vel metus scelerisques</a></h2>
+                          <div class="dateTime">Posted on 13/03/2015</div>
+                          <div class="shortView"> Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. 
+                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
+                          <div class="detailView"><a href=""  class="btn btn-warning">View detail</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End media--> 
+                  
+                </div>
+                <div class="clearfix text-center">
+                  <ul class="pagination">
+                    <li> <a href="#"> <span>«</span> </a> </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li> <a href="#"> <span>»</span> </a> </li>
+                  </ul>
+                </div>
+              </div>
+              <!--End danh sach tin tuc--> 
+            </div>
+            
+            <!--================= .::noi dung::. =================--> 
+          </div>
+          <!--innerBoxMain--> 
+          
+        </div>
+      </div>
+      <!--end box--> 
+      
+    </div>
+    <!--mainContent--> 
+    
+  </div>
+  <!--rowmn--> 
+  
+  <!--End contentBox--> 
+  
+</div>
+<!--End Container-->
+</div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="rowmn">
+      <div class="address"> <b>CÔNG TY TNHH XÂY DỰNG SẢN XUẤT VÀ THƯƠNG MẠI ANH ĐỨC</b><br />
+        Địa chỉ: Ngã Tư Đầm cả - TT Hương Canh – Bình Xuyên – Vĩnh Phúc<br />
+        Điện thoại: 02113.888.999 – FAX: 02113.596.777<br />
+        Email: anhducvpgroup@gmail.com - Website: www.anhduc.com.vn<br />
+      </div>
+      <div class="copyRight"> Copyright © 2015 by anhduc.com.vn . Design by <a href="http://dangcapviet.vn/">www.dangcapviet.vn</a> </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="scripts/js.js"></script>
+</body>
+</html>

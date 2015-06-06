@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Trang chủ</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="all" />
+<!--Styles-->
+<link rel="stylesheet" href="Styles/css.css" type="text/css" />
+<link rel="stylesheet" href="Styles/1col.css" type="text/css" />
+<link rel="stylesheet" href="Styles/nav_x.css" type="text/css" />
+<link rel="stylesheet" href="Styles/nav_y.css" type="text/css" >
+<!--Slide chay ngang Styles -->
+<link href="Styles/jcarousel.css" rel="stylesheet" type="text/css" />
+<!-- Skitter Styles -->
+<link href="Styles/skitter.css" type="text/css" media="all" rel="stylesheet" />
+<!-- Cloud Zoom Styles-->
+<link href="Styles/zoom.css" rel="stylesheet" type="text/css" />
+<!-- Cloud Zoom Styles-->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--End Styles-->
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+<!-- Skitter JS -->
+<script type="text/javascript" language="javascript" src="Scripts/jquery.easing.1.3.js"></script>
+<script type="text/javascript" language="javascript" src="Scripts/jquery.skitter.js"></script>
+<!-- Init Skitter -->
+<script type="text/javascript" language="javascript">
+	$(document).ready(function() {
+		$('.box_skitter_large').skitter({
+			theme: 'minimalist',
+			numbers_align: 'center', 
+			dots: true, 
+			preview: true,
+			animation:'fade'
+		});
+		
+		$('.box_skitter_3').skitter({
+			theme: 'minimalist',
+			numbers_align: 'left',
+			dots: true,
+			label:					true, 
+			thumbs: 				true,
+			navigation: true,
+			animation:'circles'
+		});
+	});
+</script>
+<!-- Cloud Zoom JS-->
+<script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+<!--Slide chay ngang-->
+<script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+	function mycarousel_initCallback(carousel)
+	{
+		carousel.clip.hover(function() {
+		carousel.stopAuto();
+		}, function() {
+		carousel.startAuto();
+	});
+	};
+	jQuery(document).ready(function () {     
+		jQuery('#mycarousel_same_P,#mycarousel_dt_img,#mycarousel_products').jcarousel({
+		auto: 0,
+		animation: 1000,
+		wrap: 'circular',
+		scroll: 1,
+		initCallback: mycarousel_initCallback
+		});	
+	});
+</script>
+<!-- FancyBox -->
+<script type="text/javascript" src="Scripts/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="Styles/fancybox.css" media="screen" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+</script>
+<link href="Styles/hotro.css" rel="stylesheet" type="text/css" />
+<!--Search-->
+<script type="text/javascript">
+	$(document).ready(function () {
+	   
+		$('#search_form_dropdown .search_icon').click(function () {
+			$('#search_form_dropdown .search_box').slideDown("fast");
+		});
+		$('#search_form_dropdown .icon_point').click(function () {
+			$('#search_form_dropdown .search_box').slideUp("fast");
+		});
+	});
+</script>
+<!--/Search-->
+<!--Ho tro truc tuyen-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#map-legend").hide();
+    $("#map-legend-control").show(); 
+    $("#map-legend-control").click(function() {
+        $("#map-legend").show();
+    });
+    $(".icon_close").click(function() {
+        $("#map-legend").hide();
+         
+    }); 
+});
+</script>
+</head>
+
+<body>
+<!--ho tro truc tuyen-->
+<div id="sp_head">
+  <div id="map-legend">
+    <div class="close_f fr"><a href=""> Tắt [X]</a></div>
+    <ul>
+      <a href=""  ><img alt="" src="Images/yahoo_icon.png"></a> <a href=""   ><img alt="" src="Images/skype_icon.png"></a>
+      <div class="hotline"><b class="number_phone">01662 466 210 </b> </div>
+    </ul>
+  </div>
+  <div id="map-legend-control"> <a href="#" ><img src="Images/support_icon.png" alt="" title="Hỗ trợ" height="160" width="37"></a> </div>
+</div>
+<div class="wrap"> 
+  <!-- Header-->
+  <header>
+    <div class="inner_box"><a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a> <a href="index.html" id="text_logo"></a>
+      <div class="hotline"> <img src="Images/icon_phone.png"  class="fl" style="padding-right:10px;"/> <b class="number_phone">01662 466 210<br />
+        <span> (Mr.Vân)</span> </b> </div>
+      <!--<div class="lang"> <a href=""><img src="images/vn.png" class="fl" /> </a> <a href="" ><img src="images/en.png" class="fl" /> </a> </div>-->
+      <div id="text_logo">
+        <h1>CÔNG TY TNHH TM DV CUNG ỨNG BẢO MINH</h1>
+      </div>
+      <div id="text_logo_2">
+        <h2>Đại lý chính thức của thương hiệu đồng hồ RHYTHM tại Việt Nam</h2>
+      </div>
+      <div id="text_logo_3">
+        <h3>Địa chỉ: 385F Nguyễn Trọng Tuyển, P. 2, Q. Tân Bình, TP.HCM</h3>
+      </div>
+    </div>
+    <!--inner_box--> 
+  </header>
+  <!-- End Header--> 
+  
+  <!--#Menu top-->
+  <nav id="nav_x">
+    <div class="inner_box">
+      <ul>
+        <li><a href="index.html">Trang chủ </a></li>
+        <li><a href=" ">Giới thiệu </a> </li>
+        <li class="active"><a href="list_product.html">đồng hồ treo tường</a>
+          <ul>
+            <li><a href="#">Sub menu Sub menu Sub menu Sub menu</a>
+              <ul>
+                <li><a href=" ">Sub menu</a>
+                  <ul>
+                    <li><a href=" ">Sub menu</a></li>
+                    <li><a href=" ">Sub menu </a> </li>
+                  </ul>
+                </li>
+                <li><a href="#">Sub menu </a> </li>
+              </ul>
+            </li>
+            <li><a href="#">Sub menu</a></li>
+          </ul>
+        </li>
+        <li><a href="detail_product.html">Đồng hồ để bàn</a></li>
+        <li><a href="detail_product.html">đồng hồ đứng</a></li>
+        <li><a href="#">Thanh toán</a></li>
+        <li><a href="list_news.html">Tin tức </a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        
+        <!--/search_form-->
+        <div id="search_form_dropdown"> <a class="trigger"><span class="search_icon"></span></a>
+          <div id="dpop" class="search_box"> <span class="icon_point"></span>
+            <input name="" id="" class="inputSearch" onblur="SearchOnBlur(this)" onclick="this.value=''" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa cần tìm" type="text">
+            <a id="" class="submitSearch" href=""> <span class="icon_search">Tìm kiếm</span></a> </div>
+        </div>
+        <!--/search_form-->
+      </ul>
+    </div>
+  </nav>
+  <!--End Menu top--> 
+  
+</div>
+<!--wrap-->
+
+<div class="container"> 
+  
+  <!--#Main-->
+  <div id="main"> 
+    
+    <!--#Main col-->
+    <div class="fr" id="main_col">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      
+      <div class=" w23 fr" >
+        <div class="box bord1">
+          <div class="box_Tab"><span>Danh mục</span></div>
+          <ul class="danh_muc_hd">
+            <li><a href="">Hướng dẫn mua hàng</a></li>
+            <li><a href="">Sử dụng bảo quản</a></li>
+            <li><a href="">Chính sách bảo hành</a></li>
+            <li><a href="">Phụ kiện kèm theo</a></li>
+            <li><a href="">Phụ kiện kèm theo</a></li>
+            <li><a href="">Phụ kiện kèm theo</a></li>
+          </ul>
+        </div>
+        <!--End box-->
+        
+        <div class="box">
+          <div class="box_Tab"><span>Quảng cáo</span></div>
+          <div class="box_ct ads"> <img src="images/s2.jpg" /> </div>
+          <!--End box ct--> 
+          
+        </div>
+        <!--End box--> 
+      </div>
+      <!--End w23--> 
+      <div class="w75 fl">
+        <div class="box bord1">
+          <div class="box_Tab"> <span class="font1">tin tức</span> </div>
+          <div class="box_ct" id="detail_news">
+            <div id="info_g">
+              <h1>Các đối tượng được tự in hóa đơn thông tư 39/2014/TT-BTC</h1>
+              <p class="date">06/05/2013</p>
+              <p>Kể từ 01/06/2014, chỉ có bốn đối tượng sau mới được tự in hóa đơn:</p>
+              <p>1. Doanh nghiệp được thành lập theo quy định của pháp luật trong khu công nghiệp, khu kinh tế, khu chế xuất, khu công nghệ cao.</p>
+              <p>2. Các đơn vị sự nghiệp công lập có sản xuất, kinh doanh theo quy định của pháp luật.</p>
+              <p>3. Doanh nghiệp, Ngân hàng có mức vốn điều lệ từ 15 tỷ đồng trở lên tính theo số vốn đã thực góp đến thời điểm thông báo phát hành hóa đơn, bao gồm cả Chi nhánh, đơn vị trực thuộc khác tỉnh, thành phố với trụ sở chính có thực hiện kê khai, nộp thuế GTGT.</p>
+              <p>4. Doanh nghiệp mới thành lập từ ngày 01/06/2014 có vốn điều lệ dưới 15 tỷ đồng là doanh nghiệp sản xuất, dịch vụ có thực hiện đầu tư mua sắm tài sản cố định, máy móc, thiết bị có giá trị từ 1 tỷ đồng trở lên ghi trên hóa đơn mua tài sản cố định, máy móc, thiết bị tại thời điểm thông báo phát hành hóa đơn được tự in hóa đơn để sử dụng cho việc bán hàng hóa, cung ứng dịch vụ nếu có đủ các điều kiện sau:</p>
+              <p> - Đã được cấp mã số thuế;</p>
+              <p>- Có doanh thu bán hàng hóa, dịch vụ;</p>
+              <p>- Có hệ thống thiết bị (máy tính, máy in, máy tính tiền) đảm bảo cho việc in và lập hóa đơn khi bán hàng hóa, cung ứng dịch vụ;</p>
+              <p>- Là đơn vị kế toán theo quy định của Luật Kế toán và có phần mềm tự in hóa đơn đảm bảo định kỳ hàng tháng dữ liệu từ phần mềm tự in hóa đơn phải được chuyển vào sổ kế toán để hạch toán doanh thu và kê khai trên Tờ khai thuế giá trị gia tăng gửi cơ quan thuế.</p>
+              <p>- Không bị xử phạt vi phạm pháp luật về thuế hoặc đã bị xử phạt và đã chấp hành xử phạt vi phạm pháp luật về thuế mà tổng số tiền phạt vi phạm pháp luật về thuế dưới 50 triệu đồng trong vòng 365 ngày tính liên tục từ ngày thông báo phát hành hóa đơn tự in lần đầu trở về trước.</p>
+              <p> - Có văn bản đề nghị sử dụng hóa đơn tự in và được cơ quan thuế quản lý trực tiếp xác nhận đủ điều kiện. Trong thời hạn 5 ngày làm việc kể từ khi nhận được văn bản đề nghị của doanh nghiệp, cơ quan thuế quản lý trực tiếp phải có ý kiến về điều kiện sử dụng hóa đơn tự in của doanh nghiệp.</p>
+              <p>Nội dung trên được quy định tại Thông tư 39/2014/TT-BTC.</p>
+            </div>
+            <div class="function">
+              <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+              <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a> <a href="" class="opinion">Phản hồi</a></div>
+            </div>
+            <!--function--> 
+            <!--Other News-->
+            <div class="other_news_sub">
+              <div class="other_newsT">Tin bài khác</div>
+              <ul>
+                <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+                <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+                <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+                <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+                <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+              </ul>
+              <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+            <!--Other News--> 
+          </div>
+          <!--End box_ct--> 
+        </div>
+        <!--End box--> 
+      </div>
+      <!--End w70--> 
+    </div>
+    <!--End Main col--> 
+  </div>
+  <!--#Main--> 
+  
+</div>
+<!--End container-->
+<div class="wrap">
+<div class="inner_box">
+<div class="box">
+  <div class="box_Tab title" ><span>Sản phẩm bán chạy</span></div>
+  <div class="box_ct">
+    <div id="mycarousel_products" class="jcarousel-skin-tango jcarousel-item-vertical">
+      <div class="product_row">
+        <ul>
+          <li> 
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_pro"> <a href="detail_product.html"><img src="images/sp2.png" /></a> </div>
+              </div>
+              <!--product_inner--> 
+            </div>
+            <!--End Product--> 
+          </li>
+          <li> 
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_pro"> <a href="detail_product.html"><img src="images/sp2.png" /></a> </div>
+              </div>
+              <!--product_inner--> 
+            </div>
+            <!--End Product--> 
+          </li>
+          <li> 
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_pro"> <a href="detail_product.html"><img src="images/sp2.png" /></a> </div>
+              </div>
+              <!--product_inner--> 
+            </div>
+            <!--End Product--> 
+          </li>
+          <li> 
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_pro"> <a href="detail_product.html"><img src="images/sp2.png" /></a> </div>
+              </div>
+              <!--product_inner--> 
+            </div>
+            <!--End Product--> 
+          </li>
+          <li> 
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_pro"> <a href="detail_product.html"><img src="images/sp2.png" /></a> </div>
+              </div>
+              <!--product_inner--> 
+            </div>
+            <!--End Product--> 
+          </li>
+          <li> 
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_pro"> <a href="detail_product.html"><img src="images/sp2.png" /></a> </div>
+              </div>
+              <!--product_inner--> 
+            </div>
+            <!--End Product--> 
+          </li>
+          <li> 
+            <!--Start Product-->
+            <div class="product">
+              <div class="product_inner">
+                <div class="img_pro"> <a href="detail_product.html"><img src="images/sp2.png" /></a> </div>
+              </div>
+              <!--product_inner--> 
+            </div>
+            <!--End Product--> 
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--End product Row --> 
+    
+  </div>
+  <!--End box_ct--> 
+</div>
+<!--End box--> 
+
+<!--#footer-->
+<div id="footer">
+<ul class="col_footer">
+<!--start footer box-->
+<li>
+<div class="box">
+  <div class="box_Tab"><span>SỰ KIỆN</span></div>
+  <div class="box_ct">
+  <div class="list_news">
+  <ul  class="box_news_index">
+    <li>
+      <div class="li_news">
+        <div class="inner_li_news">
+          <div class="tin_noi_bat">
+            <h3> <a href="detail_news.html" >Khuyến mại lớn nhân dịp khai trương gian hàng</a> </h3>
+            <a href="detail_news.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+            <div class="text alignj">Nhân dịp khai trương gian hàng tại Lotte Mart 229 Tây Sơn. Bảo Minh xin trân trọng gửi đến quý khách hàng chương trình khuyến mại lên đến 15% cho các sản phẩm trong hệ thống cửa hàng của chúng tôi.</div>
+            <a href="" class="view_detail btn_view">Xem tiếp..</a> </div>
+          <!--End tin_noi_bat-->
+          <div class="tim_lien_quan"> <a href="">Thành lập công ty</a> <a href="">Thành lập văn phòng đại diện</a> <a href="">Thay đổi nội dung đăng ký kinh doanh</a> </div>
+          <!--End tim_lien_quan--> 
+        </div>
+        <!--inner_li_news--> 
+      </div>
+      <!--li_news--> 
+    </li>
+    </div>
+    <!--End box ct-->
+    
+    </div>
+    <!--End box-->
+    </li>
+    <!--End footer box-->
+    
+    <li>
+      <div class="box">
+        <div class="box_Tab"><span>Liên hệ</span></div>
+        <div class="box_ct">
+          <p>CÔNG TY TNHH TM DỊCH VỤ CUNG ỨNG BẢO MINH</p>
+          <p>Ðịa chỉ: 385F Nguyễn Trọng Tuyển, P. 2, Q. Tân Bình, TP.HCM<br />
+            Điện thoại : 0908 503 530    -    Mã số thuế: 0312959842<br />
+            Email: ldhvan@yahoo.com</p>
+          <p>
+            <iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=vi&amp;geocode=&amp;q=233B+Phan+V%C4%83n+Tr%E1%BB%8B,+Ph%C6%B0%E1%BB%9Dng+11,+Qu%E1%BA%ADn+B%C3%ACnh+Th%E1%BA%A1nh,+TP.HCM&amp;aq=&amp;sll=10.879183,106.799662&amp;sspn=0.016921,0.01929&amp;gl=VN&amp;ie=UTF8&amp;hq=TPHCM&amp;hnear=233+Phan+V%C4%83n+Tr%E1%BB%8B,+11,+B%C3%ACnh+Th%E1%BA%A1nh,+H%E1%BB%93+Ch%C3%AD+Minh&amp;t=m&amp;fll=10.81228,106.69515&amp;fspn=0.002116,0.002411&amp;st=113048816984398336201&amp;rq=1&amp;ev=zi&amp;split=1&amp;ll=10.81228,106.69515&amp;spn=0.002116,0.002411&amp;output=embed"></iframe>
+            <br />
+            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=vi&amp;geocode=&amp;q=233B+Phan+V%C4%83n+Tr%E1%BB%8B,+Ph%C6%B0%E1%BB%9Dng+11,+Qu%E1%BA%ADn+B%C3%ACnh+Th%E1%BA%A1nh,+TP.HCM&amp;aq=&amp;sll=10.879183,106.799662&amp;sspn=0.016921,0.01929&amp;gl=VN&amp;ie=UTF8&amp;hq=TPHCM&amp;hnear=233+Phan+V%C4%83n+Tr%E1%BB%8B,+11,+B%C3%ACnh+Th%E1%BA%A1nh,+H%E1%BB%93+Ch%C3%AD+Minh&amp;t=m&amp;fll=10.81228,106.69515&amp;fspn=0.002116,0.002411&amp;st=113048816984398336201&amp;rq=1&amp;ev=zi&amp;split=1&amp;ll=10.81228,106.69515&amp;spn=0.002116,0.002411" style="color:#0000FF;text-align:left">Xem Bản đồ cỡ lớn hơn</a></small> </p>
+        </div>
+        <!--End box ct--> 
+        
+      </div>
+      <!--End box--> 
+    </li>
+    <!--End footer box-->
+    
+    <li>
+      <div class="box">
+        <div class="box_Tab"><span>Facebook</span></div>
+        <div class="box_ct"> <img src="images/fb-f.png" /> </div>
+        <!--End box ct--> 
+        
+      </div>
+      <!--End box--> 
+    </li>
+    <!--End footer box-->
+  </ul>
+</div>
+<!--End footer-->
+
+<div class="copyright">Copyright © 2014 By Bảo Minh - Thiết kế website <a href="http://www.dangcapviet.vn"> Đẳng Cấp Việt</a> </div>
+</div>
+<!--end inner_box-->
+</div>
+<!--end wrap-->
+
+</body>
+</html>

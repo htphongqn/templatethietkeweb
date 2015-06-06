@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Trang chủ</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+    <!--  Slider  -->
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/simple.carousel.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+             
+            
+            // example 2
+            $("ul.slide").simplecarousel({
+                width:860,
+                height:410,
+                auto: 5000,
+                fade: 400,
+				next: $('.next'),
+                prev: $('.prev'),				
+                pagination: true <!--control-->
+            });
+        });
+        
+    </script>
+    <!--Zoom-->
+
+    <!--Zoom-->
+    <link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+    <!--Slide chay ngang-->
+    <link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+		function mycarousel_initCallback(carousel)
+		{
+			carousel.clip.hover(function() {
+				carousel.stopAuto();
+			}, function() {
+				carousel.startAuto();
+			});
+		};
+
+		jQuery(document).ready(function () {     
+			jQuery('#mycarousel_same_P, #mycarousel_dt_img, #mycarousel_products').jcarousel({
+                auto: 0,
+                animation: 1000,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });	
+        });
+    </script>
+    <!--Search-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+           
+            $('.search_icon').click(function () {
+                $('.search_box').slideDown("fast");
+            });
+            $('.icon_point').click(function () {
+                $('.search_box').slideUp("fast");
+            });
+        });
+    </script>
+    <!--/Search-->
+    
+    <link rel="stylesheet" href="styles/layout.css">
+    <!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="Scripts/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="Styles/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+</script>
+</head>
+
+<body>
+<div class="container">
+<!--ho tro truc tuyen-->
+ 
+    
+    <script type="text/javascript">
+
+	$(document).ready(function() {
+	
+		$("#map-legend").hide();
+		$("#map-legend-control").show(); 
+		$("#map-legend-control").click(function() {
+			$("#map-legend").show();
+  			 
+		});
+		$(".icon_close").click(function() {
+			$("#map-legend").hide();
+  			 
+		});
+		 
+	});
+	
+	
+	</script>
+    
+    
+
+
+
+<!--<div id="sp_head">
+<div id="map-legend">
+<div class="close_f fr"><a href=""><span class="icon_close fr"></span>Đóng</a></div>
+    <ul>
+    <a href=""  ><img alt="" src="Images/yahoo_icon.png"></a>
+    
+    
+    <a href=""   ><img alt="" src="Images/skype_icon.png"></a>
+    
+    
+    <div class="hotline"><b class="number_phone">0906 928977</b></div>
+    
+    
+    </ul>
+</div>
+<div id="map-legend-control"> <a href="#" ><img src="Images/support_icon.png" alt="" title="Hỗ trợ" height="160" width="37"></a> </div>
+</div>
+-->
+<!--ho tro truc tuyen--> 
+
+  
+<!-- Header-->
+<header> 
+<a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a>
+ <a href="" id="company_name"><img src="images/logo_text.png" /></a>
+ <div id="slogan"><img src="images/logo_text_2.png"></div>
+</header>
+<!-- End Header--> 
+<!--#Menu top-->
+    <nav id="nav_x">
+    	<ul>
+        	<div class="fl icon_nav_first"></div>
+          	<li class="active"><a href="index.html">Trang chủ </a></li>
+          	<li><a href="#">Giới thiệu </a> </li>
+          	<li ><a href="list_product.html">Sản Phẩm</a>
+        		<ul>
+              		<li><a href="#">Sub Menu 1</a>
+                    	<ul>
+                            <li><a href="#">Sub Menu 5</a></li>
+                            <li><a href="#">Sub Menu 6</a> </li>
+                        </ul>
+                     </li>
+                    
+                    <li><a href="#">Sub Menu 2</a></li>
+              		<li><a href="#">Sub Menu 3</a> </li>
+            	</ul>
+      		</li>
+          	<li><a href="#">Bảng giá</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Sự kiện</a></li>
+             <li><a href="#">Album ảnh</a></li>
+          	<li><a href="#">Liên hệ</a></li>
+             
+            
+            
+        
+        <div id="search_form"> 
+    <a class="trigger"><span class="search_icon"></span></a>
+    <div id="dpop" class="search_box"> <span class="icon_point"></span>
+        <input name="" id="" class="inputSearch" onblur="SearchOnBlur(this)" onclick="this.value=''" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa cần tìm" type="text">
+        <a id="" class="submitSearch" href=""> <span class="icon_search">Tìm Kiếm</span></a>
+    </div>
+</div>
+<!--/search_form-->
+
+
+</ul>
+        <div class="fr icon_nav_last"></div>
+  </nav><!--End Menu top--> 
+
+
+
+ 
+
+<!--#Main-->
+<div id="main"> 
+<!--#Slide--> 
+<div id="slide_main" class="fl">
+    <ul class="slide">
+      <li><a href=""><img src="Images/1.png"   /></a></li>
+      <li><a href=""><img src="Images/2.png"   /></a></li>
+       <li><a href=""><img src="Images/1.png"   /></a></li>
+      <li><a href=""><img src="Images/2.png"   /></a></li>
+       <li><a href=""><img src="Images/1.png"   /></a></li>
+      <li><a href=""><img src="Images/2.png"   /></a></li>
+
+    </ul>
+    <div class="control_slide">
+    
+    </div>
+</div><!--End Slide-->
+
+<!--Baner_right-->
+<div class="baner_right fr">
+
+<div class="box">
+ 
+<img src="images/img_baner1.png" />
+
+</div><!--End box-->
+
+
+</div>
+<!-- End baner right-->
+
+<!--Slide ngang-->
+<div class="slide_ngang">
+ 
+<div class="box">
+        <div id="mycarousel_products" class="jcarousel-skin-tango jcarousel-item-vertical">
+              <div class="product_row">
+            <ul>
+                <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+              
+               <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+              
+              
+               <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+              
+               <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+              
+               <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+              
+               <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+              
+               <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+              
+               <li> 
+                <!--Start Product-->
+                <div class="product">
+                 <div class="product_inner">
+                 <a href="product-detail.html"><img src="images/sp.jpg" />  </a>
+                 <a href="">Cà Phê Moka	</a>
+                 
+                 </div>
+                 </div>
+                    
+                <!--End Product--> 
+              </li>
+                 
+           </ul>
+          </div>
+          <!--End product Row --> 
+          </div>
+        <!--End mycarousel_products -->
+       
+      </div>
+          <!--End box--> 
+</div>
+<!--End Slide ngang--> 
+
+<!--sidebar-->
+<div class="sidebar fl">
+
+
+ 
+    <div class="box">
+    <div class=" title_box font1">Hỗ trợ trực tuyến</div>
+    <div class="box_ct  ">
+        <div class="hotline">Mr Việt: <b>0909 620 969</b></div>
+        <a href=""><img src="images/icon_yahoo.png"</a>
+         <a href="" style="margin-left:10px;"><img src="images/skype_sidebar.png" /></a>
+    </div><!--End box_ct--> 
+    
+    
+    </div><!--End box--> 
+ 
+<div class="box">
+<div class="title_box font1"><span> Tin tức</span></div>
+<div class="box_ct">
+<div class="list_news">
+             <ul  class="box_news_index">
+              <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Độc đáo với những sản phẩm bằng… gỗ cà phê</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+ 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Độc đáo với những sản phẩm bằng… gỗ cà phê</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+     
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+      
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+              <a class="view_all"><i>Xem tất cả</i></a>
+            
+            </ul>
+            </div><!--End List News-->
+
+</div><!--End box_ct--> 
+
+</div><!--End box--> 
+
+ 
+</div><!--End sidebar-->
+
+<!--#Main col-->
+<div class="fr" id="main_col">
+<div class="box">
+<div class="box_Tab">
+<span class="font1">HÌNH ẢNH</span>
+ </div>
+<div class="box_ct">
+ 
+<div class="product_row gallery_sp">
+              <ul>
+            	<li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                
+                <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                
+                <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                
+                <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                
+                <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                 <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                 <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                 <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+                 <li> 
+                	<!--Start Product-->
+                	<div class="product">
+                	<div class="product_inner">
+                      <div class="pro_img"><a class="fancybox" href="images/sp.jpg" data-fancybox-group="gallery" title="Cà Phê Moka"><img src="images/sp.jpg" /></a></div>    
+                 	</div><!--/product_inner--> 
+                 	</div><!--End Product--> 
+                </li>
+              
+              
+              
+            
+          </ul>
+          </div><!--End Product_row-->
+
+</div><!--End box_ct--> 
+</div><!--End box--> 
+
+
+          
+</div><!--End Main col--> 
+</div><!--#Main--> 
+<div id="bottom_main">
+
+
+<div class="social_network"> <a href="" class="facebook"></a> <a href="" class="youtube"></a> <a href="" class="gplus"></a> </div>
+
+<div class="visit"> 
+<img src="Images/icon-truycap.gif" class="fl" />
+<div class="soluong fr"> 
+<div class="fl" >Đang online: <b><span id="a_thongke1_Lbsum">1</span></b></div>
+<div class="fl" style="margin-left:25px;">Tổng truy cập: <b><span id="a_thongke1_Lbsum">25</span></b> </div>
+</div>
+
+
+</div>
+<div class="fl icon_nav_first"></div>
+<div class="fr icon_nav_last"></div></div>
+      
+<!--#footer-->
+<div id="footer">
+<div class="address">
+
+
+
+                                  
+
+<p> CÔNG TY TNHH CÀ PHÊ RANG XAY NGUYÊN CHẤT VÕ GIA </p>
+<p>Ðịa chỉ: 301/9 Đỗ Xuân Hợp, Khu Phố 4, P. Phước Long B, Quận 9, TP. HCM</p>
+
+<p>Điện thoại: 0912.476.346        Email: v.coffeevn@gmail.com </p>
+<p>Mã số thuế: 0312889176   </p>
+</div>
+
+
+                                    
+
+
+<div class="copyright">
+<p>© 2014 by CafeVCoffee. All rights reserved.</p>
+<p>Design by Dang Cap Viet.</p>
+</div>
+
+</div>
+<!--End footer--> 
+</div>
+<!--End container-->
+</body>
+</html>

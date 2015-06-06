@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Trang chủ</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+<link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+<link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+<!--  Slider  -->
+<link href="Styles/fmslideshow.min.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/jquery-1.6.2.min.js"></script>
+<script src="Scripts/fmslideshow.min.js"></script>
+<script>
+
+	jQuery(function($){
+		$('#jq_fmslideshow').fmslideshow({
+			
+			//Note: if you need to modify further see the available variable in fmslideshow.js file.
+			
+			banner_width : 1000,
+			banner_height : 409,
+
+			
+			buttons_type : 2,
+			buttons_autoHide : false,
+			buttons_align : "BL",
+			buttons_spacing : "10,10",
+	
+			button_nextPrevious_type : 2,
+			button_nextPrevious_autoHide : false,
+			
+			button_next_align : "BR",
+			button_next_spacing : "10,7",
+			button_previous_align : "BL",
+			button_previous_spacing: "10,42", slideShow_loop: true,
+			
+			default_data_align : "C",
+			default_data_spacing : "0,0",
+			default_data_inOutDirection : "-",
+			default_data_inOutDistance : "-"
+
+			
+		});
+	});
+
+</script>
+
+
+<!--Zoom-->
+<link rel="stylesheet" href="Styles/multizoom.css" type="text/css" />
+<script type="text/javascript" src="Scripts/multizoom.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#multizoom1').addimagezoom({ // multi-zoom: options same as for previous Featured Image Zoomer's addimagezoom unless noted as '- new'
+            descArea: '#description', // description selector (optional - but required if descriptions are used) - new
+            speed: 1500, // duration of fade in for new zoomable images (in milliseconds, optional) - new
+            descpos: true, // if set to true - description position follows image position at a set distance, defaults to false (optional) - new
+            imagevertcenter: true, // zoomable image centers vertically in its container (optional) - new
+            magvertcenter: true, // magnified area centers vertically in relation to the zoomable image (optional) - new
+            zoomrange: [3, 10],
+            magnifiersize: [350, 350],
+            magnifierpos: 'right',
+            cursorshadecolor: '#fdffd5',
+            cursorshade: true //<-- No comma after last option!
+        });
+    })
+
+</script>
+ 
+</head>
+<body>
+<div class="container">
+  <header> <a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a> 
+    <!--Search Tool-->
+    <div id="search_form" class="fr">
+    <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa tìm kiếm..." />
+    <input name="" class="submitSearch" type="button" />
+    </div>
+    <!--End Search Tool--> 
+  </header>
+  
+  <!--#Menu top-->
+  <nav id="nav_x">
+    <ul>
+      <li class="active"><a href="index.html">Trang chủ </a></li>
+      <li><a href="#">Giới thiệu </a> </li>
+      <li class="parent"><a href="#">Sản phẩm</a>
+        <ul>
+          <li><a href="#">Thực phẩm chức năng </a>
+            <ul>
+              <li><a href="#">Thuốc</a></li>
+              <li><a href="#">Vitamin </a>
+                <ul>
+                  <li><a href="#">Sản Phẩm A </a></li>
+                  <li><a href="#">Sản phẩm B</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Mỹ phẩm </a></li>
+        </ul>
+      </li>
+      <li><a href="#">Dịch Vụ </a></li>
+      <li><a href="#">Khuyến mãi </a></li>
+      <li><a href="#">Tin tức </a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </nav>
+  
+  <!--End Menu top-->
+  
+ 
+  
+  <!--#Main-->
+  <div id="main"> 
+    <!--sidebar-->
+    <div class="sidebar fl">
+      <div class="box">
+        <div class="title_box font1">Danh mục sản phẩm</div>
+        <div class="box_ct">
+          <nav id="nav_y">
+            <ul>
+              <li ><a href="#">Đầm dạo phố</a></li>
+              <li><a href="#">Đầm dạo phố</a></li>
+              <li class="parent"><a href="#">Đầm dạo phố</a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li class="parent"><a href="#">Sub Menu 2</a>
+                    <ul>
+                      <li><a href="#">Deep Menu 1</a></li>
+                      <li><a href="#">Deep Menu 2</a></li>
+                      <li><a href="#">Deep Menu 3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Đầm dạo phố</a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li class="parent"><a href="#">Sub Menu 2</a>
+                    <ul>
+                      <li><a href="#">Category 1</a></li>
+                      <li><a href="#">Category 2</a></li>
+                      <li><a href="#">Category 3</a></li>
+                      <li><a href="#">Category 4</a></li>
+                      <li><a href="#">Category 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                  <li><a href="#">Sub Menu 4</a></li>
+                  <li><a href="#">Sub Menu 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Đầm dạo phố</a></li>
+              <li><a href="#">Đầm dạo phố</a></li>
+              <li><a href="#">Đầm dạo phố</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--#box_ct--> 
+      </div>
+      <!--#Box--> 
+      
+      <!--#Box-->
+      <div class="box">
+        <div class="title_box font1">Hỗ trợ trực tuyến</div>
+        <div class="box_ct">
+          <div class="btn_row"> <img src="Images/phone.png" class="fl icon_hotline"  />
+            <div class="hotline fl font2"> 0908 169 044 </div>
+          </div>
+          <div class="btn_row">
+            <input name="" type="button" class="btn_yahoo fl" />
+            <input name="" type="button" class=" btn_skype fl" />
+          </div>
+        </div>
+      </div>
+      <!--End Box--> 
+      
+      <!--#Box-->
+      <div class="box">
+        <div class="title_box font1">Facebook</div>
+        <div class="box_ct"> <img src="Images/fb_img.png" /> </div>
+      </div>
+      <!--End Box--> 
+      
+      <!--#Box-->
+      <div class="box">
+        <div class="title_box font1">Quảng cáo</div>
+        <div class="box_ct"><img src="Images/quangcao1.png" /></div>
+      </div>
+      <!--End Box--> 
+    </div>
+    <!--#sidebar--> 
+    
+    <!-- #Main_col-->
+    <div id="main_col" class="fr">
+       
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+      <!--Detail news-->
+      <div class="box">
+        <div class="box_ct" id="detail_news">
+          <div id="info_g">
+            <h2 class="h2Title">Những thực phẩm nên tránh khi đang uống kháng sinh</span></h2>
+            <p class="date">06/05/2013</p>
+            <p>Khi đang uống kháng sinh điều trị một chứng bệnh nào đó, bạn nên tránh ăn những thực phẩm dưới đây:</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa</p>
+            <p>Sữa và các sản phẩm chế biến từ sữa có thể làm nặng nề thêm cho đường ruột của bạn trong khi bạn đang dùng thuốc kháng sinh. Hầu hết các dược sĩ đều đặc biệt khuyến cáo không uống sữa khi đang uống thuốc kháng sinh ciprofloxacin.</p>
+            <p>Ngoài ra, các sản phẩm chứa nhiều chất béo khác cũng có thể làm trầm trọng thêm các triệu chứng của bệnh tiêu chảy - một tác dụng phụ khi uống thuốc kháng sinh.</p>
+            <p>Thực phẩm chứa nhiều chất xơ</p>
+            <p>Một số loại rau quả có chứa nhiều chất xơ  hoặc các loại đậu cũng có thể gây tiêu chảy nặng thêm khi bạn đang dùng thuốc kháng sinh.</p>
+            <p>Bên cạnh đó, các thực phẩm như ngũ cốc, lúa mì tuy có thể tăng cường chất sắt và calci cho cơ thể nhưng lại cản trở khả năng hấp thụ một số thuốc kháng sinh khi vào cơ thể, đặc biệt là khi bạn đang uống thuốc kháng sinh quinolone, trong đó bao gồm các loại thuốc như ciprofloxacin, acid nalidixic và cinoxacin, sparfloxacin và trovafloxacin.</p>
+            <p>Thực phẩm có tính acid</p>
+            <p>Hàm lượng acid trong một số thực phẩm nhất định có thể làm gián đoạn khả năng hấp thụ thuốc của cơ thể.</p>
+            <p>Nói chung, khi uống thuốc kháng sinh, tuy bạn không luôn luôn phải tránh xa chúng hoàn toàn, nhưng đôi khi việc tiêu thụ thực phẩm chua hoặc đồ uống có chứa nhiều acid như cà chua, nước trái cây, đồ uống có ga cũng có thể hạn chế sự hấp thu của thuốc khi vào cơ thể.</p>
+            <p>Rượu</p>
+            <p>Nhiều dược sĩ đều chỉ ra rằng rượu không can thiệp bất lợi trực tiếp vào việc uống thuốc kháng sinh. Tuy nhiên, thuốc kháng sinh và rượu có thể có tác dụng phụ tương tự nhau. Vì thế, nếu bạn uống cả hai cùng một lúc, chúng có thể gia tăng cơ hội bạn phải chịu trận với những nguy cơ buồn nôn, chóng mặt hoặc buồn ngủ...</p>
+            <p>Những loại thuốc này có thể điểm mặt bao gồm: penicillin G, ampicillin, floxin, oxacillin, gentamycin và ciprofloxacin. Khi uống những loại thuốc này, bạn có thể phải ăn/uống các thực phẩm 3 giờ trước/sau 
+              
+              khi uống thuốc.</p>
+            <p>Lưu ý: Tránh dùng các loại sữa, các sản phẩm chế biến từ sữa, trừ sữa chua, khi bạn đang uống thuốc kháng sinh. Nguyên nhân là do lượng calci có nhiều trong sữa và các sản phẩm từ sữa có thể cản trở sự hấp thu của thuốc kháng sinh. Tuy nhiên, sữa chua thì bạn vẫn có thể ăn bình thường vì nó có chứa nhiều men vi sinh giúp khôi phục lại sự cân bằng cho đường ruột, tránh tiêu chảy khi sử dụng thuốc kháng sinh.</p>
+          </div>
+          <div class="function">
+            <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+            <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+          </div>
+          <!--Other News-->
+          <div class="other_news_sub">
+            <div class="other_newsT">Tin bài khác</div>
+            <ul>
+              <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+              <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+              <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+            </ul>
+            <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+          <!--Other News-->
+          <div class="cf"></div>
+        </div>
+      </div>
+      <!--End Detail news-->
+   
+    
+      
+    </div>
+    <!--End main_col--> 
+    
+  </div>
+  <!--#Main--> 
+  <!--#footer-->
+  <div id="footer">
+    <div class="logo fl"> <img src="Images/logo_bottom.png" /> </div>
+    <div class="fl info_company">
+      <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. HCM, Việt Nam</p>
+      <p>Điện thoại: 0908.169.044</p>
+    </div>
+    <div class="fr copyright">Copyright © 2014 BaoNamShop. All right reserved. </div>
+  </div>
+  <!--End footer--> 
+</div>
+<!--End container-->
+</body>
+</html>

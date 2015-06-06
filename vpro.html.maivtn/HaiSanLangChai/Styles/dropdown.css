@@ -1,0 +1,96 @@
+// As many dropdowns as you have, can be set beyond with no problems
+$dropdowns: 4;
+// Animation speed
+$speed: .3;
+// Don't mess with the two below
+$delayCount: 0;
+$delayCountReverse: $dropdowns*$speed;
+
+* {
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.menu {
+  @include perspective(1000);
+  width: 150px;
+  margin: 20px auto;
+}
+
+h1, h3 {
+  font-family: georgia;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+h3 {
+  margin: 5px;
+  font-size: 20px; 
+}
+
+ul {
+  list-style: none;
+}
+
+.menu ul li, .menu span {
+  display: block;
+  width: 150px;
+  height: 40px;
+  padding: 10px 5px;
+  background-color: #1abc9c;
+  color: #fff;
+  border-bottom: 1px solid #00A686;
+  font-family: tahoma;
+  cursor: pointer;
+}
+
+.menu span {
+  background-color: #16a085;
+  border: none;
+  text-align: center;
+  @include border-radius(2px);
+  @include transition(border-radius, .5s);
+}
+
+.menu:hover span {
+  @include border-radius(2px 2px 0 0);
+}
+
+.menu ul li {
+  @include transform-origin(top, center, 0px);
+  @include transform(rotateX(-90deg));
+  @include opacity(0);
+}
+
+.menu ul li:last-of-type {
+  border: none;
+  @include border-radius(0 0 2px 2px);
+}
+
+.menu:hover ul li {
+  @include transform(rotateX(0deg));
+  @include opacity(1);
+}
+
+.menu ul li:hover {
+  background-color: #34495e; 
+}
+
+@for $i from 1 through $dropdowns {
+  $delayCount: $delayCount+$speed;
+  $delayCountReverse: $delayCountReverse - $speed;
+  .menu:hover ul li:nth-of-type(#{$i}) {
+     @include transition(transform $speed+s $delayCount+s, opacity 0s $delayCount+s);
+  }
+  .menu ul li:nth-of-type(#{$i}) {
+     @include transition(transform $speed+s $delayCountReverse+s, opacity 0s $delayCountReverse+$speed+s);
+  }
+}

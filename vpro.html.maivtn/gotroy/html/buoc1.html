@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Title Here :)</title>
+
+<!-- Mobile Specific Metas
+================================================== -->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="../vi-vn/Styles/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="../vi-vn/Styles/bootstrap-theme.css" type="text/css" />
+<!--<link rel="stylesheet" type="text/css" href="../vi-vn/styles/bootstrap-combined.min.css">-->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../vi-vn/Scripts/jquery.min.1.11.2.js"></script>
+<script type="text/javascript" src="../vi-vn/Scripts/bootstrap.min.js"></script>
+
+<!-- Script
+================================================== -->
+<link rel="stylesheet" href="../vi-vn/Styles/nav_x.css" type="text/css" media="screen" />
+<!-- flexslider css -->
+<link rel="stylesheet" href="../vi-vn/Styles/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../vi-vn/Styles/styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../vi-vn/styles/nav_y.css">
+<!--Slide chay ngang Styles -->
+<link href="../vi-vn/Styles/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+<!--Slide chay ngang-->
+<script type="text/javascript" src="../vi-vn/Scripts/jquery.bxslider.js"></script>
+
+<!-- Styles
+================================================== -->
+
+</head>
+
+<body>
+<div class="right_fix">
+  <div class="item_r"> 
+    <!--Support-->
+    <div id="btnSP1" class="cf btnsp"> <span class="title_support"><img src="../vi-vn/images/htt1.png"></span>
+      <div class="support_bg sp1">
+        <p class="optionSupport"> <strong>Hỗ trợ khách hàng </strong></p>
+        <div class="infoSupport">
+          <p class="hotLine">Hotline: <span>0123 456 789</span>
+          <div class="clearfix"></div>
+          <p class="mailSupport">Email:<span>info@dangcapviet.com</span></p>
+          <div class="yahoo"> <a href="#" title=""> <img src="../vi-vn/images/yahooHTTT.jpg"/></a> <a href="" title=""><img src="../vi-vn/images/yahooHTTT.jpg" /></a> </div>
+        </div>
+      </div>
+    </div>
+    <!--End Support--> 
+  </div>
+</div>
+<div class="bgCust1">
+  <div class="container_non_responsive">
+    <div class="row modal-header">
+      <div class="logo text-center"><a href="index.html"><img src="../data/img/logo.png" ></a></div>
+      <div class="col-xs-7">
+        <div class="banner_header text-left"><img src="../data/img/img-banner.png" ></div>
+      </div>
+      <div class="fleft marginL topR">
+        <div class="hotlineBox  fleft"> Hotline:
+          <div class="numberPhone fright"> (08) 38116704
+            093 30 30 678 </div>
+        </div>
+        <!--hotlineBox-->
+        <div class="cartBox fleft"> <i class="glyphicon glyphicon-shopping-cart"></i><span class="cartNumber ">0</span> Giỏ hàng </div>
+        <div class="langBox fleft"> <a href="index_en.html"><img src="../vi-vn/images/en.png"></a> <a href="index.html"><img src="../vi-vn/images/vn.png"></a> </div>
+        <div class="clearfix"></div>
+        <div class="loginBox fright">
+          <div class="fleft iconlog"><img src="../vi-vn/images/iconLog.png"></div>
+          <div class="fleft login_b"> <span class="trigger">Đăng nhập</span>
+            <div class="popup_login" id="dpop"> <span class="close_box_acc">X</span>
+              <div class="input_form">
+                <label for="LoginForm_email"> Email <span class="required">*</span></label>
+                <input type="text" onKeyPress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi4_bt_login').click();return false;}} else {return true}; " class="input identity" maxlength="50" id="vi4_txtnameLogin" name="ctl00$vi4$txtnameLogin">
+              </div>
+              <div class="input_form">
+                <label for="LoginForm_password"> Mật khẩu <span class="required">*</span></label>
+                <input type="password" onKeyPress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi4_bt_login').click();return false;}} else {return true}; " class="input password" id="vi4_txtPassLogin" name="ctl00$vi4$txtPassLogin">
+              </div>
+              <div style="color: Red" class="errors"> </div>
+              <div id="loading-errors"> </div>
+              <div class="note_wrapper clearfix">
+                <div class="lost_password"> <a href="javascript:__doPostBack('ctl00$vi4$lbtquenmatkhau','')" class="link_acount" id="vi4_lbtquenmatkhau">Quên mật khẩu</a> </div>
+              </div>
+              <div class="input_form"> <a style="display: block; height: 28px; padding-top: 10px;" class="button" onClick="ajaxlogin();" id="vi4_bt_login" href="javascript:void(0)">Đăng nhập</a> </div>
+              <div class="note_wrapper"> Bạn chưa là thành viên? <a class="link_acount" href="register.html" rel="nofollow">Đăng ký ngay</a></div>
+            </div>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                      var notH = 1,
+    $pop = $('.popup_login').hover(function () { notH ^= 1; });
+
+                      $(document).on('mouseup keyup', function (e) {
+                          if (notH || e.which == 27) $pop.stop().hide();
+                      });
+                      /////// CALL POPUP 
+                      $('.trigger').click(function () {
+                          $('.popup_login').slideToggle('fast').end().siblings().$('.popup_login').hide('fast');
+                          event.stopPropagation();
+                      });
+                      $('.close_box_acc').click(function () {
+                          $('.popup_login').slideUp('fast');
+                      });
+                  }); 
+            </script>
+            <div class="clearfix"></div>
+            <a>Tài khoản & Đơn hàng </a> </div>
+        </div>
+      </div>
+      <!--topR-->
+      <div class=" fright shareT"> <a class="icon-share-T fb-T"></a> <a class="icon-share-T gp-T"></a> <a class="icon-share-T tw-T"></a> </div>
+    </div>
+  </div>
+</div>
+
+<!--bgCust1-->
+<div class="menu_main">
+  <div class="container_non_responsive">
+    <div class="row"> 
+      <!-- Static navbar -->
+      <nav class="navbar">
+        <ul class="nav navbar-nav navx">
+          <li class="listMain"><a href="#" ><i class=" glyphicon glyphicon-tasks"></i>Danh mục sản phẩm</a>
+            <ul  >
+              <li><a href="#">Thiết kế </a></li>
+              <li><a href="#">Nội thất</a></li>
+              <li><a href="#">Vận chuyển</a></li>
+              <li><a href="#">Máy móc </a></li>
+              <li><a href="#">Linh kiện</a></li>
+              <li><a href="#">Sản phẩm khác</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li > <a href="#" >Dịch vụ</a>
+            <ul >
+              <li><a href="#">Dịch vụ thành kế toán</a>
+                <ul>
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Chữ ký số</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          <li> <a href="" >Tin tức</a>
+            <ul>
+              <li><a href="list_news.html">Action</a>
+                <ul>
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li><a href="list_news.html">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          <li> <a href="#" >Khách hàng</a>
+          <li> <a href="#" >Tuyển dụng</a>
+          <li> <a href="contact.html" >Liên hệ</a>
+        </ul>
+        <div class="fright">
+          <div class="searchBox">
+            <form class="navbar-form " role="search">
+              <div class="form-group frmSearch">
+                <input type="text" class="inputBoder0" placeholder="Từ khóa tìm kiếm…">
+                <button type="submit" class="btn btnCust1 fright">Tìm kiếm </button>
+              </div>
+            </form>
+          </div>
+          <!--/.searchBox--> 
+        </div>
+        <!--/.nav-collapse --> 
+        
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!--container-->
+<div class="container_non_responsive"> 
+  <!-- main conten page-->
+  <ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li class="active">Data</li>
+  </ol>
+  <!--breadcrumb-->
+  
+  <div class="row">
+    <div class="col-xs-12">
+       
+       <!----------NOI DUNG----->
+    
+    <link rel="Stylesheet" type="text/css" href="../vi-vn/Styles/process_payment.css">
+    
+    <!--Step 1-->
+    <div class="box bgWhite">
+    
+    <div class="boxInner">
+    
+    <div class="box_payment box_payment_left process_payment fl bgWhite" id="account_info">
+      <div class=" boxTitle">Đăng nhập</div>
+      <div id="payment_step1">
+        <table id="ContentPlaceHolder1_RadioButtonList1" class="rb">
+          <tbody>
+            <tr>
+              <td><input type="radio" id="ContentPlaceHolder1_RadioButtonList1_0" name="ctl00$ContentPlaceHolder1$RadioButtonList1" value="0" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$RadioButtonList1$0\',\'\')', 0)" checked="checked">
+                <label for="ContentPlaceHolder1_RadioButtonList1_0">Đặt hàng mà không cần đăng ký</label></td>
+            </tr>
+            <tr>
+              <td><input type="radio" id="ContentPlaceHolder1_RadioButtonList1_1" name="ctl00$ContentPlaceHolder1$RadioButtonList1" value="1">
+                <label for="ContentPlaceHolder1_RadioButtonList1_1">Tôi đã có tài khoản tại Muasam3mien.com</label></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row_account">
+          <input type="text" name="ctl00$ContentPlaceHolder1$txtemail" id="ContentPlaceHolder1_txtemail" class="txtpassdangnhap" placeholder="Nhập vào email" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('ContentPlaceHolder1_btntieptuc').click();return false;}} else {return true}; ">
+        </div>
+        <div class="row_account">
+          <input type="password" name="ctl00$ContentPlaceHolder1$txtpass" id="ContentPlaceHolder1_txtpass" class="txtpassdangnhap" placeholder="Nhập vào mật khẩu" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('ContentPlaceHolder1_btntieptuc').click();return false;}} else {return true}; ">
+          <a class="forgot_pass" id="ContentPlaceHolder1_lbquenmatkhau" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lbquenmatkhau','')">Quên Mật Khẩu</a></div>
+        <div class="row_account">
+          <input type="submit" name="ctl00$ContentPlaceHolder1$btntieptuc" value="Tiếp tục" id="ContentPlaceHolder1_btntieptuc" class=" btnSend">
+        </div>
+      </div>
+    </div>
+    <!--Step 1--> 
+    <!--Mini Cart-->
+    <div id="mini_cart" class="box_payment fr">
+      <div class="boxTitle"> Thông tin đơn hàng </div>
+      <div class="order_sum">
+        <table width="100%">
+          <tbody>
+            <tr>
+              <th class="left_align">Sản phẩm</th>
+              <th class="qty">Số lượng</th>
+              <th class="right_align">Giá</th>
+            </tr>
+          </tbody>
+        </table>
+        <div class="order_scrollable">
+          <table class="order_scroll_table" width="100%">
+            <tbody>
+              <tr>
+                <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select></td>
+                <td class="right_align">208.000</td>
+              </tr>
+              <tr>
+                <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select></td>
+                <td class="right_align">208.000</td>
+              </tr>
+              <tr>
+                <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select></td>
+                <td class="right_align">208.000</td>
+              </tr>
+              <tr>
+                <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select></td>
+                <td class="right_align">208.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="total_item" width="100%">
+          <tbody>
+            <tr>
+              <td class="subtotal">Tổng cộng</td>
+              <td class="right_align" colspan="2">208.000 VND</td>
+            </tr>
+            <tr class="total_item">
+              <td class="total">Thành tiền</td>
+              <td class="total right_align" colspan="2">208.000 VND</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--end Mini Cart--> 
+    
+    <!----------NOI DUNG-----> 
+       
+       
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="row"> 
+    <script type="text/javascript">
+  $(document).ready(function(){
+  $('.slider2').bxSlider({
+    slideWidth: 300,
+    minSlides: 6,
+    maxSlides: 6,
+	moveSlides: 1,
+    slideMargin: 10
+  });
+});
+  </script>
+    <div class="slideThuonHieu">
+      <div class="slider2">
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+        <div class="slide"><img src="../data/img/i5.png" ></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--container-->
+<div class="bgCust2">
+  <div class="container_non_responsive">
+    <div class="col-xs-5 onlUser"><span> Đang online:<strong>123</strong> </span> <span> Lượt truy cập:<strong>123</strong> </span> </div>
+    <div class="fright">
+      <div class="social_network_sm "><a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class=" twitter"></a><a href="" class=" instagram"></a><a href="" class=" youtube"></a> <a href="" class="pinteres"></a></div>
+    </div>
+  </div>
+  <!--container--> 
+</div>
+<div class="bgCust3">
+  <div class="container_non_responsive">
+    <div class="row menuF">
+      <div class="col-xs-3">
+        <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+        <ul>
+          <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+          <li><a href="#">Cách Thức Thanh Toán</a></li>
+          <li><a href="#">Chính Sách Giao Hàng</a></li>
+          <li><a href="#">Bảo hành, đổi trả sản phẩm</a></li>
+          <li><a href="#">Theo Dõi Đơn Hàng</a></li>
+          <li><a href="#">Theo Dõi Đơn Hàng</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-3">
+        <h3>VỀ CHÚNG TÔI</h3>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Chương trình ưu đãi</a></li>
+          <li><a href="#">Điều Khoản và Điều Kiện</a></li>
+          <li><a href="#">Chính Sách Bảo Mật</a></li>
+          <li><a href="#">Cam Kết Đảm Bảo Chất Lượng</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-3">
+        <h3>liên hệ - hợp tác</h3>
+        <ul>
+          <li><a href="#">Liên hệ với chúng tôi</a></li>
+          <li><a href="#">Tuyển dụng</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-3">
+        <h3>Đăng kí khuyến mãi</h3>
+        <div class="getmailBox">
+          <form class="navbar-form frmBox">
+            <div class="form-group frmGetemail">
+              <input type="text" class="inputBoder0 inputCust" placeholder="Từ khóa tìm kiếm…">
+              <button type="submit" class="btn btnCust2 fright">Email</button>
+            </div>
+          </form>
+        </div>
+        <!--/.getmailBox-->
+        
+        <div class="clearfix"></div>
+        <h3>Mở cửa</h3>
+        <p> Thứ 2 – Thứ 6: 8.00 đến 18.00<br>
+          Thứ 7: 9.00 đến 18.00<br>
+          Chủ nhật: 10.00 đến 16.00 </p>
+      </div>
+    </div>
+    <!--menuF-->
+    <div class="row addressBox">
+      <div class="col-xs-9">
+        <div class="addressF"> <strong>CÔNG TY TNHH THƯƠNG MẠI GO TROY</strong><br>
+          Ðịa chỉ: 7A/87 Thành Thái, Phường 14, Quận 10, TP Hồ Chí Minh <br>
+          Điện thoại: 0909 245 636     - Email: pvkduyen@gmail.com<br>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="box payBox"> <img src="../data/img/visa.png"> </div>
+      </div>
+    </div>
+    <!--addressBox-->
+    <div class="row copyRight">
+      <div class="col-xs-12">Copyright © 2014 dvketoanthue.com. All Rights Reserved. Designed by <a href="#">Dang Cap Viet</a> </div>
+    </div>
+    <!--copyRight--> 
+  </div>
+  <!--container--> 
+</div>
+
+<!-- FlexSlider --> 
+<script defer src="../vi-vn/Scripts/jquery.flexslider.js"></script> 
+
+<!-- Optional FlexSlider Additions --> 
+<script src="../vi-vn/Scripts/jquery.easing.js"></script> 
+<script src="../vi-vn/Scripts/jquery.mousewheel.js"></script> 
+<script src="../vi-vn/Scripts/all.js" type="text/javascript" ></script>
+</body>
+</html>

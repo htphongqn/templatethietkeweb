@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Trang chủ</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+    <!--  Slider  -->
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/simple.carousel.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+             
+            
+            // example 2
+            $("ul.slide").simplecarousel({
+                width:860,
+                height:410,
+                auto: 5000,
+                fade: 400,
+				next: $('.next'),
+                prev: $('.prev'),				
+                pagination: true <!--control-->
+            });
+        });
+        
+    </script>
+    <!--Zoom-->
+
+    <!--Zoom-->
+    <link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+    <!--Slide chay ngang-->
+    <link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+		function mycarousel_initCallback(carousel)
+		{
+			carousel.clip.hover(function() {
+				carousel.stopAuto();
+			}, function() {
+				carousel.startAuto();
+			});
+		};
+
+		jQuery(document).ready(function () {     
+			jQuery('#mycarousel_same_P, #mycarousel_dt_img, #mycarousel_products').jcarousel({
+                auto: 0,
+                animation: 1000,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });	
+        });
+    </script>
+    <!--Search-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+           
+            $('.search_icon').click(function () {
+                $('.search_box').slideDown("fast");
+            });
+            $('.icon_point').click(function () {
+                $('.search_box').slideUp("fast");
+            });
+        });
+    </script>
+    <!--/Search-->
+    
+    <link rel="stylesheet" href="styles/layout.css">
+    
+    <!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="Scripts/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="Styles/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+</script>
+</head>
+
+<body>
+<div class="container">
+<!--ho tro truc tuyen-->
+ 
+    
+    <script type="text/javascript">
+
+	$(document).ready(function() {
+	
+		$("#map-legend").hide();
+		$("#map-legend-control").show(); 
+		$("#map-legend-control").click(function() {
+			$("#map-legend").show();
+  			 
+		});
+		$(".icon_close").click(function() {
+			$("#map-legend").hide();
+  			 
+		});
+		 
+	});
+	
+	
+	</script>
+<!--<div id="sp_head">
+<div id="map-legend">
+<div class="close_f fr"><a href=""><span class="icon_close fr"></span>Đóng</a></div>
+    <ul>
+    <a href=""  ><img alt="" src="Images/yahoo_icon.png"></a>
+    
+    
+    <a href=""   ><img alt="" src="Images/skype_icon.png"></a>
+    
+    
+    <div class="hotline"><b class="number_phone">0906 928977</b></div>
+    
+    
+    </ul>
+</div>
+<div id="map-legend-control"> <a href="#" ><img src="Images/support_icon.png" alt="" title="Hỗ trợ" height="160" width="37"></a> </div>
+</div>
+-->
+<!--ho tro truc tuyen--> 
+
+  
+<!-- Header-->
+<header> 
+<a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a>
+ <a href="" id="company_name"><img src="images/logo_text.png" /></a>
+ <div id="slogan"><img src="images/logo_text_2.png"></div>
+</header>
+<!-- End Header--> 
+<!--#Menu top-->
+    <nav id="nav_x">
+    	<ul>
+        	<div class="fl icon_nav_first"></div>
+          	<li class="active"><a href="index.html">Trang chủ </a></li>
+          	<li><a href="#">Giới thiệu </a> </li>
+          	<li ><a href="list_product.html">Sản Phẩm</a>
+        		<ul>
+              		<li><a href="#">Sub Menu 1</a>
+                    	<ul>
+                            <li><a href="#">Sub Menu 5</a></li>
+                            <li><a href="#">Sub Menu 6</a> </li>
+                        </ul>
+                     </li>
+                    
+                    <li><a href="#">Sub Menu 2</a></li>
+              		<li><a href="#">Sub Menu 3</a> </li>
+            	</ul>
+      		</li>
+          	<li><a href="#">Bảng giá</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Sự kiện</a></li>
+             <li><a href="#">Album ảnh</a></li>
+          	<li><a href="#">Liên hệ</a></li>
+             
+            
+            
+        
+        <div id="search_form"> 
+    <a class="trigger"><span class="search_icon"></span></a>
+    <div id="dpop" class="search_box"> <span class="icon_point"></span>
+        <input name="" id="" class="inputSearch" onblur="SearchOnBlur(this)" onclick="this.value=''" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa cần tìm" type="text">
+        <a id="" class="submitSearch" href=""> <span class="icon_search">Tìm Kiếm</span></a>
+    </div>
+</div>
+<!--/search_form-->
+
+
+</ul>
+        <div class="fr icon_nav_last"></div>
+  </nav><!--End Menu top--> 
+
+
+
+ 
+
+<!--#Main-->
+<div id="main"> 
+  
+
+<!--sidebar-->
+<div class="sidebar fl">
+
+
+ 
+    <div class="box">
+    <div class=" title_box font1">Hỗ trợ trực tuyến</div>
+    <div class="box_ct  ">
+        <div class="hotline">Mr Việt: <b>0909 620 969</b></div>
+        <a href=""><img src="images/icon_yahoo.png"</a>
+         <a href="" style="margin-left:10px;"><img src="images/skype_sidebar.png" /></a>
+    </div><!--End box_ct--> 
+    
+    
+    </div><!--End box--> 
+ 
+<div class="box">
+<div class="title_box font1"><span> Tin tức</span></div>
+<div class="box_ct">
+<div class="list_news">
+             <ul  class="box_news_index">
+              <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Độc đáo với những sản phẩm bằng… gỗ cà phê</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+ 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Độc đáo với những sản phẩm bằng… gỗ cà phê</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+     
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+      
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+              <a class="view_all"><i>Xem tất cả</i></a>
+            
+            </ul>
+            </div><!--End List News-->
+
+</div><!--End box_ct--> 
+
+</div><!--End box--> 
+
+ 
+</div><!--End sidebar-->
+
+<!--#Main col-->
+<div class="fr" id="main_col">
+<div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+<div class="box">
+<div class="box_Tab">
+<span class="font1">chi tiết</span>
+ </div>
+<div class="box_ct" id="detail_news">
+        <div id="info_g">
+              <h2 class="h2Title">Canon ống kính tele-zoom EF 100-400mm f</h2>
+               
+              <div class="zoom-section">
+              <div class="zoom-small-image"><a href='http://a9.vietbao.vn/images/vi955/2009/11/55265732-1259220115-huychuongSeaGames25.jpg' class = 'cloud-zoom' id='zoom1' rel="adjustX: 10, adjustY:-4"><img class="mainImage" src="http://a9.vietbao.vn/images/vi955/2009/11/55265732-1259220115-huychuongSeaGames25.jpg" alt='' title="" /></a></div>
+              <div id="mycarousel_dt_img" class="zoom-desc jcarousel-skin-tango">
+            <ul>
+                  <li class="item"><a href='https://photo.tinhte.vn/store/2014/11/2634653_100400_21-575x383.jpg' class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: 'https://photo.tinhte.vn/store/2014/11/2634653_100400_21-575x383.jpg' "><img class="zoom-tiny-image" src="https://photo.tinhte.vn/store/2014/11/2634653_100400_21-575x383.jpg" alt = ""/></a></li>
+                  <li class="item"><a href='https://photo.tinhte.vn/store/2014/11/2634656_100400_41-575x383.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' https://photo.tinhte.vn/store/2014/11/2634656_100400_41-575x383.jpg'"><img src="https://photo.tinhte.vn/store/2014/11/2634656_100400_41-575x383.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                  <li class="item"><a href='http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg' "><img src="http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                  <li class="item"><a href='http://4.bp.blogspot.com/-tLigUPY9q4g/UG-UnSyVjGI/AAAAAAAABDM/EJuZO_JiJwE/s640/Chevrolet+Captiva+Maxx+LTZ.jpg' class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: 'http://4.bp.blogspot.com/-tLigUPY9q4g/UG-UnSyVjGI/AAAAAAAABDM/EJuZO_JiJwE/s640/Chevrolet+Captiva+Maxx+LTZ.jpg' "><img class="zoom-tiny-image" src="http://4.bp.blogspot.com/-tLigUPY9q4g/UG-UnSyVjGI/AAAAAAAABDM/EJuZO_JiJwE/s640/Chevrolet+Captiva+Maxx+LTZ.jpg" alt = ""/></a></li>
+                  <li class="item"><a href='https://photo.tinhte.vn/store/2014/11/2634656_100400_41-575x383.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' https://photo.tinhte.vn/store/2014/11/2634656_100400_41-575x383.jpg'"><img src="https://photo.tinhte.vn/store/2014/11/2634656_100400_41-575x383.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                  <li class="item"><a href='http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg' "><img src="http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                  <li class="item"><a href='http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg' "><img src="http://thethao.thanhnien.com.vn/Pictures20137/T_Lam/TTK/Huy_Chuong1.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                  <li class="item"><a href='http://g.vatgia.vn/gallery_img/8/ryu1380861872.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://g.vatgia.vn/gallery_img/8/ryu1380861872.jpg' "><img src="http://g.vatgia.vn/gallery_img/8/ryu1380861872.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                </ul>
+          </div>
+            </div> 
+        <!-- end zôm-->
+        <div class="mo_ta fl">
+         
+       
+
+<div id="dtp_info">
+              <h2 class="h2Title">mô tả</h2>
+              <div class="dtp_status"><span class="title_status">Loại sản phẩm:</span><b>Huy chương</b></div>
+              <!--end: .dtp_status-->
+              <div class="dtp_status"><span class="title_status">Nhãn hiệu:</span> <b>Đang cập nhật</b></div>
+              <!--end: .dtp_status-->
+              <!--<div class="select fl"><span>Chọn màu sắc:</span>
+            <label>
+                  <select name="color" class="type_option">
+                <option value="0">Đỏ</option>
+                <option value="1">Xanh</option>
+              </select>
+                </label>
+          </div>
+              <div class="select fl"><span>Chọn kích cỡ:</span>
+            <label>
+                  <select name="color" class="type_option">
+                <option value="0">180x200</option>
+                <option value="1">150x200</option>
+              </select>
+                </label>
+          </div>
+              <div class="select fl"><span>Chọn số lượng:</span>
+            <input name="quantity" class="inputbox" value="1" type="text">
+          </div>-->
+              <!--end: .dtp_status-->
+              <div class="cf"></div>
+              <div class="dtp_status addtocart"><b class="dtp_price">Giá: 450.000 đ</b></div>
+              <!--end: .dtp_addcart--> 
+            </div>
+        </div>
+              
+        <div class="clearfix"></div>    
+            
+            <div class="mo_ta_chi_tiet">
+            <div class="box_Tab">
+             <span  class=" font1">Mô TẢ CHI TIẾT</span> 
+            </div>
+           <p><h3>Canon giới thiệu ống kính tele-zoom EF 100-400mm f / 4.5-5.6L IS II USM</h3></p>
+
+ 
+<img src="https://photo.tinhte.vn/store/2014/11/2634653_100400_21-575x383.jpg" />
+<p>Canon giới thiệu ống kính tele-zoom EF 100-400mm f / 4.5-5.6L IS II USM như đã có nhiều tin báo trước đây. Ống kính chuyên dụng phục vụ nhu cầu chụp ảnh thể thao, chim thú và động vật hoang dã. Theo Canon thì ống kính được trang bị lớp thấu kính UD tăng độ phân giải và tương phản trên toàn bộ dải zoom; ống kính có phủ lớp tráng phủ ASC (Air Sphere Coating) mới trong công nghệ ống kính của Canon giúp triệt tiêu bóng ma và loé sáng; ở thấu kính trước và sau có phủ lớp fluorine hạn chế bám bẩn và dấu tay. Cấu trúc lá khẩu gồm 9 lá cho ảnh có bokeh tròn mềm mại; và, trang bị cơ chế giảm rung quan OIS với 4 mức tuỳ chỉnh. </p>
+ 
+Canon EF 100-400mm f / 4.5-5.6L IS USM trang bị vòng zoom bên trong, có ngàm gắn chân máy, và đặc biệt loa che có cấu tạo mới giúp người dùng tháo lắp filter mà không cần phải tháo loa.
+
+Giá: 2199 USD
+ 
+
+
+
+            </div><!---end thog tin chi tie-->
+ 
+            
+            </div><!--End info_g-->
+       
+
+</div><!--End box_ct--> 
+ </div><!--End box--> 
+ 
+<div class="box">
+<div class="box_Tab">
+<span class="font1">SẢN PHẨM tương tự</span>
+ </div>
+<div class="box_ct">
+<div class="product_row">
+              <ul>
+            <li> 
+                <!--Start Product-->
+                <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> 
+                      	<a href="detail_product.html"><span>Cà phê Moka</span> </a>
+                        
+                        </div>
+                        <!--/des_product--> 
+                 </div><!--/product_inner--> 
+              </div><!--End Product--> 
+              </li>
+              
+              
+              <li> 
+                <!--Start Product-->
+                <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> 
+                      	<a href="detail_product.html"><span>Cà phê Moka</span> </a>
+                        
+                        </div>
+                        <!--/des_product--> 
+                 </div><!--/product_inner--> 
+              </div><!--End Product--> 
+              </li>
+              
+              
+              <li> 
+                <!--Start Product-->
+                <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> 
+                      	<a href="detail_product.html"><span>Cà phê Moka</span> </a>
+                        
+                        </div>
+                        <!--/des_product--> 
+                 </div><!--/product_inner--> 
+              </div><!--End Product--> 
+              </li>
+              
+              
+              <li> 
+                <!--Start Product-->
+                <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> 
+                      	<a href="detail_product.html"><span>Cà phê Moka</span> </a>
+                        
+                        </div>
+                        <!--/des_product--> 
+                 </div><!--/product_inner--> 
+              </div><!--End Product--> 
+              </li>
+              
+              
+              <li> 
+                <!--Start Product-->
+                <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> 
+                      	<a href="detail_product.html"><span>Cà phê Moka</span> </a>
+                        
+                        </div>
+                        <!--/des_product--> 
+                 </div><!--/product_inner--> 
+              </div><!--End Product--> 
+              </li>
+              
+              
+              <li> 
+                <!--Start Product-->
+                <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> 
+                      	<a href="detail_product.html"><span>Cà phê Moka</span> </a>
+                        
+                        </div>
+                        <!--/des_product--> 
+                 </div><!--/product_inner--> 
+              </div><!--End Product--> 
+              </li>
+              
+              
+            
+          </ul>
+          </div><!--End Product_row-->
+
+</div><!--End box_ct--> 
+</div><!--End box--> 
+
+
+
+          
+</div><!--End Main col--> 
+</div><!--#Main--> 
+<div id="bottom_main">
+
+
+<div class="social_network"> <a href="" class="facebook"></a> <a href="" class="youtube"></a> <a href="" class="gplus"></a> </div>
+
+<div class="visit"> 
+<img src="Images/icon-truycap.gif" class="fl" />
+<div class="soluong fr"> 
+<div class="fl" >Đang online: <b><span id="a_thongke1_Lbsum">1</span></b></div>
+<div class="fl" style="margin-left:25px;">Tổng truy cập: <b><span id="a_thongke1_Lbsum">25</span></b> </div>
+</div>
+
+
+</div>
+<div class="fl icon_nav_first"></div>
+<div class="fr icon_nav_last"></div></div>
+      
+<!--#footer-->
+<div id="footer">
+<div class="address">
+
+
+
+                                  
+
+<p> CÔNG TY TNHH CÀ PHÊ RANG XAY NGUYÊN CHẤT VÕ GIA </p>
+<p>Ðịa chỉ: 301/9 Đỗ Xuân Hợp, Khu Phố 4, P. Phước Long B, Quận 9, TP. HCM</p>
+
+<p>Điện thoại: 0912.476.346        Email: v.coffeevn@gmail.com </p>
+<p>Mã số thuế: 0312889176   </p>
+</div>
+
+
+                                    
+
+
+<div class="copyright">
+<p>© 2014 by CafeVCoffee. All rights reserved.</p>
+<p>Design by Dang Cap Viet.</p>
+</div>
+
+</div>
+<!--End footer--> 
+</div>
+<!--End container-->
+</body>
+</html>

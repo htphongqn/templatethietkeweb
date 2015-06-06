@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/detailPro.css"/>
+<link rel="stylesheet" type="text/css" href="styles/detailNews.css"/>
+</head>
+<body>
+
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Hỗ trợ trực tuyến</div>
+    <div class="boxInnerHT">
+      <div class="row hotline"> <b>0937.221.671</b> <br />
+        Mr.Hiền <span class='nick_chat'><a href='skype:trandinhmy.com?call' title='Mr. Mỹ'><img src='http://mystatus.skype.com/smallclassic/trandinhmy.com' title=Mr. Mỹ  alt='' ></a></span> <span class='nick_chat'><a href='ymsgr:sendim?trandinhmy4323' title='Mr. Mỹ'><img src='http://opi.yahoo.com/online?u=trandinhmy4323&m=g&t=2' width='114px' height='20px'   /></a></span> </div>
+      <div class="row"> </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+<!--ho tro-->
+
+<div class="wrap wgHeader">
+  <div class="container">
+    <div class="rowmn headerBox">
+      <div class="innerHeaderBox">
+        <div class="fleft clsLogo "> <a href="index.html"><img src="data/logo.png" /></a> </div>
+        <div class="fleft bannerHeader"> </div>
+        <div class="hotlineBox"> <i class="glyphicon glyphicon-earphone"></i> <b> 0937 911 678</b> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wNavx">
+  <div class="container">
+    <div class="rowmn menuBox">
+      <div class="navx">
+        <ul>
+          <li class="active"><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="products.html">Sản phẩm</a>
+            <ul>
+              <li><a href="#">Sub menu level 3</a></li>
+              <li><a href="#">Sub 3</a></li>
+              <li><a href="#">Sub 3s</a></li>
+            </ul>
+          </li>
+          <li><a href="#">DP-Thương hiệu</a></li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Tư vấn sản phẩm</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <div class=" container">
+    <div class="rowmn">
+      <div class=" col12 slideBox">
+        <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script> 
+        <script>
+				//slider nivo
+					 $(window).load(function() {
+						$('#slider').nivoSlider();
+					});
+				</script>
+        <div class="slider_main">
+          <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider"> <a href=""> <img src="data/slide1.png" /></a> <a href=""><img src="data/slide2.png" /></a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wMain">
+  <div class="container">
+    <div class="rowmn">
+      <div class="col3 sidebar sideLeft">
+        <div class="box">
+          <div class="headingBox"> <span>Danh mục sản phẩm</span> </div>
+          <div class="innerBox">
+            <div class="navy">
+              <ul>
+                <li><a>Nhóm sản phẩm</a></li>
+                <li><a>Tư vấn sản phẩm</a></li>
+                <li><a>Thương hiệu</a></li>
+                <li><a>Nhóm sản phẩm</a></li>
+                <li><a>Sản phẩm mới</a></li>
+                <li><a>Sản phẩm bán chạy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headingBox"> <span>Tìm kiếm</span> </div>
+          <div class="innerBox">
+            <div class="searchBox">
+              <input class="inputS" id="txtSearch" placeholder="Nhập từ khoá.." />
+              <a class=" btn btn-warning">Tìm kiếm</a> </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headingBox"> <span>Hỗ trợ trực tuyến</span> </div>
+          <div class="innerBox">
+            <div class="htttBox">
+              <p>Hotline: <b class="hlNumber">0912 888 444</b></p>
+              <p>Tư vấn KH: <b class="hlNumber">0927 888 999</b> </p>
+              <p>Đặt hàng: <b class="hlNumber">0211 3888 999</b></p>
+              <p>Bảo hành: <b class="hlNumber">0912 888 442</b></p>
+              <span class="imghttt"><img src="images/yahoo_onl.png" /> </span> <span class="imghttt"><img src="images/skype.png" /></span> <span class="imghttt"><img src="images/yahoo_onl.png" /> </span> <span class="imghttt"><img src="images/skype.png" /></span> </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+		$(document).ready(function(){
+		  $('.slider4').bxSlider({
+			 mode: 'vertical',
+			slideWidth: 400,
+			minSlides: 2,
+			moveSlides: 1,
+			maxSlides: 4,
+			slideMargin: 5,
+			auto: true,
+			speed: 1000,
+			controls: true,
+			pause: 4000,
+		  });
+		});
+		</script>
+        <div class="box">
+          <div class="headingBox"> <span>Tin nổi bật</span> </div>
+          <div class="innerBox">
+            <div class="slideMediaNB">
+              <div class="inner_slideMedia">
+                <div class="slider4">
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="mediaItem_s">
+                      <div class="media wmn">
+                        <div class="innerMedia wmn">
+                          <div class="mediaLeft">
+                            <div class="photo"><a href=""><img src="data/i5.jpg" /></a></div>
+                          </div>
+                          <div class="mediaBody">
+                            <h2><a href="">Đặc tính của cửa cuốn trong suốt</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--end box--> 
+        <script type="text/javascript">
+		$(document).ready(function(){
+		  $('.slider5').bxSlider({
+			 mode: 'vertical',
+			slideWidth: 400,
+			minSlides: 3,
+			moveSlides: 1,
+			maxSlides: 4,
+			slideMargin: 5,
+			auto: true,
+			speed: 3000,
+			controls: false,
+			pause: 0,
+		  });
+		});
+		</script>
+        <div class="box">
+          <div class="headingBox"> <span>Đối tác</span> </div>
+          <div class="innerBox">
+            <div class="slidePartner">
+              <div class="slider5">
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+                <div class="slide"><img src="data/i1.png" ></div>
+                <div class="slide"><img src="data/i2.png" ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--end box-->
+        <div class="box">
+          <div class="headingBox"> <span>Thống kê truy cập</span> </div>
+          <div class="innerBox">
+            <div class="vsBox">
+              <div class="innerVsBox">
+                <p>Số người online :<b>1</b></p>
+                <p>Số người truy cập :<b>10000</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End sidebar -->
+      
+      <div class="col9 mainContent">
+        <div class="hidden">Company name</div>
+        <div class="box boxMain">
+          <div class="innerBoxMain"> 
+            <!--================= .::noi dung::. =================-->
+            <div class="breadcrumbBox">
+              <ul class="breadcrumb">
+                <li><a href="index.html">Trang chu</a></li>
+                <li class="active"><a>Chuyen muc</a></li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="headingBox headingBoxMain txtleft"> <span>Tin tức</span> </div>
+              <!--Chi tiet tin tuc-->
+              <div class="detailNews">
+                <h1>Công việc giúp các bà mẹ kiếm tiền ngày Tết</h1>
+                <div class=" dateTime">Thứ Hai, ngày 02/03/2015 06:55 AM (GMT+7)</div>
+                <div class="innerDetailNews"> 
+                  <!--noi dung bai viet-->
+                  <p>Mứt là món không thể thiếu mỗi dịp tết. Vì vậy, nhu cầu tiêu thụ của các gia đình cũng rất lớn. Nếu như trước kia mọi người đều mua mứt tại các cửa hàng thì giờ đây lại thích tự làm hoặc mua của những người quen để đảm bảo chất lượng và vệ sinh. Đã ba năm gắn bó với <a href="http://vieclam.24h.com.vn/">việc làm</a> mứt, từ buổi đầu chỉ chuyên nhận mứt dừa, giờ đây chị Hiền (<a href="http://hcm.vieclam.24h.com.vn/ke-toan-kiem-toan-c30.html">nhân viên kế toán</a> tại Cầu Giấy, Hà Nội) đã bổ sung vào tăng cường làm thêm mứt khoai, mứt cà rốt, mứt xoài… Chị cho biết: &quot;Mọi người thích ăn mứt do mình làm vì đảm bảo chất lượng. Giờ mạng internet cũng phổ biến cách làm mứt nhưng chủ yếu mọi người hay làm mứt dừa. Vì vậy mình phải cải tiến và làm thêm nhiều loại khác để đáp ứng nhu cầu của khách hàng&quot;. </p>
+                  <p><span align="center"><span id="shareImage-0"> </span><img id="news-image-id-0" onmouseover="display_icon_socail_image('shareImage-0', this);" alt="Công việc giúp các bà mẹ kiếm tiền ngày Tết - 1" onclick="return openNewImage(this, '')" src="http://24h-img.24hstatic.com/upload/1-2015/images/2015-02-10/1423539314-t---i-xu---ng--16-.jpg" /></span></p>
+                  <p><em>Mứt xoài. Ảnh minh họa.</em></p>
+                  <p>Nói về lượng khách hàng của mình chị Hiền cho biết: &quot;Khách của mình chủ yếu là các anh chị đồng nghiệp, bạn bè và người thân. Mình đã làm được mấy Tết rồi nên số lượng hàng cũng ổn định. Có khi nhiều đơn hàng quá mà công việc cuối năm trên công ty cũng bận nên đêm phải thức để đảo mứt. Làm nhiều cũng quen nên đôi khi thức trắng đêm mà mình vẫn thấy bình thường&quot;.</p>
+                  <p>Là nhân viên văn phòng, lương ổn định nhưng vì &quot;một chốn ba quê&quot;, tết đến trăm thứ phải chi mà &quot;tiền lương thì chỉ có thế&quot; nên chị Quỳnh Thơ (Hà Nội) cũng phải lo kiếm thêm tiền. &quot;Đang không biết nên làm thế nào để tăng nguồn thu cho dịp tết thì mình lên mạng học được cách làm mứt. Làm thử thấy mọi người ăn đều khen và muốn đặt hàng nên mình nhận luôn. Tuy làm mứt cũng lách cách và tốn thời gian nhưng được cái là có thể làm bất cứ lúc nào. Gọi là lấy công làm lãi nên cứ chăm chỉ và có đơn đặt hàng đều thì cũng có khoản để tiêu tết.&quot; - Chị Thơ chia sẻ.</p>
+                  <p><strong>Làm lạp xưởng hun khói đỏ hoe mắt</strong></p>
+                  <p>Đang trong thời gian nghỉ sinh con và ở nhà ông bà ngoại, chị Tâm (Yên Bái) đã đăng lên mạng món ăn truyền thống của vùng núi Tây bắc và được rất nhiều người đặt hàng. Chị cho biết: &quot;Ban đầu cũng chỉ định làm để nhà ăn, nhưng thật bất ngờ là khi đăng lên facebook thì có nhiều người lại muốn mua. Vậy là mình nhận làm luôn để vừa kiếm thêm thu nhập, vừa cho mọi người có cơ hội thưởng thức món ăn truyền thống của quê hương&quot;. Theo chị Tâm, làm lạp xưởng vất vả nhất là lúc hun khói. &quot;Lạp xưởng ngon thì ngoài vị thịt ướp bên trong, bên ngoài khói phải ngấm đều nên trong quá trình hun khói mình phải ngồi canh và đảo liên tục. Lúc ra lò được một mẻ thì mắt cũng đỏ hoe vì khói&quot;.</p>
+                  <p>Khi được hỏi &quot;nếu không cần tiền thì chị có làm không?&quot; chị Tâm thành thật chia sẻ: &quot;Nếu nói vì tiền thì cũng chỉ đúng một phần vì làm món này rất tốn thời gian, vất vả mà lãi lại rất ít. Hết làm lòng rồi lại đến thái thịt, tẩm ướp, phơi nắng rồi hun khói, cả tuần mới xong một mẻ. Quan trọng nhất là mình thích làm, vừa có cơ hội giao tiếp với mọi người lại có thêm ít tiền tiêu Tết&quot;.</p>
+                  <p><strong>Làm cây, quả trang trí nhà</strong></p>
+                  <p>Nhu cầu trang trí nhà cửa dịp Tết tăng cao, tạo điều kiện cho những người khéo tay như chị Yến (<a href="http://hcm.vieclam.24h.com.vn/marketing-pr-c53.html">nhân viên truyền thông</a>, Hoàng Mai, Hà Nội) có thêm cơ hội trổ tài, kiếm tiền. Đến nhà chị trong những ngày giáp tết dễ dàng choáng ngợp bởi những cây, quả cảnh làm từ giấy, kẹo và tiền. &quot;Bản chất mình cũng hay tự nghĩ ra những thứ để trang trí nhà cửa. Thích làm những việc tỉ mẩn nên thấy làm thêm hoa lá kiểu này rất hợp với mình&quot;. Chị Yến chia sẻ.</p>
+                  <p><span align="center"><span id="shareImage-1"> </span><img id="news-image-id-1" onmouseover="display_icon_socail_image('shareImage-1', this);" alt="Công việc giúp các bà mẹ kiếm tiền ngày Tết - 2" onclick="return openNewImage(this, '')" src="http://24h-img.24hstatic.com/upload/1-2015/images/2015-02-10/1423539408-iiqutrang_tri_ngay_tet_nrew.jpg.jpg" /></span></p>
+                  <p><em>Nhu cầu trang trí nhà cửa ngày Tết tăng cao. Ảnh minh họa.</em></p>
+                  <p>Tâm sự về <a href="http://hcm.vieclam.24h.com.vn/ke-toan-kiem-toan-c30.html">việc làm</a> thêm của mình, chị cho biết: &quot;Năm nay kinh tế khó khăn, lương hai vợ chồng bình thường cũng chỉ đủ chi tiêu. Đợt này còn lo Tết về quê nữa nên cũng cần tiền lắm! May mà nhu cầu của mọi người mua cây tiền, quả dứa, kẹo hoa chơi Tết cũng nhiều nên mình cũng tranh thủ kiếm được kha khá, gọi là có đồng ra đồng vào&quot;.</p>
+                  <!--End noi dung bai viet--> 
+                </div>
+                <!--End innerDetailNews-->
+                <div class="function">
+                  <div class="shareBox"> <img src="images/social_network.jpg" width="142" height="18"></div>
+                  <div class="toolbarBox"> <a href="#"> <i class="glyphicon glyphicon-print"></i>Bản in</a> <a target="_blank" href="#" data-toggle="modal" data-target="#myModalS" > <i class="glyphicon glyphicon-envelope"></i>Gửi email</a> <a href="" data-toggle="modal" data-target="#myModalF"> <i class="glyphicon glyphicon-edit"></i>Phản hồi</a></div>
+                </div>
+                <!--function--> 
+                
+                <!--Other News-->
+                <div class="otherNews">
+                  <h3>Tin bài khác</h3>
+                  <ul>
+                    <li> <a href="#">Nghề năng động<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+                    <li> <a href="#">Nhu cầu tuyển dụng nhân lực ngành CNTT tăng cao trong năm 2015<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+                    <li> <a href="#">Việc làm cho người thông minh nhưng lười<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+                    <li> <a href="#">5 công việc "hái ra tiền" trong dịp Tết<small class="date">(05/03)</small></a> </li>
+                    <li> <a href="#">Nghề năng động<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+                    <li> <a href="#">Nhu cầu tuyển dụng nhân lực ngành CNTT tăng cao trong năm 2015<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+                    <li> <a href="#">Việc làm cho người thông minh nhưng lười<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+                    <li> <a href="#">5 công việc "hái ra tiền" trong dịp Tết<small class="date">(05/03)</small></a> </li>
+                  </ul>
+                </div>
+                <!--Other News--> 
+              </div>
+              <!--End chi tiet tin tuc--> 
+            </div>
+            
+            <!--================= .::noi dung::. =================--> 
+          </div>
+          <!--innerBoxMain--> 
+          
+        </div>
+      </div>
+      <!--end box--> 
+      
+    </div>
+    <!--mainContent--> 
+    
+  </div>
+  <!--rowmn--> 
+  
+  <!--End contentBox--> 
+  
+</div>
+<!--End Container-->
+</div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="rowmn">
+      <div class="address"> <b>CÔNG TY TNHH XÂY DỰNG SẢN XUẤT VÀ THƯƠNG MẠI ANH ĐỨC</b><br />
+        Địa chỉ: Ngã Tư Đầm cả - TT Hương Canh – Bình Xuyên – Vĩnh Phúc<br />
+        Điện thoại: 02113.888.999 – FAX: 02113.596.777<br />
+        Email: anhducvpgroup@gmail.com - Website: www.anhduc.com.vn<br />
+      </div>
+      <div class="copyRight"> Copyright © 2015 by anhduc.com.vn . Design by <a href="http://dangcapviet.vn/">www.dangcapviet.vn</a> </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="scripts/js.js"></script>
+</body>
+</html>

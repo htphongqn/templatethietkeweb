@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Trang chủ</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+<link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+<link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+<!--  Slider  -->
+<link href="Styles/fmslideshow.min.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/jquery-1.6.2.min.js"></script>
+<script src="Scripts/fmslideshow.min.js"></script>
+<script>
+
+	jQuery(function($){
+		$('#jq_fmslideshow').fmslideshow({
+			
+			//Note: if you need to modify further see the available variable in fmslideshow.js file.
+			
+			banner_width : 1000,
+			banner_height : 409,
+
+			
+			buttons_type : 2,
+			buttons_autoHide : false,
+			buttons_align : "BL",
+			buttons_spacing : "10,10",
+	
+			button_nextPrevious_type : 2,
+			button_nextPrevious_autoHide : false,
+			
+			button_next_align : "BR",
+			button_next_spacing : "10,7",
+			button_previous_align : "BL",
+			button_previous_spacing: "10,42", slideShow_loop: true,
+			
+			default_data_align : "C",
+			default_data_spacing : "0,0",
+			default_data_inOutDirection : "-",
+			default_data_inOutDistance : "-"
+
+			
+		});
+	});
+
+</script>
+
+
+<!--Zoom-->
+<link rel="stylesheet" href="Styles/multizoom.css" type="text/css" />
+<script type="text/javascript" src="Scripts/multizoom.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#multizoom1').addimagezoom({ // multi-zoom: options same as for previous Featured Image Zoomer's addimagezoom unless noted as '- new'
+            descArea: '#description', // description selector (optional - but required if descriptions are used) - new
+            speed: 1500, // duration of fade in for new zoomable images (in milliseconds, optional) - new
+            descpos: true, // if set to true - description position follows image position at a set distance, defaults to false (optional) - new
+            imagevertcenter: true, // zoomable image centers vertically in its container (optional) - new
+            magvertcenter: true, // magnified area centers vertically in relation to the zoomable image (optional) - new
+             
+            magnifiersize: [350, 350],
+            magnifierpos: 'right',
+            cursorshadecolor: '#fdffd5',
+            cursorshade: true //<-- No comma after last option!
+        });
+    })
+
+</script>
+ 
+</head>
+
+<body>
+<div class="container">
+  <header> <a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a> 
+    <!--Search Tool-->
+    <div id="search_form" class="fr">
+    <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa tìm kiếm..." />
+    <input name="" class="submitSearch" type="button" />
+    </div>
+    <!--End Search Tool--> 
+  </header>
+  
+  <!--#Menu top-->
+  <nav id="nav_x">
+    <ul>
+      <li class="active"><a href="index.html">Trang chủ </a></li>
+      <li><a href="#">Giới thiệu </a> </li>
+      <li class="parent"><a href="#">Sản phẩm</a>
+        <ul>
+          <li><a href="#">Thực phẩm chức năng </a>
+            <ul>
+              <li><a href="#">Thuốc</a></li>
+              <li><a href="#">Vitamin </a>
+                <ul>
+                  <li><a href="#">Sản Phẩm A </a></li>
+                  <li><a href="#">Sản phẩm B</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Mỹ phẩm </a></li>
+        </ul>
+      </li>
+      <li><a href="#">Dịch Vụ </a></li>
+      <li><a href="#">Khuyến mãi </a></li>
+      <li><a href="#">Tin tức </a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </nav>
+  
+  <!--End Menu top-->
+  
+  
+   
+  <!--#Main-->
+  <div id="main"> 
+    <!--sidebar-->
+    <div class="sidebar fl">
+      <div class="box">
+        <div class="title_box font1">Danh mục sản phẩm</div>
+        <div class="box_ct">
+          <nav id="nav_y">
+            <ul>
+              <li ><a href="#">Đầm dạo phố</a></li>
+              <li><a href="#">Đầm dạo phố</a></li>
+              <li class="parent"><a href="#">Đầm dạo phố</a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li class="parent"><a href="#">Sub Menu 2</a>
+                    <ul>
+                      <li><a href="#">Deep Menu 1</a></li>
+                      <li><a href="#">Deep Menu 2</a></li>
+                      <li><a href="#">Deep Menu 3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Đầm dạo phố</a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li class="parent"><a href="#">Sub Menu 2</a>
+                    <ul>
+                      <li><a href="#">Category 1</a></li>
+                      <li><a href="#">Category 2</a></li>
+                      <li><a href="#">Category 3</a></li>
+                      <li><a href="#">Category 4</a></li>
+                      <li><a href="#">Category 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                  <li><a href="#">Sub Menu 4</a></li>
+                  <li><a href="#">Sub Menu 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Đầm dạo phố</a></li>
+              <li><a href="#">Đầm dạo phố</a></li>
+              <li><a href="#">Đầm dạo phố</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--#box_ct--> 
+      </div>
+      <!--#Box--> 
+      
+      <!--#Box-->
+      <div class="box">
+        <div class="title_box font1">Hỗ trợ trực tuyến</div>
+        <div class="box_ct">
+          <div class="btn_row"> <img src="Images/phone.png" class="fl icon_hotline"  />
+            <div class="hotline fl font2"> 0908 169 044 </div>
+          </div>
+          <div class="btn_row">
+            <input name="" type="button" class="btn_yahoo fl" />
+            <input name="" type="button" class=" btn_skype fl" />
+          </div>
+        </div>
+      </div>
+      <!--End Box--> 
+      
+      <!--#Box-->
+      <div class="box">
+        <div class="title_box font1">Facebook</div>
+        <div class="box_ct"> <img src="Images/fb_img.png" /> </div>
+      </div>
+      <!--End Box--> 
+      
+      <!--#Box-->
+      <div class="box">
+        <div class="title_box font1">Quảng cáo</div>
+        <div class="box_ct"><img src="Images/quangcao1.png" /></div>
+      </div>
+      <!--End Box--> 
+    </div>
+    <!--#sidebar--> 
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <!-- #Main_col-->
+    <div id="main_col" class="fr">
+      <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+    <!--Detail Products-->
+    <div class="box">
+      <div class="box_ct">
+      
+      
+     <div id="zoomimgbox">
+            <div class="targetarea" ><img id="multizoom1" alt="zoomable" title="" src="Images/air.jpg"/></div>
+            <div class="multizoom1 thumbs"> 
+            <a href="Images/sp2.jpg" data-large="Images/sp2.jpg" data-title="Milla Jojovitch">
+            <img src="Images/sp2.jpg" alt="Milla" title=""/></a> 
+            <a href="Images/sp3.jpg" data-large="Images/sp3.jpg" data-title="Milla Jojovitch">
+            <img src="Images/sp3.jpg" alt="Milla" title=""/></a> 
+            <a href="Images/sp4.jpg" data-large="Images/sp4.jpg" data-title="Milla Jojovitch">
+            <img src="Images/sp4.jpg" alt="Milla" title=""/></a> 
+            <a href="Images/sp5.jpg" data-large="Images/sp5.jpg" data-title="Milla Jojovitch">
+            <img src="Images/sp5.jpg" alt="Milla" title=""/></a> </div>
+            <!--multizoom1 thumbs--> 
+          </div>
+          <!--zoomimgbox--> 
+      
+      <div id="dtp_info">
+          <h2 class="h2Title">Quần công sở MS:Q9</h2>
+          <div class="dtp_status"><span class="title_status">Loại sản phẩm:</span><b>Công sở</b></div>
+          <!--end: .dtp_status-->
+          <div class="dtp_status"><span class="title_status">Nhãn hiệu:</span> <b>Đang cập nhật</b></div>
+          <!--end: .dtp_status-->
+          <div class="select fl"><span>Chọn màu sắc:</span>
+                <label>
+                  <select name="color" class="type_option">
+                    <option value="0">Đỏ</option>
+                    <option value="1">Xanh</option>
+                  </select>
+                </label>
+              </div>
+              <div class="select fl"><span>Chọn kích cỡ:</span>
+                <label>
+                  <select name="color" class="type_option">
+                    <option value="0">S</option>
+                    <option value="1">M</option>
+                  </select>
+                </label>
+              </div>
+              <div class="select fl"><span>Chọn số lượng:</span>
+                <input name="quantity" class="inputbox" value="1" type="text">
+              </div>
+          <!--end: .dtp_status-->
+          <div class="cf"></div>
+          <div class="dtp_status addtocart"><b class="dtp_price">450.000 đ</b>                
+          
+          <a onclick="addToShoppingCart('2676','2934000')" href="cart.html" class="buy_bt fr">Liên hệ</a></div>
+          <!--end: .dtp_addcart-->
+        </div>
+        
+        <!--Ads-->
+        
+        <!--End Ads-->
+        
+        
+      </div><!--End box_ct-->
+      </div><!--End box-->
+      
+      <div class="box" id="info_pro_detail">
+      <!--Text Detail-->
+      <div class="fl" id="text_info_detail">
+        <div class="font3 box_Tab"><span>Thông tin sản phẩm</span></div>
+        <div class="box_ct" id="info_g"><b>Thời trang công sở mùa Thu</b> <br />
+         <b> Chi Tiết</b>
+
+<br />
+
+- Thiết kế mới nhất cho Thời trang công sở mùa Thu - Đông 2014 với chiếc áo sơ mi kiểu cách khá đơn giản nhưng không vì thế mà giảm đi sự nữ tính của bạn, với những đường xiết ly tạo điểm rũ ở phía sau áo, phía vai áo, và cánh tay áo tạo nên phong cách đầy dịu dàng, bạn có thể mặc nó đi kàm, đi chơi, dạo phố hay bất kỳ nơi đâu bạn muốn 1 cách rất thoải mái 
+          <ul>
+          	<li>- Thiết kế mới nhất cho Thời trang công sở mùa Thu - Đông 2014 với chiếc áo sơ mi kiểu cách khá đơn giản nhưng không vì thế mà giảm đi sự nữ tính của bạn, với những đường xiết ly tạo điểm rũ ở phía sau áo, phía vai áo, và cánh tay áo tạo nên phong cách đầy dịu dàng, bạn có thể mặc nó đi kàm, đi chơi, dạo phố hay bất kỳ nơi đâu bạn muốn 1 cách rất thoải mái </li>
+            <li >- <b>Chất liệu:</b> 51% -70% Polyester </li>
+            <li>- <b>Chất Vải:</b> Voan co giãn nhẹ</li>
+            <li>- Cổ áo bẻ đầy cá tính </li>
+            <li>- Tay lỡ,  chất vải voan giấy, có độ co giãn nhất định</li>
+            <li>- Màu xanh da trời</li>
+            <li>- Phong cách hàn quốc, có thể kết hợp với phụ kiện như: khăn quàng, túi xách, áo vest, comle, Blade...</li>
+            <li>- Mềm mại, không bị ngứa</li>
+            <li>- Thích hợp làm đồng phục văn phòng</li>
+          </ul>
+        </div>
+      </div>
+      <!--End Text Detail-->
+      
+      
+      
+      
+      </div>
+      <!--same p-->
+      <div class="box" id="the_same_P">
+      <div class="font3 box_Tab"><span>Sản phẩm liên quan</span></div>
+          <div class="box_ct">
+          <div class="product_row">
+        <ul>
+          <li> 
+            <!--Start Product-->
+            <div class="product"> <a href="product-detail.html"><img src="images/sp.jpg" /> <span>Đầm công sở hoạ tiết Winter </span> </a>
+              <div class="price">299.000 VNĐ</div>
+              <div class="list_btn">
+                <a href="" class="btn_buy fl">Mua hàng</a>
+                 <a href="" class="btn_detail_pro fr">Chi tiết</a>
+              </div>
+            </div>
+            <!--End Product--> 
+            
+            </li>
+            </ul>
+            </div>
+          
+          </div>
+      </div>
+      <!--End same p-->
+      
+      
+    </div>
+    <!--End main_col--> 
+    
+  </div>
+  <!--#Main--> 
+  <!--#footer-->
+  <div id="footer">
+    <div class="logo fl"> <img src="Images/logo_bottom.png" /> </div>
+    <div class="fl info_company">
+      <p>Địa chỉ: 232/17 Cộng Hòa, P. 12, Q. Tân Bình, TP. HCM, Việt Nam</p>
+      <p>Điện thoại: 0908.169.044</p>
+    </div>
+    <div class="fr copyright">Copyright © 2014 BaoNamShop. All right reserved. </div>
+  </div>
+  <!--End footer--> 
+</div>
+<!--End container-->
+</body>
+</html>

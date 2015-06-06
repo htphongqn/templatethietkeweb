@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Trang chủ</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+    <!--  Slider  -->
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/simple.carousel.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+             
+            
+            // example 2
+            $("ul.slide").simplecarousel({
+                width:650,
+                height:280,
+                auto: 5000,
+                fade: 400,
+				next: $('.next'),
+                prev: $('.prev'),				
+                pagination: true <!--control-->
+            });
+        });
+        
+    </script>
+    <!--scroller-->
+    <link href="Styles/jquery.simplyscroll.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.simplyscroll.js"></script>
+    <script type="text/javascript">
+	(function($) {
+		$(function() {
+			$("#scroller").simplyScroll({pauseOnHover: true});
+		});
+	})(jQuery);
+	</script>
+
+<!--End scroller-->
+    <!--Slide chay ngang-->
+    <link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+		function mycarousel_initCallback(carousel)
+		{
+			carousel.clip.hover(function() {
+				carousel.stopAuto();
+			}, function() {
+				carousel.startAuto();
+			});
+		};
+
+		 
+    </script>
+</head>
+
+<body>
+<div class="container">
+<!-- Header-->
+<header> <a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a>  
+</header>
+<!-- End Header--> 
+<!--#Menu top-->
+    <nav id="nav_x">
+    	<ul>
+          	<li class="active"><a href="index.html">Trang chủ </a></li>
+          	<li><a href="#">Giới thiệu </a> </li>
+          	<li ><a href="list_product.html">Danh lam thắng cảnh</a>
+        		<ul>
+              		<li><a href="#">Sub Menu 1</a>
+                    	<ul>
+                            <li><a href="#">Sub Menu 5</a></li>
+                            <li><a href="#">Sub Menu 6</a> </li>
+                        </ul>
+                     </li>
+                    
+                    <li><a href="#">Sub Menu 2</a></li>
+              		<li><a href="#">Sub Menu 3</a> </li>
+            	</ul>
+      		</li>
+          	<li><a href="#">Tin tức và sự kiện</a></li>
+            <li><a href="#">Sổ tay</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+          	<li><a href="#">Liên hệ</a></li>
+ 
+        </ul>
+ 
+  </nav><!--End Menu top--> 
+
+
+
+ 
+
+<!--#Main-->
+<div id="main"> 
+<!--#Slide--> 
+<div id="slide_main" class="fr">
+    <ul class="slide">
+      <li><a href=""><img src="Images/1.png"   /></a></li>
+      <li><a href=""><img src="Images/2.png"   /></a></li>
+       <li><a href=""><img src="Images/1.png"   /></a></li>
+      <li><a href=""><img src="Images/2.png"   /></a></li>
+       <li><a href=""><img src="Images/1.png"   /></a></li>
+      <li><a href=""><img src="Images/2.png"   /></a></li>
+
+    </ul>
+    <div class="control_slide">
+    <span class="prev"></span>
+    <span class="next"></span>
+    </div>
+     
+</div><!--End Slide-->
+
+<!--Baner_right-->
+<div class="baner_sub fl">
+<table>
+<tr style="text-align:center">
+<td colspan="2" ><h2>TRA CỨU TOUR GIÚP BẠN</h2></td>
+ 
+</tr>
+
+<tr style="text-align:center">
+<td colspan="2">
+<label><input name="rdo" type="radio" value="Tour trong nước"   />Tour trong nước </label>
+<label><input name="rdo" type="radio" value="Tour nước ngoài" />Tour nước ngoài</label>
+ </td>
+
+</tr>
+
+<tr>
+<td>Điểm khởi hành :</td>
+<td>
+<select name="" style="width:100%;">
+<option value="0">Hồ Chí Minh</option>
+<option value="1">Hà Nội</option>
+<option value="2">Đà Nẵng</option>
+<option value="3">Huế</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Điểm đến :</td>
+<td><select name=""  style="width:100%;">
+<option value="0">Hồ Chí Minh</option>
+<option value="1">Hà Nội</option>
+<option value="2">Đà Nẵng</option>
+<option value="3">Huế</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Ngày khởi hành:</td>
+<td>
+<select name=""  style="width:31%;">
+<option value="0">Ngày</option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+</select>
+
+<select name=""  style="width:32%;">
+<option value="0">Tháng</option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+</select>
+
+<select name=""   style="width:32%;">
+<option value="0">Năm</option>
+<option value="1">2014</option>
+<option value="2">2015</option>
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td >Giá tour :</td>
+<td><select name=""   style="width:80%;">
+<option value="0">Giá tour</option>
+<option value="1">5.000.000</option>
+<option value="2">10.000.000</option>
+<option value="3">15.000.000</option>
+</select>
+<b>VNĐ</b>
+</td>
+
+</tr>
+<td></td>
+<td><input name="" type="button" class="btn_buy" value="Tìm kiếm" /></td>
+</tr>
+</table>
+
+</div>
+<!-- End baner right-->
+
+
+
+<!--sidebar-->
+<div class="cf"></div>
+<div class="sidebar fl">
+
+<!--menu left-->
+<nav id="nav_y">
+<ul>
+<!---li---->
+<li>
+    <div class="box">
+    <div class=" title_box font1">CÁC TOUR DU LỊCH</div>
+    <div class="box_ct  ">
+        <ul>
+            <li><a href="">Tour quốc tế</a></li>
+            <li><a href="">Tour nội địa</a></li>
+            <li><a href="">Tour quốc tế</a></li>
+            <li><a href="">Tour nội địa</a></li>
+            
+        </ul>
+    </div><!--End box_ct--> 
+    
+    
+    </div><!--End box--> 
+</li>
+<!---End li---->
+<!---li---->
+<li>
+<div class="box">
+<div class="title_box font1">cÁC DỊCH VỤ</div>
+<div class="box_ct ">
+    <ul>
+        <li><a href="">Tour quốc tế</a></li>
+        <li><a href="">Tour nội địa</a></li>
+        <li><a href="">Tour quốc tế</a></li>
+        <li><a href="">Tour nội địa</a></li>
+        
+        <li><a href="">Tour quốc tế</a></li>
+        <li><a href="">Tour nội địa</a></li>
+    </ul>
+
+</div><!--End box_ct--> 
+
+</div><!--End box--> 
+
+</li>
+<!---End li---->
+
+
+</ul>
+</nav>
+<!---End menu left-->
+
+
+<div class="box">
+<div class="title_box font1">HỖ TRỢ TRỰC TUYẾN</div>
+<div class="box_ct">
+<table>
+<tr>
+<td colspan="3"><img src="images/icon_hotline.png" /> <span class="hotline"><b>0905 411 433</b></span></td>
+ 
+</tr>
+
+
+<tr>
+<td>Vé máy bay</td>
+<td><a href=""><img src="images/icon_yahoo.png" /></a></td>
+<td><a href=""><img src="images/skype_icon.png" /></a></td>
+</tr>
+
+<tr>
+<td>Vé máy bay</td>
+<td><a href=""><img src="images/icon_yahoo.png" /></a></td>
+<td><a href=""><img src="images/skype_icon.png" /></a></td>
+</tr>
+
+
+<tr>
+<td>Vé máy bay</td>
+<td><a href=""><img src="images/icon_yahoo.png" /></a></td>
+<td><a href=""><img src="images/skype_icon.png" /></a></td>
+</tr>
+
+
+<tr>
+<td>Vé máy bay</td>
+<td><a href=""><img src="images/icon_yahoo.png" /></a></td>
+<td><a href=""><img src="images/skype_icon.png" /></a></td>
+</tr>
+
+</table>
+ 
+</div><!--End box_ct--> 
+
+</div><!--End box--> 
+
+
+<div class="box">
+<div class="title_box font1">tIN TỨC DỊC VỤ</div>
+<div class="box_ct ">
+<div class="list_news">
+             <ul  class="box_news_index">
+              <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Độc đáo với những sản phẩm bằng… gỗ cà phê</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+ 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Độc đáo với những sản phẩm bằng… gỗ cà phê</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+     
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+      
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+            
+            <li>
+                <h3>
+                <a href="news_detail.html" class="h3Title">Giá cà phê Indonesia hấp dẫn hơn Việt Nam</a>
+                </h3>
+                
+                <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+                 
+          	</li>
+              <a class="view_all"><i>Xem tất cả</i></a>
+            
+            </ul>
+            </div><!--End List News-->
+</div><!--End box_ct--> 
+
+</div><!--End box--> 
+
+</div><!--End sidebar-->
+
+<!--#Main col-->
+<div class="fr" id="main_col">
+<div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+    <!--Detail news-->
+    <div class="box">
+          <div class="box_ct" id="detail_news">
+        <div id="info_g">
+              <h1 class="h2Title">Các đối tượng được tự in hóa đơn thông tư 39/2014/TT-BTC</h1>
+              <p class="date">06/05/2013</p>
+              <p>Kể từ 01/06/2014, chỉ có bốn đối tượng sau mới được tự in hóa đơn:</p>
+
+                 <p>1. Doanh nghiệp được thành lập theo quy định của pháp luật trong khu công nghiệp, khu kinh tế, khu chế xuất, khu công nghệ cao.</p>
+                
+                 <p>2. Các đơn vị sự nghiệp công lập có sản xuất, kinh doanh theo quy định của pháp luật.</p>
+                
+                 <p>3. Doanh nghiệp, Ngân hàng có mức vốn điều lệ từ 15 tỷ đồng trở lên tính theo số vốn đã thực góp đến thời điểm thông báo phát hành hóa đơn, bao gồm cả Chi nhánh, đơn vị trực thuộc khác tỉnh, thành phố với trụ sở chính có thực hiện kê khai, nộp thuế GTGT.</p>
+                
+                 <p>4. Doanh nghiệp mới thành lập từ ngày 01/06/2014 có vốn điều lệ dưới 15 tỷ đồng là doanh nghiệp sản xuất, dịch vụ có thực hiện đầu tư mua sắm tài sản cố định, máy móc, thiết bị có giá trị từ 1 tỷ đồng trở lên ghi trên hóa đơn mua tài sản cố định, máy móc, thiết bị tại thời điểm thông báo phát hành hóa đơn được tự in hóa đơn để sử dụng cho việc bán hàng hóa, cung ứng dịch vụ nếu có đủ các điều kiện sau:</p>
+                 
+                <p> - Đã được cấp mã số thuế;</p>
+
+                <p>- Có doanh thu bán hàng hóa, dịch vụ;</p>
+                
+                <p>- Có hệ thống thiết bị (máy tính, máy in, máy tính tiền) đảm bảo cho việc in và lập hóa đơn khi bán hàng hóa, cung ứng dịch vụ;</p>
+                
+                <p>- Là đơn vị kế toán theo quy định của Luật Kế toán và có phần mềm tự in hóa đơn đảm bảo định kỳ hàng tháng dữ liệu từ phần mềm tự in hóa đơn phải được chuyển vào sổ kế toán để hạch toán doanh thu và kê khai trên Tờ khai thuế giá trị gia tăng gửi cơ quan thuế.</p>
+                
+                <p>- Không bị xử phạt vi phạm pháp luật về thuế hoặc đã bị xử phạt và đã chấp hành xử phạt vi phạm pháp luật về thuế mà tổng số tiền phạt vi phạm pháp luật về thuế dưới 50 triệu đồng trong vòng 365 ngày tính liên tục từ ngày thông báo phát hành hóa đơn tự in lần đầu trở về trước.</p>
+                
+               <p> - Có văn bản đề nghị sử dụng hóa đơn tự in và được cơ quan thuế quản lý trực tiếp xác nhận đủ điều kiện. Trong thời hạn 5 ngày làm việc kể từ khi nhận được văn bản đề nghị của doanh nghiệp, cơ quan thuế quản lý trực tiếp phải có ý kiến về điều kiện sử dụng hóa đơn tự in của doanh nghiệp.</p>
+                
+                <p>Nội dung trên được quy định tại Thông tư 39/2014/TT-BTC.</p>
+            </div>
+        	<div class="function">
+              <div class="like_face"><img src="Images/social_network.jpg" alt="" /></div>
+              <div class="toolbar"> <a href="#" class="print">Bản in</a> <a target="_blank" href="#" class="email">Gửi email</a><a href="" class="opinion">Phản hồi</a></div>
+            </div>
+        <!--Other News-->
+        <div class="other_news_sub">
+              <div class="other_newsT">Tin bài khác</div>
+              <ul>
+            <li> <a href="#">Đà Nẵng sẽ báo cáo Bộ Chính trị vụ 'thất thu hơn 3.400 tỷ' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">CSGT bụng phệ không được ra đường <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">300 cây xanh ở Hà Nội bị 'bức tử' <span class="date">(Ngày đăng 10/03/2013 8:45)</span></a> </li>
+            <li> <a href="#">TP HCM và Hà Nội tiếp tục nghiên cứu đổi giờ làm <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Các nước đều mong muốn hợp tác với hải quân Việt Nam' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Không thể thần thoại hóa rùa hồ Gươm để tôn là bảo vật' <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Đội phó CSGT đi xe Camry biển giả <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">Thanh niên trốn viện, nhảy cầu tự tử <span class="date">(05/03)</span></a> </li>
+            <li> <a href="#">'Sáp nhập một số trường đại học để tránh manh mún' <span class="date">(05/03)</span></a> </li>
+          </ul>
+              <a class="view_all" href="">Xem tất cả &raquo;</a> </div>
+        <!--Other News-->
+      </div><!--End box_ct-->
+      </div><!--End box-->
+    <!--End News--> 
+
+          
+</div><!--End Main col--> 
+
+<!--scroller-->
+ <div class="box ads">   
+   <ul id="scroller">
+      <li><a href=""><img src="http://www.dulichhalong.net/wp-content/uploads/Du-Lich-VInh-Ha-Long.jpg" /></a></li>
+      <li><a href=""><img src="http://www.dulichhalong.net/wp-content/uploads/Du-Lich-VInh-Ha-Long.jpg" /></a></li>
+      <li><a href=""><img src="http://www.dulichhalong.net/wp-content/uploads/Du-Lich-VInh-Ha-Long.jpg" /></a></li>
+      <li><a href=""><img src="http://www.dulichhalong.net/wp-content/uploads/Du-Lich-VInh-Ha-Long.jpg" /></a></li>
+      <li><a href=""><img src="http://www.dulichhalong.net/wp-content/uploads/Du-Lich-VInh-Ha-Long.jpg" /></a></li>
+      </ul>   
+   </div><!--End box-->
+   <!--scroller-->
+</div><!--#Main--> 
+      
+<!--#footer-->
+<div id="footer">
+<div class="address">
+<p>Công ty TNHH TM DV DU LỊCH CÁT TRẮNG</p> 
+<p>Địa chỉ : 01 Trần Hưng Đạo – TP.Nha Trang – Khánh  Hòa</p>
+<p>Điện thoại: 0905 411 433 </p>
+<p>Copyright © 2014 By Whitesandtravel</p>
+</div>
+
+
+                                    
+
+<div class="social_network"> Kết nối <br /><a href="" class="facebook"></a> <a href="" class="youtube"></a> <a href="" class="gplus"></a> </div>
+<div class="thanh_toan">Chấp nhận thẻ thanh toán<br /><img src="images/visa.png" /></div>
+
+<div class="copyright">Thiết kế website: Đẳng Cấp Việt </div>
+
+</div>
+<!--End footer--> 
+</div>
+<!--End container-->
+</body>
+</html>

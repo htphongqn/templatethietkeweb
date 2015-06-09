@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/detailPro.css"/>
+</head>
+<body>
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Tư vấn : 0123 456 789</div>
+    <div class="boxInnerHT">
+      <p> Xin chào, TROY sẽ phản hồi câu hỏi của bạn ngay sau tin nhắn này. Xin vui lòng điền đầy đủ thông tin chi tiết bên dưới! Cám ơn </p>
+      <form>
+        <div class="row">
+          <label>Họ tên*</label>
+          <input class="clsinput" name="" type="text" placeholder="Nhập họ tên" />
+        </div>
+        <div class="row">
+          <label>Số điện thoại*</label>
+          <input class="clsinput"  name="" type="text" placeholder="Nhập điện thoại" />
+        </div>
+        <div class="row">
+          <label>Tin nhắn *</label>
+          <textarea class="clsinput" placeholder="Nhập tin nhắn" ></textarea>
+        </div>
+        <div class="text-center">
+          <input class="clsbtn"  name="" type="button" value="Gửi" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+<!--ho tro-->
+
+<div class="wrap wgHeader">
+  <div class="container">
+    <div class="rowmn headerBox">
+      <div class="innerHeaderBox">
+        <div class="fleft clsLogo "> <a href="index.html"><img src="data/logo.png" /></a> </div>
+        <div class="fleft bannerHeader"><img src="data/banner.png" /></div>
+        <div class="hotlineBox"> <i class="glyphicon glyphicon-earphone"></i> <b> 0937 911 678</b> </div>
+        <div class="langBox"><a href="#"><img src="images/en.png" /></a><a href="#"><img src="images/vi.png" /></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wNavx">
+  <div class="container">
+    <div class="rowmn menuBox">
+      <div class="navx">
+        <ul>
+          <li class="active"><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="products.html">Sản phẩm</a>
+            <ul>
+              <li><a href="#">Sub menu level 3</a></li>
+              <li><a href="#">Sub 3</a></li>
+              <li><a href="#">Sub 3s</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Bảo hành</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="#">Tuyển dụng</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <div class="bSearch">
+            <div class="trigger"><i class="glyphicon glyphicon-search"></i></div>
+            <div class="popupSearch">
+              <div class="dropdown">
+                <div class="inputGr">
+                  <input class="inputSearch " name="" type="text" placeholder="Nhập từ cần tìm kiếm"/>
+                </div>
+                <div class="btnGr"> <a class="btnSearch">Tìm kiếm</a> </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+		 var notH = 1,
+		$pop = $('.popupRepliesBox').hover(function () { notH ^= 1; });
+		
+		  $(document).on('mouseup keyup', function (e) {
+			  if (notH || e.which == 27) $pop.stop().hide();
+		  });
+		  $('.popupSearch').hide();
+		$(document).ready(function () {
+		  $('.trigger').click(function () {
+			  $('.popupSearch').slideToggle();  
+		  });
+		  $('.closeBtn').click(function () {
+			  $('.popupSearch').slideUp('fast');
+		  });
+		}); 
+		</script> 
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wMain">
+  <div class="container">
+    <div class="rowmn">
+      <div class="col2 sidebar sideLeft">
+        <div class="box">
+          <div class="headingBox txtleft"> <span>Danh mục sản phẩm</span> </div>
+          <div class="innerBox">
+            <div class="navy">
+              <ul>
+                <li><a>Vitamin</a></li>
+                <li><a>Thực phẩm giảm cân</a></li>
+                <li><a>Cơ xương khớp</a></li>
+                <li><a>Sức khoẻ trẻ em</a></li>
+                <li><a>Bệnh ngoài da</a></li>
+                <li><a>Thực phẩm làm đẹp</a></li>
+                <li><a>Vitamin</a></li>
+                <li><a>Thực phẩm giảm cân</a></li>
+                <li><a>Cơ xương khớp</a></li>
+                <li><a>Sức khoẻ trẻ em</a></li>
+                <li><a>Bệnh ngoài da</a></li>
+                <li><a>Thực phẩm làm đẹp</a></li>
+                <li><a>Vitamin</a></li>
+                <li><a>Thực phẩm giảm cân</a></li>
+                <li><a>Cơ xương khớp</a></li>
+                <li><a>Sức khoẻ trẻ em</a></li>
+                <li><a>Bệnh ngoài da</a></li>
+                <li><a>Thực phẩm làm đẹp</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+		$(document).ready(function(){
+		  $('.slider5').bxSlider({
+			 mode: 'vertical',
+			slideWidth: 400,
+			minSlides: 3,
+			moveSlides: 1,
+			maxSlides: 3,
+			slideMargin: 10,
+			auto: true,
+			speed: 2000,
+			controls: false,
+			pause: 0,
+		  });
+		});
+		</script>
+        <div class="box bPT">
+          <div class="headingBox txtleft"> <span>Phụ tùng</span> </div>
+          <div class="innerBox">
+            <div class="slider5">
+              <div class="slide"><a><img src="data/i1.png" ></a></div>
+              <div class="slide"><a><img src="data/i2.png" ></a></div>
+              <div class="slide"><a><img src="data/i1.png" ></a></div>
+              <div class="slide"><a><img src="data/i2.png" ></a></div>
+              <div class="slide"><a><img src="data/i1.png" ></a></div>
+              <div class="slide"><a><img src="data/i2.png" ></a></div>
+              <div class="slide"><a><img src="data/i1.png" ></a></div>
+              <div class="slide"><a><img src="data/i2.png" ></a></div>
+            </div>
+          </div>
+        </div>
+        <!--end box-->
+        <div class="box bHttt">
+          <div class="headingBox txtleft"> <span>Hỗ trợ trực tuyến</span> </div>
+          <div class="innerBox">
+            <div class="httt">
+              <div class="innerhtt"> <span class=" wmn nameP">Mrs Hien</span> <span class=" wmn hotlineNum">0989 317 282</span> <span class="wmn email">hienpc11@gmail.com</span>
+                <div class="wmn yahoo "><img src="images/yahoo_onl.png" /></div>
+                <div class=" wmn skype"><img src="images/skype.png" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end box-->
+        
+        <div class="box">
+          <div class="headingBox txtleft"> <span>Video</span> </div>
+          <div class="innerBox">
+            <div class="bVideo"> <a><img src="data/video.jpg" /></a> </div>
+          </div>
+        </div>
+        <!--end box-->
+        
+        <div class="box">
+          <div class="headingBox txtleft"> <span>Tin tức</span> </div>
+          <div class="innerBox">
+            <div class="itemNews_s">
+              <div class="innerItemNews_s"> <a> Đoàn thanh niên Công ty TNHH Thiết Bị Thiên Uy với Sản phẩm máy Máy nén khí piston không dầu </a> </div>
+            </div>
+            <div class="itemNews_s">
+              <div class="innerItemNews_s"> <a> Đoàn thanh niên Công ty TNHH Thiết Bị Thiên Uy với Sản phẩm máy Máy nén khí piston không dầu </a> </div>
+            </div>
+            <div class="itemNews_s">
+              <div class="innerItemNews_s"> <a> Đoàn thanh niên Công ty TNHH Thiết Bị Thiên Uy với Sản phẩm máy Máy nén khí piston không dầu </a> </div>
+            </div>
+            <div class="itemNews_s">
+              <div class="innerItemNews_s"> <a> Đoàn thanh niên Công ty TNHH Thiết Bị Thiên Uy với Sản phẩm máy Máy nén khí piston không dầu </a> </div>
+            </div>
+            <a class="viewMore">Xem tất cả</a> </div>
+        </div>
+        <!--end box--> 
+        
+      </div>
+      <!--End sidebar -->
+      
+      <div class="col10 mainContent">
+        <div class="hidden">Company name</div>
+        <div class="box boxMain">
+          <div class="innerBoxMain"> 
+            <!--================= .::noi dung::. =================-->
+            <div class="breadcrumbBox">
+              <ul class="breadcrumb">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="active"><a>chuyên mục</a></li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="headingBox headingBoxMain txtleft"> <span><b>Máy nén khí Piston</b> </span></div>
+              <div class="innerBox">
+                <div class="listProduct">
+                  <div class="innerListProduct">
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product-->
+                    
+                    <div class="productItem">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"> <a href="detailpro.htm"> <img src="data/i5.jpg" /></a> </div>
+                          <div class="desProduct text-center">
+                            <h2><a href="detailpro.htm">Cửa thủy lực vách kính Việt Pháp</a></h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End product--> 
+                    
+                  </div>
+                  <div class="clearfix text-center">
+                    <ul class="pagination">
+                      <li> <a href="#"> <span>«</span> </a> </li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li> <a href="#"> <span>»</span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!--================= .::noi dung::. =================--> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end row--> 
+    
+  </div>
+  <!--mainContent-->
+  
+  <div class=" rowmn">
+    <div class="col12">
+      <div class="box slideProject"> 
+        <script type="text/javascript">
+				  $(document).ready(function(){
+				  $('.sliderNB').bxSlider({
+					slideWidth:220,
+					minSlides:1,
+					maxSlides: 5,
+					moveSlides: 1,
+					slideMargin: 10,
+					speed: 2000,
+					 auto: false,
+				  });
+				});
+				</script>
+        <div class="wmn  ">
+          <div class="sliderNB">
+            <div class="slide"><a><img src="data/i1.png" ></a></div>
+            <div class="slide"><a><img src="data/i2.png" ></a></div>
+            <div class="slide"><a><img src="data/i1.png" ></a></div>
+            <div class="slide"><a><img src="data/i2.png" ></a></div>
+            <div class="slide"><a><img src="data/i1.png" ></a></div>
+            <div class="slide"><a><img src="data/i2.png" ></a></div>
+            <div class="slide"><a><img src="data/i1.png" ></a></div>
+            <div class="slide"><a><img src="data/i2.png" ></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--rowmn--> 
+
+<!--End contentBox-->
+
+</div>
+<!--End Container-->
+</div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="rowmn">
+      <div class="col12">
+        <div class="box menuFooter">
+          <ul class="nav_f">
+            <li><a>Trang chu</a></li>
+            <li><a>Giới thiệu</a></li>
+            <li><a>Sản phẩm</a></li>
+            <li><a>Dịch vụ</a></li>
+            <li><a>Dự án</a></li>
+            <li><a>Tin tức</a></li>
+            <li><a>Liên hệ</a></li>
+          </ul>
+          <div class="vsBox fright">
+            <div class="innerVsBox "> <i class="iconTC"></i> <span> Số người online :<b>1</b> </span> <span> Số người truy cập :<b>10000</b> </span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="box footerB">
+        <div class="col7 address fleft"> <b> CÔNG TY TNHH THIẾT BỊ THIÊN UY</b><br />
+          Ðịa chỉ: 66/8 ấp Trung Lân, Xã Bà Điểm, Huyện Hóc Môn,Tp.HCM<br />
+          Điện thoại: 08 37182158       - Fax: 08 37182159          - Mã số thuế: 0313200222<br />
+          Email: hienpc11@gmail.com        - Website: thienuycomp.com </div>
+        <div class=" col5 fright">
+          <div class="social_network"><a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class=" twitter"></a><a href="" class=" youtube"></a></div>
+          <div class="clearfix"></div>
+          <div class="copyRight"> Copyright © 2015 by Thien Uy . Design by <a href="http://dangcapviet.vn/">www.dangcapviet.vn</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="scripts/js.js"></script>
+</body>
+</html>

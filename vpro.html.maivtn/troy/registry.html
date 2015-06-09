@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<!--Slide Ver Styles -->
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<script type="text/javascript" src="scripts/js.js"></script>
+</head>
+<body>
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Tư vấn : 0123 456 789</div>
+    <div class="boxInnerHT">
+      <p> Xin chào, TROY sẽ phản hồi câu hỏi của bạn ngay sau tin nhắn này. Xin vui lòng điền đầy đủ thông tin chi tiết bên dưới! Cám ơn </p>
+      <form>
+        <div class="row">
+          <label>Họ tên*</label>
+          <input class="clsinput" name="" type="text" placeholder="Nhập họ tên" />
+        </div>
+        <div class="row">
+          <label>Số điện thoại*</label>
+          <input class="clsinput"  name="" type="text" placeholder="Nhập điện thoại" />
+        </div>
+        <div class="row">
+          <label>Tin nhắn *</label>
+          <textarea class="clsinput" placeholder="Nhập tin nhắn" ></textarea>
+        </div>
+        <div class="text-center">
+          <input class="clsbtn"  name="" type="button" value="Gửi" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+
+<!--ho tro-->
+
+<div class="wrap topPage">
+  <div class="container">
+    <div class="menu-top-page">
+      <div class="linkT"><i class="glyphicon glyphicon-shopping-cart white"></i><a href="cart.html">Giỏ hàng</a></div>
+      <div class="linkT linkSignup"><a href="#">Đăng kí</a></div>
+      <div class="linkT linkLogin"><a href="#">Đăng nhập</a></div>
+      <div class="linkT langBox"><a href="#"><img src="data/en.png" /></a><a href="#"><img src="data/vi.png" /></a></div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgHeader">
+  <div class="container">
+    <div class="row headerBox">
+      <div class="innerHeaderBox">
+        <div class="col2 clsLogo"> <a href="index.html">logo</a> </div>
+        <div class="col10 ">
+          <div class="bannerHeader"> <img src="data/banner.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgNavx">
+  <div class="container">
+    <div class="row menuBox">
+      <div class="col12 fright">
+        <div class="navx">
+          <ul>
+            <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="news.html">Giới thiệu</a></li>
+            <li><a href="#">Dich vu</a>
+              <ul>
+                <li><a href="news.html">Sub menu level 1</a></li>
+                <li><a href="#">Sub 1</a>
+                  <ul>
+                    <li><a href="#">Sub menu level 2</a></li>
+                    <li><a href="#">Sub 2</a>
+                      <ul>
+                        <li><a href="#">Sub menu level 3</a></li>
+                        <li><a href="#">Sub 3</a></li>
+                        <li><a href="#">Sub 3s</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Sub 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Sub 1</a></li>
+              </ul>
+            </li>
+            <li><a href="listCate.html">San pham</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dự án</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Xu huong</a></li>
+            <li> <span class="hl"> Hotline: <b>0123 456 789</b></span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap slideBg">
+  <div class="row slideBox">
+    <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script> 
+    <!--slider_main-->
+    <div class="slider_main">
+      <div class="slider-wrapper theme-default">
+        <div id="slider" class="nivoSlider"> <a href=""> <img src="data/slide1.png" /></a> <a href=""><img src="data/slide2.png" /></a> </div>
+      </div>
+    </div>
+    <!--slider_main--> 
+    <script>
+    //slider nivo
+         $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script> 
+  </div>
+</div>
+<div class="container">
+  <div class="box">
+    <div class="headingBox text-left hdb2"><span>ĐĂNG KÝ THÀNH VIÊN</span> </div>
+      <!--Form Register-->
+      <div class="regis_form form_web">
+ 
+        <!--Info Account-->
+        <div class="info_account fl">
+          <div class="form_header">Thông tin tài khoản</div>
+          <div class="row_account">
+            <label class="item_title" for="formUsername">Tên đăng nhập:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formUsername" id="formUsername" />
+              <br />
+              <i>Tên đăng nhập không được có khoảng trắng và các ký tự đặc biệt. Chỉ chấp nhận các ký tự <b>a-z</b>, <b>A-Z</b>, <b>0-9</b> và dấu _</i></div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formPassword">Mật khẩu<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formPassword" id="formPassword" />
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formPassword_2">Xác nhận mật khẩu<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formPassword_2" id="formPassword_2" />
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formEmail">Email:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formEmail" id="formEmail" />
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formEmail_2">Nhập lại email:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formEmail_2" id="formEmail_2" />
+            </div>
+          </div>
+          <div class="row_account" style="margin-left: 27%">
+            <input type="checkbox" name="ctl00$ContentPlaceHolder1$ctl00$Checkemail" id="ContentPlaceHolder1_ctl00_Checkemail">
+            <label class="floatl mts" for="RegistrationForm_newsletter"> Nhận tin nhắn từ các thành viên khác</label>
+          </div>
+          <div class="row_account" style="margin-left: 27%">
+            <input type="checkbox" name="ctl00$ContentPlaceHolder1$ctl00$Checkemail" id="ContentPlaceHolder1_ctl00_Checkemail">
+            <label class="floatl mts" for="RegistrationForm_newsletter"> Hiển thị email</label>
+          </div>
+          <div class="row_account" style="margin-left: 27%">
+            <input type="checkbox" name="ctl00$ContentPlaceHolder1$ctl00$Checkemail" id="ContentPlaceHolder1_ctl00_Checkemail">
+            <label class="floatl mts" for="RegistrationForm_newsletter"> Nhận các thông báo mới nhất từ website</label>
+          </div>
+        </div>
+        <!--Info Member-->
+        <div class="info_account fr">
+          <div class="form_header font3">Thông tin thành viên</div>
+          <div class="row_account">
+            <label class="item_title" for="formFullname">Họ tên:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formFullname" id="formFullname" />
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formSex">Giới tính:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input type="radio" class="chkbox" name="formSex" checked="checked">
+              Nam
+              <input type="radio" class="chkbox" name="formSex">
+              Nữ</div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formDateBirth">Ngày sinh:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <select class="sl_form_web accountBirthDay" id="ContentPlaceHolder1_ctl00_Dryear" name="ctl00$ContentPlaceHolder1$ctl00$Dryear">
+                <option value="0" selected="selected">Năm</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+              </select>
+              <select class="sl_form_web accountBirthDay" id=" " name=" ">
+                <option value="0" selected="selected">Tháng</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select class="sl_form_web accountBirthDay" id=" "  >
+                <option value="0" selected="selected">Ngày</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formAddress">Địa chỉ liên hệ:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" placeholder="Vui lòng nhập địa chỉ" type="text" name="formAddress" id="formAddress" />
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formCountry">Tỉnh/Thành phố:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <select class="sl_form_web" id="formCountry" name="formCountry">
+                <option value="0" selected="selected">Toàn quốc</option>
+                <option value="1">TP. Hồ Chí Minh</option>
+                <option value="2">Hà Nội</option>
+                <option value="3">Đà Nẵng</option>
+                <option value="4">Huế</option>
+                <option value="0">Nha Trang</option>
+                <option value="1">Hải Phòng</option>
+                <option value="2">Gia Lai</option>
+                <option value="3">Kontum</option>
+                <option value="4">Đăklăk</option>
+              </select>
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formPhone">Điện thoại</label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formPhone" id="formPhone" />
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formAvatar">Ảnh đại diện:</label>
+            <div class="right_row_account fr">
+              <input name="file_images" type="file" class="txtpassdangnhap" style="border: none" />
+            </div>
+          </div>
+          <div class="row_account">
+            <label class="item_title" for="formCode">Nhập mã chuỗi:<span class="required">*</span></label>
+            <div class="right_row_account fr">
+              <input class="txtpassdangnhap" type="text" name="formCode" id="formCode" style="width: 40%; margin-right: 10px" />
+              <img src="images/captcha.jpg""  /></div>
+          </div>
+          <div class="row_account"> 
+            <input type="checkbox" checked="checked" >
+            </span>
+            <label class="cl_red" for="">Tôi đã đọc và chấp nhận điều khoản sử dụng </label>
+          </div>
+          <div class="row_account" style="margin-top: 20px"> <a class=" btn btn-primary" href="">Đăng ký</a> <a  style=" margin-left:20px"class="btn btn-primary"" href="">Bỏ qua</a> </div>
+          <!--end Info Member--> 
+        </div>
+      </div>
+      <!--End Form Register--> 
+     
+     
+  </div>
+</div>
+<!--End Container-->
+<div class="wrap lineF"></div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="row">
+      <div class="col2 colf">
+        <h2>Hỗ trợ khách hàng</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a> </div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col2 colf">
+        <h2>Về chúng tôi</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a></div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col3 colf">
+        <h2>Thống kê truy cập</h2>
+        <div class="countOB">
+          <div class="fleft" style="line-height:23px; white-space:nowrap">
+            <div>Đang online: <span class="numberonl">123</span></div>
+            <div>Tổng truy cập: <span class="numberonl">123456</span></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="social_network"><a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class=" twitter"></a><a href="" class=" youtube"></a></div>
+      </div>
+      <div class="col5 colf">
+        <div class="address"><b>CÔNG TY TNHH TROY</b><br />
+          Ðịa chỉ: 7A/87 Thành Thái, Phường 14, Quận 10, TP Hồ Chí Minh <br />
+          Điện thoại: 0909 245 636     - Email: pvkduyen@gmail.com<br />
+          <div class="copyRight">Copyright © 2015 gotroy.vn. All rights reserved.<br />
+            Thiết kế website bởi <a href="http://dangcapviet.vn/">Đẳng Cấp Việt</a> </div>
+          <div class="paymentF"> <img src="images/thanhToan/master.png" /> <img src="images/thanhToan/visa.png" /> <img src="images/thanhToan/viettin.png" /> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

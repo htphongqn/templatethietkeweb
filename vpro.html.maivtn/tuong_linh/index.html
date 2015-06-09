@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Trang chủ</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+    <link rel="stylesheet" href="Styles/layout.css">
+    <!--  Slider  -->
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/simple.carousel.js"></script>
+    <script type="text/javascript">
+		jQuery(document).ready(function() {
+		// example 2
+		$("ul.slide").simplecarousel({
+		width:1040,
+		height:412,
+		auto: 5000,
+		fade: 400,
+		pagination: true <!--control-->
+		});
+		});
+    </script>
+    <!--/Slider-->
+    <!--Search-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //var notH = 1,
+    //$pop = $('.search_box').hover(function () { notH ^= 1; });
+
+            //$(document).on('mouseup keyup', function (e) {
+                //if (notH || e.which == 27) $pop.stop().hide();
+            //});
+            /////// CALL POPUP 
+            $('.search_icon').click(function () {
+                $('.search_box').slideDown("fast");
+            });
+            $('.icon_point').click(function () {
+                $('.search_box').slideUp("fast");
+            });
+        });
+    </script>
+    <!--/Search-->
+    <!--Zoom-->
+    <link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+    <!--Slide chay ngang-->
+    <link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+		function mycarousel_initCallback(carousel)
+		{
+			carousel.clip.hover(function() {
+			carousel.stopAuto();
+			}, function() {
+			carousel.startAuto();
+		});
+		};
+		
+		jQuery(document).ready(function () {     
+			jQuery('#mycarousel_same_P, #mycarousel_dt_img, #mycarousel_products').jcarousel({
+			auto: 0,
+			animation: 1000,
+			wrap: 'circular',
+			scroll: 1,
+			initCallback: mycarousel_initCallback
+			});	
+		});
+    </script>
+    </head>
+
+    <body>
+<div class="container"> 
+      
+      <!-- Header-->
+      <header> <a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a> <a href="index.html" id="company_name" class="fl"><img src="Images/company_name.png" alt="" /></a> </header>
+      <!-- End Header--> 
+      <!-- #Main-->
+      <div class="main"> 
+    <!----Menu login---->
+    <div class="menu_login">
+          <div class="inner_menu_login"> <a href="">Đăng Nhập</a> <a>|</a> <a href="">Đăng Ký</a> <a href="cart.html" class="menu_cart">Giỏ hàng (0)</a> </div>
+        </div>
+    <!--------> 
+    <!--#Menu top-->
+    <nav id="nav_x">
+          <ul>
+        <li ><a class="active" href="index.html">Trang chủ </a></li>
+        <li><a href="#">Giới thiệu </a> </li>
+        <li ><a href="list_products.html">Sản phẩm</a>
+              <ul>
+            <li><a href="#">Thực phẩm chức năng </a>
+                  <ul>
+                <li><a href="#">Thuốc</a></li>
+                <li><a href="#">Vitamin </a> </li>
+              </ul>
+                </li>
+            <li><a href="#">Mỹ phẩm </a></li>
+          </ul>
+            </li>
+        <li><a href="#">Dịch Vụ </a></li>
+        <li><a href="#">Khuyến mãi </a></li>
+        <li><a href="list_news.html">Tin tức </a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <div id="search_form"> <a class="trigger"><span class="search_icon"></span></a>
+              <div id="dpop" class="search_box"> <span class="icon_point"></span>
+            <input name="ctl00$vi1$txtsearch" id="vi1_txtsearch" class="inputSearch" onblur="SearchOnBlur(this)" onclick="this.value=''" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa cần tìm" type="text">
+            <a id="vi1_bttntimkiem" class="submitSearch" href="javascript:__doPostBack('ctl00$vi1$bttntimkiem','')"> <span class="icon_search">Tìm Kiếm</span></a>
+            <div class="cf"> </div>
+          </div>
+            </div>
+        <!--/search_form-->
+        
+      </ul>
+        </nav>
+    <!--End Menu top--> 
+    
+    <!--#Sidebar-->
+    <div class="sidebar fl">
+          <div class="top_sidebar"></div>
+          <div class="box">
+        <div class="title_box font1">Danh mục sản phẩm</div>
+        <div class="box_ct">
+              <nav id="nav_y">
+            <ul>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a>
+                <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a> </li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+              </li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a>
+                <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a> </li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+              </li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a>
+                <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a> </li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+              </li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                </ul>
+          </nav>
+            </div>
+        <!--End box_ct--> 
+      </div>
+          <!--End Box--> 
+          
+          <!--Box-->
+          <div class="box">
+        <div class="title_box font1">Ho tro truc tuyen</div>
+        <div class="box_ct">
+              <div class="row_sidebar hotline font3"> <img src="images/icon_phone.png" /> 0903714618 </div>
+              <div class="row_sidebar"> <a href=""><img src="images/icon_yahoo.png" /></a> </div>
+              <div class="row_sidebar"> <a href=""><img src="images/icon_skype.png" /></a> </div>
+            </div>
+        <!--End box_ct--> 
+        
+      </div>
+          <!--End Box--> 
+          
+        </div>
+    <!--End Sidebar--> 
+    
+    <!--#Main col-->
+    <div class="fr" id="main_col"> 
+        <!--#Slide-->
+        <div class="slide_main fr">
+        <ul class="slide">
+              <li><a href=""><img src="Images/2.png" alt="" /></a></li>
+              <li><a href=""><img src="Images/4.png" alt="" /></a></li>
+              <li><a href=""><img src="Images/3.png" alt="" /></a></li>
+            </ul>
+      	</div>
+        
+          <!-- End slide--> 
+          <div class="bottom_slide"></div>
+          <!-- #Box-->
+          <div class="box">
+        <div class="font1 box_Tab"><span>SẢN PHẨM KHUYẾN MÃI</span></div>
+        <div class="product_row">
+              <ul>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="icon_sales"></div>
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="icon_sales"></div>
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+          </ul>
+            </div>
+        <!--End product Row --> 
+      </div>
+          <!--End box--> 
+          
+          <!-- #Box-->
+          <div class="box">
+        <div class="font1 box_Tab"><span>SẢN PHẨM BÁN CHẠY</span></div>
+        <div class="product_row">
+              <ul>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+            <li> 
+                  <!--Start Product-->
+                  <div class="product">
+                <div class="product_inner">
+                      <div class="pro_img"><a href="detail_product.html"><img src="images/sp.jpg" /></a></div>
+                      <div class="des_product"> <a href="detail_product.html"><span>San pham cap cap</span> </a>
+                    <div class="price fl">500.000VNĐ</div>
+                    <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                      <!--/des_product--> 
+                      
+                    </div>
+                <!--/product_inner--> 
+              </div>
+                  <!--End Product--> 
+                </li>
+          </ul>
+            </div>
+        <!--End product Row --> 
+      </div>
+          <!--End box--> 
+          
+        </div>
+    <!--End Main col--> 
+  </div>
+      <!--End Main--> 
+      
+      <!--#footer-->
+      <div id="footer">
+    <div class="footer_iner">
+          <div class="fl address">
+        <h3 class="font2">CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ KIM HOME</h3>
+        <p>139 Nhật Tảo, Phường 8, Quận 10, TP HCM</p>
+        <p>Điện thoại  : 0903714618 </p>
+        <p>Email: dolotonline.tl@gmail.com</p>
+      </div>
+          <div class="social_network"> <a href="" class="facebook"></a> <a href="" class="youtube"></a> <a href="" class="gplus"></a> </div>
+          <div class="visit"> <img src="Images/icon-truycap.gif" class="fl">
+        <div class="soluong fl"> Đang online: <b><span id="">1</span></b><br>
+              Tổng truy cập:<b><span id="">25</span></b> </div>
+      </div>
+          <div class="fr copyright">
+        <p>Copyright © 2014 Tường Linh. All Rights Reserved. 
+              Thiết kế website bởi Đẳng Cấp Việt</p>
+      </div>
+        </div>
+  </div>
+      <!--End footer-->
+      
+      <div class="bottom_page fr"></div>
+    </div>
+<!--End container-->
+</body>
+</html>

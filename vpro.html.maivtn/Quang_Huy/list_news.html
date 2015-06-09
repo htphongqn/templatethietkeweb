@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Trang chủ</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+
+    <!--  Slider  -->
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/simple.carousel.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            // example 1
+            $("ul.slide_x").simplecarousel({
+                width:245,
+                height:370,
+                visible: 4,
+                next: $('.next'),
+                prev: $('.prev') 
+				  
+            });
+            
+            // example 2
+            $("ul.slide").simplecarousel({
+                width:1000,
+                height:400,
+                auto: 5000,
+                fade: 400,
+                pagination: true <!--control-->
+            });
+        });
+        
+    </script>
+
+    <!--Zoom-->
+    <link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+    <!--Slide chay ngang-->
+    <link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function () {     
+			jQuery('#mycarousel_same_P, #mycarousel_dt_img, #mycarousel_products').jcarousel({
+                auto: 0,
+                animation: 1000,
+                wrap: 'circular',
+                scroll: 1,
+                initCallback: mycarousel_initCallback
+            });	
+        });
+    </script>
+    </head>
+
+    <body>
+<div class="container">
+<div class="top-main">
+      <div class="col fl"><a href=""><img src="Images/icon_vanchuyen.png" class="fl" />Miễn phí vận chuyển nội thành</a></div>
+      <div class="col fl"><a href=""><img src="Images/icon_thanhtoan.png" class="fl" />Thanh toán khi nhận hàng</a></div>
+      <div class="col fl"><a href=""><img src="Images/icon_doitra.png" class="fl" />Đổi trả hàng trong vòng 3 ngày</a></div>
+      <div class="col fl"><a href=""> Hỗ trợ trực tuyến <img src="Images/icon_yahoo.png" class="fl" /></a></div>
+      <div class="fr" style="margin-right:10px;"> <a style="padding-right:10px;" href="">Đăng ký</a> <a href="">Đăng nhập</a> </div>
+      <div class="giohang"><a href="">Giỏ hàng</a></div>
+    </div>
+<!--End top-main--> 
+<!-- Header-->
+<header> <a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a> 
+      <!--Search Tool-->
+      <div id="search_form" class="fr">
+    <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa tìm kiếm..." />
+    <input name="" class="submitSearch" type="button"  value="Tìm"/>
+  </div>
+      <!--End Search Tool-->
+      <div class="hotline">Hotline: 01662 466 210</div>
+    </header>
+<!-- End Header--> 
+<!--#Menu top-->
+<nav id="nav_x">
+      <div class="menu_new_pro"></div>
+      <div class="menu_sale_pro"></div>
+      <ul>
+    <li class="active"><a href="index.html">Trang chủ </a></li>
+    <li><a href="#">Giới thiệu </a> </li>
+    <li class="parent"><a href="#">Sản phẩm</a>
+          <ul>
+        <li><a href="#">Thực phẩm chức năng </a>
+              <ul>
+            <li><a href="#">Thuốc</a></li>
+            <li><a href="#">Vitamin </a>
+                  <ul>
+                <li><a href="#">Sản Phẩm A </a></li>
+                <li><a href="#">Sản phẩm B</a></li>
+              </ul>
+                </li>
+          </ul>
+            </li>
+        <li><a href="#">Mỹ phẩm </a></li>
+      </ul>
+        </li>
+    <li><a href="#">Dịch Vụ </a></li>
+    <li><a href="#">Khuyến mãi </a></li>
+    <li><a href="#">Tin tức </a></li>
+    <li><a href="#">Liên hệ</a></li>
+  </ul>
+    </nav>
+
+<!--End Menu top--> 
+
+<!--#Main-->
+<div id="main"> 
+      <!--sidebar-->
+      <div class="sidebar fl">
+    <div class="box">
+          <div class="title_box font1">Danh mục sản phẩm</div>
+          <div class="box_ct">
+        <nav id="nav_y">
+              <ul>
+            <li ><a href="#">QUẦN JEANS NAM</a></li>
+            <li><a href="#">QUẦN JEANS NAM</a></li>
+            <li class="parent"><a href="#">QUẦN JEANS NAM</a>
+                  <ul>
+                <li><a href="#">Sub Menu 1</a></li>
+                <li class="parent"><a href="#">Sub Menu 2</a>
+                      <ul>
+                    <li><a href="#">Deep Menu 1</a></li>
+                    <li><a href="#">Deep Menu 2</a></li>
+                    <li><a href="#">Deep Menu 3</a></li>
+                  </ul>
+                    </li>
+                <li><a href="#">Sub Menu 3</a></li>
+              </ul>
+                </li>
+            <li><a href="#">QUẦN JEANS NAM</a>
+                  <ul>
+                <li><a href="#">Sub Menu 1</a></li>
+                <li class="parent"><a href="#">Sub Menu 2</a>
+                      <ul>
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                    <li><a href="#">Category 4</a></li>
+                    <li><a href="#">Category 5</a></li>
+                  </ul>
+                    </li>
+                <li><a href="#">Sub Menu 3</a></li>
+                <li><a href="#">Sub Menu 4</a></li>
+                <li><a href="#">Sub Menu 5</a></li>
+              </ul>
+                </li>
+            <li><a href="#">QUẦN JEANS NAM</a></li>
+            <li><a href="#">QUẦN JEANS NAM</a></li>
+            <li><a href="#">QUẦN JEANS NAM</a></li>
+          </ul>
+            </nav>
+      </div>
+          <!--#box_ct--> 
+        </div>
+    <!--#Box-->
+    
+    <div class="box">
+          <div class="box_ct"> <img src="Images/ads1.png" /> </div>
+        </div>
+  </div>
+      <!--End sidebar--> 
+      
+      <!--#main col-->
+      <div id="main_col" class="fr">
+    <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+    <!--List News-->
+    <div class="box">
+          <div class="font3 box_Tab"><span>Tin tức</span></div>
+          <div class="box_ct" id="list_news">
+        <ul>
+              <li>
+            <h3>
+            <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+            </h2>
+            <p class="date">24-01-2014 10:27</p>
+            <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+              <li>
+            <h3>
+            <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+            </h2>
+            <p class="date">24-01-2014 10:27</p>
+            <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+              <li>
+            <h3>
+            <a href="news_detail.html" class="h3Title">Sữa rửa mặt làm sạch nhẹ nhàng</a>
+            </h2>
+            <p class="date">24-01-2014 10:27</p>
+            <a href="news_detail.html"><img class="img_general" alt="" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTah8ms2LQFcfMJ1PKdk9lJAJX03VmprhxkzBSyKoglwhjTQkGr" /></a>
+            <p>Với công thức chứa Acid Citric ( Vitamin C), sản phẩm làm sạch này sẽ giúp bạn tẩy trang, loại bỏ những tạp chất và các tế bào chết một cách nhẹ nhàng hiệu quả để hoàn trả cho bạn làn da rạng rỡ, sạch tuyệt đối. Sự kết hợp giữa các chiết xuất từ thảo dược và tinh chất nha đam sẽ làm cho làn da mượt mà và tươi trẻ.</p>
+          </li>
+            </ul>
+        <div class="navigation"><a href="" class="pre">Trước</a><b>1</b><a href="">2</a><a href="">3</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">15</a><a href="" class="next">Sau</a> </div>
+      </div>
+        </div>
+    <!--End List News--> 
+    
+  </div>
+      
+      <!--End main col--> 
+      
+      <!--#Bottom Main-->
+      <div class="bottom-main"> <img class="fl" src="Images/icon_message.png" style="padding:20px;" />
+    <div class="fl dangkynhantin"> Đăng ký nhận tin<br />
+          Đăng ký nhận bản tin để biết các chương trình khuyến mại </div>
+    <div class="fl" id="search_form" >
+          <input type="text" class="inputSearch" name="q" id="q" onblur="SearchOnBlur(this)" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Email của bạn..." />
+          <input name="" class="submitSearch" type="button"  value="GỬI"/>
+        </div>
+    <div class="fr social_network" > <img src="Images/icon_lienket.png" class="fl"  /> <a href="" class="facebook fl"> </a> <a href="" class="gplus fl"> </a> <a href="" class="youtube fl"> </a> </div>
+  </div>
+      <!--End Bottom Main--> 
+      <!--#footer-->
+      <div id="footer">
+    <div class="fl col">
+          <h3 class="font2">Giới thiệu</h3>
+          <ul>
+        <li><a href="">Tin tức</a></li>
+        <li><a href="">Tuyển dụng</a></li>
+        <li><a href="">Liên hệ</a></li>
+        <li><a href="">Chính sách bảo mật</a></li>
+      </ul>
+        </div>
+    <div class="fl col">
+          <h3 class="font2">Hỗ trợ khách hàng</h3>
+          <ul>
+        <li><a href="">Đặt hàng trực tuyến</a></li>
+        <li><a href="">Hướng dẫn thanh toán</a></li>
+        <li><a href="">Chính sách đổi hàng</a></li>
+        <li><a href="">Câu hỏi thường gặp</a></li>
+      </ul>
+        </div>
+    <div class="fl col address">
+          <h3  class="font2">Quang Huy Shop</h3>
+          <p> 994/1 Kha Vạn Cân Thủ Đức Tp.HCM<br />
+        01662466210<br />
+        nguyentuspkt@gmail.com </p>
+          <div class="thanhtoan">CHẤP NHẬN THANH TOÁN <img src="Images/icon_visa.png" /></div>
+        </div>
+    <div class="fr copyright">
+          <div class="fl"  >Copyright © 2014 Quang Huy Shop. All right reserved.</div>
+          <div class="fr">Thiết kế bởi Đẳng Cấp Việt.</div>
+        </div>
+  </div>
+      <!--End footer--> 
+    </div>
+<!--End container-->
+</body>
+</html>

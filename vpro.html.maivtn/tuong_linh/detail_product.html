@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Trang chủ</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu.css" type="text/css" />
+    <link rel="stylesheet" href="Styles/dropdownmenu_y.css">
+    <link rel="stylesheet" href="Styles/layout.css">
+    <!--  Slider  -->
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/simple.carousel.js"></script>
+    <script type="text/javascript">
+		jQuery(document).ready(function() {
+		// example 2
+		$("ul.slide").simplecarousel({
+		width:1040,
+		height:412,
+		auto: 5000,
+		fade: 400,
+		pagination: true <!--control-->
+		});
+		});
+    </script>
+    <!--/Slider-->
+    <!--Search-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //var notH = 1,
+    //$pop = $('.search_box').hover(function () { notH ^= 1; });
+
+            //$(document).on('mouseup keyup', function (e) {
+                //if (notH || e.which == 27) $pop.stop().hide();
+            //});
+            /////// CALL POPUP 
+            $('.search_icon').click(function () {
+                $('.search_box').slideDown("fast");
+            });
+            $('.icon_point').click(function () {
+                $('.search_box').slideUp("fast");
+            });
+        });
+    </script>
+    <!--/Search-->
+    <!--Zoom-->
+    <link href="Styles/cloud-zoom.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/cloud-zoom.1.0.2.js"></script>
+    <!--Slide chay ngang-->
+    <link href="Styles/skin_jcarousel.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+		function mycarousel_initCallback(carousel)
+		{
+			carousel.clip.hover(function() {
+			carousel.stopAuto();
+			}, function() {
+			carousel.startAuto();
+		});
+		};
+		
+		jQuery(document).ready(function () {     
+			jQuery('#mycarousel_same_P, #mycarousel_dt_img, #mycarousel_products').jcarousel({
+			auto: 0,
+			animation: 1000,
+			wrap: 'circular',
+			scroll: 1,
+			initCallback: mycarousel_initCallback
+			});	
+		});
+    </script>
+    </head>
+
+    <body>
+<div class="container"> 
+      
+      <!-- Header-->
+      <header> <a href="index.html" id="logo" class="fl"><img src="Images/logo.png" alt="" /></a> <a href="index.html" id="company_name" class="fl"><img src="Images/company_name.png" alt="" /></a> </header>
+      <!-- End Header--> 
+      <!-- #Main-->
+      <div class="main"> 
+    <!----Menu login---->
+    <div class="menu_login">
+          <div class="inner_menu_login"> <a href="">Đăng Nhập</a> <a>|</a> <a href="">Đăng Ký</a> <a href="cart.html" class="menu_cart">Giỏ hàng (0)</a> </div>
+        </div>
+    <!--------> 
+    <!--#Menu top-->
+    <nav id="nav_x">
+          <ul>
+        <li ><a class="active" href="index.html">Trang chủ </a></li>
+        <li><a href="#">Giới thiệu </a> </li>
+        <li ><a href="list_products.html">Sản phẩm</a>
+              <ul>
+            <li><a href="#">Thực phẩm chức năng </a>
+                  <ul>
+                <li><a href="#">Thuốc</a></li>
+                <li><a href="#">Vitamin </a> </li>
+              </ul>
+                </li>
+            <li><a href="#">Mỹ phẩm </a></li>
+          </ul>
+            </li>
+        <li><a href="#">Dịch Vụ </a></li>
+        <li><a href="#">Khuyến mãi </a></li>
+        <li><a href="list_news.html">Tin tức </a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <div id="search_form"> <a class="trigger"><span class="search_icon"></span></a>
+              <div id="dpop" class="search_box"> <span class="icon_point"></span>
+            <input name="ctl00$vi1$txtsearch" id="vi1_txtsearch" class="inputSearch" onblur="SearchOnBlur(this)" onclick="this.value=''" onkeyup="initTyper(this)" onkeydown="" onfocus="SearchOnFocus(this)" value="Nhập từ khóa cần tìm" type="text">
+            <a id="vi1_bttntimkiem" class="submitSearch" href="javascript:__doPostBack('ctl00$vi1$bttntimkiem','')"> <span class="icon_search">Tìm Kiếm</span></a>
+            <div class="cf"> </div>
+          </div>
+            </div>
+        <!--/search_form-->
+        
+      </ul>
+        </nav>
+    <!--End Menu top--> 
+    
+    <!--#Sidebar-->
+    <div class="sidebar fl">
+          <div class="top_sidebar"></div>
+          <div class="box">
+        <div class="title_box font1">Danh mục sản phẩm</div>
+        <div class="box_ct">
+              <nav id="nav_y">
+            <ul>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a>
+                <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a> </li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+              </li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a>
+                <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a> </li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+              </li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a>
+                <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a> </li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+              </li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                  <li><a href="#" class="font2">Danh mục sản phẩm</a></li>
+                </ul>
+          </nav>
+            </div>
+        <!--End box_ct--> 
+      </div>
+          <!--End Box--> 
+          
+          <!--Box-->
+          <div class="box">
+        <div class="title_box font1">Ho tro truc tuyen</div>
+        <div class="box_ct">
+              <div class="row_sidebar hotline font3"> <img src="images/icon_phone.png" /> 0903714618 </div>
+              <div class="row_sidebar"> <a href=""><img src="images/icon_yahoo.png" /></a> </div>
+              <div class="row_sidebar"> <a href=""><img src="images/icon_skype.png" /></a> </div>
+            </div>
+        <!--End box_ct--> 
+        
+      </div>
+          <!--End Box--> 
+          
+        </div>
+    <!--End Sidebar--> 
+    
+    <!--#Main col-->
+    <div class="fr" id="main_col">
+          <div class="path"><a href="index.html">Trang chủ</a> » <a href="list_news.html">Tên chuyên mục</a></div>
+          <!--Detail Products-->
+          <div class="box">
+        <div class="font3 box_Tab tab_2"><span>Chi tiet</span></div>
+        <div class="box_ct inner_box">
+              <div class="zoom-section">
+            <div class="zoom-small-image"><a href='http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg' class = 'cloud-zoom' id='zoom1' rel="adjustX: 10, adjustY:-4"><img class="mainImage" src="http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg" alt='' title="" /></a></div>
+            <div id="mycarousel_dt_img" class="zoom-desc jcarousel-skin-tango">
+                  <ul>
+                <li class="item"><a href='http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg' class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: 'http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg' "><img class="zoom-tiny-image" src="http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg" alt = ""/></a></li>
+                <li class="item"><a href='http://muasamsanhdieu.vn/public/images/deal/small/nuoc-hoa-chinh-hang-Britney-Spears-Fantasy-ava.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' http://muasamsanhdieu.vn/public/images/deal/small/nuoc-hoa-chinh-hang-Britney-Spears-Fantasy-ava.jpg'"><img src="http://muasamsanhdieu.vn/public/images/deal/small/nuoc-hoa-chinh-hang-Britney-Spears-Fantasy-ava.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://4.bp.blogspot.com/-lv-OsrbcO_I/UdRjt27pGKI/AAAAAAAAArk/qVXigfmERQA/s1600/vera-wang-princess_1.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://4.bp.blogspot.com/-lv-OsrbcO_I/UdRjt27pGKI/AAAAAAAAArk/qVXigfmERQA/s1600/vera-wang-princess_1.jpg' "><img src="http://4.bp.blogspot.com/-lv-OsrbcO_I/UdRjt27pGKI/AAAAAAAAArk/qVXigfmERQA/s1600/vera-wang-princess_1.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg' class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: 'http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg' "><img class="zoom-tiny-image" src="http://www.evamua.vn/Upload/image/Eva-Nuoc-Hoa/nuoc-hoa-bvlgari-mon-jasmin-noir/nuoc-hoa-bvlgari-mon-jasmin-noir-giam-gia-cuc-re-cung-mua-chung-nhom-mua-hotdeal-khuyen-mai-2.jpg" alt = ""/></a></li>
+                <li class="item"><a href='http://muasamsanhdieu.vn/public/images/deal/small/nuoc-hoa-chinh-hang-Britney-Spears-Fantasy-ava.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' http://muasamsanhdieu.vn/public/images/deal/small/nuoc-hoa-chinh-hang-Britney-Spears-Fantasy-ava.jpg'"><img src="http://muasamsanhdieu.vn/public/images/deal/small/nuoc-hoa-chinh-hang-Britney-Spears-Fantasy-ava.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://4.bp.blogspot.com/-lv-OsrbcO_I/UdRjt27pGKI/AAAAAAAAArk/qVXigfmERQA/s1600/vera-wang-princess_1.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://4.bp.blogspot.com/-lv-OsrbcO_I/UdRjt27pGKI/AAAAAAAAArk/qVXigfmERQA/s1600/vera-wang-princess_1.jpg' "><img src="http://4.bp.blogspot.com/-lv-OsrbcO_I/UdRjt27pGKI/AAAAAAAAArk/qVXigfmERQA/s1600/vera-wang-princess_1.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://eshop24h.vn/uploads/nuochoanugiare/nuoc_hoa_lancome_poeme1.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://eshop24h.vn/uploads/nuochoanugiare/nuoc_hoa_lancome_poeme1.jpg' "><img src="http://eshop24h.vn/uploads/nuochoanugiare/nuoc_hoa_lancome_poeme1.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+                <li class="item"><a href='http://g.vatgia.vn/gallery_img/8/ryu1380861872.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'http://g.vatgia.vn/gallery_img/8/ryu1380861872.jpg' "><img src="http://g.vatgia.vn/gallery_img/8/ryu1380861872.jpg" alt = "" border="0" class="zoom-tiny-image"/></a></li>
+              </ul>
+                </div>
+          </div>
+              <!-- end zôm-->
+              
+              <div id="dtp_info">
+            <h2 class="h2Title">Sản phẩm cao cấp</h2>
+            <div class="dtp_status"><span class="title_status">Loại sản phẩm:</span><b>Áo</b></div>
+            <!--end: .dtp_status-->
+            <div class="dtp_status"><span class="title_status">Nhãn hiệu:</span> <b>Đang cập nhật</b></div>
+            <!--end: .dtp_status-->
+            <div class="select fl"><span>Chọn màu sắc:</span>
+                  <label>
+                <select name="color" class="type_option">
+                      <option value="0">Đỏ</option>
+                      <option value="1">Xanh</option>
+                    </select>
+              </label>
+                </div>
+            <div class="select fl"><span>Chọn kích cỡ:</span>
+                  <label>
+                <select name="color" class="type_option">
+                      <option value="0">180x200</option>
+                      <option value="1">150x200</option>
+                    </select>
+              </label>
+                </div>
+            <div class="select fl"><span>Chọn số lượng:</span>
+                  <input name="quantity" class="inputbox" value="1" type="text">
+                </div>
+            <!--end: .dtp_status-->
+            <div class="cf"></div>
+            <div class="dtp_status addtocart"><b class="dtp_price">450.000 đ</b> <a onclick="addToShoppingCart('2676','2934000')" href="cart.html" class="buy_bt fr">Liên hệ</a></div>
+            <!--end: .dtp_addcart--> 
+          </div>
+              
+              <!--Ads--> 
+              
+              <!--End Ads--> 
+              
+            </div>
+        <!--End box_ct--> 
+      </div>
+          <!--End box-->
+          
+          <div class="box" id="info_pro_detail"> 
+        <!--Text Detail-->
+        <div class="fl" id="text_info_detail">
+              <div class="font3 box_Tab tab_2"><span>Thông tin sản phẩm</span></div>
+              <div class="box_ct inner_box" id="info_g"><b>Thời trang công sở mùa Thu</b> <br />
+            <b> Chi Tiết</b> <br />
+            - Thiết kế mới nhất cho Thời trang công sở mùa Thu - Đông 2014 với chiếc áo sơ mi kiểu cách khá đơn giản nhưng không vì thế mà giảm đi sự nữ tính của bạn, với những đường xiết ly tạo điểm rũ ở phía sau áo, phía vai áo, và cánh tay áo tạo nên phong cách đầy dịu dàng, bạn có thể mặc nó đi kàm, đi chơi, dạo phố hay bất kỳ nơi đâu bạn muốn 1 cách rất thoải mái
+            <ul>
+                  <li>- Thiết kế mới nhất cho Thời trang công sở mùa Thu - Đông 2014 với chiếc áo sơ mi kiểu cách khá đơn giản nhưng không vì thế mà giảm đi sự nữ tính của bạn, với những đường xiết ly tạo điểm rũ ở phía sau áo, phía vai áo, và cánh tay áo tạo nên phong cách đầy dịu dàng, bạn có thể mặc nó đi kàm, đi chơi, dạo phố hay bất kỳ nơi đâu bạn muốn 1 cách rất thoải mái </li>
+                  <li >- <b>Chất liệu:</b> 51% -70% Polyester </li>
+                  <li>- <b>Chất Vải:</b> Voan co giãn nhẹ</li>
+                  <li>- Cổ áo bẻ đầy cá tính </li>
+                  <li>- Tay lỡ,  chất vải voan giấy, có độ co giãn nhất định</li>
+                  <li>- Màu xanh da trời</li>
+                  <li>- Phong cách hàn quốc, có thể kết hợp với phụ kiện như: khăn quàng, túi xách, áo vest, comle, Blade...</li>
+                  <li>- Mềm mại, không bị ngứa</li>
+                  <li>- Thích hợp làm đồng phục văn phòng</li>
+                </ul>
+          </div>
+            </div>
+        <!--End Text Detail--> 
+        
+      </div>
+          <!--End box-->
+          <div class="box" id="the_same_P">
+        <div class="font3 box_Tab tab_2"><span>Sản phẩm liên quan</span></div>
+        <div id="mycarousel_products" class="jcarousel-skin-tango jcarousel-item-vertical">
+              <div class="product_row">
+            <ul>
+                  <li> 
+                <!--Start Product-->
+                <div class="product">
+                      <div class="product_inner">
+                    <div class="pro_img"><a href="product-detail.html"><img src="images/sp.jpg" /></a></div>
+                    <div class="des_product"> <a href="product-detail.html"><span>San pham cap cap</span> </a>
+                          <div class="price fl">500.000VNĐ</div>
+                          <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                    <!--/des_product--> 
+                    
+                  </div>
+                      <!--/product_inner--> 
+                    </div>
+                <!--End Product--> 
+              </li>
+                  <li> 
+                <!--Start Product-->
+                <div class="product">
+                      <div class="product_inner">
+                    <div class="pro_img"><a href="product-detail.html"><img src="images/sp.jpg" /></a></div>
+                    <div class="des_product"> <a href="product-detail.html"><span>San pham cap cap</span> </a>
+                          <div class="price fl">500.000VNĐ</div>
+                          <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                    <!--/des_product--> 
+                    
+                  </div>
+                      <!--/product_inner--> 
+                    </div>
+                <!--End Product--> 
+              </li>
+                  <li> 
+                <!--Start Product-->
+                <div class="product">
+                      <div class="product_inner">
+                    <div class="pro_img"><a href="product-detail.html"><img src="images/sp.jpg" /></a></div>
+                    <div class="des_product"> <a href="product-detail.html"><span>San pham cap cap</span> </a>
+                          <div class="price fl">500.000VNĐ</div>
+                          <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                    <!--/des_product--> 
+                    
+                  </div>
+                      <!--/product_inner--> 
+                    </div>
+                <!--End Product--> 
+              </li>
+                  <li> 
+                <!--Start Product-->
+                <div class="product">
+                      <div class="product_inner">
+                    <div class="icon_sales"></div>
+                    <div class="pro_img"><a href="product-detail.html"><img src="images/sp.jpg" /></a></div>
+                    <div class="des_product"> <a href="product-detail.html"><span>San pham cap cap</span> </a>
+                          <div class="price fl">500.000VNĐ</div>
+                          <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                    <!--/des_product--> 
+                    
+                  </div>
+                      <!--/product_inner--> 
+                    </div>
+                <!--End Product--> 
+              </li>
+                  <li> 
+                <!--Start Product-->
+                <div class="product">
+                      <div class="product_inner">
+                    <div class="icon_sales"></div>
+                    <div class="pro_img"><a href="product-detail.html"><img src="images/sp.jpg" /></a></div>
+                    <div class="des_product"> <a href="product-detail.html"><span>San pham cap cap</span> </a>
+                          <div class="price fl">500.000VNĐ</div>
+                          <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                    <!--/des_product--> 
+                    
+                  </div>
+                      <!--/product_inner--> 
+                    </div>
+                <!--End Product--> 
+              </li>
+                  <li> 
+                <!--Start Product-->
+                <div class="product">
+                      <div class="product_inner">
+                    <div class="pro_img"><a href="product-detail.html"><img src="images/sp.jpg" /></a></div>
+                    <div class="des_product"> <a href="product-detail.html"><span>San pham cap cap</span> </a>
+                          <div class="price fl">500.000VNĐ</div>
+                          <a href="" class="btn_buy fr">Mua hàng</a> </div>
+                    <!--/des_product--> 
+                    
+                  </div>
+                      <!--/product_inner--> 
+                    </div>
+                <!--End Product--> 
+              </li>
+                </ul>
+          </div>
+            </div>
+      </div>
+        </div>
+    <!--End Main col--> 
+  </div>
+      <!--End Main--> 
+      
+      <!--#footer-->
+      <div id="footer">
+    <div class="footer_iner">
+          <div class="fl address">
+        <h3 class="font2">CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ KIM HOME</h3>
+        <p>139 Nhật Tảo, Phường 8, Quận 10, TP HCM</p>
+        <p>Điện thoại  : 0903714618 </p>
+        <p>Email: dolotonline.tl@gmail.com</p>
+      </div>
+          <div class="social_network"> <a href="" class="facebook"></a> <a href="" class="youtube"></a> <a href="" class="gplus"></a> </div>
+          <div class="visit"> <img src="Images/icon-truycap.gif" class="fl">
+        <div class="soluong fl"> Đang online: <b><span id="">1</span></b><br>
+              Tổng truy cập:<b><span id="">25</span></b> </div>
+      </div>
+          <div class="fr copyright">
+        <p>Copyright © 2014 Tường Linh. All Rights Reserved. 
+              Thiết kế website bởi Đẳng Cấp Việt</p>
+      </div>
+        </div>
+  </div>
+      <!--End footer-->
+      
+      <div class="bottom_page fr"></div>
+    </div>
+<!--End container-->
+</body>
+</html>

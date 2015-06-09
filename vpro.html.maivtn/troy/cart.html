@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<!--Slide Ver Styles -->
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<script type="text/javascript" src="scripts/js.js"></script>
+</head>
+<body>
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Tư vấn : 0123 456 789</div>
+    <div class="boxInnerHT">
+      <p> Xin chào, TROY sẽ phản hồi câu hỏi của bạn ngay sau tin nhắn này. Xin vui lòng điền đầy đủ thông tin chi tiết bên dưới! Cám ơn </p>
+      <form>
+        <div class="row">
+          <label>Họ tên*</label>
+          <input class="clsinput" name="" type="text" placeholder="Nhập họ tên" />
+        </div>
+        <div class="row">
+          <label>Số điện thoại*</label>
+          <input class="clsinput"  name="" type="text" placeholder="Nhập điện thoại" />
+        </div>
+        <div class="row">
+          <label>Tin nhắn *</label>
+          <textarea class="clsinput" placeholder="Nhập tin nhắn" ></textarea>
+        </div>
+        <div class="text-center">
+          <input class="clsbtn"  name="" type="button" value="Gửi" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+
+<!--ho tro-->
+
+<div class="wrap topPage">
+  <div class="container">
+    <div class="menu-top-page">
+      <div class="linkT"><i class="glyphicon glyphicon-shopping-cart white"></i><a href="cart.html">Giỏ hàng</a></div>
+      <div class="linkT linkSignup"><a href="#">Đăng kí</a></div>
+      <div class="linkT linkLogin"><a href="#">Đăng nhập</a></div>
+      <div class="linkT langBox"><a href="#"><img src="data/en.png" /></a><a href="#"><img src="data/vi.png" /></a></div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgHeader">
+  <div class="container">
+    <div class="row headerBox">
+      <div class="innerHeaderBox">
+        <div class="col2 clsLogo"> <a href="index.html">logo</a> </div>
+        <div class="col10 ">
+          <div class="bannerHeader"> <img src="data/banner.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgNavx">
+  <div class="container">
+    <div class="row menuBox">
+      <div class="col12 fright">
+        <div class="navx">
+          <ul>
+            <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="news.html">Giới thiệu</a></li>
+            <li><a href="#">Dich vu</a>
+              <ul>
+                <li><a href="news.html">Sub menu level 1</a></li>
+                <li><a href="#">Sub 1</a>
+                  <ul>
+                    <li><a href="#">Sub menu level 2</a></li>
+                    <li><a href="#">Sub 2</a>
+                      <ul>
+                        <li><a href="#">Sub menu level 3</a></li>
+                        <li><a href="#">Sub 3</a></li>
+                        <li><a href="#">Sub 3s</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Sub 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Sub 1</a></li>
+              </ul>
+            </li>
+            <li><a href="listCate.html">San pham</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dự án</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Xu huong</a></li>
+            <li> <span class="hl"> Hotline: <b>0123 456 789</b></span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap slideBg">
+  <div class="row slideBox">
+    <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script> 
+    <!--slider_main-->
+    <div class="slider_main">
+      <div class="slider-wrapper theme-default">
+        <div id="slider" class="nivoSlider"> <a href=""> <img src="data/slide1.png" /></a> <a href=""><img src="data/slide2.png" /></a> </div>
+      </div>
+    </div>
+    <!--slider_main--> 
+    <script>
+    //slider nivo
+         $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script> 
+  </div>
+</div>
+<div class="container">
+   <div class="box bgWhite">
+        <div class=" headingBox hdb2 "><span>Giỏ hàng</span></div>
+        <div id="cart_page" class="bgWhite">
+          <div class="row_th_cart">
+            <h3 class="th_table_cart fl" style="width: 15%"> Hình ảnh </h3>
+            <h3 class="th_table_cart fl" style="width: 40%"> Tên Sản Phẩm </h3>
+            <h3 class="th_table_cart fl" style="width: 15%"> Giá Bán </h3>
+            <h3 class="th_table_cart fl" style="width: 10%"> Số Lượng </h3>
+            <h3 class="th_table_cart fl" style="width: 20%"> Thành Tiền </h3>
+          </div>
+          <!--Item Cart-->
+          <div class="item_cart fl"> <a href='' target='_parent' class='img_cart fl'><img src="data/sp1.jpg" /></a>
+            <div class="cell name">
+              <div> <span> Hộp cơm hâm nóng tự động Magic Bullet</span></div>
+            </div>
+            <div class="cell unit"> <span class="new" id="soldprice_1757"> 130.000 VNĐ</span></div>
+            <div class="cell amount"> 
+              <!-- so luong -->
+              <div class="quantity" style="margin: 0">
+                <select name=" " onchange="" id="">
+                  <option selected="selected" value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                </select>
+                <input type="hidden" name="" id="" value="1387" />
+              </div>
+              <!-- --> 
+            </div>
+            <div class="cell total" id="dealtotal_1757"> 130.000 VNĐ</div>
+            <a class="close" href="/vi-vn/deftocart.aspx?id=59117"></a> </div>
+          <!--end Item Cart--> 
+          <!--Item Cart-->
+          <div class="item_cart fl"> <a href='#' target='_parent' class='img_cart fl'><img src='data/sp1.jpg' alt='' width='100' height='100' /></a>
+            <div class="cell name">
+              <div> <span> Hộp cơm hâm nóng tự động Magic Bullet</span></div>
+            </div>
+            <div class="cell unit"> <span class="new"  > 130.000 VNĐ</span></div>
+            <div class="cell amount"> 
+              <!-- so luong -->
+              <div class="quantity" style="margin: 0">
+                <select name=" " onchange=" " id=" ">
+                  <option selected="selected" value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                </select>
+                <input type="hidden" name=" " id=" " value="1387" />
+              </div>
+            </div>
+            <div class="cell total" id="dealtotal_1757"> 130.000 VNĐ</div>
+            <a class="close" href=""></a> </div>
+          <!--end Item Cart-->
+          <div class="foo-cart">
+            <div class="total-cart">
+              <p style="display: block"> Tổng tiền:<span id="total-money"> <span>130.000 VNĐ</span> </span></p>
+            </div>
+          </div>
+          <div class="button_cart"> <a  class=" btn btn-primary fl" href="B1.html">Tiến hành đặt hàng >></a> <a class="btn btn-primary fl" href="" style="margin-left: 15px">Cập nhật giỏ hàng</a> <a class="btn btn-primary fl" href="" style="margin-left: 15px"> Mua thêm sản phẩm khác</a> </div>
+        </div>
+        <!--end Cart Page--> 
+      </div>
+   
+   
+</div>
+<!--End Container-->
+<div class="wrap lineF"></div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="row">
+      <div class="col2 colf">
+        <h2>Hỗ trợ khách hàng</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a> </div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col2 colf">
+        <h2>Về chúng tôi</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a></div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col3 colf">
+        <h2>Thống kê truy cập</h2>
+        <div class="countOB">
+          <div class="fleft" style="line-height:23px; white-space:nowrap">
+            <div>Đang online: <span class="numberonl">123</span></div>
+            <div>Tổng truy cập: <span class="numberonl">123456</span></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="social_network"><a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class=" twitter"></a><a href="" class=" youtube"></a></div>
+      </div>
+      <div class="col5 colf">
+        <div class="address"><b>CÔNG TY TNHH TROY</b><br />
+          Ðịa chỉ: 7A/87 Thành Thái, Phường 14, Quận 10, TP Hồ Chí Minh <br />
+          Điện thoại: 0909 245 636     - Email: pvkduyen@gmail.com<br />
+          <div class="copyRight">Copyright © 2015 gotroy.vn. All rights reserved.<br />
+            Thiết kế website bởi <a href="http://dangcapviet.vn/">Đẳng Cấp Việt</a> </div>
+          <div class="paymentF"> <img src="images/thanhToan/master.png" /> <img src="images/thanhToan/visa.png" /> <img src="images/thanhToan/viettin.png" /> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

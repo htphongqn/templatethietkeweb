@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<!--Slide Ver Styles -->
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<script type="text/javascript" src="scripts/js.js"></script>
+</head>
+<body>
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Tư vấn : 0123 456 789</div>
+    <div class="boxInnerHT">
+      <p> Xin chào, TROY sẽ phản hồi câu hỏi của bạn ngay sau tin nhắn này. Xin vui lòng điền đầy đủ thông tin chi tiết bên dưới! Cám ơn </p>
+      <form>
+        <div class="row">
+          <label>Họ tên*</label>
+          <input class="clsinput" name="" type="text" placeholder="Nhập họ tên" />
+        </div>
+        <div class="row">
+          <label>Số điện thoại*</label>
+          <input class="clsinput"  name="" type="text" placeholder="Nhập điện thoại" />
+        </div>
+        <div class="row">
+          <label>Tin nhắn *</label>
+          <textarea class="clsinput" placeholder="Nhập tin nhắn" ></textarea>
+        </div>
+        <div class="text-center">
+          <input class="clsbtn"  name="" type="button" value="Gửi" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+
+<!--ho tro-->
+
+<div class="wrap topPage">
+  <div class="container">
+    <div class="menu-top-page">
+      <div class="linkT"><i class="glyphicon glyphicon-shopping-cart white"></i><a href="cart.html">Giỏ hàng</a></div>
+      <div class="linkT linkSignup"><a href="#">Đăng kí</a></div>
+      <div class="linkT linkLogin"><a href="#">Đăng nhập</a></div>
+      <div class="linkT langBox"><a href="#"><img src="data/en.png" /></a><a href="#"><img src="data/vi.png" /></a></div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgHeader">
+  <div class="container">
+    <div class="row headerBox">
+      <div class="innerHeaderBox">
+        <div class="col2 clsLogo"> <a href="index.html">logo</a> </div>
+        <div class="col10 ">
+          <div class="bannerHeader"> <img src="data/banner.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgNavx">
+  <div class="container">
+    <div class="row menuBox">
+      <div class="col12 fright">
+        <div class="navx">
+          <ul>
+            <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="news.html">Giới thiệu</a></li>
+            <li><a href="#">Dich vu</a>
+              <ul>
+                <li><a href="news.html">Sub menu level 1</a></li>
+                <li><a href="#">Sub 1</a>
+                  <ul>
+                    <li><a href="#">Sub menu level 2</a></li>
+                    <li><a href="#">Sub 2</a>
+                      <ul>
+                        <li><a href="#">Sub menu level 3</a></li>
+                        <li><a href="#">Sub 3</a></li>
+                        <li><a href="#">Sub 3s</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Sub 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Sub 1</a></li>
+              </ul>
+            </li>
+            <li><a href="listCate.html">San pham</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dự án</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Xu huong</a></li>
+            <li> <span class="hl"> Hotline: <b>0123 456 789</b></span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap slideBg">
+  <div class="row slideBox">
+    <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script> 
+    <!--slider_main-->
+    <div class="slider_main">
+      <div class="slider-wrapper theme-default">
+        <div id="slider" class="nivoSlider"> <a href=""> <img src="data/slide1.png" /></a> <a href=""><img src="data/slide2.png" /></a> </div>
+      </div>
+    </div>
+    <!--slider_main--> 
+    <script>
+    //slider nivo
+         $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script> 
+  </div>
+</div>
+<div class="container">
+
+  <div class="box">
+    <div class="headingBox hdb2 text-left"><span>Tin tức</span>  </div>
+       <!--Chi tiet tin tuc-->
+  <div class="detailNews">
+  <link rel="stylesheet" type="text/css" href="styles/detailNews.css">
+          <h1>Công việc giúp các bà mẹ kiếm tiền ngày Tết</h1>
+          <div class=" dateTime">Thứ Hai, ngày 02/03/2015 06:55 AM (GMT+7)</div>
+          <div class="innerDetailNews"> 
+            <!--noi dung bai viet-->
+            <p>Mứt là món không thể thiếu mỗi dịp tết. Vì vậy, nhu cầu tiêu thụ của các gia đình cũng rất lớn. Nếu như trước kia mọi người đều mua mứt tại các cửa hàng thì giờ đây lại thích tự làm hoặc mua của những người quen để đảm bảo chất lượng và vệ sinh. Đã ba năm gắn bó với <a href="http://vieclam.24h.com.vn/">việc làm</a> mứt, từ buổi đầu chỉ chuyên nhận mứt dừa, giờ đây chị Hiền (<a href="http://hcm.vieclam.24h.com.vn/ke-toan-kiem-toan-c30.html">nhân viên kế toán</a> tại Cầu Giấy, Hà Nội) đã bổ sung vào tăng cường làm thêm mứt khoai, mứt cà rốt, mứt xoài… Chị cho biết: &quot;Mọi người thích ăn mứt do mình làm vì đảm bảo chất lượng. Giờ mạng internet cũng phổ biến cách làm mứt nhưng chủ yếu mọi người hay làm mứt dừa. Vì vậy mình phải cải tiến và làm thêm nhiều loại khác để đáp ứng nhu cầu của khách hàng&quot;. </p>
+            <p><span align="center"><span id="shareImage-0"> </span><img id="news-image-id-0" onmouseover="display_icon_socail_image('shareImage-0', this);" alt="Công việc giúp các bà mẹ kiếm tiền ngày Tết - 1" onclick="return openNewImage(this, '')" src="http://24h-img.24hstatic.com/upload/1-2015/images/2015-02-10/1423539314-t---i-xu---ng--16-.jpg" /></span></p>
+            <p><em>Mứt xoài. Ảnh minh họa.</em></p>
+            <p>Nói về lượng khách hàng của mình chị Hiền cho biết: &quot;Khách của mình chủ yếu là các anh chị đồng nghiệp, bạn bè và người thân. Mình đã làm được mấy Tết rồi nên số lượng hàng cũng ổn định. Có khi nhiều đơn hàng quá mà công việc cuối năm trên công ty cũng bận nên đêm phải thức để đảo mứt. Làm nhiều cũng quen nên đôi khi thức trắng đêm mà mình vẫn thấy bình thường&quot;.</p>
+            <p>Là nhân viên văn phòng, lương ổn định nhưng vì &quot;một chốn ba quê&quot;, tết đến trăm thứ phải chi mà &quot;tiền lương thì chỉ có thế&quot; nên chị Quỳnh Thơ (Hà Nội) cũng phải lo kiếm thêm tiền. &quot;Đang không biết nên làm thế nào để tăng nguồn thu cho dịp tết thì mình lên mạng học được cách làm mứt. Làm thử thấy mọi người ăn đều khen và muốn đặt hàng nên mình nhận luôn. Tuy làm mứt cũng lách cách và tốn thời gian nhưng được cái là có thể làm bất cứ lúc nào. Gọi là lấy công làm lãi nên cứ chăm chỉ và có đơn đặt hàng đều thì cũng có khoản để tiêu tết.&quot; - Chị Thơ chia sẻ.</p>
+            <p><strong>Làm lạp xưởng hun khói đỏ hoe mắt</strong></p>
+            <p>Đang trong thời gian nghỉ sinh con và ở nhà ông bà ngoại, chị Tâm (Yên Bái) đã đăng lên mạng món ăn truyền thống của vùng núi Tây bắc và được rất nhiều người đặt hàng. Chị cho biết: &quot;Ban đầu cũng chỉ định làm để nhà ăn, nhưng thật bất ngờ là khi đăng lên facebook thì có nhiều người lại muốn mua. Vậy là mình nhận làm luôn để vừa kiếm thêm thu nhập, vừa cho mọi người có cơ hội thưởng thức món ăn truyền thống của quê hương&quot;. Theo chị Tâm, làm lạp xưởng vất vả nhất là lúc hun khói. &quot;Lạp xưởng ngon thì ngoài vị thịt ướp bên trong, bên ngoài khói phải ngấm đều nên trong quá trình hun khói mình phải ngồi canh và đảo liên tục. Lúc ra lò được một mẻ thì mắt cũng đỏ hoe vì khói&quot;.</p>
+            <p>Khi được hỏi &quot;nếu không cần tiền thì chị có làm không?&quot; chị Tâm thành thật chia sẻ: &quot;Nếu nói vì tiền thì cũng chỉ đúng một phần vì làm món này rất tốn thời gian, vất vả mà lãi lại rất ít. Hết làm lòng rồi lại đến thái thịt, tẩm ướp, phơi nắng rồi hun khói, cả tuần mới xong một mẻ. Quan trọng nhất là mình thích làm, vừa có cơ hội giao tiếp với mọi người lại có thêm ít tiền tiêu Tết&quot;.</p>
+            <p><strong>Làm cây, quả trang trí nhà</strong></p>
+            <p>Nhu cầu trang trí nhà cửa dịp Tết tăng cao, tạo điều kiện cho những người khéo tay như chị Yến (<a href="http://hcm.vieclam.24h.com.vn/marketing-pr-c53.html">nhân viên truyền thông</a>, Hoàng Mai, Hà Nội) có thêm cơ hội trổ tài, kiếm tiền. Đến nhà chị trong những ngày giáp tết dễ dàng choáng ngợp bởi những cây, quả cảnh làm từ giấy, kẹo và tiền. &quot;Bản chất mình cũng hay tự nghĩ ra những thứ để trang trí nhà cửa. Thích làm những việc tỉ mẩn nên thấy làm thêm hoa lá kiểu này rất hợp với mình&quot;. Chị Yến chia sẻ.</p>
+            <p><span align="center"><span id="shareImage-1"> </span><img id="news-image-id-1" onmouseover="display_icon_socail_image('shareImage-1', this);" alt="Công việc giúp các bà mẹ kiếm tiền ngày Tết - 2" onclick="return openNewImage(this, '')" src="http://24h-img.24hstatic.com/upload/1-2015/images/2015-02-10/1423539408-iiqutrang_tri_ngay_tet_nrew.jpg.jpg" /></span></p>
+            <p><em>Nhu cầu trang trí nhà cửa ngày Tết tăng cao. Ảnh minh họa.</em></p>
+            <p>Tâm sự về <a href="http://hcm.vieclam.24h.com.vn/ke-toan-kiem-toan-c30.html">việc làm</a> thêm của mình, chị cho biết: &quot;Năm nay kinh tế khó khăn, lương hai vợ chồng bình thường cũng chỉ đủ chi tiêu. Đợt này còn lo Tết về quê nữa nên cũng cần tiền lắm! May mà nhu cầu của mọi người mua cây tiền, quả dứa, kẹo hoa chơi Tết cũng nhiều nên mình cũng tranh thủ kiếm được kha khá, gọi là có đồng ra đồng vào&quot;.</p>
+            <!--End noi dung bai viet--> 
+          </div>
+          <!--End innerDetailNews-->
+          <div class="function">
+            <div class="shareBox"> <img src="images/social_network.jpg" width="142" height="18"></div>
+            <div class="toolbarBox"> <a href="#"> <i class="glyphicon glyphicon-print"></i>Bản in</a> <a target="_blank" href="#" data-toggle="modal" data-target="#myModalS" > <i class="glyphicon glyphicon-envelope"></i>Gửi email</a> <a href="" data-toggle="modal" data-target="#myModalF"> <i class="glyphicon glyphicon-edit"></i>Phản hồi</a></div>
+          </div>
+          <!--function-->
+       
+          
+          <!--Other News-->
+          <div class="otherNews">
+            <h3>Tin bài khác</h3>
+            <ul>
+              <li> <a href="#">Nghề năng động<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+              <li> <a href="#">Nhu cầu tuyển dụng nhân lực ngành CNTT tăng cao trong năm 2015<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+              <li> <a href="#">Việc làm cho người thông minh nhưng lười<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+              <li> <a href="#">5 công việc "hái ra tiền" trong dịp Tết<small class="date">(05/03)</small></a> </li>
+              <li> <a href="#">Nghề năng động<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+              <li> <a href="#">Nhu cầu tuyển dụng nhân lực ngành CNTT tăng cao trong năm 2015<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+              <li> <a href="#">Việc làm cho người thông minh nhưng lười<small class="date">(Ngày đăng 10/03/2013 8:45)</small></a> </li>
+              <li> <a href="#">5 công việc "hái ra tiền" trong dịp Tết<small class="date">(05/03)</small></a> </li>
+            </ul>
+          </div>
+          <!--Other News--> 
+        </div>
+ <!--End chi tiet tin tuc-->
+  </div>
+   
+</div>
+<!--End Container-->
+<div class="wrap lineF"></div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="row">
+      <div class="col2 colf">
+        <h2>Hỗ trợ khách hàng</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a> </div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col2 colf">
+        <h2>Về chúng tôi</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a></div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col3 colf">
+        <h2>Thống kê truy cập</h2>
+        <div class="countOB">
+          <div class="fleft" style="line-height:23px; white-space:nowrap">
+            <div>Đang online: <span class="numberonl">123</span></div>
+            <div>Tổng truy cập: <span class="numberonl">123456</span></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="social_network"><a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class=" twitter"></a><a href="" class=" youtube"></a></div>
+      </div>
+      <div class="col5 colf">
+        <div class="address"><b>CÔNG TY TNHH TROY</b><br />
+          Ðịa chỉ: 7A/87 Thành Thái, Phường 14, Quận 10, TP Hồ Chí Minh <br />
+          Điện thoại: 0909 245 636     - Email: pvkduyen@gmail.com<br />
+          <div class="copyRight">Copyright © 2015 gotroy.vn. All rights reserved.<br />
+            Thiết kế website bởi <a href="http://dangcapviet.vn/">Đẳng Cấp Việt</a> </div>
+          <div class="paymentF"> <img src="images/thanhToan/master.png" /> <img src="images/thanhToan/visa.png" /> <img src="images/thanhToan/viettin.png" /> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

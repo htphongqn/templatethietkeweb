@@ -1,0 +1,2268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>ToolCom</title>
+    <link rel="stylesheet" href="Styles/template.css" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <!--Main Menu-->
+    <link href="Styles/newheadfooter.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/glyphicon.css" rel="stylesheet" type="text/css" />
+    <!--Nivo Slider Responsive-->
+    <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+    <!--Slide Products-->
+    <link rel="stylesheet" href="Styles/skin_jcarousel.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="Scripts/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">       
+		var totalslides = 1;
+
+        function mycarousel_initCallback1(carousel) {
+            jQuery('#viewvid').bind('click', function () {
+                carousel.scroll(jQuery.jcarousel.intval(1));
+                pageslide('about');
+                return false;
+            });
+
+            jQuery('.jcarousel-navigation li a').click(function (e) {
+                panel = $(this).parent('li').attr('id');
+                carousel.scroll(jQuery.jcarousel.intval(panel));
+                return false;
+            });
+        };
+
+        function mycarousel_itemFirstInCallback(carousel, item, idx, state) {
+            bubble = calcSlide(idx);
+            $('.jcarousel-navigation li').each(function () {
+                if ($(this).attr('id') == bubble)
+                    $(this).addClass('active');
+                else
+                    $(this).removeClass('active');
+            });
+        };
+
+        function calcSlide(value) {
+            current = value;
+            if (value > totalslides) {
+                current = value - totalslides;
+                calcSlide(current);
+            }
+
+            return current;
+        }
+		
+		function mycarousel_initCallback(carousel) {    
+            // Pause autoscrolling if the user moves with the cursor over the clip.
+            carousel.clip.hover(function () {
+                carousel.stopAuto();
+            }, function () {
+                carousel.startAuto();
+            });
+        };
+
+        jQuery(document).ready(function () {
+			
+			$('#slide_liked_P li').each(function () {
+                $('.jcarousel-navigation').append('<li id="' + totalslides + '"><a href="#"></a></li>');
+                totalslides++;
+            });
+            totalslides = totalslides - 1;
+			jQuery('#slide_liked_P').jcarousel({
+                auto: 3,
+                wrap: 'circular',
+                scroll: 1,
+				animation: 800,	
+				itemFirstInCallback: mycarousel_itemFirstInCallback,
+                initCallback: mycarousel_initCallback1
+            }); 
+						
+			jQuery('#slide_viewed_P').jcarousel({
+                auto: 3,
+                wrap: 'circular',
+                scroll: 1,
+				animation: 800,
+				vertical:true,                
+                initCallback: mycarousel_initCallback
+            }); 
+
+            jQuery('.carousel_product').jcarousel({
+                auto: 3,
+                wrap: 'circular',
+                scroll: 3,
+				animation: 800,
+                initCallback: mycarousel_initCallback
+            });
+			
+			jQuery('#sl_logo, #sl_adsbottom, #views_products, #thumnail_products').jcarousel({
+                auto: 0,
+                wrap: 'circular',
+                scroll: 1,
+				animation: 800,
+                initCallback: mycarousel_initCallback
+            });						
+        }); 
+    </script>
+    </head>
+    <body>
+<div id="ads_top_page"></a></div>
+<!--Support-->
+<div class="support_head"> <span class="title_support"></span>
+      <div class="support_bg">
+    <p class="optionSupport"><a href="#">Liên hệ với ToolCom</a> </p>
+    <div class="infoSupport"> <span class="icoSupport"></span>
+          <p class="hotLine"> <span>0907 288 920</span><br />
+        <span>090339 7273</span></p>
+          <p class="timeSupport"> <strong>Thời gian làm việc:</strong></p>
+          <p class="timeSupport"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thứ 2 - 7: từ 8h-18h</p>
+          <p class="timeSupport"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chủ Nhật vui lòng gọi</p>
+          <span class="icoMail"></span>
+          <p class="mailSupport"><a href="mailto: ">ToolCom@gmail.com</a></p>
+          <div class="yahoo"> <a href="ymsgr:sendim? " title=""> <img src="#" height="16" border="0" alt='' /></a> <a href="skype:?call" title=""> <img src="#" title="" height="16" alt="" /></a> </div>
+        </div>
+  </div>
+    </div>
+<!--End Support--> 
+<!--Left Fix Side--> 
+<script type='text/javascript'>//<![CDATA[ 
+$(function() {    
+			var sticky_navigation_offset_top = $('#left_fix_side').offset().top;
+			var sticky_navigation = function(){
+				var scroll_top = $(window).scrollTop();
+				if (scroll_top > sticky_navigation_offset_top) { 
+					$('#left_fix_side').css({ 'position': 'fixed', 'top':0 });
+				} else {
+					$('#left_fix_side').css({ 'position': 'fixed', 'top':160 }); 
+				}   
+			};
+			
+			sticky_navigation();
+			
+			$(window).scroll(function() {
+			sticky_navigation();
+			});
+		});// JavaScript Document
+</script>
+<div id="left_fix_side">
+      <div class="item_side_fix cf"><a href="" title="Chuyển sang phiên bản Mobile" class="icon_mobile trans"></a></div>
+    </div>
+<!--Top Page-->
+<div id="top_page">
+      <div id="top_link" class="wrap">
+    <ul class="link_left fl">
+          <li id="vi4_div_login"><span class="trigger">Đăng nhập / Đăng ký</span>
+        <div class="popup_login" id="dpop"> <span class="close_box_acc">X</span>
+              <div class="input_form">
+            <label for="LoginForm_email"> Email <span class="required">*</span></label>
+            <input type="text" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi4_bt_login').click();return false;}} else {return true}; " class="input identity" maxlength="50" id="vi4_txtnameLogin" name="ctl00$vi4$txtnameLogin">
+          </div>
+              <div class="input_form">
+            <label for="LoginForm_password"> Mật khẩu <span class="required">*</span></label>
+            <input type="password" onkeypress="if(event.which || event.keyCode || event.charCode){if ((event.charCode == 13) || (event.which == 13) || (event.keyCode == 13)) {document.getElementById('vi4_bt_login').click();return false;}} else {return true}; " class="input password" id="vi4_txtPassLogin" name="ctl00$vi4$txtPassLogin">
+          </div>
+              <div style="color: Red" class="errors"> </div>
+              <div id="loading-errors"> </div>
+              <div class="note_wrapper clearfix">
+            <div class="lost_password"> <a href="javascript:__doPostBack('ctl00$vi4$lbtquenmatkhau','')" class="link_acount" id="vi4_lbtquenmatkhau">Quên mật khẩu</a> </div>
+          </div>
+              <div class="input_form"> <a style="display: block; height: 28px; padding-top: 10px;" class="button" onclick="ajaxlogin();" id="vi4_bt_login" href="javascript:void(0)">Đăng nhập</a> </div>
+              <div class="note_wrapper"> Bạn chưa là thành viên? <a class="link_acount" href="register.html" rel="nofollow">Đăng ký ngay</a></div>
+            </div>
+        <script type="text/javascript">
+                $(document).ready(function () {
+                    var notH = 1,
+    $pop = $('.popup_login').hover(function () { notH ^= 1; });
+
+                    $(document).on('mouseup keyup', function (e) {
+                        if (notH || e.which == 27) $pop.stop().hide();
+                    });
+                    /////// CALL POPUP 
+                    $('.trigger').click(function () {
+                        $('.popup_login').slideToggle('fast').end().siblings().$('.popup_login').hide('fast');
+                        event.stopPropagation();
+                    });
+					$('.close_box_acc').click(function () {
+                        $('.popup_login').slideUp('fast');                       
+                    });
+                }); 
+            </script> 
+      </li>
+        </ul>
+    <ul class="link_right fr">
+          <li><a href="#" title="Danh sách yêu thích"><i class="glyphicon glyphicon-heart"></i>Sản phẩm yêu thích</a></li>
+          <li><a href="#" title="Kiểm tra đơn hàng"><i class="glyphicon glyphicon-check"></i>Kiểm tra đơn hàng</a></li>
+          <li><a href="#" title="Sản phẩm"><i class="glyphicon glyphicon-shopping-cart"></i><span>[0]</span> Sản phẩm</a></li>
+        </ul>
+  </div>
+    </div>
+<!--end Top Page--> 
+<!--#begin Wrap-->
+<div class="wrap"> 
+      <!--#begin Header-->
+      <div id="header"> <a href="index.html" id="logo" class="fl"><img src="images/logo.jpg" alt="ToolCom" /> </a> 
+    <!--Function Web-->
+    
+    <div class="info_header fr">
+          <div class="menuTop">
+        <ul>
+              <li><a>Trang chu</a></li>
+              <li><a>Gioi thieu</a></li>
+              <li><a>Tin tuc</a></li>
+              <li><a>Tuyen dung</a></li>
+            </ul>
+      </div>
+          <div class="topbar">
+        <div class="search_form">
+              <div class="dropdownS fl">
+            <label>
+                  <select name="" id="" class="dr_search">
+                <option value="110">Tất cả</option>
+                <option value="558">Đặc sản mới</option>
+                <option value="559">Khuyến mãi</option>
+                <option value="560">Nông sản</option>
+                <option value="561">Thủy & Hải sản</option>
+                <option value="562">Mũi Khoan Gỗ - Granit - kiếng</option>
+                <option value="563">Bánh Mứt</option>
+              </select>
+                </label>
+          </div>
+              <div class="inputG">
+            <input type="text" onfocus="if(this.value=='Nhập từ khóa cần tìm') this.value='';" onblur="if(this.value=='') this.value='Nhập từ khóa cần tìm';" value="Nhập từ khóa cần tìm" size="30" class="inputSearch ui-autocomplete-input" alt="Search" id="vi5_txtsearch" name="ctl00$vi5$txtsearch" autocomplete="off">
+            <input type="submit" class="btn" id="vi5_btnSearch" value="Tìm kiếm" name="ctl00$vi5$btnSearch">
+          </div>
+            </div>
+        <!--Hotline-->
+        <div class="hotline fr"><i class="iconHotline"></i><b>08 6684 17 19</b><span>( Online từ 8h30 đến 21h từ T 2 – CN )</span></div>
+        <!--end Hotline--> 
+        
+      </div>
+        </div>
+    <!--end Function Web--> 
+    
+  </div>
+      <!--#end Header--> 
+      
+    </div>
+<!--end wrap-->
+
+<div class="topP"></div>
+<div class="wrap shadow"> 
+      <!--Top Main-->
+      <div class="top_main"> 
+    <!-- Main Menu-->
+    <div class="all_categories fl">
+          <div class="show_menu">
+        <div class="tab_cate"><span>DANH MỤC SẢN PHẨM<i class="arr_down"></i></span></div>
+        <!--Main Menu-->
+        <ul  class="nav_menu">
+              <script src="Scripts/masonry.js"></script> 
+              <script type="text/javascript">	
+	$(function () {
+	var columns    = 3,
+	setColumns = function() { columns = $( window ).width() > 750 ? 3 : $( window ).width() > 500 ? 2 : 1; };
+	setColumns();
+	    $( window ).resize( setColumns );	
+		$('.m_li').bind('mouseenter', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeIn(200);
+				var columns    = 3,
+				setColumns = function() { columns = $( window ).width() > 750 ? 3 : $( window ).width() > 500 ? 2 : 1; };
+				setColumns();
+	   				$( window ).resize( setColumns );	
+        		$( '.subcatwrapper' ).masonry(
+	    		{
+	        	itemSelector: '.pc_menu',
+	        	columnWidth:  function( containerWidth ) { return containerWidth / columns; }
+	    	});
+        }).bind('mouseleave', function () {
+
+            $(this).find('.list_categories').stop(true, true).fadeOut(200, function () {
+
+            });
+        });		        
+    })	
+</script>
+              <li class="m_li"> <a href="list_products.html" class="t_menu"> Thang Nhôm</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thang-nhom-chu-a.aspx" title=" Thang Nhôm Chữ A"> Thang Nhôm Chữ A</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thang-nhom-rut.aspx" title=" Thang Nhôm Rút"> Thang Nhôm Rút</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thang-nhom-gap.aspx" title=" Thang Nhôm Gấp"> Thang Nhôm Gấp</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thang-nhom-truot.aspx" title=" Thang Nhôm Trượt"> Thang Nhôm Trượt</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thang-ghe.aspx" title=" Thang Ghế"> Thang Ghế</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thang-nhom-rut-chu-a.aspx" title=" Thang Nhôm Rút Chữ A"> Thang Nhôm Rút Chữ A</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/thiet-bi-do-dien.aspx" class="t_menu"> Thiết Bị Đo Điện</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/ampe-kim.aspx" title=" Ampe Kìm"> Ampe Kìm</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/dong-ho-van-nang.aspx" title=" Đồng Hồ Vạn Năng"> Đồng Hồ Vạn Năng</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/do-dien-tro-cach-dien.aspx" title=" Đo Điện Trở Cách Điện"> Đo Điện Trở Cách Điện</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/do-dien-tro-dat.aspx" title=" Đo Điện Trở Đất"> Đo Điện Trở Đất</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/but-thu-dien.aspx" title=" Bút Thử Điện"> Bút Thử Điện</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-do-pha.aspx" title=" Thiết Bị Dò Pha"> Thiết Bị Dò Pha</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/do-cuong-do-anh-sang.aspx" title=" Đo Cường Độ Ánh Sáng"> Đo Cường Độ Ánh Sáng</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/do-nhiet-do.aspx" title=" Đo Nhiệt Độ"> Đo Nhiệt Độ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/thiet-bi-nang-do.aspx" class="t_menu"> Thiết Bị Nâng Đỡ</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/con-doi.aspx" title=" Con Đội"> Con Đội</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/pa-lang-xich-keo-tay.aspx" title=" Pa Lăng Xích Kéo Tay"> Pa Lăng Xích Kéo Tay</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/pa-lang-xich-lac-tay.aspx" title=" Pa Lăng Xích Lắc Tay"> Pa Lăng Xích Lắc Tay</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/xe-day.aspx" title=" Xe Đẩy"> Xe Đẩy</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/kich-cang-cap.aspx" title=" Kích Căng Cáp"> Kích Căng Cáp</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/thiet-bi-bao-quan.aspx" class="t_menu"> Thiết Bị Bảo Quản</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thung-dung-do-nghe.aspx" title=" Thùng Đựng Đồ Nghề"> Thùng Đựng Đồ Nghề</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/tui-dung-do-nghe.aspx" title=" Túi Đựng Đồ Nghề"> Túi Đựng Đồ Nghề</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/hop-bao-quan.aspx" title=" Hộp Bảo Quản"> Hộp Bảo Quản</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/o-khoa-hop-dung-chia.aspx" title=" Ổ Khóa, Hộp Đựng Chìa"> Ổ Khóa, Hộp Đựng Chìa</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/dung-cu-cam-tay.aspx" class="t_menu"> Dụng Cụ Cầm Tay</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/kem-cam-tay.aspx" title=" Kềm Cầm Tay"> Kềm Cầm Tay</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/kem-mui-nhon.aspx"> Kềm Mũi Nhọn</a> </li>
+                    <li><a href="/chuyen-muc/kem-rut-dinh.aspx"> Kềm Rút Đinh</a> </li>
+                    <li><a href="/chuyen-muc/kem-tuot-day.aspx"> Kềm Tuốt Dây</a> </li>
+                    <li><a href="/chuyen-muc/kem-mo-qua.aspx"> Kềm Mỏ Quạ</a> </li>
+                    <li><a href="/chuyen-muc/kem-mo-phe.aspx"> Kềm Mở Phe</a> </li>
+                    <li><a href="/chuyen-muc/kem-dien.aspx"> Kềm Điện</a> </li>
+                    <li><a href="/chuyen-muc/kem-da-nang.aspx"> Kềm Đa Năng</a> </li>
+                    <li><a href="/chuyen-muc/kem-cong-luc.aspx"> Kềm Cộng Lực</a> </li>
+                    <li><a href="/chuyen-muc/kem-chet.aspx"> Kềm Chết</a> </li>
+                    <li><a href="/chuyen-muc/kem-cat.aspx"> Kềm Cắt</a> </li>
+                    <li><a href="/chuyen-muc/kem-bam-cos.aspx"> Kềm Bấm Cos</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/dung-cu-cat.aspx" title=" Dụng Cụ Cắt"> Dụng Cụ Cắt</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/cua-go.aspx"> Cưa Gỗ</a> </li>
+                    <li><a href="/chuyen-muc/cua-sat.aspx"> Cưa Sắt</a> </li>
+                    <li><a href="/chuyen-muc/dao.aspx"> Dao</a> </li>
+                    <li><a href="/chuyen-muc/luoi-dao.aspx"> Lưỡi Dao</a> </li>
+                    <li><a href="/chuyen-muc/keo.aspx"> Kéo</a> </li>
+                    <li><a href="/chuyen-muc/luoi-cua.aspx"> Lưỡi Cưa</a> </li>
+                    <li><a href="/chuyen-muc/mui-duc.aspx"> Mũi Đục</a> </li>
+                    <li><a href="/chuyen-muc/mui-khoan.aspx"> Mũi Khoan</a> </li>
+                    <li><a href="/chuyen-muc/mui-khoet.aspx"> Mũi Khoét</a> </li>
+                    <li><a href="/chuyen-muc/taro.aspx"> Taro</a> </li>
+                    <li><a href="/chuyen-muc/da-mai-va-da-cat.aspx"> Đá mài và đá cắt</a> </li>
+                    <li><a href="/chuyen-muc/ban-cat-gach.aspx"> Bàn cắt gạch</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/bua-cam-tay.aspx" title=" Búa Cầm Tay"> Búa Cầm Tay</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/bua-cao-su.aspx"> Búa Cao Su</a> </li>
+                    <li><a href="/chuyen-muc/bua-nhua.aspx"> Búa Nhựa</a> </li>
+                    <li><a href="/chuyen-muc/bua-dau-tron.aspx"> Búa Đầu Tròn</a> </li>
+                    <li><a href="/chuyen-muc/bua-go.aspx"> Búa Gò</a> </li>
+                    <li><a href="/chuyen-muc/bua-nho-dinh.aspx"> Búa Nhổ Đinh</a> </li>
+                    <li><a href="/chuyen-muc/bua-dau-vuong.aspx"> Búa đầu vuông</a> </li>
+                    <li><a href="/chuyen-muc/bua-dau-luc-giac.aspx"> Búa đầu lục giác</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/can-bong-lan.aspx" title=" Cán Bông Lăn"> Cán Bông Lăn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/can-chinh-luc.aspx" title=" Cần chỉnh lực"> Cần chỉnh lực</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/bo-dong-so-va-chu.aspx" title=" Bộ đóng số và chữ"> Bộ đóng số và chữ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/bo-dung-cu.aspx" title=" Bộ dụng cụ"> Bộ dụng cụ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/ong-dieu.aspx" title=" Ống Điếu"> Ống Điếu</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/can-tu-dong.aspx"> Cần Tự Động</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-kep.aspx" title=" Thiết Bị Kẹp"> Thiết Bị Kẹp</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/cao-2-chau.aspx"> Cảo 2 Chấu</a> </li>
+                    <li><a href="/chuyen-muc/cao-3-chau.aspx"> Cảo 3 Chấu</a> </li>
+                    <li><a href="/chuyen-muc/cao-chu-c.aspx"> Cảo Chữ C</a> </li>
+                    <li><a href="/chuyen-muc/cao-chu-f.aspx"> Cảo Chữ F</a> </li>
+                    <li><a href="/chuyen-muc/e-to-thuong.aspx"> Ê Tô Thường</a> </li>
+                    <li><a href="/chuyen-muc/cao-day-xich.aspx"> Cảo dây xích</a> </li>
+                    <li><a href="/chuyen-muc/cao-chu-h.aspx"> Cảo chữ H</a> </li>
+                    <li><a href="/chuyen-muc/cao-thuy-luc.aspx"> Cảo Thủy Lực</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/co-le-mo-let.aspx" title=" Cờ Lê Mỏ Lết"> Cờ Lê Mỏ Lết</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/co-le-don.aspx"> Cờ Lê Đơn</a> </li>
+                    <li><a href="/chuyen-muc/co-le-bo.aspx"> Cờ Lê Bộ</a> </li>
+                    <li><a href="/chuyen-muc/mo-let-thuong.aspx"> Mỏ Lết Thường</a> </li>
+                    <li><a href="/chuyen-muc/mo-let-rang.aspx"> Mỏ Lết Răng</a> </li>
+                    <li><a href="/chuyen-muc/co-le-dong.aspx"> Cờ Lê Đóng</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/tuoc-no-vit.aspx" title=" Tuốc Nơ Vít"> Tuốc Nơ Vít</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/vit-bake.aspx"> Vít Bake</a> </li>
+                    <li><a href="/chuyen-muc/vit-dep.aspx"> Vít Dẹp</a> </li>
+                    <li><a href="/chuyen-muc/tuoc-no-bo.aspx"> Tuốc Nơ Bộ</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/tuyp-cam-tay.aspx" title=" Tuýp Cầm Tay"> Tuýp Cầm Tay</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/tuyp-bo.aspx"> Tuýp Bộ</a> </li>
+                    <li><a href="/chuyen-muc/tuyp-le.aspx"> Tuýp Lẻ</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/luc-giac.aspx" title=" Lục Giác"> Lục Giác</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/luc-giac-don.aspx"> Lục Giác Đơn</a> </li>
+                    <li><a href="/chuyen-muc/luc-giac-bo.aspx"> Lục Giác Bộ</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/dung-cu-dung-dien.aspx" class="t_menu"> Dụng Cụ Dùng Điện</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cha-nham.aspx" title=" Máy Chà Nhám"> Máy Chà Nhám</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/may-cha-nham-bang.aspx"> Máy Chà Nhám Băng</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-rung.aspx"> Máy Chà Nhám Rung</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-dia.aspx"> Máy Chà Nhám Đĩa</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-thuong.aspx"> Máy Chà Nhám Thường</a> </li>
+                    <li><a href="/chuyen-muc/may-cha-nham-ban.aspx"> Máy Chà Nhám Bàn</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-khoan.aspx" title=" Máy Khoan"> Máy Khoan</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/may-khoan-ban.aspx"> Máy Khoan Bàn</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-be-tong.aspx"> Máy Khoan Bê Tông</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-bua.aspx"> Máy Khoan Búa</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-toc-do-cao.aspx"> Máy Khoan Tốc Độ Cao</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-goc.aspx"> Máy Khoan Góc</a> </li>
+                    <li><a href="/chuyen-muc/may-khoan-sat.aspx"> Máy khoan sắt</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cua.aspx" title=" Máy Cưa"> Máy Cưa</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/may-cua-dia.aspx"> Máy Cưa Đĩa</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-kiem.aspx"> Máy Cưa Kiếm</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-long.aspx"> Máy Cưa Lọng</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-xich-dien.aspx"> Máy Cưa Xích Điện</a> </li>
+                    <li><a href="/chuyen-muc/may-cua-ban.aspx"> Máy cưa bàn</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cat.aspx" title=" Máy Cắt"> Máy Cắt</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/may-cat-gach.aspx"> Máy Cắt Gạch</a> </li>
+                    <li><a href="/chuyen-muc/may-cat-sat.aspx"> Máy Cắt Sắt</a> </li>
+                    <li><a href="/chuyen-muc/may-cat-goc-da-nang.aspx"> Máy Cắt Góc Đa Năng</a> </li>
+                    <li><a href="/chuyen-muc/may-cat-xop.aspx"> Máy Cắt Xốp</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-mai.aspx" title=" Máy Mài"> Máy Mài</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/may-mai-ban.aspx"> Máy Mài Bàn</a> </li>
+                    <li><a href="/chuyen-muc/may-mai-goc.aspx"> Máy Mài Góc</a> </li>
+                    <li><a href="/chuyen-muc/may-mai-khuon.aspx"> Máy Mài Khuôn</a> </li>
+                    <li><a href="/chuyen-muc/may-mai-thang.aspx"> Máy Mài Thẳng</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-phay.aspx" title=" Máy Phay"> Máy Phay</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-van-oc.aspx" title=" Máy Vặn Ốc"> Máy Vặn Ốc</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-van-vit.aspx" title=" Máy Vặn Vít"> Máy Vặn Vít</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-thoi-hoi-nong.aspx" title=" Máy Thổi Hơi Nóng"> Máy Thổi Hơi Nóng</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-ban-keo.aspx" title=" Máy Bắn Keo"> Máy Bắn Keo</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-xit-rua.aspx" title=" Máy Xịt Rửa"> Máy Xịt Rửa</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/mo-han.aspx" title=" Mỏ hàn"> Mỏ hàn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-tien.aspx" title=" Máy tiện"> Máy tiện</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/motor.aspx" title=" Motor"> Motor</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cat-co-cam-tay.aspx" title=" Máy Cắt Cỏ Cầm Tay"> Máy Cắt Cỏ Cầm Tay</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/dung-cu-da-nang.aspx" title=" Dụng Cụ Đa Năng"> Dụng Cụ Đa Năng</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-hut-bui.aspx" title=" Máy hút bụi"> Máy hút bụi</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-nen-khi.aspx" title=" Máy nén khí"> Máy nén khí</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-bao.aspx" title=" Máy Bào"> Máy Bào</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-danh-bong.aspx" title=" Máy Đánh Bóng"> Máy Đánh Bóng</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-duc-be-tong.aspx" title=" Máy Đục Bê Tông"> Máy Đục Bê Tông</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/thiet-bi-nganh-han.aspx" class="t_menu"> Thiết Bị Ngành Hàn</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-han-que.aspx" title=" Máy Hàn Que"> Máy Hàn Que</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-han-mig.aspx" title=" Máy Hàn MIG"> Máy Hàn MIG</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-han-tig.aspx" title=" Máy Hàn TIG"> Máy Hàn TIG</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-bien-the-han.aspx" title=" Máy Biến Thế Hàn"> Máy Biến Thế Hàn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-han-cat.aspx" title=" Máy Hàn Cắt"> Máy Hàn Cắt</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-bam-han.aspx" title=" Máy Bấm Hàn"> Máy Bấm Hàn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/que-han.aspx" title=" Que Hàn"> Que Hàn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/kem-han.aspx" title=" Kềm Hàn"> Kềm Hàn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/kinh-han.aspx" title=" Kình Hàn"> Kình Hàn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/dung-cu-dung-xang.aspx" class="t_menu"> Dụng Cụ Dùng Xăng</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cua-xich.aspx" title=" Máy Cưa Xích"> Máy Cưa Xích</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cat-be-tong.aspx" title=" Máy Cắt Bê Tông"> Máy Cắt Bê Tông</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-tia-hang-rao.aspx" title=" Máy Tỉa Hàng Rào"> Máy Tỉa Hàng Rào</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cat-co-chay-xang.aspx" title=" Máy Cắt Cỏ Chạy Xăng"> Máy Cắt Cỏ Chạy Xăng</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-chay-xang-khac.aspx" title=" Máy Chạy Xăng Khác"> Máy Chạy Xăng Khác</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/dung-cu-dung-pin.aspx" class="t_menu"> Dụng Cụ Dùng Pin</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-khoan-pin.aspx" title=" Máy khoan pin"> Máy khoan pin</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-van-vit-pin.aspx" title=" Máy Vặn Vít Pin"> Máy Vặn Vít Pin</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cat-co-chay-pin.aspx" title=" Máy Cắt Cỏ Chạy Pin"> Máy Cắt Cỏ Chạy Pin</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/dung-cu-khac.aspx" title=" Dụng cụ khác"> Dụng cụ khác</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/dung-cu-do-chinh-xac.aspx" class="t_menu"> Dụng Cụ Đo Chính Xác</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-cam-tay.aspx" title=" Thước Cầm Tay"> Thước Cầm Tay</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/thuoc-cuon.aspx"> Thước Cuộn</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-do-goc.aspx"> Thước Đo Góc</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-thang-xep.aspx"> Thước Thằng Xếp</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-vuong.aspx"> Thước Vuông</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/dung-cu-so.aspx" title=" Dụng Cụ So"> Dụng Cụ So</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/dong-ho-so.aspx"> Đồng Hồ So</a> </li>
+                    <li><a href="/chuyen-muc/khoi-v-chuan.aspx"> Khối V Chuẩn</a> </li>
+                    <li><a href="/chuyen-muc/ban-ra-chuan.aspx"> Bàn Rà Chuẩn</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-kep-caliper.aspx" title=" Thước Kẹp Caliper"> Thước Kẹp Caliper</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/thuoc-kep-dien-tu.aspx"> Thước Kẹp Điện Tử</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-kep-dong-ho.aspx"> Thước Kẹp Đồng Hồ</a> </li>
+                    <li><a href="/chuyen-muc/thuoc-kep-co-khi.aspx"> Thước Kẹp Cơ Khí</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-panme.aspx" title=" Thước Panme"> Thước Panme</a> </p>
+                      <ul>
+                    <li><a href="/chuyen-muc/panme-do-ngoai-co.aspx"> Panme Đo Ngoài Cơ</a> </li>
+                    <li><a href="/chuyen-muc/panme-do-trong.aspx"> Panme Đo Trong</a> </li>
+                    <li><a href="/chuyen-muc/panme-do-ngoai-dien-tu.aspx"> Panme Đo Ngoài Điện Tử</a> </li>
+                    <li><a href="/chuyen-muc/panme-dong-ho.aspx"> Panme Đồng Hồ</a> </li>
+                  </ul>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-thuy.aspx" title=" Thước Thủy"> Thước Thủy</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-do-lo.aspx" title=" Thước Đo Lỗ"> Thước Đo Lỗ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-do-do-sau.aspx" title=" Thước Đo Độ Sâu"> Thước Đo Độ Sâu</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-do-do-day.aspx" title=" Thước Đo Độ Dày"> Thước Đo Độ Dày</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-do-do-cao.aspx" title=" Thước Đo Độ Cao"> Thước Đo Độ Cao</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-do-do-am.aspx" title=" Thiết Bị Đo Độ Ẩm"> Thiết Bị Đo Độ Ẩm</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-do-nhiet-do.aspx" title=" Thiết Bị Đo Nhiệt Độ"> Thiết Bị Đo Nhiệt Độ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/do-khoang-cach.aspx" title=" Đo khoảng Cách"> Đo khoảng Cách</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-do-kim-loai.aspx" title=" Thiết Bị Dò Kim Loại"> Thiết Bị Dò Kim Loại</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-can-bang-laser.aspx" title=" Thiết Bị Cân Bằng Laser"> Thiết Bị Cân Bằng Laser</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/duong-do-ban-kinh.aspx" title=" Dưỡng Đo Bán Kính"> Dưỡng Đo Bán Kính</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-bat-muc.aspx" title=" Thiết Bị Bật Mực"> Thiết Bị Bật Mực</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/duong-do-ren.aspx" title=" Dượng Đo Ren"> Dượng Đo Ren</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/chan-de-gia-do.aspx" title=" Chân Đế Giá Đỡ"> Chân Đế Giá Đỡ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thuoc-lan-duong.aspx" title=" Thước Lăn Đường"> Thước Lăn Đường</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+              <li class="m_li"><a href="/chuyen-muc/dung-cu-dung-khi-nen.aspx" class="t_menu"> Dụng Cụ Dùng Khí Nén</a>
+            <div style="left: 0px; display: none;" class="list_categories">
+                  <div class="subcatwrapper">
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-bom-mo.aspx" title=" Thiết Bị Bơm Mỡ"> Thiết Bị Bơm Mỡ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-go-ri.aspx" title=" Thiết Bị Gõ Rĩ"> Thiết Bị Gõ Rĩ</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/day-hoi-tu-rut.aspx" title=" Dây Hơi Tự Rút"> Dây Hơi Tự Rút</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/sung-rut-rive.aspx" title=" Súng Rút Rive"> Súng Rút Rive</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cha-nham-hoi.aspx" title=" Máy Chà Nhám Hơi"> Máy Chà Nhám Hơi</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-danh-bong-hoi.aspx" title=" Máy Đánh Bóng Hơi"> Máy Đánh Bóng Hơi</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-khoan-hoi.aspx" title=" Máy Khoan Hơi"> Máy Khoan Hơi</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-mai-hoi.aspx" title=" Máy Mài Hơi"> Máy Mài Hơi</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-van-oc-van-vit.aspx" title=" Máy Vặn Ốc Vặn Vít"> Máy Vặn Ốc Vặn Vít</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/thiet-bi-phun-son.aspx" title=" Thiết Bị Phun Sơn"> Thiết Bị Phun Sơn</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-ban-dinh.aspx" title=" Máy Bắn Đinh"> Máy Bắn Đinh</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/dung-cu-tuoi-cay.aspx" title=" Dụng cụ tưới cây"> Dụng cụ tưới cây</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+                <div class="pc_menu">
+                      <p> <a href="/chuyen-muc/may-cua-kiem-khi.aspx" title=" Máy Cưa Kiếm Khí"> Máy Cưa Kiếm Khí</a> </p>
+                      <div class="cf"> </div>
+                    </div>
+              </div>
+                </div>
+          </li>
+            </ul>
+      </div>
+        </div>
+    <!--end Main Menu-->
+    <div class="chinhsach">
+          <div class="info_item" style="width:20%"><span class="  betsell_icon"></span><b>GIÁ TỐT NHẤT</b> </div>
+          <div class="info_item" style="width:30%"><span class="info_ico payment_icon"></span><b>THANH TOÁN 
+            KHI NHẬN HÀNG</b> </div>
+          <div class="info_item" style="width:30%"><span class="info_ico return_icon"></span><b>GIAO HÀNG 
+            TOÀN QUỐC</b> </div>
+          <div class="info_item" style="width:20%"><span class="info_ico delivery_icon"></span><b>7 NGÀY 
+            TRẢ HÀNG</b> </div>
+        </div>
+ 
+  </div>
+      <!--End Top Main --> 
+      <!--Main Content-->
+      <div id="main" class="cf"> 
+      
+     <!-- ================ .::Noi dung::. ================ -->
+ 
+ <link rel="Stylesheet" type="text/css" href="Styles/process_payment.css" />
+    <div class="progress-bar current-step-3">
+      <ul>
+        <li id="step1"><span class="number icon_step1">1</span><span class="title_step">Đăng nhập</span></li>
+        <li id="step2"><span class="number icon_step2">2</span><span class="title_step">Thông tin giao hàng</span></li>
+        <li class="current" id="step3"><span class="number icon_step3">3</span><span class="title_step">Cách thức thanh toán</span></li>
+      </ul>
+    </div>
+    <!--Step 3-->
+    <div class="box_payment_left process_payment fl">
+      <div class="tt_payment_step">Cách thức thanh toán</div>
+      <div class="box_payment_ct">
+        <!--Tab Method Payment-->
+        <script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+/* <![CDATA[ */
+( function( $ ) {
+   $( 'a[href="#"]' ).click( function(e) {
+      e.preventDefault();
+   } );
+} )( jQuery );
+/* ]]> */
+});//]]>  
+
+</script>
+        <div id="tabs-container">
+          <ul class="tabs-menu tabs_payment fl">
+            <li class="current"><a href="#tab-1" title="Thanh toán bằng tiền mặt">Thanh toán bằng tiền mặt</a></li>
+            <li><a href="#tab-2" title="Internet Banking">Internet Banking</a></li>
+          </ul>
+          <div class="tab tab_payment_ct fr">
+            <div id="tab-1" class="tab-content">
+              <!--Method Payment 1-->
+              <div class="cod_page">
+                <div class="payment_wrap">
+                  <div class="row"> <span class="cod_info">Bạn sẽ thanh toán bằng tiền mặt khi nhận hàng tại nhà</span> </div>
+                  <div class="row cod_aditional_info"> <u>Lưu ý:</u> Giao hàng nhanh 1 - 2 ngày ( tùy khu vực ). Miễn phí giao hàng nội
+                    thành HCM. Phụ phí hàng cồng kềnh có thể phát sinh, bạn vui lòng xem chi tiết bên
+                    cạnh. </div>
+                </div>
+              </div>
+              <div class="payment_page">
+                <div class="billaddress_wrap">
+                  <div class="row">
+                    <div class="payment_radio_check">
+                      <input type="hidden" name="ThreeStepBillingAddressForm[isSameShipping]" value="0"
+                                    id="ytThreeStepBillingAddressForm_isSameShipping">
+                      <input type="checkbox" checked="checked" value="1" id="ThreeStepBillingAddressForm_isSameShipping"
+                                    name="ThreeStepBillingAddressForm[isSameShipping]" onclick="$('div#billing_address_form').toggleClass('hidden');">
+                    </div>
+                    <div class="payment_form_title">
+                      <label for="ThreeStepBillingAddressForm_isSameShipping" style="display: inline;"> Địa chỉ thanh toán cũng là địa chỉ giao hàng</label>
+                    </div>
+                  </div>
+                  <div class="clear"> </div>
+                </div>
+                <div class="redinvoice_wrap">
+                  <div class="row">
+                    <div class="payment_radio_check">
+                      <input type="hidden" name="ThreeStepTaxInfoForm[tax_required]" value="0" id="ytThreeStepTaxInfoForm_tax_required">
+                      <input type="checkbox" value="1" id="ThreeStepTaxInfoForm_tax_required" name="ThreeStepTaxInfoForm[tax_required]"
+                                    onclick="$(&quot;div#bill_info&quot;).toggleClass(&quot;hidden&quot;);" disabled="disabled">
+                    </div>
+                    <div class="payment_form_title">
+                      <label for="ThreeStepTaxInfoForm_tax_required" style="display: inline;"> Thông tin xuất hóa đơn (nếu cần thiết)</label>
+                    </div>
+                  </div>
+                  <div class="pay-form hidden" id="bill_info">
+                    <div class="row"> <span class="text">Tên công ty</span>
+                      <p class="input-text">
+                        <input type="text" name="ctl00$ContentPlaceHolder1$txtFullName_HCM" id="ContentPlaceHolder1_txtFullName_HCM">
+                        <span class="box-error"><span class="tlp-error">Vui lòng nhập Tên công ty</span> </span> </p>
+                    </div>
+                    <div class="row"> <span class="text">Địa chỉ<span class="red">*</span></span>
+                      <p class="input-text">
+                        <input type="text" name="ctl00$ContentPlaceHolder1$txtPhone_HCM" id="ContentPlaceHolder1_txtPhone_HCM">
+                        <span class="box-error"><span class="tlp-error">Vui lòng nhập Địa chỉ</span> </span> </p>
+                    </div>
+                    <div class="row"> <span class="text">Mã số thuế</span>
+                      <p class="input-text">
+                        <input type="text" name="ctl00$ContentPlaceHolder1$txtemail" id="ContentPlaceHolder1_txtemail">
+                        <span class="box-error"><span class="tlp-error">Vui lòng nhập Mã số thuế</span> </span> </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="place_order_default">
+                  <div class="row"> <a id="ContentPlaceHolder1_ctl00_Lbpayment1" class="btn_web btn_account" href="quytrinh_B4.html">Thanh toán</a> </div>
+                  <div class="row">
+                    <div class="cod_inform"> Bạn sẽ được thông báo về tình trạng đơn hàng qua email và tin nhắn. </div>
+                  </div>
+                </div>
+                <div class="newsletter">
+                  <div class="row">
+                    <div class="payment_radio_check">
+                      <input id="ContentPlaceHolder1_ctl00_Check_mail" type="checkbox" name="ctl00$ContentPlaceHolder1$ctl00$Check_mail" checked="checked" />
+                    </div>
+                    <div class="payment_form_title">
+                      <label for="ThreeStepNewsletterSignupForm_newsletter_signup"> Đăng ký nhận thông tin từ Sieumuanhanh để biết các khuyến mãi hấp dẫn*</label>
+                    </div>
+                  </div>
+                  <div class="row"> <br />
+                    * Tôi đã đọc và đồng ý với các điều khoản sử dụng của HappyBuy </div>
+                </div>
+              </div>
+              <!--end Method Payment 1-->
+            </div>
+            <div id="tab-2" class="tab-content">
+              <!--Method Payment 2-->
+              <div class="payment_wrap">
+                <p> <strong>KHÁCH HÀNG THANH TOÁN CHUYỂN KHOẢN VÀO TÀI KHOẢN ATM</strong></p>
+                <p> <strong>Số tài khoản ngân hàng của Siêu Mua Nhanh - TP.HCM</strong></p>
+                <p> </p>
+                <hr>
+                <p> + <strong>Ngân Hàng Ngoại Thương Việt Nam ( VCB)</strong></p>
+                <p> <strong> <img title="Tài khoản Vietcombank" src="http://sieumuanhanh.com/data/news/1182/logo-vietcombank-moi-nhat.jpg"
+                                alt="logo-vietcombank-moi-nhat.jpg" height="73" width="200"></strong></p>
+                <p> </p>
+                <p> </p>
+                <p> <strong>Số tài khoản VNĐ: 0501000040844</strong></p>
+                <p> <strong>Chủ tài khoản: Nguyễn Thanh Tuấn</strong></p>
+                <p> <strong>Ngân hàng Ngoại Thương Việt Nam Vietcombank – CN Vĩnh Lộc HCM</strong></p>
+                <p> </p>
+                <hr>
+                <p> +<strong>Ngân hàng Đông Á</strong></p>
+                <p> <strong> <img title="Tài khoản DongA Bank" src="http://sieumuanhanh.com/data/news/1182/DONGA.jpg"
+                                alt="DONGA.jpg" height="104" width="191"></strong></p>
+                <p> <strong>Số tài khoản VNĐ: 0104010729</strong></p>
+                <p> <strong>Chủ tài khoản: Nguyễn Thanh Tuấn</strong></p>
+                <p> <strong>Ngân hàng Đông Á - CN Gò Vấp.</strong></p>
+                <p> </p>
+                <p> +<strong>Ngân hàng TechcomBank<br />
+                  </strong> </p>
+                <p> </p>
+                <p> <strong> <img src="http://sieumuanhanh.com/data/news/1182/SIEUMUANHANH_TECHCOMBANK.jpg" alt="SIEUMUANHANH_TECHCOMBANK.jpg"
+                                height="70" width="222"></strong></p>
+                <p> </p>
+                <p> <strong>Số tài khoản VNĐ: 19027671280012</strong></p>
+                <p> </p>
+                <p> <strong>Chủ tài khoản: Nguyễn Thanh Tuấn</strong></p>
+                <p> </p>
+                <p> <strong>Ngân hàng TechcomBank - CN Tân Bình</strong></p>
+              </div>
+              <div class="row"> <a href="quytrinh_B4.html" class="btn_web btn_account" id="ContentPlaceHolder1_Payment_HCM">Thanh toán</a> </div>
+              <!--end Method Payment 2-->
+            </div>
+          </div>
+        </div>
+        <!--End Tab Method Payment-->
+      </div>
+    </div>
+    <!--Step 3-->
+    <!--Mini Cart-->
+    <div id="mini_cart" class="fr">
+      <div class="box_payment_ct">
+        <div class="tt_payment_step"> Thông tin đơn hàng </div>
+        <div class="order_sum">
+          <table width="100%">
+            <tbody>
+              <tr>
+                <th class="left_align">Sản phẩm</th>
+                <th class="qty">Số lượng</th>
+                <th align="center">Giá</th>
+              </tr>
+            </tbody>
+          </table>
+          <div class="order_scrollable">
+            <table class="order_scroll_table" width="100%">
+              <tbody>
+                <tr>
+                  <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                  <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                      <option value="1" selected="selected">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select></td>
+                  <td class="right_align">208.000 VNĐ</td>
+                </tr>
+                <tr>
+                  <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                  <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                      <option value="1" selected="selected">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select></td>
+                  <td class="right_align">208.000 VNĐ</td>
+                </tr>
+                <tr>
+                  <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                  <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                      <option value="1" selected="selected">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select></td>
+                  <td class="right_align">208.000 VNĐ</td>
+                </tr>
+                <tr>
+                  <td class="left_align">5C FCP066M - RE38 - Áo Polo (Đỏ)</td>
+                  <td class="qty"><select style="width:50px" id="ContentPlaceHolder1_ctl00_Cart_end1_GrdGiohang_Drquan_0" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan\',\'\')', 0)" name="ctl00$ContentPlaceHolder1$ctl00$Cart_end1$GrdGiohang$ctl00$Drquan">
+                      <option value="1" selected="selected">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select></td>
+                  <td class="right_align">208.000 VNĐ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="total_item" width="100%">
+            <tbody>
+              <tr>
+                <td class="subtotal">Tổng tiền</td>
+                <td class="right_align" colspan="2">208.000 VNĐ</td>
+              </tr>
+              <tr class="total_item">
+                <td class="free_shipping">Phí vận chuyển</td>
+                <td class="total right_align" colspan="2">10.000 VNĐ</td>
+              </tr>
+              <tr class="total_item">
+                <td class="total">Thành tiền</td>
+                <td class="total right_align" colspan="2">218.000 VNĐ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p><i>Miễn phí giao hàng cho đơn hàng <b style="color: #FF0000">1.000.000 VNĐ</b> trở lên</i></p>
+    </div>
+    <!--end Mini Cart-->
+     <!-- ================ .::End noi dung::. ================ -->
+     
+ 	<!--Tab Products 02-->
+    <div class="box">
+          <div id="tabs-container">
+        <div class="tabs-menu"> <span>Sản phẩm đã xem</span> </div>
+        <div class="tab">
+              <div id="tab-1" class="tab-content"> 
+            <!--Slide Products-->
+            <div class="sl_products">
+                  <ul id="views_products" class="jcarousel-skin-tango carousel_product">
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> </a><a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx" class="img_product"><img alt="Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K" src="http://ketnoitructuyen.com/data/news/2196/bo-may-khoan-42-chi-tiet-black-decker-hd560k.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K</a></h3>
+                    <div class="price"> Giá: <b>1.099.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/200mm-thuoc-cap-dien-tu-mitutoyo-500-197-20.aspx"> </a><a href="/san-pham/200mm-thuoc-cap-dien-tu-mitutoyo-500-197-20.aspx" class="img_product"><img alt="200mm Thước cặp điện tử Mitutoyo 500-197-20" src="http://ketnoitructuyen.com/data/news/2119/200mm-thuoc-cap-dien-tu-mitutoyo-500-197-20.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/200mm-thuoc-cap-dien-tu-mitutoyo-500-197-20.aspx"> 200mm Thước cặp điện tử Mitutoyo 500-197-20</a></h3>
+                    <div class="price"> Giá: <b>2.887.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/300mm-thuoc-cap-co-khi-mitutoyo-530-119.aspx"> </a><a href="/san-pham/300mm-thuoc-cap-co-khi-mitutoyo-530-119.aspx" class="img_product"><img alt="300mm Thước cặp cơ khí Mitutoyo 530-119" src="http://ketnoitructuyen.com/data/news/2107/300mm-thuoc-cap-co-khi-mitutoyo-530-119.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/300mm-thuoc-cap-co-khi-mitutoyo-530-119.aspx"> 300mm Thước cặp cơ khí Mitutoyo 530-119</a></h3>
+                    <div class="price"> Giá: <b>2.145.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/palang-xich-keo-tay-0-8-tan-daesan-d-0-8.aspx"> </a><a href="/san-pham/palang-xich-keo-tay-0-8-tan-daesan-d-0-8.aspx" class="img_product"><img alt="Palang xích kéo tay 0.8 tấn Daesan D 0.8" src="http://ketnoitructuyen.com/data/news/1646/palang-xich-keo-tay-0-8-tan-daesan-d-0-8.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/palang-xich-keo-tay-0-8-tan-daesan-d-0-8.aspx"> Palang xích kéo tay 0.8 tấn Daesan D 0.8</a></h3>
+                    <div class="price"> Giá: <b>2.286.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.aspx"> </a><a href="/san-pham/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.aspx" class="img_product"><img alt="Palang xích kéo tay 3.0 tấn Daesan DSN 3.0" src="http://ketnoitructuyen.com/data/news/1642/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.aspx"> Palang xích kéo tay 3.0 tấn Daesan DSN 3.0</a></h3>
+                    <div class="price"> Giá: <b>3.820.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/3-7m-thang-nhom-gap-pal-b6-125.aspx"> </a><a href="/san-pham/3-7m-thang-nhom-gap-pal-b6-125.aspx" class="img_product"><img alt="3.7m Thang nhôm gấp PAL B6-125" src="http://ketnoitructuyen.com/data/news/1505/3-7m-thang-nhom-gap-pal-b6-125.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/3-7m-thang-nhom-gap-pal-b6-125.aspx"> 3.7m Thang nhôm gấp PAL B6-125</a></h3>
+                    <div class="price"> Giá: <b>2.599.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.aspx"> </a><a href="/san-pham/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.aspx" class="img_product"><img alt="1.5-10mm Bộ lục giác 9 cây Stanley 69-256" src="http://ketnoitructuyen.com/data/news/1504/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.aspx"> 1.5-10mm Bộ lục giác 9 cây Stanley 69-256</a></h3>
+                    <div class="price"> Giá: <b>205.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/6-eto-stanley-81-603.aspx"> </a><a href="/san-pham/6-eto-stanley-81-603.aspx" class="img_product"><img alt="6&quot; Êtô Stanley 81-603" src="http://ketnoitructuyen.com/data/news/1503/6-eto-stanley-81-603.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/6-eto-stanley-81-603.aspx"> 6" Êtô Stanley 81-603</a></h3>
+                    <div class="price"> Giá: <b>2.190.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> </a><a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx" class="img_product"><img alt="Thang nhôm trượt PoongSan 3060-2" src="http://ketnoitructuyen.com/data/news/1485/thang-nhom-truot-poongsan-3060-2.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> Thang nhôm trượt PoongSan 3060-2</a></h3>
+                    <div class="price"> Giá: <b>3.320.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-46" src="http://ketnoitructuyen.com/data/news/1476/thang-nhom-rut-chu-a-poongsan-ps-46.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"><a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> Thang nhôm rút chữ A PoongSan PS-46</a></h3>
+                    <div class="price"> Giá: <b>3.530.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-44" src="http://ketnoitructuyen.com/data/news/1474/thang-nhom-rut-chu-a-poongsan-ps-44.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> Thang nhôm rút chữ A PoongSan PS-44</a></h3>
+                    <div class="price"> Giá: <b>2.450.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki 3490" src="http://ketnoitructuyen.com/data/news/1409/do-dien-tro-cach-dien-hioki-3490.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                        <a class="btnMuaNgay">Mua ngay</a> </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                    <div class="price"> Giá: <b>Liên hệ</b></div>
+                  </div>
+                      <!--End Product--> 
+                    </li>
+              </ul>
+                </div>
+            <!--end Slide Products--> 
+          </div>
+              <div id="tab-2" class="tab-content"> 
+            <!--Slide Products-->
+            <div class="sl_products">
+                  <ul id="viewed_products" class="jcarousel-skin-tango carousel_product">
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.aspx"> </a><a href="/san-pham/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.aspx" class="img_product"><img alt="Palang xích kéo tay 3.0 tấn Daesan DSN 3.0" src="http://ketnoitructuyen.com/data/news/1642/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/palang-xich-keo-tay-3-0-tan-daesan-dsn-3-0.aspx"> Palang xích kéo tay 3.0 tấn Daesan DSN 3.0</a></h3>
+                    <div class="price"> Giá: <b>3.820.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/3-7m-thang-nhom-gap-pal-b6-125.aspx"> </a><a href="/san-pham/3-7m-thang-nhom-gap-pal-b6-125.aspx" class="img_product"><img alt="3.7m Thang nhôm gấp PAL B6-125" src="http://ketnoitructuyen.com/data/news/1505/3-7m-thang-nhom-gap-pal-b6-125.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/3-7m-thang-nhom-gap-pal-b6-125.aspx"> 3.7m Thang nhôm gấp PAL B6-125</a></h3>
+                    <div class="price"> Giá: <b>2.599.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.aspx"> </a><a href="/san-pham/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.aspx" class="img_product"><img alt="1.5-10mm Bộ lục giác 9 cây Stanley 69-256" src="http://ketnoitructuyen.com/data/news/1504/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/1-5-10mm-bo-luc-giac-9-cay-stanley-69-256.aspx"> 1.5-10mm Bộ lục giác 9 cây Stanley 69-256</a></h3>
+                    <div class="price"> Giá: <b>205.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/6-eto-stanley-81-603.aspx"> </a><a href="/san-pham/6-eto-stanley-81-603.aspx" class="img_product"><img alt="6&quot; Êtô Stanley 81-603" src="http://ketnoitructuyen.com/data/news/1503/6-eto-stanley-81-603.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/6-eto-stanley-81-603.aspx"> 6" Êtô Stanley 81-603</a></h3>
+                    <div class="price"> Giá: <b>2.190.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> </a><a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx" class="img_product"><img alt="Thang nhôm trượt PoongSan 3060-2" src="http://ketnoitructuyen.com/data/news/1485/thang-nhom-truot-poongsan-3060-2.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> Thang nhôm trượt PoongSan 3060-2</a></h3>
+                    <div class="price"> Giá: <b>3.320.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-46" src="http://ketnoitructuyen.com/data/news/1476/thang-nhom-rut-chu-a-poongsan-ps-46.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"><a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> Thang nhôm rút chữ A PoongSan PS-46</a></h3>
+                    <div class="price"> Giá: <b>3.530.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-44" src="http://ketnoitructuyen.com/data/news/1474/thang-nhom-rut-chu-a-poongsan-ps-44.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> Thang nhôm rút chữ A PoongSan PS-44</a></h3>
+                    <div class="price"> Giá: <b>2.450.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx" class="img_product"><img alt="Thang nhôm rút chữ A NIKAWA NK-50AI" src="http://ketnoitructuyen.com/data/news/1469/thang-nhom-rut-chu-a-nikawa-nk-50ai.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> Thang nhôm rút chữ A NIKAWA NK-50AI</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> Thang nhôm rút chữ A NIKAWA NK-50AI</a></h3>
+                    <div class="price"> Giá: <b>3.950.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> </a><a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx" class="img_product"><img alt="Thang nhôm rút NIKAWA NK-38" src="http://ketnoitructuyen.com/data/news/1466/thang-nhom-rut-nikawa-nk-38.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                    <div class="price"> Giá: <b>2.550.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki IR4056-20" src="http://ketnoitructuyen.com/data/news/1412/do-dien-tro-cach-dien-hioki-ir4056-20.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                    <div class="price"> Giá: <b>3.150.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki 3490" src="http://ketnoitructuyen.com/data/news/1409/do-dien-tro-cach-dien-hioki-3490.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                    <div class="price"> Giá: <b>Liên hệ</b></div>
+                  </div>
+                      <!--End Product--> 
+                    </li>
+              </ul>
+                </div>
+            <!--end Slide Products--> 
+          </div>
+              <div id="tab-3" class="tab-content"> 
+            <!--Slide Products-->
+            <div class="sl_products">
+                  <ul id="liked_products" class="jcarousel-skin-tango carousel_product">
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> </a><a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx" class="img_product"><img alt="Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K" src="http://ketnoitructuyen.com/data/news/2196/bo-may-khoan-42-chi-tiet-black-decker-hd560k.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K</a></h3>
+                    <div class="price"> Giá: <b>1.099.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> </a><a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx" class="img_product"><img alt="Thang nhôm trượt PoongSan 3060-2" src="http://ketnoitructuyen.com/data/news/1485/thang-nhom-truot-poongsan-3060-2.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> Thang nhôm trượt PoongSan 3060-2</a></h3>
+                    <div class="price"> Giá: <b>3.320.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-46" src="http://ketnoitructuyen.com/data/news/1476/thang-nhom-rut-chu-a-poongsan-ps-46.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"><a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> Thang nhôm rút chữ A PoongSan PS-46</a></h3>
+                    <div class="price"> Giá: <b>3.530.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-44" src="http://ketnoitructuyen.com/data/news/1474/thang-nhom-rut-chu-a-poongsan-ps-44.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> Thang nhôm rút chữ A PoongSan PS-44</a></h3>
+                    <div class="price"> Giá: <b>2.450.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx" class="img_product"><img alt="Thang nhôm rút chữ A NIKAWA NK-50AI" src="http://ketnoitructuyen.com/data/news/1469/thang-nhom-rut-chu-a-nikawa-nk-50ai.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> Thang nhôm rút chữ A NIKAWA NK-50AI</a></h3>
+                        <div class="nolist cf"> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> Thang nhôm rút chữ A NIKAWA NK-50AI</a></h3>
+                    <div class="price"> Giá: <b>3.950.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> </a><a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx" class="img_product"><img alt="Thang nhôm rút NIKAWA NK-38" src="http://ketnoitructuyen.com/data/news/1466/thang-nhom-rut-nikawa-nk-38.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                    <div class="price"> Giá: <b>2.550.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki IR4056-20" src="http://ketnoitructuyen.com/data/news/1412/do-dien-tro-cach-dien-hioki-ir4056-20.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                    <div class="price"> Giá: <b>3.150.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki 3490" src="http://ketnoitructuyen.com/data/news/1409/do-dien-tro-cach-dien-hioki-3490.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                    <div class="price"> Giá: <b>Liên hệ</b></div>
+                  </div>
+                      <!--End Product--> 
+                    </li>
+              </ul>
+                </div>
+            <!--end Slide Products--> 
+          </div>
+              <div id="tab-4" class="tab-content"> 
+            <!--Slide Products-->
+            <div class="sl_products">
+                  <ul id="buyed_products" class="jcarousel-skin-tango carousel_product">
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> </a><a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx" class="img_product"><img alt="Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K" src="http://ketnoitructuyen.com/data/news/2196/bo-may-khoan-42-chi-tiet-black-decker-hd560k.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K</a></h3>
+                    <div class="price"> Giá: <b>1.099.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> </a><a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx" class="img_product"><img alt="Thang nhôm trượt PoongSan 3060-2" src="http://ketnoitructuyen.com/data/news/1485/thang-nhom-truot-poongsan-3060-2.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> Thang nhôm trượt PoongSan 3060-2</a></h3>
+                    <div class="price"> Giá: <b>3.320.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-46" src="http://ketnoitructuyen.com/data/news/1476/thang-nhom-rut-chu-a-poongsan-ps-46.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-46.aspx"> Thang nhôm rút chữ A PoongSan PS-46</a></h3>
+                    <div class="price"> Giá: <b>3.530.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx" class="img_product"><img alt="Thang nhôm rút chữ A PoongSan PS-44" src="http://ketnoitructuyen.com/data/news/1474/thang-nhom-rut-chu-a-poongsan-ps-44.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-poongsan-ps-44.aspx"> Thang nhôm rút chữ A PoongSan PS-44</a></h3>
+                    <div class="price"> Giá: <b>2.450.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> </a><a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx" class="img_product"><img alt="Thang nhôm rút chữ A NIKAWA NK-50AI" src="http://ketnoitructuyen.com/data/news/1469/thang-nhom-rut-chu-a-nikawa-nk-50ai.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> Thang nhôm rút chữ A NIKAWA NK-50AI</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-chu-a-nikawa-nk-50ai.aspx"> Thang nhôm rút chữ A NIKAWA NK-50AI</a></h3>
+                    <div class="price"> Giá: <b>3.950.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> </a><a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx" class="img_product"><img alt="Thang nhôm rút NIKAWA NK-38" src="http://ketnoitructuyen.com/data/news/1466/thang-nhom-rut-nikawa-nk-38.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                    <div class="price"> Giá: <b>2.550.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki IR4056-20" src="http://ketnoitructuyen.com/data/news/1412/do-dien-tro-cach-dien-hioki-ir4056-20.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                        <div class="nolist cf"> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                    <div class="price"> Giá: <b>3.150.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki 3490" src="http://ketnoitructuyen.com/data/news/1409/do-dien-tro-cach-dien-hioki-3490.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                        <div class="nolist cf">
+                              <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                            </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                    <div class="price"> Giá: <b>Liên hệ</b></div>
+                  </div>
+                      <!--End Product--> 
+                    </li>
+              </ul>
+                </div>
+            <!--end Slide Products--> 
+          </div>
+              <div id="tab-5" class="tab-content"> 
+            <!--Slide Products-->
+            <div class="sl_products">
+                  <ul id="updated_products" class="jcarousel-skin-tango carousel_product">
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> </a><a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx" class="img_product"><img alt="Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K" src="http://ketnoitructuyen.com/data/news/2196/bo-may-khoan-42-chi-tiet-black-decker-hd560k.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/bo-may-khoan-42-chi-tiet-black-decker-hd560k.aspx"> Bộ máy khoan 42 chi tiết Black &amp; Decker HD560K</a></h3>
+                    <div class="price"> Giá: <b>1.099.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> </a><a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx" class="img_product"><img alt="Thang nhôm trượt PoongSan 3060-2" src="http://ketnoitructuyen.com/data/news/1485/thang-nhom-truot-poongsan-3060-2.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf">
+                              <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                            </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-truot-poongsan-3060-2.aspx"> Thang nhôm trượt PoongSan 3060-2</a></h3>
+                    <div class="price"> Giá: <b>3.320.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> </a><a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx" class="img_product"><img alt="Thang nhôm rút NIKAWA NK-38" src="http://ketnoitructuyen.com/data/news/1466/thang-nhom-rut-nikawa-nk-38.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                        <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/thang-nhom-rut-nikawa-nk-38.aspx"> Thang nhôm rút NIKAWA NK-38</a></h3>
+                    <div class="price"> Giá: <b>2.550.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki IR4056-20" src="http://ketnoitructuyen.com/data/news/1412/do-dien-tro-cach-dien-hioki-ir4056-20.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                        <div class="nolist cf">
+                              <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                            </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                    <div class="price"> Giá: <b>3.150.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki 3490" src="http://ketnoitructuyen.com/data/news/1409/do-dien-tro-cach-dien-hioki-3490.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                        <div class="nolist cf">
+                              <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                            </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                    <div class="price"> Giá: <b>Liên hệ</b></div>
+                  </div>
+                      <!--End Product--> 
+                    </li>
+              </ul>
+                </div>
+            <!--end Slide Products--> 
+          </div>
+              <div id="tab-6" class="tab-content"> 
+            <!--Slide Products-->
+            <div class="sl_products">
+                  <ul id="saleoff_products" class="jcarousel-skin-tango carousel_product">
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/6-eto-stanley-81-603.aspx"> </a><a href="/san-pham/6-eto-stanley-81-603.aspx" class="img_product"><img alt="6&quot; Êtô Stanley 81-603" src="http://ketnoitructuyen.com/data/news/1503/6-eto-stanley-81-603.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <div class="nolist cf">
+                              <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                            </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/6-eto-stanley-81-603.aspx"> 6" Êtô Stanley 81-603</a></h3>
+                    <div class="price"> Giá: <b>2.190.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki IR4056-20" src="http://ketnoitructuyen.com/data/news/1412/do-dien-tro-cach-dien-hioki-ir4056-20.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                        <div class="nolist cf"> </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-ir4056-20.aspx"> Đo điện trở cách điện Hioki IR4056-20</a></h3>
+                    <div class="price"> Giá: <b>3.150.000 VNĐ</b></div>
+                  </div>
+                      <!--end Start Product--> 
+                    </li>
+                <li> 
+                      <!--Start Product-->
+                      <div class="product">
+                    <div class="boxgrid"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> </a><a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx" class="img_product"><img alt="Đo điện trở cách điện Hioki 3490" src="http://ketnoitructuyen.com/data/news/1409/do-dien-tro-cach-dien-hioki-3490.jpg" /></a> 
+                          <!--Box Caption-->
+                          <div class="boxcaption trans">
+                        <h3> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                        <div class="nolist cf">
+                              <div class="nolist cf"> <a class="btnMuaNgay">Mua ngay</a> </div>
+                            </div>
+                      </div>
+                          <!--End Box Caption--> 
+                        </div>
+                    <h3 class="product_name"> <a href="/san-pham/do-dien-tro-cach-dien-hioki-3490.aspx"> Đo điện trở cách điện Hioki 3490</a></h3>
+                    <div class="price"> Giá: <b>Liên hệ</b></div>
+                  </div>
+                      <!--End Product--> 
+                    </li>
+              </ul>
+                </div>
+            <!--end Slide Products--> 
+          </div>
+            </div>
+      </div>
+        </div>
+    <!--End Tab Products 02--> 
+    <!--Slide Trade-mark-->
+    <div class="box">
+          <div id="trade_mark">
+        <div class="tabs-menu"><span>QUẢNG CÁO</span></div>
+        <ul id="sl_logo" class="jcarousel-skin-tango">
+              <li> <a href='chuyen-muc/hioki.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/75/logo_01.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/kyoritsu.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/89/kyoritsu.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/nikawa.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/91/nikawa.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/poongsan.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/92/poongsan.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/stanley.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/93/stanley.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/stihl.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/94/STIHL.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/daesan.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/95/DAESAN.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/makita.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/96/MAKITA.jpg' alt='' /></a> </li>
+              <li> <a href='' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/97/maktec.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/mitutoyo.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/98/Mitutoyo.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/black-decker.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/99/black_decker.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/top.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/100/TOP.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/xtend-climb.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/104/XtendClimb.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/metabo.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/105/METABO.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/toptul.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/106/TOPTUL.jpg' alt='' /></a> </li>
+              <li> <a href='chuyen-muc/hong-ky.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/107/hongky.jpg' alt='' /></a> </li>
+              <li><a href='http://www.ketnoitructuyen.com/chuyen-muc/bosch.aspx' target='_parent'><img src='http://ketnoitructuyen.com/data/aditems/108/Bosch.jpg' alt='' /></a> </li>
+            </ul>
+      </div>
+        </div>
+    <!--End Slide Trade-mark--> 
+  </div>
+      <!--End Main Content-->
+      
+      <div id="footer" class="cf"> 
+    <!--Footer Column-->
+    <div id="footer_columns">
+          <ul id="list_col_footer">
+        <!--Column Footer-->
+        <li class="col_foo">
+              <div class="col_F_ct">
+            <h3 class="title_col_footer">Giới thiệu</h3>
+            <ul class="list_menu_footer">
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/faq/">Giới thiệu</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-tra-hang">Tổng quát về công ty</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Cẩm nang mua sắm</a></li>
+                </ul>
+          </div>
+            </li>
+        <!--end Column Footer--> 
+        <!--Column Footer-->
+        <li class="col_foo">
+              <div class="col_F_ct">
+            <h3 class="title_col_footer">Chính sách bán hàng</h3>
+            <ul class="list_menu_footer">
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/faq/">Chính sách bảo mật thông tin</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-tra-hang">Chính sách vận chuyển</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Quy trình giao hàng</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Chính sách đổi trả hàng</a></li>
+                </ul>
+          </div>
+            </li>
+        <!--end Column Footer--> 
+        <!--Column Footer-->
+        <li class="col_foo">
+              <div class="col_F_ct">
+            <h3 class="title_col_footer">Hỗ trợ khách hàng</h3>
+            <ul class="list_menu_footer">
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/faq/">Hướng dẫn mua hàng</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-tra-hang">Hướng dẫn thanh toán</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-tra-hang">Hướng dẫn thanh toán</a></li>
+                  <li><a class="footer_item_link" href="http://www.lazada.vn/huong-dan-bao-hanh">Sơ đồ đường đi</a> </li>
+                </ul>
+          </div>
+            </li>
+        <!--end Column Footer--> 
+        
+        <!--Column Footer-->
+        <li class="col_foo" id="info_footer">
+              <div class="col_F_ct">
+            <p><strong>CHI NHÁNH CÔNG TY TNHH MTV THƯƠNG MẠI TOOLCOM</strong></p>
+            <p>Địa chỉ: 28 Nguyễn Bá Tòng, P 11, Q Tân Bình, TP Hồ Chí Minh</p>
+            <p>MST: 0311904294-001</p>
+            <p>Điện thoại: (08) 3971 8011, (08) 3971 2658, Fax: (08) 3971 2658</p>
+            <p>Hotline: 0907 288 920 ,  090339 7273</p>
+            <p>Email:  @yahoo.com</p>
+          </div>
+            </li>
+        <!--end Column Footer-->
+      </ul>
+        </div>
+    <!--end Footer Column--> 
+    <!--Bank-->
+    <div class="box">
+          <div class="fl getBox">
+        <h4 class="title_col_footer bl"> Đăng ký nhận tin</h4>
+        <div class="getEmail">
+              <input type="text" placeholder="Nhập email của bạn" />
+              <input name="" type="button"  class="btnGetemail" value="Đăng ký"/>
+            </div>
+      </div>
+          <div class="socialBox fl">
+        <h4 class="title_col_footer bl">Kết nối</h4>
+        <div class="social_network"><a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class=" twitter"></a><a href="" class=" youtube"></a></div>
+      </div>
+          <div class="tt_bank fl">
+        <h4 class="title_col_footer bl">Chấp nhận thanh toán</h4>
+        <ul id="sl_logobank" >
+              <li> <a href='' target='_blank'><img src='http://ketnoitructuyen.com/data/aditems/83/logo_VIB.jpg' alt='' /></a> </li>
+              <li> <a href='http://www.vietcombank.com.vn/' target='_blank'><img src='http://ketnoitructuyen.com/data/aditems/82/logo_Vietcom.jpg' alt='' /></a> </li>
+              <li> <a href='' target='_blank'><img src='http://ketnoitructuyen.com/data/aditems/81/logo_Techcom.jpg' alt='' /></a> </li>
+              <li> <a href='' target='_blank'><img src='http://ketnoitructuyen.com/data/aditems/80/logo_Nganluong.jpg' alt='' /></a> </li>
+              <li> <a href='http://www.dongabank.com.vn/' target='_blank'><img src='http://ketnoitructuyen.com/data/aditems/79/logo_DongA.jpg' alt='' /></a> </li>
+            </ul>
+      </div>
+        </div>
+    <!--End Bank--> 
+    <!--Info SEO-->
+    <div class="box">
+          <h1 style="margin-left: 17px; color: #065599"> <strong>Toolcom.com - Kênh mua sắm trực tuyến chất lượng tại Việt Nam.</strong></h1>
+          <p style="font-family: arial; line-height: 21px; font-size: 14px; text-align: justify; margin: 15px;">Một trong những phương thức cơ bản nhằm tạo niềm tin cho người tiêu dùng khi mua hàng online là nâng cao chất lượng hoạt động, thực thi cam kết, chính sách của các website thương mại điện tử.. Ketnoitructuyen.com xây dựng trên tinh thần trách nhiệm nhằm bảo vệ lợi ích tối đa cho người tiêu dùng và hướng tới sự phát triển lành mạnh của thương mại điện tử.. Chúng tôi đi tiên phong trong việc quan tâm đến mọi nhu cầu vật dụng, nội thất, hàng công nghệ,... trong ngôi nhà thân yêu của bạn.<br />
+        Chú trọng vào chất lượng cũng như xuất sứ sản phẩm, cung cấp dịch vụ bán lẻ và giao nhận thuận tiện, đảm bảo cho khách hàng dễ dàng mua được những sản phẩm giá rẻ của những thương hiệu nổi tiếng trên thị trường tiết kiệm thời gian và công sức với thao tác cực kỳ đơn giản. </p>
+        </div>
+    <!--end Info SEO--> 
+    <!--Categories Footer-->
+    <div id="category_footer" class="cf">
+          <p class="title_cat">Danh mục và thương hiệu hàng đầu</p>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/thang-nhom.aspx">Thang Nhôm</a></p>
+        <ul>
+              <li> <a href="/chuyen-muc/thang-nhom-chu-a.aspx" title=" Thang Nhôm Chữ A"> Thang Nhôm Chữ A</a></li>
+              <li> <a href="/chuyen-muc/thang-nhom-rut.aspx" title=" Thang Nhôm Rút"> Thang Nhôm Rút</a></li>
+              <li> <a href="/chuyen-muc/thang-nhom-gap.aspx" title=" Thang Nhôm Gấp"> Thang Nhôm Gấp</a></li>
+              <li> <a href="/chuyen-muc/thang-nhom-truot.aspx" title=" Thang Nhôm Trượt"> Thang Nhôm Trượt</a></li>
+              <li> <a href="/chuyen-muc/thang-ghe.aspx" title=" Thang Ghế"> Thang Ghế</a></li>
+              <li> <a href="/chuyen-muc/thang-nhom-rut-chu-a.aspx" title=" Thang Nhôm Rút Chữ A"> Thang Nhôm Rút Chữ A</a></li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/thiet-bi-do-dien.aspx"> Thiết Bị Đo Điện</a></p>
+        <ul>
+              <li> <a href="/chuyen-muc/ampe-kim.aspx" title=" Ampe Kìm"> Ampe Kìm</a></li>
+              <li> <a href="/chuyen-muc/dong-ho-van-nang.aspx" title=" Đồng Hồ Vạn Năng"> Đồng Hồ Vạn Năng</a></li>
+              <li> <a href="/chuyen-muc/do-dien-tro-cach-dien.aspx" title=" Đo Điện Trở Cách Điện"> Đo Điện Trở Cách Điện</a></li>
+              <li> <a href="/chuyen-muc/do-dien-tro-dat.aspx" title=" Đo Điện Trở Đất"> Đo Điện Trở Đất</a></li>
+              <li> <a href="/chuyen-muc/but-thu-dien.aspx" title=" Bút Thử Điện"> Bút Thử Điện</a></li>
+              <li> <a href="/chuyen-muc/thiet-bi-do-pha.aspx" title=" Thiết Bị Dò Pha"> Thiết Bị Dò Pha</a></li>
+              <li> <a href="/chuyen-muc/do-cuong-do-anh-sang.aspx" title=" Đo Cường Độ Ánh Sáng"> Đo Cường Độ Ánh Sáng</a></li>
+              <li> <a href="/chuyen-muc/do-nhiet-do.aspx" title=" Đo Nhiệt Độ"> Đo Nhiệt Độ</a></li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/thiet-bi-nang-do.aspx"> Thiết Bị Nâng Đỡ</a></p>
+        <ul>
+              <li> <a href="/chuyen-muc/con-doi.aspx" title=" Con Đội"> Con Đội</a></li>
+              <li> <a href="/chuyen-muc/pa-lang-xich-keo-tay.aspx" title=" Pa Lăng Xích Kéo Tay"> Pa Lăng Xích Kéo Tay</a></li>
+              <li> <a href="/chuyen-muc/pa-lang-xich-lac-tay.aspx" title=" Pa Lăng Xích Lắc Tay"> Pa Lăng Xích Lắc Tay</a></li>
+              <li> <a href="/chuyen-muc/xe-day.aspx" title=" Xe Đẩy"> Xe Đẩy</a></li>
+              <li> <a href="/chuyen-muc/kich-cang-cap.aspx" title=" Kích Căng Cáp"> Kích Căng Cáp</a></li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/thiet-bi-bao-quan.aspx"> Thiết Bị Bảo Quản</a></p>
+        <ul>
+              <li> <a href="/chuyen-muc/thung-dung-do-nghe.aspx" title=" Thùng Đựng Đồ Nghề"> Thùng Đựng Đồ Nghề</a></li>
+              <li> <a href="/chuyen-muc/tui-dung-do-nghe.aspx" title=" Túi Đựng Đồ Nghề"> Túi Đựng Đồ Nghề</a></li>
+              <li> <a href="/chuyen-muc/hop-bao-quan.aspx" title=" Hộp Bảo Quản"> Hộp Bảo Quản</a></li>
+              <li> <a href="/chuyen-muc/o-khoa-hop-dung-chia.aspx" title=" Ổ Khóa, Hộp Đựng Chìa"> Ổ Khóa, Hộp Đựng Chìa</a></li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/kem-cam-tay.aspx" title=" Kềm Cầm Tay">Kềm Cầm Tay</a></p>
+        <ul>
+              <li><a href="/chuyen-muc/kem-mui-nhon.aspx"> Kềm Mũi Nhọn</a> </li>
+              <li><a href="/chuyen-muc/kem-rut-dinh.aspx"> Kềm Rút Đinh</a> </li>
+              <li><a href="/chuyen-muc/kem-tuot-day.aspx"> Kềm Tuốt Dây</a> </li>
+              <li><a href="/chuyen-muc/kem-mo-qua.aspx"> Kềm Mỏ Quạ</a> </li>
+              <li><a href="/chuyen-muc/kem-mo-phe.aspx"> Kềm Mở Phe</a> </li>
+              <li><a href="/chuyen-muc/kem-dien.aspx"> Kềm Điện</a> </li>
+              <li><a href="/chuyen-muc/kem-da-nang.aspx"> Kềm Đa Năng</a> </li>
+              <li><a href="/chuyen-muc/kem-cong-luc.aspx"> Kềm Cộng Lực</a> </li>
+              <li><a href="/chuyen-muc/kem-chet.aspx"> Kềm Chết</a> </li>
+              <li><a href="/chuyen-muc/kem-cat.aspx"> Kềm Cắt</a> </li>
+              <li><a href="/chuyen-muc/kem-bam-cos.aspx"> Kềm Bấm Cos</a> </li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/dung-cu-cat.aspx" title=" Dụng Cụ Cắt"> Dụng Cụ Cắt</a> </p>
+        <ul>
+              <li><a href="/chuyen-muc/cua-go.aspx"> Cưa Gỗ</a> </li>
+              <li><a href="/chuyen-muc/cua-sat.aspx"> Cưa Sắt</a> </li>
+              <li><a href="/chuyen-muc/dao.aspx"> Dao</a> </li>
+              <li><a href="/chuyen-muc/luoi-dao.aspx"> Lưỡi Dao</a> </li>
+              <li><a href="/chuyen-muc/keo.aspx"> Kéo</a> </li>
+              <li><a href="/chuyen-muc/luoi-cua.aspx"> Lưỡi Cưa</a> </li>
+              <li><a href="/chuyen-muc/mui-duc.aspx"> Mũi Đục</a> </li>
+              <li><a href="/chuyen-muc/mui-khoan.aspx"> Mũi Khoan</a> </li>
+              <li><a href="/chuyen-muc/mui-khoet.aspx"> Mũi Khoét</a> </li>
+              <li><a href="/chuyen-muc/taro.aspx"> Taro</a> </li>
+              <li><a href="/chuyen-muc/da-mai-va-da-cat.aspx"> Đá mài và đá cắt</a> </li>
+              <li><a href="/chuyen-muc/ban-cat-gach.aspx"> Bàn cắt gạch</a> </li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/bua-cam-tay.aspx" title=" Búa Cầm Tay"> Búa Cầm Tay</a></p>
+        <ul>
+              <li><a href="/chuyen-muc/bua-cao-su.aspx"> Búa Cao Su</a> </li>
+              <li><a href="/chuyen-muc/bua-nhua.aspx"> Búa Nhựa</a> </li>
+              <li><a href="/chuyen-muc/bua-dau-tron.aspx"> Búa Đầu Tròn</a> </li>
+              <li><a href="/chuyen-muc/bua-go.aspx"> Búa Gò</a> </li>
+              <li><a href="/chuyen-muc/bua-nho-dinh.aspx"> Búa Nhổ Đinh</a> </li>
+              <li><a href="/chuyen-muc/bua-dau-vuong.aspx"> Búa đầu vuông</a> </li>
+              <li><a href="/chuyen-muc/bua-dau-luc-giac.aspx"> Búa đầu lục giác</a> </li>
+            </ul>
+        </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/thiet-bi-kep.aspx" title=" Thiết Bị Kẹp"> Thiết Bị Kẹp</a></p>
+        <ul>
+              <li><a href="/chuyen-muc/cao-2-chau.aspx"> Cảo 2 Chấu</a> </li>
+              <li><a href="/chuyen-muc/cao-3-chau.aspx"> Cảo 3 Chấu</a> </li>
+              <li><a href="/chuyen-muc/cao-chu-c.aspx"> Cảo Chữ C</a> </li>
+              <li><a href="/chuyen-muc/cao-chu-f.aspx"> Cảo Chữ F</a> </li>
+              <li><a href="/chuyen-muc/e-to-thuong.aspx"> Ê Tô Thường</a> </li>
+              <li><a href="/chuyen-muc/cao-day-xich.aspx"> Cảo dây xích</a> </li>
+              <li><a href="/chuyen-muc/cao-chu-h.aspx"> Cảo chữ H</a> </li>
+              <li><a href="/chuyen-muc/cao-thuy-luc.aspx"> Cảo Thủy Lực</a> </li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/co-le-mo-let.aspx" title=" Cờ Lê Mỏ Lết"> Cờ Lê Mỏ Lết</a></p>
+        <ul>
+              <li><a href="/chuyen-muc/co-le-don.aspx"> Cờ Lê Đơn</a> </li>
+              <li><a href="/chuyen-muc/co-le-bo.aspx"> Cờ Lê Bộ</a> </li>
+              <li><a href="/chuyen-muc/mo-let-thuong.aspx"> Mỏ Lết Thường</a> </li>
+              <li><a href="/chuyen-muc/mo-let-rang.aspx"> Mỏ Lết Răng</a> </li>
+              <li><a href="/chuyen-muc/co-le-dong.aspx"> Cờ Lê Đóng</a> </li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/may-cha-nham.aspx" title=" Máy Chà Nhám"> Máy Chà Nhám</a></p>
+        <ul>
+              <li><a href="/chuyen-muc/may-cha-nham-bang.aspx"> Máy Chà Nhám Băng</a> </li>
+              <li><a href="/chuyen-muc/may-cha-nham-rung.aspx"> Máy Chà Nhám Rung</a> </li>
+              <li><a href="/chuyen-muc/may-cha-nham-dia.aspx"> Máy Chà Nhám Đĩa</a> </li>
+              <li><a href="/chuyen-muc/may-cha-nham-thuong.aspx"> Máy Chà Nhám Thường</a> </li>
+              <li><a href="/chuyen-muc/may-cha-nham-ban.aspx"> Máy Chà Nhám Bàn</a> </li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/may-khoan.aspx" title=" Máy Khoan"> Máy Khoan</a></p>
+        <ul>
+              <li><a href="/chuyen-muc/may-khoan-ban.aspx"> Máy Khoan Bàn</a> </li>
+              <li><a href="/chuyen-muc/may-khoan-be-tong.aspx"> Máy Khoan Bê Tông</a> </li>
+              <li><a href="/chuyen-muc/may-khoan-bua.aspx"> Máy Khoan Búa</a> </li>
+              <li><a href="/chuyen-muc/may-khoan-toc-do-cao.aspx"> Máy Khoan Tốc Độ Cao</a> </li>
+              <li><a href="/chuyen-muc/may-khoan-goc.aspx"> Máy Khoan Góc</a> </li>
+              <li><a href="/chuyen-muc/may-khoan-sat.aspx"> Máy khoan sắt</a> </li>
+            </ul>
+      </div>
+          <div class="cols_cate_footer">
+        <p class="name"><a href="/chuyen-muc/dung-cu-dung-khi-nen.aspx"> Dụng Cụ Dùng Khí Nén</a></p>
+        <ul>
+              <li> <a href="/chuyen-muc/thiet-bi-bom-mo.aspx" title=" Thiết Bị Bơm Mỡ"> Thiết Bị Bơm Mỡ</a></li>
+              <li> <a href="/chuyen-muc/thiet-bi-go-ri.aspx" title=" Thiết Bị Gõ Rĩ"> Thiết Bị Gõ Rĩ</a></li>
+              <li> <a href="/chuyen-muc/day-hoi-tu-rut.aspx" title=" Dây Hơi Tự Rút"> Dây Hơi Tự Rút</a></li>
+              <li> <a href="/chuyen-muc/sung-rut-rive.aspx" title=" Súng Rút Rive"> Súng Rút Rive</a></li>
+              <li> <a href="/chuyen-muc/may-cha-nham-hoi.aspx" title=" Máy Chà Nhám Hơi"> Máy Chà Nhám Hơi</a></li>
+              <li> <a href="/chuyen-muc/may-danh-bong-hoi.aspx" title=" Máy Đánh Bóng Hơi"> Máy Đánh Bóng Hơi</a></li>
+              <li> <a href="/chuyen-muc/may-khoan-hoi.aspx" title=" Máy Khoan Hơi"> Máy Khoan Hơi</a></li>
+              <li> <a href="/chuyen-muc/may-mai-hoi.aspx" title=" Máy Mài Hơi"> Máy Mài Hơi</a></li>
+              <li> <a href="/chuyen-muc/may-van-oc-van-vit.aspx" title=" Máy Vặn Ốc Vặn Vít"> Máy Vặn Ốc Vặn Vít</a></li>
+              <li> <a href="/chuyen-muc/thiet-bi-phun-son.aspx" title=" Thiết Bị Phun Sơn"> Thiết Bị Phun Sơn</a></li>
+              <li> <a href="/chuyen-muc/may-ban-dinh.aspx" title=" Máy Bắn Đinh"> Máy Bắn Đinh</a></li>
+              <li> <a href="/chuyen-muc/dung-cu-tuoi-cay.aspx" title=" Dụng cụ tưới cây"> Dụng cụ tưới cây</a></li>
+              <li> <a href="/chuyen-muc/may-cua-kiem-khi.aspx" title=" Máy Cưa Kiếm Khí"> Máy Cưa Kiếm Khí</a></li>
+            </ul>
+      </div>
+        </div>
+    <!--end Categories Footer-->
+    <div id="copyright" class="text-center">Copyright © 2015 by ToolCom</div>
+    <div class="text-center linkmb"><a>Chuyển sang sử dụng phiên bản Mobile</a></div>
+  </div>
+      <!--end Footer--> 
+    </div>
+<!-- End wrap--> 
+
+<!-- back to top --> 
+<script type="text/javascript" src="Scripts/scrolltopcontrol.js"></script>
+<div id="toTop"></div>
+</body>
+</html>

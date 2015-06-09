@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Trang chủ</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="all" />
+
+<!--Styles-->
+<link rel="stylesheet" href="Styles/css.css" type="text/css" />
+<link rel="stylesheet" href="Styles/2col.css" type="text/css" />
+<link rel="stylesheet" href="Styles/nav_x.css" type="text/css" />
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--End Styles-->
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+<!--ho tro-->
+<div class="trigger"><img src="images/email.png" /> Chúng tôi sẵn sàng hỗ trợ</div>
+<div class="popupBox" id="dpop"> <span class="closeBtn">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Tư vấn : 0123 456 789</div>
+    <div class="boxInnerHT">
+      <p> Xin chào, chúng tôi sẽ phản hồi câu hỏi của Anh chị ngay sau tin nhắn này. Để giúp Anh chị xử lý nhu cầu tốt hơn, xin vui lòng điền đầy đủ thông tin chi tiết bên dưới! Cám ơn. Hoặc LH văn phòng gần nhất của Vườn Giác </p>
+      <form>
+        <div class="row">
+          <label>Họ tên*</label>
+          <input class="clsinput" name="" type="text" placeholder="Nhập họ tên" />
+        </div>
+        <div class="row">
+          <label>Số điện thoại*</label>
+          <input class="clsinput"  name="" type="text" placeholder="Nhập điện thoại" />
+        </div>
+        <div class="row">
+          <label>Tin nhắn *</label>
+          <input class="clsinput"  name="" type="text" placeholder="Nhập tin nhắn" />
+        </div>
+        <div class="text-center">
+          <input class="clsbtn"  name="" type="button" value="Gửi" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.trigger').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtn').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+
+<!--ho tro-->
+<div class="container">
+  <div class="row headerB">
+    <div class="col-xs-3 logo"> <a href="#">Logo</a> </div>
+    <div class="col-xs-9"> <img src="images/baner.png" /> </div>
+  </div>
+  <div class="row menu">
+    <div class="col-xs-12">
+      <nav id="nav_x">
+        <ul>
+          <li><a href="index.html">Vườn giác thiền</a></li>
+          <li><a href="#">An lạc trong nhân quả </a> </li>
+          <li class="active"><a href="list_news.html">Điều phục vạn tâm </a>
+            <ul>
+              <li><a href="#">Điều phục vạn tâm</a>
+                <ul>
+                  <li><a href="#">Điều phục vạn tâm</a>
+                    <ul>
+                      <li><a href="#">Điều phục vạn tâm</a></li>
+                      <li><a href="#">Điều phục vạn tâm</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Điều phục vạn tâm</a> </li>
+                </ul>
+              </li>
+              <li><a href="#">Điều phục vạn tâm</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Kinh đại thừa</a></li>
+          <li><a href="#">Giai thoại</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="maincol clsMainContent">
+      <div class="listMedia">
+        <div class="title">Thuyết vô thường</div>
+        <div class="media">
+          <div class="mediaLeft"><a href="detail_news/html" ><img src="images/sp.png" /> </a></div>
+          <div class="mediaBody">
+            <h3>PHẬT THUYẾT VÔ THƯỜNG KINH </h3>
+            <div class="shortInfo">
+              <p>Như thị ngã văn, nhứt thời Bạc già phạm tại Thất la phiệt thành, Thệ đa lâm, Cấp cô độc viên.<br />
+                Nhĩ thời Phật cáo chư bí sô hữu tam chủng pháp, ư chư thế gian thị bất khả ái, thị bất quang trạch, thị bất khả niệm, thị bất xứng ý. Hà giả vi tam? Vị lão, bệnh, tử. Nhữ chư bậc sô thử lão bệnh tử thế gian vô giả, Như Lai ứng chánh đẳng ... </p>
+            </div>
+            <a href="detail_news.html"  class="viewDetail fr">Xem chi tiết ...</a> </div>
+        </div>
+      </div>
+      <div class="listMedia">
+        <div class="title">Thuyết 12 nhân duyên</div>
+        <div class="media">
+          <div class="mediaLeft"><a href="detail_news/html" ><img src="images/sp.png" /> </a></div>
+          <div class="mediaBody">
+            <h3>PHẬT THUYẾT VÔ THƯỜNG KINH </h3>
+            <div class="shortInfo">
+              <p>Như thị ngã văn, nhứt thời Bạc già phạm tại Thất la phiệt thành, Thệ đa lâm, Cấp cô độc viên.<br />
+                Nhĩ thời Phật cáo chư bí sô hữu tam chủng pháp, ư chư thế gian thị bất khả ái, thị bất quang trạch, thị bất khả niệm, thị bất xứng ý. Hà giả vi tam? Vị lão, bệnh, tử. Nhữ chư bậc sô thử lão bệnh tử thế gian vô giả, Như Lai ứng chánh đẳng ... </p>
+            </div>
+            <a href="detail_news.html"  class="viewDetail fr">Xem chi tiết ...</a> </div>
+        </div>
+      </div>
+      <div class="listMedia">
+        <div class="title">Thuyết vô thường</div>
+        <div class="media">
+          <div class="mediaLeft"><a href="detail_news/html" ><img src="images/sp.png" /> </a></div>
+          <div class="mediaBody">
+            <h3>PHẬT THUYẾT VÔ THƯỜNG KINH </h3>
+            <div class="shortInfo">
+              <p>Như thị ngã văn, nhứt thời Bạc già phạm tại Thất la phiệt thành, Thệ đa lâm, Cấp cô độc viên.<br />
+                Nhĩ thời Phật cáo chư bí sô hữu tam chủng pháp, ư chư thế gian thị bất khả ái, thị bất quang trạch, thị bất khả niệm, thị bất xứng ý. Hà giả vi tam? Vị lão, bệnh, tử. Nhữ chư bậc sô thử lão bệnh tử thế gian vô giả, Như Lai ứng chánh đẳng ... </p>
+            </div>
+            <a href="detail_news.html"  class="viewDetail fr">Xem chi tiết ...</a> </div>
+        </div>
+      </div>
+      <div class="listMedia">
+        <div class="title">Thuyết vô thường</div>
+        <div class="media">
+          <div class="mediaLeft"><a href="detail_news/html" ><img src="images/sp.png" /> </a></div>
+          <div class="mediaBody">
+            <h3>PHẬT THUYẾT VÔ THƯỜNG KINH </h3>
+            <div class="shortInfo">
+              <p>Như thị ngã văn, nhứt thời Bạc già phạm tại Thất la phiệt thành, Thệ đa lâm, Cấp cô độc viên.<br />
+                Nhĩ thời Phật cáo chư bí sô hữu tam chủng pháp, ư chư thế gian thị bất khả ái, thị bất quang trạch, thị bất khả niệm, thị bất xứng ý. Hà giả vi tam? Vị lão, bệnh, tử. Nhữ chư bậc sô thử lão bệnh tử thế gian vô giả, Như Lai ứng chánh đẳng ... </p>
+            </div>
+            <a href="detail_news.html"  class="viewDetail fr">Xem chi tiết ...</a> </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="ads"><img src="images/ads1.png" /></div>
+    </div>
+    <div class="sidebar clsRight">
+      <div class="box">
+        <div class="box_Tab"><span>Hỗ trợ trực tuyến</span></div>
+        <div class="boxInner httt">
+          <div class="hotlineB"> <img src="images/phone.png" /> Hotline: 0123 456 789 </div>
+          <div class="yh"><img src="images/yahoo.png" /></div>
+          <div class="call"><img src="images/callMe.png" /></div>
+          <div class="email"><i>Email: vuongiac@gmail.com</i></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box_Tab"><span>Giai thoại thiền</span></div>
+        <div class="boxInner">
+          <div class="link"> <a href="#">Thân không tật bệnh.</a> </div>
+          <div class="link"> <a href="#">Thân không tật bệnh.</a> </div>
+          <div class="link"> <a href="#">Thân không tật bệnh.</a> </div>
+          <div class="link"> <a href="#">Thân không tật bệnh.</a> </div>
+          <div class="link"> <a href="#">Thân không tật bệnh.</a> </div>
+          <div class=" text-right"><a href="#" class="viewAll">Xem tất cả</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box_Tab"><span>Facebook</span></div>
+        <div class="boxInner fb"> <img src="images/fb.png" /> </div>
+      </div>
+      <div class="box">
+        <div class="box_Tab"><span>Video</span></div>
+        <div class="boxInner videoB"> <img src="images/video.png" /> </div>
+      </div>
+    </div>
+  </div>
+  <div class="row footer"> © Copyright 2015 vuongiac.com All right reserves. </div>
+</div>
+ 
+</body>
+</html>

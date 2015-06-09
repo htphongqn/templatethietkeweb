@@ -1,0 +1,584 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/detailPro.css"/>
+</head>
+<body>
+<div class="left_pmt" id="divAdLeft" style="DISPLAY:none;POSITION:absolute;TOP:0px;"><img src="http://thuocgiadinh.vn/uploads/activebrain.jpg" /></div>
+<div class="right_pmt" id="divAdRight" style="DISPLAY:none;POSITION:absolute;TOP:0px;"><img src="http://thuocgiadinh.vn/uploads/activebrain.jpg" /> </div>
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Hỗ trợ trực tuyến</div>
+    <div class="boxInnerHT">
+      <div class="row hotline"> <b>0937.221.671</b> <br />
+        Mr.Hiền <span class='nick_chat'><a href='skype:trandinhmy.com?call' title='Mr. Mỹ'><img src='http://mystatus.skype.com/smallclassic/trandinhmy.com' title=Mr. Mỹ  alt='' ></a></span> <span class='nick_chat'><a href='ymsgr:sendim?trandinhmy4323' title='Mr. Mỹ'><img src='http://opi.yahoo.com/online?u=trandinhmy4323&m=g&t=2' width='114px' height='20px'   /></a></span> </div>
+      <div class="row"> </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+<!--ho tro-->
+
+<div class="wrap wTopPage">
+  <div class="container">
+    <div class="linkTop fleft">
+      <div class="linkT"><a>Thuốc và sức khoẻ</a></div>
+      <div class="linkT"><a>Diễn đàn GMP Factory</a></div>
+      <div class="linkT"><a>Tư vấn thuốc</a></div>
+    </div>
+    <div class="linkTop linkLog fright">
+      <div class="fright"><i class="glyphicon glyphicon-lock"></i><a>Đăng nhập</a></div>
+      <div class="fright"><i class="glyphicon glyphicon-user"></i><a>Đăng ký</a></div>
+      <div class="fright"><i class="glyphicon glyphicon-shopping-cart"></i><a>Giỏ hàng (0)</a></div>
+    </div>
+  </div>
+</div>
+<div class="wrap wgHeader">
+  <div class="container">
+    <div class="rowmn headerBox">
+      <div class="innerHeaderBox">
+        <div class="fleft clsLogo "> <a href="index.html"><img src="data/logo.png" /></a> </div>
+        <div class="fleft bannerHeader"><img src="data/banner.png" /></div>
+        <div class="hotlineBox"> <i class="glyphicon glyphicon-earphone"></i> <b> 0937 911 678</b> </div>
+        <div class="searchBox">
+          <input class="inputS" id="txtSearch" placeholder="Nhập từ khoá.." />
+          <a class=" btn btn-warning">Tìm kiếm</a> </div>
+        <div class="bSers">
+          <div class="inner_bSers">
+            <div class="itSers"> <i class="icon_mn idambao"></i>
+              <div class="txtSers"> ĐẢM BẢO HÀNG CHÍNH HÃNG </div>
+            </div>
+            <div class="itSers"> <i class="icon_mn ithanhtoan"></i>
+              <div class="txtSers"> GIAO HÀNG <br />
+                TẬN NƠI </div>
+            </div>
+            <div class="itSers"> <i class="icon_mn idoitra"></i>
+              <div class="txtSers"> TRẢ HÀNG<br />
+                TRONG 14 NGÀY </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wNavx">
+  <div class="container">
+    <div class="rowmn menuBox">
+      <div class="navx">
+        <ul>
+          <li class="active"><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="products.html">Sản phẩm</a>
+            <ul>
+              <li><a href="#">Sub menu level 3</a></li>
+              <li><a href="#">Sub 3</a></li>
+              <li><a href="#">Sub 3s</a></li>
+            </ul>
+          </li>
+          <li><a href="#">DP-Thương hiệu</a></li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Tư vấn sản phẩm</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap wMain">
+  <div class="container">
+    <div class="rowmn">
+      <div class="col2 sidebar sideLeft">
+        <div class="box">
+          <div class="headingBox txtleft"> <span>Sản phẩm giá tốt</span> </div>
+          <div class="innerBox">
+            <div class="navy">
+              <ul>
+                <li><a>Khuyến mãi</a></li>
+                <li><a>Mua 1 tặng 1</a></li>
+                <li><a>Giờ vàng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headingBox txtleft"> <span>Danh mục</span> </div>
+          <div class="innerBox">
+            <div class="navy">
+              <ul>
+                <li><a>Nhóm sản phẩm</a></li>
+                <li><a>Tư vấn sản phẩm</a></li>
+                <li><a>Thương hiệu</a></li>
+                <li><a>Nhóm sản phẩm</a></li>
+                <li><a>Sản phẩm mới</a></li>
+                <li><a>Sản phẩm bán chạy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headingBox txtleft"> <span>Mua sắm theo chủng loại</span> </div>
+          <div class="innerBox">
+            <div class="navy">
+              <ul>
+                <li><a>Vitamin</a></li>
+                <li><a>Thực phẩm giảm cân</a></li>
+                <li><a>Cơ xương khớp</a></li>
+                <li><a>Sức khoẻ trẻ em</a></li>
+                <li><a>Bệnh ngoài da</a></li>
+                <li><a>Thực phẩm làm đẹp</a></li>
+                <li><a>Vitamin</a></li>
+                <li><a>Thực phẩm giảm cân</a></li>
+                <li><a>Cơ xương khớp</a></li>
+                <li><a>Sức khoẻ trẻ em</a></li>
+                <li><a>Bệnh ngoài da</a></li>
+                <li><a>Thực phẩm làm đẹp</a></li>
+                <li><a>Vitamin</a></li>
+                <li><a>Thực phẩm giảm cân</a></li>
+                <li><a>Cơ xương khớp</a></li>
+                <li><a>Sức khoẻ trẻ em</a></li>
+                <li><a>Bệnh ngoài da</a></li>
+                <li><a>Thực phẩm làm đẹp</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!--end box-->
+        
+        <div class="box">
+          <div class="headingBox"> <span>Thăm dò ý kiến</span> </div>
+          <div class="innerBox">
+            <div class="bProbe">
+              <p> <strong>Bạn cảm nhận thế nào về dịch vụ của Dược phẩm Trường Thọ</strong> </p>
+              <p>
+                <input type="radio" name="option" value="5">
+                Tốt, tôi rất hài lòng </p>
+              <p>
+                <input type="radio" name="option" value="6">
+                Tôi tương đối hài lòng </p>
+              <p>
+                <input type="radio" name="option" value="7">
+                Bình thuờng </p>
+              <p>
+                <input type="radio" name="option" value="8">
+                Còn có điểm chưa được hài lòng lắm </p>
+              <p>
+                <input type="radio" name="option" value="14">
+                Kém, tôi không hài lòng </p>
+              <p class=" text-center"> <a class="btn btn-default">Bình chọn</a> <a class="btn btn-default">Kết quả</a> </p>
+            </div>
+          </div>
+        </div>
+        <!--end box-->
+        <div class="box">
+          <div class="headingBox"> <span>Video</span> </div>
+          <div class="innerBox">
+            <div class="bVideo"> <a><img src="data/video.jpg" /></a> </div>
+            <div class="linkV"><a href="#">Gioi thieu san pham </a></div>
+            <div class="linkV"><a href="#">Folic acid 400 mcg </a></div>
+          </div>
+        </div>
+        <!--end box--> 
+        <!--  quang cao-->
+        
+        <div class="wmn ads"> <img src="data/ads3.jpg" /> </div>
+        <!--end box--> 
+      </div>
+      <!--End sidebar -->
+      
+      <div class="col10 mainContent">
+        <div class="hidden">Company name</div>
+        <div class="box boxMain">
+          <div class="innerBoxMain"> 
+            <!--banner-->
+            <div class="box bBanner">
+              <div class=" col9 slideBox">
+                <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+                <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script> 
+                <script>
+				//slider nivo
+					 $(window).load(function() {
+						$('#slider').nivoSlider();
+					});
+				</script>
+                <div class="slider_main">
+                  <div class="slider-wrapper theme-default">
+                    <div id="slider" class="nivoSlider"> <a href=""> <img src="data/slide1.png" /></a> <a href=""><img src="data/slide2.png" /></a> </div>
+                  </div>
+                </div>
+              </div>
+              <!--san phan hot-->
+              <div class="col3 hotPro">
+                <div class="headingBox txtleft"> <span>Sản phẩm hot</span> </div>
+                <script type="text/javascript">
+				  $(document).ready(function(){
+				  $('.sliderHotPro').bxSlider({
+					slideWidth:400,
+					minSlides:1,
+					maxSlides: 1,
+					moveSlides: 1,
+					slideMargin: 10,
+					speed: 2000,
+					 auto: true,
+				  });
+				});
+				</script>
+                <div class="slideHotPro">
+                  <div class="sliderHotPro">
+                    <div class="slide">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"><a href="detailProduct.html"><img src="data/hinh1.png" /></a></div>
+                          <div class="desProduct">
+                            <h2><a>Thảo dược giảm cân</a></h2>
+                            <div class="priceGroup">
+                              <div class="newPrice">500.000 đ</div>
+                              <div class="oldPrice">450.000 đ</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"><a href="detailProduct.html"><img src="data/hinh1.png" /></a></div>
+                          <div class="desProduct">
+                            <h2><a>Thảo dược giảm cân</a></h2>
+                            <div class="priceGroup">
+                              <div class="newPrice">500.000 đ</div>
+                              <div class="oldPrice">450.000 đ</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="product">
+                        <div class="innerProduct">
+                          <div class="photoProduct"><a href="detailProduct.html"><img src="data/hinh1.png" /></a></div>
+                          <div class="desProduct">
+                            <h2><a>Thảo dược giảm cân</a></h2>
+                            <div class="priceGroup">
+                              <div class="newPrice">500.000 đ</div>
+                              <div class="oldPrice">450.000 đ</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/san phan hot--> 
+            </div>
+            <!--/banner--> 
+            <!--================= .::noi dung::. =================-->
+            <div class="breadcrumbBox">
+              <ul class="breadcrumb">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="active"><a>chuyên mục</a></li>
+              </ul>
+            </div>
+            <link rel="stylesheet" type="text/css" href="styles/detailNews.css">
+            <div class="box">
+              <div class="headingBox txtleft"><span>Đăng kí</span></div>
+              <div class="innerBox">
+                 <div class="frmn">
+            <div class="frm_group">
+              <div class="lbl">Tài khoản: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="name" class="form-control" id="InputName" name="inputName" placeholder=" " required>
+              </div>
+            </div>
+            <div class="frm_group">
+              <div class="lbl">Mật khẩu: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="password" class="form-control" id="" name="" placeholder="" required>
+              </div>
+            </div>
+            
+            <div class="frm_group">
+              <div class="lbl">NHập lại mật khẩu: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="password" class="form-control" id="" name="" placeholder="" required>
+              </div>
+            </div>
+            <div class="frm_group">
+              <div class="lbl">Họ tên: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="text" class="form-control" name="InputName" id="InputName" placeholder=" " required>
+              </div>
+            </div>
+            <div class="frm_group">
+              <div class="lbl">Điện thoại: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="phone" class="form-control" id="InputPhone" name="inputPhone" placeholder=" " required>
+              </div>
+            </div>
+             
+            <div class="frm_group">
+              <div class="lbl">Địa chỉ: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="text" class="form-control idc" id="" name="" placeholder=""   required>
+              </div>
+            </div>
+            <div class="frm_group">
+              <div class="lbl">Quận huyện: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="text" class="form-control" id="" name="" placeholder=""   required>
+              </div>
+            </div>
+            <div class="frm_group">
+              <div class="lbl">Thành phố: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="text" class="form-control" id="" name="" placeholder="" required>
+              </div>
+            </div>
+            
+            <div class="frm_group">
+              <div class="lbl">Email: <span class="red">*</span></div>
+              <div class="input_group">
+                <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="" required  >
+              </div>
+            </div>
+             
+             
+             
+             
+            <div class="frm_group">
+              <div class="lbl"> <span class="red">*</span></div>
+              <div class="input_group">
+                <div class="checkbox  violet">
+                  <label>
+                    <input type="checkbox" value="">
+                    <b>Tôi đã đọc và đồng ý với điều khoản và thông tin của website</b></label>
+                </div>
+              </div>
+            </div>
+            <div class="frm_group text-center"> <a class="btn btn-warning">Đăng ký</a> <a class="btn btn-warning">Làm lại</a> </div>
+          </div>
+              </div>
+              
+            </div>
+            
+            <!--================= .::noi dung::. =================--> 
+            
+            <div class="box bView"> 
+              <script type="text/javascript">
+				  $(document).ready(function(){
+				  $('.sliderNB').bxSlider({
+					slideWidth:260,
+					minSlides:1,
+					maxSlides: 3,
+					moveSlides: 3,
+					slideMargin: 0,
+					speed: 2000,
+					 auto: false,
+				  });
+				});
+				</script>
+              <div class="headingBox txtleft"><span>Sản phẩm đã xem</span></div>
+              <div class="wmn slideNB">
+                <div class="sliderNB">
+                  <div class="slide">
+                    <div class=" wmn productNB">
+                      <div class="innerProductNB">
+                        <div class="photoNB"><a href="detailProduct.html"><img src="data/hinh1.png" /></a></div>
+                        <div class="desNB">
+                          <h2><a>Viên nang mềm Bà bầu PregnaCare DHA</a></h2>
+                          <div class="txtNB"> Dược phẩm Trường Thọ <br />
+                            MT: BB00001 
+                            Hộp 1 lọ 30 Viên nang mềm</div>
+                          <div class="priceGroup">
+                            <div class="newPrice"><span>Giá bán: </span>500.000 đ</div>
+                          </div>
+                          <div class="btnGroup"> <a class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i>Mua hàng</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class=" wmn productNB">
+                      <div class="innerProductNB">
+                        <div class="photoNB"><a href="detailProduct.html"><img src="http://thuocgiadinh.vn/uploads/san-pham/thumb/sangmatawebsp.png" /></a></div>
+                        <div class="desNB">
+                          <h2><a>Viên nang mềm Bà bầu PregnaCare DHA</a></h2>
+                          <div class="txtNB"> Dược phẩm Trường Thọ <br />
+                            MT: BB00001 
+                            Hộp 1 lọ 30 Viên nang mềm</div>
+                          <div class="priceGroup">
+                            <div class="newPrice"><span>Giá bán: </span>500.000 đ</div>
+                          </div>
+                          <div class="btnGroup"> <a class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i>Mua hàng</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class=" wmn productNB">
+                      <div class="innerProductNB">
+                        <div class="photoNB"><a href="detailProduct.html"><img src="http://thuocgiadinh.vn/uploads/san-pham/thumb/babauwebsp.png" /></a></div>
+                        <div class="desNB">
+                          <h2><a>Viên nang mềm Bà bầu PregnaCare DHA</a></h2>
+                          <div class="txtNB"> Dược phẩm Trường Thọ <br />
+                            MT: BB00001 
+                            Hộp 1 lọ 30 Viên nang mềm</div>
+                          <div class="priceGroup">
+                            <div class="newPrice"><span>Giá bán: </span>500.000 đ</div>
+                          </div>
+                          <div class="btnGroup"> <a class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i>Mua hàng</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class=" wmn productNB">
+                      <div class="innerProductNB">
+                        <div class="photoNB"><a href="detailProduct.html"><img src="http://thuocgiadinh.vn/uploads/san-pham/thumb/small_zdx1346297631.jpg" /></a></div>
+                        <div class="desNB">
+                          <h2><a>Viên nang mềm Bà bầu PregnaCare DHA</a></h2>
+                          <div class="txtNB"> Dược phẩm Trường Thọ <br />
+                            MT: BB00001 
+                            Hộp 1 lọ 30 Viên nang mềm</div>
+                          <div class="priceGroup">
+                            <div class="newPrice"><span>Giá bán: </span>500.000 đ</div>
+                          </div>
+                          <div class="btnGroup"> <a class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i>Mua hàng</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class=" wmn productNB">
+                      <div class="innerProductNB">
+                        <div class="photoNB"><a href="detailProduct.html"><img src="data/hinh1.png" /></a></div>
+                        <div class="desNB">
+                          <h2><a>Viên nang mềm Bà bầu PregnaCare DHA</a></h2>
+                          <div class="txtNB"> Dược phẩm Trường Thọ <br />
+                            MT: BB00001 
+                            Hộp 1 lọ 30 Viên nang mềm</div>
+                          <div class="priceGroup">
+                            <div class="newPrice"><span>Giá bán: </span>500.000 đ</div>
+                          </div>
+                          <div class="btnGroup"> <a class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i>Mua hàng</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!--innerBoxMain--> 
+          
+        </div>
+      </div>
+      <!--end box--> 
+      
+    </div>
+    <!--mainContent--> 
+    
+  </div>
+  <!--rowmn--> 
+  
+  <!--End contentBox--> 
+  
+</div>
+<!--End Container-->
+</div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="rowmn">
+      <div class="box bMenuF">
+        <div class="wmn inner_bMenuF">
+          <div class="colf">
+            <div class="headingBox"><span>Về chúng tôi</span></div>
+            <div class="inner_colf">
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+            </div>
+          </div>
+          <div class="colf">
+            <div class="headingBox"><span>Sản phẩm tiêu biểu</span></div>
+            <div class="inner_colf">
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+            </div>
+          </div>
+          <div class="colf">
+            <div class="headingBox"><span>Thương hiệu phổ biến</span></div>
+            <div class="inner_colf">
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+            </div>
+          </div>
+          <div class="colf">
+            <div class="headingBox"><span>Nhà sản xuất nổi tiếng</span></div>
+            <div class="inner_colf">
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+              <div class="linkF"> <a>Hướng dẫn mua hàng</a> </div>
+            </div>
+          </div>
+          <div class="colf">
+            <div class="headingBox"><span>Kết nối với chúng tôi</span></div>
+            <div class="inner_colf  ">
+              <div class="social_network"> <a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class="twitter"></a> <a href="" class="youtube"></a> </div>
+              <div class="vsBox">
+                <div class="innerVsBox">
+                  <p>Số người online :<b>1</b></p>
+                  <p>Số người truy cập :<b>10000</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rowmn">
+      <div class="address"> Quầy thuốc công ty CPDP Trường Thọ 168 Ngọc Khánh – Ba đình-Hà Nội<br />
+        Mobile: 0904.700.136 -  Email: admin@thuocgiadinh.vn </div>
+      <div class="copyRight"> Mọi thông tin trên website chỉ mang tính chất tham khảo.<br />
+        Việc sử dụng TPCN nên theo hướng dẫn của bác sĩ, dược sĩ hoặc người có chuyên môn. </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="scripts/js.js"></script>
+</body>
+</html>

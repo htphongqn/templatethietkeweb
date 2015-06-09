@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Untitled Page</title>
+<link rel="stylesheet" type="text/css" href="styles/css.css"/>
+<link rel="stylesheet" type="text/css" href="styles/glyphicon.css"/>
+<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+<link rel="stylesheet" type="text/css" href="styles/navx.css">
+<script type="text/javascript" src="scripts/jquery.min.1.11.2.js"></script>
+<!--Slide Ver Styles -->
+<link rel="stylesheet" type="text/css" href="styles/bxslider.css">
+<script type="text/javascript" src="scripts/bxslider.js"></script>
+<script type="text/javascript" src="scripts/js.js"></script>
+</head>
+<body>
+<!--ho tro-->
+<div class="triggerHttt"> </div>
+<div class="popupBox" id="dpop"> <span class="closeBtnHttt">x</span>
+  <div class="dropdown dropdown-items dropdown-right">
+    <div class="titleB">Tư vấn : 0123 456 789</div>
+    <div class="boxInnerHT">
+      <p> Xin chào, TROY sẽ phản hồi câu hỏi của bạn ngay sau tin nhắn này. Xin vui lòng điền đầy đủ thông tin chi tiết bên dưới! Cám ơn </p>
+      <form>
+        <div class="row">
+          <label>Họ tên*</label>
+          <input class="clsinput" name="" type="text" placeholder="Nhập họ tên" />
+        </div>
+        <div class="row">
+          <label>Số điện thoại*</label>
+          <input class="clsinput"  name="" type="text" placeholder="Nhập điện thoại" />
+        </div>
+        <div class="row">
+          <label>Tin nhắn *</label>
+          <textarea class="clsinput" placeholder="Nhập tin nhắn" ></textarea>
+        </div>
+        <div class="text-center">
+          <input class="clsbtn"  name="" type="button" value="Gửi" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  var notH = 1,
+$pop = $('.popupBox').hover(function () { notH ^= 1; });
+
+  $(document).on('mouseup keyup', function (e) {
+	  if (notH || e.which == 27) $pop.stop().hide();
+  });
+  /////// CALL POPUP 
+  $('.triggerHttt').click(function () {
+	  $('.popupBox').slideToggle('fast').end().siblings().$('.popupBox').hide('fast');
+	  event.stopPropagation();
+  });
+  $('.closeBtnHttt').click(function () {
+	  $('.popupBox').slideUp('fast');
+  });
+}); 
+</script> 
+
+<!--ho tro-->
+
+<div class="wrap topPage">
+  <div class="container">
+    <div class="menu-top-page">
+      <div class="linkT"><i class="glyphicon glyphicon-shopping-cart white"></i><a href="cart.html">Giỏ hàng</a></div>
+      <div class="linkT linkSignup"><a href="#">Đăng kí</a></div>
+      <div class="linkT linkLogin"><a href="#">Đăng nhập</a></div>
+      <div class="linkT langBox"><a href="#"><img src="data/en.png" /></a><a href="#"><img src="data/vi.png" /></a></div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgHeader">
+  <div class="container">
+    <div class="row headerBox">
+      <div class="innerHeaderBox">
+        <div class="col2 clsLogo"> <a href="index.html">logo</a> </div>
+        <div class="col10 ">
+          <div class="bannerHeader"> <img src="data/banner.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap bgNavx">
+  <div class="container">
+    <div class="row menuBox">
+      <div class="col12 fright">
+        <div class="navx">
+          <ul>
+            <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="news.html">Giới thiệu</a></li>
+            <li><a href="#">Dich vu</a>
+              <ul>
+                <li><a href="news.html">Sub menu level 1</a></li>
+                <li><a href="#">Sub 1</a>
+                  <ul>
+                    <li><a href="#">Sub menu level 2</a></li>
+                    <li><a href="#">Sub 2</a>
+                      <ul>
+                        <li><a href="#">Sub menu level 3</a></li>
+                        <li><a href="#">Sub 3</a></li>
+                        <li><a href="#">Sub 3s</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Sub 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Sub 1</a></li>
+              </ul>
+            </li>
+            <li><a href="listCate.html">San pham</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dự án</a>
+              <ul>
+                <li><a href="#">Sub menu level 3</a></li>
+                <li><a href="#">Sub 3</a></li>
+                <li><a href="#">Sub 3s</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Xu huong</a></li>
+            <li> <span class="hl"> Hotline: <b>0123 456 789</b></span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap slideBg">
+  <div class="row slideBox">
+    <link rel="stylesheet" href="Styles/nivo-slider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script> 
+    <!--slider_main-->
+    <div class="slider_main">
+      <div class="slider-wrapper theme-default">
+        <div id="slider" class="nivoSlider"> <a href=""> <img src="data/slide1.png" /></a> <a href=""><img src="data/slide2.png" /></a> </div>
+      </div>
+    </div>
+    <!--slider_main--> 
+    <script>
+    //slider nivo
+         $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script> 
+  </div>
+</div>
+<div class="container">
+  <div class="box">
+    <div class="headingBox text-left hdb2"><span>Thanh toán</span> </div>
+    <link rel="stylesheet" type="text/css" href="styles/checkout.css"/>
+     <div class="checkoutBox">
+  <div class="innercheckoutBox">
+    <div class="frmckb frmShipTo">
+      <div class="box">
+        <div class="headingBox"> <span>Địa chỉ giao hàng</span> </div>
+        <div class="innerBox">
+        <script type="text/javascript">
+	$(document).ready(function(){
+	$('#tabs_payment .tab_payment_ct, #tabs_share .tab_share_ct').hide();
+	$('#tabs_payment .tab_payment_ct:first, #tabs_share .tab_share_ct:first').show();
+	$('#tabs_payment ul li:first, #tabs_share ul li:first').addClass('active');
+	$('#tabs_payment ul li a, #tabs_share ul li a').click(function(){ 
+	$('#tabs_payment ul li, #tabs_share ul li').removeClass('active');
+	$(this).parent().addClass('active'); 
+	var currentTab = $(this).attr('href'); 
+	$('#tabs_payment .tab_payment_ct, #tabs_share .tab_share_ct').hide();
+	$(currentTab).show();
+	return false;
+	});
+	});
+	</script>
+ 
+           <div id="tabs_payment" class="method_payment_tab">
+        <ul class="fl">
+          <li class="active"><a href="#tab-1">Thanh toán khi nhận hàng</a></li>
+          <li class=""><a href="#tab-2">Internet Banking</a></li>
+        </ul>
+        <div id="tab-1" class="tab_payment_ct fr" style="display: block;">
+          <div class="cod_page">
+            <div class="payment_wrap">
+              <div class="row"> <span class="cod_info">Bạn sẽ thanh toán bằng tiền mặt khi nhận hàng tại nhà</span> </div>
+              <div class="row cod_aditional_info"> <u>Lưu ý:</u> Giao hàng nhanh 1 - 2 ngày ( tùy khu vực ). Miễn phí giao hàng nội
+                thành HCM. Phụ phí hàng cồng kềnh có thể phát sinh, bạn vui lòng xem chi tiết bên
+                cạnh. </div>
+            </div>
+          </div>
+          <div class="payment_page">
+            <div class="billaddress_wrap">
+              <div class="row">
+                <div class="payment_radio_check">
+                  <input type="hidden" name=" " value="0" id=" ">
+                  <input type="checkbox" checked="checked" value="1" id=" " name="">
+                </div>
+                <div class="payment_form_title">
+                  <label for="" style="display: inline;"> Địa chỉ thanh toán cũng là địa chỉ giao hàng</label>
+                </div>
+              </div>
+              <div class="clear"> </div>
+            </div>
+            <div class="redinvoice_wrap">
+              <div class="row">
+                <div class="payment_radio_check">
+                  <input type="hidden" name=" " value="0" id=" ">
+                  <input type="checkbox" value="1" id=" " name=" " onclick=" " disabled="disabled">
+                </div>
+                <div class="payment_form_title">
+                  <label for=" " style="display: inline;"> Thông tin xuất hóa đơn (nếu cần thiết)</label>
+                </div>
+              </div>
+              <div class="pay-form hidden" id="bill_info">
+                <div class="row"> <span class="text">Tên công ty</span>
+                  <p class="input-text">
+                    <input type="text" name=" " id=" ">
+                    <span class="box-error"><span class="tlp-error">Vui lòng nhập Tên công ty</span> </span> </p>
+                </div>
+                <div class="row"> <span class="text">Địa chỉ<span class="red">*</span></span>
+                  <p class="input-text">
+                    <input type="text" name=" " id=" ">
+                    <span class="box-error"><span class="tlp-error">Vui lòng nhập Địa chỉ</span> </span> </p>
+                </div>
+
+                <div class="row"> <span class="text">Mã số thuế</span>
+                  <p class="input-text">
+                    <input type="text" name=" " id=" ">
+                    <span class="box-error"><span class="tlp-error">Vui lòng nhập Mã số thuế</span> </span> </p>
+                </div>
+              </div>
+            </div>
+            <div id="place_order_default">
+              <div class="row"> <a id="" class=" btn btn-primary" href="">Thanh toán</a> </div>
+              <div class="row">
+                <div class="cod_inform"> Bạn sẽ được thông báo về tình trạng đơn hàng qua email và tin nhắn. </div>
+              </div>
+            </div>
+            <div class="newsletter">
+              <div class="row">
+                <div class="payment_radio_check">
+                  <input id="" type="checkbox" name=" " checked="checked">
+                </div>
+                <div class="payment_form_title">
+                  <label for=" "> Đăng ký nhận thông tin để biết các khuyến mãi hấp dẫn*</label>
+                </div>
+              </div>
+              <div class="row"> <br>
+                * Tôi đã đọc và đồng ý với các điều khoản sử dụng</div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-2" class="tab_payment_ct fr" style="display: none;">
+          <div class="payment_wrap">
+            <p> <strong>KHÁCH HÀNG THANH TOÁN CHUYỂN KHOẢN VÀO TÀI KHOẢN ATM</strong></p>
+            <p> <strong>Số tài khoản ngân hàng</strong></p>
+            <p> </p>
+            <hr>
+            <p> + <strong>Ngân Hàng Ngoại Thương Việt Nam ( VCB)</strong></p>
+            <p> <strong> <img title="Tài khoản Vietcombank" src=" " alt="logo-vietcombank-moi-nhat.jpg" height="73" width="200"></strong></p>
+            <p> </p>
+            <p> </p>
+            <p> <strong>Số tài khoản VNĐ: 0501000040844</strong></p>
+            <p> <strong>Chủ tài khoản:  </strong></p>
+            <p> <strong>Ngân hàng </strong></p>
+            <p> </p>
+            <hr>
+             
+          </div>
+          <div class="row"> <a href="thanhtoan4.html" class=" btn btn-primary " id="">Thanh toán</a> </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+    <div class="tblInvoice">
+      <div class="box">
+        <div class="headingBox"> <span>Thông tin đơn hàng</span> </div>
+        <div class="innerBox">
+          <div class="tbl table-bordered">
+            <div class="tblth">
+              <div class="tbltd">Sản phẩm</div>
+              <div class="tbltd">Số lượng</div>
+              <div class="tbltd">Giá</div>
+            </div>
+            <div class="tbltr">
+              <div class="tbltd">Máy đánh bóng Shinano </div>
+              <div class="tbltd">2</div>
+              <div class="tbltd">199.000</div>
+            </div>
+            <div class="tbltr">
+              <div class="tbltd">Máy đánh bóng Shinano </div>
+              <div class="tbltd">2</div>
+              <div class="tbltd">199.000</div>
+            </div>
+            <div class="tbltr">
+              <div class="tbltd">Máy đánh bóng Shinano </div>
+              <div class="tbltd">2</div>
+              <div class="tbltd">199.000</div>
+            </div>
+            <div class="tbltr">
+              <div class="tbltd">Máy đánh bóng Shinano </div>
+              <div class="tbltd">2</div>
+              <div class="tbltd">199.000</div>
+            </div>
+            <div class="tblth">
+              <div class="tbltd">Tổng tiền</div>
+              <div class="tbltd"> </div>
+              <div class="tbltd ">796.000</div>
+            </div>
+            <div class="tblth">
+              <div class="tbltd">Phí vận chuyển:</div>
+              <div class="tbltd"> </div>
+              <div class="tbltd ">25.000</div>
+            </div>
+            <div class="tblth">
+              <div class="tbltd">Thành tiền:</div>
+              <div class="tbltd"> </div>
+              <div class="tbltd ">821.000</div>
+            </div>
+          </div>
+        </div>
+        <div class="noteBox">Miễn phí giao hàng cho đơn hàng
+          <red>1.000.000 vnđ</red>
+          </strong> </div>
+      </div>
+      
+      <div class="box">
+        <div class="headingBox"> <span>Giao hàng đến</span> <a class="fright linkEdit"><i class="glyphicon glyphicon-pencil"></i>Thay đổi</a></div>
+        <div class="innerBox">
+        <p>Người nhận: abc</p>
+        <p>SĐT: 0123 456 789</p>
+        <p>ĐC: 156/1/12/1 Cộng Hoà, P.12, Q.Tân Bình, TP HCM</p>
+        <p>Ngày giao hàng: 20/05/2015</p>
+        
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+     
+  </div>
+</div>
+<!--End Container-->
+<div class="wrap lineF"></div>
+<div class="wrap footerBox">
+  <div class="container">
+    <div class="row">
+      <div class="col2 colf">
+        <h2>Hỗ trợ khách hàng</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a> </div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col2 colf">
+        <h2>Về chúng tôi</h2>
+        <div class="linF"><a>Yêu cầu báo giá</a></div>
+        <div class="linF"><a>Hỏi và đáp</a></div>
+        <div class="linF"><a>Liên hệ</a></div>
+      </div>
+      <div class="col3 colf">
+        <h2>Thống kê truy cập</h2>
+        <div class="countOB">
+          <div class="fleft" style="line-height:23px; white-space:nowrap">
+            <div>Đang online: <span class="numberonl">123</span></div>
+            <div>Tổng truy cập: <span class="numberonl">123456</span></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="social_network"><a href="" class="facebook"></a> <a href="" class="gplus"></a> <a href="" class=" twitter"></a><a href="" class=" youtube"></a></div>
+      </div>
+      <div class="col5 colf">
+        <div class="address"><b>CÔNG TY TNHH TROY</b><br />
+          Ðịa chỉ: 7A/87 Thành Thái, Phường 14, Quận 10, TP Hồ Chí Minh <br />
+          Điện thoại: 0909 245 636     - Email: pvkduyen@gmail.com<br />
+          <div class="copyRight">Copyright © 2015 gotroy.vn. All rights reserved.<br />
+            Thiết kế website bởi <a href="http://dangcapviet.vn/">Đẳng Cấp Việt</a> </div>
+          <div class="paymentF"> <img src="images/thanhToan/master.png" /> <img src="images/thanhToan/visa.png" /> <img src="images/thanhToan/viettin.png" /> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
